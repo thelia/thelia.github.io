@@ -64,8 +64,22 @@ This is the body of your config.xml file :
 </loops>
 ```
 
-You have to create as many loop node as loop declare into the loops node. In this exemple there is 2 loops. Name and
-class properties are mandatory. The name is the name loop used into the template ( ```<THELIA_name
+You have to create as many loop node as loop you have into the loops node. In this example there is 2 loops. Name and
+class properties are mandatory. The name is the loop name used into the template ( ```<THELIA_name
 type="MyPlugin_Product">...</THELIA_name>```), class property is the class executed by the template engine. This
-class must extends the Thelia\Tpex\Element\Loop\BaseElement abstract class, if not an exception is thrown.
+class must extends the Thelia\Tpex\Element\Loop\BaseLoop abstract class, if not an exception is thrown.
+If you name your loop like a default loop (eg : Product), your loop will replace the default loop.
 
+###How to declare TestLoop ?
+
+```xml
+<testLoops>
+    <testLoop name="myTestLoop" class="MyPlugin\TestLoop\MyTestLoop" />
+</testLoops>
+```
+
+You have to create as many testLoop node as testLoop you have into the testLoops node. In this example there is 1
+testLoop. Name and class properties are mandatory. The name is the testLoop name used into the template
+(```<TEST_name test="myTestLoop" ...> ... </TEST_name>```), class property is the class executed by the template
+engine. This class must extends the Thelia\Tpex\Element\TestLoop\BaseTestLoop abstract class,
+if not an exception is thrown.
