@@ -57,6 +57,8 @@ This is the body of your config.xml file :
 
 ###How to declare loops ?
 
+*loop explanation here*
+
 ```xml
 <loops>
     <loop name="MyPlugin_Product" class="MyPlugin\Loop\Product" />
@@ -72,6 +74,8 @@ If you name your loop like a default loop (eg : Product), your loop will replace
 
 ###How to declare TestLoop ?
 
+*testloop explanation here*
+
 ```xml
 <testLoops>
     <testLoop name="myTestLoop" class="MyPlugin\TestLoop\MyTestLoop" />
@@ -82,4 +86,20 @@ You have to create as many testLoop node as testLoop you have into the testLoops
 testLoop. Name and class properties are mandatory. The name is the testLoop name used into the template
 (```<TEST_name test="myTestLoop" ...> ... </TEST_name>```), class property is the class executed by the template
 engine. This class must extends the Thelia\Tpex\Element\TestLoop\BaseTestLoop abstract class,
+if not an exception is thrown.
+
+###How to declare BaseParam ?
+
+*baseParam explanation here*
+
+```xml
+<baseParams>
+    <baseParam name="secure" class="MyPlugin\BaseParam\Secure">
+</baseParams>
+```
+
+You have to create as many baseParam node as baseParam you have into the baseParams node. In this example there is 1
+baseParam. Name and class properties are mandatory. The name is the baseParam name used into the template
+(```#PARAM_BASE_secure```), class property is the class executed by the template
+engine. This class must extends the Thelia\Tpex\BaseParam\BaseParam abstract class,
 if not an exception is thrown.
