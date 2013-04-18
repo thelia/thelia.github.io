@@ -56,6 +56,8 @@ class MyPlugin in the MyPlugin.php file. Remember, your plugin must be [PSR-0](h
 </config>
 ```
 
+##Loops
+
 ###How to declare loops ?
 
 *loop explanation here*
