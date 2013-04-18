@@ -1,13 +1,26 @@
 <!-- Sidebar -->
 <aside class="large-3 columns">
+    <div class="section-container accordion" data-section="accordion">
+        <section class="section {% if page.sidebar == 'index' %} active {% endif %}">
+            <p class="title" data-section-title><a href="/index.html">Installation</a></p>
+        </section>
+        <section class="section {% if page.sidebar == 'configuration' %} active {% endif %}">
+            <p class="title" data-section-title><a href="/documentation/configuration.html">configuration</a></p>
+        </section>
+        <section class="section {% if page.sidebar == 'plugin' %} active {% endif %}" >
+            <p class="title" data-section-title><a href="#">plugins</a></p>
+            <div class="content">
+                <ul class="side-nav">
+                    <li><a href="/documentation/plugins.html">Starting</a></li>
+                    <li><a href="/documentation/plugins.html#loops">Loops</a></li>
+                    <li><a href="/documentation/plugins.html#testloops">testLoops</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="section {% if page.sidebar == 'action' %} active {% endif %}">
+            <p class="title" data-section-title><a href="/documentation/action.html">Actions</a></p>
+        </section>
 
-    <h5>Categories</h5>
-    <ul class="side-nav">
-        <li><a href="/index.html">Installation</a></li>
-        <li><a href="/documentation/configuration.html">Configuration</a></li>
-        <li><a href="/documentation/plugins.html">Plugins</a></li>
-
-        <li><a href="/documentation/action.html">Actions</a></li>
-    </ul>
+    </div>
 </aside>
 <!-- End Sidebar -->

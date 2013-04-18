@@ -1,6 +1,7 @@
 ---
 layout: home
 title: index
+sidebar: index
 ---
 
 Thelia is an open source tool for creating e-business websites and managing online content. This software is published under GPL.

@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Plugins
+sidebar: plugin
 ---
 
 #What about plugin ?
@@ -42,7 +43,7 @@ class MyPlugin in the MyPlugin.php file. Remember, your plugin must be [PSR-0](h
  The config file (Config/config.xml) is not mandatory but highly recommended. With this file you can declare all your
   services like event listeners, all your element for Tpex execution (loops, filters, baseParams, TestLoops).
 
-This is the body of your config.xml file :
+<span id="config">This is the body of your config.xml file :</span>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>

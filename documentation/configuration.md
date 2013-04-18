@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Configuration
+sidebar: configuration
 ---
 
 #How to configure ?

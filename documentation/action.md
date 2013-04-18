@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Actions
+sidebar: action
 ---
 
 As in Thelia 1 you can make action for creating a new account, add a product in you cart and many more.
