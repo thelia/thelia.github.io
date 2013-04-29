@@ -19,7 +19,8 @@ subnav: plugin_loop
 You have to create as many loop node as loop you have into the loops node. In this example there is 2 loops. Name and
 class properties are mandatory. The name is the loop name used into the template ( ```<THELIA_name
 type="MyPlugin_Product">...</THELIA_name>```), class property is the class executed by the template engine. This
-class must extends the Thelia\Tpex\Element\Loop\BaseLoop abstract class, if not an exception is thrown.
+class must extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html)
+abstract class, if not an exception is thrown.
 If you name your loop like a default loop (eg : Product), your loop will replace the default loop.
 
 ##How to implement a loop ?
@@ -27,7 +28,7 @@ If you name your loop like a default loop (eg : Product), your loop will replace
 Your loop can be anywhere (Thanks to namespace) in your plugin but it's better to create a Loop directory and put all
  your loops in this directory.
 
- As see before, you must have to extends the Thelia\Tpex\Element\Loop\BaseLoop abstract class and implement exec
+ As see before, you must have to extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html) abstract class and implement exec
  function :
 
  ```
@@ -36,7 +37,7 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 
  The exec method is used by Tpex when it wants to render the template. The $text args contains all the substitutions
  to replace (for exemple #TITLE is a substitution) and $args all the arguments use by the loop. Reading arguments is
- possible using Thelia\Tpex\Tools::extractValueParam.
+ possible using [Thelia\Tpex\Tools::extractValueParam](/api/source-class-Thelia.Tpex.Tools.html#28-47).
 
  Here an exemple for my plugin "MyPlugin" and my loops in the loop directory. This is the architecture :
 
