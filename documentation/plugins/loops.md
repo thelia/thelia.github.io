@@ -79,3 +79,38 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 
  Of course you can use all classes you want in your class, like model class. All Thelia's model classes are in the
  namespace Thelia\Model
+
+ So if I want to add some search in my BDD and return results from my product table I can use something like this :
+
+ ```php
+ <?php
+ namespace MyPlugin\Loop;
+
+  use Thelia\Tpex\Element\Loop\BaseLoop;
+  use Thelia\Tpex\Tools;
+  use Thelia\Model\ProductQuery;
+
+  class MyLoop extends BaseLoop {
+
+      public function exec($text, $args)
+      {
+
+          $ref = Tools::extractValueParam("ref", $args);
+
+          $products = ProductQuery::create()
+                        ->filterByRef($ref)
+                        ->find();
+
+          $res = "";
+
+          foreach ($products as $product) {
+                $tmp = str_replace("#TITLE", $product->getTitle(), $text);
+                $tmp = str_replace("#PRICE", $product->getPrice(), $tmp);
+
+                $res .= $tmp
+          }
+
+          return $res;
+      }
+  }
+```
