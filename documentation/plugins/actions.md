@@ -1,8 +1,11 @@
 ---
 layout: home
-title: Actions
-sidebar: action
+title: Actions - plugin
+sidebar: plugin
+subnav: plugin_action
 ---
+
+#Actions
 
 As in Thelia 1 you can make action for creating a new account, add a product in you cart and many more.
 
@@ -12,7 +15,7 @@ Actions use eventListener process and are declared in conf files. They are execu
 An internal listener catch kernel.request event and dispatch a new one if the action parameter is presents in the request. This new event name start with
 "action." follow by the action name. So if the action is createCustomer, the event name is action.createCustomer and you can now catch this event as you want.
 
-All your mthod's action have for only argument a **Thelia\Core\Event\ActionEvent** object instance. This object
+All your method's action have for only argument a **Thelia\Core\Event\ActionEvent** object instance. This object
 contain the current Request and a Dispatcher (for dispatching new Events if you want).
 
 For declaring actions in your plugin, you have to use your config.xml file and declare a new service, for exemple you have the plugins test with this structure :

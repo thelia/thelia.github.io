@@ -6,13 +6,13 @@ sidebar: configuration
 
 #How to configure ?
 
-Actually you can only configure you database connection with config files. All other configuration have to be develop and certainly use database storage.
+Actually you can only configure your database connection with config files. All other configuration have to be develop and certainly use database storage.
 
 ##Server Configuration
 
-Thelia needs at least php 5.3.7 and is fully compatible with php 5.4, an http server (eg : apache2) and mysql (sqlite and pgsql will be support soon)
+Thelia needs at least php 5.3.7 and is fully compatible with php 5.4, an any http server (eg : apache2) and mysql (sqlite and pgsql will be support soon)
 
-after installion you have an architecture like this :
+after installation you have an architecture like this :
 
 ```
 www <- your web root directory
@@ -32,7 +32,7 @@ www <- your web root directory
 ```
 
 
-only the ```web``` directory have to be accessible with, you can configure you vhost like this (here /var/www is your web root directory) :
+only the ```web``` directory have to be accessible with apache, you can configure your vhost like this (here /var/www is your web root directory) :
 
 ```
 <virtualhost *:80>

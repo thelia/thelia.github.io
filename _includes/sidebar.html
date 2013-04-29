@@ -1,6 +1,6 @@
 <!-- Sidebar -->
 <aside class="large-3 columns">
-    <div class="section-container accordion" data-section="accordion">
+    <div class="section-container accordion " data-section="accordion">
         <section class="section {% if page.sidebar == 'index' %} active {% endif %}">
             <p class="title" data-section-title><a href="/index.html">Installation</a></p>
         </section>
@@ -8,19 +8,27 @@
             <p class="title" data-section-title><a href="/documentation/configuration.html">Configuration</a></p>
         </section>
         <section class="section {% if page.sidebar == 'plugin' %} active {% endif %}" >
-            <p class="title" data-section-title><a href="/documentation/plugins.html">Plugins</a></p>
-<!--            <div class="content">
+            <p class="title" data-section-title><a href="/#">Plugins</a></p>
+            <div class="content">
                 <ul class="side-nav">
-                    <li><a href="/documentation/plugins.html">Starting</a></li>
-                    <li><a href="/documentation/plugins.html#loops">Loops</a></li>
-                    <li><a href="/documentation/plugins.html#testloops">testLoops</a></li>
+                    <li class="{% if page.subnav == 'plugin_index' %} active {% endif %}">
+                        <a href="/documentation/plugins/index.html" >Starting</a>
+                    </li>
+                    <li class="{% if page.subnav == 'plugin_loop' %} active {% endif %}">
+                        <a href="/documentation/plugins/loops.html">Loops</a>
+                    </li>
+                    <li class="{% if page.subnav == 'plugin_testloop' %} active {% endif %}">
+                        <a href="/documentation/plugins/testloops.html">TestLoops</a>
+                    </li>
+                    <li class="{% if page.subnav == 'plugin_baseparam' %} active {% endif %}">
+                        <a href="/documentation/plugins/baseparams.html">BaseParams</a>
+                    </li>
+                    <li class="{% if page.subnav == 'plugin_action' %} active {% endif %}">
+                        <a href="/documentation/plugins/actions.html">Actions</a>
+                    </li>
                 </ul>
-            </div>-->
+            </div>
         </section>
-        <section class="section {% if page.sidebar == 'action' %} active {% endif %}">
-            <p class="title" data-section-title><a href="/documentation/action.html">Actions</a></p>
-        </section>
-
     </div>
 </aside>
 <!-- End Sidebar -->
