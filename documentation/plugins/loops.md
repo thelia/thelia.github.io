@@ -24,4 +24,58 @@ If you name your loop like a default loop (eg : Product), your loop will replace
 
 ##How to implement a loop ?
 
-Your loop can be anywhere (Thanks to namespace) in your plugin but it's beter to create a Loop directory and put all your loops in this directory.
+Your loop can be anywhere (Thanks to namespace) in your plugin but it's better to create a Loop directory and put all
+ your loops in this directory.
+
+ As see before, you must have to extends the Thelia\Tpex\Element\Loop\BaseLoop abstract class and implement exec
+ function :
+
+ ```
+ public function exec($text, $args);
+ ```
+
+ The exec method is used by Tpex when it wants to render the template. The $text args contains all the substitutions
+ to replace (for exemple #TITLE is a substitution) and $args all the arguments use by the loop. Reading arguments is
+ possible using Thelia\Tpex\Tools::extractValueParam.
+
+ Here an exemple for my plugin "MyPlugin" and my loops in the loop directory. This is the architecture :
+
+ ```
+ \local
+   \plugins
+     \MyPlugin
+       ...
+       \Loop
+         MyLoop.php
+ ```
+
+ MyLoop.php file :
+
+ ```php
+ <?php
+ namespace MyPlugin\Loop;
+
+ use Thelia\Tpex\Element\Loop\BaseLoop;
+ use Thelia\Tpex\Tools;
+
+ class MyLoop extends BaseLoop {
+
+     public function exec($text, $args)
+     {
+
+         $param1 = Tools::extractValueParam("param1", $args);
+
+         $res = "";
+
+         if ($param1 == "foo") {
+            $res = str_replace("#FOO","bar",$text);
+         }
+
+         return $res;
+     }
+ }
+
+ ```
+
+ Of course you can use all classes you want in your class, like model class. All Thelia's model classes are in the
+ namespace Thelia\Model
