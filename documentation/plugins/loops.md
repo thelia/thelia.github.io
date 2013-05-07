@@ -21,7 +21,7 @@ class properties are mandatory. The name is the loop name used into the template
 type="MyPlugin_Product">...</THELIA_name>```), class property is the class executed by the template engine. This
 class must extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html)
 abstract class, if not an exception is thrown.
-If you name your loop like a default loop (eg : Product), your loop will replace the default loop.
+**If you name your loop like a default loop (eg : Product), your loop will replace the default loop.**
 
 ##How to implement a loop ?
 
@@ -29,14 +29,14 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
  your loops in this directory.
 
  As see before, you must have to extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop
- .BaseLoop.html) abstract class and implement exec and defineArgs functions :
+ .BaseLoop.html) abstract class and implement *exec* and *defineArgs* functions :
 
  ```
  public function defineArgs()
  public function exec($text, $args);
  ```
 
- The exec method is used by Tpex when it wants to render the template. The $text args contains all the substitutions
+ The *exec* method is used by Tpex when it wants to render the template. The $text args contains all the substitutions
  to replace (for example #TITLE is a substitution).
 
  The defineArgs method define all args used in your loop. Args can be mandatory, optional, with default value,
