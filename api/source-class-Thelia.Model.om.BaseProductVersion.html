@@ -8,7 +8,7 @@
 	<title>File core/lib/Thelia/Model/om/BaseProductVersion.php | thelia</title>
 
 	<script type="text/javascript" src="resources/combined.js?394153670"></script>
-	<script type="text/javascript" src="elementlist.js?2187096738"></script>
+	<script type="text/javascript" src="elementlist.js?2297087088"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -48,6 +48,10 @@
 				<li><a href="namespace-Thelia.Core.Template.html">Template<span></span></a>
 						<ul>
 				<li><a href="namespace-Thelia.Core.Template.BaseParam.html">BaseParam</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Loop.html">Loop</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.TestLoop.html">TestLoop</a>
 						</li>
 							</ul></li></ul></li>
 				<li><a href="namespace-Thelia.Exception.html">Exception</a>
@@ -467,11 +471,11 @@
 </span><span id="98" class="l"><a class="l" href="#98">  98: </a>    <span class="php-keyword1">protected</span> <span class="php-var"><a id="$promo" href="#$promo">$promo</a></span>;
 </span><span id="99" class="l"><a class="l" href="#99">  99: </a>
 </span><span id="100" class="l"><a class="l" href="#100"> 100: </a>    <span class="php-comment">/**
-</span></span><span id="101" class="l"><a class="l" href="#101"> 101: </a><span class="php-comment">     * The value for the stock field.
+</span></span><span id="101" class="l"><a class="l" href="#101"> 101: </a><span class="php-comment">     * The value for the quantity field.
 </span></span><span id="102" class="l"><a class="l" href="#102"> 102: </a><span class="php-comment">     * Note: this column has a database default value of: 0
 </span></span><span id="103" class="l"><a class="l" href="#103"> 103: </a><span class="php-comment">     * @var        int
 </span></span><span id="104" class="l"><a class="l" href="#104"> 104: </a><span class="php-comment">     */</span>
-</span><span id="105" class="l"><a class="l" href="#105"> 105: </a>    <span class="php-keyword1">protected</span> <span class="php-var"><a id="$stock" href="#$stock">$stock</a></span>;
+</span><span id="105" class="l"><a class="l" href="#105"> 105: </a>    <span class="php-keyword1">protected</span> <span class="php-var"><a id="$quantity" href="#$quantity">$quantity</a></span>;
 </span><span id="106" class="l"><a class="l" href="#106"> 106: </a>
 </span><span id="107" class="l"><a class="l" href="#107"> 107: </a>    <span class="php-comment">/**
 </span></span><span id="108" class="l"><a class="l" href="#108"> 108: </a><span class="php-comment">     * The value for the visible field.
@@ -558,7 +562,7 @@
 </span><span id="189" class="l"><a class="l" href="#189"> 189: </a>    {
 </span><span id="190" class="l"><a class="l" href="#190"> 190: </a>        <span class="php-var">$this</span>-&gt;newness = <span class="php-num">0</span>;
 </span><span id="191" class="l"><a class="l" href="#191"> 191: </a>        <span class="php-var">$this</span>-&gt;promo = <span class="php-num">0</span>;
-</span><span id="192" class="l"><a class="l" href="#192"> 192: </a>        <span class="php-var">$this</span>-&gt;stock = <span class="php-num">0</span>;
+</span><span id="192" class="l"><a class="l" href="#192"> 192: </a>        <span class="php-var">$this</span>-&gt;quantity = <span class="php-num">0</span>;
 </span><span id="193" class="l"><a class="l" href="#193"> 193: </a>        <span class="php-var">$this</span>-&gt;visible = <span class="php-num">0</span>;
 </span><span id="194" class="l"><a class="l" href="#194"> 194: </a>        <span class="php-var">$this</span>-&gt;version = <span class="php-num">0</span>;
 </span><span id="195" class="l"><a class="l" href="#195"> 195: </a>    }
@@ -654,13 +658,13 @@
 </span><span id="285" class="l"><a class="l" href="#285"> 285: </a>    }
 </span><span id="286" class="l"><a class="l" href="#286"> 286: </a>
 </span><span id="287" class="l"><a class="l" href="#287"> 287: </a>    <span class="php-comment">/**
-</span></span><span id="288" class="l"><a class="l" href="#288"> 288: </a><span class="php-comment">     * Get the [stock] column value.
+</span></span><span id="288" class="l"><a class="l" href="#288"> 288: </a><span class="php-comment">     * Get the [quantity] column value.
 </span></span><span id="289" class="l"><a class="l" href="#289"> 289: </a><span class="php-comment">     *
 </span></span><span id="290" class="l"><a class="l" href="#290"> 290: </a><span class="php-comment">     * @return int
 </span></span><span id="291" class="l"><a class="l" href="#291"> 291: </a><span class="php-comment">     */</span>
-</span><span id="292" class="l"><a class="l" href="#292"> 292: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getStock" href="#_getStock">getStock</a>()
+</span><span id="292" class="l"><a class="l" href="#292"> 292: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getQuantity" href="#_getQuantity">getQuantity</a>()
 </span><span id="293" class="l"><a class="l" href="#293"> 293: </a>    {
-</span><span id="294" class="l"><a class="l" href="#294"> 294: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;stock;
+</span><span id="294" class="l"><a class="l" href="#294"> 294: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;quantity;
 </span><span id="295" class="l"><a class="l" href="#295"> 295: </a>    }
 </span><span id="296" class="l"><a class="l" href="#296"> 296: </a>
 </span><span id="297" class="l"><a class="l" href="#297"> 297: </a>    <span class="php-comment">/**
@@ -1006,25 +1010,25 @@
 </span><span id="637" class="l"><a class="l" href="#637"> 637: </a>    } <span class="php-comment">// setPromo()</span>
 </span><span id="638" class="l"><a class="l" href="#638"> 638: </a>
 </span><span id="639" class="l"><a class="l" href="#639"> 639: </a>    <span class="php-comment">/**
-</span></span><span id="640" class="l"><a class="l" href="#640"> 640: </a><span class="php-comment">     * Set the value of [stock] column.
+</span></span><span id="640" class="l"><a class="l" href="#640"> 640: </a><span class="php-comment">     * Set the value of [quantity] column.
 </span></span><span id="641" class="l"><a class="l" href="#641"> 641: </a><span class="php-comment">     *
 </span></span><span id="642" class="l"><a class="l" href="#642"> 642: </a><span class="php-comment">     * @param int $v new value
 </span></span><span id="643" class="l"><a class="l" href="#643"> 643: </a><span class="php-comment">     * @return ProductVersion The current object (for fluent API support)
 </span></span><span id="644" class="l"><a class="l" href="#644"> 644: </a><span class="php-comment">     */</span>
-</span><span id="645" class="l"><a class="l" href="#645"> 645: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setStock" href="#_setStock">setStock</a>(<span class="php-var">$v</span>)
+</span><span id="645" class="l"><a class="l" href="#645"> 645: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setQuantity" href="#_setQuantity">setQuantity</a>(<span class="php-var">$v</span>)
 </span><span id="646" class="l"><a class="l" href="#646"> 646: </a>    {
 </span><span id="647" class="l"><a class="l" href="#647"> 647: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">is_numeric</span>(<span class="php-var">$v</span>)) {
 </span><span id="648" class="l"><a class="l" href="#648"> 648: </a>            <span class="php-var">$v</span> = (int) <span class="php-var">$v</span>;
 </span><span id="649" class="l"><a class="l" href="#649"> 649: </a>        }
 </span><span id="650" class="l"><a class="l" href="#650"> 650: </a>
-</span><span id="651" class="l"><a class="l" href="#651"> 651: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;stock !== <span class="php-var">$v</span>) {
-</span><span id="652" class="l"><a class="l" href="#652"> 652: </a>            <span class="php-var">$this</span>-&gt;stock = <span class="php-var">$v</span>;
-</span><span id="653" class="l"><a class="l" href="#653"> 653: </a>            <span class="php-var">$this</span>-&gt;modifiedColumns[] = ProductVersionPeer::STOCK;
+</span><span id="651" class="l"><a class="l" href="#651"> 651: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;quantity !== <span class="php-var">$v</span>) {
+</span><span id="652" class="l"><a class="l" href="#652"> 652: </a>            <span class="php-var">$this</span>-&gt;quantity = <span class="php-var">$v</span>;
+</span><span id="653" class="l"><a class="l" href="#653"> 653: </a>            <span class="php-var">$this</span>-&gt;modifiedColumns[] = ProductVersionPeer::QUANTITY;
 </span><span id="654" class="l"><a class="l" href="#654"> 654: </a>        }
 </span><span id="655" class="l"><a class="l" href="#655"> 655: </a>
 </span><span id="656" class="l"><a class="l" href="#656"> 656: </a>
 </span><span id="657" class="l"><a class="l" href="#657"> 657: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="658" class="l"><a class="l" href="#658"> 658: </a>    } <span class="php-comment">// setStock()</span>
+</span><span id="658" class="l"><a class="l" href="#658"> 658: </a>    } <span class="php-comment">// setQuantity()</span>
 </span><span id="659" class="l"><a class="l" href="#659"> 659: </a>
 </span><span id="660" class="l"><a class="l" href="#660"> 660: </a>    <span class="php-comment">/**
 </span></span><span id="661" class="l"><a class="l" href="#661"> 661: </a><span class="php-comment">     * Set the value of [visible] column.
@@ -1218,7 +1222,7 @@
 </span><span id="849" class="l"><a class="l" href="#849"> 849: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
 </span><span id="850" class="l"><a class="l" href="#850"> 850: </a>            }
 </span><span id="851" class="l"><a class="l" href="#851"> 851: </a>
-</span><span id="852" class="l"><a class="l" href="#852"> 852: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;stock !== <span class="php-num">0</span>) {
+</span><span id="852" class="l"><a class="l" href="#852"> 852: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;quantity !== <span class="php-num">0</span>) {
 </span><span id="853" class="l"><a class="l" href="#853"> 853: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
 </span><span id="854" class="l"><a class="l" href="#854"> 854: </a>            }
 </span><span id="855" class="l"><a class="l" href="#855"> 855: </a>
@@ -1260,7 +1264,7 @@
 </span><span id="891" class="l"><a class="l" href="#891"> 891: </a>            <span class="php-var">$this</span>-&gt;ecotax = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">5</span>] !== <span class="php-keyword1">null</span>) ? (double) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">5</span>] : <span class="php-keyword1">null</span>;
 </span><span id="892" class="l"><a class="l" href="#892"> 892: </a>            <span class="php-var">$this</span>-&gt;newness = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">6</span>] !== <span class="php-keyword1">null</span>) ? (int) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">6</span>] : <span class="php-keyword1">null</span>;
 </span><span id="893" class="l"><a class="l" href="#893"> 893: </a>            <span class="php-var">$this</span>-&gt;promo = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">7</span>] !== <span class="php-keyword1">null</span>) ? (int) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">7</span>] : <span class="php-keyword1">null</span>;
-</span><span id="894" class="l"><a class="l" href="#894"> 894: </a>            <span class="php-var">$this</span>-&gt;stock = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">8</span>] !== <span class="php-keyword1">null</span>) ? (int) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">8</span>] : <span class="php-keyword1">null</span>;
+</span><span id="894" class="l"><a class="l" href="#894"> 894: </a>            <span class="php-var">$this</span>-&gt;quantity = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">8</span>] !== <span class="php-keyword1">null</span>) ? (int) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">8</span>] : <span class="php-keyword1">null</span>;
 </span><span id="895" class="l"><a class="l" href="#895"> 895: </a>            <span class="php-var">$this</span>-&gt;visible = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">9</span>] !== <span class="php-keyword1">null</span>) ? (int) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">9</span>] : <span class="php-keyword1">null</span>;
 </span><span id="896" class="l"><a class="l" href="#896"> 896: </a>            <span class="php-var">$this</span>-&gt;weight = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">10</span>] !== <span class="php-keyword1">null</span>) ? (double) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">10</span>] : <span class="php-keyword1">null</span>;
 </span><span id="897" class="l"><a class="l" href="#897"> 897: </a>            <span class="php-var">$this</span>-&gt;position = (<span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">11</span>] !== <span class="php-keyword1">null</span>) ? (int) <span class="php-var">$row</span>[<span class="php-var">$startcol</span> + <span class="php-num">11</span>] : <span class="php-keyword1">null</span>;
@@ -1525,8 +1529,8 @@
 </span><span id="1156" class="l"><a class="l" href="#1156">1156: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::PROMO)) {
 </span><span id="1157" class="l"><a class="l" href="#1157">1157: </a>            <span class="php-var">$modifiedColumns</span>[<span class="php-quote">':p'</span> . <span class="php-var">$index</span>++]  = <span class="php-quote">'`promo`'</span>;
 </span><span id="1158" class="l"><a class="l" href="#1158">1158: </a>        }
-</span><span id="1159" class="l"><a class="l" href="#1159">1159: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::STOCK)) {
-</span><span id="1160" class="l"><a class="l" href="#1160">1160: </a>            <span class="php-var">$modifiedColumns</span>[<span class="php-quote">':p'</span> . <span class="php-var">$index</span>++]  = <span class="php-quote">'`stock`'</span>;
+</span><span id="1159" class="l"><a class="l" href="#1159">1159: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::QUANTITY)) {
+</span><span id="1160" class="l"><a class="l" href="#1160">1160: </a>            <span class="php-var">$modifiedColumns</span>[<span class="php-quote">':p'</span> . <span class="php-var">$index</span>++]  = <span class="php-quote">'`quantity`'</span>;
 </span><span id="1161" class="l"><a class="l" href="#1161">1161: </a>        }
 </span><span id="1162" class="l"><a class="l" href="#1162">1162: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::VISIBLE)) {
 </span><span id="1163" class="l"><a class="l" href="#1163">1163: </a>            <span class="php-var">$modifiedColumns</span>[<span class="php-quote">':p'</span> . <span class="php-var">$index</span>++]  = <span class="php-quote">'`visible`'</span>;
@@ -1587,8 +1591,8 @@
 </span><span id="1218" class="l"><a class="l" href="#1218">1218: </a>                    <span class="php-keyword1">case</span> <span class="php-quote">'`promo`'</span>:
 </span><span id="1219" class="l"><a class="l" href="#1219">1219: </a>                        <span class="php-var">$stmt</span>-&gt;bindValue(<span class="php-var">$identifier</span>, <span class="php-var">$this</span>-&gt;promo, PDO::PARAM_INT);
 </span><span id="1220" class="l"><a class="l" href="#1220">1220: </a>                        <span class="php-keyword1">break</span>;
-</span><span id="1221" class="l"><a class="l" href="#1221">1221: </a>                    <span class="php-keyword1">case</span> <span class="php-quote">'`stock`'</span>:
-</span><span id="1222" class="l"><a class="l" href="#1222">1222: </a>                        <span class="php-var">$stmt</span>-&gt;bindValue(<span class="php-var">$identifier</span>, <span class="php-var">$this</span>-&gt;stock, PDO::PARAM_INT);
+</span><span id="1221" class="l"><a class="l" href="#1221">1221: </a>                    <span class="php-keyword1">case</span> <span class="php-quote">'`quantity`'</span>:
+</span><span id="1222" class="l"><a class="l" href="#1222">1222: </a>                        <span class="php-var">$stmt</span>-&gt;bindValue(<span class="php-var">$identifier</span>, <span class="php-var">$this</span>-&gt;quantity, PDO::PARAM_INT);
 </span><span id="1223" class="l"><a class="l" href="#1223">1223: </a>                        <span class="php-keyword1">break</span>;
 </span><span id="1224" class="l"><a class="l" href="#1224">1224: </a>                    <span class="php-keyword1">case</span> <span class="php-quote">'`visible`'</span>:
 </span><span id="1225" class="l"><a class="l" href="#1225">1225: </a>                        <span class="php-var">$stmt</span>-&gt;bindValue(<span class="php-var">$identifier</span>, <span class="php-var">$this</span>-&gt;visible, PDO::PARAM_INT);
@@ -1778,7 +1782,7 @@
 </span><span id="1409" class="l"><a class="l" href="#1409">1409: </a>                <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getPromo();
 </span><span id="1410" class="l"><a class="l" href="#1410">1410: </a>                <span class="php-keyword1">break</span>;
 </span><span id="1411" class="l"><a class="l" href="#1411">1411: </a>            <span class="php-keyword1">case</span> <span class="php-num">8</span>:
-</span><span id="1412" class="l"><a class="l" href="#1412">1412: </a>                <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getStock();
+</span><span id="1412" class="l"><a class="l" href="#1412">1412: </a>                <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getQuantity();
 </span><span id="1413" class="l"><a class="l" href="#1413">1413: </a>                <span class="php-keyword1">break</span>;
 </span><span id="1414" class="l"><a class="l" href="#1414">1414: </a>            <span class="php-keyword1">case</span> <span class="php-num">9</span>:
 </span><span id="1415" class="l"><a class="l" href="#1415">1415: </a>                <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getVisible();
@@ -1841,7 +1845,7 @@
 </span><span id="1472" class="l"><a class="l" href="#1472">1472: </a>            <span class="php-var">$keys</span>[<span class="php-num">5</span>] =&gt; <span class="php-var">$this</span>-&gt;getEcotax(),
 </span><span id="1473" class="l"><a class="l" href="#1473">1473: </a>            <span class="php-var">$keys</span>[<span class="php-num">6</span>] =&gt; <span class="php-var">$this</span>-&gt;getNewness(),
 </span><span id="1474" class="l"><a class="l" href="#1474">1474: </a>            <span class="php-var">$keys</span>[<span class="php-num">7</span>] =&gt; <span class="php-var">$this</span>-&gt;getPromo(),
-</span><span id="1475" class="l"><a class="l" href="#1475">1475: </a>            <span class="php-var">$keys</span>[<span class="php-num">8</span>] =&gt; <span class="php-var">$this</span>-&gt;getStock(),
+</span><span id="1475" class="l"><a class="l" href="#1475">1475: </a>            <span class="php-var">$keys</span>[<span class="php-num">8</span>] =&gt; <span class="php-var">$this</span>-&gt;getQuantity(),
 </span><span id="1476" class="l"><a class="l" href="#1476">1476: </a>            <span class="php-var">$keys</span>[<span class="php-num">9</span>] =&gt; <span class="php-var">$this</span>-&gt;getVisible(),
 </span><span id="1477" class="l"><a class="l" href="#1477">1477: </a>            <span class="php-var">$keys</span>[<span class="php-num">10</span>] =&gt; <span class="php-var">$this</span>-&gt;getWeight(),
 </span><span id="1478" class="l"><a class="l" href="#1478">1478: </a>            <span class="php-var">$keys</span>[<span class="php-num">11</span>] =&gt; <span class="php-var">$this</span>-&gt;getPosition(),
@@ -1914,7 +1918,7 @@
 </span><span id="1545" class="l"><a class="l" href="#1545">1545: </a>                <span class="php-var">$this</span>-&gt;setPromo(<span class="php-var">$value</span>);
 </span><span id="1546" class="l"><a class="l" href="#1546">1546: </a>                <span class="php-keyword1">break</span>;
 </span><span id="1547" class="l"><a class="l" href="#1547">1547: </a>            <span class="php-keyword1">case</span> <span class="php-num">8</span>:
-</span><span id="1548" class="l"><a class="l" href="#1548">1548: </a>                <span class="php-var">$this</span>-&gt;setStock(<span class="php-var">$value</span>);
+</span><span id="1548" class="l"><a class="l" href="#1548">1548: </a>                <span class="php-var">$this</span>-&gt;setQuantity(<span class="php-var">$value</span>);
 </span><span id="1549" class="l"><a class="l" href="#1549">1549: </a>                <span class="php-keyword1">break</span>;
 </span><span id="1550" class="l"><a class="l" href="#1550">1550: </a>            <span class="php-keyword1">case</span> <span class="php-num">9</span>:
 </span><span id="1551" class="l"><a class="l" href="#1551">1551: </a>                <span class="php-var">$this</span>-&gt;setVisible(<span class="php-var">$value</span>);
@@ -1972,7 +1976,7 @@
 </span><span id="1603" class="l"><a class="l" href="#1603">1603: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">5</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setEcotax(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">5</span>]]);
 </span><span id="1604" class="l"><a class="l" href="#1604">1604: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">6</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setNewness(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">6</span>]]);
 </span><span id="1605" class="l"><a class="l" href="#1605">1605: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">7</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setPromo(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">7</span>]]);
-</span><span id="1606" class="l"><a class="l" href="#1606">1606: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">8</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setStock(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">8</span>]]);
+</span><span id="1606" class="l"><a class="l" href="#1606">1606: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">8</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setQuantity(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">8</span>]]);
 </span><span id="1607" class="l"><a class="l" href="#1607">1607: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">9</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setVisible(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">9</span>]]);
 </span><span id="1608" class="l"><a class="l" href="#1608">1608: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">10</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setWeight(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">10</span>]]);
 </span><span id="1609" class="l"><a class="l" href="#1609">1609: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$keys</span>[<span class="php-num">11</span>], <span class="php-var">$arr</span>)) <span class="php-var">$this</span>-&gt;setPosition(<span class="php-var">$arr</span>[<span class="php-var">$keys</span>[<span class="php-num">11</span>]]);
@@ -2000,7 +2004,7 @@
 </span><span id="1631" class="l"><a class="l" href="#1631">1631: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::ECOTAX)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::ECOTAX, <span class="php-var">$this</span>-&gt;ecotax);
 </span><span id="1632" class="l"><a class="l" href="#1632">1632: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::NEWNESS)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::NEWNESS, <span class="php-var">$this</span>-&gt;newness);
 </span><span id="1633" class="l"><a class="l" href="#1633">1633: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::PROMO)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::PROMO, <span class="php-var">$this</span>-&gt;promo);
-</span><span id="1634" class="l"><a class="l" href="#1634">1634: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::STOCK)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::STOCK, <span class="php-var">$this</span>-&gt;stock);
+</span><span id="1634" class="l"><a class="l" href="#1634">1634: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::QUANTITY)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::QUANTITY, <span class="php-var">$this</span>-&gt;quantity);
 </span><span id="1635" class="l"><a class="l" href="#1635">1635: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::VISIBLE)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::VISIBLE, <span class="php-var">$this</span>-&gt;visible);
 </span><span id="1636" class="l"><a class="l" href="#1636">1636: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::WEIGHT)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::WEIGHT, <span class="php-var">$this</span>-&gt;weight);
 </span><span id="1637" class="l"><a class="l" href="#1637">1637: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isColumnModified(ProductVersionPeer::POSITION)) <span class="php-var">$criteria</span>-&gt;add(ProductVersionPeer::POSITION, <span class="php-var">$this</span>-&gt;position);
@@ -2087,7 +2091,7 @@
 </span><span id="1718" class="l"><a class="l" href="#1718">1718: </a>        <span class="php-var">$copyObj</span>-&gt;setEcotax(<span class="php-var">$this</span>-&gt;getEcotax());
 </span><span id="1719" class="l"><a class="l" href="#1719">1719: </a>        <span class="php-var">$copyObj</span>-&gt;setNewness(<span class="php-var">$this</span>-&gt;getNewness());
 </span><span id="1720" class="l"><a class="l" href="#1720">1720: </a>        <span class="php-var">$copyObj</span>-&gt;setPromo(<span class="php-var">$this</span>-&gt;getPromo());
-</span><span id="1721" class="l"><a class="l" href="#1721">1721: </a>        <span class="php-var">$copyObj</span>-&gt;setStock(<span class="php-var">$this</span>-&gt;getStock());
+</span><span id="1721" class="l"><a class="l" href="#1721">1721: </a>        <span class="php-var">$copyObj</span>-&gt;setQuantity(<span class="php-var">$this</span>-&gt;getQuantity());
 </span><span id="1722" class="l"><a class="l" href="#1722">1722: </a>        <span class="php-var">$copyObj</span>-&gt;setVisible(<span class="php-var">$this</span>-&gt;getVisible());
 </span><span id="1723" class="l"><a class="l" href="#1723">1723: </a>        <span class="php-var">$copyObj</span>-&gt;setWeight(<span class="php-var">$this</span>-&gt;getWeight());
 </span><span id="1724" class="l"><a class="l" href="#1724">1724: </a>        <span class="php-var">$copyObj</span>-&gt;setPosition(<span class="php-var">$this</span>-&gt;getPosition());
@@ -2218,7 +2222,7 @@
 </span><span id="1849" class="l"><a class="l" href="#1849">1849: </a>        <span class="php-var">$this</span>-&gt;ecotax = <span class="php-keyword1">null</span>;
 </span><span id="1850" class="l"><a class="l" href="#1850">1850: </a>        <span class="php-var">$this</span>-&gt;newness = <span class="php-keyword1">null</span>;
 </span><span id="1851" class="l"><a class="l" href="#1851">1851: </a>        <span class="php-var">$this</span>-&gt;promo = <span class="php-keyword1">null</span>;
-</span><span id="1852" class="l"><a class="l" href="#1852">1852: </a>        <span class="php-var">$this</span>-&gt;stock = <span class="php-keyword1">null</span>;
+</span><span id="1852" class="l"><a class="l" href="#1852">1852: </a>        <span class="php-var">$this</span>-&gt;quantity = <span class="php-keyword1">null</span>;
 </span><span id="1853" class="l"><a class="l" href="#1853">1853: </a>        <span class="php-var">$this</span>-&gt;visible = <span class="php-keyword1">null</span>;
 </span><span id="1854" class="l"><a class="l" href="#1854">1854: </a>        <span class="php-var">$this</span>-&gt;weight = <span class="php-keyword1">null</span>;
 </span><span id="1855" class="l"><a class="l" href="#1855">1855: </a>        <span class="php-var">$this</span>-&gt;position = <span class="php-keyword1">null</span>;

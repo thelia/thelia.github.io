@@ -7,7 +7,7 @@
 	<title>Class Thelia\Tpex\Element\Loop\BaseLoop | thelia</title>
 
 	<script type="text/javascript" src="resources/combined.js?394153670"></script>
-	<script type="text/javascript" src="elementlist.js?2187096738"></script>
+	<script type="text/javascript" src="elementlist.js?2297087088"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -47,6 +47,10 @@
 				<li><a href="namespace-Thelia.Core.Template.html">Template<span></span></a>
 						<ul>
 				<li><a href="namespace-Thelia.Core.Template.BaseParam.html">BaseParam</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Loop.html">Loop</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.TestLoop.html">TestLoop</a>
 						</li>
 							</ul></li></ul></li>
 				<li><a href="namespace-Thelia.Exception.html">Exception</a>
@@ -148,8 +152,21 @@
 
 
 
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Thelia\Tpex\Element\Loop\BaseLoop</span></b>			
+			
+			 uses 
+				<a href="class-Thelia.Tpex.ValidatorTrait.html"><span>Thelia\Tpex\ValidatorTrait</span></a>
+			
+		</dd>
+	</dl>
 
 
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Thelia.Core.Template.Loop.Category.html">Thelia\Core\Template\Loop\Category</a>
+	</div>
 
 
 
@@ -162,7 +179,7 @@
 		<b>Namespace:</b> <a href="namespace-Thelia.html">Thelia</a>\<a href="namespace-Thelia.Tpex.html">Tpex</a>\<a href="namespace-Thelia.Tpex.Element.html">Element</a>\<a href="namespace-Thelia.Tpex.Element.Loop.html">Loop</a><br />
 		<b>Package:</b> Thelia\Tpex\Element\Loop<br />
 
-		<b>Located at</b> <a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#29-72" title="Go to source code">core/lib/Thelia/Tpex/Element/Loop/BaseLoop.php</a><br />
+		<b>Located at</b> <a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#30-117" title="Go to source code">core/lib/Thelia/Tpex/Element/Loop/BaseLoop.php</a><br />
 	</div>
 
 
@@ -180,7 +197,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#48-56" title="Go to source code">__construct</a>( <span>Symfony\Component\HttpFoundation\Request <var>$request</var></span>, <span>Symfony\Component\EventDispatcher\EventDispatcherInterface <var>$dispatcher</var></span> )</code>
+		<code><a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#50-58" title="Go to source code">__construct</a>( <span>Symfony\Component\HttpFoundation\Request <var>$request</var></span>, <span>Symfony\Component\EventDispatcher\EventDispatcherInterface <var>$dispatcher</var></span> )</code>
 
 		<div class="description short">
 			
@@ -205,6 +222,35 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="beforeExec" id="_beforeExec">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_beforeExec">#</a>
+		<code><a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#61-67" title="Go to source code">beforeExec</a>( <span>mixed <var>$text</var></span>, <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="exec" id="_exec">
 
 		<td class="attributes"><code>
@@ -216,7 +262,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_exec">#</a>
-		<code><a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#58-70" title="Go to source code">exec</a>( <span>mixed <var>$text</var></span>, <span>mixed <var>$args</var></span> )</code>
+		<code><a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#69-94" title="Go to source code">exec</a>( <span>string <var>$text</var></span> )</code>
 
 		<div class="description short">
 			
@@ -226,20 +272,22 @@
 			
 <p>this function have to be implement in your own loop class.</p>
 
-<p>Because $args is a string, use Thelia\Tpex\Tools::extractValueParam for
-extract all args you want</p>
+<p>All your parameters are defined in defineArgs() and can be accessible like a
+class property.</p>
 
-<p>ex : Thelia\Tpex\Tools::extractValueParam("param1", $args) will extract the
-value containing into param1 params.</p>
+<p>example :</p>
+
+<p>public function defineArgs() { return array ( "ref", "id" =&gt; "optional",
+"stock" =&gt; array( "optional", "default" =&gt; 10 ) ); }</p>
+
+<p>you can retrieve ref value using $this-&gt;ref</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$text</var></dt>
-					<dd><code>mixed</code><br>$text the text to parse in the loop</dd>
-					<dt><var>$args</var></dt>
-					<dd><code>mixed</code><br>$args all args declared in the loop</dd>
+					<dd><code>string</code><br>$text text to parse in the loop</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -253,9 +301,59 @@ value containing into param1 params.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="defineArgs" id="_defineArgs">
+
+		<td class="attributes"><code>
+			abstract public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_defineArgs">#</a>
+		<code><a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#96-115" title="Go to source code">defineArgs</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>define all args used in your loop</p>
+
+<p>array key is your arg name.</p>
+
+<p>example :</p>
+
+<p>return array ( "ref", "id" =&gt; "optional", "stock" =&gt; array( "optional",
+"default" =&gt; 10 ) );</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	</table>
 
 
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Thelia.Tpex.ValidatorTrait.html#methods">Thelia\Tpex\ValidatorTrait</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Thelia.Tpex.ValidatorTrait.html#_extractParam">()</a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -275,7 +373,7 @@ value containing into param1 params.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#38-41" title="Go to source code"><var>$request</var></a>
+				<a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#40-43" title="Go to source code"><var>$request</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -298,7 +396,7 @@ value containing into param1 params.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#43-46" title="Go to source code"><var>$dispatcher</var></a>
+				<a href="source-class-Thelia.Tpex.Element.Loop.BaseLoop.html#45-48" title="Go to source code"><var>$dispatcher</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>

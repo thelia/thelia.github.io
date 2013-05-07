@@ -7,7 +7,7 @@
 	<title>Class Thelia\Model\om\BaseProductVersionQuery | thelia</title>
 
 	<script type="text/javascript" src="resources/combined.js?394153670"></script>
-	<script type="text/javascript" src="elementlist.js?2187096738"></script>
+	<script type="text/javascript" src="elementlist.js?2297087088"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -47,6 +47,10 @@
 				<li><a href="namespace-Thelia.Core.Template.html">Template<span></span></a>
 						<ul>
 				<li><a href="namespace-Thelia.Core.Template.BaseParam.html">BaseParam</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Loop.html">Loop</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.TestLoop.html">TestLoop</a>
 						</li>
 							</ul></li></ul></li>
 				<li><a href="namespace-Thelia.Exception.html">Exception</a>
@@ -1347,7 +1351,7 @@ Criteria::EQUAL</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="filterByStock" id="_filterByStock">
+	<tr data-order="filterByQuantity" id="_filterByQuantity">
 
 		<td class="attributes"><code>
 			 public 
@@ -1357,48 +1361,48 @@ Criteria::EQUAL</dd>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_filterByStock">#</a>
-		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#623-663" title="Go to source code">filterByStock</a>( <span>mixed <var>$stock</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+		<a class="anchor" href="#_filterByQuantity">#</a>
+		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#623-663" title="Go to source code">filterByQuantity</a>( <span>mixed <var>$quantity</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Filter the query on the stock column</p>
+<p>Filter the query on the quantity column</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Filter the query on the stock column</p>
+<p>Filter the query on the quantity column</p>
 
 <p>Example usage:</p>
 
 <pre>
-<span class="php-var">$query</span>-&gt;filterByStock(<span
+<span class="php-var">$query</span>-&gt;filterByQuantity(<span
 class="php-num">1234</span>); <span
-class="php-comment">// WHERE stock = 1234</span>
+class="php-comment">// WHERE quantity = 1234</span>
 <span
-class="php-var">$query</span>-&gt;filterByStock(<span
+class="php-var">$query</span>-&gt;filterByQuantity(<span
 class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
 class="php-num">34</span>)); <span
-class="php-comment">// WHERE stock IN (12, 34)</span>
+class="php-comment">// WHERE quantity IN (12, 34)</span>
 <span
-class="php-var">$query</span>-&gt;filterByStock(<span
+class="php-var">$query</span>-&gt;filterByQuantity(<span
 class="php-keyword1">array</span>(<span
 class="php-quote">'min'</span> =&gt; <span class="php-num">12</span>)); <span
-class="php-comment">// WHERE stock &gt;= 12</span>
+class="php-comment">// WHERE quantity &gt;= 12</span>
 <span
-class="php-var">$query</span>-&gt;filterByStock(<span
+class="php-var">$query</span>-&gt;filterByQuantity(<span
 class="php-keyword1">array</span>(<span
 class="php-quote">'max'</span> =&gt; <span class="php-num">12</span>)); <span
-class="php-comment">// WHERE stock &lt;= 12</span>
+class="php-comment">// WHERE quantity &lt;= 12</span>
 </pre>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$stock</var></dt>
-					<dd><code>mixed</code><br>$stock The value to use as filter. Use scalar values for equality. Use array
+					<dt><var>$quantity</var></dt>
+					<dd><code>mixed</code><br>$quantity The value to use as filter. Use scalar values for equality. Use array
 values for in_array() equivalent. Use associative array('min' =&gt; $minValue,
 'max' =&gt; $maxValue) for intervals.</dd>
 					<dt><var>$comparison</var></dt>
@@ -2479,7 +2483,7 @@ secondary query</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="orderByStock" id="m_orderByStock">
+	<tr data-order="orderByQuantity" id="m_orderByQuantity">
 
 		<td class="attributes"><code>
 			 public 
@@ -2489,18 +2493,18 @@ secondary query</dd>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_orderByStock">#</a>
-		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#33" title="Go to source code">orderByStock</a>( <span>mixed <var>$order</var> = Thelia\Model\om\Criteria::ASC</span> )</code>
+		<a class="anchor" href="#m_orderByQuantity">#</a>
+		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#33" title="Go to source code">orderByQuantity</a>( <span>mixed <var>$order</var> = Thelia\Model\om\Criteria::ASC</span> )</code>
 
 		<div class="description short">
 			
-<p>Order by the stock column</p>
+<p>Order by the quantity column</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Order by the stock column</p>
+<p>Order by the quantity column</p>
 
 
 
@@ -3153,7 +3157,7 @@ secondary query</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="groupByStock" id="m_groupByStock">
+	<tr data-order="groupByQuantity" id="m_groupByQuantity">
 
 		<td class="attributes"><code>
 			 public 
@@ -3163,18 +3167,18 @@ secondary query</dd>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_groupByStock">#</a>
-		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#51" title="Go to source code">groupByStock</a>( )</code>
+		<a class="anchor" href="#m_groupByQuantity">#</a>
+		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#51" title="Go to source code">groupByQuantity</a>( )</code>
 
 		<div class="description short">
 			
-<p>Group by the stock column</p>
+<p>Group by the quantity column</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Group by the stock column</p>
+<p>Group by the quantity column</p>
 
 
 
@@ -4160,7 +4164,7 @@ object populated from the query conditions when no match is found</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="findOneByStock" id="m_findOneByStock">
+	<tr data-order="findOneByQuantity" id="m_findOneByQuantity">
 
 		<td class="attributes"><code>
 			 public 
@@ -4170,25 +4174,25 @@ object populated from the query conditions when no match is found</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_findOneByStock">#</a>
-		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#80" title="Go to source code">findOneByStock</a>( <span>integer <var>$stock</var> = </span> )</code>
+		<a class="anchor" href="#m_findOneByQuantity">#</a>
+		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#80" title="Go to source code">findOneByQuantity</a>( <span>integer <var>$quantity</var> = </span> )</code>
 
 		<div class="description short">
 			
-<p>Return the first ProductVersion filtered by the stock column</p>
+<p>Return the first ProductVersion filtered by the quantity column</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Return the first ProductVersion filtered by the stock column</p>
+<p>Return the first ProductVersion filtered by the quantity column</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$stock</var></dt>
-					<dd><code>integer</code><br>$stock</dd>
+					<dt><var>$quantity</var></dt>
+					<dd><code>integer</code><br>$quantity</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -4874,7 +4878,7 @@ object populated from the query conditions when no match is found</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="findByStock" id="m_findByStock">
+	<tr data-order="findByQuantity" id="m_findByQuantity">
 
 		<td class="attributes"><code>
 			 public 
@@ -4884,25 +4888,25 @@ object populated from the query conditions when no match is found</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_findByStock">#</a>
-		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#98" title="Go to source code">findByStock</a>( <span>integer <var>$stock</var> = </span> )</code>
+		<a class="anchor" href="#m_findByQuantity">#</a>
+		<code><a href="source-class-Thelia.Model.om.BaseProductVersionQuery.html#98" title="Go to source code">findByQuantity</a>( <span>integer <var>$quantity</var> = </span> )</code>
 
 		<div class="description short">
 			
-<p>Return ProductVersion objects filtered by the stock column</p>
+<p>Return ProductVersion objects filtered by the quantity column</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Return ProductVersion objects filtered by the stock column</p>
+<p>Return ProductVersion objects filtered by the quantity column</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$stock</var></dt>
-					<dd><code>integer</code><br>$stock</dd>
+					<dt><var>$quantity</var></dt>
+					<dd><code>integer</code><br>$quantity</dd>
 				</dl></div>
 
 				<h4>Returns</h4>

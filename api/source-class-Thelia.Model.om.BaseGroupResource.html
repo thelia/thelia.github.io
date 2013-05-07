@@ -8,7 +8,7 @@
 	<title>File core/lib/Thelia/Model/om/BaseGroupResource.php | thelia</title>
 
 	<script type="text/javascript" src="resources/combined.js?394153670"></script>
-	<script type="text/javascript" src="elementlist.js?2187096738"></script>
+	<script type="text/javascript" src="elementlist.js?2297087088"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -48,6 +48,10 @@
 				<li><a href="namespace-Thelia.Core.Template.html">Template<span></span></a>
 						<ul>
 				<li><a href="namespace-Thelia.Core.Template.BaseParam.html">BaseParam</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Loop.html">Loop</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.TestLoop.html">TestLoop</a>
 						</li>
 							</ul></li></ul></li>
 				<li><a href="namespace-Thelia.Exception.html">Exception</a>
@@ -1357,10 +1361,10 @@
 </span></span><span id="988" class="l"><a class="l" href="#988"> 988: </a><span class="php-comment">     */</span>
 </span><span id="989" class="l"><a class="l" href="#989"> 989: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_toArray" href="#_toArray">toArray</a>(<span class="php-var">$keyType</span> = BasePeer::TYPE_PHPNAME, <span class="php-var">$includeLazyLoadColumns</span> = <span class="php-keyword1">true</span>, <span class="php-var">$alreadyDumpedObjects</span> = <span class="php-keyword1">array</span>(), <span class="php-var">$includeForeignObjects</span> = <span class="php-keyword1">false</span>)
 </span><span id="990" class="l"><a class="l" href="#990"> 990: </a>    {
-</span><span id="991" class="l"><a class="l" href="#991"> 991: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$alreadyDumpedObjects</span>[<span class="php-quote">'GroupResource'</span>][<span class="php-var">$this</span>-&gt;getPrimaryKey()])) {
+</span><span id="991" class="l"><a class="l" href="#991"> 991: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$alreadyDumpedObjects</span>[<span class="php-quote">'GroupResource'</span>][<span class="php-keyword2">serialize</span>(<span class="php-var">$this</span>-&gt;getPrimaryKey())])) {
 </span><span id="992" class="l"><a class="l" href="#992"> 992: </a>            <span class="php-keyword1">return</span> <span class="php-quote">'*RECURSION*'</span>;
 </span><span id="993" class="l"><a class="l" href="#993"> 993: </a>        }
-</span><span id="994" class="l"><a class="l" href="#994"> 994: </a>        <span class="php-var">$alreadyDumpedObjects</span>[<span class="php-quote">'GroupResource'</span>][<span class="php-var">$this</span>-&gt;getPrimaryKey()] = <span class="php-keyword1">true</span>;
+</span><span id="994" class="l"><a class="l" href="#994"> 994: </a>        <span class="php-var">$alreadyDumpedObjects</span>[<span class="php-quote">'GroupResource'</span>][<span class="php-keyword2">serialize</span>(<span class="php-var">$this</span>-&gt;getPrimaryKey())] = <span class="php-keyword1">true</span>;
 </span><span id="995" class="l"><a class="l" href="#995"> 995: </a>        <span class="php-var">$keys</span> = GroupResourcePeer::getFieldNames(<span class="php-var">$keyType</span>);
 </span><span id="996" class="l"><a class="l" href="#996"> 996: </a>        <span class="php-var">$result</span> = <span class="php-keyword1">array</span>(
 </span><span id="997" class="l"><a class="l" href="#997"> 997: </a>            <span class="php-var">$keys</span>[<span class="php-num">0</span>] =&gt; <span class="php-var">$this</span>-&gt;getId(),
@@ -1498,306 +1502,316 @@
 </span><span id="1129" class="l"><a class="l" href="#1129">1129: </a>    {
 </span><span id="1130" class="l"><a class="l" href="#1130">1130: </a>        <span class="php-var">$criteria</span> = <span class="php-keyword1">new</span> Criteria(GroupResourcePeer::DATABASE_NAME);
 </span><span id="1131" class="l"><a class="l" href="#1131">1131: </a>        <span class="php-var">$criteria</span>-&gt;add(GroupResourcePeer::ID, <span class="php-var">$this</span>-&gt;id);
-</span><span id="1132" class="l"><a class="l" href="#1132">1132: </a>
-</span><span id="1133" class="l"><a class="l" href="#1133">1133: </a>        <span class="php-keyword1">return</span> <span class="php-var">$criteria</span>;
-</span><span id="1134" class="l"><a class="l" href="#1134">1134: </a>    }
-</span><span id="1135" class="l"><a class="l" href="#1135">1135: </a>
-</span><span id="1136" class="l"><a class="l" href="#1136">1136: </a>    <span class="php-comment">/**
-</span></span><span id="1137" class="l"><a class="l" href="#1137">1137: </a><span class="php-comment">     * Returns the primary key for this object (row).
-</span></span><span id="1138" class="l"><a class="l" href="#1138">1138: </a><span class="php-comment">     * @return int
-</span></span><span id="1139" class="l"><a class="l" href="#1139">1139: </a><span class="php-comment">     */</span>
-</span><span id="1140" class="l"><a class="l" href="#1140">1140: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getPrimaryKey" href="#_getPrimaryKey">getPrimaryKey</a>()
-</span><span id="1141" class="l"><a class="l" href="#1141">1141: </a>    {
-</span><span id="1142" class="l"><a class="l" href="#1142">1142: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;getId();
-</span><span id="1143" class="l"><a class="l" href="#1143">1143: </a>    }
-</span><span id="1144" class="l"><a class="l" href="#1144">1144: </a>
-</span><span id="1145" class="l"><a class="l" href="#1145">1145: </a>    <span class="php-comment">/**
-</span></span><span id="1146" class="l"><a class="l" href="#1146">1146: </a><span class="php-comment">     * Generic method to set the primary key (id column).
-</span></span><span id="1147" class="l"><a class="l" href="#1147">1147: </a><span class="php-comment">     *
-</span></span><span id="1148" class="l"><a class="l" href="#1148">1148: </a><span class="php-comment">     * @param  int $key Primary key.
-</span></span><span id="1149" class="l"><a class="l" href="#1149">1149: </a><span class="php-comment">     * @return void
-</span></span><span id="1150" class="l"><a class="l" href="#1150">1150: </a><span class="php-comment">     */</span>
-</span><span id="1151" class="l"><a class="l" href="#1151">1151: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setPrimaryKey" href="#_setPrimaryKey">setPrimaryKey</a>(<span class="php-var">$key</span>)
-</span><span id="1152" class="l"><a class="l" href="#1152">1152: </a>    {
-</span><span id="1153" class="l"><a class="l" href="#1153">1153: </a>        <span class="php-var">$this</span>-&gt;setId(<span class="php-var">$key</span>);
-</span><span id="1154" class="l"><a class="l" href="#1154">1154: </a>    }
-</span><span id="1155" class="l"><a class="l" href="#1155">1155: </a>
-</span><span id="1156" class="l"><a class="l" href="#1156">1156: </a>    <span class="php-comment">/**
-</span></span><span id="1157" class="l"><a class="l" href="#1157">1157: </a><span class="php-comment">     * Returns true if the primary key for this object is null.
-</span></span><span id="1158" class="l"><a class="l" href="#1158">1158: </a><span class="php-comment">     * @return boolean
-</span></span><span id="1159" class="l"><a class="l" href="#1159">1159: </a><span class="php-comment">     */</span>
-</span><span id="1160" class="l"><a class="l" href="#1160">1160: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isPrimaryKeyNull" href="#_isPrimaryKeyNull">isPrimaryKeyNull</a>()
-</span><span id="1161" class="l"><a class="l" href="#1161">1161: </a>    {
-</span><span id="1162" class="l"><a class="l" href="#1162">1162: </a>
-</span><span id="1163" class="l"><a class="l" href="#1163">1163: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">null</span> === <span class="php-var">$this</span>-&gt;getId();
+</span><span id="1132" class="l"><a class="l" href="#1132">1132: </a>        <span class="php-var">$criteria</span>-&gt;add(GroupResourcePeer::GROUP_ID, <span class="php-var">$this</span>-&gt;group_id);
+</span><span id="1133" class="l"><a class="l" href="#1133">1133: </a>        <span class="php-var">$criteria</span>-&gt;add(GroupResourcePeer::RESOURCE_ID, <span class="php-var">$this</span>-&gt;resource_id);
+</span><span id="1134" class="l"><a class="l" href="#1134">1134: </a>
+</span><span id="1135" class="l"><a class="l" href="#1135">1135: </a>        <span class="php-keyword1">return</span> <span class="php-var">$criteria</span>;
+</span><span id="1136" class="l"><a class="l" href="#1136">1136: </a>    }
+</span><span id="1137" class="l"><a class="l" href="#1137">1137: </a>
+</span><span id="1138" class="l"><a class="l" href="#1138">1138: </a>    <span class="php-comment">/**
+</span></span><span id="1139" class="l"><a class="l" href="#1139">1139: </a><span class="php-comment">     * Returns the composite primary key for this object.
+</span></span><span id="1140" class="l"><a class="l" href="#1140">1140: </a><span class="php-comment">     * The array elements will be in same order as specified in XML.
+</span></span><span id="1141" class="l"><a class="l" href="#1141">1141: </a><span class="php-comment">     * @return array
+</span></span><span id="1142" class="l"><a class="l" href="#1142">1142: </a><span class="php-comment">     */</span>
+</span><span id="1143" class="l"><a class="l" href="#1143">1143: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getPrimaryKey" href="#_getPrimaryKey">getPrimaryKey</a>()
+</span><span id="1144" class="l"><a class="l" href="#1144">1144: </a>    {
+</span><span id="1145" class="l"><a class="l" href="#1145">1145: </a>        <span class="php-var">$pks</span> = <span class="php-keyword1">array</span>();
+</span><span id="1146" class="l"><a class="l" href="#1146">1146: </a>        <span class="php-var">$pks</span>[<span class="php-num">0</span>] = <span class="php-var">$this</span>-&gt;getId();
+</span><span id="1147" class="l"><a class="l" href="#1147">1147: </a>        <span class="php-var">$pks</span>[<span class="php-num">1</span>] = <span class="php-var">$this</span>-&gt;getGroupId();
+</span><span id="1148" class="l"><a class="l" href="#1148">1148: </a>        <span class="php-var">$pks</span>[<span class="php-num">2</span>] = <span class="php-var">$this</span>-&gt;getResourceId();
+</span><span id="1149" class="l"><a class="l" href="#1149">1149: </a>
+</span><span id="1150" class="l"><a class="l" href="#1150">1150: </a>        <span class="php-keyword1">return</span> <span class="php-var">$pks</span>;
+</span><span id="1151" class="l"><a class="l" href="#1151">1151: </a>    }
+</span><span id="1152" class="l"><a class="l" href="#1152">1152: </a>
+</span><span id="1153" class="l"><a class="l" href="#1153">1153: </a>    <span class="php-comment">/**
+</span></span><span id="1154" class="l"><a class="l" href="#1154">1154: </a><span class="php-comment">     * Set the [composite] primary key.
+</span></span><span id="1155" class="l"><a class="l" href="#1155">1155: </a><span class="php-comment">     *
+</span></span><span id="1156" class="l"><a class="l" href="#1156">1156: </a><span class="php-comment">     * @param array $keys The elements of the composite key (order must match the order in XML file).
+</span></span><span id="1157" class="l"><a class="l" href="#1157">1157: </a><span class="php-comment">     * @return void
+</span></span><span id="1158" class="l"><a class="l" href="#1158">1158: </a><span class="php-comment">     */</span>
+</span><span id="1159" class="l"><a class="l" href="#1159">1159: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setPrimaryKey" href="#_setPrimaryKey">setPrimaryKey</a>(<span class="php-var">$keys</span>)
+</span><span id="1160" class="l"><a class="l" href="#1160">1160: </a>    {
+</span><span id="1161" class="l"><a class="l" href="#1161">1161: </a>        <span class="php-var">$this</span>-&gt;setId(<span class="php-var">$keys</span>[<span class="php-num">0</span>]);
+</span><span id="1162" class="l"><a class="l" href="#1162">1162: </a>        <span class="php-var">$this</span>-&gt;setGroupId(<span class="php-var">$keys</span>[<span class="php-num">1</span>]);
+</span><span id="1163" class="l"><a class="l" href="#1163">1163: </a>        <span class="php-var">$this</span>-&gt;setResourceId(<span class="php-var">$keys</span>[<span class="php-num">2</span>]);
 </span><span id="1164" class="l"><a class="l" href="#1164">1164: </a>    }
 </span><span id="1165" class="l"><a class="l" href="#1165">1165: </a>
 </span><span id="1166" class="l"><a class="l" href="#1166">1166: </a>    <span class="php-comment">/**
-</span></span><span id="1167" class="l"><a class="l" href="#1167">1167: </a><span class="php-comment">     * Sets contents of passed object to values from current object.
-</span></span><span id="1168" class="l"><a class="l" href="#1168">1168: </a><span class="php-comment">     *
-</span></span><span id="1169" class="l"><a class="l" href="#1169">1169: </a><span class="php-comment">     * If desired, this method can also make copies of all associated (fkey referrers)
-</span></span><span id="1170" class="l"><a class="l" href="#1170">1170: </a><span class="php-comment">     * objects.
-</span></span><span id="1171" class="l"><a class="l" href="#1171">1171: </a><span class="php-comment">     *
-</span></span><span id="1172" class="l"><a class="l" href="#1172">1172: </a><span class="php-comment">     * @param object $copyObj An object of GroupResource (or compatible) type.
-</span></span><span id="1173" class="l"><a class="l" href="#1173">1173: </a><span class="php-comment">     * @param boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
-</span></span><span id="1174" class="l"><a class="l" href="#1174">1174: </a><span class="php-comment">     * @param boolean $makeNew Whether to reset autoincrement PKs and make the object new.
-</span></span><span id="1175" class="l"><a class="l" href="#1175">1175: </a><span class="php-comment">     * @throws PropelException
-</span></span><span id="1176" class="l"><a class="l" href="#1176">1176: </a><span class="php-comment">     */</span>
-</span><span id="1177" class="l"><a class="l" href="#1177">1177: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_copyInto" href="#_copyInto">copyInto</a>(<span class="php-var">$copyObj</span>, <span class="php-var">$deepCopy</span> = <span class="php-keyword1">false</span>, <span class="php-var">$makeNew</span> = <span class="php-keyword1">true</span>)
-</span><span id="1178" class="l"><a class="l" href="#1178">1178: </a>    {
-</span><span id="1179" class="l"><a class="l" href="#1179">1179: </a>        <span class="php-var">$copyObj</span>-&gt;setGroupId(<span class="php-var">$this</span>-&gt;getGroupId());
-</span><span id="1180" class="l"><a class="l" href="#1180">1180: </a>        <span class="php-var">$copyObj</span>-&gt;setResourceId(<span class="php-var">$this</span>-&gt;getResourceId());
-</span><span id="1181" class="l"><a class="l" href="#1181">1181: </a>        <span class="php-var">$copyObj</span>-&gt;setRead(<span class="php-var">$this</span>-&gt;getRead());
-</span><span id="1182" class="l"><a class="l" href="#1182">1182: </a>        <span class="php-var">$copyObj</span>-&gt;setWrite(<span class="php-var">$this</span>-&gt;getWrite());
-</span><span id="1183" class="l"><a class="l" href="#1183">1183: </a>        <span class="php-var">$copyObj</span>-&gt;setCreatedAt(<span class="php-var">$this</span>-&gt;getCreatedAt());
-</span><span id="1184" class="l"><a class="l" href="#1184">1184: </a>        <span class="php-var">$copyObj</span>-&gt;setUpdatedAt(<span class="php-var">$this</span>-&gt;getUpdatedAt());
-</span><span id="1185" class="l"><a class="l" href="#1185">1185: </a>
-</span><span id="1186" class="l"><a class="l" href="#1186">1186: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$deepCopy</span> &amp;&amp; !<span class="php-var">$this</span>-&gt;startCopy) {
-</span><span id="1187" class="l"><a class="l" href="#1187">1187: </a>            <span class="php-comment">// important: temporarily setNew(false) because this affects the behavior of</span>
-</span><span id="1188" class="l"><a class="l" href="#1188">1188: </a>            <span class="php-comment">// the getter/setter methods for fkey referrer objects.</span>
-</span><span id="1189" class="l"><a class="l" href="#1189">1189: </a>            <span class="php-var">$copyObj</span>-&gt;setNew(<span class="php-keyword1">false</span>);
-</span><span id="1190" class="l"><a class="l" href="#1190">1190: </a>            <span class="php-comment">// store object hash to prevent cycle</span>
-</span><span id="1191" class="l"><a class="l" href="#1191">1191: </a>            <span class="php-var">$this</span>-&gt;startCopy = <span class="php-keyword1">true</span>;
-</span><span id="1192" class="l"><a class="l" href="#1192">1192: </a>
-</span><span id="1193" class="l"><a class="l" href="#1193">1193: </a>            <span class="php-comment">//unflag object copy</span>
-</span><span id="1194" class="l"><a class="l" href="#1194">1194: </a>            <span class="php-var">$this</span>-&gt;startCopy = <span class="php-keyword1">false</span>;
-</span><span id="1195" class="l"><a class="l" href="#1195">1195: </a>        } <span class="php-comment">// if ($deepCopy)</span>
-</span><span id="1196" class="l"><a class="l" href="#1196">1196: </a>
-</span><span id="1197" class="l"><a class="l" href="#1197">1197: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$makeNew</span>) {
-</span><span id="1198" class="l"><a class="l" href="#1198">1198: </a>            <span class="php-var">$copyObj</span>-&gt;setNew(<span class="php-keyword1">true</span>);
-</span><span id="1199" class="l"><a class="l" href="#1199">1199: </a>            <span class="php-var">$copyObj</span>-&gt;setId(<span class="php-keyword1">NULL</span>); <span class="php-comment">// this is a auto-increment column, so set to default value</span>
-</span><span id="1200" class="l"><a class="l" href="#1200">1200: </a>        }
-</span><span id="1201" class="l"><a class="l" href="#1201">1201: </a>    }
+</span></span><span id="1167" class="l"><a class="l" href="#1167">1167: </a><span class="php-comment">     * Returns true if the primary key for this object is null.
+</span></span><span id="1168" class="l"><a class="l" href="#1168">1168: </a><span class="php-comment">     * @return boolean
+</span></span><span id="1169" class="l"><a class="l" href="#1169">1169: </a><span class="php-comment">     */</span>
+</span><span id="1170" class="l"><a class="l" href="#1170">1170: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isPrimaryKeyNull" href="#_isPrimaryKeyNull">isPrimaryKeyNull</a>()
+</span><span id="1171" class="l"><a class="l" href="#1171">1171: </a>    {
+</span><span id="1172" class="l"><a class="l" href="#1172">1172: </a>
+</span><span id="1173" class="l"><a class="l" href="#1173">1173: </a>        <span class="php-keyword1">return</span> (<span class="php-keyword1">null</span> === <span class="php-var">$this</span>-&gt;getId()) &amp;&amp; (<span class="php-keyword1">null</span> === <span class="php-var">$this</span>-&gt;getGroupId()) &amp;&amp; (<span class="php-keyword1">null</span> === <span class="php-var">$this</span>-&gt;getResourceId());
+</span><span id="1174" class="l"><a class="l" href="#1174">1174: </a>    }
+</span><span id="1175" class="l"><a class="l" href="#1175">1175: </a>
+</span><span id="1176" class="l"><a class="l" href="#1176">1176: </a>    <span class="php-comment">/**
+</span></span><span id="1177" class="l"><a class="l" href="#1177">1177: </a><span class="php-comment">     * Sets contents of passed object to values from current object.
+</span></span><span id="1178" class="l"><a class="l" href="#1178">1178: </a><span class="php-comment">     *
+</span></span><span id="1179" class="l"><a class="l" href="#1179">1179: </a><span class="php-comment">     * If desired, this method can also make copies of all associated (fkey referrers)
+</span></span><span id="1180" class="l"><a class="l" href="#1180">1180: </a><span class="php-comment">     * objects.
+</span></span><span id="1181" class="l"><a class="l" href="#1181">1181: </a><span class="php-comment">     *
+</span></span><span id="1182" class="l"><a class="l" href="#1182">1182: </a><span class="php-comment">     * @param object $copyObj An object of GroupResource (or compatible) type.
+</span></span><span id="1183" class="l"><a class="l" href="#1183">1183: </a><span class="php-comment">     * @param boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
+</span></span><span id="1184" class="l"><a class="l" href="#1184">1184: </a><span class="php-comment">     * @param boolean $makeNew Whether to reset autoincrement PKs and make the object new.
+</span></span><span id="1185" class="l"><a class="l" href="#1185">1185: </a><span class="php-comment">     * @throws PropelException
+</span></span><span id="1186" class="l"><a class="l" href="#1186">1186: </a><span class="php-comment">     */</span>
+</span><span id="1187" class="l"><a class="l" href="#1187">1187: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_copyInto" href="#_copyInto">copyInto</a>(<span class="php-var">$copyObj</span>, <span class="php-var">$deepCopy</span> = <span class="php-keyword1">false</span>, <span class="php-var">$makeNew</span> = <span class="php-keyword1">true</span>)
+</span><span id="1188" class="l"><a class="l" href="#1188">1188: </a>    {
+</span><span id="1189" class="l"><a class="l" href="#1189">1189: </a>        <span class="php-var">$copyObj</span>-&gt;setGroupId(<span class="php-var">$this</span>-&gt;getGroupId());
+</span><span id="1190" class="l"><a class="l" href="#1190">1190: </a>        <span class="php-var">$copyObj</span>-&gt;setResourceId(<span class="php-var">$this</span>-&gt;getResourceId());
+</span><span id="1191" class="l"><a class="l" href="#1191">1191: </a>        <span class="php-var">$copyObj</span>-&gt;setRead(<span class="php-var">$this</span>-&gt;getRead());
+</span><span id="1192" class="l"><a class="l" href="#1192">1192: </a>        <span class="php-var">$copyObj</span>-&gt;setWrite(<span class="php-var">$this</span>-&gt;getWrite());
+</span><span id="1193" class="l"><a class="l" href="#1193">1193: </a>        <span class="php-var">$copyObj</span>-&gt;setCreatedAt(<span class="php-var">$this</span>-&gt;getCreatedAt());
+</span><span id="1194" class="l"><a class="l" href="#1194">1194: </a>        <span class="php-var">$copyObj</span>-&gt;setUpdatedAt(<span class="php-var">$this</span>-&gt;getUpdatedAt());
+</span><span id="1195" class="l"><a class="l" href="#1195">1195: </a>
+</span><span id="1196" class="l"><a class="l" href="#1196">1196: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$deepCopy</span> &amp;&amp; !<span class="php-var">$this</span>-&gt;startCopy) {
+</span><span id="1197" class="l"><a class="l" href="#1197">1197: </a>            <span class="php-comment">// important: temporarily setNew(false) because this affects the behavior of</span>
+</span><span id="1198" class="l"><a class="l" href="#1198">1198: </a>            <span class="php-comment">// the getter/setter methods for fkey referrer objects.</span>
+</span><span id="1199" class="l"><a class="l" href="#1199">1199: </a>            <span class="php-var">$copyObj</span>-&gt;setNew(<span class="php-keyword1">false</span>);
+</span><span id="1200" class="l"><a class="l" href="#1200">1200: </a>            <span class="php-comment">// store object hash to prevent cycle</span>
+</span><span id="1201" class="l"><a class="l" href="#1201">1201: </a>            <span class="php-var">$this</span>-&gt;startCopy = <span class="php-keyword1">true</span>;
 </span><span id="1202" class="l"><a class="l" href="#1202">1202: </a>
-</span><span id="1203" class="l"><a class="l" href="#1203">1203: </a>    <span class="php-comment">/**
-</span></span><span id="1204" class="l"><a class="l" href="#1204">1204: </a><span class="php-comment">     * Makes a copy of this object that will be inserted as a new row in table when saved.
-</span></span><span id="1205" class="l"><a class="l" href="#1205">1205: </a><span class="php-comment">     * It creates a new object filling in the simple attributes, but skipping any primary
-</span></span><span id="1206" class="l"><a class="l" href="#1206">1206: </a><span class="php-comment">     * keys that are defined for the table.
-</span></span><span id="1207" class="l"><a class="l" href="#1207">1207: </a><span class="php-comment">     *
-</span></span><span id="1208" class="l"><a class="l" href="#1208">1208: </a><span class="php-comment">     * If desired, this method can also make copies of all associated (fkey referrers)
-</span></span><span id="1209" class="l"><a class="l" href="#1209">1209: </a><span class="php-comment">     * objects.
-</span></span><span id="1210" class="l"><a class="l" href="#1210">1210: </a><span class="php-comment">     *
-</span></span><span id="1211" class="l"><a class="l" href="#1211">1211: </a><span class="php-comment">     * @param boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
-</span></span><span id="1212" class="l"><a class="l" href="#1212">1212: </a><span class="php-comment">     * @return GroupResource Clone of current object.
-</span></span><span id="1213" class="l"><a class="l" href="#1213">1213: </a><span class="php-comment">     * @throws PropelException
-</span></span><span id="1214" class="l"><a class="l" href="#1214">1214: </a><span class="php-comment">     */</span>
-</span><span id="1215" class="l"><a class="l" href="#1215">1215: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">copy</span>(<span class="php-var">$deepCopy</span> = <span class="php-keyword1">false</span>)
-</span><span id="1216" class="l"><a class="l" href="#1216">1216: </a>    {
-</span><span id="1217" class="l"><a class="l" href="#1217">1217: </a>        <span class="php-comment">// we use get_class(), because this might be a subclass</span>
-</span><span id="1218" class="l"><a class="l" href="#1218">1218: </a>        <span class="php-var">$clazz</span> = <span class="php-keyword2">get_class</span>(<span class="php-var">$this</span>);
-</span><span id="1219" class="l"><a class="l" href="#1219">1219: </a>        <span class="php-var">$copyObj</span> = <span class="php-keyword1">new</span> <span class="php-var">$clazz</span>();
-</span><span id="1220" class="l"><a class="l" href="#1220">1220: </a>        <span class="php-var">$this</span>-&gt;copyInto(<span class="php-var">$copyObj</span>, <span class="php-var">$deepCopy</span>);
-</span><span id="1221" class="l"><a class="l" href="#1221">1221: </a>
-</span><span id="1222" class="l"><a class="l" href="#1222">1222: </a>        <span class="php-keyword1">return</span> <span class="php-var">$copyObj</span>;
-</span><span id="1223" class="l"><a class="l" href="#1223">1223: </a>    }
-</span><span id="1224" class="l"><a class="l" href="#1224">1224: </a>
-</span><span id="1225" class="l"><a class="l" href="#1225">1225: </a>    <span class="php-comment">/**
-</span></span><span id="1226" class="l"><a class="l" href="#1226">1226: </a><span class="php-comment">     * Returns a peer instance associated with this om.
-</span></span><span id="1227" class="l"><a class="l" href="#1227">1227: </a><span class="php-comment">     *
-</span></span><span id="1228" class="l"><a class="l" href="#1228">1228: </a><span class="php-comment">     * Since Peer classes are not to have any instance attributes, this method returns the
-</span></span><span id="1229" class="l"><a class="l" href="#1229">1229: </a><span class="php-comment">     * same instance for all member of this class. The method could therefore
-</span></span><span id="1230" class="l"><a class="l" href="#1230">1230: </a><span class="php-comment">     * be static, but this would prevent one from overriding the behavior.
-</span></span><span id="1231" class="l"><a class="l" href="#1231">1231: </a><span class="php-comment">     *
-</span></span><span id="1232" class="l"><a class="l" href="#1232">1232: </a><span class="php-comment">     * @return GroupResourcePeer
-</span></span><span id="1233" class="l"><a class="l" href="#1233">1233: </a><span class="php-comment">     */</span>
-</span><span id="1234" class="l"><a class="l" href="#1234">1234: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getPeer" href="#_getPeer">getPeer</a>()
-</span><span id="1235" class="l"><a class="l" href="#1235">1235: </a>    {
-</span><span id="1236" class="l"><a class="l" href="#1236">1236: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$peer</span> === <span class="php-keyword1">null</span>) {
-</span><span id="1237" class="l"><a class="l" href="#1237">1237: </a>            self::<span class="php-var">$peer</span> = <span class="php-keyword1">new</span> GroupResourcePeer();
-</span><span id="1238" class="l"><a class="l" href="#1238">1238: </a>        }
-</span><span id="1239" class="l"><a class="l" href="#1239">1239: </a>
-</span><span id="1240" class="l"><a class="l" href="#1240">1240: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$peer</span>;
-</span><span id="1241" class="l"><a class="l" href="#1241">1241: </a>    }
-</span><span id="1242" class="l"><a class="l" href="#1242">1242: </a>
-</span><span id="1243" class="l"><a class="l" href="#1243">1243: </a>    <span class="php-comment">/**
-</span></span><span id="1244" class="l"><a class="l" href="#1244">1244: </a><span class="php-comment">     * Declares an association between this object and a Group object.
-</span></span><span id="1245" class="l"><a class="l" href="#1245">1245: </a><span class="php-comment">     *
-</span></span><span id="1246" class="l"><a class="l" href="#1246">1246: </a><span class="php-comment">     * @param             Group $v
-</span></span><span id="1247" class="l"><a class="l" href="#1247">1247: </a><span class="php-comment">     * @return GroupResource The current object (for fluent API support)
-</span></span><span id="1248" class="l"><a class="l" href="#1248">1248: </a><span class="php-comment">     * @throws PropelException
-</span></span><span id="1249" class="l"><a class="l" href="#1249">1249: </a><span class="php-comment">     */</span>
-</span><span id="1250" class="l"><a class="l" href="#1250">1250: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setGroup" href="#_setGroup">setGroup</a>(Group <span class="php-var">$v</span> = <span class="php-keyword1">null</span>)
-</span><span id="1251" class="l"><a class="l" href="#1251">1251: </a>    {
-</span><span id="1252" class="l"><a class="l" href="#1252">1252: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> === <span class="php-keyword1">null</span>) {
-</span><span id="1253" class="l"><a class="l" href="#1253">1253: </a>            <span class="php-var">$this</span>-&gt;setGroupId(<span class="php-keyword1">NULL</span>);
-</span><span id="1254" class="l"><a class="l" href="#1254">1254: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="1255" class="l"><a class="l" href="#1255">1255: </a>            <span class="php-var">$this</span>-&gt;setGroupId(<span class="php-var">$v</span>-&gt;getId());
-</span><span id="1256" class="l"><a class="l" href="#1256">1256: </a>        }
-</span><span id="1257" class="l"><a class="l" href="#1257">1257: </a>
-</span><span id="1258" class="l"><a class="l" href="#1258">1258: </a>        <span class="php-var">$this</span>-&gt;aGroup = <span class="php-var">$v</span>;
-</span><span id="1259" class="l"><a class="l" href="#1259">1259: </a>
-</span><span id="1260" class="l"><a class="l" href="#1260">1260: </a>        <span class="php-comment">// Add binding for other direction of this n:n relationship.</span>
-</span><span id="1261" class="l"><a class="l" href="#1261">1261: </a>        <span class="php-comment">// If this object has already been added to the Group object, it will not be re-added.</span>
-</span><span id="1262" class="l"><a class="l" href="#1262">1262: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> !== <span class="php-keyword1">null</span>) {
-</span><span id="1263" class="l"><a class="l" href="#1263">1263: </a>            <span class="php-var">$v</span>-&gt;addGroupResource(<span class="php-var">$this</span>);
-</span><span id="1264" class="l"><a class="l" href="#1264">1264: </a>        }
-</span><span id="1265" class="l"><a class="l" href="#1265">1265: </a>
-</span><span id="1266" class="l"><a class="l" href="#1266">1266: </a>
-</span><span id="1267" class="l"><a class="l" href="#1267">1267: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="1268" class="l"><a class="l" href="#1268">1268: </a>    }
+</span><span id="1203" class="l"><a class="l" href="#1203">1203: </a>            <span class="php-comment">//unflag object copy</span>
+</span><span id="1204" class="l"><a class="l" href="#1204">1204: </a>            <span class="php-var">$this</span>-&gt;startCopy = <span class="php-keyword1">false</span>;
+</span><span id="1205" class="l"><a class="l" href="#1205">1205: </a>        } <span class="php-comment">// if ($deepCopy)</span>
+</span><span id="1206" class="l"><a class="l" href="#1206">1206: </a>
+</span><span id="1207" class="l"><a class="l" href="#1207">1207: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$makeNew</span>) {
+</span><span id="1208" class="l"><a class="l" href="#1208">1208: </a>            <span class="php-var">$copyObj</span>-&gt;setNew(<span class="php-keyword1">true</span>);
+</span><span id="1209" class="l"><a class="l" href="#1209">1209: </a>            <span class="php-var">$copyObj</span>-&gt;setId(<span class="php-keyword1">NULL</span>); <span class="php-comment">// this is a auto-increment column, so set to default value</span>
+</span><span id="1210" class="l"><a class="l" href="#1210">1210: </a>        }
+</span><span id="1211" class="l"><a class="l" href="#1211">1211: </a>    }
+</span><span id="1212" class="l"><a class="l" href="#1212">1212: </a>
+</span><span id="1213" class="l"><a class="l" href="#1213">1213: </a>    <span class="php-comment">/**
+</span></span><span id="1214" class="l"><a class="l" href="#1214">1214: </a><span class="php-comment">     * Makes a copy of this object that will be inserted as a new row in table when saved.
+</span></span><span id="1215" class="l"><a class="l" href="#1215">1215: </a><span class="php-comment">     * It creates a new object filling in the simple attributes, but skipping any primary
+</span></span><span id="1216" class="l"><a class="l" href="#1216">1216: </a><span class="php-comment">     * keys that are defined for the table.
+</span></span><span id="1217" class="l"><a class="l" href="#1217">1217: </a><span class="php-comment">     *
+</span></span><span id="1218" class="l"><a class="l" href="#1218">1218: </a><span class="php-comment">     * If desired, this method can also make copies of all associated (fkey referrers)
+</span></span><span id="1219" class="l"><a class="l" href="#1219">1219: </a><span class="php-comment">     * objects.
+</span></span><span id="1220" class="l"><a class="l" href="#1220">1220: </a><span class="php-comment">     *
+</span></span><span id="1221" class="l"><a class="l" href="#1221">1221: </a><span class="php-comment">     * @param boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
+</span></span><span id="1222" class="l"><a class="l" href="#1222">1222: </a><span class="php-comment">     * @return GroupResource Clone of current object.
+</span></span><span id="1223" class="l"><a class="l" href="#1223">1223: </a><span class="php-comment">     * @throws PropelException
+</span></span><span id="1224" class="l"><a class="l" href="#1224">1224: </a><span class="php-comment">     */</span>
+</span><span id="1225" class="l"><a class="l" href="#1225">1225: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">copy</span>(<span class="php-var">$deepCopy</span> = <span class="php-keyword1">false</span>)
+</span><span id="1226" class="l"><a class="l" href="#1226">1226: </a>    {
+</span><span id="1227" class="l"><a class="l" href="#1227">1227: </a>        <span class="php-comment">// we use get_class(), because this might be a subclass</span>
+</span><span id="1228" class="l"><a class="l" href="#1228">1228: </a>        <span class="php-var">$clazz</span> = <span class="php-keyword2">get_class</span>(<span class="php-var">$this</span>);
+</span><span id="1229" class="l"><a class="l" href="#1229">1229: </a>        <span class="php-var">$copyObj</span> = <span class="php-keyword1">new</span> <span class="php-var">$clazz</span>();
+</span><span id="1230" class="l"><a class="l" href="#1230">1230: </a>        <span class="php-var">$this</span>-&gt;copyInto(<span class="php-var">$copyObj</span>, <span class="php-var">$deepCopy</span>);
+</span><span id="1231" class="l"><a class="l" href="#1231">1231: </a>
+</span><span id="1232" class="l"><a class="l" href="#1232">1232: </a>        <span class="php-keyword1">return</span> <span class="php-var">$copyObj</span>;
+</span><span id="1233" class="l"><a class="l" href="#1233">1233: </a>    }
+</span><span id="1234" class="l"><a class="l" href="#1234">1234: </a>
+</span><span id="1235" class="l"><a class="l" href="#1235">1235: </a>    <span class="php-comment">/**
+</span></span><span id="1236" class="l"><a class="l" href="#1236">1236: </a><span class="php-comment">     * Returns a peer instance associated with this om.
+</span></span><span id="1237" class="l"><a class="l" href="#1237">1237: </a><span class="php-comment">     *
+</span></span><span id="1238" class="l"><a class="l" href="#1238">1238: </a><span class="php-comment">     * Since Peer classes are not to have any instance attributes, this method returns the
+</span></span><span id="1239" class="l"><a class="l" href="#1239">1239: </a><span class="php-comment">     * same instance for all member of this class. The method could therefore
+</span></span><span id="1240" class="l"><a class="l" href="#1240">1240: </a><span class="php-comment">     * be static, but this would prevent one from overriding the behavior.
+</span></span><span id="1241" class="l"><a class="l" href="#1241">1241: </a><span class="php-comment">     *
+</span></span><span id="1242" class="l"><a class="l" href="#1242">1242: </a><span class="php-comment">     * @return GroupResourcePeer
+</span></span><span id="1243" class="l"><a class="l" href="#1243">1243: </a><span class="php-comment">     */</span>
+</span><span id="1244" class="l"><a class="l" href="#1244">1244: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getPeer" href="#_getPeer">getPeer</a>()
+</span><span id="1245" class="l"><a class="l" href="#1245">1245: </a>    {
+</span><span id="1246" class="l"><a class="l" href="#1246">1246: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$peer</span> === <span class="php-keyword1">null</span>) {
+</span><span id="1247" class="l"><a class="l" href="#1247">1247: </a>            self::<span class="php-var">$peer</span> = <span class="php-keyword1">new</span> GroupResourcePeer();
+</span><span id="1248" class="l"><a class="l" href="#1248">1248: </a>        }
+</span><span id="1249" class="l"><a class="l" href="#1249">1249: </a>
+</span><span id="1250" class="l"><a class="l" href="#1250">1250: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$peer</span>;
+</span><span id="1251" class="l"><a class="l" href="#1251">1251: </a>    }
+</span><span id="1252" class="l"><a class="l" href="#1252">1252: </a>
+</span><span id="1253" class="l"><a class="l" href="#1253">1253: </a>    <span class="php-comment">/**
+</span></span><span id="1254" class="l"><a class="l" href="#1254">1254: </a><span class="php-comment">     * Declares an association between this object and a Group object.
+</span></span><span id="1255" class="l"><a class="l" href="#1255">1255: </a><span class="php-comment">     *
+</span></span><span id="1256" class="l"><a class="l" href="#1256">1256: </a><span class="php-comment">     * @param             Group $v
+</span></span><span id="1257" class="l"><a class="l" href="#1257">1257: </a><span class="php-comment">     * @return GroupResource The current object (for fluent API support)
+</span></span><span id="1258" class="l"><a class="l" href="#1258">1258: </a><span class="php-comment">     * @throws PropelException
+</span></span><span id="1259" class="l"><a class="l" href="#1259">1259: </a><span class="php-comment">     */</span>
+</span><span id="1260" class="l"><a class="l" href="#1260">1260: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setGroup" href="#_setGroup">setGroup</a>(Group <span class="php-var">$v</span> = <span class="php-keyword1">null</span>)
+</span><span id="1261" class="l"><a class="l" href="#1261">1261: </a>    {
+</span><span id="1262" class="l"><a class="l" href="#1262">1262: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> === <span class="php-keyword1">null</span>) {
+</span><span id="1263" class="l"><a class="l" href="#1263">1263: </a>            <span class="php-var">$this</span>-&gt;setGroupId(<span class="php-keyword1">NULL</span>);
+</span><span id="1264" class="l"><a class="l" href="#1264">1264: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="1265" class="l"><a class="l" href="#1265">1265: </a>            <span class="php-var">$this</span>-&gt;setGroupId(<span class="php-var">$v</span>-&gt;getId());
+</span><span id="1266" class="l"><a class="l" href="#1266">1266: </a>        }
+</span><span id="1267" class="l"><a class="l" href="#1267">1267: </a>
+</span><span id="1268" class="l"><a class="l" href="#1268">1268: </a>        <span class="php-var">$this</span>-&gt;aGroup = <span class="php-var">$v</span>;
 </span><span id="1269" class="l"><a class="l" href="#1269">1269: </a>
-</span><span id="1270" class="l"><a class="l" href="#1270">1270: </a>
-</span><span id="1271" class="l"><a class="l" href="#1271">1271: </a>    <span class="php-comment">/**
-</span></span><span id="1272" class="l"><a class="l" href="#1272">1272: </a><span class="php-comment">     * Get the associated Group object
-</span></span><span id="1273" class="l"><a class="l" href="#1273">1273: </a><span class="php-comment">     *
-</span></span><span id="1274" class="l"><a class="l" href="#1274">1274: </a><span class="php-comment">     * @param PropelPDO $con Optional Connection object.
-</span></span><span id="1275" class="l"><a class="l" href="#1275">1275: </a><span class="php-comment">     * @param $doQuery Executes a query to get the object if required
-</span></span><span id="1276" class="l"><a class="l" href="#1276">1276: </a><span class="php-comment">     * @return Group The associated Group object.
-</span></span><span id="1277" class="l"><a class="l" href="#1277">1277: </a><span class="php-comment">     * @throws PropelException
-</span></span><span id="1278" class="l"><a class="l" href="#1278">1278: </a><span class="php-comment">     */</span>
-</span><span id="1279" class="l"><a class="l" href="#1279">1279: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getGroup" href="#_getGroup">getGroup</a>(PropelPDO <span class="php-var">$con</span> = <span class="php-keyword1">null</span>, <span class="php-var">$doQuery</span> = <span class="php-keyword1">true</span>)
-</span><span id="1280" class="l"><a class="l" href="#1280">1280: </a>    {
-</span><span id="1281" class="l"><a class="l" href="#1281">1281: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aGroup === <span class="php-keyword1">null</span> &amp;&amp; (<span class="php-var">$this</span>-&gt;group_id !== <span class="php-keyword1">null</span>) &amp;&amp; <span class="php-var">$doQuery</span>) {
-</span><span id="1282" class="l"><a class="l" href="#1282">1282: </a>            <span class="php-var">$this</span>-&gt;aGroup = GroupQuery::create()-&gt;findPk(<span class="php-var">$this</span>-&gt;group_id, <span class="php-var">$con</span>);
-</span><span id="1283" class="l"><a class="l" href="#1283">1283: </a>            <span class="php-comment">/* The following can be used additionally to
-</span></span><span id="1284" class="l"><a class="l" href="#1284">1284: </a><span class="php-comment">                guarantee the related object contains a reference
-</span></span><span id="1285" class="l"><a class="l" href="#1285">1285: </a><span class="php-comment">                to this object.  This level of coupling may, however, be
-</span></span><span id="1286" class="l"><a class="l" href="#1286">1286: </a><span class="php-comment">                undesirable since it could result in an only partially populated collection
-</span></span><span id="1287" class="l"><a class="l" href="#1287">1287: </a><span class="php-comment">                in the referenced object.
-</span></span><span id="1288" class="l"><a class="l" href="#1288">1288: </a><span class="php-comment">                $this-&gt;aGroup-&gt;addGroupResources($this);
-</span></span><span id="1289" class="l"><a class="l" href="#1289">1289: </a><span class="php-comment">             */</span>
-</span><span id="1290" class="l"><a class="l" href="#1290">1290: </a>        }
-</span><span id="1291" class="l"><a class="l" href="#1291">1291: </a>
-</span><span id="1292" class="l"><a class="l" href="#1292">1292: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;aGroup;
-</span><span id="1293" class="l"><a class="l" href="#1293">1293: </a>    }
-</span><span id="1294" class="l"><a class="l" href="#1294">1294: </a>
-</span><span id="1295" class="l"><a class="l" href="#1295">1295: </a>    <span class="php-comment">/**
-</span></span><span id="1296" class="l"><a class="l" href="#1296">1296: </a><span class="php-comment">     * Declares an association between this object and a Resource object.
-</span></span><span id="1297" class="l"><a class="l" href="#1297">1297: </a><span class="php-comment">     *
-</span></span><span id="1298" class="l"><a class="l" href="#1298">1298: </a><span class="php-comment">     * @param             Resource $v
-</span></span><span id="1299" class="l"><a class="l" href="#1299">1299: </a><span class="php-comment">     * @return GroupResource The current object (for fluent API support)
-</span></span><span id="1300" class="l"><a class="l" href="#1300">1300: </a><span class="php-comment">     * @throws PropelException
-</span></span><span id="1301" class="l"><a class="l" href="#1301">1301: </a><span class="php-comment">     */</span>
-</span><span id="1302" class="l"><a class="l" href="#1302">1302: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setResource" href="#_setResource">setResource</a>(Resource <span class="php-var">$v</span> = <span class="php-keyword1">null</span>)
-</span><span id="1303" class="l"><a class="l" href="#1303">1303: </a>    {
-</span><span id="1304" class="l"><a class="l" href="#1304">1304: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> === <span class="php-keyword1">null</span>) {
-</span><span id="1305" class="l"><a class="l" href="#1305">1305: </a>            <span class="php-var">$this</span>-&gt;setResourceId(<span class="php-keyword1">NULL</span>);
-</span><span id="1306" class="l"><a class="l" href="#1306">1306: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="1307" class="l"><a class="l" href="#1307">1307: </a>            <span class="php-var">$this</span>-&gt;setResourceId(<span class="php-var">$v</span>-&gt;getId());
-</span><span id="1308" class="l"><a class="l" href="#1308">1308: </a>        }
-</span><span id="1309" class="l"><a class="l" href="#1309">1309: </a>
-</span><span id="1310" class="l"><a class="l" href="#1310">1310: </a>        <span class="php-var">$this</span>-&gt;aResource = <span class="php-var">$v</span>;
-</span><span id="1311" class="l"><a class="l" href="#1311">1311: </a>
-</span><span id="1312" class="l"><a class="l" href="#1312">1312: </a>        <span class="php-comment">// Add binding for other direction of this n:n relationship.</span>
-</span><span id="1313" class="l"><a class="l" href="#1313">1313: </a>        <span class="php-comment">// If this object has already been added to the Resource object, it will not be re-added.</span>
-</span><span id="1314" class="l"><a class="l" href="#1314">1314: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> !== <span class="php-keyword1">null</span>) {
-</span><span id="1315" class="l"><a class="l" href="#1315">1315: </a>            <span class="php-var">$v</span>-&gt;addGroupResource(<span class="php-var">$this</span>);
-</span><span id="1316" class="l"><a class="l" href="#1316">1316: </a>        }
-</span><span id="1317" class="l"><a class="l" href="#1317">1317: </a>
-</span><span id="1318" class="l"><a class="l" href="#1318">1318: </a>
-</span><span id="1319" class="l"><a class="l" href="#1319">1319: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="1320" class="l"><a class="l" href="#1320">1320: </a>    }
+</span><span id="1270" class="l"><a class="l" href="#1270">1270: </a>        <span class="php-comment">// Add binding for other direction of this n:n relationship.</span>
+</span><span id="1271" class="l"><a class="l" href="#1271">1271: </a>        <span class="php-comment">// If this object has already been added to the Group object, it will not be re-added.</span>
+</span><span id="1272" class="l"><a class="l" href="#1272">1272: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> !== <span class="php-keyword1">null</span>) {
+</span><span id="1273" class="l"><a class="l" href="#1273">1273: </a>            <span class="php-var">$v</span>-&gt;addGroupResource(<span class="php-var">$this</span>);
+</span><span id="1274" class="l"><a class="l" href="#1274">1274: </a>        }
+</span><span id="1275" class="l"><a class="l" href="#1275">1275: </a>
+</span><span id="1276" class="l"><a class="l" href="#1276">1276: </a>
+</span><span id="1277" class="l"><a class="l" href="#1277">1277: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="1278" class="l"><a class="l" href="#1278">1278: </a>    }
+</span><span id="1279" class="l"><a class="l" href="#1279">1279: </a>
+</span><span id="1280" class="l"><a class="l" href="#1280">1280: </a>
+</span><span id="1281" class="l"><a class="l" href="#1281">1281: </a>    <span class="php-comment">/**
+</span></span><span id="1282" class="l"><a class="l" href="#1282">1282: </a><span class="php-comment">     * Get the associated Group object
+</span></span><span id="1283" class="l"><a class="l" href="#1283">1283: </a><span class="php-comment">     *
+</span></span><span id="1284" class="l"><a class="l" href="#1284">1284: </a><span class="php-comment">     * @param PropelPDO $con Optional Connection object.
+</span></span><span id="1285" class="l"><a class="l" href="#1285">1285: </a><span class="php-comment">     * @param $doQuery Executes a query to get the object if required
+</span></span><span id="1286" class="l"><a class="l" href="#1286">1286: </a><span class="php-comment">     * @return Group The associated Group object.
+</span></span><span id="1287" class="l"><a class="l" href="#1287">1287: </a><span class="php-comment">     * @throws PropelException
+</span></span><span id="1288" class="l"><a class="l" href="#1288">1288: </a><span class="php-comment">     */</span>
+</span><span id="1289" class="l"><a class="l" href="#1289">1289: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getGroup" href="#_getGroup">getGroup</a>(PropelPDO <span class="php-var">$con</span> = <span class="php-keyword1">null</span>, <span class="php-var">$doQuery</span> = <span class="php-keyword1">true</span>)
+</span><span id="1290" class="l"><a class="l" href="#1290">1290: </a>    {
+</span><span id="1291" class="l"><a class="l" href="#1291">1291: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aGroup === <span class="php-keyword1">null</span> &amp;&amp; (<span class="php-var">$this</span>-&gt;group_id !== <span class="php-keyword1">null</span>) &amp;&amp; <span class="php-var">$doQuery</span>) {
+</span><span id="1292" class="l"><a class="l" href="#1292">1292: </a>            <span class="php-var">$this</span>-&gt;aGroup = GroupQuery::create()-&gt;findPk(<span class="php-var">$this</span>-&gt;group_id, <span class="php-var">$con</span>);
+</span><span id="1293" class="l"><a class="l" href="#1293">1293: </a>            <span class="php-comment">/* The following can be used additionally to
+</span></span><span id="1294" class="l"><a class="l" href="#1294">1294: </a><span class="php-comment">                guarantee the related object contains a reference
+</span></span><span id="1295" class="l"><a class="l" href="#1295">1295: </a><span class="php-comment">                to this object.  This level of coupling may, however, be
+</span></span><span id="1296" class="l"><a class="l" href="#1296">1296: </a><span class="php-comment">                undesirable since it could result in an only partially populated collection
+</span></span><span id="1297" class="l"><a class="l" href="#1297">1297: </a><span class="php-comment">                in the referenced object.
+</span></span><span id="1298" class="l"><a class="l" href="#1298">1298: </a><span class="php-comment">                $this-&gt;aGroup-&gt;addGroupResources($this);
+</span></span><span id="1299" class="l"><a class="l" href="#1299">1299: </a><span class="php-comment">             */</span>
+</span><span id="1300" class="l"><a class="l" href="#1300">1300: </a>        }
+</span><span id="1301" class="l"><a class="l" href="#1301">1301: </a>
+</span><span id="1302" class="l"><a class="l" href="#1302">1302: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;aGroup;
+</span><span id="1303" class="l"><a class="l" href="#1303">1303: </a>    }
+</span><span id="1304" class="l"><a class="l" href="#1304">1304: </a>
+</span><span id="1305" class="l"><a class="l" href="#1305">1305: </a>    <span class="php-comment">/**
+</span></span><span id="1306" class="l"><a class="l" href="#1306">1306: </a><span class="php-comment">     * Declares an association between this object and a Resource object.
+</span></span><span id="1307" class="l"><a class="l" href="#1307">1307: </a><span class="php-comment">     *
+</span></span><span id="1308" class="l"><a class="l" href="#1308">1308: </a><span class="php-comment">     * @param             Resource $v
+</span></span><span id="1309" class="l"><a class="l" href="#1309">1309: </a><span class="php-comment">     * @return GroupResource The current object (for fluent API support)
+</span></span><span id="1310" class="l"><a class="l" href="#1310">1310: </a><span class="php-comment">     * @throws PropelException
+</span></span><span id="1311" class="l"><a class="l" href="#1311">1311: </a><span class="php-comment">     */</span>
+</span><span id="1312" class="l"><a class="l" href="#1312">1312: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setResource" href="#_setResource">setResource</a>(Resource <span class="php-var">$v</span> = <span class="php-keyword1">null</span>)
+</span><span id="1313" class="l"><a class="l" href="#1313">1313: </a>    {
+</span><span id="1314" class="l"><a class="l" href="#1314">1314: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> === <span class="php-keyword1">null</span>) {
+</span><span id="1315" class="l"><a class="l" href="#1315">1315: </a>            <span class="php-var">$this</span>-&gt;setResourceId(<span class="php-keyword1">NULL</span>);
+</span><span id="1316" class="l"><a class="l" href="#1316">1316: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="1317" class="l"><a class="l" href="#1317">1317: </a>            <span class="php-var">$this</span>-&gt;setResourceId(<span class="php-var">$v</span>-&gt;getId());
+</span><span id="1318" class="l"><a class="l" href="#1318">1318: </a>        }
+</span><span id="1319" class="l"><a class="l" href="#1319">1319: </a>
+</span><span id="1320" class="l"><a class="l" href="#1320">1320: </a>        <span class="php-var">$this</span>-&gt;aResource = <span class="php-var">$v</span>;
 </span><span id="1321" class="l"><a class="l" href="#1321">1321: </a>
-</span><span id="1322" class="l"><a class="l" href="#1322">1322: </a>
-</span><span id="1323" class="l"><a class="l" href="#1323">1323: </a>    <span class="php-comment">/**
-</span></span><span id="1324" class="l"><a class="l" href="#1324">1324: </a><span class="php-comment">     * Get the associated Resource object
-</span></span><span id="1325" class="l"><a class="l" href="#1325">1325: </a><span class="php-comment">     *
-</span></span><span id="1326" class="l"><a class="l" href="#1326">1326: </a><span class="php-comment">     * @param PropelPDO $con Optional Connection object.
-</span></span><span id="1327" class="l"><a class="l" href="#1327">1327: </a><span class="php-comment">     * @param $doQuery Executes a query to get the object if required
-</span></span><span id="1328" class="l"><a class="l" href="#1328">1328: </a><span class="php-comment">     * @return Resource The associated Resource object.
-</span></span><span id="1329" class="l"><a class="l" href="#1329">1329: </a><span class="php-comment">     * @throws PropelException
-</span></span><span id="1330" class="l"><a class="l" href="#1330">1330: </a><span class="php-comment">     */</span>
-</span><span id="1331" class="l"><a class="l" href="#1331">1331: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getResource" href="#_getResource">getResource</a>(PropelPDO <span class="php-var">$con</span> = <span class="php-keyword1">null</span>, <span class="php-var">$doQuery</span> = <span class="php-keyword1">true</span>)
-</span><span id="1332" class="l"><a class="l" href="#1332">1332: </a>    {
-</span><span id="1333" class="l"><a class="l" href="#1333">1333: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aResource === <span class="php-keyword1">null</span> &amp;&amp; (<span class="php-var">$this</span>-&gt;resource_id !== <span class="php-keyword1">null</span>) &amp;&amp; <span class="php-var">$doQuery</span>) {
-</span><span id="1334" class="l"><a class="l" href="#1334">1334: </a>            <span class="php-var">$this</span>-&gt;aResource = ResourceQuery::create()-&gt;findPk(<span class="php-var">$this</span>-&gt;resource_id, <span class="php-var">$con</span>);
-</span><span id="1335" class="l"><a class="l" href="#1335">1335: </a>            <span class="php-comment">/* The following can be used additionally to
-</span></span><span id="1336" class="l"><a class="l" href="#1336">1336: </a><span class="php-comment">                guarantee the related object contains a reference
-</span></span><span id="1337" class="l"><a class="l" href="#1337">1337: </a><span class="php-comment">                to this object.  This level of coupling may, however, be
-</span></span><span id="1338" class="l"><a class="l" href="#1338">1338: </a><span class="php-comment">                undesirable since it could result in an only partially populated collection
-</span></span><span id="1339" class="l"><a class="l" href="#1339">1339: </a><span class="php-comment">                in the referenced object.
-</span></span><span id="1340" class="l"><a class="l" href="#1340">1340: </a><span class="php-comment">                $this-&gt;aResource-&gt;addGroupResources($this);
-</span></span><span id="1341" class="l"><a class="l" href="#1341">1341: </a><span class="php-comment">             */</span>
-</span><span id="1342" class="l"><a class="l" href="#1342">1342: </a>        }
-</span><span id="1343" class="l"><a class="l" href="#1343">1343: </a>
-</span><span id="1344" class="l"><a class="l" href="#1344">1344: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;aResource;
-</span><span id="1345" class="l"><a class="l" href="#1345">1345: </a>    }
-</span><span id="1346" class="l"><a class="l" href="#1346">1346: </a>
-</span><span id="1347" class="l"><a class="l" href="#1347">1347: </a>    <span class="php-comment">/**
-</span></span><span id="1348" class="l"><a class="l" href="#1348">1348: </a><span class="php-comment">     * Clears the current object and sets all attributes to their default values
-</span></span><span id="1349" class="l"><a class="l" href="#1349">1349: </a><span class="php-comment">     */</span>
-</span><span id="1350" class="l"><a class="l" href="#1350">1350: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_clear" href="#_clear">clear</a>()
-</span><span id="1351" class="l"><a class="l" href="#1351">1351: </a>    {
-</span><span id="1352" class="l"><a class="l" href="#1352">1352: </a>        <span class="php-var">$this</span>-&gt;id = <span class="php-keyword1">null</span>;
-</span><span id="1353" class="l"><a class="l" href="#1353">1353: </a>        <span class="php-var">$this</span>-&gt;group_id = <span class="php-keyword1">null</span>;
-</span><span id="1354" class="l"><a class="l" href="#1354">1354: </a>        <span class="php-var">$this</span>-&gt;resource_id = <span class="php-keyword1">null</span>;
-</span><span id="1355" class="l"><a class="l" href="#1355">1355: </a>        <span class="php-var">$this</span>-&gt;read = <span class="php-keyword1">null</span>;
-</span><span id="1356" class="l"><a class="l" href="#1356">1356: </a>        <span class="php-var">$this</span>-&gt;write = <span class="php-keyword1">null</span>;
-</span><span id="1357" class="l"><a class="l" href="#1357">1357: </a>        <span class="php-var">$this</span>-&gt;created_at = <span class="php-keyword1">null</span>;
-</span><span id="1358" class="l"><a class="l" href="#1358">1358: </a>        <span class="php-var">$this</span>-&gt;updated_at = <span class="php-keyword1">null</span>;
-</span><span id="1359" class="l"><a class="l" href="#1359">1359: </a>        <span class="php-var">$this</span>-&gt;alreadyInSave = <span class="php-keyword1">false</span>;
-</span><span id="1360" class="l"><a class="l" href="#1360">1360: </a>        <span class="php-var">$this</span>-&gt;alreadyInValidation = <span class="php-keyword1">false</span>;
-</span><span id="1361" class="l"><a class="l" href="#1361">1361: </a>        <span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep = <span class="php-keyword1">false</span>;
-</span><span id="1362" class="l"><a class="l" href="#1362">1362: </a>        <span class="php-var">$this</span>-&gt;clearAllReferences();
-</span><span id="1363" class="l"><a class="l" href="#1363">1363: </a>        <span class="php-var">$this</span>-&gt;applyDefaultValues();
-</span><span id="1364" class="l"><a class="l" href="#1364">1364: </a>        <span class="php-var">$this</span>-&gt;resetModified();
-</span><span id="1365" class="l"><a class="l" href="#1365">1365: </a>        <span class="php-var">$this</span>-&gt;setNew(<span class="php-keyword1">true</span>);
-</span><span id="1366" class="l"><a class="l" href="#1366">1366: </a>        <span class="php-var">$this</span>-&gt;setDeleted(<span class="php-keyword1">false</span>);
-</span><span id="1367" class="l"><a class="l" href="#1367">1367: </a>    }
-</span><span id="1368" class="l"><a class="l" href="#1368">1368: </a>
-</span><span id="1369" class="l"><a class="l" href="#1369">1369: </a>    <span class="php-comment">/**
-</span></span><span id="1370" class="l"><a class="l" href="#1370">1370: </a><span class="php-comment">     * Resets all references to other model objects or collections of model objects.
-</span></span><span id="1371" class="l"><a class="l" href="#1371">1371: </a><span class="php-comment">     *
-</span></span><span id="1372" class="l"><a class="l" href="#1372">1372: </a><span class="php-comment">     * This method is a user-space workaround for PHP's inability to garbage collect
-</span></span><span id="1373" class="l"><a class="l" href="#1373">1373: </a><span class="php-comment">     * objects with circular references (even in PHP 5.3). This is currently necessary
-</span></span><span id="1374" class="l"><a class="l" href="#1374">1374: </a><span class="php-comment">     * when using Propel in certain daemon or large-volumne/high-memory operations.
-</span></span><span id="1375" class="l"><a class="l" href="#1375">1375: </a><span class="php-comment">     *
-</span></span><span id="1376" class="l"><a class="l" href="#1376">1376: </a><span class="php-comment">     * @param boolean $deep Whether to also clear the references on all referrer objects.
-</span></span><span id="1377" class="l"><a class="l" href="#1377">1377: </a><span class="php-comment">     */</span>
-</span><span id="1378" class="l"><a class="l" href="#1378">1378: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_clearAllReferences" href="#_clearAllReferences">clearAllReferences</a>(<span class="php-var">$deep</span> = <span class="php-keyword1">false</span>)
-</span><span id="1379" class="l"><a class="l" href="#1379">1379: </a>    {
-</span><span id="1380" class="l"><a class="l" href="#1380">1380: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$deep</span> &amp;&amp; !<span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep) {
-</span><span id="1381" class="l"><a class="l" href="#1381">1381: </a>            <span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep = <span class="php-keyword1">true</span>;
-</span><span id="1382" class="l"><a class="l" href="#1382">1382: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aGroup <span class="php-keyword1">instanceof</span> Persistent) {
-</span><span id="1383" class="l"><a class="l" href="#1383">1383: </a>              <span class="php-var">$this</span>-&gt;aGroup-&gt;clearAllReferences(<span class="php-var">$deep</span>);
-</span><span id="1384" class="l"><a class="l" href="#1384">1384: </a>            }
-</span><span id="1385" class="l"><a class="l" href="#1385">1385: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aResource <span class="php-keyword1">instanceof</span> Persistent) {
-</span><span id="1386" class="l"><a class="l" href="#1386">1386: </a>              <span class="php-var">$this</span>-&gt;aResource-&gt;clearAllReferences(<span class="php-var">$deep</span>);
-</span><span id="1387" class="l"><a class="l" href="#1387">1387: </a>            }
-</span><span id="1388" class="l"><a class="l" href="#1388">1388: </a>
-</span><span id="1389" class="l"><a class="l" href="#1389">1389: </a>            <span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep = <span class="php-keyword1">false</span>;
-</span><span id="1390" class="l"><a class="l" href="#1390">1390: </a>        } <span class="php-comment">// if ($deep)</span>
-</span><span id="1391" class="l"><a class="l" href="#1391">1391: </a>
-</span><span id="1392" class="l"><a class="l" href="#1392">1392: </a>        <span class="php-var">$this</span>-&gt;aGroup = <span class="php-keyword1">null</span>;
-</span><span id="1393" class="l"><a class="l" href="#1393">1393: </a>        <span class="php-var">$this</span>-&gt;aResource = <span class="php-keyword1">null</span>;
-</span><span id="1394" class="l"><a class="l" href="#1394">1394: </a>    }
-</span><span id="1395" class="l"><a class="l" href="#1395">1395: </a>
-</span><span id="1396" class="l"><a class="l" href="#1396">1396: </a>    <span class="php-comment">/**
-</span></span><span id="1397" class="l"><a class="l" href="#1397">1397: </a><span class="php-comment">     * return the string representation of this object
-</span></span><span id="1398" class="l"><a class="l" href="#1398">1398: </a><span class="php-comment">     *
-</span></span><span id="1399" class="l"><a class="l" href="#1399">1399: </a><span class="php-comment">     * @return string
-</span></span><span id="1400" class="l"><a class="l" href="#1400">1400: </a><span class="php-comment">     */</span>
-</span><span id="1401" class="l"><a class="l" href="#1401">1401: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___toString" href="#___toString">__toString</a>()
-</span><span id="1402" class="l"><a class="l" href="#1402">1402: </a>    {
-</span><span id="1403" class="l"><a class="l" href="#1403">1403: </a>        <span class="php-keyword1">return</span> (string) <span class="php-var">$this</span>-&gt;exportTo(GroupResourcePeer::DEFAULT_STRING_FORMAT);
+</span><span id="1322" class="l"><a class="l" href="#1322">1322: </a>        <span class="php-comment">// Add binding for other direction of this n:n relationship.</span>
+</span><span id="1323" class="l"><a class="l" href="#1323">1323: </a>        <span class="php-comment">// If this object has already been added to the Resource object, it will not be re-added.</span>
+</span><span id="1324" class="l"><a class="l" href="#1324">1324: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$v</span> !== <span class="php-keyword1">null</span>) {
+</span><span id="1325" class="l"><a class="l" href="#1325">1325: </a>            <span class="php-var">$v</span>-&gt;addGroupResource(<span class="php-var">$this</span>);
+</span><span id="1326" class="l"><a class="l" href="#1326">1326: </a>        }
+</span><span id="1327" class="l"><a class="l" href="#1327">1327: </a>
+</span><span id="1328" class="l"><a class="l" href="#1328">1328: </a>
+</span><span id="1329" class="l"><a class="l" href="#1329">1329: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="1330" class="l"><a class="l" href="#1330">1330: </a>    }
+</span><span id="1331" class="l"><a class="l" href="#1331">1331: </a>
+</span><span id="1332" class="l"><a class="l" href="#1332">1332: </a>
+</span><span id="1333" class="l"><a class="l" href="#1333">1333: </a>    <span class="php-comment">/**
+</span></span><span id="1334" class="l"><a class="l" href="#1334">1334: </a><span class="php-comment">     * Get the associated Resource object
+</span></span><span id="1335" class="l"><a class="l" href="#1335">1335: </a><span class="php-comment">     *
+</span></span><span id="1336" class="l"><a class="l" href="#1336">1336: </a><span class="php-comment">     * @param PropelPDO $con Optional Connection object.
+</span></span><span id="1337" class="l"><a class="l" href="#1337">1337: </a><span class="php-comment">     * @param $doQuery Executes a query to get the object if required
+</span></span><span id="1338" class="l"><a class="l" href="#1338">1338: </a><span class="php-comment">     * @return Resource The associated Resource object.
+</span></span><span id="1339" class="l"><a class="l" href="#1339">1339: </a><span class="php-comment">     * @throws PropelException
+</span></span><span id="1340" class="l"><a class="l" href="#1340">1340: </a><span class="php-comment">     */</span>
+</span><span id="1341" class="l"><a class="l" href="#1341">1341: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getResource" href="#_getResource">getResource</a>(PropelPDO <span class="php-var">$con</span> = <span class="php-keyword1">null</span>, <span class="php-var">$doQuery</span> = <span class="php-keyword1">true</span>)
+</span><span id="1342" class="l"><a class="l" href="#1342">1342: </a>    {
+</span><span id="1343" class="l"><a class="l" href="#1343">1343: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aResource === <span class="php-keyword1">null</span> &amp;&amp; (<span class="php-var">$this</span>-&gt;resource_id !== <span class="php-keyword1">null</span>) &amp;&amp; <span class="php-var">$doQuery</span>) {
+</span><span id="1344" class="l"><a class="l" href="#1344">1344: </a>            <span class="php-var">$this</span>-&gt;aResource = ResourceQuery::create()-&gt;findPk(<span class="php-var">$this</span>-&gt;resource_id, <span class="php-var">$con</span>);
+</span><span id="1345" class="l"><a class="l" href="#1345">1345: </a>            <span class="php-comment">/* The following can be used additionally to
+</span></span><span id="1346" class="l"><a class="l" href="#1346">1346: </a><span class="php-comment">                guarantee the related object contains a reference
+</span></span><span id="1347" class="l"><a class="l" href="#1347">1347: </a><span class="php-comment">                to this object.  This level of coupling may, however, be
+</span></span><span id="1348" class="l"><a class="l" href="#1348">1348: </a><span class="php-comment">                undesirable since it could result in an only partially populated collection
+</span></span><span id="1349" class="l"><a class="l" href="#1349">1349: </a><span class="php-comment">                in the referenced object.
+</span></span><span id="1350" class="l"><a class="l" href="#1350">1350: </a><span class="php-comment">                $this-&gt;aResource-&gt;addGroupResources($this);
+</span></span><span id="1351" class="l"><a class="l" href="#1351">1351: </a><span class="php-comment">             */</span>
+</span><span id="1352" class="l"><a class="l" href="#1352">1352: </a>        }
+</span><span id="1353" class="l"><a class="l" href="#1353">1353: </a>
+</span><span id="1354" class="l"><a class="l" href="#1354">1354: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;aResource;
+</span><span id="1355" class="l"><a class="l" href="#1355">1355: </a>    }
+</span><span id="1356" class="l"><a class="l" href="#1356">1356: </a>
+</span><span id="1357" class="l"><a class="l" href="#1357">1357: </a>    <span class="php-comment">/**
+</span></span><span id="1358" class="l"><a class="l" href="#1358">1358: </a><span class="php-comment">     * Clears the current object and sets all attributes to their default values
+</span></span><span id="1359" class="l"><a class="l" href="#1359">1359: </a><span class="php-comment">     */</span>
+</span><span id="1360" class="l"><a class="l" href="#1360">1360: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_clear" href="#_clear">clear</a>()
+</span><span id="1361" class="l"><a class="l" href="#1361">1361: </a>    {
+</span><span id="1362" class="l"><a class="l" href="#1362">1362: </a>        <span class="php-var">$this</span>-&gt;id = <span class="php-keyword1">null</span>;
+</span><span id="1363" class="l"><a class="l" href="#1363">1363: </a>        <span class="php-var">$this</span>-&gt;group_id = <span class="php-keyword1">null</span>;
+</span><span id="1364" class="l"><a class="l" href="#1364">1364: </a>        <span class="php-var">$this</span>-&gt;resource_id = <span class="php-keyword1">null</span>;
+</span><span id="1365" class="l"><a class="l" href="#1365">1365: </a>        <span class="php-var">$this</span>-&gt;read = <span class="php-keyword1">null</span>;
+</span><span id="1366" class="l"><a class="l" href="#1366">1366: </a>        <span class="php-var">$this</span>-&gt;write = <span class="php-keyword1">null</span>;
+</span><span id="1367" class="l"><a class="l" href="#1367">1367: </a>        <span class="php-var">$this</span>-&gt;created_at = <span class="php-keyword1">null</span>;
+</span><span id="1368" class="l"><a class="l" href="#1368">1368: </a>        <span class="php-var">$this</span>-&gt;updated_at = <span class="php-keyword1">null</span>;
+</span><span id="1369" class="l"><a class="l" href="#1369">1369: </a>        <span class="php-var">$this</span>-&gt;alreadyInSave = <span class="php-keyword1">false</span>;
+</span><span id="1370" class="l"><a class="l" href="#1370">1370: </a>        <span class="php-var">$this</span>-&gt;alreadyInValidation = <span class="php-keyword1">false</span>;
+</span><span id="1371" class="l"><a class="l" href="#1371">1371: </a>        <span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep = <span class="php-keyword1">false</span>;
+</span><span id="1372" class="l"><a class="l" href="#1372">1372: </a>        <span class="php-var">$this</span>-&gt;clearAllReferences();
+</span><span id="1373" class="l"><a class="l" href="#1373">1373: </a>        <span class="php-var">$this</span>-&gt;applyDefaultValues();
+</span><span id="1374" class="l"><a class="l" href="#1374">1374: </a>        <span class="php-var">$this</span>-&gt;resetModified();
+</span><span id="1375" class="l"><a class="l" href="#1375">1375: </a>        <span class="php-var">$this</span>-&gt;setNew(<span class="php-keyword1">true</span>);
+</span><span id="1376" class="l"><a class="l" href="#1376">1376: </a>        <span class="php-var">$this</span>-&gt;setDeleted(<span class="php-keyword1">false</span>);
+</span><span id="1377" class="l"><a class="l" href="#1377">1377: </a>    }
+</span><span id="1378" class="l"><a class="l" href="#1378">1378: </a>
+</span><span id="1379" class="l"><a class="l" href="#1379">1379: </a>    <span class="php-comment">/**
+</span></span><span id="1380" class="l"><a class="l" href="#1380">1380: </a><span class="php-comment">     * Resets all references to other model objects or collections of model objects.
+</span></span><span id="1381" class="l"><a class="l" href="#1381">1381: </a><span class="php-comment">     *
+</span></span><span id="1382" class="l"><a class="l" href="#1382">1382: </a><span class="php-comment">     * This method is a user-space workaround for PHP's inability to garbage collect
+</span></span><span id="1383" class="l"><a class="l" href="#1383">1383: </a><span class="php-comment">     * objects with circular references (even in PHP 5.3). This is currently necessary
+</span></span><span id="1384" class="l"><a class="l" href="#1384">1384: </a><span class="php-comment">     * when using Propel in certain daemon or large-volumne/high-memory operations.
+</span></span><span id="1385" class="l"><a class="l" href="#1385">1385: </a><span class="php-comment">     *
+</span></span><span id="1386" class="l"><a class="l" href="#1386">1386: </a><span class="php-comment">     * @param boolean $deep Whether to also clear the references on all referrer objects.
+</span></span><span id="1387" class="l"><a class="l" href="#1387">1387: </a><span class="php-comment">     */</span>
+</span><span id="1388" class="l"><a class="l" href="#1388">1388: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_clearAllReferences" href="#_clearAllReferences">clearAllReferences</a>(<span class="php-var">$deep</span> = <span class="php-keyword1">false</span>)
+</span><span id="1389" class="l"><a class="l" href="#1389">1389: </a>    {
+</span><span id="1390" class="l"><a class="l" href="#1390">1390: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$deep</span> &amp;&amp; !<span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep) {
+</span><span id="1391" class="l"><a class="l" href="#1391">1391: </a>            <span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep = <span class="php-keyword1">true</span>;
+</span><span id="1392" class="l"><a class="l" href="#1392">1392: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aGroup <span class="php-keyword1">instanceof</span> Persistent) {
+</span><span id="1393" class="l"><a class="l" href="#1393">1393: </a>              <span class="php-var">$this</span>-&gt;aGroup-&gt;clearAllReferences(<span class="php-var">$deep</span>);
+</span><span id="1394" class="l"><a class="l" href="#1394">1394: </a>            }
+</span><span id="1395" class="l"><a class="l" href="#1395">1395: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;aResource <span class="php-keyword1">instanceof</span> Persistent) {
+</span><span id="1396" class="l"><a class="l" href="#1396">1396: </a>              <span class="php-var">$this</span>-&gt;aResource-&gt;clearAllReferences(<span class="php-var">$deep</span>);
+</span><span id="1397" class="l"><a class="l" href="#1397">1397: </a>            }
+</span><span id="1398" class="l"><a class="l" href="#1398">1398: </a>
+</span><span id="1399" class="l"><a class="l" href="#1399">1399: </a>            <span class="php-var">$this</span>-&gt;alreadyInClearAllReferencesDeep = <span class="php-keyword1">false</span>;
+</span><span id="1400" class="l"><a class="l" href="#1400">1400: </a>        } <span class="php-comment">// if ($deep)</span>
+</span><span id="1401" class="l"><a class="l" href="#1401">1401: </a>
+</span><span id="1402" class="l"><a class="l" href="#1402">1402: </a>        <span class="php-var">$this</span>-&gt;aGroup = <span class="php-keyword1">null</span>;
+</span><span id="1403" class="l"><a class="l" href="#1403">1403: </a>        <span class="php-var">$this</span>-&gt;aResource = <span class="php-keyword1">null</span>;
 </span><span id="1404" class="l"><a class="l" href="#1404">1404: </a>    }
 </span><span id="1405" class="l"><a class="l" href="#1405">1405: </a>
 </span><span id="1406" class="l"><a class="l" href="#1406">1406: </a>    <span class="php-comment">/**
-</span></span><span id="1407" class="l"><a class="l" href="#1407">1407: </a><span class="php-comment">     * return true is the object is in saving state
+</span></span><span id="1407" class="l"><a class="l" href="#1407">1407: </a><span class="php-comment">     * return the string representation of this object
 </span></span><span id="1408" class="l"><a class="l" href="#1408">1408: </a><span class="php-comment">     *
-</span></span><span id="1409" class="l"><a class="l" href="#1409">1409: </a><span class="php-comment">     * @return boolean
+</span></span><span id="1409" class="l"><a class="l" href="#1409">1409: </a><span class="php-comment">     * @return string
 </span></span><span id="1410" class="l"><a class="l" href="#1410">1410: </a><span class="php-comment">     */</span>
-</span><span id="1411" class="l"><a class="l" href="#1411">1411: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isAlreadyInSave" href="#_isAlreadyInSave">isAlreadyInSave</a>()
+</span><span id="1411" class="l"><a class="l" href="#1411">1411: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___toString" href="#___toString">__toString</a>()
 </span><span id="1412" class="l"><a class="l" href="#1412">1412: </a>    {
-</span><span id="1413" class="l"><a class="l" href="#1413">1413: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;alreadyInSave;
+</span><span id="1413" class="l"><a class="l" href="#1413">1413: </a>        <span class="php-keyword1">return</span> (string) <span class="php-var">$this</span>-&gt;exportTo(GroupResourcePeer::DEFAULT_STRING_FORMAT);
 </span><span id="1414" class="l"><a class="l" href="#1414">1414: </a>    }
 </span><span id="1415" class="l"><a class="l" href="#1415">1415: </a>
-</span><span id="1416" class="l"><a class="l" href="#1416">1416: </a>    <span class="php-comment">// timestampable behavior</span>
-</span><span id="1417" class="l"><a class="l" href="#1417">1417: </a>
-</span><span id="1418" class="l"><a class="l" href="#1418">1418: </a>    <span class="php-comment">/**
-</span></span><span id="1419" class="l"><a class="l" href="#1419">1419: </a><span class="php-comment">     * Mark the current object so that the update date doesn't get updated during next save
-</span></span><span id="1420" class="l"><a class="l" href="#1420">1420: </a><span class="php-comment">     *
-</span></span><span id="1421" class="l"><a class="l" href="#1421">1421: </a><span class="php-comment">     * @return     GroupResource The current object (for fluent API support)
-</span></span><span id="1422" class="l"><a class="l" href="#1422">1422: </a><span class="php-comment">     */</span>
-</span><span id="1423" class="l"><a class="l" href="#1423">1423: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_keepUpdateDateUnchanged" href="#_keepUpdateDateUnchanged">keepUpdateDateUnchanged</a>()
-</span><span id="1424" class="l"><a class="l" href="#1424">1424: </a>    {
-</span><span id="1425" class="l"><a class="l" href="#1425">1425: </a>        <span class="php-var">$this</span>-&gt;modifiedColumns[] = GroupResourcePeer::UPDATED_AT;
-</span><span id="1426" class="l"><a class="l" href="#1426">1426: </a>
-</span><span id="1427" class="l"><a class="l" href="#1427">1427: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="1428" class="l"><a class="l" href="#1428">1428: </a>    }
-</span><span id="1429" class="l"><a class="l" href="#1429">1429: </a>
-</span><span id="1430" class="l"><a class="l" href="#1430">1430: </a>}
-</span><span id="1431" class="l"><a class="l" href="#1431">1431: </a></span></code></pre>
+</span><span id="1416" class="l"><a class="l" href="#1416">1416: </a>    <span class="php-comment">/**
+</span></span><span id="1417" class="l"><a class="l" href="#1417">1417: </a><span class="php-comment">     * return true is the object is in saving state
+</span></span><span id="1418" class="l"><a class="l" href="#1418">1418: </a><span class="php-comment">     *
+</span></span><span id="1419" class="l"><a class="l" href="#1419">1419: </a><span class="php-comment">     * @return boolean
+</span></span><span id="1420" class="l"><a class="l" href="#1420">1420: </a><span class="php-comment">     */</span>
+</span><span id="1421" class="l"><a class="l" href="#1421">1421: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isAlreadyInSave" href="#_isAlreadyInSave">isAlreadyInSave</a>()
+</span><span id="1422" class="l"><a class="l" href="#1422">1422: </a>    {
+</span><span id="1423" class="l"><a class="l" href="#1423">1423: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;alreadyInSave;
+</span><span id="1424" class="l"><a class="l" href="#1424">1424: </a>    }
+</span><span id="1425" class="l"><a class="l" href="#1425">1425: </a>
+</span><span id="1426" class="l"><a class="l" href="#1426">1426: </a>    <span class="php-comment">// timestampable behavior</span>
+</span><span id="1427" class="l"><a class="l" href="#1427">1427: </a>
+</span><span id="1428" class="l"><a class="l" href="#1428">1428: </a>    <span class="php-comment">/**
+</span></span><span id="1429" class="l"><a class="l" href="#1429">1429: </a><span class="php-comment">     * Mark the current object so that the update date doesn't get updated during next save
+</span></span><span id="1430" class="l"><a class="l" href="#1430">1430: </a><span class="php-comment">     *
+</span></span><span id="1431" class="l"><a class="l" href="#1431">1431: </a><span class="php-comment">     * @return     GroupResource The current object (for fluent API support)
+</span></span><span id="1432" class="l"><a class="l" href="#1432">1432: </a><span class="php-comment">     */</span>
+</span><span id="1433" class="l"><a class="l" href="#1433">1433: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_keepUpdateDateUnchanged" href="#_keepUpdateDateUnchanged">keepUpdateDateUnchanged</a>()
+</span><span id="1434" class="l"><a class="l" href="#1434">1434: </a>    {
+</span><span id="1435" class="l"><a class="l" href="#1435">1435: </a>        <span class="php-var">$this</span>-&gt;modifiedColumns[] = GroupResourcePeer::UPDATED_AT;
+</span><span id="1436" class="l"><a class="l" href="#1436">1436: </a>
+</span><span id="1437" class="l"><a class="l" href="#1437">1437: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="1438" class="l"><a class="l" href="#1438">1438: </a>    }
+</span><span id="1439" class="l"><a class="l" href="#1439">1439: </a>
+</span><span id="1440" class="l"><a class="l" href="#1440">1440: </a>}
+</span><span id="1441" class="l"><a class="l" href="#1441">1441: </a></span></code></pre>
 
 	<div id="footer">
 		thelia API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
