@@ -10,7 +10,7 @@ Actually you can only configure your database connection with config files. All 
 
 ##Server Configuration
 
-Thelia needs at least php 5.3.7 and is fully compatible with php 5.4, an any http server (eg : apache2) and mysql (sqlite and pgsql will be support soon)
+Thelia needs at least php 5.4, an any http server (eg : apache2) and mysql (sqlite and pgsql will be support soon)
 
 after installation you have an architecture like this :
 
@@ -76,6 +76,7 @@ database:
     user: root
     password: root
     dsn: mysql:dbname=thelia;host:localhost
+    classname: DebugPDO #Only in debug mode and if you want all query debug information
 ```
 
 

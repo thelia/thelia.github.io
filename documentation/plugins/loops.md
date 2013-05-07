@@ -28,18 +28,31 @@ If you name your loop like a default loop (eg : Product), your loop will replace
 Your loop can be anywhere (Thanks to namespace) in your plugin but it's better to create a Loop directory and put all
  your loops in this directory.
 
- As see before, you must have to extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html) abstract class and implement exec
- function :
+ As see before, you must have to extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop
+ .BaseLoop.html) abstract class and implement exec and defineArgs functions :
 
  ```
+ public function defineArgs()
  public function exec($text, $args);
  ```
 
  The exec method is used by Tpex when it wants to render the template. The $text args contains all the substitutions
- to replace (for exemple #TITLE is a substitution) and $args all the arguments use by the loop. Reading arguments is
- possible using [Thelia\Tpex\Tools::extractValueParam](/api/source-class-Thelia.Tpex.Tools.html#28-47).
+ to replace (for example #TITLE is a substitution).
 
- Here an exemple for my plugin "MyPlugin" and my loops in the loop directory. This is the architecture :
+ The defineArgs method define all args used in your loop. Args can be mandatory, optional, with default value,
+ etc. This method must return an array. Keys are arg name, value can be many things :
+
+*   no value => this arg is mandatory
+*   "optional" => this arg is optional and default value is null
+*   a value (eg: "foo", 3) => the default value for this arg
+
+ If you don't define your args here, you can't use their in you loop. All args are accessible like classe properties,
+  so in your class, in the exec method you can access to you args through $this (eg : $this->param1 if param1 is an
+  arg).
+
+  For more readability
+
+ Here an example for my plugin "MyPlugin" and my loops in the loop directory. This is the architecture :
 
  ```
  \local
@@ -57,18 +70,24 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
  namespace MyPlugin\Loop;
 
  use Thelia\Tpex\Element\Loop\BaseLoop;
- use Thelia\Tpex\Tools;
 
  class MyLoop extends BaseLoop {
+
+    public function defineArgs()
+    {
+        return array(
+            "param1",
+            "param2" => "optional",
+            "param3" => 3
+        );
+    }
 
      public function exec($text, $args)
      {
 
-         $param1 = Tools::extractValueParam("param1", $args);
-
          $res = "";
 
-         if ($param1 == "foo") {
+         if ($this->param1 == "foo") {
             $res = str_replace("#FOO","bar",$text);
          }
 
@@ -78,28 +97,32 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 
  ```
 
- Of course you can use all classes you want in your class, like model class. All Thelia's model classes are in the
+ Of course you can use all classes you want in your own class, like model class. All Thelia's model classes are in the
  namespace Thelia\Model
 
- So if I want to add some search in my BDD and return results from my product table I can use something like this :
+ So if I want to add some search in my DB and return results from product table I can use something like this :
 
  ```php
  <?php
  namespace MyPlugin\Loop;
 
   use Thelia\Tpex\Element\Loop\BaseLoop;
-  use Thelia\Tpex\Tools;
   use Thelia\Model\ProductQuery;
 
   class MyLoop extends BaseLoop {
 
+      public function defineArgs()
+      {
+        return array(
+            "ref"
+        );
+      }
+
       public function exec($text, $args)
       {
 
-          $ref = Tools::extractValueParam("ref", $args);
-
           $products = ProductQuery::create()
-                        ->filterByRef($ref)
+                        ->filterByRef($this->ref)
                         ->find();
 
           $res = "";
