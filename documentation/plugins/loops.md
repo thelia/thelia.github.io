@@ -50,7 +50,7 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
   so in your class, in the exec method you can access to you args through $this (eg : $this->param1 if param1 is an
   arg).
 
-  For more readability
+  For more readability, you can declare all this class property (and it's better for you IDE autocompletion)
 
  Here an example for my plugin "MyPlugin" and my loops in the loop directory. This is the architecture :
 
@@ -72,6 +72,10 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
  use Thelia\Tpex\Element\Loop\BaseLoop;
 
  class MyLoop extends BaseLoop {
+
+    public $param1;
+    public $param2;
+    public $param3;
 
      public function defineArgs()
      {
@@ -110,6 +114,8 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
   use Thelia\Model\ProductQuery;
 
   class MyLoop extends BaseLoop {
+
+      public $ref;
 
       public function defineArgs()
       {
