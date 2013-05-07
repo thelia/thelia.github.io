@@ -73,14 +73,14 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 
  class MyLoop extends BaseLoop {
 
-    public function defineArgs()
-    {
-        return array(
-            "param1",
-            "param2" => "optional",
-            "param3" => 3
-        );
-    }
+     public function defineArgs()
+     {
+         return array(
+             "param1",
+             "param2" => "optional",
+             "param3" => 3
+         );
+     }
 
      public function exec($text, $args)
      {
