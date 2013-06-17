@@ -1,6 +1,6 @@
 ---
 layout: home
-title: BaseParams - Plugins
+title: BaseParams - Modules
 sidebar: plugin
 subnav: plugin_baseparam
 ---
@@ -13,7 +13,7 @@ subnav: plugin_baseparam
 
 ```xml
 <baseParams>
-    <baseParam name="secure" class="MyPlugin\BaseParam\Secure">
+    <baseParam name="secure" class="MyModule\BaseParam\Secure">
 </baseParams>
 ```
 

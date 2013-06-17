@@ -1,6 +1,6 @@
 ---
 layout: home
-title: TestLoops - Plugins
+title: TestLoops - Modules
 sidebar: plugin
 subnav: plugin_testloop
 ---
@@ -13,7 +13,7 @@ subnav: plugin_testloop
 
 ```xml
 <testLoops>
-    <testLoop name="myTestLoop" class="MyPlugin\TestLoop\MyTestLoop" />
+    <testLoop name="myTestLoop" class="MyModule\TestLoop\MyTestLoop" />
 </testLoops>
 ```
 

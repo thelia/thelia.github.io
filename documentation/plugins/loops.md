@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Loops - Plugins
+title: Loops - Modules
 sidebar: plugin
 subnav: plugin_loop
 ---
@@ -11,21 +11,21 @@ subnav: plugin_loop
 
 ```xml
 <loops>
-    <loop name="MyPlugin_Product" class="MyPlugin\Loop\Product" />
-    <loop name="MyPlugin_MyLoop" class="MyPlugin\Loop\MyLoop" />
+    <loop name="MyModule_Product" class="MyModule\Loop\Product" />
+    <loop name="MyModule_MyLoop" class="MyModule\Loop\MyLoop" />
 </loops>
 ```
 
 You have to create as many loop node as loop you have into the loops node. In this example there is 2 loops. Name and
 class properties are mandatory. The name is the loop name used into the template ( ```<THELIA_name
-type="MyPlugin_Product">...</THELIA_name>```), class property is the class executed by the template engine. This
+type="MyModule_Product">...</THELIA_name>```), class property is the class executed by the template engine. This
 class must extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html)
 abstract class, if not an exception is thrown.
 **If you name your loop like a default loop (eg : Product), your loop will replace the default loop.**
 
 ##How to implement a loop ?
 
-Your loop can be anywhere (Thanks to namespace) in your plugin but it's better to create a Loop directory and put all
+Your loop can be anywhere (Thanks to namespace) in your module but it's better to create a Loop directory and put all
  your loops in this directory.
 
  As see before, you must have to extends the [Thelia\Tpex\Element\Loop\BaseLoop](/api/class-Thelia.Tpex.Element.Loop
@@ -52,12 +52,12 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 
   For more readability, you can declare all this class property (and it's better for you IDE autocompletion)
 
- Here an example for my plugin "MyPlugin" and my loops in the loop directory. This is the architecture :
+ Here an example for my module "MyModule" and my loops in the loop directory. This is the architecture :
 
  ```
  \local
-   \plugins
-     \MyPlugin
+   \modules
+     \MyModule
        ...
        \Loop
          MyLoop.php
@@ -67,7 +67,7 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 
  ```php
  <?php
- namespace MyPlugin\Loop;
+ namespace MyModule\Loop;
 
  use Thelia\Tpex\Element\Loop\BaseLoop;
  use Thelia\Tpex\Element\Loop\LoopResult;
@@ -117,7 +117,7 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 
  ```php
  <?php
- namespace MyPlugin\Loop;
+ namespace MyModule\Loop;
 
   use Thelia\Tpex\Element\Loop\BaseLoop;
   use Thelia\Tpex\Element\Loop\LoopResult;

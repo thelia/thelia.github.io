@@ -24,7 +24,7 @@ www <- your web root directory
         install
         local
             config
-            plugins
+            modules
             session
         log
         templates

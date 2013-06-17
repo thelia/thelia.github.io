@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Actions - plugin
+title: Actions - Modules
 sidebar: plugin
 subnav: plugin_action
 ---
@@ -9,7 +9,8 @@ subnav: plugin_action
 
 As in Thelia 1 you can make action for creating a new account, add a product in you cart and many more.
 
-Many Action are native and, of course, you can create your own using plugins. But the new part in Thelia 2 is that you can override all native actions and replace it with your own actions.
+Many Action are native and, of course, you can create your own using modules. But the new part in Thelia 2 is that you
+can override all native actions and replace it with your own actions.
 
 Actions use eventListener process and are declared in conf files. They are executed at the start of the TheliaHTTPKernel::handle method.
 An internal listener catch kernel.request event and dispatch a new one if the action parameter is presents in the request. This new event name start with
@@ -18,7 +19,8 @@ An internal listener catch kernel.request event and dispatch a new one if the ac
 All your method's action have for only argument a **Thelia\Core\Event\ActionEvent** object instance. This object
 contain the current Request and a Dispatcher (for dispatching new Events if you want).
 
-For declaring actions in your plugin, you have to use your config.xml file and declare a new service, for exemple you have the plugins test with this structure :
+For declaring actions in your module, you have to use your config.xml file and declare a new service,
+for exemple you have the modules test with this structure :
 
 
 ```
@@ -45,7 +47,7 @@ In your config.xml you have already declare your own loops, filters and other se
 
         ....
         <services>
-            <service id="myplugin.action.customer" class="Test\Actions\Customer">
+            <service id="module.action.customer" class="MyModule\Actions\Customer">
                 <tag name="kernel.event_subscriber"/>
             </service>
         </services>
