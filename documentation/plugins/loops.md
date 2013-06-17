@@ -46,7 +46,7 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
 *   "optional" => this arg is optional and default value is null
 *   a value (eg: "foo", 3) => the default value for this arg
 
- If you don't define your args here, you can't use their in you loop. All args are accessible like classe properties,
+ If you don't define your args here, you can't use their in your loop. All args are accessible like classe properties,
   so in your class, in the exec method you can access to you args through $this (eg : $this->param1 if param1 is an
   arg).
 
@@ -70,6 +70,8 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
  namespace MyPlugin\Loop;
 
  use Thelia\Tpex\Element\Loop\BaseLoop;
+ use Thelia\Tpex\Element\Loop\LoopResult;
+ use Thelia\Tpex\Element\Loop\LoopResultRow;
 
  class MyLoop extends BaseLoop {
 
@@ -86,13 +88,20 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
          );
      }
 
+     /**
+     *
+     * return \Thelia\Tpex\Element\Loop\LoopResult
+     */
      public function exec($text, $args)
      {
 
-         $res = "";
+         $result = new LoopResult();
 
          if ($this->param1 == "foo") {
-            $res = str_replace("#FOO","bar",$text);
+            $loopResultRow = new LoopResultRow();
+            $loopResultRow->set("FOO","bar");
+
+            $result->addRow($loopResultRow);
          }
 
          return $res;
@@ -111,6 +120,8 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
  namespace MyPlugin\Loop;
 
   use Thelia\Tpex\Element\Loop\BaseLoop;
+  use Thelia\Tpex\Element\Loop\LoopResult;
+  use Thelia\Tpex\Element\Loop\LoopResultRow;
   use Thelia\Model\ProductQuery;
 
   class MyLoop extends BaseLoop {
@@ -123,7 +134,10 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
             "ref"
         );
       }
-
+      /**
+       *
+       * return \Thelia\Tpex\Element\Loop\LoopResult
+       */
       public function exec($text, $args)
       {
 
@@ -131,16 +145,25 @@ Your loop can be anywhere (Thanks to namespace) in your plugin but it's better t
                         ->filterByRef($this->ref)
                         ->find();
 
-          $res = "";
+          $loopResult = new LoopResult();
 
           foreach ($products as $product) {
-                $tmp = str_replace("#TITLE", $product->getTitle(), $text);
-                $tmp = str_replace("#PRICE", $product->getPrice(), $tmp);
+                $loopResultRow = new LoopResultRow();
+                $loopResultRow->set("TITLE", $product->getTitle());
+                $loopResultRow->set("PRICE", $product->getPrice());
 
-                $res .= $tmp
+                $loopResult->addRow($loopResultRow);
           }
 
-          return $res;
+          return $loopResult;
       }
   }
 ```
+
+*exec* method must return an instance of *Thelia\Tpex\Element\Loop\LoopResult*. This class is a collection of
+*Thelia\Tpex\Element\Loop\LoopResultRow*.
+
+In an instance of *Thelia\Tpex\Element\Loop\LoopResultRow* you put the substitution and the value of this
+substitution (in the example, for each product you create an instance of *Thelia\Tpex\Element\Loop\LoopResultRow*,
+set the results and add this instance into *Thelia\Tpex\Element\Loop\LoopResult* instance). In my example,
+\#TITLE is the substitution for title products

@@ -34,7 +34,7 @@ Test
         Customer.php
 ```
 
-In you config.xml you have already declare your own loops, filters and other services. EventListener have to use the special "tag" named "kernel.event_subscriber"
+In your config.xml you have already declare your own loops, filters and other services. EventListener have to use the special "tag" named "kernel.event_subscriber"
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
