@@ -64,7 +64,7 @@ This is the body of your config.xml file :
 In this file you can declare :
 
 * [Loops](/documentation/modules/loops.html)
-* [testLoops](documentation/modules/testloops.html)
-* [BaseParams](documentation/modules/baseparams.html)
+* [testLoops](/documentation/modules/testloops.html)
+* [BaseParams](/documentation/modules/baseparams.html)
 * [actions](/documentation/modules/actions.html)
 * [commands](/documentation/modules/commands.html)
