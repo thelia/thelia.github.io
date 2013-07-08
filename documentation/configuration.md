@@ -76,7 +76,7 @@ database:
     user: root
     password: root
     dsn: mysql:dbname=thelia;host:localhost
-    classname: DebugPDO #Only in debug mode and if you want all query debug information
+    classname: \Propel\Runtime\Connection\DebugPDO #Only in debug mode and if you want all query debug information
 ```
 
 
