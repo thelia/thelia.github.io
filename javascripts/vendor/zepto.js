@@ -137,7 +137,7 @@ var Zepto = (function() {
   // `$.zepto.fragment` takes a html string and an optional tag name
   // to generate DOM nodes nodes from the given html string.
   // The generated DOM nodes are returned as an array.
-  // This function can be overriden in modules for example to make
+  // This function can be overriden in plugins for example to make
   // it compatible with browsers that don't support the DOM fully.
   zepto.fragment = function(html, name, properties) {
     if (html.replace) html = html.replace(tagExpanderRE, "<$1></$2>")
@@ -162,7 +162,7 @@ var Zepto = (function() {
   // `$.zepto.Z` swaps out the prototype of the given `dom` array
   // of nodes with `$.fn` and thus supplying all the Zepto functions
   // to the array. Note that `__proto__` is not supported on Internet
-  // Explorer. This method can be overriden in modules.
+  // Explorer. This method can be overriden in plugins.
   zepto.Z = function(dom, selector) {
     dom = dom || []
     dom.__proto__ = $.fn
@@ -171,7 +171,7 @@ var Zepto = (function() {
   }
 
   // `$.zepto.isZ` should return `true` if the given object is a Zepto
-  // collection. This method can be overriden in modules.
+  // collection. This method can be overriden in plugins.
   zepto.isZ = function(object) {
     return object instanceof zepto.Z
   }
@@ -179,7 +179,7 @@ var Zepto = (function() {
   // `$.zepto.init` is Zepto's counterpart to jQuery's `$.fn.init` and
   // takes a CSS selector and an optional context (and handles various
   // special cases).
-  // This method can be overriden in modules.
+  // This method can be overriden in plugins.
   zepto.init = function(selector, context) {
     // If nothing given, return an empty Zepto collection
     if (!selector) return zepto.Z()
@@ -210,7 +210,7 @@ var Zepto = (function() {
   // `$` will be the base `Zepto` object. When calling this
   // function just call `$.zepto.init, which makes the implementation
   // details of selecting nodes and creating Zepto collections
-  // patchable in modules.
+  // patchable in plugins.
   $ = function(selector, context){
     return zepto.init(selector, context)
   }
@@ -241,7 +241,7 @@ var Zepto = (function() {
 
   // `$.zepto.qsa` is Zepto's CSS selector implementation which
   // uses `document.querySelectorAll` and optimizes for some special cases, like `#id`.
-  // This method can be overriden in modules.
+  // This method can be overriden in plugins.
   zepto.qsa = function(element, selector){
     var found
     return (isDocument(element) && idSelectorRE.test(selector)) ?
@@ -1828,6 +1828,122 @@ window.Zepto = Zepto
       ret.prevObject = this
       return ret
     }
+  })
+})(Zepto)
+
+//     Zepto.js
+//     (c) 2010-2012 Thomas Fuchs
+//     Zepto.js may be freely distributed under the MIT license.
+
+;(function($){
+  var touch = {},
+    touchTimeout, tapTimeout, swipeTimeout,
+    longTapDelay = 750, longTapTimeout
+
+  function parentIfText(node) {
+    return 'tagName' in node ? node : node.parentNode
+  }
+
+  function swipeDirection(x1, x2, y1, y2) {
+    var xDelta = Math.abs(x1 - x2), yDelta = Math.abs(y1 - y2)
+    return xDelta >= yDelta ? (x1 - x2 > 0 ? 'Left' : 'Right') : (y1 - y2 > 0 ? 'Up' : 'Down')
+  }
+
+  function longTap() {
+    longTapTimeout = null
+    if (touch.last) {
+      touch.el.trigger('longTap')
+      touch = {}
+    }
+  }
+
+  function cancelLongTap() {
+    if (longTapTimeout) clearTimeout(longTapTimeout)
+    longTapTimeout = null
+  }
+
+  function cancelAll() {
+    if (touchTimeout) clearTimeout(touchTimeout)
+    if (tapTimeout) clearTimeout(tapTimeout)
+    if (swipeTimeout) clearTimeout(swipeTimeout)
+    if (longTapTimeout) clearTimeout(longTapTimeout)
+    touchTimeout = tapTimeout = swipeTimeout = longTapTimeout = null
+    touch = {}
+  }
+
+  $(document).ready(function(){
+    var now, delta
+
+    $(document.body)
+      .bind('touchstart', function(e){
+        now = Date.now()
+        delta = now - (touch.last || now)
+        touch.el = $(parentIfText(e.touches[0].target))
+        touchTimeout && clearTimeout(touchTimeout)
+        touch.x1 = e.touches[0].pageX
+        touch.y1 = e.touches[0].pageY
+        if (delta > 0 && delta <= 250) touch.isDoubleTap = true
+        touch.last = now
+        longTapTimeout = setTimeout(longTap, longTapDelay)
+      })
+      .bind('touchmove', function(e){
+        cancelLongTap()
+        touch.x2 = e.touches[0].pageX
+        touch.y2 = e.touches[0].pageY
+        if (Math.abs(touch.x1 - touch.x2) > 10)
+          e.preventDefault()
+      })
+      .bind('touchend', function(e){
+         cancelLongTap()
+
+        // swipe
+        if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > 30) ||
+            (touch.y2 && Math.abs(touch.y1 - touch.y2) > 30))
+
+          swipeTimeout = setTimeout(function() {
+            touch.el.trigger('swipe')
+            touch.el.trigger('swipe' + (swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2)))
+            touch = {}
+          }, 0)
+
+        // normal tap
+        else if ('last' in touch)
+
+          // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
+          // ('tap' fires before 'scroll')
+          tapTimeout = setTimeout(function() {
+
+            // trigger universal 'tap' with the option to cancelTouch()
+            // (cancelTouch cancels processing of single vs double taps for faster 'tap' response)
+            var event = $.Event('tap')
+            event.cancelTouch = cancelAll
+            touch.el.trigger(event)
+
+            // trigger double tap immediately
+            if (touch.isDoubleTap) {
+              touch.el.trigger('doubleTap')
+              touch = {}
+            }
+
+            // trigger single tap after 250ms of inactivity
+            else {
+              touchTimeout = setTimeout(function(){
+                touchTimeout = null
+                touch.el.trigger('singleTap')
+                touch = {}
+              }, 250)
+            }
+
+          }, 0)
+
+      })
+      .bind('touchcancel', cancelAll)
+
+    $(window).bind('scroll', cancelAll)
+  })
+
+  ;['swipe', 'swipeLeft', 'swipeRight', 'swipeUp', 'swipeDown', 'doubleTap', 'tap', 'singleTap', 'longTap'].forEach(function(m){
+    $.fn[m] = function(callback){ return this.bind(m, callback) }
   })
 })(Zepto)
 
