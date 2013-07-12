@@ -21,27 +21,64 @@
         {{ content }}
 
         <div class="row">
-            <div class="large-6 columns">
+            <div class="large-12 columns">
                 <h3>Arguments</h3>
 
                 {% for argument in page.arguments %}
-                    <div class="loop-argument">
-                        <div class="name">
+                    <div class="loop-argument large-12">
+                        <div class="name large-3">
                             {{ argument.name }}
                         </div>
-                        <div class="information">
+                        <div class="information large-9">
+
                             <div class="description">
                                 {{ argument.description }}
                             </div>
-                            <div class="example">
-                                {{ argument.example }}
+
+                            {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                            <div class="expected_values">
+                                Expected values :
+                                <ul>
+                                    {% for expected_value in argument.expected_values %}
+                                    <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : '{{ expected_value.description }}' <em>{{ expected_value.description }}</em>{% endif %}</li>
+                                    {% endfor %}
+                                </ul>
                             </div>
+                            {% endif %}
+
+                            {% if argument.default != nil AND argument.default != '' %}
+                            <div class="default">
+                                default : <bold>{{ argument.default }}</bold>
+                            </div>
+                            {% endif %}
+
+                            {% if argument.example != nil AND argument.example != '' %}
+                            <div class="example">
+                                example : <em>{{ argument.example }}</em>
+                            </div>
+                            {% endif %}
+
                         </div>
+                        <div style="clear: both"></div>
                     </div>
                 {% endfor %}
             </div>
-            <div class="large-6 columns">
+            <div class="large-12 columns">
                 <h3>Outputs</h3>
+
+                {% for output in page.outputs %}
+                <div class="loop-output large-12">
+                    <div class="name large-3">
+                        {{ output.name }}
+                    </div>
+                    <div class="information large-9">
+                        <div class="description">
+                            {{ output.description }}
+                        </div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+                {% endfor %}
             </div>
         </div>
 
