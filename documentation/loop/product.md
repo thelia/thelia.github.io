@@ -18,7 +18,7 @@ arguments :
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of product ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_category", description: "A single or a list of category ids. If a product is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"2\", exclude_category=\"1,4,7\""}
-    - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature 11 and 12"}
+    - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
     - {
         name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "ordered by insertion order",
         expected_values: [
@@ -37,6 +37,17 @@ arguments :
       }
 outputs :
     - {name: "#ID", description: "the product id"}
+    - {name: "#REF", description: "the product reference"}
+    - {name: "#REF", description: "the product reference"}
+    - {name: "#PRICE", description: "the product price"}
+    - {name: "#PROMO_PRICE", description: "the product promo price"}
+    - {name: "#PROMO", description: "return if the product is in promo"}
+    - {name: "#NEW", description: "return if the product is new"}
+    - {name: "#WEIGHT", description: "the product weight"}
+    - {name: "#TITLE", description: "the product title"}
+    - {name: "#CHAPO", description: "the product chapo"}
+    - {name: "#DESCRIPTION", description: "the product description"}
+    - {name: "#POSTSCTIPTUM", description: "the product postscriptum"}
 ---
 
 #Product Loop
