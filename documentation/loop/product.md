@@ -19,6 +19,7 @@ arguments :
     - {name: "exclude", description: "A single or a list of product ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_category", description: "A single or a list of category ids. If a product is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"2\", exclude_category=\"1,4,7\""}
     - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
+    - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
     - {
         name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "ordered by insertion order",
         expected_values: [
@@ -48,8 +49,10 @@ outputs :
     - {name: "#CHAPO", description: "the product chapo"}
     - {name: "#DESCRIPTION", description: "the product description"}
     - {name: "#POSTSCTIPTUM", description: "the product postscriptum"}
+examples :
+    - {description: "I want to display all products from categories 1 and 2 whose feature `color` (ID : 1) is `blue` (ID : 13), order by ascending price"}
 ---
 
-#Product Loop
+#{{ page.title }}
 
-Product loop lists product from your shop.
+Product loop lists products from your shop.

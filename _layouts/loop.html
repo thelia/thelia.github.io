@@ -26,6 +26,7 @@ global_outputs :
         {{ content }}
 
         <div class="row">
+
             <div class="large-12 columns">
                 <h3>Arguments</h3>
 
@@ -68,6 +69,7 @@ global_outputs :
                     </div>
                 {% endfor %}
             </div>
+
             <div class="large-12 columns">
                 <h3>Outputs</h3>
 
@@ -101,6 +103,24 @@ global_outputs :
                 </div>
                 {% endfor %}
             </div>
+
+            <div class="large-12 columns">
+                <h3>Examples</h3>
+
+                {% for example in page.examples %}
+                <div class="loop-example large-12">
+                    <div class="description large-12">
+                        {{ example.description }}
+                    </div>
+                    <div>
+                        {{ example.code }}
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+                {% endfor %}
+
+            </div>
+
         </div>
 
     </div>
