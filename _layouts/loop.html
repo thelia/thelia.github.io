@@ -1,7 +1,11 @@
 ---
+global_arguments :
+    - {name: "page", description: "The page to display.", example: "page=\"2\""}
+    - {name: "limit", description: "The maximum number of results to display.", example: "limit=\"10\"", default: "10"}
+    - {name: "offset", description: "The first product to display offset. Will not be used if `page` argument is set.", example: "offset=\"1\"", default: "0"}
 global_outputs :
-- {name: "#LOOP_COUNT", description: "the current results index starting from 1"}
-- {name: "#LOOP_TOTAL", description: "the total number of results"}
+    - {name: "#LOOP_COUNT", description: "the current results index starting from 1"}
+    - {name: "#LOOP_TOTAL", description: "the total number of results"}
 ---
 <!DOCTYPE html>
 <!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -29,6 +33,52 @@ global_outputs :
 
             <div class="large-12 columns">
                 <h3>Arguments</h3>
+
+                {% if page.uses_global_argument == true %}
+
+                <h4>Global arguments</h4>
+                {% for argument in page.global_arguments %}
+                <div class="loop-argument large-12">
+                    <div class="name large-3">
+                        {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}
+                    </div>
+                    <div class="information large-9">
+
+                        <div class="description">
+                            {{ argument.description }}
+                        </div>
+
+                        {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                        <div class="expected_values">
+                            Expected values :
+                            <ul>
+                                {% for expected_value in argument.expected_values %}
+                                <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if argument.default != nil AND argument.default != '' %}
+                        <div class="default">
+                            <strong>default</strong> : {{ argument.default }}
+                        </div>
+                        {% endif %}
+
+                        {% if argument.example != nil AND argument.example != '' %}
+                        <div class="example">
+                            example : <em>{{ argument.example }}</em>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+                {% endfor %}
+
+                <h4>Loop arguments</h4>
+
+                {% endif %}
 
                 {% for argument in page.arguments %}
                     <div class="loop-argument large-12">
@@ -73,6 +123,8 @@ global_outputs :
             <div class="large-12 columns">
                 <h3>Outputs</h3>
 
+                {% if page.returns_global_outputs == true %}
+
                 <h4>Global outputs</h4>
                 {% for output in page.global_outputs %}
                 <div class="loop-output large-12">
@@ -89,6 +141,9 @@ global_outputs :
                 {% endfor %}
 
                 <h4>Loop outputs</h4>
+
+                {% endif %}
+
                 {% for output in page.outputs %}
                 <div class="loop-output large-12">
                     <div class="name large-3">

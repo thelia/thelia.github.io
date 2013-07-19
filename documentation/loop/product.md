@@ -2,6 +2,9 @@
 layout: loop
 title: Product Loop
 sidebar: loop
+subnav: loop_product
+uses_global_argument: true
+returns_global_outputs: true
 arguments :
     - {name: "id", description: "A single or a list of product ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "ref", description: "A single or a list of product references.", example: "ref=\"ref0\", id=\"ref1,ref6\""}
@@ -28,12 +31,13 @@ arguments :
             {name: "reverse",           description: "reverse insertion order"},
             {name: "min_price",         description: "ascending price"},
             {name: "max_price",         description: "descending price"},
-            {name: "manual",            description: ""},
-            {name: "manual_reverse",    description: ""},
+            {name: "manual",            description: "`category` argument must be set"},
+            {name: "manual_reverse",    description: "`category` argument must be set"},
             {name: "ref",               description: "alphabetical order on reference"},
             {name: "promo",             description: "display promo products first or last"},
             {name: "new",               description: "display new products first or last"},
-            {name: "random",            description: ""}
+            {name: "random",            description: ""},
+            {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"}
         ]
       }
 outputs :
