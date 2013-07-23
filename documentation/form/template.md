@@ -7,7 +7,7 @@ subnav: form_action
 
 #Diplay your form
 
-Now you have create a form, it's time to display it in your template.
+Once you've created a form, it's time to display it in your template.
 
 All you need is the form's name and know all the fields of your form.
 
@@ -38,7 +38,7 @@ You can open now the form html tag :
 
 <br />the *{form_enctype}* function display for you the good enctype.
 
-For the displaying all the hidden fields, you have to use the *{form_field_hidden}* function, don't forget this part, t contains the csrf validation :
+For displaying all the hidden fields, you have to use the *{form_field_hidden}* function, don't forget this part, that contains the csrf validation :
 
 ```smarty
 {form name="thelia.customer.creation"}
@@ -65,7 +65,7 @@ For displaying a field, you have to use the *{form_field}* block. You have to se
 ```
 
 <br />
-Value available in the *{form_field}* block :
+Values available in the *{form_field}* block :
 
  * $name : field's name used in the name part of your input
  * $value : default value to display
@@ -75,7 +75,7 @@ Value available in the *{form_field}* block :
 
 ##Display errors
 
-If your form contain error, it automatically display the value already send by the user and can display a message for each fields containing errors. The *{form_field_error}*
+If your form contains some errors, it automatically display the value already sent by the user and can display a message for each fields containing errors. The *{form_field_error}*
 is used and it works like the *{form_field}* block. You can call it outside the *{form_field}* block :
 
 ```smarty
@@ -92,7 +92,7 @@ is used and it works like the *{form_field}* block. You can call it outside the 
 {/form}
 ```
 
-<br />For finish, a complete exemple with the customer creation form (note that customer title is hard coded, you loop here) :
+<br />To finish, a complete example with the customer creation form (note that customer title is hard coded, you loop here) :
 
 ```smarty
 {form name="thelia.customer.creation"}
