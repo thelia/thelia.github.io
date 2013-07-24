@@ -5,16 +5,24 @@ sidebar: form
 subnav: form_index
 ---
 
-#How form works ?
+# How form works ?
 
-With Thelia 2, form management is totaly new. Each form has a dedicated class allowing to control many things like validation, default values, etc.
+With Thelia 2, form management is completely new. Each form has a dedicated class allowing to control many things like validation, default values, etc.
 
-Form in Thelia 2 use Forms Symfony Component. We made a wrapper that initialize all form process for you, you have just to declare all your fields and put options
-on each like validation. Using form process is not mandatory but highly recommanded !
+Form in Thelia 2 use Forms Symfony component. We made a wrapper that initialize all form processing for you, you have just to declare all your fields and define options
+on each field, such as validation. Using form process is not mandatory but highly recommanded !
 
-##How to declare your forms ?
+# Form lifecycle
 
-Like loops, you have to declare your form in config file using <forms> and <form> keyword :
+A form is displayed using a Thelia template. When this form is submitted, the data are processed by a Thelia action.
+
+If the form is successfully processed, the customer is redirected to a success URL, which is defined by the 'success_url' form field (remember: Thelia navigation is completely driven by your templates)
+
+If the form cannot be processed, the form "action" attribute is used. Thus, setting the form action URL to the current view is a good way to process errors. If it's not clear, see the [form template](template.md) below. 
+
+## How to declare your forms ?
+
+Like loops, you have to declare your form in config file using <forms> and <form> elements :
 
 ```xml
 <forms>
@@ -23,53 +31,69 @@ Like loops, you have to declare your form in config file using <forms> and <form
 </forms>
 ```
 
-in your <forms> tag you declare how many form you want. Each form must have a name and a class (with full className, remember your module must be PSR-0 compliant).
+In the <forms> element, the number of forms is not limited, declare as many form you as you want. For each form, you shoud define a unique name, and provide the full qualified for class path (remember: your module must be PSR-0 compliant).
 
-The form name is needed and is used in your template for displaying the Form.
+The form name is mandatory, and will be used in your templates for displaying the form.
 
-##How to create a form ?
+## How to create a form ?
 
-Each form class must extends *Thelia\Form\BaseForm*. This class is abstract and you have to redefine at least *buildForm* and *getName* methods.
+Each form class must extends *Thelia\Form\BaseForm*. This class is abstract and you have to overload at least *buildForm* and *getName* methods.
 
-###getName method
+### getName method
 
-The *getName* method must return the name of your form. Good pratice is to return the same name as define in you config
+The *getName* method must return the name of your form. A good pratice is to return the same name as the one defined in the <form> configuration element
 
-###buildForm method
+### buildForm method
 
-The *buildForm* method allow to declare all the Fields and for each adding options like the label, validation constraints.
+The *buildForm* method defines all the fields of the form, and the fields options, such as for each  the label and thefield validation constraints.
 
-First of all, the form builder is in the form property of your class and you must use it in your buildForm method for adding fields :
+`$this->formBuilder` is the Symfony [FormFactoryInterface](http://api.symfony.com/2.3/Symfony/Component/Form/FormFactoryInterface.html) object, and is used to create your form fields :
 
 ```php
 <?php
 public function buildForm()
 {
-    $this->form->add("name field", "type", array of options);
+    $this->formBuilder->add("field name", "field type", array of options);
 }
 ```
 
-*add* method always return the formBuilder isntance, so you can chain the method for adding fields :
+*add* method always returns the formBuilder instance, so you can chain the methods for adding fields :
 
 ```php
 <?php
 public function buildForm()
 {
-    $this->form
-        ->add("name field", "type", array("label" => "field label")
+    $this->formBuilder
+        ->add("field name", "type", array("label" => "field label")
         ->add("other field", "typ", array("label" => "other field label");
 }
 ```
 
-##Validatation constraints
+## Validatation constraints
 
-You can add constraints for all your fields and the form can detect if there are errors. For this part we delegate all the constraints on the Symfony Validator component.
-You can create your own validator too following the symfony validator guidelines.
+You can add constraints for all your fields, so that the form system will automatically detect errors. For this part we delegate all the constraints on the Symfony Validator component.
+You can also create your own validator, following the symfony validator guidelines.
 
 The list of available validator contrainst is here : [http://symfony.com/doc/current/reference/constraints.html](http://symfony.com/doc/current/reference/constraints.html)
 
+## Example
 
-Complete form exemple :
+Below a complete form exemple, the customer creation form.
+
+In the config.xml file, we declare the form like this :
+
+```xml
+<forms>
+    ...
+    <form name="thelia.customer.creation" class="Thelia\Form\CustomerCreation"/>
+    ...
+</forms>
+```
+
+The form class is in the file Thelia/Form/CustomerCreation.php, and contains all form definitions. We use here different constraints :
+- Constraints\NotBlank()
+- Constraints\Email()
+- Constraints\Callback, to check spécific coinditions, such as dupolicate emails, or non matching passwords.
 
 ```php
 <?php
@@ -80,13 +104,12 @@ use Symfony\Component\Validator\ExecutionContextInterface;
 use Thelia\Model\ConfigQuery;
 use Thelia\Model\CustomerQuery;
 
-
 class CustomerCreation extends BaseForm
 {
 
     protected function buildForm()
     {
-        $this->form
+        $this->formBuilder
             ->add("firstname", "text", array(
                 "constraints" => array(
                     new Constraints\NotBlank()
@@ -214,7 +237,7 @@ class CustomerCreation extends BaseForm
 
     public function getName()
     {
-        return "customerCreation";
+        return "thelia.customer.creation";
     }
 }
 ```

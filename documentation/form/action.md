@@ -5,43 +5,47 @@ sidebar: form
 subnav: form_action
 ---
 
-#Use your form class for validating data
+# Use your form class for validating data
 
-In next [chapter](/documentation/form/index.html) you see how to create your class form, adding fields and constraints on each.
+In next [chapter](/documentation/form/index.html) you'll see how to create your own form class, adding fields and fields constraints.
 
-Validating your form is very easy. You have to bind your form with the current request and check if the form id valid.
+Validating your form is very easy. You have to bind your form with the current request and check that the form id valid.
 
 Let's see :
 
 ```php
 <?php
-
-//retrieve your request, in an action the request is in the ActionEvent instance
-$request = $event->getRequest();
-
-//create an instance of your form
-$customerForm = new \Telia\Form\CustomerCreation($request);
-
-$form = $customerForm->getForm();
-
-$form->bind($request);
-
-if($form->isValid) {
-    //ok, your form is valid, you can persist your customer
-} else {
-    //There is at least one error
+public function create(ActionEvent $event) 
+{
+    //retrieve your request, in an action the request is in the ActionEvent instance
+    $request = $event->getRequest();
+    
+    //create an instance of your form
+    $customerForm = new \Telia\Form\CustomerCreation($request);
+    
+    $form = $customerForm->getForm();
+    
+    $form->bind($request);
+    
+    if($form->isValid()) {
+        //ok, your form is valid, you can persist your customer and display the result template
+    } 
+    else {
+        //There is at least one error
+    }
 }
 ```
+# Error processing
 
-<br />
-If you are in a Thelia action, the ActionEvent object have a method allowing to inform that your form is invalid and stop the action for displaying errors :
+In a Thelia action, use the ActionEvent method `setErrorForm()` when your form is invalid. The event propagation will then be stopped.
 
 ```php
 <?php
 
 class MyAction implements EventSubscriberInterface
 {
-...
+    ...
+
     function MyAction(ActionEvent $event)
     {
         $request = $event->getRequest();
@@ -52,14 +56,32 @@ class MyAction implements EventSubscriberInterface
 
         //validation process only if it's a post method
         if ($request->isMethod("post")) {
+
             $form->bind($request)
 
             if($form->isValid()) {
-                //your form is valid, do what you want like persisting data.
-            } else {
-                //here I call the setFormError that record some information for displaying errors after.
-                $event->setFormError($form);
-            }
+
+                // your form is valid. You can perform additional check, 
+                // or do what you want like persisting data.
+                
+                // Every form have as success_url field, which contains the base site URL by default. 
+                // Redirect to this URL now
+                Redirect::exec($form->getSuccessUrl());
+
+                // Redirect::exec() has called exit(), so nothing more will happen.
+            } 
+
+            // The form has errors
+            $form->setError(true);
+
+            // Add a message that could be displayed by the form on the template
+            $form->setMessage("Invalid or missing data, please check entred data");
+
+            // Call the setFormError to store the errored form and propagate it to the template
+            $event->setErrorForm($form);
+
+            // At this point, the form action URL is displayed. 
+            // Likely, the same view is displayed again, displaying form and fields error messages  
         }
     }
 }
