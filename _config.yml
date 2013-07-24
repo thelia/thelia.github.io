@@ -1,3 +1,30 @@
 pygments: true
 permalink: none
 markdown: redcarpet
+
+#sidebar menu config
+sidebar:
+  - { name: "Installation", sidebar_name: "index", url: "/index.html" }
+  - { name: "Configuration", sidebar_name: "configuration", url: "/documentation/configuration.html" }
+  - { name: "Modules", sidebar_name: "plugin", subsections: [
+       { name: "Starting", sidebar_name: "plugin_index", url: "/documentation/modules/index.html" },
+       { name: "Loops", sidebar_name: "plugin_loop", url: "/documentation/modules/loops.html" },
+       { name: "TestLoops", sidebar_name: "plugin_testloop", url: "/documentation/modules/testloops.html" },
+       { name: "BaseParams", sidebar_name: "plugin_baseparam", url: "/documentation/modules/baseparams.html" },
+       { name: "Actions", sidebar_name: "plugin_action", url: "/documentation/modules/actions.html" },
+       { name: "Commands", sidebar_name: "plugin_command", url: "/documentation/modules/commands.html" }
+      ]
+    }
+  - { name: "Form", sidebar_name: "form", subsections: [
+        { name: "Program you Form", sidebar_name: "form_index", url: "/documentation/form/index.html" },
+        { name: "Use your form in actions", sidebar_name: "form_action", url: "/documentation/form/action.html" },
+        { name: "Display form", sidebar_name: "form_template", url: "/documentation/form/template.html" }
+      ]
+    }
+  - { name: "Loops", sidebar_name: "loop", subsections: [
+         { name: "About loops", sidebar_name: "loop_index", url: "/documentation/loop/index.html" },
+         { name: "Accessory loop", sidebar_name: "loop_accessory", url: "/documentation/loop/accessory.html" },
+         { name: "Category loop", sidebar_name: "loop_category", url: "/documentation/loop/category.html" },
+         { name: "Product loop", sidebar_name: "loop_product", url: "/documentation/loop/product.html" }
+      ]
+    }
