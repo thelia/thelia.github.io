@@ -2,6 +2,9 @@
 layout: loop
 title: Product Loop
 sidebar: loop
+subnav: loop_product
+uses_global_argument: true
+returns_global_outputs: true
 arguments :
     - {name: "id", description: "A single or a list of product ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "ref", description: "A single or a list of product references.", example: "ref=\"ref0\", id=\"ref1,ref6\""}
@@ -21,24 +24,23 @@ arguments :
     - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
     - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
     - {
-        name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "ordered by insertion order",
+        name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "manual",
         expected_values: [
             {name: "alpha",             description: "alphabetical order on title"},
             {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
-            {name: "reverse",           description: "reverse insertion order"},
             {name: "min_price",         description: "ascending price"},
             {name: "max_price",         description: "descending price"},
-            {name: "manual",            description: ""},
-            {name: "manual_reverse",    description: ""},
+            {name: "manual",            description: "`category` argument must be set"},
+            {name: "manual_reverse",    description: "`category` argument must be set"},
             {name: "ref",               description: "alphabetical order on reference"},
             {name: "promo",             description: "display promo products first or last"},
             {name: "new",               description: "display new products first or last"},
-            {name: "random",            description: ""}
+            {name: "random",            description: ""},
+            {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"}
         ]
       }
 outputs :
     - {name: "#ID", description: "the product id"}
-    - {name: "#REF", description: "the product reference"}
     - {name: "#REF", description: "the product reference"}
     - {name: "#PRICE", description: "the product price"}
     - {name: "#PROMO_PRICE", description: "the product promo price"}

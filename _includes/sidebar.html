@@ -1,66 +1,24 @@
 <!-- Sidebar -->
 <aside class="large-3 columns">
     <div class="section-container accordion " data-section="accordion">
-        <section class="section {% if page.sidebar == 'index' %} active {% endif %}">
-            <p class="title" data-section-title><a href="/index.html">Installation</a></p>
-        </section>
-        <section class="section {% if page.sidebar == 'configuration' %} active {% endif %}">
-            <p class="title" data-section-title><a href="/documentation/configuration.html">Configuration</a></p>
-        </section>
-        <section class="section {% if page.sidebar == 'plugin' %} active {% endif %}" >
-            <p class="title" data-section-title><a href="/#">Modules</a></p>
-            <div class="content">
-                <ul class="side-nav">
-                    <li class="{% if page.subnav == 'plugin_index' %} active {% endif %}">
-                        <a href="/documentation/modules/index.html" >Starting</a>
-                    </li>
-                    <li class="{% if page.subnav == 'plugin_loop' %} active {% endif %}">
-                        <a href="/documentation/modules/loops.html">Loops</a>
-                    </li>
-<!--                    <li class="{% if page.subnav == 'plugin_testloop' %} active {% endif %}">
-                        <a href="/documentation/modules/testloops.html">TestLoops</a>
-                    </li>-->
-                    <li class="{% if page.subnav == 'plugin_baseparam' %} active {% endif %}">
-                        <a href="/documentation/modules/baseparams.html">BaseParams</a>
-                    </li>
-                    <li class="{% if page.subnav == 'plugin_action' %} active {% endif %}">
-                        <a href="/documentation/modules/actions.html">Actions</a>
-                    </li>
-                    <li class="{% if page.subnav == 'plugin_command' %} active {% endif %}">
-                        <a href="/documentation/modules/commands.html">Commands</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="section {% if page.sidebar == 'form' %} active {% endif %}" >
-            <p class="title" data-section-title><a href="/#">Form</a></p>
-            <div class="content">
-                <ul class="side-nav">
-                    <li class="{% if page.subnav == 'form_index' %} active {% endif %}">
-                        <a href="/documentation/form/index.html">Program you Form</a>
-                    </li>
-                    <li class="{% if page.subnav == 'form_action' %} active {% endif %}">
-                        <a href="/documentation/form/action.html">Use your form in actions</a>
-                    </li>
-                    <li class="{% if page.subnav == 'form_template' %} active {% endif %}">
-                        <a href="/documentation/form/template.html">Display form</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="section {% if page.sidebar == 'loop' %} active {% endif %}" >
-            <p class="title" data-section-title><a href="#">Loops</a></p>
-            <div class="content">
-                <ul class="side-nav">
-                    <li class="{% if page.subnav == 'loop_index' %} active {% endif %}">
-                        <a href="/documentation/loop/index.html">About loops</a>
-                    </li>
-                    <li class="{% if page.subnav == 'loop_product' %} active {% endif %}">
-                        <a href="/documentation/loop/product.html">Product loop</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+
+        {% for section in site.sidebar %}
+            <section class="section {% if page.sidebar == section.sidebar_name %} active {% endif %}">
+                <p class="title" data-section-title><a href="{% if section.url != nil AND section.url != '' %}{{ section.url }}{% else %}#{% endif %}">{{ section.name }}</a></p>
+                {% if section.subsections != nil AND section.subsections != '' %}
+                <div class="content">
+                    <ul class="side-nav">
+                        {% for subsection in section.subsections %}
+                        <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
+                            <a href="{{ subsection.url }}">{{ subsection.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </section>
+        {% endfor %}
+
     </div>
 </aside>
 <!-- End Sidebar -->
