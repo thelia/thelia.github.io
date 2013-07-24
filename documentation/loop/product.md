@@ -24,11 +24,10 @@ arguments :
     - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
     - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
     - {
-        name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "ordered by insertion order",
+        name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "manual",
         expected_values: [
             {name: "alpha",             description: "alphabetical order on title"},
             {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
-            {name: "reverse",           description: "reverse insertion order"},
             {name: "min_price",         description: "ascending price"},
             {name: "max_price",         description: "descending price"},
             {name: "manual",            description: "`category` argument must be set"},
@@ -42,7 +41,6 @@ arguments :
       }
 outputs :
     - {name: "#ID", description: "the product id"}
-    - {name: "#REF", description: "the product reference"}
     - {name: "#REF", description: "the product reference"}
     - {name: "#PRICE", description: "the product price"}
     - {name: "#PROMO_PRICE", description: "the product promo price"}
