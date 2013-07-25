@@ -39,6 +39,12 @@ public function create(ActionEvent $event)
 
 In a Thelia action, use the ActionEvent method `setErrorForm()` when your form is invalid. The event propagation will then be stopped.
 
+Use the setError() method of the form to set the error flag, which is processed in the Smarty Form plugin and passed to the template through the $error *form* block value.
+
+The setErrorMessage() defines a message available in the template in the $message *form* block value. As this message is displayed in the client browser, it shoud be internationalized, either in the action code, or in the template code using the `{intl l='$message'}` Smarty function. 
+
+> TODO : explain internationalisation of error messages in the action code
+
 ```php
 <?php
 

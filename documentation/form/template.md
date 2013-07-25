@@ -39,13 +39,11 @@ You can open now the form html tag :
 {/form}
 ```
 
-<br />the *{form_enctype}* function automagically select the proper form encoding.
+### Hidden fields
 
-<<<<<<< HEAD
-Thelia uses hidden fields internally. For the displaying these fields, and all the hidden fields, you should use the *{form_field_hidden}* function, don't forget this, as it contains the CRSF validation data :
-=======
-For displaying all the hidden fields, you have to use the *{form_field_hidden}* function, don't forget this part, that contains the csrf validation :
->>>>>>> cf3f6712189fa8797df5d3d5ab2a5b84a87e2467
+the *{form_enctype}* function automagically select the proper form encoding.
+
+Thelia uses hidden fields internally. For  displaying these fields (and all the hidden fields defined in your form), use the *{form_field_hidden}* function. Don't forget this, as it contains the CRSF validation data :
 
 ```smarty
 {form name="thelia.customer.creation"}
@@ -57,9 +55,9 @@ For displaying all the hidden fields, you have to use the *{form_field_hidden}* 
 {/form}
 ```
 
-## Display a form field
+## Displaying a form field
 
-For displaying a field, you have to use the *{form_field}* block, and put the field you want to display in the "field" parameter:
+For displaying a field, you have to use the *{form_field}* block, and put the name of the field you want to display in the "field" parameter:
 
 ```smarty
 {form name="thelia.customer.creation"}
@@ -76,12 +74,7 @@ For displaying a field, you have to use the *{form_field}* block, and put the fi
 {/form}
 ```
 
-<<<<<<< HEAD
 #### Values available in the *{form_field}* block :
-=======
-<br />
-Values available in the *{form_field}* block :
->>>>>>> cf3f6712189fa8797df5d3d5ab2a5b84a87e2467
 
  * $name : field's name used in the name part of your input
  * $value : default value to display
@@ -114,11 +107,7 @@ is used and it works like the *{form_field}* block. You can call it outside the 
 {/form}
 ```
 
-<<<<<<< HEAD
 An alternative to the *{form_error}* block is using the $error and $message values from the *{form_field}* block :
-=======
-<br />To finish, a complete example with the customer creation form (note that customer title is hard coded, you loop here) :
->>>>>>> cf3f6712189fa8797df5d3d5ab2a5b84a87e2467
 
 ```smarty
         {form_field form=$form field="firstname"}
@@ -130,12 +119,12 @@ An alternative to the *{form_error}* block is using the $error and $message valu
 {/form}
 ```
 
-To finish, a complete exemple with the customer creation form (note that customer title is hard coded - the customer_title loop is not yet available at this time ;-) ) :
+Here is a complete exemple with the customer creation form (note that customer title is hard coded - the customer_title loop is not yet available at this time ;-) ) :
 
 ```smarty
 {form name="thelia.customer.creation"}
 {* We use $INDEX_PAGE as form action to avoid mixing post and get data *}
-<form action="{url path='your/target'}" method="post" {form_enctype form=$form}>
+<form action="{$INDEX_PAGE}" method="post" {form_enctype form=$form}>
 	{*
 	The two fields below are not par of the Login form, they are here to defines
 	the action to process, and the view rendered once the form is submited
