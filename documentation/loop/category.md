@@ -35,6 +35,6 @@ examples :
     - {description: "I want to .."}
 ---
 
-#{{ page.title }}
+# {{page.title}}
 
 Category loop lists categories from your shop.
