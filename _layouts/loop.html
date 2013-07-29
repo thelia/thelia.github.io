@@ -39,42 +39,55 @@ global_outputs :
 
                 <h4>Global arguments</h4>
                 {% for argument in page.global_arguments %}
-                <div class="loop-argument large-12">
-                    <div class="name large-3">
-                        {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}
-                    </div>
-                    <div class="information large-9">
 
-                        <div class="description">
-                            {{ argument.description }}
-                        </div>
-
-                        {% if argument.expected_values != nil AND argument.expected_values != '' %}
-                        <div class="expected_values">
-                            Expected values :
-                            <ul>
-                                {% for expected_value in argument.expected_values %}
-                                <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
+                    {% assign overwritten = false %}
+                    {% for pageargument in page.arguments %}
+                        {% if pageargument.name == argument.name %}
+                            {% assign overwritten = true %}
                         {% endif %}
+                    {% endfor %}
 
-                        {% if argument.default != nil AND argument.default != '' %}
-                        <div class="default">
-                            <strong>default</strong> : {{ argument.default }}
+                    {% if overwritten == false %}
+
+                        <div class="loop-argument large-12">
+                            <div class="name large-3">
+                                {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}
+                            </div>
+                            <div class="information large-9">
+
+                                <div class="description">
+                                    {{ argument.description }}
+                                </div>
+
+                                {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                                <div class="expected_values">
+                                    Expected values :
+                                    <ul>
+                                        {% for expected_value in argument.expected_values %}
+                                        <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
+
+                                {% if argument.default != nil AND argument.default != '' %}
+                                <div class="default">
+                                    <strong>default</strong> : {{ argument.default }}
+                                </div>
+                                {% endif %}
+
+                                {% if argument.example != nil AND argument.example != '' %}
+                                <div class="example">
+                                    example : <em>{{ argument.example }}</em>
+                                </div>
+                                {% endif %}
+
+                            </div>
+                            <div style="clear: both"></div>
                         </div>
-                        {% endif %}
 
-                        {% if argument.example != nil AND argument.example != '' %}
-                        <div class="example">
-                            example : <em>{{ argument.example }}</em>
-                        </div>
-                        {% endif %}
+                    {% endif %}
 
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
                 {% endfor %}
 
                 <h4>Loop arguments</h4>
