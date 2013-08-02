@@ -7,11 +7,7 @@ subnav: form_action
 
 # Display your form
 
-<<<<<<< HEAD
-You have created a form, it's time to display it in your template.
-=======
 Once you've created a form, it's time to display it in your template.
->>>>>>> cf3f6712189fa8797df5d3d5ab2a5b84a87e2467
 
 All you need is knowing the form name and all the field names of your form.
 
