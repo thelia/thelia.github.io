@@ -1,16 +1,18 @@
 ---
 layout: loop
 title: Product Loop
+description: Product loop lists products from your shop.
 sidebar: loop
 subnav: loop_product
 uses_global_argument: true
 returns_global_outputs: true
+type: product
 arguments :
     - {name: "id", description: "A single or a list of product ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "ref", description: "A single or a list of product references.", example: "ref=\"ref0\", id=\"ref1,ref6\""}
     - {name: "category", description: "A single or a list of category ids.", example: "category=\"2\", category=\"1,4,7\""}
     - {name: "current_category", description: "A boolean value which allows either to exclude current category products from results either to match only current category products. If a product is in multiple categories whose one is current it will not be excluded if current_category=\"false\" but will be included if current_category=\"yes\"", example: "current_category=\"yes\""}
-    - {name: "depth", description: "A positive integer value which precise how many subcategory levels will be browse. Will not be consider if category parameter is not set.", example: "new=\"yes\"", default: "1"}
+    - {name: "depth", description: "A positive integer value which precise how many subcategory levels will be browse. Will not be consider if category parameter is not set.", example: "depth=\"2\"", default: "1"}
     - {name: "new", description: "A boolean value.", example: "new=\"yes\""}
     - {name: "promo", description: "A boolean value.", example: "promo=\"yes\""}
     - {name: "min_price", description: "A float value. Equal value matches.", example: "min_price=\"12.3\""}
@@ -55,6 +57,4 @@ examples :
     - {description: "I want to display all products from categories 1 and 2 whose feature `color` (ID : 1) is `blue` (ID : 13), order by ascending price"}
 ---
 
-#{{ page.title }}
-
-Product loop lists products from your shop.
+{% include loop/body.md %}

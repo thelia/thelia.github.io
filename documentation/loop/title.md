@@ -1,10 +1,12 @@
 ---
 layout: loop
 title: Title Loop
+description: Title loop lists titles.
 sidebar: loop
 subnav: loop_title
 uses_global_argument: true
 returns_global_outputs: true
+type: title
 arguments :
     - {name: "id", description: "A single or a list of title ids.", example: "id=\"2\", id=\"1,4,7\""}
 
@@ -17,6 +19,4 @@ examples :
     - {description: "I want to .."}
 ---
 
-#{{ page.title }}
-
-Title loop lists titles.
+{% include loop/body.md %}

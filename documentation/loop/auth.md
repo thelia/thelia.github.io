@@ -1,29 +1,29 @@
 ---
 layout: loop
 title: Authentification checker loop
+description:
+    - The Auth loop perform authorisation checks against the current user in the front-office or back-office context. This loop returns nothing if the authaurization fails, or the loop contents if it succeds.
+    - You may check in the front office if an administrator is logged in, and perform specific functions in your front-office template (such as direct editing, for example).
 sidebar: loop
 subnav: loop_auth
 uses_global_argument: false
 returns_global_outputs: true
+type: auth
 arguments :
     - {name: "context", 
        description: "Defines the authorisation check context", mandatory="false", 
        default="front", 
        expected_values: [
-          {name="front", description="Front office context. Use the customer user to perform the check."},
-          {name="admin", description="The back-office context. Uses the admin user to perform the check."}
+          {name: "front", description: "Front office context. Use the customer user to perform the check."},
+          {name: "admin", description: "The back-office context. Uses the admin user to perform the check."}
        ]}
-    - {name="roles", description="A comma separated list of user roles", mandatory="true"}
-    - {name="permissions", description="A comma separated list of permissions. If empty or missing, the authorization is checked against the roles only"}
+    - {name: "roles", description: "A comma separated list of user roles", mandatory: "true"}
+    - {name: "permissions", description: "A comma separated list of permissions. If empty or missing, the authorization is checked against the roles only"}
 examples :
     - {description: "je met quoi, là ?"}
 ---
 
-# {{ page.title }}
-
-The Auth loop perform authorisation checks against the current user in the front-office or back-office context. This loop returns nothing if the authaurization fails, or the loop contents if it succeds.
-
-You may check in the front office if an administrator is logged in, and perform specific functions in your front-office template (such as direct editing, for example).
+{% include loop/body.md %}
 
 ## Example 1
 
