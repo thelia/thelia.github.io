@@ -9,37 +9,21 @@ returns_global_outputs: true
 type: feature
 arguments :
     - {name: "id", description: "A single or a list of image ids.", example: "id=\"2\", id=\"1,4,7\""}
-
     - {name: "category", description: "a category identifier. The loop will return this category's images", example: "category=\"2\""}
-
     - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\""}
-
     - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
-
     - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}  
-  
     - {name: "category", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
-
-    - {name: "source", description: "As an alternative to product=\"...\" style once can specify the object using the source parameter, along with the source_id parameter, which becomes mandatory. Valid values are product, category, folder or content.", example: "source=\"product\" source_id="12" will return images from the product with ID 12."}
-
+    - {name: "source", description: "As an alternative to product=\"...\" style once can specify the object using the source parameter, along with the source_id parameter, which becomes mandatory. Valid values are product, category, folder or content.", example: "source=\"product\" source_id=\"12\" will return images from the product with ID 12."}
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
-
     - {name: "exclude", description: "A single or a list of feature ids to exclude from the list.", example: "exclude=\"456,123\""}
-
     - {name: "width", description: "A width in pixels, for resizing image. If only the width is provided, the image ratio is preserved.", example: "width=\"200\""}
-
     - {name: "height", description: "A height in pixels, for resizing image. If only the height is provided, the image ratio is preserved.", example: "height=\"200\""}
-
     - {name: "resize_mode", description: "If 'crop', the image will have the exact specified width and height, and will be cropped if required. If 'borders', the image will have the exact specified width and height, and some borders may be added. The border color is the one specified by 'background_color'. If 'none' or missing, the image ration is preserved, and depending od this ratio, may not have the exact width and height required.", example: "resize_mode=\"crop\""}
-
     - {name: "rotation", description: "The rotation angle in degrees (positive or negative) applied to the image. The background color of the empty areas is the one specified by 'background_color'", example: "rotation=\"90\""}
-
     - {name: "background_color", description: "The color applied to empty image parts during processing. Use #rgb or #rrggbb color format", example: "background_color=\"#cc8000\""}
-
     - {name: "quality", description: "The generated image quality, from 0(!) to 100%. The default value is 75% (you can hange this in the Administration panel)", example: "quality=\"70\""}
-
-   - {name: "effects", description: "One or more comma separated effects definitions, that will be applied to the image in the specified order. Please see below a detailed description of available effects", example: "effects=\"greyscale,gamma:0.7,vflip\""}
-
+    - {name: "effects", description: "One or more comma separated effects definitions, that will be applied to the image in the specified order. Please see below a detailed description of available effects", example: "effects=\"greyscale,gamma:0.7,vflip\""}
     - {name: "lang", description: "A language identifier, to specify the language in which the image information will be returned"}
  
 outputs :
