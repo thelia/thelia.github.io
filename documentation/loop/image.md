@@ -6,13 +6,13 @@ sidebar: loop
 subnav: loop_image
 uses_global_argument: true
 returns_global_outputs: true
-type: feature
+type: image
 arguments :
     - {name: "id", description: "A single or a list of image ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "category", description: "a category identifier. The loop will return this category's images", example: "category=\"2\""}
     - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\""}
     - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
-    - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}  
+    - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}
     - {name: "category", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "source", description: "As an alternative to product=\"...\" style once can specify the object using the source parameter, along with the source_id parameter, which becomes mandatory. Valid values are product, category, folder or content.", example: "source=\"product\" source_id=\"12\" will return images from the product with ID 12."}
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
@@ -39,6 +39,7 @@ outputs :
     - {name: "#POSITION", description: "the position of this image in the object's image list"}
     - {name: "#OBJECT_TYPE", description: "The object type (e.g., produc, category, etc. see 'source' parameter for possible values)"}
     - {name: "#OBJECT_ID", description: "The object ID"}
+ 
 examples :
     - {description: "See below :)"}
 ---
