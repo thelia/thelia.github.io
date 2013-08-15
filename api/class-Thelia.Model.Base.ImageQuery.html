@@ -1,0 +1,4901 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Thelia\Model\Base\ImageQuery | thelia</title>
+
+	<script type="text/javascript" src="resources/combined.js?394153670"></script>
+	<script type="text/javascript" src="elementlist.js?44129306"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Thelia.html">Thelia<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Action.html">Action<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Action.Exception.html">Exception</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Admin.Controller.html">Controller</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Command.Output.html">Output</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-Thelia.Controller.html">Controller</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.html">Core<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Bundle.html">Bundle</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Controller.html">Controller</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.DependencyInjection.html">DependencyInjection<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.DependencyInjection.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.DependencyInjection.Loader.html">Loader</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.EventListener.html">EventListener</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Factory.html">Factory</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.HttpFoundation.html">HttpFoundation<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.HttpFoundation.Session.html">Session</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Security.html">Security<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Security.Authentication.html">Authentication</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.Role.html">Role</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.User.html">User</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.UserProvider.html">UserProvider</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Assets.html">Assets</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.BaseParam.html">BaseParam</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Element.html">Element<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Element.Exception.html">Exception</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Loop.html">Loop<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Loop.Argument.html">Argument</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Template.Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Smarty.Assets.html">Assets</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Smarty.Plugins.html">Plugins</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Thelia.Core.Translation.html">Translation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-Thelia.Form.html">Form</a>
+						</li>
+				<li><a href="namespace-Thelia.Log.html">Log<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Log.Destination.html">Destination</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Thelia.Model.html">Model<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Thelia.Model.Base.html">Base</a>
+						</li>
+				<li><a href="namespace-Thelia.Model.Map.html">Map</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Module.html">Module</a>
+						</li>
+				<li><a href="namespace-Thelia.Routing.html">Routing<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Routing.Matcher.html">Matcher</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Tools.html">Tools</a>
+						</li>
+				<li><a href="namespace-Thelia.Type.html">Type</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Thelia.Model.Base.Accessory.html">Accessory</a></li>
+				<li><a href="class-Thelia.Model.Base.AccessoryQuery.html">AccessoryQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Address.html">Address</a></li>
+				<li><a href="class-Thelia.Model.Base.AddressQuery.html">AddressQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Admin.html">Admin</a></li>
+				<li><a href="class-Thelia.Model.Base.AdminGroup.html">AdminGroup</a></li>
+				<li><a href="class-Thelia.Model.Base.AdminGroupQuery.html">AdminGroupQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.AdminLog.html">AdminLog</a></li>
+				<li><a href="class-Thelia.Model.Base.AdminLogQuery.html">AdminLogQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.AdminQuery.html">AdminQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Area.html">Area</a></li>
+				<li><a href="class-Thelia.Model.Base.AreaQuery.html">AreaQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Attribute.html">Attribute</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeAv.html">AttributeAv</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeAvI18n.html">AttributeAvI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeAvI18nQuery.html">AttributeAvI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeAvQuery.html">AttributeAvQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeCategory.html">AttributeCategory</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeCategoryQuery.html">AttributeCategoryQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeCombination.html">AttributeCombination</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeCombinationQuery.html">AttributeCombinationQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeI18n.html">AttributeI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeI18nQuery.html">AttributeI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.AttributeQuery.html">AttributeQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Cart.html">Cart</a></li>
+				<li><a href="class-Thelia.Model.Base.CartItem.html">CartItem</a></li>
+				<li><a href="class-Thelia.Model.Base.CartItemQuery.html">CartItemQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CartQuery.html">CartQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Category.html">Category</a></li>
+				<li><a href="class-Thelia.Model.Base.CategoryI18n.html">CategoryI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.CategoryI18nQuery.html">CategoryI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CategoryQuery.html">CategoryQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CategoryVersion.html">CategoryVersion</a></li>
+				<li><a href="class-Thelia.Model.Base.CategoryVersionQuery.html">CategoryVersionQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Config.html">Config</a></li>
+				<li><a href="class-Thelia.Model.Base.ConfigI18n.html">ConfigI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.ConfigI18nQuery.html">ConfigI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ConfigQuery.html">ConfigQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Content.html">Content</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentAssoc.html">ContentAssoc</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentAssocQuery.html">ContentAssocQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentFolder.html">ContentFolder</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentFolderQuery.html">ContentFolderQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentI18n.html">ContentI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentI18nQuery.html">ContentI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentQuery.html">ContentQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentVersion.html">ContentVersion</a></li>
+				<li><a href="class-Thelia.Model.Base.ContentVersionQuery.html">ContentVersionQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Country.html">Country</a></li>
+				<li><a href="class-Thelia.Model.Base.CountryI18n.html">CountryI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.CountryI18nQuery.html">CountryI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CountryQuery.html">CountryQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Coupon.html">Coupon</a></li>
+				<li><a href="class-Thelia.Model.Base.CouponOrder.html">CouponOrder</a></li>
+				<li><a href="class-Thelia.Model.Base.CouponOrderQuery.html">CouponOrderQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CouponQuery.html">CouponQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CouponRule.html">CouponRule</a></li>
+				<li><a href="class-Thelia.Model.Base.CouponRuleQuery.html">CouponRuleQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Currency.html">Currency</a></li>
+				<li><a href="class-Thelia.Model.Base.CurrencyI18n.html">CurrencyI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.CurrencyI18nQuery.html">CurrencyI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CurrencyQuery.html">CurrencyQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Customer.html">Customer</a></li>
+				<li><a href="class-Thelia.Model.Base.CustomerQuery.html">CustomerQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CustomerTitle.html">CustomerTitle</a></li>
+				<li><a href="class-Thelia.Model.Base.CustomerTitleI18n.html">CustomerTitleI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.CustomerTitleI18nQuery.html">CustomerTitleI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.CustomerTitleQuery.html">CustomerTitleQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Delivzone.html">Delivzone</a></li>
+				<li><a href="class-Thelia.Model.Base.DelivzoneQuery.html">DelivzoneQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Document.html">Document</a></li>
+				<li><a href="class-Thelia.Model.Base.DocumentI18n.html">DocumentI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.DocumentI18nQuery.html">DocumentI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.DocumentQuery.html">DocumentQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Feature.html">Feature</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureAv.html">FeatureAv</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureAvI18n.html">FeatureAvI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureAvI18nQuery.html">FeatureAvI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureAvQuery.html">FeatureAvQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureCategory.html">FeatureCategory</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureCategoryQuery.html">FeatureCategoryQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureI18n.html">FeatureI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureI18nQuery.html">FeatureI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureProduct.html">FeatureProduct</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureProductQuery.html">FeatureProductQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.FeatureQuery.html">FeatureQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Folder.html">Folder</a></li>
+				<li><a href="class-Thelia.Model.Base.FolderI18n.html">FolderI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.FolderI18nQuery.html">FolderI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.FolderQuery.html">FolderQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.FolderVersion.html">FolderVersion</a></li>
+				<li><a href="class-Thelia.Model.Base.FolderVersionQuery.html">FolderVersionQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Group.html">Group</a></li>
+				<li><a href="class-Thelia.Model.Base.GroupI18n.html">GroupI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.GroupI18nQuery.html">GroupI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.GroupModule.html">GroupModule</a></li>
+				<li><a href="class-Thelia.Model.Base.GroupModuleQuery.html">GroupModuleQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.GroupQuery.html">GroupQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.GroupResource.html">GroupResource</a></li>
+				<li><a href="class-Thelia.Model.Base.GroupResourceQuery.html">GroupResourceQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Image.html">Image</a></li>
+				<li><a href="class-Thelia.Model.Base.ImageI18n.html">ImageI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.ImageI18nQuery.html">ImageI18nQuery</a></li>
+				<li class="active"><a href="class-Thelia.Model.Base.ImageQuery.html">ImageQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Lang.html">Lang</a></li>
+				<li><a href="class-Thelia.Model.Base.LangQuery.html">LangQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Message.html">Message</a></li>
+				<li><a href="class-Thelia.Model.Base.MessageI18n.html">MessageI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.MessageI18nQuery.html">MessageI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.MessageQuery.html">MessageQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.MessageVersion.html">MessageVersion</a></li>
+				<li><a href="class-Thelia.Model.Base.MessageVersionQuery.html">MessageVersionQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Module.html">Module</a></li>
+				<li><a href="class-Thelia.Model.Base.ModuleI18n.html">ModuleI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.ModuleI18nQuery.html">ModuleI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ModuleQuery.html">ModuleQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Order.html">Order</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderAddress.html">OrderAddress</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderAddressQuery.html">OrderAddressQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderFeature.html">OrderFeature</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderFeatureQuery.html">OrderFeatureQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderProduct.html">OrderProduct</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderProductQuery.html">OrderProductQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderQuery.html">OrderQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderStatus.html">OrderStatus</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderStatusI18n.html">OrderStatusI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderStatusI18nQuery.html">OrderStatusI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.OrderStatusQuery.html">OrderStatusQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Product.html">Product</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductCategory.html">ProductCategory</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductCategoryQuery.html">ProductCategoryQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductI18n.html">ProductI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductI18nQuery.html">ProductI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductPrice.html">ProductPrice</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductPriceQuery.html">ProductPriceQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductQuery.html">ProductQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductSaleElements.html">ProductSaleElements</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductSaleElementsQuery.html">ProductSaleElementsQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductVersion.html">ProductVersion</a></li>
+				<li><a href="class-Thelia.Model.Base.ProductVersionQuery.html">ProductVersionQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Resource.html">Resource</a></li>
+				<li><a href="class-Thelia.Model.Base.ResourceI18n.html">ResourceI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.ResourceI18nQuery.html">ResourceI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.ResourceQuery.html">ResourceQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Rewriting.html">Rewriting</a></li>
+				<li><a href="class-Thelia.Model.Base.RewritingQuery.html">RewritingQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.Tax.html">Tax</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxI18n.html">TaxI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxI18nQuery.html">TaxI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxQuery.html">TaxQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxRule.html">TaxRule</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxRuleCountry.html">TaxRuleCountry</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxRuleCountryQuery.html">TaxRuleCountryQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxRuleI18n.html">TaxRuleI18n</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxRuleI18nQuery.html">TaxRuleI18nQuery</a></li>
+				<li><a href="class-Thelia.Model.Base.TaxRuleQuery.html">TaxRuleQuery</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Thelia.Model.Base.html" title="Summary of Thelia\Model\Base"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class ImageQuery</h1>
+
+
+	<div class="description">
+	
+<p>Base class that represents a query for the 'image' table.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+Propel\Runtime\ActiveQuery\ModelCriteria
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Thelia\Model\Base\ImageQuery</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-Thelia.html">Thelia</a>\<a href="namespace-Thelia.Model.html">Model</a>\<a href="namespace-Thelia.Model.Base.html">Base</a><br />
+		
+
+		<b>Located at</b> <a href="source-class-Thelia.Model.Base.ImageQuery.html#20-1224" title="Go to source code">core/lib/Thelia/Model/Base/ImageQuery.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#96-106" title="Go to source code">__construct</a>( <span>string <var>$dbName</var> = <span class="php-quote">'thelia'</span></span>, <span>string <var>$modelName</var> = <span class="php-quote">'\\Thelia\\Model\\Image'</span></span>, <span>string <var>$modelAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Initializes internal state of \Thelia\Model\Base\ImageQuery object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes internal state of \Thelia\Model\Base\ImageQuery object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dbName</var></dt>
+					<dd><code>string</code><br>$dbName The database name</dd>
+					<dt><var>$modelName</var></dt>
+					<dd><code>string</code><br>$modelName The phpName of a model, e.g. 'Book'</dd>
+					<dt><var>$modelAlias</var></dt>
+					<dd><code>string</code><br>$modelAlias The alias for the model in this query, e.g. 'b'</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create" id="_create">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#108-130" title="Go to source code">create</a>( <span>string <var>$modelAlias</var> = <span class="php-keyword1">null</span></span>, <span>Propel\Runtime\ActiveQuery\Criteria <var>$criteria</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a new ChildImageQuery object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a new ChildImageQuery object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$modelAlias</var></dt>
+					<dd><code>string</code><br>$modelAlias The alias of a model in the query</dd>
+					<dt><var>$criteria</var></dt>
+					<dd><code>Propel\Runtime\ActiveQuery\Criteria</code><br>$criteria Optional Criteria to build the query from</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findPk" id="_findPk">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>|array|mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findPk">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#132-166" title="Go to source code">findPk</a>( <span>mixed <var>$key</var></span>, <span>Propel\Runtime\Connection\ConnectionInterface <var>$con</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Find object by primary key. Propel uses the instance pool to skip the
+database if the object exists. Go fast if the query is untouched.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find object by primary key. Propel uses the instance pool to skip the
+database if the object exists. Go fast if the query is untouched.</p>
+
+<pre>
+<span class="php-var">$obj</span>  = <span
+class="php-var">$c</span>-&gt;findPk(<span class="php-num">12</span>, <span
+class="php-var">$con</span>);
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Primary key to use for the query</dd>
+					<dt><var>$con</var></dt>
+					<dd><code>Propel\Runtime\Connection\ConnectionInterface</code><br>$con an optional connection object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>|array|mixed</code><br>the result, formatted by the current formatter<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findPkSimple" id="_findPkSimple">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findPkSimple">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#168-197" title="Go to source code">findPkSimple</a>( <span>mixed <var>$key</var></span>, <span>Propel\Runtime\Connection\ConnectionInterface <var>$con</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Find object by primary key using raw SQL to go fast. Bypass doSelect() and
+the object formatter by using generated code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find object by primary key using raw SQL to go fast. Bypass doSelect() and
+the object formatter by using generated code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Primary key to use for the query</dd>
+					<dt><var>$con</var></dt>
+					<dd><code>Propel\Runtime\Connection\ConnectionInterface</code><br>$con A connection object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br>A model object, or null if the key is not found<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findPkComplex" id="_findPkComplex">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>|array|mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findPkComplex">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#199-216" title="Go to source code">findPkComplex</a>( <span>mixed <var>$key</var></span>, <span>Propel\Runtime\Connection\ConnectionInterface <var>$con</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Find object by primary key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find object by primary key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Primary key to use for the query</dd>
+					<dt><var>$con</var></dt>
+					<dd><code>Propel\Runtime\Connection\ConnectionInterface</code><br>$con A connection object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>|array|mixed</code><br>the result, formatted by the current formatter<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findPks" id="_findPks">
+
+		<td class="attributes"><code>
+			 public 
+			Propel\Runtime\Collection\ObjectCollection|array|mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findPks">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#218-240" title="Go to source code">findPks</a>( <span>array <var>$keys</var></span>, <span>Propel\Runtime\Connection\ConnectionInterface <var>$con</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Find objects by primary key</p>
+
+<pre>
+<span class="php-var">$objs</span> = <span
+class="php-var">$c</span>-&gt;findPks(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">56</span>, <span class="php-num">832</span>), <span
+class="php-var">$con</span>);
+</pre>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find objects by primary key</p>
+
+<pre>
+<span class="php-var">$objs</span> = <span
+class="php-var">$c</span>-&gt;findPks(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">56</span>, <span class="php-num">832</span>), <span
+class="php-var">$con</span>);
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>array</code><br>$keys Primary keys to use for the query</dd>
+					<dt><var>$con</var></dt>
+					<dd><code>Propel\Runtime\Connection\ConnectionInterface</code><br>$con an optional connection object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Propel\Runtime\Collection\ObjectCollection|array|mixed</code><br>the list of results, formatted by the current formatter<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByPrimaryKey" id="_filterByPrimaryKey">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByPrimaryKey">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#242-253" title="Go to source code">filterByPrimaryKey</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query by primary key</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query by primary key</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Primary key to use for the query</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByPrimaryKeys" id="_filterByPrimaryKeys">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByPrimaryKeys">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#255-266" title="Go to source code">filterByPrimaryKeys</a>( <span>array <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query by a list of primary keys</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query by a list of primary keys</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>array</code><br>$keys The list of primary key to use for the query</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterById" id="_filterById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterById">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#268-307" title="Go to source code">filterById</a>( <span>mixed <var>$id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the id column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterById(<span
+class="php-num">1234</span>); <span
+class="php-comment">// WHERE id = 1234</span>
+<span
+class="php-var">$query</span>-&gt;filterById(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">34</span>)); <span
+class="php-comment">// WHERE id IN (12, 34)</span>
+<span
+class="php-var">$query</span>-&gt;filterById(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'min'</span> =&gt; <span class="php-num">12</span>)); <span
+class="php-comment">// WHERE id &gt; 12</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>mixed</code><br>$id The value to use as filter. Use scalar values for equality. Use array values
+for in_array() equivalent. Use associative array('min' =&gt; $minValue, 'max'
+=&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByProductId" id="_filterByProductId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByProductId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#309-350" title="Go to source code">filterByProductId</a>( <span>mixed <var>$productId</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the product_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the product_id column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByProductId(<span
+class="php-num">1234</span>); <span
+class="php-comment">// WHERE product_id = 1234</span>
+<span
+class="php-var">$query</span>-&gt;filterByProductId(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">34</span>)); <span
+class="php-comment">// WHERE product_id IN (12, 34)</span>
+<span
+class="php-var">$query</span>-&gt;filterByProductId(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'min'</span> =&gt; <span class="php-num">12</span>)); <span
+class="php-comment">// WHERE product_id &gt; 12</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$productId</var></dt>
+					<dd><code>mixed</code><br>$productId The value to use as filter. Use scalar values for equality. Use array
+values for in_array() equivalent. Use associative array('min' =&gt; $minValue,
+'max' =&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Thelia.Model.Base.ImageQuery.html#_filterByProduct">Thelia\Model\Base\ImageQuery::filterByProduct()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByCategoryId" id="_filterByCategoryId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByCategoryId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#352-393" title="Go to source code">filterByCategoryId</a>( <span>mixed <var>$categoryId</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the category_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the category_id column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByCategoryId(<span
+class="php-num">1234</span>); <span
+class="php-comment">// WHERE category_id = 1234</span>
+<span
+class="php-var">$query</span>-&gt;filterByCategoryId(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">34</span>)); <span
+class="php-comment">// WHERE category_id IN (12, 34)</span>
+<span
+class="php-var">$query</span>-&gt;filterByCategoryId(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'min'</span> =&gt; <span class="php-num">12</span>)); <span
+class="php-comment">// WHERE category_id &gt; 12</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$categoryId</var></dt>
+					<dd><code>mixed</code><br>$categoryId The value to use as filter. Use scalar values for equality. Use
+array values for in_array() equivalent. Use associative array('min' =&gt;
+$minValue, 'max' =&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Thelia.Model.Base.ImageQuery.html#_filterByCategory">Thelia\Model\Base\ImageQuery::filterByCategory()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByFolderId" id="_filterByFolderId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByFolderId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#395-436" title="Go to source code">filterByFolderId</a>( <span>mixed <var>$folderId</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the folder_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the folder_id column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByFolderId(<span
+class="php-num">1234</span>); <span
+class="php-comment">// WHERE folder_id = 1234</span>
+<span
+class="php-var">$query</span>-&gt;filterByFolderId(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">34</span>)); <span
+class="php-comment">// WHERE folder_id IN (12, 34)</span>
+<span
+class="php-var">$query</span>-&gt;filterByFolderId(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'min'</span> =&gt; <span class="php-num">12</span>)); <span
+class="php-comment">// WHERE folder_id &gt; 12</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$folderId</var></dt>
+					<dd><code>mixed</code><br>$folderId The value to use as filter. Use scalar values for equality. Use array
+values for in_array() equivalent. Use associative array('min' =&gt; $minValue,
+'max' =&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Thelia.Model.Base.ImageQuery.html#_filterByFolder">Thelia\Model\Base\ImageQuery::filterByFolder()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByContentId" id="_filterByContentId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByContentId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#438-479" title="Go to source code">filterByContentId</a>( <span>mixed <var>$contentId</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the content_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the content_id column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByContentId(<span
+class="php-num">1234</span>); <span
+class="php-comment">// WHERE content_id = 1234</span>
+<span
+class="php-var">$query</span>-&gt;filterByContentId(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">34</span>)); <span
+class="php-comment">// WHERE content_id IN (12, 34)</span>
+<span
+class="php-var">$query</span>-&gt;filterByContentId(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'min'</span> =&gt; <span class="php-num">12</span>)); <span
+class="php-comment">// WHERE content_id &gt; 12</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$contentId</var></dt>
+					<dd><code>mixed</code><br>$contentId The value to use as filter. Use scalar values for equality. Use array
+values for in_array() equivalent. Use associative array('min' =&gt; $minValue,
+'max' =&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-Thelia.Model.Base.ImageQuery.html#_filterByContent">Thelia\Model\Base\ImageQuery::filterByContent()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByFile" id="_filterByFile">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByFile">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#481-508" title="Go to source code">filterByFile</a>( <span>string <var>$file</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the file column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the file column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByFile(<span
+class="php-quote">'fooValue'</span>);   <span
+class="php-comment">// WHERE file = 'fooValue'</span>
+<span
+class="php-var">$query</span>-&gt;filterByFile(<span
+class="php-quote">'%fooValue%'</span>); <span
+class="php-comment">// WHERE file LIKE '%fooValue%'</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file The value to use as filter. Accepts wildcards (* and % trigger a LIKE)</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByPosition" id="_filterByPosition">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByPosition">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#510-549" title="Go to source code">filterByPosition</a>( <span>mixed <var>$position</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the position column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the position column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByPosition(<span
+class="php-num">1234</span>); <span
+class="php-comment">// WHERE position = 1234</span>
+<span
+class="php-var">$query</span>-&gt;filterByPosition(<span
+class="php-keyword1">array</span>(<span class="php-num">12</span>, <span
+class="php-num">34</span>)); <span
+class="php-comment">// WHERE position IN (12, 34)</span>
+<span
+class="php-var">$query</span>-&gt;filterByPosition(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'min'</span> =&gt; <span class="php-num">12</span>)); <span
+class="php-comment">// WHERE position &gt; 12</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$position</var></dt>
+					<dd><code>mixed</code><br>$position The value to use as filter. Use scalar values for equality. Use array
+values for in_array() equivalent. Use associative array('min' =&gt; $minValue,
+'max' =&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByCreatedAt" id="_filterByCreatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByCreatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#551-592" title="Go to source code">filterByCreatedAt</a>( <span>mixed <var>$createdAt</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the created_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the created_at column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByCreatedAt(<span
+class="php-quote">'2011-03-14'</span>); <span
+class="php-comment">// WHERE created_at = '2011-03-14'</span>
+<span
+class="php-var">$query</span>-&gt;filterByCreatedAt(<span
+class="php-quote">'now'</span>); <span
+class="php-comment">// WHERE created_at = '2011-03-14'</span>
+<span
+class="php-var">$query</span>-&gt;filterByCreatedAt(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'max'</span> =&gt; <span
+class="php-quote">'yesterday'</span>)); <span
+class="php-comment">// WHERE created_at &gt; '2011-03-13'</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$createdAt</var></dt>
+					<dd><code>mixed</code><br>$createdAt The value to use as filter. Values can be integers (unix timestamps),
+DateTime objects, or strings. Empty strings are treated as NULL. Use scalar
+values for equality. Use array values for in_array() equivalent. Use associative
+array('min' =&gt; $minValue, 'max' =&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByUpdatedAt" id="_filterByUpdatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByUpdatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#594-635" title="Go to source code">filterByUpdatedAt</a>( <span>mixed <var>$updatedAt</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query on the updated_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query on the updated_at column</p>
+
+<p>Example usage:</p>
+
+<pre>
+<span class="php-var">$query</span>-&gt;filterByUpdatedAt(<span
+class="php-quote">'2011-03-14'</span>); <span
+class="php-comment">// WHERE updated_at = '2011-03-14'</span>
+<span
+class="php-var">$query</span>-&gt;filterByUpdatedAt(<span
+class="php-quote">'now'</span>); <span
+class="php-comment">// WHERE updated_at = '2011-03-14'</span>
+<span
+class="php-var">$query</span>-&gt;filterByUpdatedAt(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'max'</span> =&gt; <span
+class="php-quote">'yesterday'</span>)); <span
+class="php-comment">// WHERE updated_at &gt; '2011-03-13'</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$updatedAt</var></dt>
+					<dd><code>mixed</code><br>$updatedAt The value to use as filter. Values can be integers (unix timestamps),
+DateTime objects, or strings. Empty strings are treated as NULL. Use scalar
+values for equality. Use array values for in_array() equivalent. Use associative
+array('min' =&gt; $minValue, 'max' =&gt; $maxValue) for intervals.</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByProduct" id="_filterByProduct">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByProduct">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#637-660" title="Go to source code">filterByProduct</a>( <span><code><a href="class-Thelia.Model.Product.html">Thelia\Model\Product</a></code>|Propel\Runtime\Collection\ObjectCollection <var>$product</var></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query by a related \Thelia\Model\Product object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query by a related \Thelia\Model\Product object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$product</var></dt>
+					<dd><code><code><a href="class-Thelia.Model.Product.html">Thelia\Model\Product</a></code>|Propel\Runtime\Collection\ObjectCollection</code><br>$product The related object(s) to use as filter</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joinProduct" id="_joinProduct">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joinProduct">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#662-692" title="Go to source code">joinProduct</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a JOIN clause to the query using the Product relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a JOIN clause to the query using the Product relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="useProductQuery" id="_useProductQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ProductQuery.html">Thelia\Model\ProductQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_useProductQuery">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#694-710" title="Go to source code">useProductQuery</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Use the Product relation Product object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use the Product relation Product object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation, to be used as main alias in the
+secondary query</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ProductQuery.html">Thelia\Model\ProductQuery</a></code></code><br>A secondary query class using the current class as primary query<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						useQuery()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByCategory" id="_filterByCategory">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByCategory">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#712-735" title="Go to source code">filterByCategory</a>( <span><code><a href="class-Thelia.Model.Category.html">Thelia\Model\Category</a></code>|Propel\Runtime\Collection\ObjectCollection <var>$category</var></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query by a related \Thelia\Model\Category object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query by a related \Thelia\Model\Category object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$category</var></dt>
+					<dd><code><code><a href="class-Thelia.Model.Category.html">Thelia\Model\Category</a></code>|Propel\Runtime\Collection\ObjectCollection</code><br>$category The related object(s) to use as filter</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joinCategory" id="_joinCategory">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joinCategory">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#737-767" title="Go to source code">joinCategory</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a JOIN clause to the query using the Category relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a JOIN clause to the query using the Category relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="useCategoryQuery" id="_useCategoryQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.CategoryQuery.html">Thelia\Model\CategoryQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_useCategoryQuery">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#769-785" title="Go to source code">useCategoryQuery</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Use the Category relation Category object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use the Category relation Category object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation, to be used as main alias in the
+secondary query</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.CategoryQuery.html">Thelia\Model\CategoryQuery</a></code></code><br>A secondary query class using the current class as primary query<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						useQuery()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByContent" id="_filterByContent">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByContent">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#787-810" title="Go to source code">filterByContent</a>( <span><code><a href="class-Thelia.Model.Content.html">Thelia\Model\Content</a></code>|Propel\Runtime\Collection\ObjectCollection <var>$content</var></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query by a related \Thelia\Model\Content object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query by a related \Thelia\Model\Content object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$content</var></dt>
+					<dd><code><code><a href="class-Thelia.Model.Content.html">Thelia\Model\Content</a></code>|Propel\Runtime\Collection\ObjectCollection</code><br>$content The related object(s) to use as filter</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joinContent" id="_joinContent">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joinContent">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#812-842" title="Go to source code">joinContent</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a JOIN clause to the query using the Content relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a JOIN clause to the query using the Content relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="useContentQuery" id="_useContentQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ContentQuery.html">Thelia\Model\ContentQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_useContentQuery">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#844-860" title="Go to source code">useContentQuery</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Use the Content relation Content object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use the Content relation Content object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation, to be used as main alias in the
+secondary query</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ContentQuery.html">Thelia\Model\ContentQuery</a></code></code><br>A secondary query class using the current class as primary query<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						useQuery()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByFolder" id="_filterByFolder">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByFolder">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#862-885" title="Go to source code">filterByFolder</a>( <span><code><a href="class-Thelia.Model.Folder.html">Thelia\Model\Folder</a></code>|Propel\Runtime\Collection\ObjectCollection <var>$folder</var></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query by a related \Thelia\Model\Folder object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query by a related \Thelia\Model\Folder object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$folder</var></dt>
+					<dd><code><code><a href="class-Thelia.Model.Folder.html">Thelia\Model\Folder</a></code>|Propel\Runtime\Collection\ObjectCollection</code><br>$folder The related object(s) to use as filter</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joinFolder" id="_joinFolder">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joinFolder">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#887-917" title="Go to source code">joinFolder</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a JOIN clause to the query using the Folder relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a JOIN clause to the query using the Folder relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="useFolderQuery" id="_useFolderQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.FolderQuery.html">Thelia\Model\FolderQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_useFolderQuery">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#919-935" title="Go to source code">useFolderQuery</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Use the Folder relation Folder object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use the Folder relation Folder object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation, to be used as main alias in the
+secondary query</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.FolderQuery.html">Thelia\Model\FolderQuery</a></code></code><br>A secondary query class using the current class as primary query<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						useQuery()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterByImageI18n" id="_filterByImageI18n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterByImageI18n">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#937-958" title="Go to source code">filterByImageI18n</a>( <span><code><a href="class-Thelia.Model.ImageI18n.html">Thelia\Model\ImageI18n</a></code>|Propel\Runtime\Collection\ObjectCollection <var>$imageI18n</var></span>, <span>string <var>$comparison</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter the query by a related \Thelia\Model\ImageI18n object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter the query by a related \Thelia\Model\ImageI18n object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$imageI18n</var></dt>
+					<dd><code><code><a href="class-Thelia.Model.ImageI18n.html">Thelia\Model\ImageI18n</a></code>|Propel\Runtime\Collection\ObjectCollection</code><br>$imageI18n the related object to use as filter</dd>
+					<dt><var>$comparison</var></dt>
+					<dd><code>string</code><br>$comparison Operator to use for the column comparison, defaults to
+Criteria::EQUAL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joinImageI18n" id="_joinImageI18n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joinImageI18n">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#960-990" title="Go to source code">joinImageI18n</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = <span class="php-quote">'LEFT JOIN'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a JOIN clause to the query using the ImageI18n relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a JOIN clause to the query using the ImageI18n relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="useImageI18nQuery" id="_useImageI18nQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageI18nQuery.html">Thelia\Model\ImageI18nQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_useImageI18nQuery">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#992-1008" title="Go to source code">useImageI18nQuery</a>( <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = <span class="php-quote">'LEFT JOIN'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Use the ImageI18n relation ImageI18n object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use the ImageI18n relation ImageI18n object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation, to be used as main alias in the
+secondary query</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageI18nQuery.html">Thelia\Model\ImageI18nQuery</a></code></code><br>A secondary query class using the current class as primary query<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						useQuery()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prune" id="_prune">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prune">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1010-1024" title="Go to source code">prune</a>( <span><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code> <var>$image</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Exclude object from result</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Exclude object from result</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$image</var></dt>
+					<dd><code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br>$image Object to remove from the list of results</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="doDeleteAll" id="_doDeleteAll">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_doDeleteAll">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1026-1056" title="Go to source code">doDeleteAll</a>( <span>Propel\Runtime\Propel\Runtime\Connection\ConnectionInterface <var>$con</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes all rows from the image table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes all rows from the image table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$con</var></dt>
+					<dd><code>Propel\Runtime\Connection\ConnectionInterface</code><br>$con the connection to use</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>The number of affected rows (if supported by underlying database driver).<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1058-1099" title="Go to source code">delete</a>( <span>Propel\Runtime\Propel\Runtime\Connection\ConnectionInterface <var>$con</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs a DELETE on the database, given a ChildImage or Criteria object OR a
+primary key value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs a DELETE on the database, given a ChildImage or Criteria object OR a
+primary key value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$con</var></dt>
+					<dd><code>mixed</code><br>$values Criteria or ChildImage object or primary key or array of primary keys
+which is used to create the DELETE statement</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>The number of affected rows (if supported by underlying database driver). This
+includes CASCADE-related rows if supported by native driver or if emulated using
+Propel.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>Propel\Runtime\Exception\PropelException</code><br>Any exceptions caught during processing will be rethrown wrapped into a
+PropelException.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="recentlyUpdated" id="_recentlyUpdated">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_recentlyUpdated">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1103-1113" title="Go to source code">recentlyUpdated</a>( <span>integer <var>$nbDays</var> = <span class="php-num">7</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter by the latest updated</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter by the latest updated</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$nbDays</var></dt>
+					<dd><code>integer</code><br>$nbDays Maximum age of the latest update in days</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="recentlyCreated" id="_recentlyCreated">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_recentlyCreated">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1115-1125" title="Go to source code">recentlyCreated</a>( <span>integer <var>$nbDays</var> = <span class="php-num">7</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter by the latest created</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter by the latest created</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$nbDays</var></dt>
+					<dd><code>integer</code><br>$nbDays Maximum age of in days</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lastUpdatedFirst" id="_lastUpdatedFirst">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_lastUpdatedFirst">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1127-1135" title="Go to source code">lastUpdatedFirst</a>( )</code>
+
+		<div class="description short">
+			
+<p>Order by update date desc</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by update date desc</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="firstUpdatedFirst" id="_firstUpdatedFirst">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_firstUpdatedFirst">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1137-1145" title="Go to source code">firstUpdatedFirst</a>( )</code>
+
+		<div class="description short">
+			
+<p>Order by update date asc</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by update date asc</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lastCreatedFirst" id="_lastCreatedFirst">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_lastCreatedFirst">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1147-1155" title="Go to source code">lastCreatedFirst</a>( )</code>
+
+		<div class="description short">
+			
+<p>Order by create date desc</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by create date desc</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="firstCreatedFirst" id="_firstCreatedFirst">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_firstCreatedFirst">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1157-1165" title="Go to source code">firstCreatedFirst</a>( )</code>
+
+		<div class="description short">
+			
+<p>Order by create date asc</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by create date asc</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joinI18n" id="_joinI18n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joinI18n">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1169-1185" title="Go to source code">joinI18n</a>( <span>string <var>$locale</var> = <span class="php-quote">'en_US'</span></span>, <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a JOIN clause to the query using the i18n relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a JOIN clause to the query using the i18n relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$locale</var></dt>
+					<dd><code>string</code><br>$locale Locale to use for the join condition, e.g. 'fr_FR'</dd>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'.
+Defaults to left join.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="joinWithI18n" id="_joinWithI18n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_joinWithI18n">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1187-1204" title="Go to source code">joinWithI18n</a>( <span>string <var>$locale</var> = <span class="php-quote">'en_US'</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a JOIN clause to the query and hydrates the related I18n object.
+Shortcut for $c-&gt;joinI18n($locale)-&gt;with()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a JOIN clause to the query and hydrates the related I18n object.
+Shortcut for $c-&gt;joinI18n($locale)-&gt;with()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$locale</var></dt>
+					<dd><code>string</code><br>$locale Locale to use for the join condition, e.g. 'fr_FR'</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'.
+Defaults to left join.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br>The current query, for fluid interface<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="useI18nQuery" id="_useI18nQuery">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageI18nQuery.html">Thelia\Model\ImageI18nQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_useI18nQuery">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#1206-1222" title="Go to source code">useI18nQuery</a>( <span>string <var>$locale</var> = <span class="php-quote">'en_US'</span></span>, <span>string <var>$relationAlias</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$joinType</var> = Thelia\Model\Base\Criteria::LEFT_JOIN</span> )</code>
+
+		<div class="description short">
+			
+<p>Use the I18n relation query object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use the I18n relation query object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$locale</var></dt>
+					<dd><code>string</code><br>$locale Locale to use for the join condition, e.g. 'fr_FR'</dd>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>string</code><br>$relationAlias optional alias for the relation</dd>
+					<dt><var>$joinType</var></dt>
+					<dd><code>string</code><br>$joinType Accepted values are null, 'left join', 'right join', 'inner join'.
+Defaults to left join.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageI18nQuery.html">Thelia\Model\ImageI18nQuery</a></code></code><br>A secondary query class using the current class as primary query<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						useQuery()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Magic methods summary</caption>
+	<tr data-order="orderById" id="m_orderById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderById">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#25" title="Go to source code">orderById</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByProductId" id="m_orderByProductId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByProductId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#26" title="Go to source code">orderByProductId</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the product_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the product_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByCategoryId" id="m_orderByCategoryId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByCategoryId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#27" title="Go to source code">orderByCategoryId</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the category_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the category_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByFolderId" id="m_orderByFolderId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByFolderId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#28" title="Go to source code">orderByFolderId</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the folder_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the folder_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByContentId" id="m_orderByContentId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByContentId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#29" title="Go to source code">orderByContentId</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the content_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the content_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByFile" id="m_orderByFile">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByFile">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#30" title="Go to source code">orderByFile</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the file column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the file column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByPosition" id="m_orderByPosition">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByPosition">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#31" title="Go to source code">orderByPosition</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the position column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the position column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByCreatedAt" id="m_orderByCreatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByCreatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#32" title="Go to source code">orderByCreatedAt</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the created_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the created_at column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderByUpdatedAt" id="m_orderByUpdatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_orderByUpdatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#33" title="Go to source code">orderByUpdatedAt</a>( <span>mixed <var>$order</var> = Thelia\Model\Base\Criteria::ASC</span> )</code>
+
+		<div class="description short">
+			
+<p>Order by the updated_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Order by the updated_at column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd><code>mixed</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupById" id="m_groupById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupById">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#35" title="Go to source code">groupById</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the id column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByProductId" id="m_groupByProductId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByProductId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#36" title="Go to source code">groupByProductId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the product_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the product_id column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByCategoryId" id="m_groupByCategoryId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByCategoryId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#37" title="Go to source code">groupByCategoryId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the category_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the category_id column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByFolderId" id="m_groupByFolderId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByFolderId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#38" title="Go to source code">groupByFolderId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the folder_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the folder_id column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByContentId" id="m_groupByContentId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByContentId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#39" title="Go to source code">groupByContentId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the content_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the content_id column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByFile" id="m_groupByFile">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByFile">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#40" title="Go to source code">groupByFile</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the file column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the file column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByPosition" id="m_groupByPosition">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByPosition">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#41" title="Go to source code">groupByPosition</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the position column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the position column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByCreatedAt" id="m_groupByCreatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByCreatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#42" title="Go to source code">groupByCreatedAt</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the created_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the created_at column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="groupByUpdatedAt" id="m_groupByUpdatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_groupByUpdatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#43" title="Go to source code">groupByUpdatedAt</a>( )</code>
+
+		<div class="description short">
+			
+<p>Group by the updated_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Group by the updated_at column</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="leftJoin" id="m_leftJoin">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_leftJoin">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#45" title="Go to source code">leftJoin</a>( <span>mixed <var>$relation</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a LEFT JOIN clause to the query</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a LEFT JOIN clause to the query</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relation</var></dt>
+					<dd><code>mixed</code><br>$relation</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rightJoin" id="m_rightJoin">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_rightJoin">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#46" title="Go to source code">rightJoin</a>( <span>mixed <var>$relation</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a RIGHT JOIN clause to the query</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a RIGHT JOIN clause to the query</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relation</var></dt>
+					<dd><code>mixed</code><br>$relation</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="innerJoin" id="m_innerJoin">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_innerJoin">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#47" title="Go to source code">innerJoin</a>( <span>mixed <var>$relation</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a INNER JOIN clause to the query</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a INNER JOIN clause to the query</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relation</var></dt>
+					<dd><code>mixed</code><br>$relation</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="leftJoinProduct" id="m_leftJoinProduct">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_leftJoinProduct">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#49" title="Go to source code">leftJoinProduct</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a LEFT JOIN clause to the query using the Product relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a LEFT JOIN clause to the query using the Product relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rightJoinProduct" id="m_rightJoinProduct">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_rightJoinProduct">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#50" title="Go to source code">rightJoinProduct</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Product relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Product relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="innerJoinProduct" id="m_innerJoinProduct">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_innerJoinProduct">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#51" title="Go to source code">innerJoinProduct</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a INNER JOIN clause to the query using the Product relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a INNER JOIN clause to the query using the Product relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="leftJoinCategory" id="m_leftJoinCategory">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_leftJoinCategory">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#53" title="Go to source code">leftJoinCategory</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a LEFT JOIN clause to the query using the Category relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a LEFT JOIN clause to the query using the Category relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rightJoinCategory" id="m_rightJoinCategory">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_rightJoinCategory">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#54" title="Go to source code">rightJoinCategory</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Category relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Category relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="innerJoinCategory" id="m_innerJoinCategory">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_innerJoinCategory">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#55" title="Go to source code">innerJoinCategory</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a INNER JOIN clause to the query using the Category relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a INNER JOIN clause to the query using the Category relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="leftJoinContent" id="m_leftJoinContent">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_leftJoinContent">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#57" title="Go to source code">leftJoinContent</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a LEFT JOIN clause to the query using the Content relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a LEFT JOIN clause to the query using the Content relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rightJoinContent" id="m_rightJoinContent">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_rightJoinContent">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#58" title="Go to source code">rightJoinContent</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Content relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Content relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="innerJoinContent" id="m_innerJoinContent">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_innerJoinContent">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#59" title="Go to source code">innerJoinContent</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a INNER JOIN clause to the query using the Content relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a INNER JOIN clause to the query using the Content relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="leftJoinFolder" id="m_leftJoinFolder">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_leftJoinFolder">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#61" title="Go to source code">leftJoinFolder</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a LEFT JOIN clause to the query using the Folder relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a LEFT JOIN clause to the query using the Folder relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rightJoinFolder" id="m_rightJoinFolder">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_rightJoinFolder">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#62" title="Go to source code">rightJoinFolder</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Folder relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a RIGHT JOIN clause to the query using the Folder relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="innerJoinFolder" id="m_innerJoinFolder">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_innerJoinFolder">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#63" title="Go to source code">innerJoinFolder</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a INNER JOIN clause to the query using the Folder relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a INNER JOIN clause to the query using the Folder relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="leftJoinImageI18n" id="m_leftJoinImageI18n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_leftJoinImageI18n">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#65" title="Go to source code">leftJoinImageI18n</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a LEFT JOIN clause to the query using the ImageI18n relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a LEFT JOIN clause to the query using the ImageI18n relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rightJoinImageI18n" id="m_rightJoinImageI18n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_rightJoinImageI18n">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#66" title="Go to source code">rightJoinImageI18n</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a RIGHT JOIN clause to the query using the ImageI18n relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a RIGHT JOIN clause to the query using the ImageI18n relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="innerJoinImageI18n" id="m_innerJoinImageI18n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_innerJoinImageI18n">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#67" title="Go to source code">innerJoinImageI18n</a>( <span>mixed <var>$relationAlias</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a INNER JOIN clause to the query using the ImageI18n relation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a INNER JOIN clause to the query using the ImageI18n relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationAlias</var></dt>
+					<dd><code>mixed</code><br>$relationAlias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.ImageQuery.html">Thelia\Model\ImageQuery</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOne" id="m_findOne">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOne">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#69" title="Go to source code">findOne</a>( <span>Propel\Runtime\Connection\ConnectionInterface <var>$con</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage matching the query</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage matching the query</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$con</var></dt>
+					<dd><code>Propel\Runtime\Connection\ConnectionInterface</code><br>$con</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneOrCreate" id="m_findOneOrCreate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneOrCreate">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#70" title="Go to source code">findOneOrCreate</a>( <span>Propel\Runtime\Connection\ConnectionInterface <var>$con</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage matching the query, or a new ChildImage object
+populated from the query conditions when no match is found</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage matching the query, or a new ChildImage object
+populated from the query conditions when no match is found</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$con</var></dt>
+					<dd><code>Propel\Runtime\Connection\ConnectionInterface</code><br>$con</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneById" id="m_findOneById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneById">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#72" title="Go to source code">findOneById</a>( <span>integer <var>$id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByProductId" id="m_findOneByProductId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByProductId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#73" title="Go to source code">findOneByProductId</a>( <span>integer <var>$product_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the product_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the product_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$product_id</var></dt>
+					<dd><code>integer</code><br>$product_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByCategoryId" id="m_findOneByCategoryId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByCategoryId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#74" title="Go to source code">findOneByCategoryId</a>( <span>integer <var>$category_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the category_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the category_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$category_id</var></dt>
+					<dd><code>integer</code><br>$category_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByFolderId" id="m_findOneByFolderId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByFolderId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#75" title="Go to source code">findOneByFolderId</a>( <span>integer <var>$folder_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the folder_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the folder_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$folder_id</var></dt>
+					<dd><code>integer</code><br>$folder_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByContentId" id="m_findOneByContentId">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByContentId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#76" title="Go to source code">findOneByContentId</a>( <span>integer <var>$content_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the content_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the content_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$content_id</var></dt>
+					<dd><code>integer</code><br>$content_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByFile" id="m_findOneByFile">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByFile">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#77" title="Go to source code">findOneByFile</a>( <span>string <var>$file</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the file column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the file column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByPosition" id="m_findOneByPosition">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByPosition">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#78" title="Go to source code">findOneByPosition</a>( <span>integer <var>$position</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the position column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the position column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$position</var></dt>
+					<dd><code>integer</code><br>$position</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByCreatedAt" id="m_findOneByCreatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByCreatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#79" title="Go to source code">findOneByCreatedAt</a>( <span>string <var>$created_at</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the created_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the created_at column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$created_at</var></dt>
+					<dd><code>string</code><br>$created_at</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOneByUpdatedAt" id="m_findOneByUpdatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOneByUpdatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#80" title="Go to source code">findOneByUpdatedAt</a>( <span>string <var>$updated_at</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return the first ChildImage filtered by the updated_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first ChildImage filtered by the updated_at column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$updated_at</var></dt>
+					<dd><code>string</code><br>$updated_at</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Model.Image.html">Thelia\Model\Image</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findById" id="m_findById">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findById">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#82" title="Go to source code">findById</a>( <span>integer <var>$id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByProductId" id="m_findByProductId">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByProductId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#83" title="Go to source code">findByProductId</a>( <span>integer <var>$product_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the product_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the product_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$product_id</var></dt>
+					<dd><code>integer</code><br>$product_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByCategoryId" id="m_findByCategoryId">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByCategoryId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#84" title="Go to source code">findByCategoryId</a>( <span>integer <var>$category_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the category_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the category_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$category_id</var></dt>
+					<dd><code>integer</code><br>$category_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByFolderId" id="m_findByFolderId">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByFolderId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#85" title="Go to source code">findByFolderId</a>( <span>integer <var>$folder_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the folder_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the folder_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$folder_id</var></dt>
+					<dd><code>integer</code><br>$folder_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByContentId" id="m_findByContentId">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByContentId">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#86" title="Go to source code">findByContentId</a>( <span>integer <var>$content_id</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the content_id column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the content_id column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$content_id</var></dt>
+					<dd><code>integer</code><br>$content_id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByFile" id="m_findByFile">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByFile">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#87" title="Go to source code">findByFile</a>( <span>string <var>$file</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the file column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the file column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByPosition" id="m_findByPosition">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByPosition">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#88" title="Go to source code">findByPosition</a>( <span>integer <var>$position</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the position column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the position column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$position</var></dt>
+					<dd><code>integer</code><br>$position</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByCreatedAt" id="m_findByCreatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByCreatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#89" title="Go to source code">findByCreatedAt</a>( <span>string <var>$created_at</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the created_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the created_at column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$created_at</var></dt>
+					<dd><code>string</code><br>$created_at</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByUpdatedAt" id="m_findByUpdatedAt">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findByUpdatedAt">#</a>
+		<code><a href="source-class-Thelia.Model.Base.ImageQuery.html#90" title="Go to source code">findByUpdatedAt</a>( <span>string <var>$updated_at</var> = </span> )</code>
+
+		<div class="description short">
+			
+<p>Return ChildImage objects filtered by the updated_at column</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return ChildImage objects filtered by the updated_at column</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$updated_at</var></dt>
+					<dd><code>string</code><br>$updated_at</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		thelia API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

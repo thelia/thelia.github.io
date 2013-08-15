@@ -1,10 +1,12 @@
 ---
 layout: loop
 title: Address Loop
+description: Address loop lists address addresses.
 sidebar: loop
 subnav: loop_address
 uses_global_argument: true
 returns_global_outputs: true
+type: address
 arguments :
     - {name: "id", description: "A single or a list of address ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "customer", description: "Either a customer id or the keyword `current` which search for current customer addresses.", example: "customer=\"current\", customer=\"11\"", default: "current"}
@@ -32,6 +34,4 @@ examples :
     - {description: "I want to .."}
 ---
 
-#{{ page.title }}
-
-Address loop lists address addresses.
+{% include loop/body.md %}

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Thelia\Core\Template\Element\BaseLoop | thelia</title>
+
+	<script type="text/javascript" src="resources/combined.js?394153670"></script>
+	<script type="text/javascript" src="elementlist.js?44129306"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Thelia.html">Thelia<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Action.html">Action<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Action.Exception.html">Exception</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Admin.Controller.html">Controller</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Command.Output.html">Output</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-Thelia.Controller.html">Controller</a>
+						</li>
+				<li class="active"><a href="namespace-Thelia.Core.html">Core<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Bundle.html">Bundle</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Controller.html">Controller</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.DependencyInjection.html">DependencyInjection<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.DependencyInjection.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.DependencyInjection.Loader.html">Loader</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.EventListener.html">EventListener</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Factory.html">Factory</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.HttpFoundation.html">HttpFoundation<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.HttpFoundation.Session.html">Session</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Security.html">Security<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Security.Authentication.html">Authentication</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.Role.html">Role</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.User.html">User</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Security.UserProvider.html">UserProvider</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Thelia.Core.Template.html">Template<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Assets.html">Assets</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.BaseParam.html">BaseParam</a>
+						</li>
+				<li class="active"><a href="namespace-Thelia.Core.Template.Element.html">Element<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Element.Exception.html">Exception</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Template.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Loop.html">Loop<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Loop.Argument.html">Argument</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Core.Template.Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Core.Template.Smarty.Assets.html">Assets</a>
+						</li>
+				<li><a href="namespace-Thelia.Core.Template.Smarty.Plugins.html">Plugins</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Thelia.Core.Translation.html">Translation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-Thelia.Form.html">Form</a>
+						</li>
+				<li><a href="namespace-Thelia.Log.html">Log<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Log.Destination.html">Destination</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Model.html">Model<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Model.Base.html">Base</a>
+						</li>
+				<li><a href="namespace-Thelia.Model.Map.html">Map</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Module.html">Module</a>
+						</li>
+				<li><a href="namespace-Thelia.Routing.html">Routing<span></span></a>
+						<ul>
+				<li><a href="namespace-Thelia.Routing.Matcher.html">Matcher</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Thelia.Tools.html">Tools</a>
+						</li>
+				<li><a href="namespace-Thelia.Type.html">Type</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Thelia.Core.Template.Element.BaseLoop.html">BaseLoop</a></li>
+				<li><a href="class-Thelia.Core.Template.Element.LoopResult.html">LoopResult</a></li>
+				<li><a href="class-Thelia.Core.Template.Element.LoopResultRow.html">LoopResultRow</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Thelia.Core.Template.Element.html" title="Summary of Thelia\Core\Template\Element"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class BaseLoop</h1>
+
+
+	<div class="description">
+	
+<p>Class BaseLoop</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Thelia.Core.Template.Loop.Address.html">Thelia\Core\Template\Loop\Address</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Auth.html">Thelia\Core\Template\Loop\Auth</a>, 
+			<a href="class-Thelia.Core.Template.Loop.OrderStatus.html">Thelia\Core\Template\Loop\OrderStatus</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Product.html">Thelia\Core\Template\Loop\Product</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Title.html">Thelia\Core\Template\Loop\Title</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Category.html">Thelia\Core\Template\Loop\Category</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Country.html">Thelia\Core\Template\Loop\Country</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Customer.html">Thelia\Core\Template\Loop\Customer</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Feature.html">Thelia\Core\Template\Loop\Feature</a>, 
+			<a href="class-Thelia.Core.Template.Loop.FeatureAvailable.html">Thelia\Core\Template\Loop\FeatureAvailable</a>, 
+			<a href="class-Thelia.Core.Template.Loop.FeatureValue.html">Thelia\Core\Template\Loop\FeatureValue</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Feed.html">Thelia\Core\Template\Loop\Feed</a>, 
+			<a href="class-Thelia.Core.Template.Loop.Order.html">Thelia\Core\Template\Loop\Order</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-Thelia.Core.Template.Loop.Accessory.html">Thelia\Core\Template\Loop\Accessory</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-Thelia.html">Thelia</a>\<a href="namespace-Thelia.Core.html">Core</a>\<a href="namespace-Thelia.Core.Template.html">Template</a>\<a href="namespace-Thelia.Core.Template.Element.html">Element</a><br />
+		<b>Package:</b> TThelia\Core\Template\Element<br />
+
+		<b>Located at</b> <a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#32-285" title="Go to source code">core/lib/Thelia/Core/Template/Element/BaseLoop.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#57-71" title="Go to source code">__construct</a>( <span>Symfony\Component\HttpFoundation\Request <var>$request</var></span>, <span>Symfony\Component\EventDispatcher\EventDispatcherInterface <var>$dispatcher</var></span>, <span><code><a href="class-Thelia.Core.Security.SecurityContext.html">Thelia\Core\Security\SecurityContext</a></code> <var>$securityContext</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new Loop</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new Loop</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd><code>Symfony\Component\HttpFoundation\Request</code><br>$request</dd>
+					<dt><var>$dispatcher</var></dt>
+					<dd><code>Symfony\Component\EventDispatcher\EventDispatcherInterface</code><br>$dispatcher</dd>
+					<dt><var>$securityContext</var></dt>
+					<dd><code><code><a href="class-Thelia.Core.Security.SecurityContext.html">Thelia\Core\Security\SecurityContext</a></code></code><br>$securityContext</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultArgs" id="_getDefaultArgs">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-Thelia.Core.Template.Loop.Argument.Argument.html">Thelia\Core\Template\Loop\Argument\Argument</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultArgs">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#73-85" title="Go to source code">getDefaultArgs</a>( )</code>
+
+		<div class="description short">
+			
+<p>Define common loop arguments</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Define common loop arguments</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Core.Template.Loop.Argument.Argument.html">Thelia\Core\Template\Loop\Argument\Argument</a>[]</code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#87-106" title="Go to source code">__call</a>( <span>string <var>$name</var></span>, <span>mixed <var>$arguments</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Provides a getter to loop parameters</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Provides a getter to loop parameters</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name the methode name (only getArgname is supported)</dd>
+					<dt><var>$arguments</var></dt>
+					<dd><code>mixed</code><br>$arguments this parameter is ignored</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>InvalidArgumentException</code><br>if the parameter is unknown or the method name is not supported.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initializeArgs" id="_initializeArgs">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeArgs">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#108-156" title="Go to source code">initializeArgs</a>( <span>array <var>$nameValuePairs</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize the loop arguments.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize the loop arguments.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$nameValuePairs</var></dt>
+					<dd><code>array</code><br>$nameValuePairs a array of name =&gt; value pairs. The name is the name of the
+argument.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>InvalidArgumentException</code><br>if somùe argument values are missing, or invalid<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getArg" id="_getArg">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Core.Template.Loop.Argument.Argument.html">Thelia\Core\Template\Loop\Argument\Argument</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getArg">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#158-174" title="Go to source code">getArg</a>( <span>string <var>$argumentName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return a loop argument</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return a loop argument</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$argumentName</var></dt>
+					<dd><code>string</code><br>$argumentName the argument name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Core.Template.Loop.Argument.Argument.html">Thelia\Core\Template\Loop\Argument\Argument</a></code></code><br>the loop argument.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>InvalidArgumentException</code><br>if argument is not found in loop argument list<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getArgValue" id="_getArgValue">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Thelia.Core.Template.Loop.Argument.Argument.html">Thelia\Core\Template\Loop\Argument\Argument</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getArgValue">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#176-187" title="Go to source code">getArgValue</a>( <span>string <var>$argumentName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return a loop argument value</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return a loop argument value</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$argumentName</var></dt>
+					<dd><code>string</code><br>$argumentName the argument name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Core.Template.Loop.Argument.Argument.html">Thelia\Core\Template\Loop\Argument\Argument</a></code></code><br>the loop argument.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>InvalidArgumentException</code><br>if argument is not found in loop argument list<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="search" id="_search">
+
+		<td class="attributes"><code>
+			 public 
+			array|mixed|PropelModelPager|PropelObjectCollection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_search">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#189-202" title="Go to source code">search</a>( <span>Propel\Runtime\ActiveQuery\ModelCriteria <var>$search</var></span>, <span>null <var>&amp; $pagination</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$search</var></dt>
+					<dd><code>ModelCriteria</code><br>$search</dd>
+					<dt><var>$pagination</var></dt>
+					<dd><code>null</code><br>$pagination</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array|mixed|PropelModelPager|PropelObjectCollection</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="searchWithOffset" id="_searchWithOffset">
+
+		<td class="attributes"><code>
+			 public 
+			array|mixed|PropelObjectCollection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_searchWithOffset">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#204-217" title="Go to source code">searchWithOffset</a>( <span>Propel\Runtime\ActiveQuery\ModelCriteria <var>$search</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$search</var></dt>
+					<dd><code>ModelCriteria</code><br>$search</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array|mixed|PropelObjectCollection</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="searchWithPagination" id="_searchWithPagination">
+
+		<td class="attributes"><code>
+			 public 
+			array|PropelModelPager
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_searchWithPagination">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#219-234" title="Go to source code">searchWithPagination</a>( <span>Propel\Runtime\ActiveQuery\ModelCriteria <var>$search</var></span>, <span>mixed <var>&amp; $pagination</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$search</var></dt>
+					<dd><code>ModelCriteria</code><br>$search</dd>
+					<dt><var>$pagination</var></dt>
+					<dd><code>mixed</code><br>$pagination</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array|PropelModelPager</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exec" id="_exec">
+
+		<td class="attributes"><code>
+			abstract public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exec">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#236-262" title="Go to source code">exec</a>( <span>mixed <var>&amp; $pagination</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>this function have to be implement in your own loop class.</p>
+
+<p>All your parameters are defined in defineArgs() and can be accessible like a
+class property.</p>
+
+<p>example :</p>
+
+<p>public function defineArgs() { return array ( "ref", "id" =&gt; "optional",
+"stock" =&gt; array( "optional", "default" =&gt; 10 ) ); }</p>
+
+<p>you can retrieve ref value using $this-&gt;ref</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pagination</var></dt>
+					<dd><code>mixed</code><br>$pagination</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getArgDefinitions" id="_getArgDefinitions">
+
+		<td class="attributes"><code>
+			abstract protected 
+			<code><a href="class-Thelia.Core.Template.Loop.Argument.ArgumentCollection.html">Thelia\Core\Template\Loop\Argument\ArgumentCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getArgDefinitions">#</a>
+		<code><a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#264-283" title="Go to source code">getArgDefinitions</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>define all args used in your loop</p>
+
+<p>array key is your arg name.</p>
+
+<p>example :</p>
+
+<p>return array ( "ref", "id" =&gt; "optional", "stock" =&gt; array( "optional",
+"default" =&gt; 10 ) );</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Thelia.Core.Template.Loop.Argument.ArgumentCollection.html">Thelia\Core\Template\Loop\Argument\ArgumentCollection</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="request" id="$request">
+		<td class="attributes"><code>
+			protected  
+			Symfony\Component\HttpFoundation\Request
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#39-42" title="Go to source code"><var>$request</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$request" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dispatcher" id="$dispatcher">
+		<td class="attributes"><code>
+			protected  
+			Symfony\Component\EventDispatcher\EventDispatcherInterface
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#44-47" title="Go to source code"><var>$dispatcher</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$dispatcher" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="securityContext" id="$securityContext">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Thelia.Core.Security.SecurityContext.html">Thelia\Core\Security\SecurityContext</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#49-52" title="Go to source code"><var>$securityContext</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$securityContext" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="args" id="$args">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Thelia.Core.Template.Element.BaseLoop.html#55" title="Go to source code"><var>$args</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$args" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		thelia API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
