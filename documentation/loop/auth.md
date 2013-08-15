@@ -16,7 +16,8 @@ arguments :
     - {name="roles", description="A comma separated list of user roles", mandatory="true"}
     - {name="permissions", description="A comma separated list of permissions. If empty or missing, the authorization is checked against the roles only"}
 examples :
-    - {description: "je met quoi, là ?"}
+    - {description: "Check if curent administrator is allowed tu use the back-office search function"}
+    - {description: "Check if the customer is logged in, or not."}
 ---
 
 # {{ page.title }}
