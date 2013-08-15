@@ -14,9 +14,9 @@ arguments :
     - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
     - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}
     - {name: "category", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
-    - {name: "source", description: "As an alternative to product=\"...\" style once can specify the object using the source parameter, along with the source_id parameter, which becomes mandatory. Valid values are product, category, folder or content.", example: "source=\"product\" source_id=\"12\" will return images from the product with ID 12."}
+    - {name: "source", description: "As an alternative to product=\"...\" style one's can specify the object using the source parameter, along with the source_id parameter, which becomes mandatory. Valid values are product, category, folder or content.", example: "source=\"product\" source_id=\"12\" will return images from the product with ID 12."}
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
-    - {name: "exclude", description: "A single or a list of feature ids to exclude from the list.", example: "exclude=\"456,123\""}
+    - {name: "exclude", description: "A single or a comma-separated list of image IDs to exclude from the list.", example: "exclude=\"456,123\""}
     - {name: "width", description: "A width in pixels, for resizing image. If only the width is provided, the image ratio is preserved.", example: "width=\"200\""}
     - {name: "height", description: "A height in pixels, for resizing image. If only the height is provided, the image ratio is preserved.", example: "height=\"200\""}
     - {name: "resize_mode", description: "If 'crop', the image will have the exact specified width and height, and will be cropped if required. If 'borders', the image will have the exact specified width and height, and some borders may be added. The border color is the one specified by 'background_color'. If 'none' or missing, the image ration is preserved, and depending od this ratio, may not have the exact width and height required.", example: "resize_mode=\"crop\""}
@@ -27,7 +27,7 @@ arguments :
     - {name: "lang", description: "A language identifier, to specify the language in which the image information will be returned"}
  
 outputs :
-    - {name: "#ID", description: "the feature id"}
+    - {name: "#ID", description: "the image ID"}
     - {name: "#IMAGE_URL", description: "The absolute URL to the generated image"}
     - {name: "#ORIGINAL_IMAGE_URL", description: "The absolute URL to the original image"}
     - {name: "#IMAGE_PATH", description: "The absolute path to the generated image file"}
