@@ -1,7 +1,7 @@
 ---
 layout: loop
 title: Image Loop
-description: Image loop process and display product, categories, content and folder images.
+description: The image loop process, cache and display products, categories, contents and folders images.
 sidebar: loop
 subnav: loop_image
 uses_global_argument: true
@@ -19,7 +19,7 @@ arguments :
     - {name: "exclude", description: "A single or a comma-separated list of image IDs to exclude from the list.", example: "exclude=\"456,123\""}
     - {name: "width", description: "A width in pixels, for resizing image. If only the width is provided, the image ratio is preserved.", example: "width=\"200\""}
     - {name: "height", description: "A height in pixels, for resizing image. If only the height is provided, the image ratio is preserved.", example: "height=\"200\""}
-    - {name: "resize_mode", description: "If 'crop', the image will have the exact specified width and height, and will be cropped if required. If 'borders', the image will have the exact specified width and height, and some borders may be added. The border color is the one specified by 'background_color'. If 'none' or missing, the image ration is preserved, and depending od this ratio, may not have the exact width and height required.", example: "resize_mode=\"crop\""}
+    - {name: "resize_mode", description: "If 'crop', the image will have the exact specified width and height, and will be cropped if required. If 'borders', the image will have the exact specified width and height, and some borders may be added. The border color is the one specified by 'background_color'. If 'none' or missing, the image ratio is preserved, and depending od this ratio, may not have the exact width and height required.", example: "resize_mode=\"crop\""}
     - {name: "rotation", description: "The rotation angle in degrees (positive or negative) applied to the image. The background color of the empty areas is the one specified by 'background_color'", example: "rotation=\"90\""}
     - {name: "background_color", description: "The color applied to empty image parts during processing. Use #rgb or #rrggbb color format", example: "background_color=\"#cc8000\""}
     - {name: "quality", description: "The generated image quality, from 0(!) to 100%. The default value is 75% (you can hange this in the Administration panel)", example: "quality=\"70\""}
@@ -41,7 +41,7 @@ outputs :
     - {name: "#OBJECT_ID", description: "The object ID"}
  
 examples :
-    - {description: "See below :)"}
+    - {description: "Resize category images the 200x100, adding (white) borders if required.", code:""}
 ---
 
 ## Available effects
