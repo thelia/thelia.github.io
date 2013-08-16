@@ -85,9 +85,28 @@ final class TheliaEvents
     const AFTER_CHANGECUSTOMER 	= "action.after_changecustomer";
 
     /**
-     * Sent before customer insertion, to allow modules to create a custom customer reference.
+     * Sent once the category creation form has been successfully validated, and before category insertion in the database.
      */
-    const CREATECUSTOMER_CUSTOMREF = "customer.creation.customref";
+    const BEFORE_CREATECATEGORY = "action.before_createcategory";
+
+    /**
+     * Sent just after a successful insert of a new category in the database.
+     */
+    const AFTER_CREATECATEGORY 	= "action.after_createcategory";
+    /**
+     * Sent befonre deleting a category
+     */
+    const BEFORE_DELETECATEGORY = "action.before_deletecategory";
+
+    /**
+     * Sent just after a successful delete of a category from the database.
+     */
+    const AFTER_DELETECATEGORY 	= "action.after_deletecategory";
+
+    /**
+     * Sent just after a successful change of a category in the database.
+     */
+    const AFTER_CHANGECATEGORY 	= "action.after_changecategory";
 
     /**
      * sent when a new existing cat id duplicated. This append when current customer is different from current cart
@@ -97,10 +116,23 @@ final class TheliaEvents
     /**
      * sent when a new item is added to current cart
      */
-    const CART_ADDITEM = "cart.addItem";
+    const AFTER_CARTADDITEM = "cart.after.addItem";
 
     /**
      * sent when a cart item is modify
      */
-    const CART_MODIFYITEM = "cart.modifyItem";
+    const AFTER_CARTCHANGEITEM = "cart.modifyItem";
+
+    /**
+     * sent for addArticle action
+     */
+    const CART_ADDITEM = "action.addArticle";
+
+    /**
+     * sent on modify article action
+     */
+    const CART_CHANGEITEM = "action.changeArticle";
+
+    const CART_DELETEITEM = "action.deleteArticle";
 }
+
