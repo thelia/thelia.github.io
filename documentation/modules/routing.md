@@ -56,7 +56,7 @@ class Something extends BaseFrontController
 {
     public function createAction()
     {
-        //my code here, you can access to many helper here, see the api
+        //my code here, you can access many helpers here, see the api
     }
 }
 ```
