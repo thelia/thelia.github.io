@@ -1,10 +1,12 @@
 ---
 layout: loop
 title: Customer Loop
+description: Customer loop displays customers information.
 sidebar: loop
 subnav: loop_customer
 uses_global_argument: true
 returns_global_outputs: true
+type: customer
 arguments :
     - {name: "current", description: "A boolean value which must be set to false if you need to display not authenticated customers information, typically if `sponsor` parameter is set.", example: "current=\"false\"", default: "yes"}
     - {name: "id", description: "A single or a list of customer ids.", example: "id=\"2\", id=\"1,4,7\""}
@@ -26,6 +28,4 @@ examples :
     - {description: "I want to .."}
 ---
 
-#{{ page.title }}
-
-Customer loop displays customers information.
+{% include loop/body.md %}

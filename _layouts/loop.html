@@ -1,6 +1,6 @@
 ---
 global_arguments :
-    - {name: "name", description: "The loop name. This name must be unique and is used to reference this loop further in the page (see ifloop, elseloop or pageloop)"}
+    - {name: "name", description: "The loop name. This name must be unique and is used to reference this loop further in the page (see ifloop, elseloop or pageloop)", mandatory: "true"}
     - {name: "page", description: "The page to display.", example: "page=\"2\""}
     - {name: "limit", description: "The maximum number of results to display.", example: "limit=\"10\"", default: "10"}
     - {name: "offset", description: "The first product to display offset. Will not be used if `page` argument is set.", example: "offset=\"1\"", default: "0"}
@@ -28,7 +28,6 @@ global_outputs :
 
     <!-- Main Content -->
     <div class="large-9 columns" role="content">
-        {{ content }}
 
         <div class="row">
 
@@ -191,6 +190,8 @@ global_outputs :
             </div>
 
         </div>
+
+       {{ content }}
 
     </div>
 

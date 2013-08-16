@@ -1,10 +1,12 @@
 ---
 layout: loop
-country: Country Loop
+title: Country Loop
+description: Country loop lists countries.
 sidebar: loop
 subnav: loop_country
 uses_global_argument: true
 returns_global_outputs: true
+type: country
 arguments :
     - {name: "limit", description: "The maximum number of results to display", example: "limit=\"15\"", default: "500"}
     - {name: "id", description: "A single or a list of country ids.", example: "id=\"2\", id=\"1,4,7\""}
@@ -25,6 +27,4 @@ examples :
     - {description: "I want to .."}
 ---
 
-#{{ page.country }}
-
-Country loop lists countries.
+{% include loop/body.md %}

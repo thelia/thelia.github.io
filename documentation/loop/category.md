@@ -1,10 +1,12 @@
 ---
 layout: loop
 title: Category Loop
+description: Category loop lists categories from your shop.
 sidebar: loop
 subnav: loop_category
 uses_global_argument: true
 returns_global_outputs: true
+type: category
 arguments :
     - {name: "id", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "parent", description: "A single or a list of category ids.", example: "category=\"3\", category=\"2,5,8\""}
@@ -31,10 +33,13 @@ outputs :
     - {name: "#PARENT", description: "the parent category"}
     - {name: "#URL", description: "the category URL"}
     - {name: "#PRODUCT_COUNT", description: "the number of visible products for this category"}
+    - {name: "#CREATE_DATE", description: "the category create date"}
+    - {name: "#UPDATE_DATE", description: "the category update date"}
+    - {name: "#VERSION", description: "the category version"}
+    - {name: "#VERSION_DATE", description: "the category version date"}
+    - {name: "#VERSION_AUTHOR", description: "the category version author"}
 examples :
     - {description: "I want to .."}
 ---
 
-# {{page.title}}
-
-Category loop lists categories from your shop.
+{% include loop/body.md %}
