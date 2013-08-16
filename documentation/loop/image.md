@@ -41,7 +41,7 @@ outputs :
     - {name: "#OBJECT_ID", description: "The object ID"}
  
 examples :
-    - {description: "Resize category images the 200x100, adding (white) borders if required.", code:""}
+    - {description: "Resize category images the 200x100, adding (white) borders if required.", code: ""}
 ---
 
 ## Available effects
@@ -65,7 +65,7 @@ Resize category images the 200x100, adding (white) borders if required.
 {/loop}
 ```
 
-Same behaviour, using the "source" srtyle parameters
+Same behaviour, using the "source" style parameters
 
 ```smarty
 {loop type="image" name="image_test" source="category" source_id="#ID" width="200" height="100" resize_mode="borders"}
