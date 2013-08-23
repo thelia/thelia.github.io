@@ -8,9 +8,9 @@ uses_global_argument: false
 returns_global_outputs: false
 type: accessory
 arguments :
-    - {name: "product", description: "A single product id.", example: "product=\"2\"", mandatory="true"}
+    - {name: "product", description: "A single product id.", example: "product=\"2\"", mandatory: "true"}
     - {
-            name: "order", description: "A list of values", example: "order=\"accessory,max_price\"", default: "manual",
+            name: "order", description: "A list of values", example: "order=\"accessory,max_price\"", default: "accessory",
             expected_values: [
                 {name: "accessory",                                                                 description: "manual accessory order"},
                 {name: "accessory_reverse",                                                         description: "reverse manual accessory order"},

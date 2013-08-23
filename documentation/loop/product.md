@@ -1,7 +1,7 @@
 ---
 layout: loop
 title: Product Loop
-description: Product loop lists products from your shop.
+description: Product loop lists products from your shop. You very probably will have to use the <a href=\"/documentation/loop/product_sale_elements.html\">product sale elements loop</a> inside your product loop.
 sidebar: loop
 subnav: loop_product
 uses_global_argument: true
@@ -44,15 +44,14 @@ arguments :
 outputs :
     - {name: "#ID", description: "the product id"}
     - {name: "#REF", description: "the product reference"}
-    - {name: "#PRICE", description: "the product price"}
-    - {name: "#PROMO_PRICE", description: "the product promo price"}
-    - {name: "#PROMO", description: "return if the product is in promo"}
-    - {name: "#NEW", description: "return if the product is new"}
-    - {name: "#WEIGHT", description: "the product weight"}
+    - {name: "#BEST_PRICE", description: "the product best price for the received arguments, depending on the attributes and promo status."}
+    - {name: "#IS_PROMO", description: "returns if at least one of it's product sale element is in promo"}
+    - {name: "#IS_NEW", description: "returns if at least one of it's product sale element is new"}
     - {name: "#TITLE", description: "the product title"}
     - {name: "#CHAPO", description: "the product chapo"}
     - {name: "#DESCRIPTION", description: "the product description"}
     - {name: "#POSTSCTIPTUM", description: "the product postscriptum"}
+    - {name: "#POSITION", description: "the product position"}
 examples :
     - {description: "I want to display all products from categories 1 and 2 whose feature `color` (ID : 1) is `blue` (ID : 13), order by ascending price"}
 ---

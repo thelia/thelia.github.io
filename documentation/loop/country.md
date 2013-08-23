@@ -8,9 +8,8 @@ uses_global_argument: true
 returns_global_outputs: true
 type: country
 arguments :
-    - {name: "limit", description: "The maximum number of results to display", example: "limit=\"15\"", default: "500"}
     - {name: "id", description: "A single or a list of country ids.", example: "id=\"2\", id=\"1,4,7\""}
-    - {name: "area", description: "A single or a list of area ids.", example: "area=\"10,9\"", area: "500"}
+    - {name: "area", description: "A single or a list of area ids.", example: "area=\"10,9\", area: \"500\""}
     - {name: "with_area", description: "A boolean value to return either countries whose area is defined either all the others.", example: "with_area=\"true\""}
     - {name: "exclude", description: "A single or a list of country ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
 outputs :

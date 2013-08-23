@@ -36,6 +36,11 @@ global_outputs :
             <div class="large-12 columns">
                 <h3>Arguments</h3>
 
+                <p class="h3-information">
+                    * : argument is mandatory<br />
+                    ** : one of any ** marked argument is mandatory
+                </p>
+
                 {% if page.uses_global_argument == true %}
 
                 <h4>Global arguments</h4>
@@ -52,7 +57,7 @@ global_outputs :
 
                         <div class="loop-argument large-12">
                             <div class="name large-3">
-                                {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}
+                                {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
                             </div>
                             <div class="information large-9">
 
@@ -98,7 +103,7 @@ global_outputs :
                 {% for argument in page.arguments %}
                     <div class="loop-argument large-12">
                         <div class="name large-3">
-                            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}
+                            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
                         </div>
                         <div class="information large-9">
 
