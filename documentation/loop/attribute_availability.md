@@ -11,6 +11,7 @@ arguments :
     - {name: "id", description: "A single or a list of attribute availability ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "attribute", description: "A single or a list of attribute ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "exclude", description: "A single or a list of attribute availability ids to exclude.", example: "exclude=\"456,123\""}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
             name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
             expected_values: [

@@ -13,6 +13,7 @@ arguments :
     - {name: "category", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of feature ids to exclude.", example: "exclude=\"456,123\""}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
             name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
             expected_values: [

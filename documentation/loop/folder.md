@@ -14,6 +14,7 @@ arguments :
     - {name: "not_empty", description: "A boolean value.", example: "not_empty=\"yes\"", default: "no"}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of folder ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [

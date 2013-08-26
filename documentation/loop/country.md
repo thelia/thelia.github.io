@@ -12,6 +12,7 @@ arguments :
     - {name: "area", description: "A single or a list of area ids.", example: "area=\"10,9\", area: \"500\""}
     - {name: "with_area", description: "A boolean value to return either countries whose area is defined either all the others.", example: "with_area=\"true\""}
     - {name: "exclude", description: "A single or a list of country ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
 outputs :
     - {name: "#ID", description: "the country id"}
     - {name: "#AREA", description: "the area the country belongs"}
