@@ -34,6 +34,7 @@ outputs :
     - {name: "#CHAPO", description: "the content chapo"}
     - {name: "#DESCRIPTION", description: "the content description"}
     - {name: "#POSTSCTIPTUM", description: "the content postscriptum"}
+    - {name: "#URL", description: "the content URL"}
     - {name: "#POSITION", description: "the content position"}
 examples :
     - {description: "I want to .."}

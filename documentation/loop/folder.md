@@ -31,6 +31,7 @@ outputs :
     - {name: "#CHAPO", description: "the folder chapo"}
     - {name: "#DESCRIPTION", description: "the folder description"}
     - {name: "#POSTSCTIPTUM", description: "the folder postscriptum"}
+    - {name: "#URL", description: "the folder URL"}
     - {name: "#PARENT", description: "the parent folder"}
     - {name: "#CONTENT_COUNT", description: "the number of visible contents for this folder"}
     - {name: "#VISIBLE", description: "the folder visibility"}

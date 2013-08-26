@@ -52,6 +52,7 @@ outputs :
     - {name: "#CHAPO", description: "the product chapo"}
     - {name: "#DESCRIPTION", description: "the product description"}
     - {name: "#POSTSCTIPTUM", description: "the product postscriptum"}
+    - {name: "#URL", description: "the product URL"}
     - {name: "#POSITION", description: "the product position"}
 examples :
     - {description: "I want to display all products from categories 1 and 2 whose feature `color` (ID : 1) is `blue` (ID : 13), order by ascending price"}
