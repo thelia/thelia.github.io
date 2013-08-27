@@ -1,0 +1,38 @@
+<div class="large-12 columns">
+    <h3>Outputs</h3>
+
+    {% if page.returns_global_outputs == true %}
+
+    <h4>Global outputs</h4>
+    {% for output in page.global_outputs %}
+    <div class="loop-output large-12">
+        <div class="name large-3">
+            {{ output.name }}
+        </div>
+        <div class="information large-9">
+            <div class="description">
+                {{ output.description }}
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    {% endfor %}
+
+    <h4>Loop outputs</h4>
+
+    {% endif %}
+
+    {% for output in page.outputs %}
+    <div class="loop-output large-12">
+        <div class="name large-3">
+            {{ output.name }}
+        </div>
+        <div class="information large-9">
+            <div class="description">
+                {{ output.description }}
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    {% endfor %}
+</div>

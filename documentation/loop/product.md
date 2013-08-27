@@ -1,14 +1,16 @@
 ---
 layout: loop
 title: Product Loop
-description: Product loop lists products from your shop. You very probably will have to use the <a href=\"/documentation/loop/product_sale_elements.html\">product sale elements loop</a> inside your product loop.
+description: Product loop lists products from your shop. You very probably will have to use the <a href="/documentation/loop/product_sale_elements.html">product sale elements loop</a> inside your product loop.
 sidebar: loop
 subnav: loop_product
 uses_global_argument: true
 returns_global_outputs: true
 type: product
 arguments :
-    - {name: "id", description: "A single or a list of product ids.", example: "id=\"2\", id=\"1,4,7\""}
+    - name: "id"
+      description: "A single or a list of product ids."
+      example: "id=\"2\", id=\"1,4,7\""
     - {name: "ref", description: "A single or a list of product references.", example: "ref=\"ref0\", id=\"ref1,ref6\""}
     - {name: "category", description: "A single or a list of category ids.", example: "category=\"2\", category=\"1,4,7\""}
     - {name: "current_category", description: "A boolean value which allows either to exclude current category products from results either to match only current category products. If a product is in multiple categories whose one is current it will not be excluded if current_category=\"false\" but will be included if current_category=\"yes\"", example: "current_category=\"yes\""}
@@ -54,8 +56,6 @@ outputs :
     - {name: "#POSTSCTIPTUM", description: "the product postscriptum"}
     - {name: "#URL", description: "the product URL"}
     - {name: "#POSITION", description: "the product position"}
-examples :
-    - {description: "I want to display all products from categories 1 and 2 whose feature `color` (ID : 1) is `blue` (ID : 13), order by ascending price"}
 ---
 
 {% include loop/body.md %}
