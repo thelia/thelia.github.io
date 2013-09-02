@@ -11,13 +11,3 @@
 ```
 
 ---
-
-<div class="row">
-
-{% include loop/argument_row.html %}
-
-{% include loop/output_row.html %}
-
-{% include loop/sample_row.html %}
-
-</div>
