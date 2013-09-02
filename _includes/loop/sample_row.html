@@ -3,9 +3,13 @@
 
     <div class="loop-example large-12">
 
-        {% assign foo = 'freestyle' %}
+        {% assign foo = 'loop/example/' | append: page.type | append: '.html' %}
+
+
 
         {% include loop/example/product.html %}
+
+
 
     </div>
 </div>
