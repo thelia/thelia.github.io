@@ -5,7 +5,7 @@ description: Feature value loop lists feature availabilities.
 sidebar: loop
 subnav: loop_feature_value
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: feature_value
 arguments :
     - {name: "feature", description: "A single feature id.", example: "feature=\"2\"", mandatory: "true"}

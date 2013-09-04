@@ -1,15 +1,23 @@
-Installer [Zurb Foundation](http://foundation.zurb.com/docs/sass.html) :
+Our documentation is made using Jekyll (http://jekyllrb.com/)
+
+In order to contribute please install the following :
+
+Install [Zurb Foundation](http://foundation.zurb.com/docs/sass.html) :
 
     $ [sudo] gem install compass
     $ [sudo] gem install zurb-foundation
 
-Lancer le serveur (sur le port 4000) :
+Run Jekyll server (on port 4000) :
 
     $ jekyll --server --auto
 
-pour voir le résultat : http://localhost:4000
+Inside  ~/dev/thelia.github.io 
+
+    $ jekyll serve
+
+to see the result : http://localhost:4000
 
 ## Credits
 
-Zurb Foundation est soumis à la licence MIT.
+Zurb Foundation is under MIT licence.
 

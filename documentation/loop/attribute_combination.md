@@ -5,7 +5,7 @@ description: Attribute combination loop lists attribute combinations.
 sidebar: loop
 subnav: loop_attribute_combination
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: attribute_combination
 arguments :
     - {name: "product_sale_elements", description: "A single product sale elements id.", example: "product=\"2\"", mandatory: "true"}

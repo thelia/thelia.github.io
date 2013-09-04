@@ -5,7 +5,7 @@ description: Product sale elements loop lists product sale elements from your sh
 sidebar: loop
 subnav: loop_product_sale_elements
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: loop_product_sale_elements
 arguments :
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}

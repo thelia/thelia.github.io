@@ -5,7 +5,7 @@ description: Feature availability loop lists feature availabilities.
 sidebar: loop
 subnav: loop_feature_availability
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: feature_availability
 arguments :
     - {name: "id", description: "A single or a list of feature availability ids.", example: "id=\"2\", id=\"1,4,7\""}

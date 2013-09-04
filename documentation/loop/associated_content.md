@@ -5,7 +5,7 @@ description: Associated content loop lists associated contents of a product or a
 sidebar: loop
 subnav: loop_associated_content
 uses_global_argument: false
-returns_global_outputs: false
+returns_global_outputs: { countable : false, timestampable : false, versionable : false }
 type: associated_content
 arguments :
     - {name: "product", description: "A single product id.", example: "product=\"2\"", mandatory: "double"}

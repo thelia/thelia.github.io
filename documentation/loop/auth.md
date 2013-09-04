@@ -7,7 +7,7 @@ description:
 sidebar: loop
 subnav: loop_auth
 uses_global_argument: false
-returns_global_outputs: true
+returns_global_outputs: { countable : false, timestampable : false, versionable : false }
 type: auth
 arguments :
     - {name: "context", 

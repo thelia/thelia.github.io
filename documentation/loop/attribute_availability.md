@@ -5,7 +5,7 @@ description: Attribute availability loop lists attribute availabilities.
 sidebar: loop
 subnav: loop_attribute_availability
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: attribute_availability
 arguments :
     - {name: "id", description: "A single or a list of attribute availability ids.", example: "id=\"2\", id=\"1,4,7\""}

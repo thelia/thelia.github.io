@@ -5,7 +5,7 @@ description: The image loop process, cache and display products, categories, con
 sidebar: loop
 subnav: loop_image
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: image
 arguments :
     - {name: "id", description: "A single or a list of image ids.", example: "id=\"2\", id=\"1,4,7\""}
