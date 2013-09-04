@@ -12,7 +12,8 @@ Run Jekyll server (on port 4000) :
     $ jekyll --server --auto
 
 Inside  ~/dev/thelia.github.io 
-    $ jekyll serve 
+
+    $ jekyll serve
 
 to see the result : http://localhost:4000
 
