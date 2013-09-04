@@ -5,7 +5,7 @@ description: Product loop lists products from your shop. You very probably will 
 sidebar: loop
 subnav: loop_product
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : true }
 type: product
 arguments :
     - name: "id"

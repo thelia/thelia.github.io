@@ -5,9 +5,21 @@ global_arguments :
     - {name: "limit", description: "The maximum number of results to display.", example: "limit=\"10\""}
     - {name: "offset", description: "The first product to display offset. Will not be used if `page` argument is set.", example: "offset=\"1\"", default: "0"}
     - {name: "backend_context", description: "Determine if loop is use in backend context.", example: "backend_context=\"on\"", default: "false"}
-global_outputs :
-    - {name: "#LOOP_COUNT", description: "the current results index starting from 1"}
-    - {name: "#LOOP_TOTAL", description: "the total number of results"}
+global_outputs : {
+    - countable : [
+        { name: "#LOOP_COUNT", description: "the current results index starting from 1" },
+        { name: "#LOOP_TOTAL", description: "the total number of results" }
+    ],
+    - timestampable : [
+        { name: "#CREATE_DATE", description: "" },
+        { name: "#UPDATE_DATE", description: "" }
+    ],
+    - versionable : [
+        { name: "#VERSION", description: "" },
+        { name: "#VERSION_DATE", description: "" },
+        { name: "#VERSION_AUTHOR", description: "" }
+    ]
+}
 ---
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->

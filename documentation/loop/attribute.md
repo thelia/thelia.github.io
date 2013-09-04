@@ -5,7 +5,7 @@ description: Attribute loop lists attributes.
 sidebar: loop
 subnav: loop_attribute
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: attribute
 arguments :
     - {name: "id", description: "A single or a list of attribute ids.", example: "id=\"2\", id=\"1,4,7\""}

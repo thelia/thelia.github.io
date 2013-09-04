@@ -5,7 +5,7 @@ description: Folder loop lists folders from your shop.
 sidebar: loop
 subnav: loop_folder
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : true }
 type: folder
 arguments :
     - {name: "id", description: "A single or a list of folder ids.", example: "id=\"2\", id=\"1,4,7\""}

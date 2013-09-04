@@ -5,7 +5,7 @@ description: Accessory loop lists accessories of a product. It behaves like a pr
 sidebar: loop
 subnav: loop_accessory
 uses_global_argument: false
-returns_global_outputs: false
+returns_global_outputs: { countable : false, timestampable : false, versionable : false }
 type: accessory
 arguments :
     - {name: "product", description: "A single product id.", example: "product=\"2\"", mandatory: "true"}

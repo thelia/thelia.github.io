@@ -5,7 +5,7 @@ description: Customer loop displays customers information.
 sidebar: loop
 subnav: loop_customer
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: customer
 arguments :
     - {name: "current", description: "A boolean value which must be set to false if you need to display not authenticated customers information, typically if `sponsor` parameter is set.", example: "current=\"false\"", default: "yes"}

@@ -5,7 +5,7 @@ description: Category loop lists categories from your shop.
 sidebar: loop
 subnav: loop_category
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : true }
 type: category
 arguments :
     - {name: "id", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}

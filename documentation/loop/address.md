@@ -5,7 +5,7 @@ description: Address loop lists address addresses.
 sidebar: loop
 subnav: loop_address
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: address
 arguments :
     - {name: "id", description: "A single or a list of address ids.", example: "id=\"2\", id=\"1,4,7\""}
