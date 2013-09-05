@@ -6,7 +6,7 @@ sidebar: configuration
 
 #How to configure ?
 
-Actually you can only configure your database connection with config files. All other configuration have to be develop and certainly use database storage.
+Currently you can only configure your database connection with config files. All other configuration have to be developed and certainly use database storage.
 
 ##Server Configuration
 
@@ -65,7 +65,7 @@ Apache write in some directories so check this directories and change their righ
 
 ##Database configuration
 
-For configuring your database connection, you have to rename the ```local/config/database.yml.sample``` into ```local/config/database.yml``` and edit it.
+In order to configure your database connection, you have to rename the ```local/config/database.yml.sample``` file into ```local/config/database.yml``` and edit it.
 
 Here is an exemple of database connection configuration :
 

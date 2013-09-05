@@ -17,7 +17,7 @@ subnav: plugin_loop
 ```
 
 You have to create as many loop node as loop you have into the loops node. In this example there is 2 loops. Name and
-class properties are mandatory. The name is the loop name used into the template ( ```<THELIA_name
+class properties are mandatory. The name is the loop name used into the template ( like in Thelia v1 : ```<THELIA_name
 type="MyModule_Product">...</THELIA_name>```), class property is the class executed by the template engine. This
 class must extends the [Thelia\Core\Template\Element\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html)
 abstract class, if not an exception is thrown.
@@ -36,7 +36,7 @@ public function exec(&$pagination);
 
 The *exec* method is used to render the template. It must return a [Thelia\Core\Template\Element\LoopResult](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html) instance.
 
-The defineArgs method define all args used in your loop. Args can be mandatory, optional, with default value, etc. This method must return an [Thelia\Core\Template\Loop\ArgumentCollection](). ArgumentCollection contains [Thelia\Core\Template\Loop\Argument]() which contains a [Thelia\Type\TypeCollection](). Types in the collection must implement [Thelia\Type\TypeInterface](). You can check here the [available types](/documentation/features/types).
+The defineArgs method defines all args used in your loop. Args can be mandatory, optional, with default value, etc. This method must return an [Thelia\Core\Template\Loop\ArgumentCollection](). ArgumentCollection contains [Thelia\Core\Template\Loop\Argument]() which contains a [Thelia\Type\TypeCollection](). Types in the collection must implement [Thelia\Type\TypeInterface](). You can check here the [available types](/documentation/features/types).
 
 If you don't define your arguments here, you can't use them in your new loop. All arguments are accessible in the ```exec``` method.
 
@@ -150,7 +150,7 @@ Here an example for my module "MyModule" and my loops in the loop directory. Thi
 
  ```
 
- Of course you can use all classes you want in your own class, like model class. All Thelia's model classes are in the
+ Of course you can use all classes you want in your own loop class, like model class. All Thelia's model classes are in the
  namespace Thelia\Model
 
  So if I want to add some search in my DB and return results from product table I can use something like this :

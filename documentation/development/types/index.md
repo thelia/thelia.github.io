@@ -29,5 +29,4 @@ Here are the Thelia 2 default available types :
 
     ie : "1 : foo0 & foo1 & foo2, 2 : (bar0 | bar1) & bar2"
  * [Thelia\Type\IntType]() - A single integer.
- * [Thelia\Type\IntType]() - A single integer.
  * [Thelia\Type\JsonType]() - A json string.
