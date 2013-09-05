@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Feature - Coupons
+title: Developement - Types
 sidebar: development
 subnav: development_types
 ---
