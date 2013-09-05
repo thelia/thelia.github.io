@@ -7,15 +7,18 @@ Install [Zurb Foundation](http://foundation.zurb.com/docs/sass.html) :
     $ [sudo] gem install compass
     $ [sudo] gem install zurb-foundation
 
-Run Jekyll server (on port 4000) :
+Run Jekyll server (on port 4000)
+Inside your directory (ex: ~/dev/thelia.github.io/)
 
-    $ jekyll --server --auto
+    $ jekyll serve --watch
 
-Inside  ~/dev/thelia.github.io 
+To see the result : http://localhost:4000
 
-    $ jekyll serve
+In order to let the documentation be aware of your new page please fill in the file
 
-to see the result : http://localhost:4000
+    _config.yml
+
+And reload Jekyll server
 
 ## Credits
 
