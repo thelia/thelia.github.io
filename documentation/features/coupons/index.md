@@ -12,8 +12,8 @@ A coupon is
 * An [effect](/documentation/features/coupon/effects.html) (ex: disount -10£ on your customer total checkout
 * A [rule](/documentation/features/coupon/rules.html), whether your customer is eligible for this Coupon (ex: total cart price > 400£)
 
-We designed this feature in order to let you build the Coupon you wish. Whether it is usual or it is vey specific to your business model.
-By default numerous Coupons are available but any developer will will able to implement your demand.
+We designed this feature in order to let you build the Coupon you wish. Whether it is usual or it is very specific to your business model.
+By default numerous Coupons are available but any developer will will able to implement your demands.
 
 Here are some unusual demands our customers already met :
 
