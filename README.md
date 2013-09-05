@@ -12,7 +12,13 @@ Inside your directory (ex: ~/dev/thelia.github.io/)
 
     $ jekyll serve --watch
 
-to see the result : http://localhost:4000
+To see the result : http://localhost:4000
+
+In order to let the documentation be aware of your new page please fill in the file
+
+    _config.yml
+
+And reload Jekyll server
 
 ## Credits
 
