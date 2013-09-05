@@ -41,8 +41,4 @@ outputs :
     - {name: "#VERSION", description: "the folder version"}
     - {name: "#VERSION_DATE", description: "the folder version date"}
     - {name: "#VERSION_AUTHOR", description: "the folder version author"}
-examples :
-    - {description: "I want to .."}
 ---
-
-{% include loop/body.md %}

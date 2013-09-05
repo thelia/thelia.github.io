@@ -21,8 +21,5 @@ arguments :
     - {name: "all <a href=\"/documentation/loop/content.html\">content loop</a> arguments", example: "exclude_folder=\"1,2,9\""}
 outputs :
     - {name: "all <a href=\"/documentation/loop/content.html\">content loop</a> outputs"}
-examples :
-    - {description: "I want to display ..."}
 ---
 
-{% include loop/body.md %}

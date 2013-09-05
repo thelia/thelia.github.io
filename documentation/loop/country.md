@@ -23,8 +23,4 @@ outputs :
     - {name: "#ISOCODE", description: "the ISO numeric country code"}
     - {name: "#ISOALPHA2", description: "the ISO 2 characters country code"}
     - {name: "#ISOALPHA3", description: "the ISO 3 characters country code"}
-examples :
-    - {description: "I want to .."}
 ---
-
-{% include loop/body.md %}

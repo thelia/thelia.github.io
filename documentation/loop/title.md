@@ -16,8 +16,5 @@ outputs :
     - {name: "#LONG", description: "the full title"}
     - {name: "#DEFAULT", description: "return if the title is by default title"}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
-examples :
-    - {description: "I want to .."}
 ---
 
-{% include loop/body.md %}

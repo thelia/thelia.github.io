@@ -30,4 +30,34 @@ examples :
     - {description: "I want to .."}
 ---
 
-{% include loop/body.md %}
+<div class="description large-12">
+    I want to display all products sale elements for current product and show all the attribute combinations which matched it.
+</div>
+
+<div class="code large-12">
+
+{% highlight smarty %}
+
+
+{loop name="pse" type="product_sale_elements" product="#PRODUCT_ID"}
+    <div>
+        {loop name="combi" type="attribute_combination" product_sale_elements="#ID"}
+        #ATTRIBUTE_TITLE = #ATTRIBUTE_AVAILABILITY_TITLE<br />
+        {/loop}
+        <br />#WEIGHT g
+        <br /><strong>{if #IS_PROMO == 1} #PROMO_PRICE € (instead of #PRICE) {else} #PRICE € {/if}</strong>
+        <br /><br />
+        Add
+        <select>
+            {for $will=1 to #QUANTITY}
+            <option>{$will}</option>
+            {/for}
+        </select>
+        to my cart
+    </div>
+{/loop}
+
+
+{% endhighlight %}
+
+</div>&nbsp;

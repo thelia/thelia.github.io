@@ -30,8 +30,5 @@ outputs :
     - {name: "#CHAPO", description: "the attribute chapo"}
     - {name: "#DESCRIPTION", description: "the attribute description"}
     - {name: "#POSTSCRIPTUM", description: "the attribute postscriptum"}
-examples :
-    - {description: "I want to .."}
 ---
 
-{% include loop/body.md %}

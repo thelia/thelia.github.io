@@ -30,8 +30,5 @@ outputs :
     - {name: "#PHONE", description: "the address phone"}
     - {name: "#CELLPHONE", description: "the address cellphone"}
     - {name: "#DEFAULT", description: "return if address title is by default address"}
-examples :
-    - {description: "I want to .."}
 ---
 
-{% include loop/body.md %}

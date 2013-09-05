@@ -24,33 +24,50 @@ examples :
     - {description: "Check if the customer is logged in, or not."}
 ---
 
-{% include loop/body.md %}
+<div class="description large-12">
+    I want to check if current administrator is allowed tu use the back-office search function.
+</div>
 
-## Example 1
+<div class="code large-12">
 
-Check if curent administrator is allowed tu use the back-office search function :
+{% highlight smarty %}
 
-```smarty
 {loop name="top-bar-search" type="auth" context="admin" roles="ADMIN" permissions="admin.search"}
-<form class="form-search" action="{url path='/admin/search'}">
-... form content ...
+    <form class="form-search" action="{url path='/admin/search'}">
+        ... form content ...
 	</form>
 {/loop}
-```
-The context is "admin", which means that the Administrator user is used to check the authorisation.
-The role is ADMIN, which mean that the current user should have the "ADMIN" role.
-The permission is "admin.search", which is the identifier of the search permission.
 
-## Example 2
 
-Check if the customer is logged in, or not.
+{% endhighlight %}
 
-```smarty
+</div>&nbsp;
+
+ <div class="postscriptum large-12">
+
+    The context is "admin", which means that the Administrator user is used to check the authorisation.
+    The role is ADMIN, which mean that the current user should have the "ADMIN" role.
+    The permission is "admin.search", which is the identifier of the search permission.
+
+</div>
+
+<div class="description large-12">
+    I want to check if the customer is logged in, or not.
+</div>
+
+<div class="code large-12">
+
+{% highlight smarty %}
+
 {loop type="auth" name="customer_info_block" roles="CUSTOMER" context="front"}
-<p>Your are logged in. <a href="{viewurl view='index' action='logoutCustomer'}">Logout</a></p>
+    <p>Your are logged in. <a href="{viewurl view='index' action='logoutCustomer'}">Logout</a></p>
 {/loop}
 
 {elseloop rel="customer_info_block"}
-You are not logged in. <a href="{viewurl view='login'}">Login now</a> or <a href="{viewurl view='create_account'}">create your account</a>
+    You are not logged in. <a href="{viewurl view='login'}">Login now</a> or <a href="{viewurl view='create_account'}">create your account</a>
 {/elseloop}
-``` 
+
+
+{% endhighlight %}
+
+</div>&nbsp;

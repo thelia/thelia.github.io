@@ -58,4 +58,39 @@ outputs :
     - {name: "#POSITION", description: "the product position"}
 ---
 
-{% include loop/body.md %}
+<div class="description large-12">
+    I want to display all products from categories 1 and 2 and their subcategories whose feature `color` (ID : 1) is `blue` (ID : 13) or `lightblue` (ID : 17), order by ascending price
+</div>
+
+
+<div class="code large-12">
+
+{% highlight smarty %}
+
+<ul>
+{loop type="product" name="my_product_loop" category="1,2" depth="2" feature_available="1:13|17" order="min_price"}
+    <li>#TITLE (#REF)</li>
+{/loop}
+</ul>
+
+{% endhighlight %}
+
+</div>&nbsp;
+
+<div class="description large-12">
+    I want to display all products which are in promo for the current category displaying the new products first and then order by decreasing price
+</div>
+
+<div class="code large-12">
+
+{% highlight smarty %}
+
+<ul>
+{loop type="product" name="another_product_loop" promo="true" current_category="true" order="new,max_price"}
+    <li>#TITLE (#REF)</li>
+{/loop}
+</ul>
+
+{% endhighlight %}
+
+</div>&nbsp;
