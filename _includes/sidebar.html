@@ -10,7 +10,14 @@
                     <ul class="side-nav">
                         {% for subsection in section.subsections %}
                         <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
-                            <a href="{{ subsection.url }}">{{ subsection.name }}</a>
+                            {% if subsection.url != nil AND subsection.url != '' %}<a href="{{ subsection.url }}">{{ subsection.name }}</a>{% else %}{{ subsection.name }}{% endif %}
+                            <ul>
+                            {% for subsubsection in subsection.subsections %}
+                                <li class="{% if page.subnav == subsubsection.sidebar_name %} active {% endif %}">
+                                    <a href="{{ subsubsection.url }}">{{ subsubsection.name }}</a>
+                                </li>
+                            {% endfor %}
+                            </ul>
                         </li>
                         {% endfor %}
                     </ul>
