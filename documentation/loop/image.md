@@ -23,7 +23,16 @@ arguments :
     - {name: "rotation", description: "The rotation angle in degrees (positive or negative) applied to the image. The background color of the empty areas is the one specified by 'background_color'", example: "rotation=\"90\""}
     - {name: "background_color", description: "The color applied to empty image parts during processing. Use #rgb or #rrggbb color format", example: "background_color=\"#cc8000\""}
     - {name: "quality", description: "The generated image quality, from 0(!) to 100%. The default value is 75% (you can hange this in the Administration panel)", example: "quality=\"70\""}
-    - {name: "effects", description: "One or more comma separated effects definitions, that will be applied to the image in the specified order. Please see below a detailed description of available effects", example: "effects=\"greyscale,gamma:0.7,vflip\""}
+    - {name: "effects", description: "One or more comma separated effects definitions, that will be applied to the image in the specified order. Please see below a detailed description of available effects", example: "effects=\"greyscale,gamma:0.7,vflip\"",
+        expected_values: [
+          {name: "gamma:value",                          description: "change the image Gamma to the specified value. Example: gamma:0.7."},
+          {name: "grayscale or greyscale",               description: "switch image to grayscale."},
+          {name: "colorize:color",                       description: "apply a color mask to the image. The color format is #rgb or #rrggbb. Exemple: colorize:#ff2244."},
+          {name: "negative",                             description: "transform the image in its negative equivalent."},
+          {name: "vflip or vertical_flip",               description: "flip the image vertically."},
+          {name: "hflip or horizontal_flip",             description: "flip the image horizontally."}
+        ]
+     }
     - {name: "lang", description: "A language identifier, to specify the language in which the image information will be returned"}
  
 outputs :
@@ -44,18 +53,7 @@ examples :
     - {description: "Resize category images the 200x100, adding (white) borders if required.", code: ""}
 ---
 
-## Available effects
-
-Currently, the image loop supports the following effects:
-
-- gamma:value : change the image Gamma to the specified value. Example: gamma:0.7
-- grayscale or greyscale: switch image to grayscale.
-- colorize:color : apply a color mask to the image. The color format is #rgb or #rrggbb. Exemple: colorize:#ff2244
-- negative : transform the image in its negative equivalent.
-- vflip or vertical_flip : flip the image vertically.
-- hflip or horizontal_flip : flip the image horizontally.
-
-## Exemple 1
+##### Example 1
 
 Resize category images the 200x100, adding (white) borders if required.
 
@@ -73,7 +71,7 @@ Same behaviour, using the "source" style parameters
 {/loop}
 ```
 
-## Exemple 2
+##### Example 2
 
 Resize 1 category images the 200x100, cropping id necessary, and transforming the image in grayscale, with a gamma razised to 1.1
 

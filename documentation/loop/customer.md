@@ -24,8 +24,4 @@ outputs :
     - {name: "#RESELLER", description: "return if the customer is a reseller"}
     - {name: "#SPONSOR", description: "the customer sponsor which might be use in another <a href=\"/documentation/loop/customer.html\">customer loop</a>"}
     - {name: "#DISCOUNT", description: "the customer discount"}
-examples :
-    - {description: "I want to .."}
 ---
-
-{% include loop/body.md %}

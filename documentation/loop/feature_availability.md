@@ -28,8 +28,4 @@ outputs :
     - {name: "#CHAPO", description: "the feature availability chapo"}
     - {name: "#DESCRIPTION", description: "the feature availability description"}
     - {name: "#POSTSCRIPTUM", description: "the feature availability postscriptum"}
-examples :
-    - {description: "I want to .."}
 ---
-
-{% include loop/body.md %}

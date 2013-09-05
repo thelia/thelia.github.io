@@ -20,8 +20,24 @@ arguments :
     - {name: "all <a href=\"/documentation/loop/product.html\">product loop</a> arguments", example: "order=\"min_price\", max_price=\"100\""}
 outputs :
     - {name: "all <a href=\"/documentation/loop/product.html\">product loop</a> outputs"}
-examples :
-    - {description: "I want to display all accessories which are in category 1, order by ascending price, for all products in category 2"}
 ---
 
-{% include loop/body.md %}
+<div class="description large-12">
+    I want to display all accessories which are in category 1, order by ascending price, for all products in category 2.
+</div>
+
+<div class="code large-12">
+
+{% highlight smarty %}
+
+<ul>
+{loop type="product" name="products_in_category_2" category="2"}
+    {loop type="accessory" name="accessories_in_category_1_order_by_min_price" category="1" product="#ID" order="min_price"}
+        <li>#TITLE (#REF)</li>
+    {/loop}
+{/loop}
+</ul>
+
+{% endhighlight %}
+
+</div>&nbsp;

@@ -19,8 +19,4 @@ outputs :
     - {name: "#SYMBOL", description: "the ISO numeric currency symbol"}
     - {name: "#RATE", description: "the currency rate"}
     - {name: "#IS_DEFAULT", description: "returns if the currency is the default currency"}
-examples :
-    - {description: "I want to .."}
 ---
-
-{% include loop/body.md %}
