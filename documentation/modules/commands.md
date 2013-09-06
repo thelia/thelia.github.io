@@ -7,12 +7,12 @@ subnav: plugin_command
 
 #Commands
 
-Commands use the helpfull console symfony component. In your module you can define you own command that can be used
-with command cli.
+Commands use the helpfull console Symfony component. In your module you can define you own command that can be used
+with command CLI.
 
 ##How to declare commands ?
 
-in your config file :
+In your config file :
 
 ```xml
     <commands>
@@ -20,10 +20,10 @@ in your config file :
     </commands>
 ```
 
-Your class have to extends *Thelia\Command\ContainerAwareCommand* and implements at least the *configure* and
-*execute* method.
+Your class has to extend *Thelia\Command\ContainerAwareCommand* and to implement at least the *configure* and
+*execute* methods.
 
-for example :
+For example :
 
 ```php
 <?php
@@ -52,11 +52,11 @@ class HelloWorld extends ContainerAwareCommand
 
 ```
 
-Now you can test the results using Thelia cli tools, go to your Thelia root directory and use this command :
+Now you can test the results using Thelia CLI tools. Go to your Thelia root directory and use this command :
 
 ```
 $ php Thelia hello:world
 ```
 <br />
-Thelia use all the fonctionnalities available in the command symfony component so you can refer to it's documentation
+Thelia uses all the fonctionnalities available in the command Symfony component so you can easily refer to it's documentation
  <a href="http://symfony.com/doc/2.2/components/console/index.html" target="_blank">here</a>

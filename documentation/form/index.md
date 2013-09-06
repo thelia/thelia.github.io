@@ -9,8 +9,8 @@ subnav: form_index
 
 With Thelia 2, form management is completely new. Each form has a dedicated class allowing to control many things like validation, default values, etc.
 
-Form in Thelia 2 use Forms Symfony component. We made a wrapper that initialize all form processing for you, you have just to declare all your fields and define options
-on each field, such as validation. Using form process is not mandatory but highly recommanded !
+Form in Thelia 2 use Forms Symfony component. We made a wrapper that initializes all form processing for you, you just have to declare all your fields and to define options
+on each field manually, such as validation. Using form process is not mandatory but highly recommended !
 
 # Form lifecycle
 
@@ -18,7 +18,7 @@ A form is displayed using a Thelia template. When this form is submitted, the da
 
 If the form is successfully processed, the customer is redirected to a success URL, which is defined by the 'success_url' form field (remember: Thelia navigation is completely driven by your templates)
 
-If the form cannot be processed, the form "action" attribute is used. Thus, setting the form action URL to the current view is a good way to process errors. If it's not clear, see the [form template](template.md) below. 
+If the form cannot be processed, the form "action" attribute is then used. Thus, setting the form action URL to the current view is a good way to process errors. If it's not clear, see the [form template](template.md) below.
 
 ## How to declare your forms ?
 
@@ -31,21 +31,21 @@ Like loops, you have to declare your form in config file using <forms> and <form
 </forms>
 ```
 
-In the <forms> element, the number of forms is not limited, declare as many form you as you want. For each form, you shoud define a unique name, and provide the full qualified for class path (remember: your module must be PSR-0 compliant).
+In the <forms> element, the number of forms is not limited, declare as many form you as you want. For each form, you should define a unique name, and provide the full qualified name for class path (remember: your module must be PSR-0 compliant).
 
-The form name is mandatory, and will be used in your templates for displaying the form.
+The form name is mandatory, and will be used in your templates in order to display the form.
 
 ## How to create a form ?
 
-Each form class must extends *Thelia\Form\BaseForm*. This class is abstract and you have to overload at least *buildForm* and *getName* methods.
+Each form class must extend *Thelia\Form\BaseForm*. This class is abstract and you have to overload at least *buildForm* and *getName* methods.
 
 ### getName method
 
-The *getName* method must return the name of your form. A good pratice is to return the same name as the one defined in the <form> configuration element
+The *getName* method must return the name of your form. A good practice is to return the same name as the one defined in the <form> configuration element.
 
 ### buildForm method
 
-The *buildForm* method defines all the fields of the form, and the fields options, such as for each  the label and thefield validation constraints.
+The *buildForm* method defines all the fields of the form, and the fields options, such as for each label and field validation constraints.
 
 `$this->formBuilder` is the Symfony [FormFactoryInterface](http://api.symfony.com/2.3/Symfony/Component/Form/FormFactoryInterface.html) object, and is used to create your form fields :
 
@@ -72,13 +72,13 @@ public function buildForm()
 ## Validatation constraints
 
 You can add constraints for all your fields, so that the form system will automatically detect errors. For this part we delegate all the constraints on the Symfony Validator component.
-You can also create your own validator, following the symfony validator guidelines.
+You can also create your own validator, following the Symfony validator guidelines.
 
-The list of available validator contrainst is here : [http://symfony.com/doc/current/reference/constraints.html](http://symfony.com/doc/current/reference/constraints.html)
+The list of available validator constrains is here : [http://symfony.com/doc/current/reference/constraints.html](http://symfony.com/doc/current/reference/constraints.html)
 
 ## Example
 
-Below a complete form exemple, the customer creation form.
+Below a complete form example, the customer creation form.
 
 In the config.xml file, we declare the form like this :
 
@@ -93,7 +93,7 @@ In the config.xml file, we declare the form like this :
 The form class is in the file Thelia/Form/CustomerCreation.php, and contains all form definitions. We use here different constraints :
 - Constraints\NotBlank()
 - Constraints\Email()
-- Constraints\Callback, to check spécific coinditions, such as dupolicate emails, or non matching passwords.
+- Constraints\Callback, to check specific conditions, such as duplicate emails, or non matching passwords.
 
 ```php
 <?php
