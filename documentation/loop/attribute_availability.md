@@ -28,5 +28,6 @@ outputs :
     - {name: "#CHAPO", description: "the attribute availability chapo"}
     - {name: "#DESCRIPTION", description: "the attribute availability description"}
     - {name: "#POSTSCRIPTUM", description: "the attribute availability postscriptum"}
+    - {name: "#POSITION", description: "the attribute availability position"}
 ---
 

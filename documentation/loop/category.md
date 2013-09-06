@@ -39,4 +39,5 @@ outputs :
     - {name: "#VERSION", description: "the category version"}
     - {name: "#VERSION_DATE", description: "the category version date"}
     - {name: "#VERSION_AUTHOR", description: "the category version author"}
+    - {name: "#POSITION", description: "the category position"}
 ---

@@ -30,4 +30,5 @@ outputs :
     - {name: "#CHAPO", description: "the feature availability chapo"}
     - {name: "#DESCRIPTION", description: "the feature availability description"}
     - {name: "#POSTSCRIPTUM", description: "the feature availability postscriptum"}
+    - {name: "#POSITION", description: "the feature value position"}
 ---
