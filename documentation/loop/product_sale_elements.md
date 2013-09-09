@@ -13,7 +13,11 @@ arguments :
 outputs :
     - {name: "#ID", description: "the product sale elements id"}
     - {name: "#PRICE", description: "the product sale elements price"}
+    - {name: "#PRICE_TAX", description: "the product sale elements price tax"}
+    - {name: "#TAXED_PRICE", description: "the product sale elements taxed price"}
     - {name: "#PROMO_PRICE", description: "the product sale elements promo price"}
+    - {name: "#PROMO_PRICE_TAX", description: "the product sale elements promo price tax"}
+    - {name: "#TAXED_PROMO_PRICE", description: "the product sale elements taxed promo price"}
     - {name: "#CURRENCY", description: "the product sale elements price currency"}
     - {name: "#IS_PROMO", description: "returns if the product sale element is in promo"}
     - {name: "#IS_NEW", description: "returns if the product sale element is in new"}

@@ -47,7 +47,9 @@ arguments :
 outputs :
     - {name: "#ID", description: "the product id"}
     - {name: "#REF", description: "the product reference"}
-    - {name: "#BEST_PRICE", description: "the product best price for the received arguments, depending on the attributes and promo status."}
+    - {name: "#BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
+    - {name: "#BEST_PRICE_TAX", description: "the best price taxes amount"}
+    - {name: "#BEST_TAXED_PRICE", description: "the best price including taxes"}
     - {name: "#IS_PROMO", description: "returns if at least one of it's product sale element is in promo"}
     - {name: "#IS_NEW", description: "returns if at least one of it's product sale element is new"}
     - {name: "#TITLE", description: "the product title"}
