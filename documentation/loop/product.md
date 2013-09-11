@@ -29,6 +29,22 @@ arguments :
     - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
+        name: "attribute_non_strict_match", description: "promo, new, quantity, weight or price may differ in the different product sale element depending on the different attributes. This parameter allows to provide a list of non-strict attributes.",
+        default: "none",
+        example: "attribute_non_strict_match=\"promo,new\" : loop will return the product if it has at least a product sale element in promo and at least a product sale element as new ; even if it's not the same product sale element.",
+        expected_values: [
+            {name: "none",             description: "product loop will look for at least 1 attribute which matches all the loop criteria."},
+            {name: "*",             description: "all the attributes are non strict"},
+            {name: "min_stock"},
+            {name: "promo"},
+            {name: "new"},
+            {name: "min_weight"},
+            {name: "max_weight"},
+            {name: "min_price"},
+            {name: "max_price"}
+        ]
+      }
+    - {
         name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "alpha",
         expected_values: [
             {name: "alpha",             description: "alphabetical order on title"},
