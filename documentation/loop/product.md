@@ -28,6 +28,7 @@ arguments :
     - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
     - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
+    - {name: "currency", description: "A currency id", example: "currency=\"1\""}
     - {
         name: "attribute_non_strict_match", description: "promo, new, quantity, weight or price may differ in the different product sale element depending on the different attributes. This parameter allows to provide a list of non-strict attributes.",
         default: "none",
