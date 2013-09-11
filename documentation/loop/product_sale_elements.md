@@ -10,6 +10,16 @@ type: loop_product_sale_elements
 arguments :
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
     - {name: "product", description: "A single product id.", example: "product=\"2\"", mandatory: "true"}
+    - {
+            name: "order", description: "A list of values", example: "order=\"promo,min_price\"", default: "random",
+            expected_values: [
+                {name: "min_price",         description: "ascending price"},
+                {name: "max_price",         description: "descending price"},
+                {name: "promo",             description: "promo products first"},
+                {name: "new",               description: "new products first"},
+                {name: "random",            description: ""}
+            ]
+          }
 outputs :
     - {name: "#ID", description: "the product sale elements id"}
     - {name: "#PRICE", description: "the product sale elements price"}

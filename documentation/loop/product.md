@@ -55,8 +55,8 @@ arguments :
             {name: "manual",            description: "`category` argument must be set"},
             {name: "manual_reverse",    description: "`category` argument must be set"},
             {name: "ref",               description: "alphabetical order on reference"},
-            {name: "promo",             description: "display promo products first or last"},
-            {name: "new",               description: "display new products first or last"},
+            {name: "promo",             description: "promo products first"},
+            {name: "new",               description: "new products first"},
             {name: "random",            description: ""},
             {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"}
         ]
