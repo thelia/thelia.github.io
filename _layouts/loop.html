@@ -8,17 +8,17 @@ global_arguments :
     - {name: "force_return", description: "force return result for i18n tables even if there is no record", example: "force_return=\"on\"", default: "false"}
 global_outputs : {
     countable : [
-        { name: "#LOOP_COUNT", description: "the current results index starting from 1" },
-        { name: "#LOOP_TOTAL", description: "the total number of results" }
+        { name: "$LOOP_COUNT", description: "the current results index starting from 1" },
+        { name: "$LOOP_TOTAL", description: "the total number of results" }
     ],
     timestampable : [
-        { name: "#CREATE_DATE", description: "" },
-        { name: "#UPDATE_DATE", description: "" }
+        { name: "$CREATE_DATE", description: "" },
+        { name: "$UPDATE_DATE", description: "" }
     ],
     versionable : [
-        { name: "#VERSION", description: "" },
-        { name: "#VERSION_DATE", description: "" },
-        { name: "#VERSION_AUTHOR", description: "" }
+        { name: "$VERSION", description: "" },
+        { name: "$VERSION_DATE", description: "" },
+        { name: "$VERSION_AUTHOR", description: "" }
     ]
 }
 ---

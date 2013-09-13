@@ -23,10 +23,10 @@ arguments :
           }
 
 outputs :
-    - {name: "#ID", description: "the feature availability id"}
-    - {name: "#TITLE", description: "the feature availability title"}
-    - {name: "#CHAPO", description: "the feature availability chapo"}
-    - {name: "#DESCRIPTION", description: "the feature availability description"}
-    - {name: "#POSTSCRIPTUM", description: "the feature availability postscriptum"}
-    - {name: "#POSITION", description: "the feature availability position"}
+    - {name: "$ID", description: "the feature availability id"}
+    - {name: "$TITLE", description: "the feature availability title"}
+    - {name: "$CHAPO", description: "the feature availability chapo"}
+    - {name: "$DESCRIPTION", description: "the feature availability description"}
+    - {name: "$POSTSCRIPTUM", description: "the feature availability postscriptum"}
+    - {name: "$POSITION", description: "the feature availability position"}
 ---

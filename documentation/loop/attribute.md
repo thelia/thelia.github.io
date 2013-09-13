@@ -25,11 +25,11 @@ arguments :
           }
 
 outputs :
-    - {name: "#ID", description: "the attribute id"}
-    - {name: "#TITLE", description: "the attribute title"}
-    - {name: "#CHAPO", description: "the attribute chapo"}
-    - {name: "#DESCRIPTION", description: "the attribute description"}
-    - {name: "#POSTSCRIPTUM", description: "the attribute postscriptum"}
-    - {name: "#POSITION", description: "the attribute position"}
+    - {name: "$ID", description: "the attribute id"}
+    - {name: "$TITLE", description: "the attribute title"}
+    - {name: "$CHAPO", description: "the attribute chapo"}
+    - {name: "$DESCRIPTION", description: "the attribute description"}
+    - {name: "$POSTSCRIPTUM", description: "the attribute postscriptum"}
+    - {name: "$POSITION", description: "the attribute position"}
 ---
 

@@ -62,19 +62,19 @@ arguments :
         ]
       }
 outputs :
-    - {name: "#ID", description: "the product id"}
-    - {name: "#REF", description: "the product reference"}
-    - {name: "#BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
-    - {name: "#BEST_PRICE_TAX", description: "the best price taxes amount"}
-    - {name: "#BEST_TAXED_PRICE", description: "the best price including taxes"}
-    - {name: "#IS_PROMO", description: "returns if at least one of it's product sale element is in promo"}
-    - {name: "#IS_NEW", description: "returns if at least one of it's product sale element is new"}
-    - {name: "#TITLE", description: "the product title"}
-    - {name: "#CHAPO", description: "the product chapo"}
-    - {name: "#DESCRIPTION", description: "the product description"}
-    - {name: "#POSTSCTIPTUM", description: "the product postscriptum"}
-    - {name: "#URL", description: "the product URL"}
-    - {name: "#POSITION", description: "the product position"}
+    - {name: "$ID", description: "the product id"}
+    - {name: "$REF", description: "the product reference"}
+    - {name: "$BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
+    - {name: "$BEST_PRICE_TAX", description: "the best price taxes amount"}
+    - {name: "$BEST_TAXED_PRICE", description: "the best price including taxes"}
+    - {name: "$IS_PROMO", description: "returns if at least one of it's product sale element is in promo"}
+    - {name: "$IS_NEW", description: "returns if at least one of it's product sale element is new"}
+    - {name: "$TITLE", description: "the product title"}
+    - {name: "$CHAPO", description: "the product chapo"}
+    - {name: "$DESCRIPTION", description: "the product description"}
+    - {name: "$POSTSCTIPTUM", description: "the product postscriptum"}
+    - {name: "$URL", description: "the product URL"}
+    - {name: "$POSITION", description: "the product position"}
 ---
 
 <div class="description large-12">
@@ -88,7 +88,7 @@ outputs :
 
 <ul>
 {loop type="product" name="my_product_loop" category="1,2" depth="2" feature_available="1:13|17" order="min_price"}
-    <li>#TITLE (#REF)</li>
+    <li>$TITLE ($REF)</li>
 {/loop}
 </ul>
 
@@ -106,7 +106,7 @@ outputs :
 
 <ul>
 {loop type="product" name="another_product_loop" promo="true" current_category="true" order="new,max_price"}
-    <li>#TITLE (#REF)</li>
+    <li>$TITLE ($REF)</li>
 {/loop}
 </ul>
 

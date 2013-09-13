@@ -26,18 +26,18 @@ arguments :
         ]
       }
 outputs :
-    - {name: "#ID", description: "the category id"}
-    - {name: "#TITLE", description: "the category title"}
-    - {name: "#CHAPO", description: "the category chapo"}
-    - {name: "#DESCRIPTION", description: "the category description"}
-    - {name: "#POSTSCTIPTUM", description: "the category postscriptum"}
-    - {name: "#PARENT", description: "the parent category"}
-    - {name: "#URL", description: "the category URL"}
-    - {name: "#PRODUCT_COUNT", description: "the number of visible products for this category"}
-    - {name: "#CREATE_DATE", description: "the category create date"}
-    - {name: "#UPDATE_DATE", description: "the category update date"}
-    - {name: "#VERSION", description: "the category version"}
-    - {name: "#VERSION_DATE", description: "the category version date"}
-    - {name: "#VERSION_AUTHOR", description: "the category version author"}
-    - {name: "#POSITION", description: "the category position"}
+    - {name: "$ID", description: "the category id"}
+    - {name: "$TITLE", description: "the category title"}
+    - {name: "$CHAPO", description: "the category chapo"}
+    - {name: "$DESCRIPTION", description: "the category description"}
+    - {name: "$POSTSCTIPTUM", description: "the category postscriptum"}
+    - {name: "$PARENT", description: "the parent category"}
+    - {name: "$URL", description: "the category URL"}
+    - {name: "$PRODUCT_COUNT", description: "the number of visible products for this category"}
+    - {name: "$CREATE_DATE", description: "the category create date"}
+    - {name: "$UPDATE_DATE", description: "the category update date"}
+    - {name: "$VERSION", description: "the category version"}
+    - {name: "$VERSION_DATE", description: "the category version date"}
+    - {name: "$VERSION_AUTHOR", description: "the category version author"}
+    - {name: "$POSITION", description: "the category position"}
 ---

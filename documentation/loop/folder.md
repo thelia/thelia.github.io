@@ -26,19 +26,19 @@ arguments :
         ]
       }
 outputs :
-    - {name: "#ID", description: "the folder id"}
-    - {name: "#TITLE", description: "the folder title"}
-    - {name: "#CHAPO", description: "the folder chapo"}
-    - {name: "#DESCRIPTION", description: "the folder description"}
-    - {name: "#POSTSCTIPTUM", description: "the folder postscriptum"}
-    - {name: "#URL", description: "the folder URL"}
-    - {name: "#PARENT", description: "the parent folder"}
-    - {name: "#CONTENT_COUNT", description: "the number of visible contents for this folder"}
-    - {name: "#VISIBLE", description: "the folder visibility"}
-    - {name: "#POSITION", description: "the folder position"}
-    - {name: "#CREATE_DATE", description: "the folder create date"}
-    - {name: "#UPDATE_DATE", description: "the folder update date"}
-    - {name: "#VERSION", description: "the folder version"}
-    - {name: "#VERSION_DATE", description: "the folder version date"}
-    - {name: "#VERSION_AUTHOR", description: "the folder version author"}
+    - {name: "$ID", description: "the folder id"}
+    - {name: "$TITLE", description: "the folder title"}
+    - {name: "$CHAPO", description: "the folder chapo"}
+    - {name: "$DESCRIPTION", description: "the folder description"}
+    - {name: "$POSTSCTIPTUM", description: "the folder postscriptum"}
+    - {name: "$URL", description: "the folder URL"}
+    - {name: "$PARENT", description: "the parent folder"}
+    - {name: "$CONTENT_COUNT", description: "the number of visible contents for this folder"}
+    - {name: "$VISIBLE", description: "the folder visibility"}
+    - {name: "$POSITION", description: "the folder position"}
+    - {name: "$CREATE_DATE", description: "the folder create date"}
+    - {name: "$UPDATE_DATE", description: "the folder update date"}
+    - {name: "$VERSION", description: "the folder version"}
+    - {name: "$VERSION_DATE", description: "the folder version date"}
+    - {name: "$VERSION_AUTHOR", description: "the folder version author"}
 ---

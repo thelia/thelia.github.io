@@ -18,14 +18,14 @@ arguments :
           }
 
 outputs :
-    - {name: "#ATTRIBUTE_TITLE", description: "the attribute title"}
-    - {name: "#ATTRIBUTE_CHAPO", description: "the attribute chapo"}
-    - {name: "#ATTRIBUTE_DESCRIPTION", description: "the attribute description"}
-    - {name: "#ATTRIBUTE_POSTSCRIPTUM", description: "the attribute postscriptum"}
-    - {name: "#ATTRIBUTE_AVAILABILITY_TITLE", description: "the attribute availability title"}
-    - {name: "#ATTRIBUTE_AVAILABILITY_CHAPO", description: "the attribute availability chapo"}
-    - {name: "#ATTRIBUTE_AVAILABILITY_DESCRIPTION", description: "the attribute availability description"}
-    - {name: "#ATTRIBUTE_AVAILABILITY_POSTSCRIPTUM", description: "the attribute availability postscriptum"}
+    - {name: "$ATTRIBUTE_TITLE", description: "the attribute title"}
+    - {name: "$ATTRIBUTE_CHAPO", description: "the attribute chapo"}
+    - {name: "$ATTRIBUTE_DESCRIPTION", description: "the attribute description"}
+    - {name: "$ATTRIBUTE_POSTSCRIPTUM", description: "the attribute postscriptum"}
+    - {name: "$ATTRIBUTE_AVAILABILITY_TITLE", description: "the attribute availability title"}
+    - {name: "$ATTRIBUTE_AVAILABILITY_CHAPO", description: "the attribute availability chapo"}
+    - {name: "$ATTRIBUTE_AVAILABILITY_DESCRIPTION", description: "the attribute availability description"}
+    - {name: "$ATTRIBUTE_AVAILABILITY_POSTSCRIPTUM", description: "the attribute availability postscriptum"}
 examples :
     - {description: "I want to .."}
 ---
@@ -39,17 +39,17 @@ examples :
 {% highlight smarty %}
 
 
-{loop name="pse" type="product_sale_elements" product="#PRODUCT_ID"}
+{loop name="pse" type="product_sale_elements" product="$PRODUCT_ID"}
     <div>
-        {loop name="combi" type="attribute_combination" product_sale_elements="#ID"}
-        #ATTRIBUTE_TITLE = #ATTRIBUTE_AVAILABILITY_TITLE<br />
+        {loop name="combi" type="attribute_combination" product_sale_elements="$ID"}
+        $ATTRIBUTE_TITLE = $ATTRIBUTE_AVAILABILITY_TITLE<br />
         {/loop}
-        <br />#WEIGHT g
-        <br /><strong>{if #IS_PROMO == 1} #PROMO_PRICE € (instead of #PRICE) {else} #PRICE € {/if}</strong>
+        <br />$WEIGHT g
+        <br /><strong>{if $IS_PROMO == 1} $PROMO_PRICE € (instead of $PRICE) {else} $PRICE € {/if}</strong>
         <br /><br />
         Add
         <select>
-            {for $will=1 to #QUANTITY}
+            {for $will=1 to $QUANTITY}
             <option>{$will}</option>
             {/for}
         </select>

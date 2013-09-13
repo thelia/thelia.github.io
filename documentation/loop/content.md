@@ -29,11 +29,11 @@ arguments :
         ]
       }
 outputs :
-    - {name: "#ID", description: "the content id"}
-    - {name: "#TITLE", description: "the content title"}
-    - {name: "#CHAPO", description: "the content chapo"}
-    - {name: "#DESCRIPTION", description: "the content description"}
-    - {name: "#POSTSCTIPTUM", description: "the content postscriptum"}
-    - {name: "#URL", description: "the content URL"}
-    - {name: "#POSITION", description: "the content position"}
+    - {name: "$ID", description: "the content id"}
+    - {name: "$TITLE", description: "the content title"}
+    - {name: "$CHAPO", description: "the content chapo"}
+    - {name: "$DESCRIPTION", description: "the content description"}
+    - {name: "$POSTSCTIPTUM", description: "the content postscriptum"}
+    - {name: "$URL", description: "the content URL"}
+    - {name: "$POSITION", description: "the content position"}
 ---

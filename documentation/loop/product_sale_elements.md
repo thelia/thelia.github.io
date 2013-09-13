@@ -21,17 +21,17 @@ arguments :
             ]
           }
 outputs :
-    - {name: "#ID", description: "the product sale elements id"}
-    - {name: "#PRICE", description: "the product sale elements price"}
-    - {name: "#PRICE_TAX", description: "the product sale elements price tax"}
-    - {name: "#TAXED_PRICE", description: "the product sale elements taxed price"}
-    - {name: "#PROMO_PRICE", description: "the product sale elements promo price"}
-    - {name: "#PROMO_PRICE_TAX", description: "the product sale elements promo price tax"}
-    - {name: "#TAXED_PROMO_PRICE", description: "the product sale elements taxed promo price"}
-    - {name: "#IS_PROMO", description: "returns if the product sale element is in promo"}
-    - {name: "#IS_NEW", description: "returns if the product sale element is in new"}
-    - {name: "#WEIGHT", description: "the product sale elements weight"}
-    - {name: "#QUANTITY", description: "the product sale elements stock quantity"}
+    - {name: "$ID", description: "the product sale elements id"}
+    - {name: "$PRICE", description: "the product sale elements price"}
+    - {name: "$PRICE_TAX", description: "the product sale elements price tax"}
+    - {name: "$TAXED_PRICE", description: "the product sale elements taxed price"}
+    - {name: "$PROMO_PRICE", description: "the product sale elements promo price"}
+    - {name: "$PROMO_PRICE_TAX", description: "the product sale elements promo price tax"}
+    - {name: "$TAXED_PROMO_PRICE", description: "the product sale elements taxed promo price"}
+    - {name: "$IS_PROMO", description: "returns if the product sale element is in promo"}
+    - {name: "$IS_NEW", description: "returns if the product sale element is in new"}
+    - {name: "$WEIGHT", description: "the product sale elements weight"}
+    - {name: "$QUANTITY", description: "the product sale elements stock quantity"}
 ---
 
 <div class="description large-12">
@@ -43,17 +43,17 @@ outputs :
 {% highlight smarty %}
 
 
-{loop name="pse" type="product_sale_elements" product="#PRODUCT_ID"}
+{loop name="pse" type="product_sale_elements" product="$PRODUCT_ID"}
     <div>
-        {loop name="combi" type="attribute_combination" product_sale_elements="#ID"}
-        #ATTRIBUTE_TITLE = #ATTRIBUTE_AVAILABILITY_TITLE<br />
+        {loop name="combi" type="attribute_combination" product_sale_elements="$ID"}
+        $ATTRIBUTE_TITLE = $ATTRIBUTE_AVAILABILITY_TITLE<br />
         {/loop}
-        <br />#WEIGHT g
-        <br /><strong>{if #IS_PROMO == 1} #PROMO_PRICE € (instead of #PRICE) {else} #PRICE € {/if}</strong>
+        <br />$WEIGHT g
+        <br /><strong>{if $IS_PROMO == 1} $PROMO_PRICE € (instead of $PRICE) {else} $PRICE € {/if}</strong>
         <br /><br />
         Add
         <select>
-            {for $will=1 to #QUANTITY}
+            {for $will=1 to $QUANTITY}
             <option>{$will}</option>
             {/for}
         </select>
