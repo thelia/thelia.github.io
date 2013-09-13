@@ -42,10 +42,10 @@ examples :
 {loop name="pse" type="product_sale_elements" product="$PRODUCT_ID"}
     <div>
         {loop name="combi" type="attribute_combination" product_sale_elements="$ID"}
-        $ATTRIBUTE_TITLE = $ATTRIBUTE_AVAILABILITY_TITLE<br />
+        {$ATTRIBUTE_TITLE} = {$ATTRIBUTE_AVAILABILITY_TITLE}<br />
         {/loop}
-        <br />$WEIGHT g
-        <br /><strong>{if $IS_PROMO == 1} $PROMO_PRICE € (instead of $PRICE) {else} $PRICE € {/if}</strong>
+        <br />{$WEIGHT} g
+        <br /><strong>{if $IS_PROMO == 1} {$PROMO_PRICE} € (instead of {$PRICE}) {else} {$PRICE} € {/if}</strong>
         <br /><br />
         Add
         <select>

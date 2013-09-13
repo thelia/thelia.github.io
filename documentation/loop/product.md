@@ -88,7 +88,7 @@ outputs :
 
 <ul>
 {loop type="product" name="my_product_loop" category="1,2" depth="2" feature_available="1:13|17" order="min_price"}
-    <li>$TITLE ($REF)</li>
+    <li>{$TITLE} ({$REF})</li>
 {/loop}
 </ul>
 
@@ -106,7 +106,7 @@ outputs :
 
 <ul>
 {loop type="product" name="another_product_loop" promo="true" current_category="true" order="new,max_price"}
-    <li>$TITLE ($REF)</li>
+    <li>{$TITLE} ({$REF})</li>
 {/loop}
 </ul>
 

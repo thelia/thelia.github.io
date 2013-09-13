@@ -59,7 +59,7 @@ Resize category images the 200x100, adding (white) borders if required.
 
 ```smarty
 {loop type="image" name="image_test" category="$ID" width="200" height="100" resize_mode="borders"}
-    <img src="$IMAGE_URL" alt="$TITLE" />
+    <img src="{$IMAGE_URL}" alt="{$TITLE}" />
 {/loop}
 ```
 
@@ -67,7 +67,7 @@ Same behaviour, using the "source" style parameters
 
 ```smarty
 {loop type="image" name="image_test" source="category" source_id="$ID" width="200" height="100" resize_mode="borders"}
-    <img src="$IMAGE_URL" alt="$TITLE" />
+    <img src="{$IMAGE_URL}" alt="{$TITLE}" />
 {/loop}
 ```
 
@@ -77,7 +77,7 @@ Resize 1 category images the 200x100, cropping id necessary, and transforming th
 
 ```smarty
 {loop type="image" name="image_test" category="$ID" width="200" height="100" resize_mode="crop" effects="grayscale,gamma:1.1" limit="1"}
-    <a href="$ORIGINAL_IMAGE_URL"><img src="$IMAGE_URL" alt="$TITLE" /></a>
+    <a href="{$ORIGINAL_IMAGE_URL}"><img src="{$IMAGE_URL}" alt="{$TITLE}" /></a>
 {/loop}
 ```
 

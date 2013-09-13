@@ -33,7 +33,7 @@ outputs :
 <ul>
 {loop type="product" name="products_in_category_2" category="2"}
     {loop type="accessory" name="accessories_in_category_1_order_by_min_price" category="1" product="$ID" order="min_price"}
-        <li>$TITLE ($REF)</li>
+        <li>{$TITLE} ({$REF})</li>
     {/loop}
 {/loop}
 </ul>

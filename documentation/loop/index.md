@@ -49,13 +49,13 @@ Just use a Thelia <a href="product.html" target="_blank">product loop</a> :
 <div>
     {loop type="product" name="my_product_loop" limit="4" order="random"}
     <div class="product-block">
-        #TITLE (ref : #REF)<br />
-        #DESCRIPTION<br />
+        {$TITLE} (ref : {$REF})<br />
+        {$DESCRIPTION}<br />
         <strong>
-            {if #IS_PROMO == 1}
-                Afford it for only #PROMO_PRICE € (instead of #PRICE) !
+            {if $IS_PROMO == 1}
+                Afford it for only {$PROMO_PRICE} € (instead of {$PRICE}) !
             {else}
-                Afford it for #PRICE €
+                Afford it for {$PRICE} €
             {/if}
         </strong>
     </div>
@@ -83,8 +83,8 @@ You can of course use a loop into another loop and pass a loop output to another
 
 ```smarty
 {loop type="category" name="my_category_loop"}
-    <h2>#TITLE</h2>
-        {loop type="product" name="my_product_loop" category="#ID"}
+    <h2>{$TITLE}</h2>
+        {loop type="product" name="my_product_loop" category="{$ID}"}
         <div class="product-block">
             [...]
         </div>
@@ -110,7 +110,7 @@ For example, you want to display all the associated content of a product in an u
     <ul>
         {loop type="associated_content" name="my_associated_content_loop" product="12"}
             <li>
-                <a href="#URL">#TITLE</a>
+                <a href="{$URL}">{$TITLE}</a>
             </li>
         {/loop}
     </ul>
@@ -129,12 +129,12 @@ A page loop is therefore linked to a classic loop using the ```rel``` attribute 
 
 ```smarty
 {pageloop rel="my_product_loop"}
-    {if #PAGE != #CURRENT}
-        <a href="{url view="category" page="4"}">#PAGE</a>
+    {if $PAGE != $CURRENT}
+        <a href="{url view="category" page="4"}">{$PAGE}</a>
     {else}
-        { #PAGE }
+        { {$PAGE} }
     {/if}
-    {if #PAGE != #LAST}
+    {if $PAGE != $LAST}
         -
     {/if}
 {/pageloop}
