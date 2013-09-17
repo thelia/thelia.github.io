@@ -28,6 +28,23 @@ arguments :
     - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
     - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
+    - {name: "currency", description: "A currency id", example: "currency=\"1\""}
+    - {
+        name: "attribute_non_strict_match", description: "promo, new, quantity, weight or price may differ in the different product sale element depending on the different attributes. This parameter allows to provide a list of non-strict attributes.",
+        default: "none",
+        example: "attribute_non_strict_match=\"promo,new\" : loop will return the product if it has at least a product sale element in promo and at least a product sale element as new ; even if it's not the same product sale element.",
+        expected_values: [
+            {name: "none",             description: "product loop will look for at least 1 attribute which matches all the loop criteria."},
+            {name: "*",             description: "all the attributes are non strict"},
+            {name: "min_stock"},
+            {name: "promo"},
+            {name: "new"},
+            {name: "min_weight"},
+            {name: "max_weight"},
+            {name: "min_price"},
+            {name: "max_price"}
+        ]
+      }
     - {
         name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "alpha",
         expected_values: [
@@ -38,24 +55,26 @@ arguments :
             {name: "manual",            description: "`category` argument must be set"},
             {name: "manual_reverse",    description: "`category` argument must be set"},
             {name: "ref",               description: "alphabetical order on reference"},
-            {name: "promo",             description: "display promo products first or last"},
-            {name: "new",               description: "display new products first or last"},
+            {name: "promo",             description: "promo products first"},
+            {name: "new",               description: "new products first"},
             {name: "random",            description: ""},
             {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"}
         ]
       }
 outputs :
-    - {name: "#ID", description: "the product id"}
-    - {name: "#REF", description: "the product reference"}
-    - {name: "#BEST_PRICE", description: "the product best price for the received arguments, depending on the attributes and promo status."}
-    - {name: "#IS_PROMO", description: "returns if at least one of it's product sale element is in promo"}
-    - {name: "#IS_NEW", description: "returns if at least one of it's product sale element is new"}
-    - {name: "#TITLE", description: "the product title"}
-    - {name: "#CHAPO", description: "the product chapo"}
-    - {name: "#DESCRIPTION", description: "the product description"}
-    - {name: "#POSTSCTIPTUM", description: "the product postscriptum"}
-    - {name: "#URL", description: "the product URL"}
-    - {name: "#POSITION", description: "the product position"}
+    - {name: "$ID", description: "the product id"}
+    - {name: "$REF", description: "the product reference"}
+    - {name: "$BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
+    - {name: "$BEST_PRICE_TAX", description: "the best price taxes amount"}
+    - {name: "$BEST_TAXED_PRICE", description: "the best price including taxes"}
+    - {name: "$IS_PROMO", description: "returns if at least one of it's product sale element is in promo"}
+    - {name: "$IS_NEW", description: "returns if at least one of it's product sale element is new"}
+    - {name: "$TITLE", description: "the product title"}
+    - {name: "$CHAPO", description: "the product chapo"}
+    - {name: "$DESCRIPTION", description: "the product description"}
+    - {name: "$POSTSCTIPTUM", description: "the product postscriptum"}
+    - {name: "$URL", description: "the product URL"}
+    - {name: "$POSITION", description: "the product position"}
 ---
 
 <div class="description large-12">
@@ -69,7 +88,7 @@ outputs :
 
 <ul>
 {loop type="product" name="my_product_loop" category="1,2" depth="2" feature_available="1:13|17" order="min_price"}
-    <li>#TITLE (#REF)</li>
+    <li>{$TITLE} ({$REF})</li>
 {/loop}
 </ul>
 
@@ -87,7 +106,7 @@ outputs :
 
 <ul>
 {loop type="product" name="another_product_loop" promo="true" current_category="true" order="new,max_price"}
-    <li>#TITLE (#REF)</li>
+    <li>{$TITLE} ({$REF})</li>
 {/loop}
 </ul>
 

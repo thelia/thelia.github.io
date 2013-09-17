@@ -25,9 +25,10 @@ arguments :
           }
 
 outputs :
-    - {name: "#ID", description: "the feature id"}
-    - {name: "#TITLE", description: "the feature title"}
-    - {name: "#CHAPO", description: "the feature chapo"}
-    - {name: "#DESCRIPTION", description: "the feature description"}
-    - {name: "#POSTSCRIPTUM", description: "the feature postscriptum"}
+    - {name: "$ID", description: "the feature id"}
+    - {name: "$TITLE", description: "the feature title"}
+    - {name: "$CHAPO", description: "the feature chapo"}
+    - {name: "$DESCRIPTION", description: "the feature description"}
+    - {name: "$POSTSCRIPTUM", description: "the feature postscriptum"}
+    - {name: "$POSITION", description: "the feature position"}
 ---

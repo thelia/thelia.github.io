@@ -15,13 +15,13 @@ arguments :
     - {name: "sponsor", description: "The sponsor ID which you want the list of affiliated customers", example: "sponsor=\"1\""}
 
 outputs :
-    - {name: "#ID", description: "the customer id"}
-    - {name: "#REF", description: "the customer reference"}
-    - {name: "#TITLE", description: "the customer title which might be use in <a href=\"/documentation/loop/title.html\">title loop</a>"}
-    - {name: "#FIRSTNAME", description: "the customer firstname"}
-    - {name: "#LASTNAME", description: "the customer lastname"}
-    - {name: "#EMAIL", description: "the customer email"}
-    - {name: "#RESELLER", description: "return if the customer is a reseller"}
-    - {name: "#SPONSOR", description: "the customer sponsor which might be use in another <a href=\"/documentation/loop/customer.html\">customer loop</a>"}
-    - {name: "#DISCOUNT", description: "the customer discount"}
+    - {name: "$ID", description: "the customer id"}
+    - {name: "$REF", description: "the customer reference"}
+    - {name: "$TITLE", description: "the customer title which might be use in <a href=\"/documentation/loop/title.html\">title loop</a>"}
+    - {name: "$FIRSTNAME", description: "the customer firstname"}
+    - {name: "$LASTNAME", description: "the customer lastname"}
+    - {name: "$EMAIL", description: "the customer email"}
+    - {name: "$RESELLER", description: "return if the customer is a reseller"}
+    - {name: "$SPONSOR", description: "the customer sponsor which might be use in another <a href=\"/documentation/loop/customer.html\">customer loop</a>"}
+    - {name: "$DISCOUNT", description: "the customer discount"}
 ---

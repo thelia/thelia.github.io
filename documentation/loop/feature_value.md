@@ -24,10 +24,11 @@ arguments :
           }
 
 outputs :
-    - {name: "#ID", description: "the feature value id"}
-    - {name: "#PERSONAL_VALUE", description: "the feature personal text value (in cas no feature availability exists for the feature)"}
-    - {name: "#TITLE", description: "the feature availability title"}
-    - {name: "#CHAPO", description: "the feature availability chapo"}
-    - {name: "#DESCRIPTION", description: "the feature availability description"}
-    - {name: "#POSTSCRIPTUM", description: "the feature availability postscriptum"}
+    - {name: "$ID", description: "the feature value id"}
+    - {name: "$PERSONAL_VALUE", description: "the feature personal text value (in cas no feature availability exists for the feature)"}
+    - {name: "$TITLE", description: "the feature availability title"}
+    - {name: "$CHAPO", description: "the feature availability chapo"}
+    - {name: "$DESCRIPTION", description: "the feature availability description"}
+    - {name: "$POSTSCRIPTUM", description: "the feature availability postscriptum"}
+    - {name: "$POSITION", description: "the feature value position"}
 ---

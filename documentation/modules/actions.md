@@ -7,20 +7,20 @@ subnav: plugin_action
 
 #Actions
 
-As in Thelia 1 you can make action for creating a new account, add a product in you cart and many more.
+As in Thelia 1 you can use an action in order to create a new account, add a product in you cart and many more.
 
 Many Action are native and, of course, you can create your own using modules. But the new part in Thelia 2 is that you
-can override all native actions and replace it with your own actions.
+can override all native actions and replace them with your own actions.
 
-Actions use eventListener process and are declared in conf files. They are executed at the start of the TheliaHTTPKernel::handle method.
-An internal listener catch kernel.request event and dispatch a new one if the action parameter is presents in the request. This new event name start with
+Actions use EventListener process and are declared in configuration files. They are executed at the start of the TheliaHTTPKernel::handle method.
+An internal listener will catch kernel.request event and dispatch a new one if the action parameter is presents in the request. This new event name starts with
 "action." follow by the action name. So if the action is createCustomer, the event name is action.createCustomer and you can now catch this event as you want.
 
 All your method's action have for only argument a **Thelia\Core\Event\ActionEvent** object instance. This object
-contain the current Request and a Dispatcher (for dispatching new Events if you want).
+contains the current Request and a Dispatcher (for dispatching new Events if you want).
 
-For declaring actions in your module, you have to use your config.xml file and declare a new service,
-for exemple you have the modules test with this structure :
+In order to declare actions in your module, you have to use your config.xml file and then to declare a new service,
+for example you have the modules test with this structure :
 
 
 ```
@@ -36,7 +36,7 @@ Test
         Customer.php
 ```
 
-In your config.xml you have already declare your own loops, filters and other services. EventListener have to use the special "tag" named "kernel.event_subscriber"
+In your config.xml you have already declared your own loops, filters and other services. EventListeners have to use the special "tag" named "kernel.event_subscriber".
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -55,18 +55,18 @@ In your config.xml you have already declare your own loops, filters and other se
 </config>
 ```
 
-You Customer class must have to implement [Symfony\Component\EventDispatcher\EventSubscriberInterface](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html) and so implement the [getSubscribedEvents](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html#method_getSubscribedEvents) method
+You Customer class must have to implement [Symfony\Component\EventDispatcher\EventSubscriberInterface](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html) and to implement the [getSubscribedEvents](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html#method_getSubscribedEvents) method.
 
-the action name for creating a new customer is **createCustomer** so the event name is **action.createCustomer** and you have to declare in the [getSubscribedEvents](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html#method_getSubscribedEvents) that you want to listen this action.
-Because this action is also a default thelia action, you can decide if your action have to be executed before the
-default one, if you want to stop the propagation after the execution of your action or if you want to execute after
+The action name for creating a new customer is **createCustomer** so the event name is **action.createCustomer** and you have to declare in the [getSubscribedEvents](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html#method_getSubscribedEvents) that you want to listen this action.
+Because this action is also a default thelia action, you can decide if your action has to be executed before the
+default one, if you want it to stop the propagation after the execution of your action or if you want it to be executed after
 the thelia default action.
 
-If you want to execute your action before the default action, you have to declare a priproty greater than 128. Also
-you have to declare a priority lesser than 128 (if you don't declare priority is like you have declaring a priority
-equal to 0)
+If you want to execute your custom action before the default action, you have to declare a priority greater than 128. Also
+if you want it to be declared after the default action you have to declare a priority lesser than 128 (if you don't declare priority is like you have declaring a priority
+equal to 0).
 
-if you read the api documentation you see that :
+If you read the API documentation you see that :
 
 ```php
     /**
@@ -91,9 +91,9 @@ if you read the api documentation you see that :
      */
 ```
 
-Your method for this action is named create.
+Your method for this action is named *create*.
 
-Exemple for the case if you want to replace the default action :
+Example for the case if you want to replace the default action :
 
 ```php
 <?php
@@ -107,7 +107,7 @@ Exemple for the case if you want to replace the default action :
 
 ```
 
-Exemple if you don't want to replace the default action :
+Example if you don't want to replace the default action :
 
 
 ```php
@@ -122,7 +122,7 @@ Exemple if you don't want to replace the default action :
 
 ```
 
-This is a complete exemple of your Customer class :
+This is a complete example of your Customer class :
 
 ```php
 <?php
