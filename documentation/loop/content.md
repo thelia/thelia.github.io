@@ -10,6 +10,7 @@ type: content
 arguments :
     - {name: "id", description: "A single or a list of content ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "folder", description: "A single or a list of folder ids.", example: "folder=\"3\", folder=\"2,5,8\""}
+    - {name: "folder_default", description: "A single or a list of default folder ids allowing to retrieve all content having this parameter as default folder.", example: "folder_default=\"2\", folder_default=\"1,4,7\""}
     - {name: "current", description: "A boolean value which allows either to exclude current content from results either to match only this content", example: "current=\"yes\""}
     - {name: "current_folder", description: "A boolean value which allows either to exclude current folder contents from results either to match only current folder contents. If a content is in multiple folders whose one is current it will not be excluded if current_folder=\"false\" but will be included if current_folder=\"yes\"", example: "current_folder=\"yes\""}
     - {name: "depth", description: "A positive integer value which precise how many subfolder levels will be browse. Will not be consider if folder parameter is not set.", example: "depth=\"2\"", default: "1"}
