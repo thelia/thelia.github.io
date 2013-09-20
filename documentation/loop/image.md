@@ -13,7 +13,6 @@ arguments :
     - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\""}
     - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
     - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}
-    - {name: "category", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "source", description: "As an alternative to product=\"...\" style one's can specify the object using the source parameter, along with the source_id parameter, which becomes mandatory. Valid values are product, category, folder or content.", example: "source=\"product\" source_id=\"12\" will return images from the product with ID 12."}
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
     - {name: "exclude", description: "A single or a comma-separated list of image IDs to exclude from the list.", example: "exclude=\"456,123\""}

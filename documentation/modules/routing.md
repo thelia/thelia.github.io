@@ -5,16 +5,16 @@ sidebar: plugin
 subnav: plugin_routing
 ---
 
-#Routing
+# Routing
 
 You can define your own routing rules for your Module.
 Routing definition use xml files
 
-##How to declare my own routes
+## How to declare my own routes
 
 All you have to do is to create a file named routing.xml in your Config directory.
 
-##routes syntax
+## routes syntax
 
 routing.xml file contains something like this :
 
@@ -37,7 +37,7 @@ routing.xml file contains something like this :
 </routes>
 ```
 
-##How to create a controller
+## How to create a controller
 
 A controller is basically a class. This class must extends a class, this class can differ according to context.
 
