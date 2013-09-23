@@ -5,7 +5,7 @@ description: Folder loop lists folders from your shop.
 sidebar: loop
 subnav: loop_folder
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : true }
 type: folder
 arguments :
     - {name: "id", description: "A single or a list of folder ids.", example: "id=\"2\", id=\"1,4,7\""}
@@ -14,6 +14,7 @@ arguments :
     - {name: "not_empty", description: "A boolean value.", example: "not_empty=\"yes\"", default: "no"}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of folder ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
@@ -25,22 +26,19 @@ arguments :
         ]
       }
 outputs :
-    - {name: "#ID", description: "the folder id"}
-    - {name: "#TITLE", description: "the folder title"}
-    - {name: "#CHAPO", description: "the folder chapo"}
-    - {name: "#DESCRIPTION", description: "the folder description"}
-    - {name: "#POSTSCTIPTUM", description: "the folder postscriptum"}
-    - {name: "#PARENT", description: "the parent folder"}
-    - {name: "#CONTENT_COUNT", description: "the number of visible contents for this folder"}
-    - {name: "#VISIBLE", description: "the folder visibility"}
-    - {name: "#POSITION", description: "the folder position"}
-    - {name: "#CREATE_DATE", description: "the folder create date"}
-    - {name: "#UPDATE_DATE", description: "the folder update date"}
-    - {name: "#VERSION", description: "the folder version"}
-    - {name: "#VERSION_DATE", description: "the folder version date"}
-    - {name: "#VERSION_AUTHOR", description: "the folder version author"}
-examples :
-    - {description: "I want to .."}
+    - {name: "$ID", description: "the folder id"}
+    - {name: "$TITLE", description: "the folder title"}
+    - {name: "$CHAPO", description: "the folder chapo"}
+    - {name: "$DESCRIPTION", description: "the folder description"}
+    - {name: "$POSTSCTIPTUM", description: "the folder postscriptum"}
+    - {name: "$URL", description: "the folder URL"}
+    - {name: "$PARENT", description: "the parent folder"}
+    - {name: "$CONTENT_COUNT", description: "the number of visible contents for this folder"}
+    - {name: "$VISIBLE", description: "the folder visibility"}
+    - {name: "$POSITION", description: "the folder position"}
+    - {name: "$CREATE_DATE", description: "the folder create date"}
+    - {name: "$UPDATE_DATE", description: "the folder update date"}
+    - {name: "$VERSION", description: "the folder version"}
+    - {name: "$VERSION_DATE", description: "the folder version date"}
+    - {name: "$VERSION_AUTHOR", description: "the folder version author"}
 ---
-
-{% include loop/body.md %}

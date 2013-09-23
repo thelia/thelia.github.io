@@ -5,14 +5,16 @@ description: Attribute loop lists attributes.
 sidebar: loop
 subnav: loop_attribute
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: attribute
 arguments :
     - {name: "id", description: "A single or a list of attribute ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "product", description: "A single or a list of product ids.", example: "id=\"2\", id=\"1,4,7\""}
-    - {name: "category", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
+    - {name: "template", description: "A single or a list of template ids. Only features attached to these templates will be returned.", example: "id=\"2\", id=\"1,4,7\""}
+    - {name: "exclude_template", description: "A single or a list of template ids. Only features NOT attached to these templates will be returned.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of attribute ids to exclude.", example: "exclude=\"456,123\""}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
             name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
             expected_values: [
@@ -24,13 +26,11 @@ arguments :
           }
 
 outputs :
-    - {name: "#ID", description: "the attribute id"}
-    - {name: "#TITLE", description: "the attribute title"}
-    - {name: "#CHAPO", description: "the attribute chapo"}
-    - {name: "#DESCRIPTION", description: "the attribute description"}
-    - {name: "#POSTSCRIPTUM", description: "the attribute postscriptum"}
-examples :
-    - {description: "I want to .."}
+    - {name: "$ID", description: "the attribute id"}
+    - {name: "$TITLE", description: "the attribute title"}
+    - {name: "$CHAPO", description: "the attribute chapo"}
+    - {name: "$DESCRIPTION", description: "the attribute description"}
+    - {name: "$POSTSCRIPTUM", description: "the attribute postscriptum"}
+    - {name: "$POSITION", description: "If none of the product, template or exclude_template parameter is present, $POSITION contains the attribute position. Otherwise, it contains the attribute position in the product template context."}
 ---
 
-{% include loop/body.md %}

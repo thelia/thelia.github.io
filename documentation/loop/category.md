@@ -5,7 +5,7 @@ description: Category loop lists categories from your shop.
 sidebar: loop
 subnav: loop_category
 uses_global_argument: true
-returns_global_outputs: true
+returns_global_outputs: { countable : true, timestampable : true, versionable : true }
 type: category
 arguments :
     - {name: "id", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
@@ -14,6 +14,7 @@ arguments :
     - {name: "not_empty", description: "A boolean value.", example: "not_empty=\"yes\"", default: "no"}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of category ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
@@ -25,21 +26,18 @@ arguments :
         ]
       }
 outputs :
-    - {name: "#ID", description: "the category id"}
-    - {name: "#TITLE", description: "the category title"}
-    - {name: "#CHAPO", description: "the category chapo"}
-    - {name: "#DESCRIPTION", description: "the category description"}
-    - {name: "#POSTSCTIPTUM", description: "the category postscriptum"}
-    - {name: "#PARENT", description: "the parent category"}
-    - {name: "#URL", description: "the category URL"}
-    - {name: "#PRODUCT_COUNT", description: "the number of visible products for this category"}
-    - {name: "#CREATE_DATE", description: "the category create date"}
-    - {name: "#UPDATE_DATE", description: "the category update date"}
-    - {name: "#VERSION", description: "the category version"}
-    - {name: "#VERSION_DATE", description: "the category version date"}
-    - {name: "#VERSION_AUTHOR", description: "the category version author"}
-examples :
-    - {description: "I want to .."}
+    - {name: "$ID", description: "the category id"}
+    - {name: "$TITLE", description: "the category title"}
+    - {name: "$CHAPO", description: "the category chapo"}
+    - {name: "$DESCRIPTION", description: "the category description"}
+    - {name: "$POSTSCTIPTUM", description: "the category postscriptum"}
+    - {name: "$PARENT", description: "the parent category"}
+    - {name: "$URL", description: "the category URL"}
+    - {name: "$PRODUCT_COUNT", description: "the number of visible products for this category"}
+    - {name: "$CREATE_DATE", description: "the category create date"}
+    - {name: "$UPDATE_DATE", description: "the category update date"}
+    - {name: "$VERSION", description: "the category version"}
+    - {name: "$VERSION_DATE", description: "the category version date"}
+    - {name: "$VERSION_AUTHOR", description: "the category version author"}
+    - {name: "$POSITION", description: "the category position"}
 ---
-
-{% include loop/body.md %}

@@ -17,8 +17,8 @@ subnav: plugin_baseparam
 </baseParams>
 ```
 
-You have to create as many baseParam node as baseParam you have into the baseParams node. In this example there is 1
+You have to create as many baseParam nodes as baseParam you have into the baseParams node. In this example there is 1
 baseParam. Name and class properties are mandatory. The name is the baseParam name used into the template
-(```#PARAM_BASE_secure```), class property is the class executed by the template
+(in Thelia v1 ```#PARAM_BASE_secure```), class property is the class executed by the template
 engine. This class must extends the Thelia\Tpex\BaseParam\BaseParam abstract class,
 if not an exception is thrown.

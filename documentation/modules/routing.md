@@ -8,7 +8,7 @@ subnav: plugin_routing
 # Routing
 
 You can define your own routing rules for your Module.
-Routing definition use xml files
+Routing definition uses XML files
 
 ## How to declare my own routes
 
@@ -16,7 +16,7 @@ All you have to do is to create a file named routing.xml in your Config director
 
 ## routes syntax
 
-routing.xml file contains something like this :
+The routing.xml file contains something like this :
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -39,12 +39,12 @@ routing.xml file contains something like this :
 
 ## How to create a controller
 
-A controller is basically a class. This class must extends a class, this class can differ according to context.
+A controller is basically a class. This class must extends a class, this class can differ according to its context.
 
-If you are in FrontOffice context you must extends the [`Thelia\Controller\Front\BaseFrontController`](/api/classes/Thelia.Controller.Front.BaseFrontController.html) class. In Admin context
-you must extends the [`Thelia\Controller\Admin\BaseAdminController`](http://localhost:4000/api/classes/Thelia.Controller.Admin.BaseAdminController.html)
+If you are in FrontOffice context you must extend the [`Thelia\Controller\Front\BaseFrontController`](/api/classes/Thelia.Controller.Front.BaseFrontController.html) class. On the contrary in Admin context
+you must extend the [`Thelia\Controller\Admin\BaseAdminController`](http://localhost:4000/api/classes/Thelia.Controller.Admin.BaseAdminController.html)
 
-example :
+Example :
 
 ```php
 <?php
@@ -56,7 +56,7 @@ class Something extends BaseFrontController
 {
     public function createAction()
     {
-        //my code here, you can access to many helper here, see the api
+        //my code here, you can access to many helpers here, see the api
     }
 }
 ```

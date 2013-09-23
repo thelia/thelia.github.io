@@ -2,11 +2,25 @@
 global_arguments :
     - {name: "name", description: "The loop name. This name must be unique and is used to reference this loop further in the page (see ifloop, elseloop or pageloop)", mandatory: "true"}
     - {name: "page", description: "The page to display.", example: "page=\"2\""}
-    - {name: "limit", description: "The maximum number of results to display.", example: "limit=\"10\"", default: "10"}
+    - {name: "limit", description: "The maximum number of results to display.", example: "limit=\"10\""}
     - {name: "offset", description: "The first product to display offset. Will not be used if `page` argument is set.", example: "offset=\"1\"", default: "0"}
-global_outputs :
-    - {name: "#LOOP_COUNT", description: "the current results index starting from 1"}
-    - {name: "#LOOP_TOTAL", description: "the total number of results"}
+    - {name: "backend_context", description: "Determine if loop is use in backend context.", example: "backend_context=\"on\"", default: "false"}
+    - {name: "force_return", description: "force return result for i18n tables even if there is no record", example: "force_return=\"on\"", default: "false"}
+global_outputs : {
+    countable : [
+        { name: "$LOOP_COUNT", description: "the current results index starting from 1" },
+        { name: "$LOOP_TOTAL", description: "the total number of results" }
+    ],
+    timestampable : [
+        { name: "$CREATE_DATE", description: "" },
+        { name: "$UPDATE_DATE", description: "" }
+    ],
+    versionable : [
+        { name: "$VERSION", description: "" },
+        { name: "$VERSION_DATE", description: "" },
+        { name: "$VERSION_AUTHOR", description: "" }
+    ]
+}
 ---
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -29,169 +43,39 @@ global_outputs :
     <!-- Main Content -->
     <div class="large-9 columns" role="content">
 
-       {{ content }}
+        <h1>{{ page.title }}</h1>
+
+        {% for description_p in page.description %}
+
+            <p>{{ description_p }}</p>
+
+        {% endfor %}
+
+{% highlight smarty %}
+{loop type="{{ page.type }}" [argument="value"], [...]}
+{% endhighlight %}
+
+        <hr />
 
         <div class="row">
 
-            <div class="large-12 columns">
-                <h3>Arguments</h3>
+            {% include loop/argument_row.html %}
 
-                {% if page.uses_global_argument == true %}
-
-                <h4>Global arguments</h4>
-                {% for argument in page.global_arguments %}
-
-                    {% assign overwritten = false %}
-                    {% for pageargument in page.arguments %}
-                        {% if pageargument.name == argument.name %}
-                            {% assign overwritten = true %}
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if overwritten == false %}
-
-                        <div class="loop-argument large-12">
-                            <div class="name large-3">
-                                {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}
-                            </div>
-                            <div class="information large-9">
-
-                                <div class="description">
-                                    {{ argument.description }}
-                                </div>
-
-                                {% if argument.expected_values != nil AND argument.expected_values != '' %}
-                                <div class="expected_values">
-                                    Expected values :
-                                    <ul>
-                                        {% for expected_value in argument.expected_values %}
-                                        <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                {% endif %}
-
-                                {% if argument.default != nil AND argument.default != '' %}
-                                <div class="default">
-                                    <strong>default</strong> : {{ argument.default }}
-                                </div>
-                                {% endif %}
-
-                                {% if argument.example != nil AND argument.example != '' %}
-                                <div class="example">
-                                    example : <em>{{ argument.example }}</em>
-                                </div>
-                                {% endif %}
-
-                            </div>
-                            <div style="clear: both"></div>
-                        </div>
-
-                    {% endif %}
-
-                {% endfor %}
-
-                <h4>Loop arguments</h4>
-
-                {% endif %}
-
-                {% for argument in page.arguments %}
-                    <div class="loop-argument large-12">
-                        <div class="name large-3">
-                            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}
-                        </div>
-                        <div class="information large-9">
-
-                            <div class="description">
-                                {{ argument.description }}
-                            </div>
-
-                            {% if argument.expected_values != nil AND argument.expected_values != '' %}
-                            <div class="expected_values">
-                                Expected values :
-                                <ul>
-                                    {% for expected_value in argument.expected_values %}
-                                    <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                            {% endif %}
-
-                            {% if argument.default != nil AND argument.default != '' %}
-                            <div class="default">
-                                <strong>default</strong> : {{ argument.default }}
-                            </div>
-                            {% endif %}
-
-                            {% if argument.example != nil AND argument.example != '' %}
-                            <div class="example">
-                                example : <em>{{ argument.example }}</em>
-                            </div>
-                            {% endif %}
-
-                        </div>
-                        <div style="clear: both"></div>
-                    </div>
-                {% endfor %}
-            </div>
-
-            <div class="large-12 columns">
-                <h3>Outputs</h3>
-
-                {% if page.returns_global_outputs == true %}
-
-                <h4>Global outputs</h4>
-                {% for output in page.global_outputs %}
-                <div class="loop-output large-12">
-                    <div class="name large-3">
-                        {{ output.name }}
-                    </div>
-                    <div class="information large-9">
-                        <div class="description">
-                            {{ output.description }}
-                        </div>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                {% endfor %}
-
-                <h4>Loop outputs</h4>
-
-                {% endif %}
-
-                {% for output in page.outputs %}
-                <div class="loop-output large-12">
-                    <div class="name large-3">
-                        {{ output.name }}
-                    </div>
-                    <div class="information large-9">
-                        <div class="description">
-                            {{ output.description }}
-                        </div>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                {% endfor %}
-            </div>
+            {% include loop/output_row.html %}
 
             <div class="large-12 columns">
                 <h3>Examples</h3>
 
-                {% for example in page.examples %}
                 <div class="loop-example large-12">
-                    <div class="description large-12">
-                        {{ example.description }}
-                    </div>
-                    <div>
-                        {{ example.code }}
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                {% endfor %}
 
+                {{ content }}
+
+                </div>
             </div>
 
         </div>
+
+
     </div>
 
     <!-- End Main Content -->
