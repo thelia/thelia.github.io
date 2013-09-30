@@ -29,6 +29,27 @@ $ php Thelia thelia:install
 
 You just have to follow all instructions.
 
+##How to create an admin account ?
+
+```bash
+$ php Thelia thelia:create-admin
+```
+
+##How to insert fake data ?
+
+For a demo with fake but realistic products
+
+``` bash
+$ php install/import.php
+```
+<br />
+For dev data
+
+```bash
+$ php install/faker.php
+```
+
+
 Usage
 -----
 

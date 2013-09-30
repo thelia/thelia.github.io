@@ -29,7 +29,7 @@ outputs :
     - {name: "$FEATURE_AV_VALUE", description: "the feature av. ID. Null if the feature ha no feature av. Use FREE_TEXT_VALUE in this case."}
     - {name: "$IS_FREE_TEXT", description: "1 if this feature is free text, 0 otrherwise."}
     - {name: "$IS_FEATURE_AV", description: "1 if this feature is feature av., 0 otherwise."}
-    - {name: "$FREE_TEXT_VALUE", description: "the free text value. Null if the feature has feature availability.}
+    - {name: "$FREE_TEXT_VALUE", description: "the free text value. Null if the feature has feature availability."}
     - {name: "$LOCALE", description: "the locale of returned results"}
     - {name: "$TITLE", description: "the feature availability title"}
     - {name: "$CHAPO", description: "the feature availability chapo"}
