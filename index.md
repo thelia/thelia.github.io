@@ -34,7 +34,7 @@ You just have to follow all instructions.
 ```bash
 $ php Thelia thelia:create-admin
 ```
-
+<br />
 ##How to insert fake data ?
 
 For a demo with fake but realistic products
@@ -48,7 +48,16 @@ For dev data
 ```bash
 $ php install/faker.php
 ```
+<br />
+##How to reset my database
 
+(composer must be install globally http://getcomposer.org/doc/00-intro.md#globally)
+
+```bash
+$ ./reset_install.sh
+```
+
+this task reload the database, insert fake data using faker script and create an admin with thelia2 as username and password
 
 Usage
 -----

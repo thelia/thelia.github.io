@@ -38,10 +38,9 @@ arguments :
                 {name: "alpha-reverse",     description: "reverse alphabetical order on title"},
                 {name: "manual",            description: "order by ascending position"},
                 {name: "manual-reverse",    description: "order by descending position"},
-                {name: "random",            description: "return images in psuedo-random order"},
-
+                {name: "random",            description: "return images in pseudo-random order"}
             ]
-          }
+   }
 
  
 outputs :
