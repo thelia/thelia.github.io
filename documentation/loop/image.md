@@ -31,18 +31,16 @@ arguments :
         ]
      }
     - {name: "lang", description: "A language identifier, to specify the language in which the image information will be returned"}
-   - {
-            name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
-            expected_values: [
-                {name: "alpha",             description: "alphabetical order on title"},
-                {name: "alpha-reverse",     description: "reverse alphabetical order on title"},
-                {name: "manual",            description: "order by ascending position"},
-                {name: "manual-reverse",    description: "order by descending position"},
-                {name: "random",            description: "return images in pseudo-random order"}
-            ]
-   }
-
- 
+    - {
+        name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
+        expected_values: [
+            {name: "alpha",             description: "alphabetical order on title"},
+            {name: "alpha-reverse",     description: "reverse alphabetical order on title"},
+            {name: "manual",            description: "order by ascending position"},
+            {name: "manual-reverse",    description: "order by descending position"},
+            {name: "random",            description: "return images in pseudo-random order"}
+        ]
+    }
 outputs :
     - {name: "$ID", description: "the image ID"}
     - {name: "$IMAGE_URL", description: "The absolute URL to the generated image"}
