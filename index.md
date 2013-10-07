@@ -11,6 +11,35 @@ Here is the most recent developed code for the next major version (v2). You can 
 
 Most part of the code can possibly change, a large part will be refactor soon, graphical setup does not exist yet.
 
+Requirements
+------------
+
+* php 5.4
+    * Required extensions :
+        * PDO_Mysql
+        * mcrypt
+        * intl
+        * gd
+        * curl
+    * safe_mode off
+    * memory_limit at least 150M, preferably 256.
+    * post_max_size 20M
+    * upload_max_filesize 2M
+* apache 2
+* mysql 5
+
+If you use Mac OSX, it still doesn't use php 5.4 as default php version... There are many solutions for you :
+
+* use linux (the best one)
+* use last MAMP version and put the php bin directory in your path  :
+
+```bash
+export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
+```
+
+* configure a complete development environment : http://php-osx.liip.ch/
+* use a virtual machine with vagrant and puppet : https://puphpet.com/
+
 Installation
 ------------
 
