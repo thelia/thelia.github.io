@@ -32,6 +32,7 @@ outputs :
     - {name: "$IS_NEW", description: "returns if the product sale element is in new"}
     - {name: "$WEIGHT", description: "the product sale elements weight"}
     - {name: "$QUANTITY", description: "the product sale elements stock quantity"}
+    - {name: "$EAN_CODE", description: "the product sale elements EAN Code"}
 ---
 
 <div class="description large-12">
