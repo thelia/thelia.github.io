@@ -76,6 +76,8 @@ outputs :
     - {name: "$POSTSCTIPTUM", description: "the product postscriptum"}
     - {name: "$URL", description: "the product URL"}
     - {name: "$POSITION", description: "the product position"}
+    - {name: "$TAX_RULE_ID", description: "the product's tax rule ID"}
+
 ---
 
 <div class="description large-12">
