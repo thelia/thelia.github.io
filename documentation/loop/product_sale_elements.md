@@ -29,7 +29,7 @@ outputs :
     - {name: "$PROMO_PRICE_TAX", description: "the product sale elements promo price tax"}
     - {name: "$TAXED_PROMO_PRICE", description: "the product sale elements taxed promo price"}
     - {name: "$IS_PROMO", description: "returns if the product sale element is in promo"}
-    - {name: "$IS_NEW", description: "returns if the product sale element is in new"}
+    - {name: "$IS_NEW", description: "returns if the product sale element is new"}
     - {name: "$WEIGHT", description: "the product sale elements weight"}
     - {name: "$QUANTITY", description: "the product sale elements stock quantity"}
     - {name: "$EAN_CODE", description: "the product sale elements EAN Code"}
