@@ -26,8 +26,8 @@ The structure of your module is like this :
     \MyModule
       \Config
         config.xml
+        module.xml   <- mandatory
       MyModule.php <- mandatory
-      module.xml   <- mandatory
       \Loop
         Product.php
         MyLoop.php
@@ -61,6 +61,5 @@ Here is the body of your config.xml file :
 In this file you can declare :
 
 * [Loops](/documentation/modules/loops.html)
-* [BaseParams](/documentation/modules/baseparams.html)
 * [Actions](/documentation/modules/actions.html)
 * [Commands](/documentation/modules/commands.html)
