@@ -24,6 +24,7 @@ arguments :
 
 outputs :
     - {name: "$ID", description: "the attribute availability id"}
+    - {name: "$ATTRIBUTE_ID", description: "the ID of the attribute this attribute availability belongs"}
     - {name: "$TITLE", description: "the attribute availability title"}
     - {name: "$CHAPO", description: "the attribute availability chapo"}
     - {name: "$DESCRIPTION", description: "the attribute availability description"}
