@@ -61,7 +61,7 @@ You just have to follow all instructions.
 ##How to create an admin account ?
 
 ```bash
-$ php Thelia thelia:create-admin
+$ php Thelia admin:create
 ```
 <br />
 ##How to insert fake data ?
