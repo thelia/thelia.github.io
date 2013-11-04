@@ -35,8 +35,7 @@ The structure of your module is like this :
 ```
 
 Your root folder is the name of your module (in this example the name is "MyModule"). You have to create the main
-class MyModule in the MyModule.php file. Remember, your module must be [PSR-0](https://github
-.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) compliant, so your main class is MyModule\MyModule.php (yes
+class MyModule in the MyModule.php file. Remember, your module must be [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) compliant, so your main class is MyModule\MyModule.php (yes
  namespace use is mandatory and it's good for you). The other mandatory file is module.xml. This file contains
  information about module like compatibility and dependencies with other modules.
 
@@ -56,10 +55,3 @@ Here is the body of your config.xml file :
 
 </config>
 ```
-
-
-In this file you can declare :
-
-* [Loops](/documentation/modules/loops.html)
-* [Actions](/documentation/modules/actions.html)
-* [Commands](/documentation/modules/commands.html)
