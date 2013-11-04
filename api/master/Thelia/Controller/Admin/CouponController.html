@@ -12,6 +12,7 @@
             <li><a href="../../../classes.html">Classes</a></li>
                             <li><a href="../../../namespaces.html">Namespaces</a></li>
                         <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
             <li><a href="../../../doc-index.html">Index</a></li>
             
         </ul>
@@ -22,7 +23,8 @@
     <h1><a href="../../../Thelia/Controller/Admin.html">Thelia\Controller\Admin</a>\CouponController</h1>
     </div>
         <div class="content">
-                <p>class    <strong>CouponController</strong>        extends <a href="../../../Thelia/Controller/Admin/BaseAdminController.html"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></p>
+                <p>    class
+    <strong>CouponController</strong>        extends <a href="../../../Thelia/Controller/Admin/BaseAdminController.html"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></p>
 
             <div class="description">
             <p>Created by JetBrains PhpStorm.</p>
@@ -56,14 +58,14 @@ Time: 3:24 PM</p>
                     
                 </td>
                 <td class="last">
-                    <a href="#method_adminLogAppend">adminLogAppend</a>(string $message)
+                    <a href="#method_adminLogAppend">adminLogAppend</a>(string $resource, string $action, string $message)
                     <p>Helper to append a message to the admin log.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_processTemplateAction">processTemplateAction</a>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $template)
@@ -83,7 +85,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_browseAction">browseAction</a>()
@@ -93,7 +95,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_readAction">readAction</a>(int $couponId)
@@ -103,7 +105,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_createAction">createAction</a>()
@@ -113,7 +115,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_updateAction">updateAction</a>(int $couponId)
@@ -123,7 +125,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getConditionInputAction">getConditionInputAction</a>(string $conditionId)
@@ -133,7 +135,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_updateConditionsAction">updateConditionsAction</a>(int $couponId)
@@ -147,9 +149,9 @@ Time: 3:24 PM</p>
         <h2>Details</h2>
 
                         <h3 id="method_adminLogAppend">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 56</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 58</div>
         <code>            public            
-    <strong>adminLogAppend</strong>(string $message)</code>
+    <strong>adminLogAppend</strong>(string $resource, string $action, string $message)</code>
     </h3>
     <div class="details">
         <p>Helper to append a message to the admin log.</p>
@@ -159,6 +161,18 @@ Time: 3:24 PM</p>
                             <h4>Parameters</h4>
 
                     <table>
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td>
+</td>
+            </tr>
                     <tr>
                 <td>string</td>
                 <td>$message</td>
@@ -174,8 +188,8 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_processTemplateAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 67</div>
-        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 69</div>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>processTemplateAction</strong>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $template)</code>
     </h3>
     <div class="details">
@@ -199,8 +213,8 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
-            <td>the reponse which contains the rendered view</td>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td>the response which contains the rendered view</td>
         </tr>
     </table>
 
@@ -210,7 +224,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_redirectToRoute">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 254</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 256</div>
         <code>            public            
     <strong>redirectToRoute</strong>($routeId, array $urlParameters = array(), array $routeParameters = array())</code>
     </h3>
@@ -250,7 +264,7 @@ Time: 3:24 PM</p>
 
                 <h3 id="method_browseAction">
         <div class="location">at line 63</div>
-        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>browseAction</strong>()</code>
     </h3>
     <div class="details">
@@ -263,7 +277,7 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -276,7 +290,7 @@ Time: 3:24 PM</p>
 
                 <h3 id="method_readAction">
         <div class="location">at line 95</div>
-        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>readAction</strong>(int $couponId)</code>
     </h3>
     <div class="details">
@@ -299,7 +313,7 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -312,7 +326,7 @@ Time: 3:24 PM</p>
 
                 <h3 id="method_createAction">
         <div class="location">at line 122</div>
-        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>createAction</strong>()</code>
     </h3>
     <div class="details">
@@ -325,7 +339,7 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -338,7 +352,7 @@ Time: 3:24 PM</p>
 
                 <h3 id="method_updateAction">
         <div class="location">at line 170</div>
-        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>updateAction</strong>(int $couponId)</code>
     </h3>
     <div class="details">
@@ -361,7 +375,7 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -374,7 +388,7 @@ Time: 3:24 PM</p>
 
                 <h3 id="method_getConditionInputAction">
         <div class="location">at line 275</div>
-        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>getConditionInputAction</strong>(string $conditionId)</code>
     </h3>
     <div class="details">
@@ -397,7 +411,7 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -410,7 +424,7 @@ Time: 3:24 PM</p>
 
                 <h3 id="method_updateConditionsAction">
         <div class="location">at line 305</div>
-        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>updateConditionsAction</strong>(int $couponId)</code>
     </h3>
     <div class="details">
@@ -433,7 +447,7 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
             <td>
 </td>
         </tr>

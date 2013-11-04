@@ -12,6 +12,7 @@
             <li><a href="../../../../../classes.html">Classes</a></li>
                             <li><a href="../../../../../namespaces.html">Namespaces</a></li>
                         <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../traits.html">Traits</a></li>
             <li><a href="../../../../../doc-index.html">Index</a></li>
             
         </ul>
@@ -22,7 +23,8 @@
     <h1><a href="../../../../../Thelia/Core/Template/Smarty/Plugins.html">Thelia\Core\Template\Smarty\Plugins</a>\AdminUtilities</h1>
     </div>
         <div class="content">
-                <p>class    <strong>AdminUtilities</strong>        extends <abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></p>
+                <p>    class
+    <strong>AdminUtilities</strong>        extends <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a></p>
 
             <div class="description">
             <p>This class implements variour admin template utilities</p>
@@ -37,10 +39,41 @@
             <table>
                     <tr>
                 <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getNormalizedParam">getNormalizedParam</a>(array $params, mixed $name, mixed $default = null)
+                    <p>Get a function or block parameter value, and normalize it, trimming balnks and making it lowercase</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getNormalizedParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getParam">getParam</a>(array $params, mixed $name, mixed $default = null)
+                    <p>Get a function or block parameter value</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getPluginDescriptors">getPluginDescriptors</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr> $securityContext)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a> $securityContext)
                     <p>
 </p>
                 </td>
@@ -67,26 +100,131 @@
                 </td>
                 <td></td>
             </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
-                </td>
-                <td class="last">
-                    <a href="#method_getPluginDescriptors">getPluginDescriptors</a>()
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
             </table>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
+                        <h3 id="method_getNormalizedParam">
+        <div class="location">in <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getNormalizedParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a> at line 67</div>
+        <code>            public            mixed
+    <strong>getNormalizedParam</strong>(array $params, mixed $name, mixed $default = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get a function or block parameter value, and normalize it, trimming balnks and making it lowercase</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>the parameters array</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>as single parameter name, or an array of names. In this case, the first defined parameter is returned. Use this for aliases (context, ctx, c)</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td>the defaut value if parameter is missing (default to null)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>the parameter value, or the default value if it is not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParam">
+        <div class="location">in <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a> at line 83</div>
+        <code>            public            mixed
+    <strong>getParam</strong>(array $params, mixed $name, mixed $default = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get a function or block parameter value</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>the parameters array</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>as single parameter name, or an array of names. In this case, the first defined parameter is returned. Use this for aliases (context, ctx, c)</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td>the defaut value if parameter is missing (default to null)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>the parameter value, or the default value if it is not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPluginDescriptors">
+        <div class="location">at line 157</div>
+        <code>            public            <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
+    <strong>getPluginDescriptors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr></td>
+            <td>array of smarty plugin descriptors</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
         <div class="location">at line 42</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr> $securityContext)</code>
+    <strong>__construct</strong>(<a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a> $securityContext)</code>
     </h3>
     <div class="details">
         <p>
@@ -98,7 +236,7 @@
 
                     <table>
                     <tr>
-                <td><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></td>
+                <td><a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a></td>
                 <td>$securityContext</td>
                 <td>
 </td>
@@ -179,32 +317,6 @@
         <tr>
             <td>string</td>
             <td>no text is returned.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_getPluginDescriptors">
-        <div class="location">at line 157</div>
-        <code>            public            <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
-    <strong>getPluginDescriptors</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr></td>
-            <td>array of smarty plugin descriptors</td>
         </tr>
     </table>
 

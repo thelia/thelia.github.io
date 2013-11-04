@@ -12,6 +12,7 @@
             <li><a href="../../classes.html">Classes</a></li>
                             <li><a href="../../namespaces.html">Namespaces</a></li>
                         <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
             <li><a href="../../doc-index.html">Index</a></li>
             
         </ul>
@@ -22,7 +23,8 @@
     <h1><a href="../../Thelia/Model.html">Thelia\Model</a>\OrderQuery</h1>
     </div>
         <div class="content">
-                <p>class    <strong>OrderQuery</strong>        extends <a href="../../Thelia/Model/Base/OrderQuery.html"><abbr title="Thelia\Model\Base\OrderQuery">OrderQuery</abbr></a></p>
+                <p>    class
+    <strong>OrderQuery</strong>        extends <a href="../../Thelia/Model/Base/OrderQuery.html"><abbr title="Thelia\Model\Base\OrderQuery">OrderQuery</abbr></a></p>
 
             <div class="description">
             <p>Skeleton subclass for performing query and update operations on the 'order' table.</p>
@@ -1735,6 +1737,39 @@ long as it does not already exist in the output directory.</p>
                     <p>Return ChildOrder objects filtered by the updated_at column</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../Thelia/Model/Base/OrderQuery.html#method_findByUpdatedAt"><abbr title="Thelia\Model\Base\OrderQuery">OrderQuery</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getSaleStats">getSaleStats</a>($month, $year)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getOrdersStats">getOrdersStats</a>($month, $year, $status = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getFirstOrdersStats">getFirstOrdersStats</a>($month, $year)
+                    <p>
+</p>
+                </td>
+                <td></td>
             </tr>
             </table>
 
@@ -8163,6 +8198,114 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSaleStats">
+        <div class="location">at line 58</div>
+        <code>        static    public            
+    <strong>getSaleStats</strong>($month, $year)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$month</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$year</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrdersStats">
+        <div class="location">at line 78</div>
+        <code>        static    public            
+    <strong>getOrdersStats</strong>($month, $year, $status = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$month</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$year</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$status</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFirstOrdersStats">
+        <div class="location">at line 97</div>
+        <code>        static    public            
+    <strong>getFirstOrdersStats</strong>($month, $year)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$month</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$year</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
             
             
                     </div>
