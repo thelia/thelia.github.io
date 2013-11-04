@@ -37,14 +37,14 @@ If you use Mac OSX, it still doesn't use php 5.4 as default php version... There
 export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
 ```
 
-* configure a complete development environment : http://php-osx.liip.ch/
-* use a virtual machine with vagrant and puppet : https://puphpet.com/
+* configure a complete development environment : [http://php-osx.liip.ch/](http://php-osx.liip.ch/)
+* use a virtual machine with vagrant and puppet : [https://puphpet.com/](https://puphpet.com/)
 
 Installation
 ------------
 
 ``` bash
-$ git clone --recursive https://github.com/thelia/thelia.git
+$ git clone https://github.com/thelia/thelia.git
 $ cd thelia
 $ wget http://getcomposer.org/composer.phar
 $ php composer.phar install
@@ -80,7 +80,7 @@ $ php install/faker.php
 <br />
 ##How to reset my database
 
-(composer must be install globally http://getcomposer.org/doc/00-intro.md#globally)
+(composer must be install [`globally`](http://getcomposer.org/doc/00-intro.md#globally))
 
 ```bash
 $ ./reset_install.sh
