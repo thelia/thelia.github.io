@@ -19,7 +19,7 @@ subnav: plugin_loop
 You have to create as many loop node as loop you have into the loops node. In this example there is 2 loops. Name and
 class properties are mandatory. The name is the loop name used into the template ( like in Thelia v1 : ```<THELIA_name
 type="MyModule_Product">...</THELIA_name>```), class property is the class executed by the template engine. This
-class must extends the [Thelia\Core\Template\Element\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html)
+class must extends the [Thelia\Core\Template\Element\BaseLoop](/api/master/Thelia/Core/Template/Element/BaseLoop.html)
 abstract class, if not an exception is thrown.
 **If you name your loop like a default loop (eg : Product), your loop will replace the default loop.**
 
@@ -27,14 +27,14 @@ abstract class, if not an exception is thrown.
 
 Your loop can be anywhere (Thanks to namespace) in your module but it's better to create a Loop directory and put all your loops in this directory.
 
-You have to extends the [Thelia\Core\Template\Element\BaseLoop](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html) abstract class and implement *exec* and *defineArgs* methods :
+You have to extends the [Thelia\Core\Template\Element\BaseLoop](/api/master/Thelia/Core/Template/Element/BaseLoop.html) abstract class and implement *exec* and *defineArgs* methods :
 
 ```
 public function defineArgs()
 public function exec(&$pagination);
 ```
 
-The *exec* method is used to render the template. It must return a [Thelia\Core\Template\Element\LoopResult](/api/class-Thelia.Tpex.Element.Loop.BaseLoop.html) instance.
+The *exec* method is used to render the template. It must return a [Thelia\Core\Template\Element\LoopResult](http://localhost:4000/api/master/Thelia/Core/Template/Element/LoopResult.html) instance.
 
 The defineArgs method defines all args used in your loop. Args can be mandatory, optional, with default value, etc. This method must return an [Thelia\Core\Template\Loop\ArgumentCollection](). ArgumentCollection contains [Thelia\Core\Template\Loop\Argument]() which contains a [Thelia\Type\TypeCollection](). Types in the collection must implement [Thelia\Type\TypeInterface](). You can check here the [available types](/documentation/features/types).
 

@@ -41,8 +41,8 @@ The routing.xml file contains something like this :
 
 A controller is basically a class. This class must extends a class, this class can differ according to its context.
 
-If you are in FrontOffice context you must extend the [`Thelia\Controller\Front\BaseFrontController`](/api/classes/Thelia.Controller.Front.BaseFrontController.html) class. On the contrary in Admin context
-you must extend the [`Thelia\Controller\Admin\BaseAdminController`](/api/classes/Thelia.Controller.Admin.BaseAdminController.html)
+If you are in FrontOffice context you must extend the [`Thelia\Controller\Front\BaseFrontController`](/api/master/Thelia/Controller/Front/BaseFrontController.html) class. On the contrary in Admin context
+you must extend the [`Thelia\Controller\Admin\BaseAdminController`](/api/master/Thelia/Controller/Admin/BaseAdminController.html)
 
 Example :
 
