@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Model\Product | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Model.html">Thelia\Model</a>\Product</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Product</strong>        extends <abbr title="Thelia\Model\Base\Product">Product</abbr></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getRealLowestPrice">getRealLowestPrice</a>($virtualColumnName = &#039;real_lowest_price&#039;)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTaxedPrice">getTaxedPrice</a>(<a href="../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a> $country, $price)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getTaxedPromoPrice">getTaxedPromoPrice</a>(<a href="../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a> $country, $price)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultSaleElements">getDefaultSaleElements</a>()
+                    <p>Return the default PSE for this product.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_countSaleElements">countSaleElements</a>()
+                    <p>Return PSE count fir this product.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Model\the">the</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultCategoryId">getDefaultCategoryId</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultCategory">setDefaultCategory</a>(integer $categoryId)
+                    <p>Set default category for this product</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateDefaultCategory">updateDefaultCategory</a>($defaultCategoryId)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(int $defaultCategoryId, float $basePrice, int $priceCurrencyId, int $taxRuleId, float $baseWeight)
+                    <p>Create a new product, along with the default category ID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_createProductSaleElement">createProductSaleElement</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con, $weight, $basePrice, $salePrice, $currencyId, $isDefault, $isPromo = false, $isNew = false, $quantity, $eanCode = &#039;&#039;, $ref = false)
+                    <p>Create a basic product sale element attached to this product.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preUpdate">preUpdate</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run before updating the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postUpdate">postUpdate</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run after updating the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preDelete">preDelete</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run before deleting the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postDelete">postDelete</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run after deleting the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getRealLowestPrice">
+        <div class="location">at line 32</div>
+        <code>            public            
+    <strong>getRealLowestPrice</strong>($virtualColumnName = &#039;real_lowest_price&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$virtualColumnName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTaxedPrice">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>getTaxedPrice</strong>(<a href="../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a> $country, $price)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a></td>
+                <td>$country</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$price</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTaxedPromoPrice">
+        <div class="location">at line 50</div>
+        <code>            public            
+    <strong>getTaxedPromoPrice</strong>(<a href="../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a> $country, $price)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a></td>
+                <td>$country</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$price</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultSaleElements">
+        <div class="location">at line 59</div>
+        <code>            public            
+    <strong>getDefaultSaleElements</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the default PSE for this product.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countSaleElements">
+        <div class="location">at line 66</div>
+        <code>            public            
+    <strong>countSaleElements</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return PSE count fir this product.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultCategoryId">
+        <div class="location">at line 73</div>
+        <code>            public            <abbr title="Thelia\Model\the">the</abbr>
+    <strong>getDefaultCategoryId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\the">the</abbr></td>
+            <td>current default category ID for this product</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultCategory">
+        <div class="location">at line 89</div>
+        <code>            public            
+    <strong>setDefaultCategory</strong>(integer $categoryId)</code>
+    </h3>
+    <div class="details">
+        <p>Set default category for this product</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$categoryId</td>
+                <td>the new default category id</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateDefaultCategory">
+        <div class="location">at line 110</div>
+        <code>            public            
+    <strong>updateDefaultCategory</strong>($defaultCategoryId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$defaultCategoryId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 149</div>
+        <code>            public            
+    <strong>create</strong>(int $defaultCategoryId, float $basePrice, int $priceCurrencyId, int $taxRuleId, float $baseWeight)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new product, along with the default category ID</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$defaultCategoryId</td>
+                <td>the default category ID of this product</td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$basePrice</td>
+                <td>the product base price</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$priceCurrencyId</td>
+                <td>the price currency Id</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$taxRuleId</td>
+                <td>the product tax rule ID</td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$baseWeight</td>
+                <td>base weight in Kg</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createProductSaleElement">
+        <div class="location">at line 188</div>
+        <code>            public            
+    <strong>createProductSaleElement</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con, $weight, $basePrice, $salePrice, $currencyId, $isDefault, $isPromo = false, $isNew = false, $quantity, $eanCode = &#039;&#039;, $ref = false)</code>
+    </h3>
+    <div class="details">
+        <p>Create a basic product sale element attached to this product.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$weight</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$basePrice</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$salePrice</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$currencyId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$isDefault</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$isPromo</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$isNew</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$quantity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$eanCode</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$ref</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preUpdate">
+        <div class="location">at line 236</div>
+        <code>            public            boolean
+    <strong>preUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before updating the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postUpdate">
+        <div class="location">at line 246</div>
+        <code>            public            
+    <strong>postUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after updating the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preDelete">
+        <div class="location">at line 254</div>
+        <code>            public            boolean
+    <strong>preDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before deleting the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postDelete">
+        <div class="location">at line 264</div>
+        <code>            public            
+    <strong>postDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after deleting the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

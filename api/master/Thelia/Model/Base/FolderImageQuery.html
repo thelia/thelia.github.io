@@ -1,0 +1,3112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Model\Base\FolderImageQuery | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Model/Base.html">Thelia\Model\Base</a>\FolderImageQuery</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>FolderImageQuery</strong>        extends <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></p>
+
+            <div class="description">
+            <p>Base class that represents a query for the 'folder_image' table.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\FolderImage&#039;, string $modelAlias = null)
+                    <p>Initializes internal state of \Thelia\Model\Base\FolderImageQuery object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)
+                    <p>Returns a new ChildFolderImageQuery object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImage.html"><abbr title="Thelia\Model\FolderImage">FolderImage</abbr></a>|array|mixed
+                </td>
+                <td class="last">
+                    <a href="#method_findPk">findPk</a>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Find object by primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
+                </td>
+                <td class="last">
+                    <a href="#method_findPks">findPks</a>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); </code></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPrimaryKey">filterByPrimaryKey</a>(mixed $key)
+                    <p>Filter the query by primary key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPrimaryKeys">filterByPrimaryKeys</a>(array $keys)
+                    <p>Filter the query by a list of primary keys</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterById">filterById</a>(mixed $id = null, string $comparison = null)
+                    <p>Filter the query on the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByFolderId">filterByFolderId</a>(mixed $folderId = null, string $comparison = null)
+                    <p>Filter the query on the folder_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByFile">filterByFile</a>(string $file = null, string $comparison = null)
+                    <p>Filter the query on the file column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPosition">filterByPosition</a>(mixed $position = null, string $comparison = null)
+                    <p>Filter the query on the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByCreatedAt">filterByCreatedAt</a>(mixed $createdAt = null, string $comparison = null)
+                    <p>Filter the query on the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByUpdatedAt">filterByUpdatedAt</a>(mixed $updatedAt = null, string $comparison = null)
+                    <p>Filter the query on the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByFolder">filterByFolder</a>(<a href="../../../Thelia/Model/Folder.html"><abbr title="Thelia\Model\Folder">Folder</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $folder, string $comparison = null)
+                    <p>Filter the query by a related \Thelia\Model\Folder object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinFolder">joinFolder</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Adds a JOIN clause to the query using the Folder relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderQuery.html"><abbr title="Thelia\Model\FolderQuery">FolderQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_useFolderQuery">useFolderQuery</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Use the Folder relation Folder object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByFolderImageI18n">filterByFolderImageI18n</a>(<a href="../../../Thelia/Model/FolderImageI18n.html"><abbr title="Thelia\Model\FolderImageI18n">FolderImageI18n</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $folderImageI18n, string $comparison = null)
+                    <p>Filter the query by a related \Thelia\Model\FolderImageI18n object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinFolderImageI18n">joinFolderImageI18n</a>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)
+                    <p>Adds a JOIN clause to the query using the FolderImageI18n relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageI18nQuery.html"><abbr title="Thelia\Model\FolderImageI18nQuery">FolderImageI18nQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_useFolderImageI18nQuery">useFolderImageI18nQuery</a>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)
+                    <p>Use the FolderImageI18n relation FolderImageI18n object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_prune">prune</a>(<a href="../../../Thelia/Model/FolderImage.html"><abbr title="Thelia\Model\FolderImage">FolderImage</abbr></a> $folderImage = null)
+                    <p>Exclude object from result</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_doDeleteAll">doDeleteAll</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Deletes all rows from the folder_image table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Performs a DELETE on the database, given a ChildFolderImage or Criteria object OR a primary key value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_recentlyUpdated">recentlyUpdated</a>(int $nbDays = 7)
+                    <p>Filter by the latest updated</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_recentlyCreated">recentlyCreated</a>(int $nbDays = 7)
+                    <p>Filter by the latest created</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_lastUpdatedFirst">lastUpdatedFirst</a>()
+                    <p>Order by update date desc</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_firstUpdatedFirst">firstUpdatedFirst</a>()
+                    <p>Order by update date asc</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_lastCreatedFirst">lastCreatedFirst</a>()
+                    <p>Order by create date desc</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_firstCreatedFirst">firstCreatedFirst</a>()
+                    <p>Order by create date asc</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinI18n">joinI18n</a>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)
+                    <p>Adds a JOIN clause to the query using the i18n relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinWithI18n">joinWithI18n</a>(string $locale = &#039;en_US&#039;, string $joinType = Criteria::LEFT_JOIN)
+                    <p>Adds a JOIN clause to the query and hydrates the related I18n object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/FolderImageI18nQuery.html"><abbr title="Thelia\Model\FolderImageI18nQuery">FolderImageI18nQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_useI18nQuery">useI18nQuery</a>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)
+                    <p>Use the I18n relation query object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderById">orderById</a>($order = Criteria::ASC)
+                    <p>Order by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByFolderId">orderByFolderId</a>($order = Criteria::ASC)
+                    <p>Order by the folder_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByFile">orderByFile</a>($order = Criteria::ASC)
+                    <p>Order by the file column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByPosition">orderByPosition</a>($order = Criteria::ASC)
+                    <p>Order by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByCreatedAt">orderByCreatedAt</a>($order = Criteria::ASC)
+                    <p>Order by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByUpdatedAt">orderByUpdatedAt</a>($order = Criteria::ASC)
+                    <p>Order by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupById">groupById</a>()
+                    <p>Group by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByFolderId">groupByFolderId</a>()
+                    <p>Group by the folder_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByFile">groupByFile</a>()
+                    <p>Group by the file column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByPosition">groupByPosition</a>()
+                    <p>Group by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByCreatedAt">groupByCreatedAt</a>()
+                    <p>Group by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByUpdatedAt">groupByUpdatedAt</a>()
+                    <p>Group by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_leftJoin">leftJoin</a>($relation)
+                    <p>Adds a LEFT JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoin">rightJoin</a>($relation)
+                    <p>Adds a RIGHT JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoin">innerJoin</a>($relation)
+                    <p>Adds a INNER JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_leftJoinFolder">leftJoinFolder</a>($relationAlias = null)
+                    <p>Adds a LEFT JOIN clause to the query using the Folder relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoinFolder">rightJoinFolder</a>($relationAlias = null)
+                    <p>Adds a RIGHT JOIN clause to the query using the Folder relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoinFolder">innerJoinFolder</a>($relationAlias = null)
+                    <p>Adds a INNER JOIN clause to the query using the Folder relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_leftJoinFolderImageI18n">leftJoinFolderImageI18n</a>($relationAlias = null)
+                    <p>Adds a LEFT JOIN clause to the query using the FolderImageI18n relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoinFolderImageI18n">rightJoinFolderImageI18n</a>($relationAlias = null)
+                    <p>Adds a RIGHT JOIN clause to the query using the FolderImageI18n relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoinFolderImageI18n">innerJoinFolderImageI18n</a>($relationAlias = null)
+                    <p>Adds a INNER JOIN clause to the query using the FolderImageI18n relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOne">findOne</a>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)
+                    <p>Return the first ChildFolderImage matching the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneOrCreate">findOneOrCreate</a>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)
+                    <p>Return the first ChildFolderImage matching the query, or a new ChildFolderImage object populated from the query conditions when no match is found</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneById">findOneById</a>(<abbr title="int ">int </abbr> $id)
+                    <p>Return the first ChildFolderImage filtered by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByFolderId">findOneByFolderId</a>(<abbr title="int ">int </abbr> $folder_id)
+                    <p>Return the first ChildFolderImage filtered by the folder_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByFile">findOneByFile</a>(<abbr title="string ">string </abbr> $file)
+                    <p>Return the first ChildFolderImage filtered by the file column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByPosition">findOneByPosition</a>(<abbr title="int ">int </abbr> $position)
+                    <p>Return the first ChildFolderImage filtered by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByCreatedAt">findOneByCreatedAt</a>(<abbr title="string ">string </abbr> $created_at)
+                    <p>Return the first ChildFolderImage filtered by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByUpdatedAt">findOneByUpdatedAt</a>(<abbr title="string ">string </abbr> $updated_at)
+                    <p>Return the first ChildFolderImage filtered by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findById">findById</a>(<abbr title="int ">int </abbr> $id)
+                    <p>Return ChildFolderImage objects filtered by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByFolderId">findByFolderId</a>(<abbr title="int ">int </abbr> $folder_id)
+                    <p>Return ChildFolderImage objects filtered by the folder_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByFile">findByFile</a>(<abbr title="string ">string </abbr> $file)
+                    <p>Return ChildFolderImage objects filtered by the file column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByPosition">findByPosition</a>(<abbr title="int ">int </abbr> $position)
+                    <p>Return ChildFolderImage objects filtered by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByCreatedAt">findByCreatedAt</a>(<abbr title="string ">string </abbr> $created_at)
+                    <p>Return ChildFolderImage objects filtered by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByUpdatedAt">findByUpdatedAt</a>(<abbr title="string ">string </abbr> $updated_at)
+                    <p>Return ChildFolderImage objects filtered by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 79</div>
+        <code>            public            
+    <strong>__construct</strong>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\FolderImage&#039;, string $modelAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Initializes internal state of \Thelia\Model\Base\FolderImageQuery object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dbName</td>
+                <td>The database name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modelName</td>
+                <td>The phpName of a model, e.g. 'Book'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modelAlias</td>
+                <td>The alias for the model in this query, e.g. 'b'</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 92</div>
+        <code>        static    public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>create</strong>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a new ChildFolderImageQuery object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$modelAlias</td>
+                <td>The alias of a model in the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>Optional Criteria to build the query from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findPk">
+        <div class="location">at line 122</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImage.html"><abbr title="Thelia\Model\FolderImage">FolderImage</abbr></a>|array|mixed
+    <strong>findPk</strong>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Find object by primary key.</p>
+        <p>Propel uses the instance pool to skip the database if the object exists.
+Go fast if the query is untouched.</p>
+
+<p><code>
+$obj  = $c->findPk(12, $con);
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td>Primary key to use for the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>an optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImage.html"><abbr title="Thelia\Model\FolderImage">FolderImage</abbr></a>|array|mixed</td>
+            <td>the result, formatted by the current formatter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findPks">
+        <div class="location">at line 204</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
+    <strong>findPks</strong>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); </code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>Primary keys to use for the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>an optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed</td>
+            <td>the list of results, formatted by the current formatter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPrimaryKey">
+        <div class="location">at line 225</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByPrimaryKey</strong>(mixed $key)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by primary key</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td>Primary key to use for the query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPrimaryKeys">
+        <div class="location">at line 238</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByPrimaryKeys</strong>(array $keys)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a list of primary keys</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>The list of primary key to use for the query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterById">
+        <div class="location">at line 262</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the id column</p>
+        <p>Example usage:
+<code>
+$query->filterById(1234); // WHERE id = 1234
+$query->filterById(array(12, 34)); // WHERE id IN (12, 34)
+$query->filterById(array('min' => 12)); // WHERE id > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByFolderId">
+        <div class="location">at line 305</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByFolderId</strong>(mixed $folderId = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the folder_id column</p>
+        <p>Example usage:
+<code>
+$query->filterByFolderId(1234); // WHERE folder<em>id = 1234
+$query->filterByFolderId(array(12, 34)); // WHERE folder</em>id IN (12, 34)
+$query->filterByFolderId(array('min' => 12)); // WHERE folder_id > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$folderId</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>filterByFolder()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_filterByFile">
+        <div class="location">at line 343</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByFile</strong>(string $file = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the file column</p>
+        <p>Example usage:
+<code>
+$query->filterByFile('fooValue');   // WHERE file = 'fooValue'
+$query->filterByFile('%fooValue%'); // WHERE file LIKE '%fooValue%'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>The value to use as filter. Accepts wildcards (* and % trigger a LIKE)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPosition">
+        <div class="location">at line 375</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByPosition</strong>(mixed $position = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the position column</p>
+        <p>Example usage:
+<code>
+$query->filterByPosition(1234); // WHERE position = 1234
+$query->filterByPosition(array(12, 34)); // WHERE position IN (12, 34)
+$query->filterByPosition(array('min' => 12)); // WHERE position > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$position</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByCreatedAt">
+        <div class="location">at line 418</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the created_at column</p>
+        <p>Example usage:
+<code>
+$query->filterByCreatedAt('2011-03-14'); // WHERE created<em>at = '2011-03-14'
+$query->filterByCreatedAt('now'); // WHERE created</em>at = '2011-03-14'
+$query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2011-03-13'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$createdAt</td>
+                <td>The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByUpdatedAt">
+        <div class="location">at line 461</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the updated_at column</p>
+        <p>Example usage:
+<code>
+$query->filterByUpdatedAt('2011-03-14'); // WHERE updated<em>at = '2011-03-14'
+$query->filterByUpdatedAt('now'); // WHERE updated</em>at = '2011-03-14'
+$query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2011-03-13'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$updatedAt</td>
+                <td>The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByFolder">
+        <div class="location">at line 492</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByFolder</strong>(<a href="../../../Thelia/Model/Folder.html"><abbr title="Thelia\Model\Folder">Folder</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $folder, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a related \Thelia\Model\Folder object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/Folder.html"><abbr title="Thelia\Model\Folder">Folder</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$folder</td>
+                <td>The related object(s) to use as filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinFolder">
+        <div class="location">at line 517</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>joinFolder</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query using the Folder relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useFolderQuery">
+        <div class="location">at line 552</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderQuery.html"><abbr title="Thelia\Model\FolderQuery">FolderQuery</abbr></a>
+    <strong>useFolderQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Use the Folder relation Folder object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation, to be used as main alias in the secondary query</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderQuery.html"><abbr title="Thelia\Model\FolderQuery">FolderQuery</abbr></a></td>
+            <td>A secondary query class using the current class as primary query</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>useQuery()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_filterByFolderImageI18n">
+        <div class="location">at line 567</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>filterByFolderImageI18n</strong>(<a href="../../../Thelia/Model/FolderImageI18n.html"><abbr title="Thelia\Model\FolderImageI18n">FolderImageI18n</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $folderImageI18n, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a related \Thelia\Model\FolderImageI18n object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/FolderImageI18n.html"><abbr title="Thelia\Model\FolderImageI18n">FolderImageI18n</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$folderImageI18n</td>
+                <td>the related object to use as filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinFolderImageI18n">
+        <div class="location">at line 590</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>joinFolderImageI18n</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query using the FolderImageI18n relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useFolderImageI18nQuery">
+        <div class="location">at line 625</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageI18nQuery.html"><abbr title="Thelia\Model\FolderImageI18nQuery">FolderImageI18nQuery</abbr></a>
+    <strong>useFolderImageI18nQuery</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Use the FolderImageI18n relation FolderImageI18n object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation, to be used as main alias in the secondary query</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageI18nQuery.html"><abbr title="Thelia\Model\FolderImageI18nQuery">FolderImageI18nQuery</abbr></a></td>
+            <td>A secondary query class using the current class as primary query</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>useQuery()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_prune">
+        <div class="location">at line 639</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>prune</strong>(<a href="../../../Thelia/Model/FolderImage.html"><abbr title="Thelia\Model\FolderImage">FolderImage</abbr></a> $folderImage = null)</code>
+    </h3>
+    <div class="details">
+        <p>Exclude object from result</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/FolderImage.html"><abbr title="Thelia\Model\FolderImage">FolderImage</abbr></a></td>
+                <td>$folderImage</td>
+                <td>Object to remove from the list of results</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doDeleteAll">
+        <div class="location">at line 654</div>
+        <code>            public            int
+    <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all rows from the folder_image table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of affected rows (if supported by underlying database driver).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 691</div>
+        <code>            public            int
+    <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Performs a DELETE on the database, given a ChildFolderImage or Criteria object OR a primary key value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>Any exceptions caught during processing will be rethrown wrapped into a PropelException.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_recentlyUpdated">
+        <div class="location">at line 732</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>recentlyUpdated</strong>(int $nbDays = 7)</code>
+    </h3>
+    <div class="details">
+        <p>Filter by the latest updated</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$nbDays</td>
+                <td>Maximum age of the latest update in days</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_recentlyCreated">
+        <div class="location">at line 744</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>recentlyCreated</strong>(int $nbDays = 7)</code>
+    </h3>
+    <div class="details">
+        <p>Filter by the latest created</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$nbDays</td>
+                <td>Maximum age of in days</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_lastUpdatedFirst">
+        <div class="location">at line 754</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>lastUpdatedFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Order by update date desc</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_firstUpdatedFirst">
+        <div class="location">at line 764</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>firstUpdatedFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Order by update date asc</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_lastCreatedFirst">
+        <div class="location">at line 774</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>lastCreatedFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Order by create date desc</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_firstCreatedFirst">
+        <div class="location">at line 784</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>firstCreatedFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Order by create date asc</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinI18n">
+        <div class="location">at line 800</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>joinI18n</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query using the i18n relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>Locale to use for the join condition, e.g. 'fr_FR'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinWithI18n">
+        <div class="location">at line 818</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a>
+    <strong>joinWithI18n</strong>(string $locale = &#039;en_US&#039;, string $joinType = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query and hydrates the related I18n object.</p>
+        <p>Shortcut for $c->joinI18n($locale)->with()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>Locale to use for the join condition, e.g. 'fr_FR'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageQuery.html"><abbr title="Thelia\Model\FolderImageQuery">FolderImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useI18nQuery">
+        <div class="location">at line 839</div>
+        <code>            public            <a href="../../../Thelia/Model/FolderImageI18nQuery.html"><abbr title="Thelia\Model\FolderImageI18nQuery">FolderImageI18nQuery</abbr></a>
+    <strong>useI18nQuery</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Use the I18n relation query object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>Locale to use for the join condition, e.g. 'fr_FR'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/FolderImageI18nQuery.html"><abbr title="Thelia\Model\FolderImageI18nQuery">FolderImageI18nQuery</abbr></a></td>
+            <td>A secondary query class using the current class as primary query</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>useQuery()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_orderById">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>orderById</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByFolderId">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>orderByFolderId</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the folder_id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByFile">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>orderByFile</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the file column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByPosition">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>orderByPosition</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByCreatedAt">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>orderByCreatedAt</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByUpdatedAt">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>orderByUpdatedAt</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupById">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>groupById</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByFolderId">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>groupByFolderId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the folder_id column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByFile">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>groupByFile</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the file column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByPosition">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>groupByPosition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByCreatedAt">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>groupByCreatedAt</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByUpdatedAt">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>groupByUpdatedAt</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leftJoin">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>leftJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoin">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>rightJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoin">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>innerJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leftJoinFolder">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>leftJoinFolder</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query using the Folder relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoinFolder">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>rightJoinFolder</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query using the Folder relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoinFolder">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>innerJoinFolder</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query using the Folder relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leftJoinFolderImageI18n">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>leftJoinFolderImageI18n</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query using the FolderImageI18n relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoinFolderImageI18n">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>rightJoinFolderImageI18n</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query using the FolderImageI18n relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoinFolderImageI18n">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr>
+    <strong>innerJoinFolderImageI18n</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query using the FolderImageI18n relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImageQuery">ChildFolderImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOne">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOne</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage matching the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ConnectionInterface ">ConnectionInterface </abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneOrCreate">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOneOrCreate</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage matching the query, or a new ChildFolderImage object populated from the query conditions when no match is found</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ConnectionInterface ">ConnectionInterface </abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneById">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOneById</strong>(<abbr title="int ">int </abbr> $id)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage filtered by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByFolderId">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOneByFolderId</strong>(<abbr title="int ">int </abbr> $folder_id)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage filtered by the folder_id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$folder_id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByFile">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOneByFile</strong>(<abbr title="string ">string </abbr> $file)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage filtered by the file column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$file</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByPosition">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOneByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage filtered by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$position</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByCreatedAt">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOneByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage filtered by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$created_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByUpdatedAt">
+        <div class="location">at line 69</div>
+        <code>                        <abbr title="ChildFolderImage">ChildFolderImage</abbr>
+    <strong>findOneByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildFolderImage filtered by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$updated_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildFolderImage">ChildFolderImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findById">
+        <div class="location">at line 69</div>
+        <code>                        array
+    <strong>findById</strong>(<abbr title="int ">int </abbr> $id)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildFolderImage objects filtered by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByFolderId">
+        <div class="location">at line 69</div>
+        <code>                        array
+    <strong>findByFolderId</strong>(<abbr title="int ">int </abbr> $folder_id)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildFolderImage objects filtered by the folder_id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$folder_id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByFile">
+        <div class="location">at line 69</div>
+        <code>                        array
+    <strong>findByFile</strong>(<abbr title="string ">string </abbr> $file)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildFolderImage objects filtered by the file column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$file</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByPosition">
+        <div class="location">at line 69</div>
+        <code>                        array
+    <strong>findByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildFolderImage objects filtered by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$position</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByCreatedAt">
+        <div class="location">at line 69</div>
+        <code>                        array
+    <strong>findByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildFolderImage objects filtered by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$created_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByUpdatedAt">
+        <div class="location">at line 69</div>
+        <code>                        array
+    <strong>findByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildFolderImage objects filtered by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$updated_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -47,7 +47,7 @@ return new Sami($iterator, array(
     'theme'                => 'enhanced',
     'versions'             => $versions,
     'title'                => 'Thelia 2 API',
-    'build_dir'            => __DIR__.'api/%version%',
-    'cache_dir'            => __DIR__.'cache/api/%version%',
-    'default_opened_level' => 1,
+    'build_dir'            => __DIR__.'/api/%version%',
+    'cache_dir'            => __DIR__.'/cache/api/%version%',
+    'default_opened_level' => 2,
 ));

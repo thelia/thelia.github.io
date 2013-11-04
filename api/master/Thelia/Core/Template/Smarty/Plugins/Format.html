@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\Template\Smarty\Plugins\Format | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../Thelia/Core/Template/Smarty/Plugins.html">Thelia\Core\Template\Smarty\Plugins</a>\Format</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Format</strong>        extends <abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></p>
+
+            <div class="description">
+            <p>format<em>date and format</em>date smarty function.</p>
+            <p>Class Format</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr> $request)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_formatDate">formatDate</a>(array $params, null $template = null)
+                    <p>return date in expected format</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_formatNumber">formatNumber</a>(<abbr title="Thelia\Core\Template\Smarty\Plugins\$params">$params</abbr> $params, null $template = null)
+                    <p>display numbers in expected format</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getPluginDescriptors">getPluginDescriptors</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 45</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr> $request)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatDate">
+        <div class="location">at line 71</div>
+        <code>            public            string
+    <strong>formatDate</strong>(array $params, null $template = null)</code>
+    </h3>
+    <div class="details">
+        <p>return date in expected format</p>
+        <p>available parameters :
+ date => DateTime object (mandatory)
+ format => expected format
+ output => list of default system format. Values available :
+     date => date format
+     time => time format
+     datetime => datetime format (default)</p>
+
+<p>ex :
+ {format<em>date date=$dateTimeObject format="Y-m-d H:i:s"} will output the format with specific format
+ {format</em>date date=$dateTimeObject output="date"} will output the date using the default date system format
+ {format_date date=$dateTimeObject} will output with the default datetime system format</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>null</td>
+                <td>$template</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Smarty\Exception\SmartyPluginException">SmartyPluginException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatNumber">
+        <div class="location">at line 119</div>
+        <code>            public            string
+    <strong>formatNumber</strong>(<abbr title="Thelia\Core\Template\Smarty\Plugins\$params">$params</abbr> $params, null $template = null)</code>
+    </h3>
+    <div class="details">
+        <p>display numbers in expected format</p>
+        <p>available parameters :
+ number => int or float number
+ decimals => how many decimals format expected
+ dec<em>point => separator for the decimal point
+ thousands</em>sep => thousands separator</p>
+
+<p>ex : {format<em>number number="1246.12" decimals="1" dec</em>point="," thousands_sep=" "} will output "1 246,1"</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Smarty\Plugins\$params">$params</abbr></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>null</td>
+                <td>$template</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the expected number formatted</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Smarty\Exception\SmartyPluginException">SmartyPluginException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPluginDescriptors">
+        <div class="location">at line 142</div>
+        <code>            public            <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
+    <strong>getPluginDescriptors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr></td>
+            <td>array of SmartyPluginDescriptor</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

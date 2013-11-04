@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Model\Customer | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Model.html">Thelia\Model</a>\Customer</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Customer</strong>        extends <abbr title="Thelia\Model\Base\Customer">Customer</abbr>        implements
+        <abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></p>
+
+            <div class="description">
+            <p>Skeleton subclass for representing a row from the 'customer' table.</p>
+            <p>You should add additional methods to this class to meet the
+application requirements.  This class will only be generated as
+long as it does not already exist in the output directory.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_createOrUpdate">createOrUpdate</a>($titleId, $firstname, $lastname, $address1, $address2, $address3, $phone, $cellphone, $zipcode, $city, $countryId, $email = null, $plainPassword = null, $lang = null, $reseller, $sponsor = null, $discount, $company = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultAddress">getDefaultAddress</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Model\$this">$this</abbr>|<a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setPassword">setPassword</a>(string $password)
+                    <p>Set the value of [password] column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setEmail">setEmail</a>($email, $force = false)
+                    <p>Set the value of [email] column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getUsername">getUsername</a>()
+                    <p>Return the user unique name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_checkPassword">checkPassword</a>($password)
+                    <p>Check a string against a the user password</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_eraseCredentials">eraseCredentials</a>()
+                    <p>Removes sensitive data from the user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Security\User\Role">Role</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRoles">getRoles</a>()
+                    <p>Returns the roles granted to the user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getToken">getToken</a>()
+                    <p>return the user token (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setToken">setToken</a>($token)
+                    <p>Set a token in the user data (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getSerial">getSerial</a>()
+                    <p>return the user serial  (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSerial">setSerial</a>($serial)
+                    <p>Set a serial number int the user data  (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preInsert">preInsert</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run before inserting to database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postInsert">postInsert</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run after inserting to database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preUpdate">preUpdate</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run before updating the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postUpdate">postUpdate</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run after updating the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_preDelete">preDelete</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run before deleting the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postDelete">postDelete</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Code to be run after deleting the object in database</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_createOrUpdate">
+        <div class="location">at line 57</div>
+        <code>            public            
+    <strong>createOrUpdate</strong>($titleId, $firstname, $lastname, $address1, $address2, $address3, $phone, $cellphone, $zipcode, $city, $countryId, $email = null, $plainPassword = null, $lang = null, $reseller, $sponsor = null, $discount, $company = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$titleId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$firstname</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$lastname</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$address1</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$address2</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$address3</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$phone</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cellphone</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$zipcode</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$city</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$countryId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$email</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$plainPassword</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$lang</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$reseller</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$sponsor</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$discount</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$company</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exception|\Symfony\Component\Config\Definition\Exception\Exception">Exception</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultAddress">
+        <div class="location">at line 137</div>
+        <code>            public            <a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>
+    <strong>getDefaultAddress</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPassword">
+        <div class="location">at line 152</div>
+        <code>            public            <abbr title="Thelia\Model\$this">$this</abbr>|<a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>setPassword</strong>(string $password)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of [password] column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>plain password before hashing</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\$this">$this</abbr>|<a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEmail">
+        <div class="location">at line 165</div>
+        <code>            public            <a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>setEmail</strong>($email, $force = false)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of [email] column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$email</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$force</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUsername">
+        <div class="location">at line 183</div>
+        <code>            public            
+    <strong>getUsername</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the user unique name</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_checkPassword">
+        <div class="location">at line 190</div>
+        <code>            public            
+    <strong>checkPassword</strong>($password)</code>
+    </h3>
+    <div class="details">
+        <p>Check a string against a the user password</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$password</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_eraseCredentials">
+        <div class="location">at line 198</div>
+        <code>            public            void
+    <strong>eraseCredentials</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Removes sensitive data from the user.</p>
+        <p>This is important if, at any given point, sensitive information like
+the plain-text password is stored on this object.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoles">
+        <div class="location">at line 205</div>
+        <code>            public            <abbr title="Thelia\Core\Security\User\Role">Role</abbr>[]
+    <strong>getRoles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the roles granted to the user.</p>
+        <p><code>
+public function getRoles()
+{
+    return array('USER');
+}
+</code></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Security\User\Role">Role</abbr>[]</td>
+            <td>The user roles</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getToken">
+        <div class="location">at line 212</div>
+        <code>            public            
+    <strong>getToken</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return the user token (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setToken">
+        <div class="location">at line 219</div>
+        <code>            public            
+    <strong>setToken</strong>($token)</code>
+    </h3>
+    <div class="details">
+        <p>Set a token in the user data (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$token</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSerial">
+        <div class="location">at line 226</div>
+        <code>            public            
+    <strong>getSerial</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return the user serial  (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSerial">
+        <div class="location">at line 233</div>
+        <code>            public            
+    <strong>setSerial</strong>($serial)</code>
+    </h3>
+    <div class="details">
+        <p>Set a serial number int the user data  (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preInsert">
+        <div class="location">at line 240</div>
+        <code>            public            boolean
+    <strong>preInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before inserting to database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postInsert">
+        <div class="location">at line 254</div>
+        <code>            public            
+    <strong>postInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after inserting to database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preUpdate">
+        <div class="location">at line 262</div>
+        <code>            public            boolean
+    <strong>preUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before updating the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postUpdate">
+        <div class="location">at line 271</div>
+        <code>            public            
+    <strong>postUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after updating the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preDelete">
+        <div class="location">at line 279</div>
+        <code>            public            boolean
+    <strong>preDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run before deleting the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postDelete">
+        <div class="location">at line 288</div>
+        <code>            public            
+    <strong>postDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Code to be run after deleting the object in database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
