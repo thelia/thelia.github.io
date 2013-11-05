@@ -50,3 +50,8 @@ Here the module.xml file for the Cheque module
 </module>
 
 ```
+<br />
+##config.xml file
+
+The config.xml complete the container definition. If you want to know what are services, container, dependency inject, etc, refer to the symfony documentation : [http://symfony.com/doc/2.2/components/dependency_injection/index.html](http://symfony.com/doc/2.2/components/dependency_injection/index.html)
+
