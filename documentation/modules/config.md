@@ -55,3 +55,47 @@ Here the module.xml file for the Cheque module
 
 The config.xml complete the container definition. If you want to know what are services, container, dependency inject, etc, refer to the symfony documentation : [http://symfony.com/doc/2.2/components/dependency_injection/index.html](http://symfony.com/doc/2.2/components/dependency_injection/index.html)
 
+Here an exemple with the config file from TheliaDebugBar module
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config xmlns="http://thelia.net/schema/dic/config"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://thelia.net/schema/dic/config http://thelia.net/schema/dic/config/thelia-1.0.xsd">
+
+    <loops>
+        <!-- sample definition
+        <loop name="MySuperLoop" class="MyModule\Loop\MySuperLoop" />
+        -->
+    </loops>
+
+    <forms>
+        <!--
+        <form name="MyFormName" class="MyModule\Form\MySuperForm" />
+        -->
+    </forms>
+
+    <commands>
+        <!--
+        <command class="MyModule\Command\MySuperCommand" />
+        -->
+    </commands>
+
+    <services>
+        <service id="debugBar" class="DebugBar\DebugBar"/>
+
+        <service id="smarty.debugbar" class="TheliaDebugBar\Smarty\Plugin\DebugBar">
+            <argument type="service" id="debugBar"/>
+            <argument >%kernel.debug%</argument>
+            <tag name="thelia.parser.register_plugin"/>
+        </service>
+
+        <service id="debugBar.listener" class="TheliaDebugBar\Listeners\DebugBarListeners">
+            <argument type="service" id="service_container"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+    </services>
+</config>
+
+```
