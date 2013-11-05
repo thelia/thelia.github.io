@@ -99,3 +99,17 @@ Here an exemple with the config file from TheliaDebugBar module
 </config>
 
 ```
+
+##schema.xml file
+
+This file describe your tables as XML schema. All you have to know about this file is explain in the [Propel documentation](http://propelorm.org/documentation/02-buildtime.html#describing-your-database-as-xml-schema)
+
+This file is only use when you develop your module. it's generated using the command line ``` $ php Thelia module:generate ModuleName ```. You just have to describe your tables, generate the model and
+the sql but don't share it.
+
+Once you created your xml schema, generate your model and sql :
+
+```
+$ php Thelia module:generate:module ModuleName --generate-sql
+```
+
