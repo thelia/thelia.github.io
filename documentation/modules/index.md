@@ -25,8 +25,9 @@ The structure of your module is like this :
   \modules
     \MyModule
       \Config
-        config.xml
+        config.xml   <- mandatory
         module.xml   <- mandatory
+        schema.xml
       MyModule.php <- mandatory
       \Loop
         Product.php
@@ -39,9 +40,8 @@ class MyModule in the MyModule.php file. Remember, your module must be [PSR-0](h
  namespace use is mandatory and it's good for you). The other mandatory file is module.xml. This file contains
  information about module like compatibility and dependencies with other modules.
 
-The config file (Config/config.xml) is not mandatory but highly recommended. With this file you can declare all your
-services like event listeners, all your elements for Tpex execution (loops, filters, baseParams,
-TestLoops) and commands.
+The config file (Config/config.xml) is mandatory. With this file you can declare all your
+services like event listeners, loops, forms or commands.
 
 Here is the body of your config.xml file :
 
@@ -55,3 +55,34 @@ Here is the body of your config.xml file :
 
 </config>
 ```
+<br />
+#Module and Command line
+
+Command line is very usefull for generating many thinks around modules.
+
+##How to generate a new module
+
+```
+$ php Thelia module:generate ModuleName
+```
+<br />
+This command line generate a module with all needed classes, files and folders
+
+##How to generate the model
+
+```
+$ php Thelia module:generate:model ModuleName
+```
+<br />
+This command search the schema.xml file and parse it using Propel command line. This file is explain in this chapter.
+
+##How to generate the sql
+
+```
+$ php Thelia module:generate:sql ModuleName
+```
+<br />
+Just like the precedent command, schema.xml is parsed and sql file is created in Config folder.
+
+
+

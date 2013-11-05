@@ -20,7 +20,6 @@ www <- your web root directory
         bin
         cache
         core
-        documentation
         install
         local
             config
