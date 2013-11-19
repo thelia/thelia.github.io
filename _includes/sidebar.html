@@ -7,7 +7,9 @@
             {% for subsection in section.subsections %}
             <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
                 {% if subsection.url != nil AND subsection.url != '' %}
-                <a href="{{ subsection.url }}">{{ subsection.name }}</a>{% else %}{{ subsection.name }}
+                    <a href="{{ subsection.url }}">{{ subsection.name }}</a>
+                {% else %}
+                    <a href="#" class="disabled"><strong>{{ subsection.name }}</strong></a>
                 {% endif %}
 
                 {% if subsection.subsections != null %}

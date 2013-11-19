@@ -1,15 +1,23 @@
-    <h3>Arguments</h3>
-
-    <p class="alert alert-info">
+<div class="alert alert-warning">
+    <h4>Important informations :</h4>
+    <p>
         * : argument is mandatory<br />
         ** : one of any ** marked argument is mandatory
     </p>
+</div>
 
-    {% if page.uses_global_argument == true %}
-        <h4>Global arguments</h4>
+{% if page.uses_global_argument == true %}
+    <h4>Global arguments</h4>
 
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered">
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Argument</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
             {% for argument in page.global_arguments %}
 
                 {% assign overwritten = false %}
@@ -57,47 +65,56 @@
                 {% endif %}
 
             {% endfor %}
-            </table>
-        </div>
-    {% endif %}
-
-    <h4>Loop arguments</h4>
-
-    <div class="table-responsive">
-        <table class="table table-striped table-bordered">
-            {% for argument in page.arguments %}
-            <tr>
-                <td>
-                    {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
-                </td>
-                <td>
-                    <p>{{ argument.description }}</p>
-
-                    {% if argument.expected_values != nil AND argument.expected_values != '' %}
-                    <div class="expected_values">
-                        Expected values :
-                        <ul>
-                            {% for expected_value in argument.expected_values %}
-                            <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-
-                    {% if argument.default != nil AND argument.default != '' %}
-                    <p>
-                        <strong>default</strong> : {{ argument.default }}
-                    </p>
-                    {% endif %}
-
-                    {% if argument.example != nil AND argument.example != '' %}
-                    <p>
-                        example : <em>{{ argument.example }}</em>
-                    </p>
-                    {% endif %}
-
-                </td>
-            </tr>
-            {% endfor %}
+            </tbody>
         </table>
     </div>
+{% endif %}
+
+<h4>Loop arguments</h4>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Argument</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for argument in page.arguments %}
+        <tr>
+            <td>
+                {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+            </td>
+            <td>
+                <p>{{ argument.description }}</p>
+
+                {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                <div class="expected_values">
+                    Expected values :
+                    <ul>
+                        {% for expected_value in argument.expected_values %}
+                        <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                {% if argument.default != nil AND argument.default != '' %}
+                <p>
+                    <strong>default</strong> : {{ argument.default }}
+                </p>
+                {% endif %}
+
+                {% if argument.example != nil AND argument.example != '' %}
+                <p>
+                    example : <em>{{ argument.example }}</em>
+                </p>
+                {% endif %}
+
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

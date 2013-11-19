@@ -56,17 +56,21 @@ versionable : [
 
             <hr />
 
-            {% include loop/argument_row.html %}
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#argument" data-toggle="tab">Arguments</a></li>
+                <li><a href="#output" data-toggle="tab">Outputs</a></li>
+                <li><a href="#exemple" data-toggle="tab">Exemples</a></li>
+            </ul>
 
-            {% include loop/output_row.html %}
-
-            <div class="large-12 columns">
-                <h3>Examples</h3>
-
-                <div class="loop-example large-12">
-
-                    {{ content }}
-
+            <div class="tab-content">
+                <div class="tab-pane active fade in" id="argument">
+                    {% include loop/argument_row.html %}
+                </div>
+                <div class="tab-pane fade" id="output">
+                    {% include loop/output_row.html %}
+                </div>
+                <div class="tab-pane fade" id="exemple">
+                    {% include loop/exemple_row.html %}
                 </div>
             </div>
 
