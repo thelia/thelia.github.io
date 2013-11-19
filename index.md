@@ -4,6 +4,9 @@ title: index
 sidebar: index
 ---
 
+Welcome on Thelia 2 Documentation
+---------------------------------
+
 Thelia is an open source tool for creating e-business websites and managing online content. This software is published under GPL.
 
 Here is the current developping next major version. You can download this version for testing or see the code.
