@@ -1,22 +1,10 @@
+<!-- JavaScript -->
+<!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!--<![endif]-->
 <script>
-    document.write('<script src=' +
-            ('__proto__' in {} ? '/javascripts/vendor/zepto' : '/javascripts/vendor/jquery') +
-            '.js><\/script>')
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='js/libs/jquery.js' %3E%3C/script%3E"));
+    }
 </script>
-<script src="/javascripts/foundation/foundation.js"></script>
-<script src="/javascripts/foundation/foundation.alerts.js"></script>
-<script src="/javascripts/foundation/foundation.joyride.js"></script>
-<script src="/javascripts/foundation/foundation.placeholder.js"></script>
-<script src="/javascripts/foundation/foundation.clearing.js"></script>
-<script src="/javascripts/foundation/foundation.dropdown.js"></script>
-<script src="/javascripts/foundation/foundation.reveal.js"></script>
-<script src="/javascripts/foundation/foundation.orbit.js"></script>
-<script src="/javascripts/foundation/foundation.forms.js"></script>
-<script src="/javascripts/foundation/foundation.magellan.js"></script>
-<script src="/javascripts/foundation/foundation.tooltips.js"></script>
-<script src="/javascripts/foundation/foundation.cookie.js"></script>
-<script src="/javascripts/foundation/foundation.section.js"></script>
-<script src="/javascripts/foundation/foundation.topbar.js"></script>
-<script>
-    $(document).foundation();
-</script>
+
+<script src="js/libs/bootstrap.min.js"></script>
