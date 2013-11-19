@@ -16,7 +16,28 @@
         <div class="col-lg-3 col-md-3 col-sm-3">
             <aside role="navigation" class="thelia-sidebar affix">{% include sidebar.html %}</aside>
         </div>
-        <main role="main" class="col-lg-9  col-md-9 col-sm-9">{{content}}</main>
+        <main role="main" class="col-lg-9  col-md-9 col-sm-9">
+
+            <h1>{{ page.title }}</h1>
+
+            {% for description_p in page.description %}
+
+            <p>{{ description_p }}</p>
+
+            {% endfor %}
+
+{% highlight smarty %}
+{{ page.prefix | prepend: '{' }} {% if page.attribute != nil and page.attribute != '' %}{{ page.attribute }}{% else %}attr{% endif %}="one_of_the_following"}
+{% endhighlight %}
+
+            <hr />
+
+
+            {% include substitution/attribute_row.html %}
+
+
+        </main>
+
     </section>
 </section>
 

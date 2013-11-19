@@ -1,0 +1,81 @@
+---
+global_arguments :
+- {name: "name", description: "The loop name. This name must be unique and is used to reference this loop further in the page (see ifloop, elseloop or pageloop)", mandatory: "true"}
+- {name: "page", description: "The page to display.", example: "page=\"2\""}
+- {name: "limit", description: "The maximum number of results to display.", example: "limit=\"10\""}
+- {name: "offset", description: "The first product to display offset. Will not be used if `page` argument is set.", example: "offset=\"1\"", default: "0"}
+- {name: "backend_context", description: "Determine if loop is use in backend context.", example: "backend_context=\"on\"", default: "false"}
+- {name: "force_return", description: "force return result for i18n tables even if there is no record", example: "force_return=\"on\"", default: "false"}
+global_outputs : {
+countable : [
+{ name: "$LOOP_COUNT", description: "the current results index starting from 1" },
+{ name: "$LOOP_TOTAL", description: "the total number of results" }
+],
+timestampable : [
+{ name: "$CREATE_DATE", description: "" },
+{ name: "$UPDATE_DATE", description: "" }
+],
+versionable : [
+{ name: "$VERSION", description: "" },
+{ name: "$VERSION_DATE", description: "" },
+{ name: "$VERSION_AUTHOR", description: "" }
+]
+}
+---
+<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js oldie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+
+<body>
+
+{% include navbar.html %}
+
+<section class="container">
+    <section class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <aside role="navigation" class="thelia-sidebar affix">{% include sidebar.html %}</aside>
+        </div>
+        <main role="main" class="col-lg-9  col-md-9 col-sm-9">
+
+            <h1>{{ page.title }}</h1>
+
+            {% for description_p in page.description %}
+
+            <p>{{ description_p }}</p>
+
+            {% endfor %}
+
+{% highlight smarty %}
+{loop type="{{ page.type }}" [argument="value"], [...]}
+{% endhighlight %}
+
+            <hr />
+
+            {% include loop/argument_row.html %}
+
+            {% include loop/output_row.html %}
+
+            <div class="large-12 columns">
+                <h3>Examples</h3>
+
+                <div class="loop-example large-12">
+
+                    {{ content }}
+
+                </div>
+            </div>
+
+        </main>
+
+    </section>
+</section>
+
+{% include footer.html %}
+
+</body>
+</html>

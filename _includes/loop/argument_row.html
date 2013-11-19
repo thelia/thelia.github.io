@@ -1,106 +1,103 @@
-<div class="large-12 columns">
     <h3>Arguments</h3>
 
-    <p class="h3-information">
+    <p class="alert alert-info">
         * : argument is mandatory<br />
         ** : one of any ** marked argument is mandatory
     </p>
 
     {% if page.uses_global_argument == true %}
+        <h4>Global arguments</h4>
 
-    <h4>Global arguments</h4>
-    {% for argument in page.global_arguments %}
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+            {% for argument in page.global_arguments %}
 
-    {% assign overwritten = false %}
-    {% for pageargument in page.arguments %}
-        {% if pageargument.name == argument.name %}
-            {% assign overwritten = true %}
-        {% endif %}
-    {% endfor %}
+                {% assign overwritten = false %}
+                {% for pageargument in page.arguments %}
+                    {% if pageargument.name == argument.name %}
+                        {% assign overwritten = true %}
+                    {% endif %}
+                {% endfor %}
 
-    {% if overwritten == false %}
+                {% if overwritten == false %}
 
-    <div class="loop-argument large-12">
-        <div class="name large-3">
-            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+                    <tr>
+                        <td>
+                            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+                        </td>
+                        <td>
+                            <p>{{ argument.description }}</p>
+
+                            {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                            <div class="expected_values">
+                                Expected values :
+                                <ul>
+                                    {% for expected_value in argument.expected_values %}
+                                    <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+
+                            {% if argument.default != nil AND argument.default != '' %}
+                            <p>
+                                <strong>default</strong> : {{ argument.default }}
+                            </p>
+                            {% endif %}
+
+                            {% if argument.example != nil AND argument.example != '' %}
+                            <p>
+                                example : <em>{{ argument.example }}</em>
+                            </p>
+                            {% endif %}
+
+                        </td>
+                    </tr>
+
+                {% endif %}
+
+            {% endfor %}
+            </table>
         </div>
-        <div class="information large-9">
-
-            <div class="description">
-                {{ argument.description }}
-            </div>
-
-            {% if argument.expected_values != nil AND argument.expected_values != '' %}
-            <div class="expected_values">
-                Expected values :
-                <ul>
-                    {% for expected_value in argument.expected_values %}
-                    <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-
-            {% if argument.default != nil AND argument.default != '' %}
-            <div class="default">
-                <strong>default</strong> : {{ argument.default }}
-            </div>
-            {% endif %}
-
-            {% if argument.example != nil AND argument.example != '' %}
-            <div class="example">
-                example : <em>{{ argument.example }}</em>
-            </div>
-            {% endif %}
-
-        </div>
-        <div style="clear: both"></div>
-    </div>
-
     {% endif %}
-
-    {% endfor %}
 
     <h4>Loop arguments</h4>
 
-    {% endif %}
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            {% for argument in page.arguments %}
+            <tr>
+                <td>
+                    {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+                </td>
+                <td>
+                    <p>{{ argument.description }}</p>
 
-    {% for argument in page.arguments %}
-    <div class="loop-argument large-12">
-        <div class="name large-3">
-            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
-        </div>
-        <div class="information large-9">
+                    {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                    <div class="expected_values">
+                        Expected values :
+                        <ul>
+                            {% for expected_value in argument.expected_values %}
+                            <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
 
-            <div class="description">
-                {{ argument.description }}
-            </div>
+                    {% if argument.default != nil AND argument.default != '' %}
+                    <p>
+                        <strong>default</strong> : {{ argument.default }}
+                    </p>
+                    {% endif %}
 
-            {% if argument.expected_values != nil AND argument.expected_values != '' %}
-            <div class="expected_values">
-                Expected values :
-                <ul>
-                    {% for expected_value in argument.expected_values %}
-                    <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
+                    {% if argument.example != nil AND argument.example != '' %}
+                    <p>
+                        example : <em>{{ argument.example }}</em>
+                    </p>
+                    {% endif %}
 
-            {% if argument.default != nil AND argument.default != '' %}
-            <div class="default">
-                <strong>default</strong> : {{ argument.default }}
-            </div>
-            {% endif %}
-
-            {% if argument.example != nil AND argument.example != '' %}
-            <div class="example">
-                example : <em>{{ argument.example }}</em>
-            </div>
-            {% endif %}
-
-        </div>
-        <div style="clear: both"></div>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
-    {% endfor %}
-</div>
