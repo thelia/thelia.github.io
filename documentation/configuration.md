@@ -4,11 +4,13 @@ title: Configuration
 sidebar: configuration
 ---
 
-#How to configure ?
+<div class="page-header">
+    <h1>Configuration</h1>
+</div>
 
 Currently you can only configure your database connection with config files. All other configuration have to be developed and certainly use database storage.
 
-##Server Configuration
+###Server Configuration
 
 Thelia needs at least php 5.4, an any http server (eg : apache2) and mysql (sqlite and pgsql will be support soon)
 
@@ -63,7 +65,7 @@ Apache write in some directories so check this directories and change their righ
 * local/session
 
 
-##Database configuration
+###Database configuration
 
 In order to configure your database connection, you have to rename the ```local/config/database.yml.sample``` file into ```local/config/database.yml``` and edit it.
 

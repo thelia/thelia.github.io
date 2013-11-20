@@ -4,8 +4,9 @@ title: index
 sidebar: index
 ---
 
-Welcome on Thelia 2 Documentation
----------------------------------
+<div class="page-header">
+    <h1>Presentation</h1>
+</div>
 
 Thelia is an open source tool for creating e-business websites and managing online content. This software is published under GPL.
 
@@ -14,8 +15,9 @@ Here is the most recent developed code for the next major version (v2). You can 
 
 Most part of the code can possibly change, a large part will be refactor soon, graphical setup does not exist yet.
 
-Requirements
-------------
+<div class="page-header">
+    <h1>Requirements</h1>
+</div>
 
 * php 5.4
     * Required extensions :
@@ -43,8 +45,11 @@ export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
 * configure a complete development environment : http://php-osx.liip.ch/
 * use a virtual machine with vagrant and puppet : https://puphpet.com/
 
-Installation
-------------
+<div class="page-header">
+    <h1>Installation</h1>
+</div>
+
+###Download Thelia 2
 
 ``` bash
 $ git clone --recursive https://github.com/thelia/thelia.git
@@ -61,13 +66,13 @@ $ php Thelia thelia:install
 
 You just have to follow all instructions.
 
-##How to create an admin account ?
+###How to create an admin account ?
 
 ```bash
 $ php Thelia thelia:create-admin
 ```
 <br />
-##How to insert fake data ?
+###How to insert fake data ?
 
 For a demo with fake but realistic products
 
@@ -81,7 +86,7 @@ For dev data
 $ php install/faker.php
 ```
 <br />
-##How to reset my database
+###How to reset my database
 
 (composer must be install globally http://getcomposer.org/doc/00-intro.md#globally)
 
@@ -91,8 +96,9 @@ $ ./reset_install.sh
 
 this task reload the database, insert fake data using faker script and create an admin with thelia2 as username and password
 
-Usage
------
+<div class="page-header">
+    <h1>Usage</h1>
+</div>
 
 Consult the page : http://localhost/thelia/web/index_dev.php
 
