@@ -1,65 +1,25 @@
-
-<!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-
+<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js oldie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
 <head>
     {% include header.html %}
 </head>
+
 <body>
-<!-- Nav Bar -->
+
 {% include navbar.html %}
-<!-- End Nav -->
 
-
-<!-- Main Page Content and Sidebar -->
-
-<div class="row">
-
-    <!-- Main Content -->
-    <div class="large-9 columns" role="content">
-        {{ content }}
-    </div>
-
-    <!-- End Main Content -->
-
-
-    {% include sidebar.html %}
-</div>
-
-<!-- End Main Content and Sidebar -->
-
-
-<!-- Footer -->
-
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <div class="row">
-            <div class="small-2 large-4 columns">
-            <ul>
-                <li>
-                    <a href="/api/master">Thelia API</a>
-                </li>
-            </ul>
-            </div>
-            <div class="small-4 large-4 columns">
-                <ul>
-                    <li>
-                        <a href="http://thelia.net/v2">thelia.net</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="small-6 large-4 columns">
-                <ul>
-                    <li>
-                        <a href="http://thelia.net/forum">Forum</a>
-                    </li>
-                </ul>
-            </div>
+<section class="container">
+    <section class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <aside role="navigation" class="thelia-sidebar">{% include sidebar.html %}</aside>
         </div>
-    </div>
-</footer>
-{%include footer.html %}
+        <main role="main" class="col-lg-9  col-md-9 col-sm-9">{{content}}</main>
+    </section>
+</section>
+
+{% include footer.html %}
 </body>
 </html>

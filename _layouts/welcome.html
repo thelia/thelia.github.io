@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js oldie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+
+<body>
+
+{% include navbar.html %}
+
+<section class="container">
+    <section class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <aside role="navigation" class="thelia-sidebar">{% include sidebar.html %}</aside>
+        </div>
+        <main role="main" class="col-lg-9  col-md-9 col-sm-9">
+            <div class="page-header">
+                <h1>{{page.title}}</h1>
+            </div>
+
+            <p class="lead">{{page.welcome.lead}}</p>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-lg-4">
+                        <img src="/img/visuel-home-thelia.png" class="img-responsive" />
+                    </div>
+                    <div class="col-lg-8">
+                        {{page.welcome.text}}
+
+                        <a href="http://thelia.net/v2/#front" class="btn btn-warning"><span class="fa fa-arrow-circle-right"></span> {{page.welcome.demo}}</a>
+                        <a href="https://github.com/thelia/thelia" class="btn btn-default"><span class="fa fa-github-alt"></span> {{page.welcome.sources}}</a>
+                    </div>
+                </div>
+            </div>
+
+            {{content}}
+        </main>
+    </section>
+</section>
+
+{% include footer.html %}
+
+</body>
+</html>

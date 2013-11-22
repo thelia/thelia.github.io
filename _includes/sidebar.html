@@ -1,31 +1,39 @@
-<!-- Sidebar -->
-<aside class="large-3 columns">
-    <div class="section-container accordion " data-section="accordion">
+<ul class="nav thelia-sidenav">
+{% for lang in site.languages %}
+    {% if lang.code == page.lang %}
 
-        {% for section in site.sidebar %}
-            <section class="section {% if page.sidebar == section.sidebar_name %} active {% endif %}">
-                <p class="title" data-section-title><a href="{% if section.url != nil AND section.url != '' %}{{ section.url }}{% else %}#{% endif %}">{{ section.name }}</a></p>
+        {% for section in lang.sidebar %}
+
+            <li class="{% if page.sidebar == section.sidebar_name %} active {% endif %}">
+                <a href="{% if section.url == null %}#{{section.sidebar_name}}{% else %}{{section.url}}{% endif %}" {% if section.url == null %}data-toggle="collapse"{% endif %}>{{ section.name }}</a>
                 {% if section.subsections != nil AND section.subsections != '' %}
-                <div class="content">
-                    <ul class="side-nav">
-                        {% for subsection in section.subsections %}
-                        <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
-                            {% if subsection.url != nil AND subsection.url != '' %}<a href="{{ subsection.url }}">{{ subsection.name }}</a>{% else %}{{ subsection.name }}{% endif %}
-                            <ul>
+                <ul id="{{ section.sidebar_name }}" class="nav collapse">
+                    {% for subsection in section.subsections %}
+                    <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
+                        {% if subsection.url != nil AND subsection.url != '' %}
+                        <a href="{{ subsection.url }}">{{ subsection.name }}</a>
+                        {% else %}
+                        <a href="#" class="disabled"><strong>{{ subsection.name }}</strong></a>
+                        {% endif %}
+
+                        {% if subsection.subsections != null %}
+                        <ul class="nav">
                             {% for subsubsection in subsection.subsections %}
-                                <li class="{% if page.subnav == subsubsection.sidebar_name %} active {% endif %}">
-                                    <a href="{{ subsubsection.url }}">{{ subsubsection.name }}</a>
-                                </li>
+                            <li class="{% if page.subnav == subsubsection.sidebar_name %} active {% endif %}">
+                                <a href="{{ subsubsection.url }}">{{ subsubsection.name }}</a>
+                            </li>
                             {% endfor %}
-                            </ul>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                        </ul>
+                        {% endif %}
+
+                    </li>
+                    {% endfor %}
+                </ul>
                 {% endif %}
-            </section>
+            </li>
+
         {% endfor %}
 
-    </div>
-</aside>
-<!-- End Sidebar -->
+    {% endif %}
+{% endfor %}
+</ul>

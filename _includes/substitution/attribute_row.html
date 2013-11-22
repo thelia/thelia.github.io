@@ -1,29 +1,26 @@
-<div class="large-12 columns">
-    <h3>
-        {% if page.attribute != nil and page.attribute != '' %}`{{ page.attribute }}` available values{% else %}Attributes{% endif %}
-    </h3>
+<h3>
+    {% if page.attribute != nil and page.attribute != '' %}`{{ page.attribute }}` available values{% else %}Attributes{% endif %}
+</h3>
 
-    {% for attribute in page.attributes %}
-    <div class="substitution-attribute large-12">
-        <div class="name large-3">
-            {{ attribute.name }} {% if attribute.is_DateTime == true %}*{% endif %}
-        </div>
-        <div class="information large-9">
-
-            <div class="description">
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        {% for attribute in page.attributes %}
+        <tr>
+            <td>
+                {{ attribute.name }} {% if attribute.is_DateTime == true %}*{% endif %}
+            </td>
+            <td>
                 {{ attribute.description }}
-            </div>
-
-        </div>
-        <div style="clear: both"></div>
-    </div>
-    {% endfor %}
-
-    <p class="h3-information">
-        <strong>*</strong> : this is a DateTime information.<br />
-        You can therefore specify 2 optional specific parameters :<br />
-        - `output` which takes 'date', 'datetime' or 'time' as value<br />
-        - `format` which take a <a href="http://php.net/manual/fr/function.date.php" target="_blank">PHP date format</a><br />
-        ie : {product attr='createdAt' output='date' format='Y-m-d'}
-    </p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
+
+<p>
+    <strong>*</strong> : this is a DateTime information.<br />
+    You can therefore specify 2 optional specific parameters :<br />
+    - `output` which takes 'date', 'datetime' or 'time' as value<br />
+    - `format` which take a <a href="http://php.net/manual/fr/function.date.php" target="_blank">PHP date format</a><br />
+    ie : {product attr='createdAt' output='date' format='Y-m-d'}
+</p>
