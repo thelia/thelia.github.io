@@ -5,6 +5,7 @@ description:
     - The Auth loop perform authorisation checks against the current user in the front-office or back-office context. This loop returns nothing if the authaurization fails, or the loop contents if it succeds.
     - You may check in the front office if an administrator is logged in, and perform specific functions in your front-office template (such as direct editing, for example).
 sidebar: loop
+lang: en
 subnav: loop_auth
 uses_global_argument: false
 returns_global_outputs: { countable : false, timestampable : false, versionable : false }

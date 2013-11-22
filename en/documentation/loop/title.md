@@ -3,6 +3,7 @@ layout: loop
 title: Title Loop
 description: Title loop lists titles.
 sidebar: loop
+lang: en
 subnav: loop_title
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }

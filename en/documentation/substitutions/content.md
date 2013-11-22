@@ -3,6 +3,7 @@ layout: substitution
 title: Content Substitution
 description: Content Substitution provides current content, identified by `content_id` parameter (either GET or POST).
 sidebar: substitution
+lang: en
 subnav: substitution_content
 prefix: content
 attributes :

@@ -2,6 +2,7 @@
 layout: home
 title: installation
 sidebar: installation
+lang: en
 ---
 
 <div class="page-header">

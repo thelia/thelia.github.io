@@ -3,6 +3,7 @@ layout: loop
 title: Category Loop
 description: Category loop lists categories from your shop.
 sidebar: loop
+lang: en
 subnav: loop_category
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : true }

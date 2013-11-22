@@ -3,6 +3,7 @@ layout: substitution
 title: Customer Substitution
 description: Customer Substitutions provide logged-in customer data.
 sidebar: substitution
+lang: en
 subnav: substitution_customer
 prefix: customer
 attributes :

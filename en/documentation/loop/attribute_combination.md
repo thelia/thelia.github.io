@@ -3,6 +3,7 @@ layout: loop
 title: Attribute combination Loop
 description: Attribute combination loop lists attribute combinations.
 sidebar: loop
+lang: en
 subnav: loop_attribute_combination
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }

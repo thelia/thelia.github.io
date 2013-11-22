@@ -2,6 +2,7 @@
 layout: home
 title: Commands - Modules
 sidebar: plugin
+lang: en
 subnav: plugin_command
 ---
 

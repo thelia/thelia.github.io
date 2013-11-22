@@ -2,6 +2,7 @@
 layout: home
 title: Feature - Coupons
 sidebar: features
+lang: en
 subnav: features_coupons_index
 ---
 

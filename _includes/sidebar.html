@@ -1,31 +1,39 @@
 <ul class="nav thelia-sidenav">
-    {% for section in site.sidebar %}
-    <li class="{% if page.sidebar == section.sidebar_name %} active {% endif %}">
-        <a href="{% if section.url == null %}#{{section.sidebar_name}}{% else %}{{section.url}}{% endif %}" {% if section.url == null %}data-toggle="collapse"{% endif %}>{{ section.name }}</a>
-        {% if section.subsections != nil AND section.subsections != '' %}
-        <ul id="{{ section.sidebar_name }}" class="nav collapse">
-            {% for subsection in section.subsections %}
-            <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
-                {% if subsection.url != nil AND subsection.url != '' %}
-                    <a href="{{ subsection.url }}">{{ subsection.name }}</a>
-                {% else %}
-                    <a href="#" class="disabled"><strong>{{ subsection.name }}</strong></a>
-                {% endif %}
+{% for lang in site.languages %}
+    {% if lang.code == page.lang %}
 
-                {% if subsection.subsections != null %}
-                <ul class="nav">
-                    {% for subsubsection in subsection.subsections %}
-                    <li class="{% if page.subnav == subsubsection.sidebar_name %} active {% endif %}">
-                        <a href="{{ subsubsection.url }}">{{ subsubsection.name }}</a>
+        {% for section in lang.sidebar %}
+
+            <li class="{% if page.sidebar == section.sidebar_name %} active {% endif %}">
+                <a href="{% if section.url == null %}#{{section.sidebar_name}}{% else %}{{section.url}}{% endif %}" {% if section.url == null %}data-toggle="collapse"{% endif %}>{{ section.name }}</a>
+                {% if section.subsections != nil AND section.subsections != '' %}
+                <ul id="{{ section.sidebar_name }}" class="nav collapse">
+                    {% for subsection in section.subsections %}
+                    <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
+                        {% if subsection.url != nil AND subsection.url != '' %}
+                        <a href="{{ subsection.url }}">{{ subsection.name }}</a>
+                        {% else %}
+                        <a href="#" class="disabled"><strong>{{ subsection.name }}</strong></a>
+                        {% endif %}
+
+                        {% if subsection.subsections != null %}
+                        <ul class="nav">
+                            {% for subsubsection in subsection.subsections %}
+                            <li class="{% if page.subnav == subsubsection.sidebar_name %} active {% endif %}">
+                                <a href="{{ subsubsection.url }}">{{ subsubsection.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
                     </li>
                     {% endfor %}
                 </ul>
                 {% endif %}
-
             </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </li>
-    {% endfor %}
+
+        {% endfor %}
+
+    {% endif %}
+{% endfor %}
 </ul>

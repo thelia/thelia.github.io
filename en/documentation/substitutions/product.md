@@ -3,6 +3,7 @@ layout: substitution
 title: Product Substitution
 description: Product Substitutions provide current product, identified by `product_id` parameter (either GET or POST).
 sidebar: substitution
+lang: en
 subnav: substitution_product
 prefix: product
 attributes :

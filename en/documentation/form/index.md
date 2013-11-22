@@ -2,6 +2,7 @@
 layout: home
 title: Forms
 sidebar: form
+lang: en
 subnav: form_index
 ---
 

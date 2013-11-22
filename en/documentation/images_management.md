@@ -2,6 +2,7 @@
 layout: home
 title: Image management
 sidebar: image management
+lang: en
 ---
 
 # Image management in Thelia 2

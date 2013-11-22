@@ -3,6 +3,7 @@ layout: substitution
 title: Folder Substitution
 description: Folder Substitution provides current folder, identified by `folder_id` parameter (either GET or POST).
 sidebar: substitution
+lang: en
 subnav: substitution_folder
 prefix: folder
 attributes :

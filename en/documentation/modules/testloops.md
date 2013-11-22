@@ -2,6 +2,7 @@
 layout: home
 title: TestLoops - Modules
 sidebar: plugin
+lang: en
 subnav: plugin_testloop
 ---
 

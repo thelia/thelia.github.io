@@ -3,6 +3,7 @@ layout: loop
 title: Accessory Loop
 description: Accessory loop lists accessories of a product. It behaves like a product loop therefore you might use all <a href="/documentation/loop/product.html">product loop</a> arguments and outputs.
 sidebar: loop
+lang: en
 subnav: loop_accessory
 uses_global_argument: false
 returns_global_outputs: { countable : false, timestampable : false, versionable : false }

@@ -18,10 +18,10 @@
         </div>
         <main role="main" class="col-lg-9  col-md-9 col-sm-9">
             <div class="page-header">
-                <h1>Welcome</h1>
+                <h1>{{page.title}}</h1>
             </div>
 
-            <p class="lead">Thelia is an open source tool for creating e-business websites and managing online content. This software is published under GPL.</p>
+            <p class="lead">{{page.welcome.lead}}</p>
 
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -29,15 +29,10 @@
                         <img src="/img/visuel-home-thelia.png" class="img-responsive" />
                     </div>
                     <div class="col-lg-8">
-                        <p>
-                            Here is the current developping next major version. You can download this version for testing or see the code.<br/>
-                            Here is the most recent developed code for the next major version (v2). You can download this version for testing or having a look on the code (or anything you wish, respecting GPL).
-                        </p>
+                        {{page.welcome.text}}
 
-                        <p>Most part of the code can possibly change, a large part will be refactor soon, graphical setup does not exist yet.</p>
-
-                        <a href="http://thelia.net/v2/#front" class="btn btn-warning"><span class="fa fa-arrow-circle-right"></span> Try demo</a>
-                        <a href="https://github.com/thelia/thelia" class="btn btn-default"><span class="fa fa-github-alt"></span> View sources</a>
+                        <a href="http://thelia.net/v2/#front" class="btn btn-warning"><span class="fa fa-arrow-circle-right"></span> {{page.welcome.demo}}</a>
+                        <a href="https://github.com/thelia/thelia" class="btn btn-default"><span class="fa fa-github-alt"></span> {{page.welcome.sources}}</a>
                     </div>
                 </div>
             </div>

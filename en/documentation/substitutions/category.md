@@ -3,6 +3,7 @@ layout: substitution
 title: Category Substitution
 description: Category Substitutions provide current category, identified by `category_id` parameter (either GET or POST).
 sidebar: substitution
+lang: en
 subnav: substitution_category
 prefix: category
 attributes :

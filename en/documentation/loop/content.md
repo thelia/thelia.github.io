@@ -3,6 +3,7 @@ layout: loop
 title: Content Loop
 description: Content loop lists contents from your shop.
 sidebar: loop
+lang: en
 subnav: loop_content
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : true }

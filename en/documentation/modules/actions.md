@@ -2,6 +2,7 @@
 layout: home
 title: Actions - Modules
 sidebar: plugin
+lang: en
 subnav: plugin_action
 ---
 

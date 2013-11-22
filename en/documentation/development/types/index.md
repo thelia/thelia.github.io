@@ -2,6 +2,7 @@
 layout: home
 title: Developement - Types
 sidebar: development
+lang: en
 subnav: development_types
 ---
 

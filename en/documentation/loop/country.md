@@ -3,6 +3,7 @@ layout: loop
 title: Country Loop
 description: Country loop lists countries.
 sidebar: loop
+lang: en
 subnav: loop_country
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }

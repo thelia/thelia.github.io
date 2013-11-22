@@ -2,6 +2,7 @@
 layout: home
 title: Loops - Modules
 sidebar: plugin
+lang: en
 subnav: plugin_loop
 ---
 

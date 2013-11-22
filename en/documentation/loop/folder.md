@@ -3,6 +3,7 @@ layout: loop
 title: Folder Loop
 description: Folder loop lists folders from your shop.
 sidebar: loop
+lang: en
 subnav: loop_folder
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : true }

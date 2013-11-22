@@ -2,6 +2,7 @@
 layout: home
 title: Modules
 sidebar: plugin
+lang: en
 subnav: plugin_index
 ---
 

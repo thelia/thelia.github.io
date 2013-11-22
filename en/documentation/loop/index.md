@@ -2,6 +2,7 @@
 layout: home
 title: About Loops
 sidebar: loop
+lang: en
 subnav: loop_index
 ---
 

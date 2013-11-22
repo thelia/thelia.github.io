@@ -2,6 +2,7 @@
 layout: home
 title: Configuration
 sidebar: configuration
+lang: en
 ---
 
 <div class="page-header">

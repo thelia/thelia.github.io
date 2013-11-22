@@ -3,6 +3,7 @@ layout: loop
 title: Associated content Loop
 description: Associated content loop lists associated contents of a product or a category. It behaves like a content loop therefore you might use all <a href="/documentation/loop/content.html">content loop</a> arguments and outputs.
 sidebar: loop
+lang: en
 subnav: loop_associated_content
 uses_global_argument: false
 returns_global_outputs: { countable : false, timestampable : false, versionable : false }

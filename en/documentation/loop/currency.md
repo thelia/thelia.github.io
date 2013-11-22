@@ -3,6 +3,7 @@ layout: loop
 title: Currency Loop
 description: Currency loop lists currencies.
 sidebar: loop
+lang: en
 subnav: loop_currency
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }

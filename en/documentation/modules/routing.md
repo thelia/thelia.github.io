@@ -2,6 +2,7 @@
 layout: home
 title: Routing - Modules
 sidebar: plugin
+lang: en
 subnav: plugin_routing
 ---
 

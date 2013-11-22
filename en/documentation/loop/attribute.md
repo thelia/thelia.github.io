@@ -3,6 +3,7 @@ layout: loop
 title: Attribute Loop
 description: Attribute loop lists attributes.
 sidebar: loop
+lang: en
 subnav: loop_attribute
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }

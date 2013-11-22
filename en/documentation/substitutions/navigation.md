@@ -3,6 +3,7 @@ layout: substitution
 title: Navigation Substitution
 description: Navigation Substitution provide navigation data.
 sidebar: substitution
+lang: en
 subnav: substitution_navigation
 prefix: navigate
 attribute: to

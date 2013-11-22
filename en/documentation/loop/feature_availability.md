@@ -3,6 +3,7 @@ layout: loop
 title: Feature availability Loop
 description: Feature availability loop lists feature availabilities.
 sidebar: loop
+lang: en
 subnav: loop_feature_availability
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }

@@ -2,6 +2,7 @@
 layout: home
 title: BaseParams - Modules
 sidebar: plugin
+lang: en
 subnav: plugin_baseparam
 ---
 

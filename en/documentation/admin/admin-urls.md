@@ -2,6 +2,7 @@
 layout: home
 title: Admin - Manipulating URLs
 sidebar: admin
+lang: en
 subnav: admin_urls
 ---
 

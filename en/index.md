@@ -2,6 +2,17 @@
 layout: welcome
 title: Welcome
 sidebar: welcome
+lang: en
+welcome :
+    lead: Thelia is an open source tool for creating e-business websites and managing online content. This software is published under GPL.
+    text:
+          <p>
+              Here is the current developping next major version. You can download this version for testing or see the code.<br/>
+              Here is the most recent developed code for the next major version (v2). You can download this version for testing or having a look on the code (or anything you wish, respecting GPL).
+          </p>
+          <p>Most part of the code can possibly change, a large part will be refactor soon, graphical setup does not exist yet.</p>
+    demo: Try demo
+    sources: View sources
 ---
 
 <div class="page-header">

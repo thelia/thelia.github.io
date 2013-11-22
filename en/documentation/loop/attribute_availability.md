@@ -3,6 +3,7 @@ layout: loop
 title: Attribute availability Loop
 description: Attribute availability loop lists attribute availabilities.
 sidebar: loop
+lang: en
 subnav: loop_attribute_availability
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }

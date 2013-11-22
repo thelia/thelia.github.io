@@ -3,6 +3,7 @@ layout: loop
 title: Product Loop
 description: Product loop lists products from your shop. You very probably will have to use the <a href="/documentation/loop/product_sale_elements.html">product sale elements loop</a> inside your product loop.
 sidebar: loop
+lang: en
 subnav: loop_product
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : true }

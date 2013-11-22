@@ -9,6 +9,12 @@
 
 <script src="/js/libs/bootstrap.min.js"></script>
 
-<footer role="contentinfo" class="thelia-footer">
-    <div class="text-center"><img class="" src="/img/footer_logo.png" alt="Thelia footer logo"/></div>
+<footer role="contentinfo" class="thelia-footer clearfix">
+    <div class="container">
+        <ul class="breadcrumb text-right">
+            {% for lang in site.languages %}
+            <li><a href="/{{lang.code}}" title="{{lang.name}}">{{lang.code}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </footer>

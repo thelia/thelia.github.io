@@ -3,6 +3,7 @@ layout: loop
 title: Image Loop
 description: The image loop process, cache and display products, categories, contents and folders images.
 sidebar: loop
+lang: en
 subnav: loop_image
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
