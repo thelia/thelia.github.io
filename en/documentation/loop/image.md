@@ -87,5 +87,3 @@ Resize 1 category images the 200x100, cropping id necessary, and transforming th
     <a href="{$ORIGINAL_IMAGE_URL}"><img src="{$IMAGE_URL}" alt="{$TITLE}" /></a>
 {/loop}
 ```
-
-{% include loop/body.md %}
