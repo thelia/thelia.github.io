@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\HttpFoundation\Session\Session | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../traits.html">Traits</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Thelia/Core/HttpFoundation/Session.html">Thelia\Core\HttpFoundation\Session</a>\Session</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Session</strong>        extends <abbr title="Symfony\Component\HttpFoundation\Session\Session">Session</abbr></p>
+
+            <div class="description">
+            <p>extends mfony\Component\HttpFoundation\Session\Session for adding some helpers</p>
+            <p>Class Session</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getLang">getLang</a>(bool $forceDefault = true)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLang">setLang</a>(<a href="../../../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a> $lang)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setCurrency">setCurrency</a>(<a href="../../../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a> $currency)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCurrency">getCurrency</a>(bool $forceDefault = true)
+                    <p>Return current currency</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminEditionCurrency">getAdminEditionCurrency</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAdminEditionCurrency">setAdminEditionCurrency</a>($currencyId)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminEditionLang">getAdminEditionLang</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAdminEditionLang">setAdminEditionLang</a>($lang)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setCustomerUser">setCustomerUser</a>(<a href="../../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a> $user)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getCustomerUser">getCustomerUser</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearCustomerUser">clearCustomerUser</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAdminUser">setAdminUser</a>(<a href="../../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a> $user)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminUser">getAdminUser</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearAdminUser">clearAdminUser</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setReturnToUrl">setReturnToUrl</a>($url)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\HttpFoundation\Session\the">the</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getReturnToUrl">getReturnToUrl</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getCart">getCart</a>()
+                    <p>return cart if exists and is valid (checking customer)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\HttpFoundation\Session\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setCart">setCart</a>(<abbr title="Thelia\Core\HttpFoundation\Session\$cart_id">$cart_id</abbr> $cart_id)
+                    <p>assign cart id in session</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOrder">setOrder</a>(<a href="../../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrder">getOrder</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\HttpFoundation\Session\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setConsumedCoupons">setConsumedCoupons</a>(array $couponsCode)
+                    <p>Set consumed coupons by the Customer</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getConsumedCoupons">getConsumedCoupons</a>()
+                    <p>Get Customer consumed coupons</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getLang">
+        <div class="location">at line 51</div>
+        <code>            public            <a href="../../../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a>|null
+    <strong>getLang</strong>(bool $forceDefault = true)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$forceDefault</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLang">
+        <div class="location">at line 61</div>
+        <code>            public            
+    <strong>setLang</strong>(<a href="../../../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a> $lang)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a></td>
+                <td>$lang</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCurrency">
+        <div class="location">at line 68</div>
+        <code>            public            
+    <strong>setCurrency</strong>(<a href="../../../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a> $currency)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a></td>
+                <td>$currency</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCurrency">
+        <div class="location">at line 80</div>
+        <code>            public            <a href="../../../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a>
+    <strong>getCurrency</strong>(bool $forceDefault = true)</code>
+    </h3>
+    <div class="details">
+        <p>Return current currency</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$forceDefault</td>
+                <td>If default currency forced</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminEditionCurrency">
+        <div class="location">at line 93</div>
+        <code>            public            
+    <strong>getAdminEditionCurrency</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAdminEditionCurrency">
+        <div class="location">at line 104</div>
+        <code>            public            
+    <strong>setAdminEditionCurrency</strong>($currencyId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$currencyId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminEditionLang">
+        <div class="location">at line 111</div>
+        <code>            public            
+    <strong>getAdminEditionLang</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAdminEditionLang">
+        <div class="location">at line 122</div>
+        <code>            public            
+    <strong>setAdminEditionLang</strong>($lang)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$lang</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCustomerUser">
+        <div class="location">at line 131</div>
+        <code>            public            
+    <strong>setCustomerUser</strong>(<a href="../../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a></td>
+                <td>$user</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCustomerUser">
+        <div class="location">at line 138</div>
+        <code>            public            
+    <strong>getCustomerUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearCustomerUser">
+        <div class="location">at line 143</div>
+        <code>            public            
+    <strong>clearCustomerUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAdminUser">
+        <div class="location">at line 150</div>
+        <code>            public            
+    <strong>setAdminUser</strong>(<a href="../../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a></td>
+                <td>$user</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminUser">
+        <div class="location">at line 157</div>
+        <code>            public            
+    <strong>getAdminUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearAdminUser">
+        <div class="location">at line 162</div>
+        <code>            public            
+    <strong>clearAdminUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setReturnToUrl">
+        <div class="location">at line 169</div>
+        <code>            public            
+    <strong>setReturnToUrl</strong>($url)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReturnToUrl">
+        <div class="location">at line 180</div>
+        <code>            public            <abbr title="Thelia\Core\HttpFoundation\Session\the">the</abbr>
+    <strong>getReturnToUrl</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\HttpFoundation\Session\the">the</abbr></td>
+            <td>return-to URL, or the index page if none is defined.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCart">
+        <div class="location">at line 192</div>
+        <code>            public            <a href="../../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>|null
+    <strong>getCart</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return cart if exists and is valid (checking customer)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCart">
+        <div class="location">at line 232</div>
+        <code>            public            <abbr title="Thelia\Core\HttpFoundation\Session\$this">$this</abbr>
+    <strong>setCart</strong>(<abbr title="Thelia\Core\HttpFoundation\Session\$cart_id">$cart_id</abbr> $cart_id)</code>
+    </h3>
+    <div class="details">
+        <p>assign cart id in session</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\HttpFoundation\Session\$cart_id">$cart_id</abbr></td>
+                <td>$cart_id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\HttpFoundation\Session\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOrder">
+        <div class="location">at line 241</div>
+        <code>            public            
+    <strong>setOrder</strong>(<a href="../../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrder">
+        <div class="location">at line 251</div>
+        <code>            public            <a href="../../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
+    <strong>getOrder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConsumedCoupons">
+        <div class="location">at line 263</div>
+        <code>            public            <abbr title="Thelia\Core\HttpFoundation\Session\$this">$this</abbr>
+    <strong>setConsumedCoupons</strong>(array $couponsCode)</code>
+    </h3>
+    <div class="details">
+        <p>Set consumed coupons by the Customer</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$couponsCode</td>
+                <td>An array of Coupon code</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\HttpFoundation\Session\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConsumedCoupons">
+        <div class="location">at line 275</div>
+        <code>            public            array
+    <strong>getConsumedCoupons</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Customer consumed coupons</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>$couponsCode An array of Coupon code</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

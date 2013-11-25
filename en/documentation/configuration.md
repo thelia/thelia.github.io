@@ -23,7 +23,6 @@ www <- your web root directory
         bin
         cache
         core
-        documentation
         install
         local
             config
@@ -66,6 +65,7 @@ Apache write in some directories so check this directories and change their righ
 * local/session
 
 
+
 ###Database configuration
 
 In order to configure your database connection, you have to rename the ```local/config/database.yml.sample``` file into ```local/config/database.yml``` and edit it.
@@ -81,5 +81,4 @@ database:
     dsn: mysql:dbname=thelia;host:localhost
     classname: \Propel\Runtime\Connection\DebugPDO #Only in debug mode and if you want all query debug information
 ```
-
 

@@ -18,11 +18,16 @@ arguments :
           {name: "front", description: "Front office context. Use the customer user to perform the check."},
           {name: "admin", description: "The back-office context. Uses the admin user to perform the check."}
        ]}
-    - {name: "roles", description: "A comma separated list of user roles", mandatory: "true"}
-    - {name: "permissions", description: "A comma separated list of permissions. If empty or missing, the authorization is checked against the roles only"}
-examples :
-    - {description: "Check if curent administrator is allowed tu use the back-office search function"}
-    - {description: "Check if the customer is logged in, or not."}
+    - {name: "role", description: "A comma separated list of user roles", mandatory: "true"}
+    - {name: "resource", description: "A comma separated list of resources. If empty or missing, the authorization is checked against the roles only"}
+    - {name: "access", description: "A comma separated list of accesss. If empty or missing, the authorization is checked against the roles only",
+        expected_values: [
+            {name: "view"},
+            {name: "update"},
+            {name: "create"},
+            {name: "delete"}
+        ]
+    }
 ---
 
 <div class="description large-12">

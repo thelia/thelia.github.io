@@ -39,10 +39,11 @@ export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
     <h1>Installation</h1>
 </div>
 
+
 ## Download Thelia 2
 
 ``` bash
-$ git clone --recursive https://github.com/thelia/thelia.git
+$ git clone https://github.com/thelia/thelia.git
 $ cd thelia
 $ wget http://getcomposer.org/composer.phar
 $ php composer.phar install
@@ -59,7 +60,7 @@ You just have to follow all instructions.
 ## How to create an admin account ?
 
 ```bash
-$ php Thelia thelia:create-admin
+$ php Thelia admin:create
 ```
 
 ## How to insert fake data ?
@@ -76,9 +77,9 @@ For dev data
 $ php install/faker.php
 ```
 
+(composer must be install [`globally`](http://getcomposer.org/doc/00-intro.md#globally))
 ## How to reset my database
 
-(composer must be install globally [http://getcomposer.org/doc/00-intro.md#globally](http://getcomposer.org/doc/00-intro.md#globally))
 
 ```bash
 $ ./reset_install.sh

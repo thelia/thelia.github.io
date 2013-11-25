@@ -24,4 +24,6 @@ outputs :
     - {name: "$ISOCODE", description: "the ISO numeric country code"}
     - {name: "$ISOALPHA2", description: "the ISO 2 characters country code"}
     - {name: "$ISOALPHA3", description: "the ISO 3 characters country code"}
+    - {name: "$IS_DEFAULT", description: "1 if the country is the default one, 0 otherwise"}
+    - {name: "$IS_SHOP_COUNTRY", description: "1 if the country is the shop country, 0 otherwise"}
 ---

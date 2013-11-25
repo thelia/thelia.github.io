@@ -9,6 +9,10 @@ uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : true }
 type: product
 arguments :
+    - name: "complex"
+      description: "A boolean. If set to true, product loop will consider all product sale elements else it will only consider default product sale element. Some of the arguments/outputs will not be available depending on the complex argument."
+      example: "complex=\"true\""
+      default: "false"
     - name: "id"
       description: "A single or a list of product ids."
       example: "id=\"2\", id=\"1,4,7\""
@@ -32,7 +36,8 @@ arguments :
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
     - {
-        name: "attribute_non_strict_match", description: "promo, new, quantity, weight or price may differ in the different product sale element depending on the different attributes. This parameter allows to provide a list of non-strict attributes.",
+        name: "attribute_non_strict_match",
+        description: "<strong>Only available if complex='true'</strong><br />promo, new, quantity, weight or price may differ in the different product sale element depending on the different attributes. This parameter allows to provide a list of non-strict attributes.",
         default: "none",
         example: "attribute_non_strict_match=\"promo,new\" : loop will return the product if it has at least a product sale element in promo and at least a product sale element as new ; even if it's not the same product sale element.",
         expected_values: [
@@ -69,14 +74,30 @@ outputs :
     - {name: "$BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
     - {name: "$BEST_PRICE_TAX", description: "the best price taxes amount"}
     - {name: "$BEST_TAXED_PRICE", description: "the best price including taxes"}
-    - {name: "$IS_PROMO", description: "returns if at least one of it's product sale element is in promo"}
-    - {name: "$IS_NEW", description: "returns if at least one of it's product sale element is new"}
+    - {name: "$PRODUCT_SALE_ELEMENT", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements id"}
+    - {name: "$WEIGHT", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements weight"}
+    - {name: "$QUANTITY", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements stock quantity"}
+    - {name: "$EAN_CODE", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements EAN Code"}
+    - {name: "$PRICE", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements price"}
+    - {name: "$PRICE_TAX", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements price tax"}
+    - {name: "$TAXED_PRICE", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements taxed price"}
+    - {name: "$PROMO_PRICE", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements promo price"}
+    - {name: "$PROMO_PRICE_TAX", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements promo price tax"}
+    - {name: "$TAXED_PROMO_PRICE", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements taxed promo price"}
+    - {name: "$IS_PROMO",
+        description: "<strong>If complex='true'</strong><br />returns if at least one of it's product sale element is in promo<br /><strong>If complex='false'</strong><br />returns if the default product sale element is in promo"}
+    - {name: "$IS_NEW",
+        description: "<strong>If complex='true'</strong><br />returns if at least one of it's product sale element is new<br /><strong>If complex='false'</strong><br />returns if the default product sale element is new"}
     - {name: "$TITLE", description: "the product title"}
     - {name: "$CHAPO", description: "the product chapo"}
     - {name: "$DESCRIPTION", description: "the product description"}
     - {name: "$POSTSCTIPTUM", description: "the product postscriptum"}
     - {name: "$URL", description: "the product URL"}
     - {name: "$POSITION", description: "the product position"}
+    - {name: "$TAX_RULE_ID", description: "the product's tax rule ID"}
+
+
+
 ---
 
 <div class="description large-12">
