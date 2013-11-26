@@ -18,8 +18,8 @@ lang: en
         * curl
     * safe_mode off
     * memory_limit at least 150M, preferably 256.
-    * post_max_size 20M
-    * upload_max_filesize 2M
+    * post\_max\_size 20M
+    * upload\_max\_filesize 2M
 * apache 2
 * mysql 5
 
