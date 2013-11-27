@@ -47,10 +47,10 @@ Il n'y a que le repertoire ```web``` qui doit être accessible par apache, vous 
         Allow from all
 	</Directory>
 
-	# Custom log file
+	# Fichiers de log personnalisés
     Loglevel warn
-    ErrorLog /var/log/apache2/yoursite.error.log
-    CustomLog /var/log/apache2/yoursite.log combined
+    ErrorLog /var/log/apache2/votresite.error.log
+    CustomLog /var/log/apache2/votresite.log combined
 
 </virtualHost>
 
