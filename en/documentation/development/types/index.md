@@ -6,7 +6,9 @@ lang: en
 subnav: development_types
 ---
 
-#Types
+<div class="page-header">
+    <h1>Development : <small>Types</small></h1>
+</div>
 
 Types allows you to ensure a string has the expected format.
 
