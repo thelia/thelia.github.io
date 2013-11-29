@@ -45,8 +45,8 @@ export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
 ``` bash
 $ git clone https://github.com/thelia/thelia.git
 $ cd thelia
-$ wget http://getcomposer.org/composer.phar
-$ php composer.phar install
+$ curl -sS https://getcomposer.org/installer | php
+$ php composer.phar install --prefer-dist --optimize-autoloader
 ```
 
 Effectuez l'installation en utilisant la ligne de commande :
