@@ -15,7 +15,7 @@ welcome :
 ---
 
 <div class="page-header">
-    <h1>Prise en main de Thelia</h1>
+    <h1>Prise en main</h1>
 </div>
 
 ## Installation
@@ -29,5 +29,3 @@ Avec Thelia 2, les [gestion des formulaires](/fr/documentation/formulaire/index.
 
 ## Boucles
 Les boucles sont les éléments les plus pratiques dans Thelia pour les développeurs frontend. Apprenez à créer les votres [ici](/fr/documentation/boucle/index.html).
-
-## Mon titre H2
