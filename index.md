@@ -1,6 +1,7 @@
 ---
 layout: welcome
 title: Welcome
+description: Thelia is an open source tool for creating e-business websites and managing online content. Learn to use it with this documentation.
 sidebar: welcome
 lang: en
 welcome :
