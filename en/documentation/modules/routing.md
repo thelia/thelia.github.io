@@ -6,7 +6,9 @@ lang: en
 subnav: plugin_routing
 ---
 
-# Routing
+<div class="page-header">
+    <h1>Modules : <small>Routing</small></h1>
+</div>
 
 You can define your own routing rules for your Module.
 Routing definition uses XML files

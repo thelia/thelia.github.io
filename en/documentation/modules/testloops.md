@@ -6,7 +6,9 @@ lang: en
 subnav: plugin_testloop
 ---
 
-#TestLoop
+<div class="page-header">
+    <h1>Modules : <small>TestLoop</small></h1>
+</div>
 
 ##How to declare TestLoop ?
 

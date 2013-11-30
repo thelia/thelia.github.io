@@ -6,7 +6,9 @@ lang: en
 subnav: plugin_index
 ---
 
-#What about module ?
+<div class="page-header">
+    <h1>Modules : <small>Starting</small></h1>
+</div>
 
 Like in Thelia 1 you can develop modules for extending Thelia functionalities however the architecture is totally new :
 
