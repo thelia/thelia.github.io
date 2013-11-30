@@ -11,7 +11,7 @@ lang: en
 
 Currently you can only configure your database connection with config files. All other configuration have to be developed and certainly use database storage.
 
-###Server Configuration
+## Server Configuration
 
 Thelia needs at least php 5.4, an any http server (eg : apache2) and mysql (sqlite and pgsql will be support soon)
 
@@ -32,7 +32,6 @@ www <- your web root directory
         templates
         web
 ```
-
 
 only the ```web``` directory have to be accessible with apache, you can configure your vhost like this (here /var/www is your web root directory) :
 
@@ -57,16 +56,13 @@ only the ```web``` directory have to be accessible with apache, you can configur
 
 ```
 
-
 Apache write in some directories so check this directories and change their rights :
 
 * cache
 * log
 * local/session
 
-
-
-###Database configuration
+## Database configuration
 
 In order to configure your database connection, you have to rename the ```local/config/database.yml.sample``` file into ```local/config/database.yml``` and edit it.
 
@@ -81,4 +77,3 @@ database:
     dsn: mysql:dbname=thelia;host:localhost
     classname: \Propel\Runtime\Connection\DebugPDO #Only in debug mode and if you want all query debug information
 ```
-
