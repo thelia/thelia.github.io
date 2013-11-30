@@ -6,7 +6,9 @@ lang: en
 subnav: plugin_command
 ---
 
-#Commands
+<div class="page-header">
+    <h1>Modules : <small>Commands</small></h1>
+</div>
 
 Commands use the helpfull console Symfony component. In your module you can define you own command that can be used
 with command CLI.

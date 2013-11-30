@@ -6,7 +6,9 @@ lang: en
 subnav: plugin_baseparam
 ---
 
-#BaseParams
+<div class="page-header">
+    <h1>Modules : <small>BaseParams</small></h1>
+</div>
 
 ##How to declare BaseParam ?
 

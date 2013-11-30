@@ -6,7 +6,9 @@ lang: en
 subnav: plugin_loop
 ---
 
-#Loops
+<div class="page-header">
+    <h1>Modules : <small>Loops</small></h1>
+</div>
 
 ##How to declare loops ?
 
