@@ -16,6 +16,7 @@ lang: en
         * intl
         * gd
         * curl
+        * calendar
     * safe_mode off
     * memory_limit at least 150M, preferably 256.
     * post\_max\_size 20M
