@@ -40,13 +40,13 @@ You can open now the form html tag :
 
 The *{form_enctype}* function automagically select the proper form encoding.
 
-Thelia uses hidden fields internally. In order to display these fields (and all the hidden fields defined in your form), use the *{form_field_hidden}* function. Don't forget this, as it contains the CRSF validation data :
+Thelia uses hidden fields internally. In order to display these fields (and all the hidden fields defined in your form), use the *{form\_hidden\_fields}* function. Don't forget this, as it contains the CRSF validation data :
 
 ```smarty
 {form name="thelia.customer.creation"}
     <form method="post" action="{url path='your/target'}" {form_enctype form=$form}>
- 
-        {form_field_hidden form=$form}
+
+        {form_hidden_fields form=$form}
         ...
     </form>
 {/form}
@@ -59,11 +59,11 @@ For displaying a field, you have to use the *{form_field}* block, and put the na
 ```smarty
 {form name="thelia.customer.creation"}
     <form method="post" action="index_dev.php?action=createCustomer&view=connexion" {form_enctype form=$form} >
-        
-        {form_field_hidden form=$form}
+
+        {form_hidden_fields form=$form}
 
         {form_field form=$form field="firstname"}
-           <label>{intl l="{$label}"}</label> 
+           <label>{intl l="{$label}"}</label>
            <input type="text" name="{$name}" value="{$value}" {$attr} />
         {/form_field}
 
@@ -100,15 +100,15 @@ is used and it works like the *{form_field}* block. You can call it outside the 
 ```smarty
 {form name="thelia.customer.creation"}
     <form method="post" action="index_dev.php?action=createCustomer&view=connexion" {form_enctype form=$form} >
-        
-        {form_field_hidden form=$form}
+
+        {form_hidden_fields form=$form}
 
         {form_field form=$form field="firstname"}
             {form_error form=$form.firstname}
                 {$message}
             {/form_error}
 
-            <label>{intl l="{$label}"}</label> 
+            <label>{intl l="{$label}"}</label>
            <input type="text" name="{$name}" value="{$value}" {$attr} />
         {/form_field}
     </form>
@@ -121,7 +121,7 @@ An alternative to the *{form_error}* block is using the $error and $message valu
         {form_field form=$form field="firstname"}
             {if $error}<div class="error-field">$message</div>{/if}
 
-            <label>{intl l="{$label}"}</label> 
+            <label>{intl l="{$label}"}</label>
            <input type="text" name="{$name}" value="{$value}" {$attr} />
         {/form_field}
 {/form}
