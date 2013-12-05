@@ -30,6 +30,7 @@ The structure of your module is like this :
       \Config
         config.xml   <- mandatory
         module.xml   <- mandatory
+        routing.xml
         schema.xml
       MyModule.php <- mandatory
       \Loop

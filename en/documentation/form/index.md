@@ -19,7 +19,7 @@ A form is displayed using a Thelia template. When this form is submitted, the da
 
 If the form is successfully processed, the customer is redirected to a success URL, which is defined by the 'success_url' form field (remember: Thelia navigation is completely driven by your templates)
 
-If the form cannot be processed, the form "action" attribute is then used. Thus, setting the form action URL to the current view is a good way to process errors. If it's not clear, see the [form template](template.md) below.
+If the form cannot be processed, the form "action" attribute is then used. Thus, setting the form action URL to the current view is a good way to process errors. If it's not clear, see the [form template](template.html) below.
 
 ## How to declare your forms ?
 

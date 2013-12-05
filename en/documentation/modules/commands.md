@@ -19,7 +19,7 @@ In your config file :
 
 ```xml
     <commands>
-        <command class="MyModule\Commands\HelloWorld.php">
+        <command class="MyModule\Commands\HelloWorld.php"/>
     </commands>
 ```
 
