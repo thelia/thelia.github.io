@@ -5,12 +5,15 @@ sidebar: templates
 lang: en
 subnav: templates_emails
 ---
-## About mail layouts, views and templates
+
+# Thelia mails
 
 Thelia offers a very flexible way to define the content of the mails sent by the system. A mail template uses exactly the same principles as a front-office or back-office template. It uses Smarty languages, and the Thelia loops and substitutions.
 
+## About mail layouts, views and templates
+
 You can define e-mails contents directly in the back-office, but you can also use the same template system as front-office or PDF, by defining a set of views and grouping them in a sub-directory of the templates/emails directory.
-You may the use all the features of Smarty, including inheritance.
+You may then use all the features of Smarty, including inheritance.
 
 The most basic way to define an email content is typing the code directly in the Thelia "messages" back-office.
 
