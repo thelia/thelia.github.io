@@ -24,7 +24,8 @@
     </div>
         <div class="content">
                 <p>    class
-    <strong>CategoryPath</strong>        extends <a href="../../../../Thelia/Core/Template/Element/BaseI18nLoop.html"><abbr title="Thelia\Core\Template\Element\BaseI18nLoop">BaseI18nLoop</abbr></a></p>
+    <strong>CategoryPath</strong>        extends <a href="../../../../Thelia/Core/Template/Element/BaseI18nLoop.html"><abbr title="Thelia\Core\Template\Element\BaseI18nLoop">BaseI18nLoop</abbr></a>        implements
+        <a href="../../../../Thelia/Core/Template/Element/ArraySearchLoopInterface.html"><abbr title="Thelia\Core\Template\Element\ArraySearchLoopInterface">ArraySearchLoopInterface</abbr></a></p>
 
             <div class="description">
             <p>Category path loop, to get the path to a given category.</p>
@@ -45,45 +46,26 @@
         </div>
     
     
-            <h2>Properties</h2>
-
-            <table>
-                    <tr>
-                <td class="type" id="property_countable">
-                                                            
-                </td>
-                <td>$countable</td>
-                <td class="last">
-</td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_timestampable">
-                                                            
-                </td>
-                <td>$timestampable</td>
-                <td class="last">
-</td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_versionable">
-                                                            
-                </td>
-                <td>$versionable</td>
-                <td class="last">
-</td>
-            </tr>
-            </table>
-
     
             <h2>Methods</h2>
 
             <table>
                     <tr>
                 <td class="type">
-                    <a href="../../../../Thelia/Core/Template/Element/LoopResult.html"><abbr title="Thelia\Core\Template\Element\LoopResult">LoopResult</abbr></a>
+                    array
                 </td>
                 <td class="last">
-                    <a href="#method_exec">exec</a>(<abbr title="Thelia\Core\Template\Loop\$pagination">$pagination</abbr> $pagination)
+                    <a href="#method_buildArray">buildArray</a>()
+                    <p>this method returns an array</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_parseResults">parseResults</a>(<a href="../../../../Thelia/Core/Template/Element/LoopResult.html"><abbr title="Thelia\Core\Template\Element\LoopResult">LoopResult</abbr></a> $loopResult)
                     <p>
 </p>
                 </td>
@@ -94,10 +76,36 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method_exec">
-        <div class="location">at line 77</div>
-        <code>            public            <a href="../../../../Thelia/Core/Template/Element/LoopResult.html"><abbr title="Thelia\Core\Template\Element\LoopResult">LoopResult</abbr></a>
-    <strong>exec</strong>(<abbr title="Thelia\Core\Template\Loop\$pagination">$pagination</abbr> $pagination)</code>
+                        <h3 id="method_buildArray">
+        <div class="location">at line 73</div>
+        <code>            public            array
+    <strong>buildArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>this method returns an array</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseResults">
+        <div class="location">at line 126</div>
+        <code>            public            
+    <strong>parseResults</strong>(<a href="../../../../Thelia/Core/Template/Element/LoopResult.html"><abbr title="Thelia\Core\Template\Element\LoopResult">LoopResult</abbr></a> $loopResult)</code>
     </h3>
     <div class="details">
         <p>
@@ -109,23 +117,14 @@
 
                     <table>
                     <tr>
-                <td><abbr title="Thelia\Core\Template\Loop\$pagination">$pagination</abbr></td>
-                <td>$pagination</td>
-                <td>(ignored)</td>
+                <td><a href="../../../../Thelia/Core/Template/Element/LoopResult.html"><abbr title="Thelia\Core\Template\Element\LoopResult">LoopResult</abbr></a></td>
+                <td>$loopResult</td>
+                <td>
+</td>
             </tr>
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../../Thelia/Core/Template/Element/LoopResult.html"><abbr title="Thelia\Core\Template\Element\LoopResult">LoopResult</abbr></a></td>
-            <td>
-</td>
-        </tr>
-    </table>
-
             
             
                     </div>

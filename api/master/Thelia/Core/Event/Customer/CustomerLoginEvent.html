@@ -24,10 +24,23 @@
     </div>
         <div class="content">
                 <p>    class
-    <strong>CustomerLoginEvent</strong>        extends <a href="../../../../Thelia/Core/Event/ActionEvent.html"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a></p>
+    <strong>CustomerLoginEvent</strong>        extends <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></p>
 
     
     
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_customer">
+                                                            
+                </td>
+                <td>$customer</td>
+                <td class="last">
+</td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -37,54 +50,54 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___set">__set</a>($name, $value)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer = null)
                     <p>
 </p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/ActionEvent.html#method___set"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method___construct"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method___get">__get</a>($name)
+                    <a href="#method_setCustomer">setCustomer</a>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer)
                     <p>
 </p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/ActionEvent.html#method___get"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_setCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer)
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
+                    <a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getCustomer">getCustomer</a>()
                     <p>
 </p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_getCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasCustomer">hasCustomer</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_hasCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></small></td>
             </tr>
             </table>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___set">
-        <div class="location">in <a href="../../../../Thelia/Core/Event/ActionEvent.html#method___set"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a> at line 38</div>
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method___construct"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a> at line 33</div>
         <code>            public            
-    <strong>__set</strong>($name, $value)</code>
+    <strong>__construct</strong>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -96,14 +109,8 @@
 
                     <table>
                     <tr>
-                <td></td>
-                <td>$name</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td></td>
-                <td>$value</td>
+                <td><a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+                <td>$customer</td>
                 <td>
 </td>
             </tr>
@@ -115,38 +122,10 @@
                     </div>
     </div>
 
-                <h3 id="method___get">
-        <div class="location">in <a href="../../../../Thelia/Core/Event/ActionEvent.html#method___get"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a> at line 43</div>
+                <h3 id="method_setCustomer">
+        <div class="location">in <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_setCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a> at line 41</div>
         <code>            public            
-    <strong>__get</strong>($name)</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td></td>
-                <td>$name</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method___construct">
-        <div class="location">at line 33</div>
-        <code>            public            
-    <strong>__construct</strong>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer)</code>
+    <strong>setCustomer</strong>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer)</code>
     </h3>
     <div class="details">
         <p>
@@ -172,8 +151,8 @@
     </div>
 
                 <h3 id="method_getCustomer">
-        <div class="location">at line 38</div>
-        <code>            public            
+        <div class="location">in <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_getCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a> at line 51</div>
+        <code>            public            <a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>getCustomer</strong>()</code>
     </h3>
     <div class="details">
@@ -183,6 +162,43 @@
 </p>
         <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasCustomer">
+        <div class="location">in <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_hasCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a> at line 59</div>
+        <code>            public            bool
+    <strong>hasCustomer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>

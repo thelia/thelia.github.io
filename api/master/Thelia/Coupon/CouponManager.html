@@ -84,7 +84,7 @@ Time: 3:24 PM</p>
                     
                 </td>
                 <td class="last">
-                    <a href="#method_addAvailableCondition">addAvailableCondition</a>(<a href="../../Thelia/Condition/ConditionManagerInterface.html"><abbr title="Thelia\Condition\ConditionManagerInterface">ConditionManagerInterface</abbr></a> $condition)
+                    <a href="#method_addAvailableCondition">addAvailableCondition</a>(<a href="../../Thelia/Condition/Implementation/ConditionInterface.html"><abbr title="Thelia\Condition\Implementation\ConditionInterface">ConditionInterface</abbr></a> $condition)
                     <p>Add an available ConstraintManager (Services)</p>
                 </td>
                 <td></td>
@@ -101,10 +101,10 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    bool
+                    int
                 </td>
                 <td class="last">
-                    <a href="#method_decrementeQuantity">decrementeQuantity</a>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)
+                    <a href="#method_decrementQuantity">decrementQuantity</a>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)
                     <p>Decrement this coupon quantity</p>
                 </td>
                 <td></td>
@@ -211,7 +211,7 @@ Time: 3:24 PM</p>
                 <h3 id="method_addAvailableCondition">
         <div class="location">at line 218</div>
         <code>            public            
-    <strong>addAvailableCondition</strong>(<a href="../../Thelia/Condition/ConditionManagerInterface.html"><abbr title="Thelia\Condition\ConditionManagerInterface">ConditionManagerInterface</abbr></a> $condition)</code>
+    <strong>addAvailableCondition</strong>(<a href="../../Thelia/Condition/Implementation/ConditionInterface.html"><abbr title="Thelia\Condition\Implementation\ConditionInterface">ConditionInterface</abbr></a> $condition)</code>
     </h3>
     <div class="details">
         <p>Add an available ConstraintManager (Services)</p>
@@ -222,9 +222,9 @@ Time: 3:24 PM</p>
 
                     <table>
                     <tr>
-                <td><a href="../../Thelia/Condition/ConditionManagerInterface.html"><abbr title="Thelia\Condition\ConditionManagerInterface">ConditionManagerInterface</abbr></a></td>
+                <td><a href="../../Thelia/Condition/Implementation/ConditionInterface.html"><abbr title="Thelia\Condition\Implementation\ConditionInterface">ConditionInterface</abbr></a></td>
                 <td>$condition</td>
-                <td>ConditionManagerInterface</td>
+                <td>ConditionInterface</td>
             </tr>
             </table>
 
@@ -260,10 +260,10 @@ Time: 3:24 PM</p>
                     </div>
     </div>
 
-                <h3 id="method_decrementeQuantity">
+                <h3 id="method_decrementQuantity">
         <div class="location">at line 242</div>
-        <code>            public            bool
-    <strong>decrementeQuantity</strong>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)</code>
+        <code>            public            int
+    <strong>decrementQuantity</strong>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)</code>
     </h3>
     <div class="details">
         <p>Decrement this coupon quantity</p>
@@ -284,9 +284,8 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td>bool</td>
-            <td>
-</td>
+            <td>int</td>
+            <td>Usage left after decremental</td>
         </tr>
     </table>
 

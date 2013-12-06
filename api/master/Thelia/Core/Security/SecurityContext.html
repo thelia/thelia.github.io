@@ -103,7 +103,7 @@
                     Boolean
                 </td>
                 <td class="last">
-                    <a href="#method_isGranted">isGranted</a>(array $roles, array $resources, array $accesses)
+                    <a href="#method_isGranted">isGranted</a>(array $roles, array $resources, array $modules, array $accesses)
                     <p>Checks if the current user is allowed</p>
                 </td>
                 <td></td>
@@ -324,7 +324,7 @@
                 <h3 id="method_isGranted">
         <div class="location">at line 126</div>
         <code>final            public            Boolean
-    <strong>isGranted</strong>(array $roles, array $resources, array $accesses)</code>
+    <strong>isGranted</strong>(array $roles, array $resources, array $modules, array $accesses)</code>
     </h3>
     <div class="details">
         <p>Checks if the current user is allowed</p>
@@ -343,6 +343,12 @@
                     <tr>
                 <td>array</td>
                 <td>$resources</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$modules</td>
                 <td>
 </td>
             </tr>
@@ -371,7 +377,7 @@
     </div>
 
                 <h3 id="method_setAdminUser">
-        <div class="location">at line 183</div>
+        <div class="location">at line 205</div>
         <code>            public            
     <strong>setAdminUser</strong>(<a href="../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a> $user)</code>
     </h3>
@@ -397,7 +403,7 @@
     </div>
 
                 <h3 id="method_setCustomerUser">
-        <div class="location">at line 195</div>
+        <div class="location">at line 217</div>
         <code>            public            
     <strong>setCustomerUser</strong>(<a href="../../../Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">UserInterface</abbr></a> $user)</code>
     </h3>
@@ -423,7 +429,7 @@
     </div>
 
                 <h3 id="method_clearCustomerUser">
-        <div class="location">at line 205</div>
+        <div class="location">at line 227</div>
         <code>            public            
     <strong>clearCustomerUser</strong>()</code>
     </h3>
@@ -439,7 +445,7 @@
     </div>
 
                 <h3 id="method_clearAdminUser">
-        <div class="location">at line 213</div>
+        <div class="location">at line 235</div>
         <code>            public            
     <strong>clearAdminUser</strong>()</code>
     </h3>

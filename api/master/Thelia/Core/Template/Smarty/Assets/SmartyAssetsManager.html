@@ -51,8 +51,19 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(string $web_root, string $path_relative_to_web_root, boolean $developmentMode)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a> $assetsManager, string $web_root, string $path_relative_to_web_root)
                     <p>Creates a new SmartyAssetsManager instance</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_prepareAssets">prepareAssets</a>($assets_directory, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -86,7 +97,7 @@
                         <h3 id="method___construct">
         <div class="location">at line 46</div>
         <code>            public            
-    <strong>__construct</strong>(string $web_root, string $path_relative_to_web_root, boolean $developmentMode)</code>
+    <strong>__construct</strong>(<a href="../../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a> $assetsManager, string $web_root, string $path_relative_to_web_root)</code>
     </h3>
     <div class="details">
         <p>Creates a new SmartyAssetsManager instance</p>
@@ -97,19 +108,53 @@
 
                     <table>
                     <tr>
+                <td><a href="../../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a></td>
+                <td>$assetsManager</td>
+                <td>an asset manager instance</td>
+            </tr>
+                    <tr>
                 <td>string</td>
                 <td>$web_root</td>
-                <td>the disk path to the web root</td>
+                <td>the disk path to the web root (with final /)</td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$path_relative_to_web_root</td>
                 <td>the path (relative to web root) where the assets will be generated</td>
             </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepareAssets">
+        <div class="location">at line 54</div>
+        <code>            public            
+    <strong>prepareAssets</strong>($assets_directory, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
                     <tr>
-                <td>boolean</td>
-                <td>$developmentMode</td>
-                <td>true / false. If true, assets are not cached, and always generated.</td>
+                <td></td>
+                <td>$assets_directory</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td>
+</td>
             </tr>
             </table>
 
@@ -120,7 +165,7 @@
     </div>
 
                 <h3 id="method_computeAssetUrl">
-        <div class="location">at line 56</div>
+        <div class="location">at line 68</div>
         <code>            public            
     <strong>computeAssetUrl</strong>($assetType, $params, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
     </h3>
@@ -160,7 +205,7 @@
     </div>
 
                 <h3 id="method_processSmartyPluginCall">
-        <div class="location">at line 87</div>
+        <div class="location">at line 98</div>
         <code>            public            
     <strong>processSmartyPluginCall</strong>($assetType, $params, $content, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
     </h3>

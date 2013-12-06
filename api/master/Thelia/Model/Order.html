@@ -1271,10 +1271,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    int|string|<abbr title="Thelia\Model\Base\double">double</abbr>
+                    float|int|string
                 </td>
                 <td class="last">
-                    <a href="#method_getTotalAmount">getTotalAmount</a>(int $tax)
+                    <a href="#method_getTotalAmount">getTotalAmount</a>(int $tax, bool $includePostage = true)
                     <p>calculate the total amount</p>
                 </td>
                 <td></td>
@@ -5590,9 +5590,9 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_getTotalAmount">
-        <div class="location">at line 57</div>
-        <code>            public            int|string|<abbr title="Thelia\Model\Base\double">double</abbr>
-    <strong>getTotalAmount</strong>(int $tax)</code>
+        <div class="location">at line 58</div>
+        <code>            public            float|int|string
+    <strong>getTotalAmount</strong>(int $tax, bool $includePostage = true)</code>
     </h3>
     <div class="details">
         <p>calculate the total amount</p>
@@ -5608,6 +5608,12 @@ Allows to define default __call() behavior if you overwrite __call()</p>
                 <td>
 </td>
             </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$includePostage</td>
+                <td>
+</td>
+            </tr>
             </table>
 
             
@@ -5615,7 +5621,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
 
                     <table>
         <tr>
-            <td>int|string|<abbr title="Thelia\Model\Base\double">double</abbr></td>
+            <td>float|int|string</td>
             <td>
 </td>
         </tr>

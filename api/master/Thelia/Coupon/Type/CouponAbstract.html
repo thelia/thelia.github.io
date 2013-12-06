@@ -45,7 +45,7 @@ Time: 3:24 PM</p>
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $adapter)
+                    <a href="#method___construct">__construct</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade)
                     <p>Constructor</p>
                 </td>
                 <td></td>
@@ -55,7 +55,7 @@ Time: 3:24 PM</p>
                     <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setOrganizer">setOrganizer</a>(<a href="../../../Thelia/Coupon/RuleOrganizerInterface.html"><abbr title="Thelia\Coupon\RuleOrganizerInterface">RuleOrganizerInterface</abbr></a> $organizer)
+                    <a href="#method_setOrganizer">setOrganizer</a>(<a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a> $organizer)
                     <p>Set Condition Organizer</p>
                 </td>
                 <td></td>
@@ -132,7 +132,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a>
+                    <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getConditions">getConditions</a>()
@@ -145,7 +145,7 @@ Time: 3:24 PM</p>
                     <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setConditions">setConditions</a>(<a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a> $conditions)
+                    <a href="#method_setConditions">setConditions</a>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)
                     <p>Replace the existing Conditions by those given in parameter If one Condition is badly implemented, no Condition will be added</p>
                 </td>
                 <td></td>
@@ -228,7 +228,7 @@ Time: 3:24 PM</p>
                         <h3 id="method___construct">
         <div class="location">at line 109</div>
         <code>            public            
-    <strong>__construct</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $adapter)</code>
+    <strong>__construct</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade)</code>
     </h3>
     <div class="details">
         <p>Constructor</p>
@@ -240,8 +240,8 @@ Time: 3:24 PM</p>
                     <table>
                     <tr>
                 <td><a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a></td>
-                <td>$adapter</td>
-                <td>Service adapter</td>
+                <td>$facade</td>
+                <td>Service facade</td>
             </tr>
             </table>
 
@@ -254,7 +254,7 @@ Time: 3:24 PM</p>
                 <h3 id="method_setOrganizer">
         <div class="location">at line 123</div>
         <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
-    <strong>setOrganizer</strong>(<a href="../../../Thelia/Coupon/RuleOrganizerInterface.html"><abbr title="Thelia\Coupon\RuleOrganizerInterface">RuleOrganizerInterface</abbr></a> $organizer)</code>
+    <strong>setOrganizer</strong>(<a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a> $organizer)</code>
     </h3>
     <div class="details">
         <p>Set Condition Organizer</p>
@@ -265,7 +265,7 @@ Time: 3:24 PM</p>
 
                     <table>
                     <tr>
-                <td><a href="../../../Thelia/Coupon/RuleOrganizerInterface.html"><abbr title="Thelia\Coupon\RuleOrganizerInterface">RuleOrganizerInterface</abbr></a></td>
+                <td><a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a></td>
                 <td>$organizer</td>
                 <td>Manage Condition groups (&amp;&amp; and ||)</td>
             </tr>
@@ -470,7 +470,7 @@ Time: 3:24 PM</p>
 
                 <h3 id="method_getConditions">
         <div class="location">at line 208</div>
-        <code>            public            <a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a>
+        <code>            public            <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
     <strong>getConditions</strong>()</code>
     </h3>
     <div class="details">
@@ -483,8 +483,8 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a></td>
-            <td>A set of ConditionManagerInterface</td>
+            <td><a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a></td>
+            <td>A set of ConditionInterface</td>
         </tr>
     </table>
 
@@ -496,7 +496,7 @@ Time: 3:24 PM</p>
                 <h3 id="method_setConditions">
         <div class="location">at line 222</div>
         <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
-    <strong>setConditions</strong>(<a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a> $conditions)</code>
+    <strong>setConditions</strong>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)</code>
     </h3>
     <div class="details">
         <p>Replace the existing Conditions by those given in parameter If one Condition is badly implemented, no Condition will be added</p>
@@ -507,9 +507,9 @@ Time: 3:24 PM</p>
 
                     <table>
                     <tr>
-                <td><a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a></td>
+                <td><a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a></td>
                 <td>$conditions</td>
-                <td>ConditionManagerInterface to add</td>
+                <td>ConditionInterface to add</td>
             </tr>
             </table>
 

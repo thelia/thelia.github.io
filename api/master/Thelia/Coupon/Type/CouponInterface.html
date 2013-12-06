@@ -74,7 +74,7 @@ Time: 3:24 PM</p>
                     
                 </td>
                 <td class="last">
-                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/Type/CouponInterface.html"><abbr title="Thelia\Coupon\Type\CouponInterface">CouponInterface</abbr></a> $adapter, string $code, string $title, string $shortDescription, string $description, float $effect, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)
+                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, float $effect, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)
                     <p>Set Coupon</p>
                 </td>
                 <td></td>
@@ -141,7 +141,7 @@ Time: 3:24 PM</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a>
+                    <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getConditions">getConditions</a>()
@@ -154,8 +154,8 @@ Time: 3:24 PM</p>
                     <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setConditions">setConditions</a>(<a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a> $rules)
-                    <p>Replace the existing Rules by those given in parameter If one Rule is badly implemented, no Rule will be added</p>
+                    <a href="#method_setConditions">setConditions</a>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)
+                    <p>Replace the existing Conditions by those given in parameter If one Condition is badly implemented, no Condition will be added</p>
                 </td>
                 <td></td>
             </tr>
@@ -225,7 +225,7 @@ Time: 3:24 PM</p>
                 </td>
                 <td class="last">
                     <a href="#method_isMatching">isMatching</a>()
-                    <p>Check if the current Coupon is matching its conditions (Rules) Thelia variables are given by the FacadeInterface</p>
+                    <p>Check if the current Coupon is matching its conditions Thelia variables are given by the FacadeInterface</p>
                 </td>
                 <td></td>
             </tr>
@@ -235,7 +235,7 @@ Time: 3:24 PM</p>
         <h2>Details</h2>
 
                         <h3 id="method_getName">
-        <div class="location">at line 46</div>
+        <div class="location">at line 47</div>
         <code>            public            string
     <strong>getName</strong>()</code>
     </h3>
@@ -261,7 +261,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getToolTip">
-        <div class="location">at line 53</div>
+        <div class="location">at line 54</div>
         <code>            public            string
     <strong>getToolTip</strong>()</code>
     </h3>
@@ -287,7 +287,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getServiceId">
-        <div class="location">at line 60</div>
+        <div class="location">at line 61</div>
         <code>            public            string
     <strong>getServiceId</strong>()</code>
     </h3>
@@ -313,9 +313,9 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_set">
-        <div class="location">at line 79</div>
+        <div class="location">at line 80</div>
         <code>            public            
-    <strong>set</strong>(<a href="../../../Thelia/Coupon/Type/CouponInterface.html"><abbr title="Thelia\Coupon\Type\CouponInterface">CouponInterface</abbr></a> $adapter, string $code, string $title, string $shortDescription, string $description, float $effect, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)</code>
+    <strong>set</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, float $effect, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)</code>
     </h3>
     <div class="details">
         <p>Set Coupon</p>
@@ -326,8 +326,8 @@ Time: 3:24 PM</p>
 
                     <table>
                     <tr>
-                <td><a href="../../../Thelia/Coupon/Type/CouponInterface.html"><abbr title="Thelia\Coupon\Type\CouponInterface">CouponInterface</abbr></a></td>
-                <td>$adapter</td>
+                <td><a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a></td>
+                <td>$facade</td>
                 <td>Provides necessary value from Thelia</td>
             </tr>
                     <tr>
@@ -394,7 +394,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getCode">
-        <div class="location">at line 98</div>
+        <div class="location">at line 99</div>
         <code>            public            string
     <strong>getCode</strong>()</code>
     </h3>
@@ -420,7 +420,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getTitle">
-        <div class="location">at line 105</div>
+        <div class="location">at line 106</div>
         <code>            public            string
     <strong>getTitle</strong>()</code>
     </h3>
@@ -446,7 +446,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getShortDescription">
-        <div class="location">at line 112</div>
+        <div class="location">at line 113</div>
         <code>            public            string
     <strong>getShortDescription</strong>()</code>
     </h3>
@@ -472,7 +472,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getDescription">
-        <div class="location">at line 119</div>
+        <div class="location">at line 120</div>
         <code>            public            string
     <strong>getDescription</strong>()</code>
     </h3>
@@ -498,7 +498,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isCumulative">
-        <div class="location">at line 128</div>
+        <div class="location">at line 129</div>
         <code>            public            bool
     <strong>isCumulative</strong>()</code>
     </h3>
@@ -524,7 +524,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isRemovingPostage">
-        <div class="location">at line 135</div>
+        <div class="location">at line 136</div>
         <code>            public            bool
     <strong>isRemovingPostage</strong>()</code>
     </h3>
@@ -550,8 +550,8 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getConditions">
-        <div class="location">at line 144</div>
-        <code>            public            <a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a>
+        <div class="location">at line 145</div>
+        <code>            public            <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
     <strong>getConditions</strong>()</code>
     </h3>
     <div class="details">
@@ -564,8 +564,8 @@ Time: 3:24 PM</p>
 
                     <table>
         <tr>
-            <td><a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a></td>
-            <td>A set of ConditionManagerInterface</td>
+            <td><a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a></td>
+            <td>A set of ConditionInterface</td>
         </tr>
     </table>
 
@@ -575,12 +575,12 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_setConditions">
-        <div class="location">at line 155</div>
+        <div class="location">at line 156</div>
         <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
-    <strong>setConditions</strong>(<a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a> $rules)</code>
+    <strong>setConditions</strong>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)</code>
     </h3>
     <div class="details">
-        <p>Replace the existing Rules by those given in parameter If one Rule is badly implemented, no Rule will be added</p>
+        <p>Replace the existing Conditions by those given in parameter If one Condition is badly implemented, no Condition will be added</p>
         <p>
 </p>
         <div class="tags">
@@ -588,9 +588,9 @@ Time: 3:24 PM</p>
 
                     <table>
                     <tr>
-                <td><a href="../../../Thelia/Coupon/ConditionCollection.html"><abbr title="Thelia\Coupon\ConditionCollection">ConditionCollection</abbr></a></td>
-                <td>$rules</td>
-                <td>ConditionManagerInterface to add</td>
+                <td><a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a></td>
+                <td>$conditions</td>
+                <td>ConditionInterface to add</td>
             </tr>
             </table>
 
@@ -621,7 +621,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getExpirationDate">
-        <div class="location">at line 162</div>
+        <div class="location">at line 163</div>
         <code>            public            <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
     <strong>getExpirationDate</strong>()</code>
     </h3>
@@ -647,7 +647,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isAvailableOnSpecialOffers">
-        <div class="location">at line 170</div>
+        <div class="location">at line 171</div>
         <code>            public            boolean
     <strong>isAvailableOnSpecialOffers</strong>()</code>
     </h3>
@@ -673,7 +673,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isEnabled">
-        <div class="location">at line 178</div>
+        <div class="location">at line 179</div>
         <code>            public            boolean
     <strong>isEnabled</strong>()</code>
     </h3>
@@ -699,7 +699,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getMaxUsage">
-        <div class="location">at line 186</div>
+        <div class="location">at line 187</div>
         <code>            public            int
     <strong>getMaxUsage</strong>()</code>
     </h3>
@@ -725,7 +725,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isExpired">
-        <div class="location">at line 193</div>
+        <div class="location">at line 194</div>
         <code>            public            bool
     <strong>isExpired</strong>()</code>
     </h3>
@@ -751,14 +751,14 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_exec">
-        <div class="location">at line 207</div>
+        <div class="location">at line 208</div>
         <code>            public            float
     <strong>exec</strong>()</code>
     </h3>
     <div class="details">
         <p>Return effects generated by the coupon A positive value</p>
         <p>Effects could also affect something else than the final Checkout price
-CouponAdapter $adapter could be use to directly pass a Session value
+FacadeInterface $facade could be used to directly pass a Session value
 some would wish to modify
 Hence affecting a wide variety of Thelia elements</p>
         <div class="tags">
@@ -778,12 +778,12 @@ Hence affecting a wide variety of Thelia elements</p>
     </div>
 
                 <h3 id="method_isMatching">
-        <div class="location">at line 215</div>
+        <div class="location">at line 216</div>
         <code>            public            bool
     <strong>isMatching</strong>()</code>
     </h3>
     <div class="details">
-        <p>Check if the current Coupon is matching its conditions (Rules) Thelia variables are given by the FacadeInterface</p>
+        <p>Check if the current Coupon is matching its conditions Thelia variables are given by the FacadeInterface</p>
         <p>
 </p>
         <div class="tags">
