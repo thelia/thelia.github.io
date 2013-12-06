@@ -30,7 +30,7 @@ $ git checkout -b master new-branch
 After finishing your modification you have to rebase your branch and push it to your repo
 
 ```
-$ git remote add upstream https://github.com/thelia/thelia
+$ git remote add upstream https://github.com/thelia/thelia.git
 $ git checkout master
 $ git pull --ff-only upstream master
 $ git checkout new-branch
