@@ -84,6 +84,20 @@ events:
         eventClassApi: "/api/master/Thelia/Core/Event/Customer/CustomerEvent.html"
       }
     - {
+        name: "action.before_deleteCustomer",
+        const: "BEFORE_DELETECUSTOMER",
+        desc: "sent just before customer removal",
+        eventClass: "Thelia\\Core\\Event\\Customer\\CustomerEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Customer/CustomerEvent.html"
+      }
+    - {
+        name: "action.after_deleteCustomer",
+        const: "AFTER_DELETECUSTOMER",
+        desc: "ssent just after customer removal",
+        eventClass: "Thelia\\Core\\Event\\Customer\\CustomerEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Customer/CustomerEvent.html"
+      }
+    - {
         name: "action.lostPassword",
         const: "LOST_PASSWORD",
         desc: "sent when a customer need a new password",
@@ -104,6 +118,35 @@ events:
         eventClass: "Thelia\\Core\\Event\\DefaultActionEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/DefaultActionEvent.html"
       }
+    - {
+        name: "action.createAddress",
+        const: "ADDRESS_CREATE",
+        desc: "sent for address creation",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressCreateOrUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressCreateOrUpdateEvent.html"
+      }
+    - {
+        name: "action.before_createAddress",
+        const: "BEFORE_CREATEADDRESS",
+        desc: "sent once the address creation form has been successfully validated, and before address insertion in the database.",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
+      }
+
+    - {
+        name: "action.updateAddress",
+        const: "ADDRESS_UPDATE",
+        desc: "sent for address modification",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressCreateOrUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressCreateOrUpdateEvent.html"
+      }
+    - {
+        name: "action.deleteAddress",
+        const: "ADDRESS_DELETE",
+        desc: "sent on address removal",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
+      }
 
 ---
 <div class="page-header">
@@ -111,7 +154,7 @@ events:
 </div>
 
 Thelia use the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern) for managing all the action like creating a new customer, updating a product.
-For each action an event is dispatching containing an event object. Event object contain only data.
+For each action an event is dispatching containing an event object. Event object contains only data.
 
 ##List of event
 
