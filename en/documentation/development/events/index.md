@@ -189,6 +189,20 @@ events:
         eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryCreateEvent.html"
       }
     - {
+        name: "action.before_createcategory",
+        const: "BEFORE_CREATECATEGORY",
+        desc: "sent just before insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryEvent.html"
+      }
+    - {
+        name: "action.after_createcategory",
+        const: "AFTER_CREATECATEGORY",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryEvent.html"
+      }
+    - {
         name: "action.updateCategory",
         const: "CATEGORY_UPDATE",
         desc: "sent for category modification",
@@ -196,11 +210,39 @@ events:
         eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryUpdateEvent.html"
       }
     - {
+        name: "action.before_updateCategory",
+        const: "BEFORE_UPDATECATEGORY",
+        desc: "sent just before updating the database",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryEvent.html"
+      }
+    - {
+        name: "action.after_updateCategory",
+        const: "AFTER_UPDATECATEGORY",
+        desc: "sent just after updating the database",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryEvent.html"
+      }
+    - {
         name: "action.deleteCategory",
         const: "CATEGORY_DELETE",
         desc: "sent for category removal",
         eventClass: "Thelia\\Core\\Event\\Category\\CategoryDeleteEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryDeleteEvent.html"
+      }
+    - {
+        name: "action.before_deletecategory",
+        const: "BEFORE_DELETECATEGORY",
+        desc: "sent just before removing category in database",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryEvent.html"
+      }
+    - {
+        name: "action.after_deletecategory",
+        const: "AFTER_DELETECATEGORY",
+        desc: "sent just after removing category in database",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryEvent.html"
       }
     - {
         name: "action.toggleCategoryVisibility",
