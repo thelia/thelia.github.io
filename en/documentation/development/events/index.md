@@ -181,6 +181,55 @@ events:
         eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
       }
+    - {
+        name: "action.createCategory",
+        const: "CATEGORY_CREATE",
+        desc: "sent for category creation",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryCreateEvent.html"
+      }
+    - {
+        name: "action.updateCategory",
+        const: "CATEGORY_UPDATE",
+        desc: "sent for category modification",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryUpdateEvent.html"
+      }
+    - {
+        name: "action.deleteCategory",
+        const: "CATEGORY_DELETE",
+        desc: "sent for category removal",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryDeleteEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryDeleteEvent.html"
+      }
+    - {
+        name: "action.toggleCategoryVisibility",
+        const: "CATEGORY_TOGGLE_VISIBILITY",
+        desc: "sent when category visibility change",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryToggleVisibilityEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryToggleVisibilityEvent.html"
+      }
+    - {
+        name: "action.updateCategoryPosition",
+        const: "CATEGORY_UPDATE_POSITION",
+        desc: "sent when category position change",
+        eventClass: "Thelia\\Core\\Event\\UpdatePositionEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/UpdatePositionEvent.html"
+      }
+    - {
+        name: "action.categoryAddContent",
+        const: "CATEGORY_ADD_CONTENT",
+        desc: "sent when a content is added to a category",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryAddContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryAddContentEvent.html"
+      }
+    - {
+        name: "action.categoryRemoveContent",
+        const: "CATEGORY_REMOVE_CONTENT",
+        desc: "sent when a content is removed to a category",
+        eventClass: "Thelia\\Core\\Event\\Category\\CategoryDeleteContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryDeleteContentEvent.html"
+      }
 
 ---
 <div class="page-header">
