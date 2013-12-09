@@ -132,13 +132,33 @@ events:
         eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
       }
-
+    - {
+        name: "action.after_createAddress",
+        const: "AFTER_CREATEADDRESS",
+        desc: "Sent just after a successful insert of a new address in the database.",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
+      }
     - {
         name: "action.updateAddress",
         const: "ADDRESS_UPDATE",
         desc: "sent for address modification",
         eventClass: "Thelia\\Core\\Event\\Address\\AddressCreateOrUpdateEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressCreateOrUpdateEvent.html"
+      }
+    - {
+        name: "action.before_updateAddress",
+        const: "BEFORE_UPDATEADDRESS",
+        desc: "sent once the address update form has been successfully validated, and before address modification in the database.",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
+      }
+    - {
+        name: "action.after_updateAddress",
+        const: "AFTER_UPDATEADDRESS",
+        desc: "Sent just after a successful modification of an existing address in the database.",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
       }
     - {
         name: "action.deleteAddress",
