@@ -24,7 +24,7 @@ patch but there are some rules to follow. First of all, fork [Thelia](https://gi
 a new branch, never work on the master branch, use it only for syncing with [Thelia](https://github.com/thelia/thelia) repo.
 
 ```
-$ git checkout -b master new-branch
+$ git checkout -b new-branch master
 ```
 
 After finishing your modification you have to rebase your branch and push it to your repo
