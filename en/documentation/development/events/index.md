@@ -167,6 +167,20 @@ events:
         eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
       }
+    - {
+        name: "action.before_deleteAddress",
+        const: "BEFORE_DELETEADDRESS",
+        desc: "sent just before address removal",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
+      }
+    - {
+        name: "action.after_deleteAddress",
+        const: "AFTER_DELETEADDRESS",
+        desc: "sent just after address removal",
+        eventClass: "Thelia\\Core\\Event\\Address\\AddressEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Address/AddressEvent.html"
+      }
 
 ---
 <div class="page-header">
