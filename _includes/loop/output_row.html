@@ -1,0 +1,81 @@
+{% if page.returns_global_outputs.countable == true or page.returns_global_outputs.timestampable == true or page.returns_global_outputs.versionable == true %}
+
+    <h4>Global outputs</h4>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Variable</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if page.returns_global_outputs.countable == true %}
+                {% for output in page.global_outputs.countable %}
+                <tr>
+                    <td>
+                        {{ output.name }}
+                    </td>
+                    <td>
+                        {{ output.description }}
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+
+            {% if page.returns_global_outputs.timestampable == true %}
+                {% for output in page.global_outputs.timestampable %}
+                <tr>
+                    <td>
+                        {{ output.name }}
+                    </td>
+                    <td>
+                        {{ output.description }}
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+
+            {% if page.returns_global_outputs.versionable == true %}
+                {% for output in page.global_outputs.versionable %}
+                <tr>
+                    <td>
+                        {{ output.name }}
+                    </td>
+                    <td>
+                        {{ output.description }}
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+{% endif %}
+
+<h4>Loop outputs</h4>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for output in page.outputs %}
+            <tr>
+                <td>
+                    {{ output.name }}
+                </td>
+                <td>
+                    {{ output.description }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

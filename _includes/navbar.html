@@ -1,6 +1,25 @@
-<div class="row">
-    <div class="large-12 columns">
-        <a href="/"><img src="/img/thelia_logo.png"/></a>
+<a href="https://github.com/thelia/thelia.github.io" class="hidden-xs github-fork" target="_blank">
+    <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub">
+</a>
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/{%if page.lang != site.language %}{{page.lang}}{% endif %}"><img src="/img/logo.png" alt="Thelia documentation logo"/></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/api/master/index.html">Thelia API</a></li>
+                <li><a href="http://thelia.net/v2">Thelia.net</a></li>
+                <li><a href="http://thelia.net/forum">Thelia Forum</a></li>
+            </ul>
+        </div>
     </div>
-</div>
-<hr>
+</nav>

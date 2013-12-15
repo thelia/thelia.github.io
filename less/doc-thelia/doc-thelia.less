@@ -1,0 +1,41 @@
+/* Thelia documentation variables */
+@import "variables.less";
+@import "navs.less";
+@import "type.less";
+@import "pygment.less";
+@import "sidebar.less";
+
+.thelia-footer{
+    margin-top: 20px;
+    background: @navbar-inverse-bg url('../img/footer_logo.png') no-repeat center;
+    padding: 15px 0;
+    height: 150px;
+
+    .breadcrumb{
+        background: none;
+    }
+}
+
+.github-fork img{
+    position: absolute;
+    top: 51px;
+    right: 0;
+    border: 0;
+    z-index: 1100;
+}
+
+/* Anchorify rules */
+.anchor-link{
+    display: none;
+    margin: 0 0 0 5px;
+}
+
+h1, h2, h3, h4, h5{
+
+    &:hover{
+        
+        .anchor-link{
+            display: inline;
+        }
+    }
+}
