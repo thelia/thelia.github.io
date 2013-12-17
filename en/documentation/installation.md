@@ -44,10 +44,8 @@ export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
 ## Download Thelia 2
 
 ``` bash
-$ git clone https://github.com/thelia/thelia.git
-$ cd thelia
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar install --prefer-dist --optimize-autoloader
+$ php composer.phar create-project thelia/thelia path/ dev-master
 ```
 
 Finish the installation using cli tools :
