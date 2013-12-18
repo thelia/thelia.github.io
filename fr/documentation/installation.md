@@ -25,7 +25,7 @@ lang: fr
 
 Si vous utilisez Mac OSX, il n'utilise pas encore php 5.4 comme version par défaut... Plusieurs solutions s'offrent à vous :
 
-* utiliser linux (la meilleure)
+* utiliser [phpbrew](https://github.com/c9s/phpbrew)
 * utiliser la dernière version de MAMP et mettreuse last MAMP version et modifier le chemin vers votre PHP :
 
 ```bash
