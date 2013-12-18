@@ -18,7 +18,7 @@ lang: en
         * curl
         * calendar
     * safe_mode off
-    * memory_limit at least 150M, preferably 256.
+    * memory_limit at least 128M, preferably 256.
     * post\_max\_size 20M
     * upload\_max\_filesize 2M
 * apache 2

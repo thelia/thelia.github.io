@@ -17,7 +17,7 @@ lang: fr
         * gd
         * curl
     * safe_mode off
-    * memory_limit au moins 150M, mais préférez 256.
+    * memory_limit au moins 128M, mais préférez 256.
     * post\_max\_size 20M
     * upload\_max\_filesize 2M
 * apache 2
