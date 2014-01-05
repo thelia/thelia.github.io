@@ -14,6 +14,8 @@ subnav: features_coupons_effects_index
 In case you have trouble following our explanation, you can find the whole code as a module on [GitHub](https://github.com/gmorel/thelia2-coupon-give-free-product).
 
 
+
+
 1) **Implement** : A Coupon has to implement the [Thelia\Coupon\Type\CouponInterface](https://github.com/thelia/thelia/blob/master/core/lib/Thelia/Coupon/Type/CouponInterface.php) Interface.
 
 In order to save you some time, we advise to simply have your ```GiveProduct``` class extends our [Thelia\Coupon\Type\CouponAbstract](https://github.com/thelia/thelia/blob/master/core/lib/Thelia/Coupon/Type/CouponAbstract.php) class.
@@ -38,6 +40,9 @@ Please create your new ```GiveProduct``` type class in your module. Preferably i
 Basically you create a new service having ```thelia.coupon.type.give_product``` as id building the class ```CouponGiveProduct\Coupon\Type\GiveProduct``` with the facade id ```thelia.facade``` which is also another service.
 And since we tag it with ```thelia.coupon.addCoupon``` Thelia2 will automatically add it to its Coupon list.
 
+
+
+
 3) **I18n** : You would then have to implements 3 simple i18n methods describing the Coupon :
 
 ``` local/modules/MyModule/Coupon/Type/GiveProduct.php ```
@@ -51,8 +56,11 @@ And since we tag it with ```thelia.coupon.addCoupon``` Thelia2 will automaticall
 
 
 
+
 4) **Behavior** : Then the method responsible for the Coupon behavior. This is where all the strength of our Coupon module is :
+
 The method ```exec()``` contains all the Coupon logic.
+It performs the Coupon effect and return the discount (which can be 0).
 
 ![caution](/img/caution.png) **Beware it will be executed whenever the coupon is entered, whether the order is paid or not.**
 
@@ -88,20 +96,26 @@ public function exec()
 You will be able to see the Coupon logic (Product retrieval, CartItem insertion, Event and Action) on [GitHub](https://github.com/gmorel/thelia2-coupon-give-free-product).
 
 
-5) **Type** : You would then have to implements this attribute :
+
+
+5) **Type (service id)** : You would then have to implements this attribute :
 
 ``` local/modules/MyModule/Coupon/Type/GiveProduct.php ```
 
-```
+```php
 /** @var string Service Id  */
 protected $serviceId = 'thelia.coupon.type.give_product';
 ```
 
 Where ```give_product``` is the unique id of your Coupon set in step 2). This is the name of the [Service](http://symfony.com/doc/current/book/service_container.html).
 
+
+
+
 6) **Custom inputs** : You might need to have more parameter than the default ```amount``` and ```percent``` ?
+
 In our example we need to add ```product_sale_element_id``` and ```quantity``` parameters.
-You can declare constants with the name of your inputs in order to ease the maintenability :
+You can declare constants with the name of your inputs in order to ease the maintainability :
 
 ``` local/modules/MyModule/Coupon/Type/GiveProduct.php ```
 
@@ -198,7 +212,7 @@ public function set(
 ```
 
 Right now, Thelia2 won't be able to draw these new inputs in the BackOffice.
-As it is a Thelia2 key feature, we chose to give you the opportunity to customize the way you want these inputs will be displayed.
+As it is a Thelia2 key feature, we chose to give you the opportunity to customize the way you want these inputs will to be displayed.
 In this way you will be able to focus on the ergonomic rather than be stuck on a rigid structure.
 
 ``` local/modules/MyModule/Coupon/Type/GiveProduct.php ```
@@ -236,6 +250,9 @@ public function drawBackOfficeInputs()
 
 Putting HTML into PHP class file is not really a good practice.
 If needed you could draw your inputs in a Smarty template and render it via the SmartyParser.
+
+
+
 
 7) **Inputs saving** : At this moment Thelia2 is not able to guess what it will have to serialize as JSON in the table Coupon column serialized_effects.
 In order to teach it how to save your new parameters simply extends this attribute in your ```GiveProduct``` type class in your module.
