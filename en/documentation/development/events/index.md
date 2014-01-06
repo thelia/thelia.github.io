@@ -246,31 +246,493 @@ events:
       }
     - {
         name: "action.toggleCategoryVisibility",
-        const: "CATEGORY_TOGGLE_VISIBILITY",
+        const: CATEGORY\_TOGGLE_VISIBILITY,
         desc: "sent when category visibility change",
         eventClass: "Thelia\\Core\\Event\\Category\\CategoryToggleVisibilityEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryToggleVisibilityEvent.html"
       }
     - {
         name: "action.updateCategoryPosition",
-        const: "CATEGORY_UPDATE_POSITION",
+        const: CATEGORY\_UPDATE_POSITION,
         desc: "sent when category position change",
         eventClass: "Thelia\\Core\\Event\\UpdatePositionEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/UpdatePositionEvent.html"
       }
     - {
         name: "action.categoryAddContent",
-        const: "CATEGORY_ADD_CONTENT",
+        const: CATEGORY\_ADD_CONTENT,
         desc: "sent when a content is added to a category",
         eventClass: "Thelia\\Core\\Event\\Category\\CategoryAddContentEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryAddContentEvent.html"
       }
     - {
         name: "action.categoryRemoveContent",
-        const: "CATEGORY_REMOVE_CONTENT",
+        const: CATEGORY\_REMOVE_CONTENT,
         desc: "sent when a content is removed to a category",
         eventClass: "Thelia\\Core\\Event\\Category\\CategoryDeleteContentEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Category/CategoryDeleteContentEvent.html"
+      }
+    - {
+        name: "action.createFolder",
+        const: "FOLDER_CREATE",
+        desc: "sent when a folder is created",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderCreateEvent.html"
+      }
+    - {
+        name: "action.before_createFolder",
+        const: "BEFORE_CREATEFOLDER",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderEvent.html"
+      }
+    - {
+        name: "action.after_createFolder",
+        const: "AFTER_CREATEFOLDER",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderEvent.html"
+      }
+    - {
+        name: "action.updateFolder",
+        const: "FOLDER_UPDATE",
+        desc: "sent for folder modification",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderUpdateEvent.html"
+      }
+    - {
+        name: "action.before_updateFolder",
+        const: "BEFORE_UPDATEFOLDER",
+        desc: "sent just before updating the database",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderEvent.html"
+      }
+    - {
+        name: "action.after_updateFolder",
+        const: "AFTER_UPDATEFOLDER",
+        desc: "sent just after updating the database",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderEvent.html"
+      }
+    - {
+        name: "action.deleteFolder",
+        const: "FOLDER_DELETE",
+        desc: "sent for folder removal",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderDeleteEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderDeleteEvent.html"
+      }
+    - {
+        name: "action.before_deleteFolder",
+        const: "BEFORE_DELETEFOLDER",
+        desc: "sent just before removing folder in the database",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderEvent.html"
+      }
+    - {
+        name: "action.after_deleteFolder",
+        const: "AFTER_DELETEFOLDER",
+        desc: "sent just after removing folder in the database",
+        eventClass: "Thelia\\Core\\Event\\Folder\\FolderEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Folder/FolderEvent.html"
+      }
+    - {
+        name: "action.createContent",
+        const: "CONTENT_CREATE",
+        desc: "sent when a content is created",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentCreateEvent.html"
+      }
+    - {
+        name: "action.before_createContent",
+        const: "BEFORE_CREATECONTENT",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentEvent.html"
+      }
+    - {
+        name: "action.after_createContent",
+        const: "AFTER_CREATECONTENT",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentEvent.html"
+      }
+    - {
+        name: "action.updateContent",
+        const: "CONTENT_UPDATE",
+        desc: "sent for content modification",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentUpdateEvent.html"
+      }
+    - {
+        name: "action.before_updateContent",
+        const: "BEFORE_UPDATECONTENT",
+        desc: "sent just before updating the database",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentEvent.html"
+      }
+    - {
+        name: "action.after_updateContent",
+        const: "AFTER_UPDATECONTENT",
+        desc: "sent just after updating the database",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentEvent.html"
+      }
+    - {
+        name: "action.deleteContent",
+        const: "CONTENT_DELETE",
+        desc: "sent for content removal",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentDeleteEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentDeleteEvent.html"
+      }
+    - {
+        name: "action.before_deleteContent",
+        const: "BEFORE_DELETECONTENT",
+        desc: "sent just before removing content in the database",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentEvent.html"
+      }
+    - {
+        name: "action.after_deleteContent",
+        const: "AFTER_DELETECONTENT",
+        desc: "sent just after removing content in the database",
+        eventClass: "Thelia\\Core\\Event\\Content\\ContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Content/ContentEvent.html"
+      }
+    - {
+        name: "action.createCountry",
+        const: "COUNTRY_CREATE",
+        desc: "sent when a country is created",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryCreateEvent.html"
+      }
+    - {
+        name: "action.before_createCountry",
+        const: "BEFORE_CREATECOUNTRY",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryEvent.html"
+      }
+    - {
+        name: "action.after_createCountry",
+        const: "AFTER_CREATECOUNTRY",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryEvent.html"
+      }
+    - {
+        name: "action.updateCountry",
+        const: "COUNTRY_UPDATE",
+        desc: "sent for content modification",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryUpdateEvent.html"
+      }
+    - {
+        name: "action.before_updateCountry",
+        const: "BEFORE_UPDATECOUNTRY",
+        desc: "sent just before updating the database",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryEvent.html"
+      }
+    - {
+        name: "action.after_updateCountry",
+        const: "AFTER_UPDATECOUNTRY",
+        desc: "sent just after updating the database",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryEvent.html"
+      }
+    - {
+        name: "action.deleteCountry",
+        const: "COUNTRY_DELETE",
+        desc: "sent for content removal",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryDeleteEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryDeleteEvent.html"
+      }
+    - {
+        name: "action.before_deleteCountry",
+        const: "BEFORE_DELETECOUNTRY",
+        desc: "sent just before removing content in the database",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryEvent.html"
+      }
+    - {
+        name: "action.after_deleteCountry",
+        const: "AFTER_DELETECOUNTRY",
+        desc: "sent just after removing content in the database",
+        eventClass: "Thelia\\Core\\Event\\Country\\CountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Country/CountryEvent.html"
+      }
+    - {
+        name: "action.createArea",
+        const: "AREA_CREATE",
+        desc: "sent when an area is created",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaCreateEvent.html"
+      }
+    - {
+        name: "action.before_createArea",
+        const: "BEFORE_CREATEAREA",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaEvent.html"
+      }
+    - {
+        name: "action.after_createArea",
+        const: "AFTER_CREATEAREA",
+        desc: "sent just after insertion in database",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaEvent.html"
+      }
+    - {
+        name: "action.area.postageUpdate",
+        const: AREA\_POSTAGE_UPDATE,
+        desc: "sent for content modification",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaUpdatePostageEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaUpdatePostageEvent.html"
+      }
+    - {
+        name: "action.before_updateArea",
+        const: "BEFORE_UPDATEAREA",
+        desc: "sent just before updating the database",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaEvent.html"
+      }
+    - {
+        name: "action.after_updateArea",
+        const: "AFTER_UPDATEAREA",
+        desc: "sent just after updating the database",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaEvent.html"
+      }
+    - {
+        name: "action.area.removeCountry",
+        const: AREA\_ADD_COUNTRY,
+        desc: "sent when a country is removed from an existing area",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaAddCountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaAddCountryEvent.html"
+      }
+    - {
+        name: "action.area.addCountry",
+        const: AREA\_REMOVE_COUNTRY,
+        desc: "sent when a country is added to an existing area",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaRemoveCountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaRemoveCountryEvent.html"
+      }
+    - {
+        name: "action.deleteArea",
+        const: "AREA_DELETE",
+        desc: "sent when an area is removed",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaRemoveCountryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaRemoveCountryEvent.html"
+      }
+    - {
+        name: "action.before_deleteArea",
+        const: "BEFORE_DELETEAREA",
+        desc: "sent just before removing content in the database",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaEvent.html"
+      }
+    - {
+        name: "action.after_deleteArea",
+        const: "AFTER_DELETEAREA",
+        desc: "sent just after removing content in the database",
+        eventClass: "Thelia\\Core\\Event\\Area\\AreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Area/AreaEvent.html"
+      }
+    - {
+        name: "action.shippingZone.addArea",
+        const: SHIPPING\_ZONE\_ADD_AREA,
+        desc: "sent when an aera is added to a shipping zone",
+        eventClass: "Thelia\\Core\\Event\\ShippingZone\\ShippingZoneAddAreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/ShippingZone/ShippingZoneAddAreaEvent.html"
+      }
+    - {
+        name: "action.shippingZone.removeArea",
+        const: SHIPPING\_ZONE\_REMOVE_AREA,
+        desc: "sent when an aera is removed from a shipping zone",
+        eventClass: "Thelia\\Core\\Event\\ShippingZone\\ShippingZoneAddAreaEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/ShippingZone/ShippingZoneAddAreaEvent.html"
+      }
+    - {
+        name: "action.createProduct",
+        const: PRODUCT_CREATE,
+        desc: "sent when a new product is created",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductCreateEvent.html"
+      }
+    - {
+        name: "action.before_createproduct",
+        const: BEFORE_CREATEPRODUCT,
+        desc: "sent when a new product is created",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductEvent.html"
+      }
+    - {
+        name: "action.after_createproduct",
+        const: AFTER_CREATEPRODUCT,
+        desc: "sent when a new product is created",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductEvent.html"
+      }
+    - {
+        name: "action.updateProduct",
+        const: PRODUCT_UPDATE,
+        desc: "sent when a new product is updated",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductCreateEvent.html"
+      }
+    - {
+        name: "action.before_updateProduct",
+        const: BEFORE_UPDATEPRODUCT,
+        desc: "sent just before updating the database",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductEvent.html"
+      }
+    - {
+        name: "action.after_updateProduct",
+        const: AFTER_UPDATEPRODUCT,
+        desc: "sent just after updating the database",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductEvent.html"
+      }
+    - {
+        name: "action.deleteProduct",
+        const: PRODUCT_DELETE,
+        desc: "sent when a new product is removed",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductDeleteEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductDeleteEvent.html"
+      }
+    - {
+        name: "action.before_deleteproduct",
+        const: BEFORE_DELETEPRODUCT,
+        desc: "sent just before removing the product",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductEvent.html"
+      }
+    - {
+        name: "action.after_deleteproduct",
+        const: AFTER_DELETEPRODUCT,
+        desc: "sent just after removing the product",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductEvent.html"
+      }
+    - {
+        name: "action.toggleProductVisibility",
+        const: PRODUCT\_TOGGLE_VISIBILITY,
+        desc: "sent when a prodcut's visibility change",
+        eventClass: "Thelia\\Core\\Event\\UpdatePositionEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/UpdatePositionEvent.html"
+      }
+    - {
+        name: "action.updateProductPosition",
+        const: PRODUCT\_UPDATE_POSITION,
+        desc: "sent when a prodcut's position change",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductToggleVisibilityEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductToggleVisibilityEvent.html"
+      }
+    - {
+        name: "action.productAddContent",
+        const: PRODUCT\_ADD_CONTENT,
+        desc: "sent when a content is added to a product",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductAddContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductAddContentEvent.html"
+      }
+    - {
+        name: "action.productRemoveContent",
+        const: PRODUCT\_REMOVE_CONTENT,
+        desc: "sent when a content is removed to a product",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductDeleteContentEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductDeleteContentEvent.html"
+      }
+    - {
+        name: "action.updateProductContentPosition",
+        const: PRODUCT\_UPDATE\_CONTENT_POSITION,
+        desc: "",
+        eventClass: "Thelia\\Core\\Event\\UpdatePositionEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/UpdatePositionEvent.html"
+      }
+    - {
+        name: "action.addProductSaleElement",
+        const: PRODUCT\_ADD\_PRODUCT\_SALE_ELEMENT,
+        desc: "Create a new product sale element, with or without combination",
+        eventClass: "Thelia\\Core\\Event\\ProductSaleElement\\ProductSaleElementCreateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/ProductSaleElement/ProductSaleElementCreateEvent.html"
+      }
+    - {
+        name: "action.updateProductSaleElement",
+        const: PRODUCT\_UPDATE\_PRODUCT\_SALE_ELEMENT,
+        desc: "Update an existing product sale element",
+        eventClass: "Thelia\\Core\\Event\\ProductSaleElement\\ProductSaleElementUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/ProductSaleElement/ProductSaleElementUpdateEvent.html"
+      }
+    - {
+        name: "action.deleteProductSaleElement",
+        const: PRODUCT\_DELETE\_PRODUCT\_SALE_ELEMENT,
+        desc: "Delete a product sale element",
+        eventClass: "Thelia\\Core\\Event\\ProductSaleElement\\ProductSaleElementDeleteEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/ProductSaleElement/ProductSaleElementDeleteEvent.html"
+      }
+    - {
+        name: "action.deleteProductSaleElement",
+        const: PRODUCT\_COMBINATION_GENERATION,
+        desc: "Generate combinations. All existing combinations for the product are deleted.",
+        eventClass: "Thelia\\Core\\Event\\ProductSaleElement\\ProductCombinationGenerationEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/ProductSaleElement/ProductCombinationGenerationEvent.html"
+      }
+    - {
+        name: "action.productSetTemplate",
+        const: PRODUCT\_SET_TEMPLATE,
+        desc: "Generate combinations. All existing combinations for the product are deleted.",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductSetTemplateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductSetTemplateEvent.html"
+      }
+    - {
+        name: "action.productAddProductAccessory",
+        const: PRODUCT\_ADD_ACCESSORY,
+        desc: "add an accessory (a product) to a product",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductAddAccessoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductAddAccessoryEvent.html"
+      }
+    - {
+        name: "action.productRemoveProductAccessory",
+        const: PRODUCT\_REMOVE_ACCESSORY,
+        desc: "remove an accessory (a product) to a product",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductDeleteAccessoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductDeleteAccessoryEvent.html"
+      }
+    - {
+        name: "action.updateProductAccessoryPosition",
+        const: PRODUCT\_UPDATE\_ACCESSORY_POSITION,
+        desc: "update accessory position",
+        eventClass: "Thelia\\Core\\Event\\UpdatePositionEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/UpdatePositionEvent.html"
+      }
+    - {
+        name: "action.updateProductFeatureValue",
+        const: PRODUCT\_FEATURE\_UPDATE_VALUE,
+        desc: "Update the value of a product feature",
+        eventClass: "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductUpdateEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/FeatureProduct/FeatureProductUpdateEvent.html"
+      }
+    - {
+        name: "action.deleteProductFeatureValue",
+        const: PRODUCT\_FEATURE\_DELETE_VALUE,
+        desc: "Delete a product feature value",
+        eventClass: "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductDeleteEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/FeatureProduct/FeatureProductDeleteEvent.html"
+      }
+    - {
+        name: "action.addProductCategory",
+        const: PRODUCT\_ADD_CATEGORY,
+        desc: "add a product in a secondary category",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductAddCategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductAddCategoryEvent.html"
+      }
+    - {
+        name: "action.deleteProductCategory",
+        const: PRODUCT\_REMOVE_CATEGORY,
+        desc: "remove a product from a secondary category",
+        eventClass: "Thelia\\Core\\Event\\Product\\ProductDeleteCategoryEvent",
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductDeleteCategoryEvent.html"
       }
 
 ---
@@ -283,9 +745,11 @@ For each action an event is dispatching containing an event object. Event object
 
 ##List of event
 
+This list is maybe not complete. All events constant are in [{{ page.eventClass }}](/api/master/Thelia/Core/Event/TheliaEvents.html)
+
 {% for event in page.events %}
 ####{{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
-* event class : [{{ event.eventClass }}]({{ event.eventClassApi }})
+* event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
 {% endfor %}
