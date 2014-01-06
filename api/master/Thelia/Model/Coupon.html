@@ -27,13 +27,9 @@
     <strong>Coupon</strong>        extends <a href="../../Thelia/Model/Base/Coupon.html"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a></p>
 
             <div class="description">
-            <p>Created by JetBrains PhpStorm.</p>
-            <p>Date: 8/19/13
-Time: 3:24 PM</p>
-
-<p>Used to provide an effect (mostly a discount)
-at the end of the Customer checkout tunnel
-It will be usable for a Customer only if it matches the Coupon criteria (Rules)</p>
+            <p>Used to provide an effect (mostly a discount) at the end of the Customer checkout tunnel It will be usable for a Customer only if it matches the Coupon criteria (Rules)</p>
+            <p>
+</p>
         </div>
     
             <h2>Constants</h2>
@@ -276,13 +272,13 @@ It will be usable for a Customer only if it matches the Coupon criteria (Rules)<
             </tr>
                     <tr>
                 <td class="type">
-                    double
+                    string
                 </td>
                 <td class="last">
-                    <a href="#method_getAmount">getAmount</a>()
-                    <p>Get the [amount] column value.</p>
+                    <a href="#method_getSerializedEffects">getSerializedEffects</a>()
+                    <p>Get the [serialized_effects] column value.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Coupon.html#method_getAmount"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Coupon.html#method_getSerializedEffects"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -429,10 +425,10 @@ It will be usable for a Customer only if it matches the Coupon criteria (Rules)<
                     <a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_setAmount">setAmount</a>(double $v)
-                    <p>Set the value of [amount] column.</p>
+                    <a href="#method_setSerializedEffects">setSerializedEffects</a>(string $v)
+                    <p>Set the value of [serialized_effects] column.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Coupon.html#method_setAmount"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Coupon.html#method_setSerializedEffects"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -1271,7 +1267,7 @@ It will be usable for a Customer only if it matches the Coupon criteria (Rules)<
                     
                 </td>
                 <td class="last">
-                    <a href="#method_createOrUpdate">createOrUpdate</a>(string $code, string $title, float $amount, string $type, bool $isRemovingPostage, string $shortDescription, string $description, boolean $isEnabled, <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a> $expirationDate, boolean $isAvailableOnSpecialOffers, boolean $isCumulative, int $maxUsage, string $defaultSerializedRule, string $locale = null)
+                    <a href="#method_createOrUpdate">createOrUpdate</a>(string $code, string $title, array $effects, string $type, bool $isRemovingPostage, string $shortDescription, string $description, boolean $isEnabled, <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a> $expirationDate, boolean $isAvailableOnSpecialOffers, boolean $isCumulative, int $maxUsage, string $defaultSerializedRule, string $locale = null)
                     <p>Create or Update this Coupon</p>
                 </td>
                 <td></td>
@@ -1283,6 +1279,66 @@ It will be usable for a Customer only if it matches the Coupon criteria (Rules)<
                 <td class="last">
                     <a href="#method_createOrUpdateConditions">createOrUpdateConditions</a>(string $serializableConditions, string $locale)
                     <p>Create or Update this coupon condition</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Model\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setAmount">setAmount</a>(float $amount)
+                    <p>Set Coupon amount</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getAmount">getAmount</a>()
+                    <p>Get the amount removed from the coupon to the cart</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getEffects">getEffects</a>()
+                    <p>Get the Coupon effects</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Model\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setEffects">setEffects</a>(array $effects)
+                    <p>Get the Coupon effects</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_unserializeEffects">unserializeEffects</a>(string $serializedEffects)
+                    <p>Return unserialized effects</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_serializeEffects">serializeEffects</a>(array $unserializedEffects)
+                    <p>Return serialized effects</p>
                 </td>
                 <td></td>
             </tr>
@@ -1957,13 +2013,13 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
-                <h3 id="method_getAmount">
-        <div class="location">in <a href="../../Thelia/Model/Base/Coupon.html#method_getAmount"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a> at line 517</div>
-        <code>            public            double
-    <strong>getAmount</strong>()</code>
+                <h3 id="method_getSerializedEffects">
+        <div class="location">in <a href="../../Thelia/Model/Base/Coupon.html#method_getSerializedEffects"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a> at line 517</div>
+        <code>            public            string
+    <strong>getSerializedEffects</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the [amount] column value.</p>
+        <p>Get the [serialized_effects] column value.</p>
         <p>
 </p>
         <div class="tags">
@@ -1972,7 +2028,7 @@ by Propel-generated children and objects.</p>
 
                     <table>
         <tr>
-            <td>double</td>
+            <td>string</td>
             <td>
 </td>
         </tr>
@@ -2437,13 +2493,13 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
-                <h3 id="method_setAmount">
-        <div class="location">in <a href="../../Thelia/Model/Base/Coupon.html#method_setAmount"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a> at line 740</div>
+                <h3 id="method_setSerializedEffects">
+        <div class="location">in <a href="../../Thelia/Model/Base/Coupon.html#method_setSerializedEffects"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a> at line 740</div>
         <code>            public            <a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a>
-    <strong>setAmount</strong>(double $v)</code>
+    <strong>setSerializedEffects</strong>(string $v)</code>
     </h3>
     <div class="details">
-        <p>Set the value of [amount] column.</p>
+        <p>Set the value of [serialized_effects] column.</p>
         <p>
 </p>
         <div class="tags">
@@ -2451,7 +2507,7 @@ by Propel-generated children and objects.</p>
 
                     <table>
                     <tr>
-                <td>double</td>
+                <td>string</td>
                 <td>$v</td>
                 <td>new value</td>
             </tr>
@@ -5575,9 +5631,9 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_createOrUpdate">
-        <div class="location">at line 71</div>
+        <div class="location">at line 68</div>
         <code>            public            
-    <strong>createOrUpdate</strong>(string $code, string $title, float $amount, string $type, bool $isRemovingPostage, string $shortDescription, string $description, boolean $isEnabled, <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a> $expirationDate, boolean $isAvailableOnSpecialOffers, boolean $isCumulative, int $maxUsage, string $defaultSerializedRule, string $locale = null)</code>
+    <strong>createOrUpdate</strong>(string $code, string $title, array $effects, string $type, bool $isRemovingPostage, string $shortDescription, string $description, boolean $isEnabled, <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a> $expirationDate, boolean $isAvailableOnSpecialOffers, boolean $isCumulative, int $maxUsage, string $defaultSerializedRule, string $locale = null)</code>
     </h3>
     <div class="details">
         <p>Create or Update this Coupon</p>
@@ -5598,9 +5654,9 @@ Allows to define default __call() behavior if you overwrite __call()</p>
                 <td>Coupon title</td>
             </tr>
                     <tr>
-                <td>float</td>
-                <td>$amount</td>
-                <td>Amount removed from the Total Checkout</td>
+                <td>array</td>
+                <td>$effects</td>
+                <td>Ready to be serialized in JSON effect params</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -5676,7 +5732,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_createOrUpdateConditions">
-        <div class="location">at line 116</div>
+        <div class="location">at line 113</div>
         <code>            public            
     <strong>createOrUpdateConditions</strong>(string $serializableConditions, string $locale)</code>
     </h3>
@@ -5712,6 +5768,222 @@ Allows to define default __call() behavior if you overwrite __call()</p>
             </tr>
             </table>
 
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAmount">
+        <div class="location">at line 140</div>
+        <code>            public            <abbr title="Thelia\Model\$this">$this</abbr>
+    <strong>setAmount</strong>(float $amount)</code>
+    </h3>
+    <div class="details">
+        <p>Set Coupon amount</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>float</td>
+                <td>$amount</td>
+                <td>Amount deduced from the Cart</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAmount">
+        <div class="location">at line 154</div>
+        <code>            public            float
+    <strong>getAmount</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the amount removed from the coupon to the cart</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEffects">
+        <div class="location">at line 167</div>
+        <code>            public            array
+    <strong>getEffects</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the Coupon effects</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exception\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEffects">
+        <div class="location">at line 188</div>
+        <code>            public            <abbr title="Thelia\Model\$this">$this</abbr>
+    <strong>setEffects</strong>(array $effects)</code>
+    </h3>
+    <div class="details">
+        <p>Get the Coupon effects</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$effects</td>
+                <td>Effect ready to be serialized Needs at least the key 'amount' with the amount removed from the cart</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exception\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unserializeEffects">
+        <div class="location">at line 206</div>
+        <code>            public            array
+    <strong>unserializeEffects</strong>(string $serializedEffects)</code>
+    </h3>
+    <div class="details">
+        <p>Return unserialized effects</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serializedEffects</td>
+                <td>Serialized effect string to unserialize</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_serializeEffects">
+        <div class="location">at line 220</div>
+        <code>            public            string
+    <strong>serializeEffects</strong>(array $unserializedEffects)</code>
+    </h3>
+    <div class="details">
+        <p>Return serialized effects</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$unserializedEffects</td>
+                <td>Unserialized array string to serialize</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
             
                     </div>
     </div>

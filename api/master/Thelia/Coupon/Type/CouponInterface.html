@@ -27,11 +27,9 @@
     <strong>CouponInterface</strong></p>
 
             <div class="description">
-            <p>Created by JetBrains PhpStorm.</p>
-            <p>Date: 8/19/13
-Time: 3:24 PM</p>
-
-<p>Represents a Coupon ready to be processed in a Checkout process</p>
+            <p>Represents a Coupon ready to be processed in a Checkout process</p>
+            <p>
+</p>
         </div>
     
     
@@ -46,6 +44,16 @@ Time: 3:24 PM</p>
                 <td class="last">
                     <a href="#method_getName">getName</a>()
                     <p>Get I18n name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getInputName">getInputName</a>()
+                    <p>Get I18n amount input name</p>
                 </td>
                 <td></td>
             </tr>
@@ -74,7 +82,7 @@ Time: 3:24 PM</p>
                     
                 </td>
                 <td class="last">
-                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, float $effect, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)
+                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)
                     <p>Set Coupon</p>
                 </td>
                 <td></td>
@@ -229,13 +237,33 @@ Time: 3:24 PM</p>
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_drawBackOfficeInputs">drawBackOfficeInputs</a>()
+                    <p>Draw the input displayed in the BackOffice allowing Admin to set its Coupon effect</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getExtendedInputs">getExtendedInputs</a>()
+                    <p>Get all extended inputs name to manage</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method_getName">
-        <div class="location">at line 47</div>
+        <div class="location">at line 43</div>
         <code>            public            string
     <strong>getName</strong>()</code>
     </h3>
@@ -260,8 +288,34 @@ Time: 3:24 PM</p>
                     </div>
     </div>
 
+                <h3 id="method_getInputName">
+        <div class="location">at line 50</div>
+        <code>            public            string
+    <strong>getInputName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get I18n amount input name</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_getToolTip">
-        <div class="location">at line 54</div>
+        <div class="location">at line 57</div>
         <code>            public            string
     <strong>getToolTip</strong>()</code>
     </h3>
@@ -287,7 +341,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getServiceId">
-        <div class="location">at line 61</div>
+        <div class="location">at line 64</div>
         <code>            public            string
     <strong>getServiceId</strong>()</code>
     </h3>
@@ -313,9 +367,9 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_set">
-        <div class="location">at line 80</div>
+        <div class="location">at line 83</div>
         <code>            public            
-    <strong>set</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, float $effect, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)</code>
+    <strong>set</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)</code>
     </h3>
     <div class="details">
         <p>Set Coupon</p>
@@ -351,9 +405,9 @@ Time: 3:24 PM</p>
                 <td>Coupon description</td>
             </tr>
                     <tr>
-                <td>float</td>
-                <td>$effect</td>
-                <td>Coupon amount/percentage to deduce</td>
+                <td>array</td>
+                <td>$effects</td>
+                <td>Coupon effects params</td>
             </tr>
                     <tr>
                 <td>bool</td>
@@ -394,7 +448,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getCode">
-        <div class="location">at line 99</div>
+        <div class="location">at line 102</div>
         <code>            public            string
     <strong>getCode</strong>()</code>
     </h3>
@@ -420,7 +474,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getTitle">
-        <div class="location">at line 106</div>
+        <div class="location">at line 109</div>
         <code>            public            string
     <strong>getTitle</strong>()</code>
     </h3>
@@ -446,7 +500,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getShortDescription">
-        <div class="location">at line 113</div>
+        <div class="location">at line 116</div>
         <code>            public            string
     <strong>getShortDescription</strong>()</code>
     </h3>
@@ -472,7 +526,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getDescription">
-        <div class="location">at line 120</div>
+        <div class="location">at line 123</div>
         <code>            public            string
     <strong>getDescription</strong>()</code>
     </h3>
@@ -498,7 +552,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isCumulative">
-        <div class="location">at line 129</div>
+        <div class="location">at line 132</div>
         <code>            public            bool
     <strong>isCumulative</strong>()</code>
     </h3>
@@ -524,7 +578,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isRemovingPostage">
-        <div class="location">at line 136</div>
+        <div class="location">at line 139</div>
         <code>            public            bool
     <strong>isRemovingPostage</strong>()</code>
     </h3>
@@ -550,7 +604,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getConditions">
-        <div class="location">at line 145</div>
+        <div class="location">at line 148</div>
         <code>            public            <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
     <strong>getConditions</strong>()</code>
     </h3>
@@ -575,7 +629,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_setConditions">
-        <div class="location">at line 156</div>
+        <div class="location">at line 159</div>
         <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
     <strong>setConditions</strong>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)</code>
     </h3>
@@ -621,7 +675,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getExpirationDate">
-        <div class="location">at line 163</div>
+        <div class="location">at line 166</div>
         <code>            public            <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
     <strong>getExpirationDate</strong>()</code>
     </h3>
@@ -647,7 +701,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isAvailableOnSpecialOffers">
-        <div class="location">at line 171</div>
+        <div class="location">at line 174</div>
         <code>            public            boolean
     <strong>isAvailableOnSpecialOffers</strong>()</code>
     </h3>
@@ -673,7 +727,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isEnabled">
-        <div class="location">at line 179</div>
+        <div class="location">at line 182</div>
         <code>            public            boolean
     <strong>isEnabled</strong>()</code>
     </h3>
@@ -699,7 +753,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_getMaxUsage">
-        <div class="location">at line 187</div>
+        <div class="location">at line 190</div>
         <code>            public            int
     <strong>getMaxUsage</strong>()</code>
     </h3>
@@ -725,7 +779,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_isExpired">
-        <div class="location">at line 194</div>
+        <div class="location">at line 197</div>
         <code>            public            bool
     <strong>isExpired</strong>()</code>
     </h3>
@@ -751,7 +805,7 @@ Time: 3:24 PM</p>
     </div>
 
                 <h3 id="method_exec">
-        <div class="location">at line 208</div>
+        <div class="location">at line 211</div>
         <code>            public            float
     <strong>exec</strong>()</code>
     </h3>
@@ -778,7 +832,7 @@ Hence affecting a wide variety of Thelia elements</p>
     </div>
 
                 <h3 id="method_isMatching">
-        <div class="location">at line 216</div>
+        <div class="location">at line 219</div>
         <code>            public            bool
     <strong>isMatching</strong>()</code>
     </h3>
@@ -793,6 +847,57 @@ Hence affecting a wide variety of Thelia elements</p>
                     <table>
         <tr>
             <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_drawBackOfficeInputs">
+        <div class="location">at line 227</div>
+        <code>            public            string
+    <strong>drawBackOfficeInputs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Draw the input displayed in the BackOffice allowing Admin to set its Coupon effect</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>HTML string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtendedInputs">
+        <div class="location">at line 234</div>
+        <code>            public            mixed
+    <strong>getExtendedInputs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all extended inputs name to manage</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
             <td>
 </td>
         </tr>

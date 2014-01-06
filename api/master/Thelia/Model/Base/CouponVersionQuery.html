@@ -132,8 +132,8 @@
                     <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_filterByAmount">filterByAmount</a>(mixed $amount = null, string $comparison = null)
-                    <p>Filter the query on the amount column</p>
+                    <a href="#method_filterBySerializedEffects">filterBySerializedEffects</a>(string $serializedEffects = null, string $comparison = null)
+                    <p>Filter the query on the serialized_effects column</p>
                 </td>
                 <td></td>
             </tr>
@@ -342,8 +342,8 @@
                     <abbr title="ChildCouponVersionQuery">ChildCouponVersionQuery</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_orderByAmount">orderByAmount</a>($order = Criteria::ASC)
-                    <p>Order by the amount column</p>
+                    <a href="#method_orderBySerializedEffects">orderBySerializedEffects</a>($order = Criteria::ASC)
+                    <p>Order by the serialized_effects column</p>
                 </td>
                 <td></td>
             </tr>
@@ -492,8 +492,8 @@
                     <abbr title="ChildCouponVersionQuery">ChildCouponVersionQuery</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_groupByAmount">groupByAmount</a>()
-                    <p>Group by the amount column</p>
+                    <a href="#method_groupBySerializedEffects">groupBySerializedEffects</a>()
+                    <p>Group by the serialized_effects column</p>
                 </td>
                 <td></td>
             </tr>
@@ -722,8 +722,8 @@
                     <abbr title="ChildCouponVersion">ChildCouponVersion</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_findOneByAmount">findOneByAmount</a>(<abbr title="double ">double </abbr> $amount)
-                    <p>Return the first ChildCouponVersion filtered by the amount column</p>
+                    <a href="#method_findOneBySerializedEffects">findOneBySerializedEffects</a>(<abbr title="string ">string </abbr> $serialized_effects)
+                    <p>Return the first ChildCouponVersion filtered by the serialized_effects column</p>
                 </td>
                 <td></td>
             </tr>
@@ -872,8 +872,8 @@
                     array
                 </td>
                 <td class="last">
-                    <a href="#method_findByAmount">findByAmount</a>(<abbr title="double ">double </abbr> $amount)
-                    <p>Return ChildCouponVersion objects filtered by the amount column</p>
+                    <a href="#method_findBySerializedEffects">findBySerializedEffects</a>(<abbr title="string ">string </abbr> $serialized_effects)
+                    <p>Return ChildCouponVersion objects filtered by the serialized_effects column</p>
                 </td>
                 <td></td>
             </tr>
@@ -1364,27 +1364,26 @@ $query->filterByType('%fooValue%'); // WHERE type LIKE '%fooValue%'
                     </div>
     </div>
 
-                <h3 id="method_filterByAmount">
-        <div class="location">at line 406</div>
+                <h3 id="method_filterBySerializedEffects">
+        <div class="location">at line 403</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
-    <strong>filterByAmount</strong>(mixed $amount = null, string $comparison = null)</code>
+    <strong>filterBySerializedEffects</strong>(string $serializedEffects = null, string $comparison = null)</code>
     </h3>
     <div class="details">
-        <p>Filter the query on the amount column</p>
+        <p>Filter the query on the serialized_effects column</p>
         <p>Example usage:
 <code>
-$query->filterByAmount(1234); // WHERE amount = 1234
-$query->filterByAmount(array(12, 34)); // WHERE amount IN (12, 34)
-$query->filterByAmount(array('min' => 12)); // WHERE amount > 12
+$query->filterBySerializedEffects('fooValue');   // WHERE serialized<em>effects = 'fooValue'
+$query->filterBySerializedEffects('%fooValue%'); // WHERE serialized</em>effects LIKE '%fooValue%'
 </code></p>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table>
                     <tr>
-                <td>mixed</td>
-                <td>$amount</td>
-                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+                <td>string</td>
+                <td>$serializedEffects</td>
+                <td>The value to use as filter. Accepts wildcards (* and % trigger a LIKE)</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -1409,7 +1408,7 @@ $query->filterByAmount(array('min' => 12)); // WHERE amount > 12
     </div>
 
                 <h3 id="method_filterByIsEnabled">
-        <div class="location">at line 447</div>
+        <div class="location">at line 435</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByIsEnabled</strong>(boolean|string $isEnabled = null, string $comparison = null)</code>
     </h3>
@@ -1452,7 +1451,7 @@ $query->filterByIsEnabled('yes'); // WHERE is</em>enabled = true
     </div>
 
                 <h3 id="method_filterByExpirationDate">
-        <div class="location">at line 476</div>
+        <div class="location">at line 464</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByExpirationDate</strong>(mixed $expirationDate = null, string $comparison = null)</code>
     </h3>
@@ -1496,7 +1495,7 @@ $query->filterByExpirationDate(array('max' => 'yesterday')); // WHERE expiration
     </div>
 
                 <h3 id="method_filterByMaxUsage">
-        <div class="location">at line 517</div>
+        <div class="location">at line 505</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByMaxUsage</strong>(mixed $maxUsage = null, string $comparison = null)</code>
     </h3>
@@ -1540,7 +1539,7 @@ $query->filterByMaxUsage(array('min' => 12)); // WHERE max_usage > 12
     </div>
 
                 <h3 id="method_filterByIsCumulative">
-        <div class="location">at line 558</div>
+        <div class="location">at line 546</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByIsCumulative</strong>(boolean|string $isCumulative = null, string $comparison = null)</code>
     </h3>
@@ -1583,7 +1582,7 @@ $query->filterByIsCumulative('yes'); // WHERE is</em>cumulative = true
     </div>
 
                 <h3 id="method_filterByIsRemovingPostage">
-        <div class="location">at line 585</div>
+        <div class="location">at line 573</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByIsRemovingPostage</strong>(boolean|string $isRemovingPostage = null, string $comparison = null)</code>
     </h3>
@@ -1626,7 +1625,7 @@ $query->filterByIsRemovingPostage('yes'); // WHERE is<em>removing</em>postage = 
     </div>
 
                 <h3 id="method_filterByIsAvailableOnSpecialOffers">
-        <div class="location">at line 612</div>
+        <div class="location">at line 600</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByIsAvailableOnSpecialOffers</strong>(boolean|string $isAvailableOnSpecialOffers = null, string $comparison = null)</code>
     </h3>
@@ -1669,7 +1668,7 @@ $query->filterByIsAvailableOnSpecialOffers('yes'); // WHERE is<em>available</em>
     </div>
 
                 <h3 id="method_filterByIsUsed">
-        <div class="location">at line 639</div>
+        <div class="location">at line 627</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByIsUsed</strong>(boolean|string $isUsed = null, string $comparison = null)</code>
     </h3>
@@ -1712,7 +1711,7 @@ $query->filterByIsUsed('yes'); // WHERE is</em>used = true
     </div>
 
                 <h3 id="method_filterBySerializedConditions">
-        <div class="location">at line 663</div>
+        <div class="location">at line 651</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterBySerializedConditions</strong>(string $serializedConditions = null, string $comparison = null)</code>
     </h3>
@@ -1755,7 +1754,7 @@ $query->filterBySerializedConditions('%fooValue%'); // WHERE serialized</em>cond
     </div>
 
                 <h3 id="method_filterByCreatedAt">
-        <div class="location">at line 697</div>
+        <div class="location">at line 685</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
     </h3>
@@ -1799,7 +1798,7 @@ $query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2
     </div>
 
                 <h3 id="method_filterByUpdatedAt">
-        <div class="location">at line 740</div>
+        <div class="location">at line 728</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
     </h3>
@@ -1843,7 +1842,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByVersion">
-        <div class="location">at line 781</div>
+        <div class="location">at line 769</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByVersion</strong>(mixed $version = null, string $comparison = null)</code>
     </h3>
@@ -1887,7 +1886,7 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
     </div>
 
                 <h3 id="method_filterByCoupon">
-        <div class="location">at line 812</div>
+        <div class="location">at line 800</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>filterByCoupon</strong>(<a href="../../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $coupon, string $comparison = null)</code>
     </h3>
@@ -1927,7 +1926,7 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
     </div>
 
                 <h3 id="method_joinCoupon">
-        <div class="location">at line 837</div>
+        <div class="location">at line 825</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>joinCoupon</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -1967,7 +1966,7 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
     </div>
 
                 <h3 id="method_useCouponQuery">
-        <div class="location">at line 872</div>
+        <div class="location">at line 860</div>
         <code>            public            <a href="../../../Thelia/Model/CouponQuery.html"><abbr title="Thelia\Model\CouponQuery">CouponQuery</abbr></a>
     <strong>useCouponQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2016,7 +2015,7 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
     </div>
 
                 <h3 id="method_prune">
-        <div class="location">at line 886</div>
+        <div class="location">at line 874</div>
         <code>            public            <a href="../../../Thelia/Model/CouponVersionQuery.html"><abbr title="Thelia\Model\CouponVersionQuery">CouponVersionQuery</abbr></a>
     <strong>prune</strong>(<a href="../../../Thelia/Model/CouponVersion.html"><abbr title="Thelia\Model\CouponVersion">CouponVersion</abbr></a> $couponVersion = null)</code>
     </h3>
@@ -2051,7 +2050,7 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">at line 903</div>
+        <div class="location">at line 891</div>
         <code>            public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2086,7 +2085,7 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 940</div>
+        <div class="location">at line 928</div>
         <code>            public            int
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2241,13 +2240,13 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
                     </div>
     </div>
 
-                <h3 id="method_orderByAmount">
+                <h3 id="method_orderBySerializedEffects">
         <div class="location">at line 100</div>
         <code>                        <abbr title="ChildCouponVersionQuery">ChildCouponVersionQuery</abbr>
-    <strong>orderByAmount</strong>($order = Criteria::ASC)</code>
+    <strong>orderBySerializedEffects</strong>($order = Criteria::ASC)</code>
     </h3>
     <div class="details">
-        <p>Order by the amount column</p>
+        <p>Order by the serialized_effects column</p>
         <p>
 </p>
         <div class="tags">
@@ -2763,13 +2762,13 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
                     </div>
     </div>
 
-                <h3 id="method_groupByAmount">
+                <h3 id="method_groupBySerializedEffects">
         <div class="location">at line 100</div>
         <code>                        <abbr title="ChildCouponVersionQuery">ChildCouponVersionQuery</abbr>
-    <strong>groupByAmount</strong>()</code>
+    <strong>groupBySerializedEffects</strong>()</code>
     </h3>
     <div class="details">
-        <p>Group by the amount column</p>
+        <p>Group by the serialized_effects column</p>
         <p>
 </p>
         <div class="tags">
@@ -3482,13 +3481,13 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
                     </div>
     </div>
 
-                <h3 id="method_findOneByAmount">
+                <h3 id="method_findOneBySerializedEffects">
         <div class="location">at line 100</div>
         <code>                        <abbr title="ChildCouponVersion">ChildCouponVersion</abbr>
-    <strong>findOneByAmount</strong>(<abbr title="double ">double </abbr> $amount)</code>
+    <strong>findOneBySerializedEffects</strong>(<abbr title="string ">string </abbr> $serialized_effects)</code>
     </h3>
     <div class="details">
-        <p>Return the first ChildCouponVersion filtered by the amount column</p>
+        <p>Return the first ChildCouponVersion filtered by the serialized_effects column</p>
         <p>
 </p>
         <div class="tags">
@@ -3496,8 +3495,8 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
 
                     <table>
                     <tr>
-                <td><abbr title="double ">double </abbr></td>
-                <td>$amount</td>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$serialized_effects</td>
                 <td>
 </td>
             </tr>
@@ -4037,13 +4036,13 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
                     </div>
     </div>
 
-                <h3 id="method_findByAmount">
+                <h3 id="method_findBySerializedEffects">
         <div class="location">at line 100</div>
         <code>                        array
-    <strong>findByAmount</strong>(<abbr title="double ">double </abbr> $amount)</code>
+    <strong>findBySerializedEffects</strong>(<abbr title="string ">string </abbr> $serialized_effects)</code>
     </h3>
     <div class="details">
-        <p>Return ChildCouponVersion objects filtered by the amount column</p>
+        <p>Return ChildCouponVersion objects filtered by the serialized_effects column</p>
         <p>
 </p>
         <div class="tags">
@@ -4051,8 +4050,8 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
 
                     <table>
                     <tr>
-                <td><abbr title="double ">double </abbr></td>
-                <td>$amount</td>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$serialized_effects</td>
                 <td>
 </td>
             </tr>
