@@ -19,7 +19,8 @@ arguments :
           {name: "admin", description: "The back-office context. Uses the admin user to perform the check."}
        ]}
     - {name: "role", description: "A comma separated list of user roles", mandatory: "true"}
-    - {name: "resource", description: "A comma separated list of resources. If empty or missing, the authorization is checked against the roles only"}
+    - {name: "resource", description: "A comma separated list of resources"}
+    - {name: "module", description: "A comma separated list of modules"}
     - {name: "access", description: "A comma separated list of accesss. If empty or missing, the authorization is checked against the roles only",
         expected_values: [
             {name: "view"},
