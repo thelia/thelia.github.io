@@ -16,7 +16,7 @@ An ***administration profile*** determines for all Thelia 2 back-office resource
 
 You can view, create, update and delete administration profiles - if you have the permissions of course - in **Configuration > Administration profiles** back-office menu.
 
-![Alt text](/img/documentation/features/permissions/edit_administration_profile.png "Edit administration profile")
+![Edit administration profile](/img/documentation/features/permissions/edit_administration_profile.png "Edit administration profile")
 
 ##What is an ***administrator*** ?
 
