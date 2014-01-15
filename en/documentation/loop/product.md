@@ -31,8 +31,8 @@ arguments :
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of product ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_category", description: "A single or a list of category ids. If a product is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"2\", exclude_category=\"1,4,7\""}
-    - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
-    - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
+    - {name: "feature_availability", description: "A list of mandatory features and the feature_availability expected for these.", example: "feature_availability=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_availability 1 or 2 AND feature 2 must be set to any feature_availability AND feature 3 must have feature_availability 10 or both feature_availability 11 and 12"}
+    - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_availability=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_availability AND feature 3 must have feature value \"foobar\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
     - {
@@ -110,7 +110,7 @@ outputs :
 {% highlight smarty %}
 
 <ul>
-{loop type="product" name="my_product_loop" category="1,2" depth="2" feature_available="1:13|17" order="min_price"}
+{loop type="product" name="my_product_loop" category="1,2" depth="2" feature_availability="1:13|17" order="min_price"}
     <li>{$TITLE} ({$REF})</li>
 {/loop}
 </ul>

@@ -30,18 +30,19 @@ abstract class, if not an exception is thrown.
 
 Your loop can be anywhere (Thanks to namespace) in your module but it's better to create a Loop directory and put all your loops in this directory.
 
-You have to extends the [Thelia\Core\Template\Element\BaseLoop](/api/master/Thelia/Core/Template/Element/BaseLoop.html) abstract class and implement *exec* and *defineArgs* methods :
+You have to extends the [Thelia\Core\Template\Element\BaseLoop](/api/master/Thelia/Core/Template/Element/BaseLoop.html) abstract class and implement either Thelia\Core\Template\Element\PropelSearchLoopInterface or Thelia\Core\Template\Element\ArraySearchLoopInterface. Therefore you will have to create *getArgDefinitions*, *parseResults* and either *buildModelCriteria* or *buildArray* methods.
 
-```
-public function defineArgs()
-public function exec(&$pagination);
-```
+NB : You can also extend BaseI18nLoop which itself extends BaseLoop. This will provide tools to manage i18n in your loop.
 
-The *exec* method is used to render the template. It must return a [Thelia\Core\Template\Element\LoopResult](http://localhost:4000/api/master/Thelia/Core/Template/Element/LoopResult.html) instance.
+###What's the difference betwen *PropelSearchLoopInterface* and *ArraySearchLoopInterface*
+
+It's a matter of data type. If the data your loop returns come from the database you must implement *PropelSearchLoopInterface* and create *buildModelCriteria* method which return a *Propel\Runtime\ActiveQuery\ModelCriteria*. Conversely if your loop displays data from an array you must implement *ArraySearchLoopInterface* and create *buildArray* method which return an array.
+
+The *parseResults* method is used to render the template. It must return a [Thelia\Core\Template\Element\LoopResult](http://localhost:4000/api/master/Thelia/Core/Template/Element/LoopResult.html) instance.
 
 The defineArgs method defines all args used in your loop. Args can be mandatory, optional, with default value, etc. This method must return an [Thelia\Core\Template\Loop\ArgumentCollection](). ArgumentCollection contains [Thelia\Core\Template\Loop\Argument]() which contains a [Thelia\Type\TypeCollection](). Types in the collection must implement [Thelia\Type\TypeInterface](). You can check here the [available types](/documentation/features/types).
 
-If you don't define your arguments here, you can't use them in your new loop. All arguments are accessible in the ```exec``` method.
+If you don't define your arguments here, you can't use them in your new loop. All arguments are accessible in the ```parseResults``` method.
 
 Baseloop class declares 3 public properties you might overload in your new loop.
 
@@ -101,50 +102,44 @@ Here an example for my module "MyModule" and my loops in the loop directory. Thi
  use Thelia\Core\Template\Element\LoopResult;
  use Thelia\Core\Template\Element\LoopResultRow;
 
- class MyLoop extends BaseLoop {
+ class MyLoop extends BaseLoop implements ArraySearchLoopInterface {
 
-    public $countable = false;
+    public $countable = true;
     public $timestampable = false;
     public $versionable = false;
 
      public function defineArgs()
      {
          return new ArgumentCollection(
-             Argument::createIntListTypeArgument('id'),
-             Argument::createBooleanTypeArgument('current', false),
-             new Argument(
-                 'order',
-                 new TypeCollection(
-                     new EnumListType(
-                         array(
-                             'id', 'id_reverse',
-                             'name', 'name_reverse',
-                             'code', 'code_reverse',
-                             'symbol', 'symbol_reverse',
-                             'rate', 'rate_reverse',
-                             'is_default', 'is_default_reverse',
-                             'manual', 'manual_reverse')
-                     )
-                     ),
-                 'manual'
-             )
+             Argument::createIntListTypeArgument('start', 0),
+             Argument::createIntListTypeArgument('stop', null, true)
          );
      }
 
-     /**
-     *
-     * return Thelia\Core\Template\Element\LoopResult
-     */
-     public function exec(&$pagination)
+     public function buildArray()
      {
+         $items = array();
 
-         $loopResult = new LoopResult();
+         $start = $this->getStart();
+         $stop = $this->getStop();
 
-         for($i=0; $i<5; $i++) {
-            $loopResultRow = new LoopResultRow();
-            $loopResultRow->set("FOO", $i);
+         for($i=$start; $i<=$stop; $i++ {
+            $items[] = $i;
+         }
 
-            $loopResult->addRow($loopResultRow);
+         return $items;
+
+     }
+
+     public function parseResults(LoopResult $loopResult)
+     {
+         foreach ($loopResult->getResultDataCollection() as $item) {
+
+             $loopResultRow = new LoopResultRow();
+
+             $loopResultRow->set("MY_OUTPUT", $item);
+
+             $loopResult->addRow($loopResultRow);
          }
 
          return $loopResult;
@@ -164,23 +159,18 @@ Here an example for my module "MyModule" and my loops in the loop directory. Thi
 *
 * return Thelia\Core\Template\Element\LoopResult
 */
-public function exec(&$pagination)
+public function buildModelCriteria()
 {
-    $products = ProductQuery::create()
+    return $products = ProductQuery::create()
          ->find();
+}
 
-    $loopResult = new LoopResult($products); //pass your model collection to LoopResult to make the loop countable
+public function parseResults(LoopResult $loopResult)
+{
+     foreach ($loopResult->getResultDataCollection() as $product) {
 
-     foreach($products as $product) {
-        $loopResultRow = new LoopResultRow(
-            $loopResult,
-            $product,
-            $this->versionable,
-            $this->timestampable,
-            $this->countable
-        );
+        $loopResultRow = new LoopResultRow($product);
 
-        //pass your LoopResult and your model object to LoopResultRow to make the loop countable/editable/timestampable
         $loopResultRow->set("REF", $product->getRef());
 
         $loopResult->addRow($loopResultRow);
