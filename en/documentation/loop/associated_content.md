@@ -19,8 +19,9 @@ arguments :
             {name: "all <a href=\"/documentation/loop/content.html\">content loop</a> orders",  description: ""}
         ]
       }
-    - {name: "all <a href=\"/documentation/loop/content.html\">content loop</a> arguments", example: "exclude_folder=\"1,2,9\""}
+    - {name: "all <a href=\"content.html\">content loop</a> arguments", example: "exclude_folder=\"1,2,9\""}
 outputs :
-    - {name: "all <a href=\"/documentation/loop/content.html\">content loop</a> outputs"}
+    - {name: "all <a href=\"content.html\">content loop</a> outputs, except for $ID, which is the ID of the relation."}
+    - {name: "$CONTENT_ID", description: "the associated content id"}
 ---
 
