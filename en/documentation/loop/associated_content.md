@@ -1,7 +1,7 @@
 ---
 layout: loop
 title: Associated content Loop
-description: Associated content loop lists associated contents of a product or a category. It behaves like a content loop therefore you might use all <a href="/documentation/loop/content.html">content loop</a> arguments and outputs.
+description: Associated content loop lists associated contents of a product or a category. It behaves like a content loop therefore you might use all <a href="/en/documentation/loop/content.html">content loop</a> arguments and outputs.
 sidebar: loop
 lang: en
 subnav: loop_associated_content
@@ -16,7 +16,7 @@ arguments :
         expected_values: [
             {name: "associated_content",                                                        description: "manual associated content order"},
             {name: "associated_content_reverse",                                                description: "reverse manual associated content order"},
-            {name: "all <a href=\"/documentation/loop/content.html\">content loop</a> orders",  description: ""}
+            {name: "all <a href=\"/en/documentation/loop/content.html\">content loop</a> orders",  description: ""}
         ]
       }
     - {name: "all <a href=\"content.html\">content loop</a> arguments", example: "exclude_folder=\"1,2,9\""}

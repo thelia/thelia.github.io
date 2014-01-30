@@ -1,7 +1,7 @@
 ---
 layout: loop
 title: Product sale elements Loop
-description: Product sale elements loop lists product sale elements from your shop. You may need to use the <a href="/documentation/loop/attribute_combination.html">attribute combination loop</a> inside your product sale elements loop.
+description: Product sale elements loop lists product sale elements from your shop. You may need to use the <a href="/en/documentation/loop/attribute_combination.html">attribute combination loop</a> inside your product sale elements loop.
 sidebar: loop
 lang: en
 subnav: loop_product_sale_elements
