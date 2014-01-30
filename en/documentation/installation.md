@@ -45,7 +45,7 @@ export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
 
 ``` bash
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project thelia/thelia path/ dev-master
+$ php composer.phar create-project thelia/thelia path/ 2.0.0-beta4
 ```
 
 Finish the installation using cli tools :
