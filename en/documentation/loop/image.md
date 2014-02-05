@@ -13,6 +13,16 @@ arguments :
     - {name: "category", description: "a category identifier. The loop will return this category's images", example: "category=\"2\""}
     - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\""}
     - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
+    - {
+        name: "source", description: "", example: "source=\"category\"",
+        expected_values: [
+            {name: "category",             description: ""},
+            {name: "product",     description: ""},
+            {name: "folder",            description: ""},
+            {name: "content",    description: ""},
+            {name: "module",    description: ""}
+        ]
+    }
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
     - {name: "exclude", description: "A single or a comma-separated list of image IDs to exclude from the list.", example: "exclude=\"456,123\""}
     - {name: "width", description: "A width in pixels, for resizing image. If only the width is provided, the image ratio is preserved.", example: "width=\"200\""}
