@@ -128,15 +128,89 @@ Page loops can be use on any classic loop which has ```page``` parameter. Page l
 
 A page loop is therefore linked to a classic loop using the ```rel``` attribute which must match a classic loop ```name``` attribute.
 
+By default, 10 pages are displayed. You can change this value using ```numPage``` parameter.
+
+List of output parameters :
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    $PAGE
+                </td>
+                <td>
+                    current page displayed. This value is equal to the page loop parameter.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    $END
+                </td>
+                <td>
+                    Max page number displayed
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    $CURRENT
+                </td>
+                <td>
+                    on each loop, this value is incremented. So it's started with the $PAGE value and end with the $END value
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    $LAST
+                </td>
+                <td>
+                    Max page number. If for a loop, there are 761 pages possible, the value of $LAST is 761
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    $PREV
+                </td>
+                <td>
+                    previous page number. This value is always $PAGE-1 if $PAGE is superior to 1. The value is 1 therefore
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    $NEXT
+                </td>
+                <td>
+                    next page number. This value is always $PAGE+1 if $PAGE is inferior to $LAST. The value is $LAST therefore
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 ```smarty
-{pageloop rel="my_product_loop"}
-    {if $PAGE != $CURRENT}
-        <a href="{url view="category" page="4"}">{$PAGE}</a>
-    {else}
-        { {$PAGE} }
-    {/if}
-    {if $PAGE != $LAST}
-        -
-    {/if}
-{/pageloop}
+<div class="text-center">
+    <ul class="pagination pagination-centered">
+    {pageloop rel="customer_list" numPage="20"}
+        {if $PAGE == $CURRENT && $PAGE > 2}
+            <li><a href="{url path="/admin/customers" page=$PREV}">&lsaquo;</a></li>
+        {/if}
+
+        {if $PAGE != $CURRENT}
+            <li><a href="{url path="/admin/customers" page="{$PAGE}"}">{$PAGE}</a></li>
+
+        {else}
+            <li class="active"><a href="#">{$PAGE}</a></li>
+        {/if}
+
+        {if $PAGE == $END && $PAGE < $LAST}
+            <li><a href="{url path="/admin/customers" page=$NEXT}">&rsaquo;</a></li>
+        {/if}
+    {/pageloop}
+    </ul>
+</div>
 ```
