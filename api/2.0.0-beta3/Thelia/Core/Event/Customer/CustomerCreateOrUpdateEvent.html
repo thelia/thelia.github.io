@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../traits.html">Traits</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../Thelia/Core/Event/Customer.html">Thelia\Core\Event\Customer</a>\CustomerCreateOrUpdateEvent</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>CustomerCreateOrUpdateEvent</strong>        extends <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></p>
+
+            <div class="description">
+            <p>Class CustomerCreateOrUpdateEvent</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_customer">
+                                                            
+                </td>
+                <td>$customer</td>
+                <td class="last">
+</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(int $title, string $firstname, string $lastname, string $address1, string $address2, string $address3, string $phone, string $cellphone, string $zipcode, string $city, int $country, string $email, string $password, <abbr title="Thelia\Core\Event\Customer\$lang">$lang</abbr> $lang, int $reseller, int $sponsor, float $discount, string $company)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setCustomer">setCustomer</a>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_setCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCustomer">getCustomer</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_getCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasCustomer">hasCustomer</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_hasCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getCompany">getCompany</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddress1">getAddress1</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddress2">getAddress2</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAddress3">getAddress3</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getCountry">getCountry</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEmail">getEmail</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFirstname">getFirstname</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getLang">getLang</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLastname">getLastname</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPassword">getPassword</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPhone">getPhone</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getCellphone">getCellphone</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getTitle">getTitle</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getZipcode">getZipcode</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getCity">getCity</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getDiscount">getDiscount</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getReseller">getReseller</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getSponsor">getSponsor</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 75</div>
+        <code>            public            
+    <strong>__construct</strong>(int $title, string $firstname, string $lastname, string $address1, string $address2, string $address3, string $phone, string $cellphone, string $zipcode, string $city, int $country, string $email, string $password, <abbr title="Thelia\Core\Event\Customer\$lang">$lang</abbr> $lang, int $reseller, int $sponsor, float $discount, string $company)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$title</td>
+                <td>the title customer id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$firstname</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$lastname</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$address1</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$address2</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$address3</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$phone</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cellphone</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$zipcode</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$city</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$country</td>
+                <td>the country id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>plain password, don't put hash password, it will hashes again</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Event\Customer\$lang">$lang</abbr></td>
+                <td>$lang</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$reseller</td>
+                <td>if customer is a reseller</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$sponsor</td>
+                <td>customer's id sponsor</td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$discount</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$company</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCustomer">
+        <div class="location">in <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_setCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a> at line 41</div>
+        <code>            public            
+    <strong>setCustomer</strong>(<a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+                <td>$customer</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCustomer">
+        <div class="location">in <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_getCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a> at line 51</div>
+        <code>            public            <a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>getCustomer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasCustomer">
+        <div class="location">in <a href="../../../../Thelia/Core/Event/Customer/CustomerEvent.html#method_hasCustomer"><abbr title="Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></a> at line 59</div>
+        <code>            public            bool
+    <strong>hasCustomer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCompany">
+        <div class="location">at line 99</div>
+        <code>            public            mixed
+    <strong>getCompany</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddress1">
+        <div class="location">at line 107</div>
+        <code>            public            string
+    <strong>getAddress1</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddress2">
+        <div class="location">at line 115</div>
+        <code>            public            string
+    <strong>getAddress2</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddress3">
+        <div class="location">at line 123</div>
+        <code>            public            string
+    <strong>getAddress3</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCountry">
+        <div class="location">at line 131</div>
+        <code>            public            int
+    <strong>getCountry</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEmail">
+        <div class="location">at line 139</div>
+        <code>            public            string
+    <strong>getEmail</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFirstname">
+        <div class="location">at line 147</div>
+        <code>            public            string
+    <strong>getFirstname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLang">
+        <div class="location">at line 155</div>
+        <code>            public            mixed
+    <strong>getLang</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastname">
+        <div class="location">at line 163</div>
+        <code>            public            string
+    <strong>getLastname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPassword">
+        <div class="location">at line 171</div>
+        <code>            public            string
+    <strong>getPassword</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPhone">
+        <div class="location">at line 179</div>
+        <code>            public            string
+    <strong>getPhone</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCellphone">
+        <div class="location">at line 187</div>
+        <code>            public            string
+    <strong>getCellphone</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTitle">
+        <div class="location">at line 195</div>
+        <code>            public            int
+    <strong>getTitle</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getZipcode">
+        <div class="location">at line 203</div>
+        <code>            public            string
+    <strong>getZipcode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCity">
+        <div class="location">at line 211</div>
+        <code>            public            string
+    <strong>getCity</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDiscount">
+        <div class="location">at line 219</div>
+        <code>            public            float
+    <strong>getDiscount</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReseller">
+        <div class="location">at line 227</div>
+        <code>            public            int
+    <strong>getReseller</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSponsor">
+        <div class="location">at line 235</div>
+        <code>            public            int
+    <strong>getSponsor</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -69,12 +69,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    string
                 </td>
                 <td class="last">
-                    <a href="#method_computeAssetUrl">computeAssetUrl</a>($assetType, $params, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
-                    <p>
-</p>
+                    <a href="#method_computeAssetUrl">computeAssetUrl</a>(string $assetType, array $params, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                    <p>Retrieve asset URL</p>
                 </td>
                 <td></td>
             </tr>
@@ -95,7 +94,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 49</div>
+        <div class="location">at line 47</div>
         <code>            public            
     <strong>__construct</strong>(<a href="../../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a> $assetsManager, string $web_root, string $path_relative_to_web_root)</code>
     </h3>
@@ -131,7 +130,7 @@
     </div>
 
                 <h3 id="method_prepareAssets">
-        <div class="location">at line 57</div>
+        <div class="location">at line 55</div>
         <code>            public            
     <strong>prepareAssets</strong>($assets_directory, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
     </h3>
@@ -165,13 +164,12 @@
     </div>
 
                 <h3 id="method_computeAssetUrl">
-        <div class="location">at line 89</div>
-        <code>            public            
-    <strong>computeAssetUrl</strong>($assetType, $params, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+        <div class="location">at line 102</div>
+        <code>            public            string
+    <strong>computeAssetUrl</strong>(string $assetType, array $params, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Retrieve asset URL</p>
         <p>
 </p>
         <div class="tags">
@@ -179,33 +177,50 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$assetType</td>
-                <td>
-</td>
+                <td>js|css|image</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$params</td>
-                <td>
-</td>
+                <td>Parameters - file File path in the default template - source module asset - filters filter to apply - debug - template if you want to load asset from another template</td>
             </tr>
                     <tr>
                 <td><abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
                 <td>$template</td>
+                <td>Smarty Template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>
 </td>
             </tr>
             </table>
 
             
-            
-            
                     </div>
     </div>
 
                 <h3 id="method_processSmartyPluginCall">
-        <div class="location">at line 128</div>
+        <div class="location">at line 148</div>
         <code>            public            
     <strong>processSmartyPluginCall</strong>($assetType, $params, $content, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
     </h3>

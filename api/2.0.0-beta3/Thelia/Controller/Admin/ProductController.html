@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Controller\Admin\ProductController | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Controller/Admin.html">Thelia\Controller\Admin</a>\ProductController</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>ProductController</strong>        extends <a href="../../../Thelia/Controller/Admin/AbstractSeoCrudController.html"><abbr title="Thelia\Controller\Admin\AbstractSeoCrudController">AbstractSeoCrudController</abbr></a></p>
+
+            <div class="description">
+            <p>Manages products</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>TEMPLATE_404</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Controller\Admin\Thelia\Core\HttpFoundation\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_processUpdateSeoAction">processUpdateSeoAction</a>()
+                    <p>Update SEO modification, and either go back to the object list, or stay on the edition page.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/AbstractSeoCrudController.html#method_processUpdateSeoAction"><abbr title="Thelia\Controller\Admin\AbstractSeoCrudController">AbstractSeoCrudController</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadAttributesAjaxTabAction">loadAttributesAjaxTabAction</a>()
+                    <p>Attributes ajax tab loading</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadRelatedAjaxTabAction">loadRelatedAjaxTabAction</a>()
+                    <p>Related information ajax tab loading</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setToggleVisibilityAction">setToggleVisibilityAction</a>()
+                    <p>Online status toggle product</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAvailableRelatedContentAction">getAvailableRelatedContentAction</a>($productId, $folderId)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRelatedContentAction">addRelatedContentAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteRelatedContentAction">deleteRelatedContentAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAvailableAccessoriesAction">getAvailableAccessoriesAction</a>($productId, $categoryId)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAccessoryAction">addAccessoryAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteAccessoryAction">deleteAccessoryAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateAccessoryPositionAction">updateAccessoryPositionAction</a>()
+                    <p>Update accessory position</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateContentPositionAction">updateContentPositionAction</a>()
+                    <p>Update related content position</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setProductTemplateAction">setProductTemplateAction</a>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $productId)
+                    <p>Change product template for a given product.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateAttributesAndFeaturesAction">updateAttributesAndFeaturesAction</a>($productId)
+                    <p>Update product attributes and features</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAdditionalCategoryAction">addAdditionalCategoryAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteAdditionalCategoryAction">deleteAdditionalCategoryAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getAttributeValuesAction">getAttributeValuesAction</a>($productId, $attributeId)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAttributeValueToCombinationAction">addAttributeValueToCombinationAction</a>($productId, $attributeAvId, $combination)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addProductSaleElementAction">addProductSaleElementAction</a>()
+                    <p>A a new combination to a product</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteProductSaleElementAction">deleteProductSaleElementAction</a>()
+                    <p>A a new combination to a product</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateProductSaleElementsAction">updateProductSaleElementsAction</a>()
+                    <p>Process the change of product's PSE list.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateProductDefaultSaleElementAction">updateProductDefaultSaleElementAction</a>()
+                    <p>Update default product sale element (not attached to any combination)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildCombinationsAction">buildCombinationsAction</a>()
+                    <p>Build combinations from the combination output builder</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_priceCaclulator">priceCaclulator</a>()
+                    <p>Invoked through Ajax; this method calculates the taxed price from the unaxed price, and vice versa.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\HttpFoundation\JsonResponse">JsonResponse</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_loadConvertedPrices">loadConvertedPrices</a>()
+                    <p>Calculate all prices</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 86</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_processUpdateSeoAction">
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractSeoCrudController.html#method_processUpdateSeoAction"><abbr title="Thelia\Controller\Admin\AbstractSeoCrudController">AbstractSeoCrudController</abbr></a> at line 162</div>
+        <code>            public            <abbr title="Thelia\Controller\Admin\Thelia\Core\HttpFoundation\Response">Response</abbr>
+    <strong>processUpdateSeoAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Update SEO modification, and either go back to the object list, or stay on the edition page.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Controller\Admin\Thelia\Core\HttpFoundation\Response">Response</abbr></td>
+            <td>the response</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAttributesAjaxTabAction">
+        <div class="location">at line 108</div>
+        <code>            public            
+    <strong>loadAttributesAjaxTabAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Attributes ajax tab loading</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRelatedAjaxTabAction">
+        <div class="location">at line 121</div>
+        <code>            public            
+    <strong>loadRelatedAjaxTabAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Related information ajax tab loading</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setToggleVisibilityAction">
+        <div class="location">at line 418</div>
+        <code>            public            
+    <strong>setToggleVisibilityAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Online status toggle product</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAvailableRelatedContentAction">
+        <div class="location">at line 468</div>
+        <code>            public            
+    <strong>getAvailableRelatedContentAction</strong>($productId, $folderId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$productId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$folderId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRelatedContentAction">
+        <div class="location">at line 493</div>
+        <code>            public            
+    <strong>addRelatedContentAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteRelatedContentAction">
+        <div class="location">at line 519</div>
+        <code>            public            
+    <strong>deleteRelatedContentAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAvailableAccessoriesAction">
+        <div class="location">at line 547</div>
+        <code>            public            
+    <strong>getAvailableAccessoriesAction</strong>($productId, $categoryId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$productId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$categoryId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAccessoryAction">
+        <div class="location">at line 572</div>
+        <code>            public            
+    <strong>addAccessoryAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteAccessoryAction">
+        <div class="location">at line 597</div>
+        <code>            public            
+    <strong>deleteAccessoryAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateAccessoryPositionAction">
+        <div class="location">at line 625</div>
+        <code>            public            
+    <strong>updateAccessoryPositionAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Update accessory position</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContentPositionAction">
+        <div class="location">at line 638</div>
+        <code>            public            
+    <strong>updateContentPositionAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Update related content position</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setProductTemplateAction">
+        <div class="location">at line 653</div>
+        <code>            public            
+    <strong>setProductTemplateAction</strong>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $productId)</code>
+    </h3>
+    <div class="details">
+        <p>Change product template for a given product.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Controller\Admin\unknown">unknown</abbr></td>
+                <td>$productId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateAttributesAndFeaturesAction">
+        <div class="location">at line 676</div>
+        <code>            public            
+    <strong>updateAttributesAndFeaturesAction</strong>($productId)</code>
+    </h3>
+    <div class="details">
+        <p>Update product attributes and features</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$productId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAdditionalCategoryAction">
+        <div class="location">at line 750</div>
+        <code>            public            
+    <strong>addAdditionalCategoryAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteAdditionalCategoryAction">
+        <div class="location">at line 775</div>
+        <code>            public            
+    <strong>deleteAdditionalCategoryAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttributeValuesAction">
+        <div class="location">at line 802</div>
+        <code>            public            
+    <strong>getAttributeValuesAction</strong>($productId, $attributeId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$productId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attributeId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAttributeValueToCombinationAction">
+        <div class="location">at line 827</div>
+        <code>            public            
+    <strong>addAttributeValueToCombinationAction</strong>($productId, $attributeAvId, $combination)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$productId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attributeAvId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$combination</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addProductSaleElementAction">
+        <div class="location">at line 872</div>
+        <code>            public            
+    <strong>addProductSaleElementAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>A a new combination to a product</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteProductSaleElementAction">
+        <div class="location">at line 896</div>
+        <code>            public            
+    <strong>deleteProductSaleElementAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>A a new combination to a product</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateProductSaleElementsAction">
+        <div class="location">at line 1025</div>
+        <code>            public            
+    <strong>updateProductSaleElementsAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Process the change of product's PSE list.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateProductDefaultSaleElementAction">
+        <div class="location">at line 1035</div>
+        <code>            public            
+    <strong>updateProductDefaultSaleElementAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Update default product sale element (not attached to any combination)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildCombinationsAction">
+        <div class="location">at line 1065</div>
+        <code>            public            
+    <strong>buildCombinationsAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Build combinations from the combination output builder</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_priceCaclulator">
+        <div class="location">at line 1149</div>
+        <code>            public            
+    <strong>priceCaclulator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Invoked through Ajax; this method calculates the taxed price from the unaxed price, and vice versa.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadConvertedPrices">
+        <div class="location">at line 1181</div>
+        <code>            public            <abbr title="Symfony\Component\HttpFoundation\JsonResponse">JsonResponse</abbr>
+    <strong>loadConvertedPrices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Calculate all prices</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\JsonResponse">JsonResponse</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -112,12 +112,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <a href="../../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_getTemplateDefinition">getTemplateDefinition</a>()
-                    <p>
-</p>
+                    <a href="#method_getTemplateDefinition">getTemplateDefinition</a>(bool $webAssetTemplate = false)
+                    <p>Get template definition</p>
                 </td>
                 <td></td>
             </tr>
@@ -211,7 +210,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 54</div>
+        <div class="location">at line 50</div>
         <code>            public            
     <strong>__construct</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, <abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $dispatcher, <a href="../../../../Thelia/Core/Template/ParserContext.html"><abbr title="Thelia\Core\Template\ParserContext">ParserContext</abbr></a> $parserContext, string $env = &#039;prod&#039;, bool $debug = false)</code>
     </h3>
@@ -263,7 +262,7 @@
     </div>
 
                 <h3 id="method_addTemplateDirectory">
-        <div class="location">at line 109</div>
+        <div class="location">at line 103</div>
         <code>            public            
     <strong>addTemplateDirectory</strong>(<abbr title="Thelia\Core\Template\Smarty\unknown">unknown</abbr> $templateType, string $templateName, string $templateDirectory, <abbr title="Thelia\Core\Template\Smarty\unknown">unknown</abbr> $key, string $unshift = false)</code>
     </h3>
@@ -309,7 +308,7 @@
     </div>
 
                 <h3 id="method_getTemplateDirectories">
-        <div class="location">at line 131</div>
+        <div class="location">at line 125</div>
         <code>            public            <abbr title="Thelia\Core\Template\Smarty\multitype:">multitype:</abbr>
     <strong>getTemplateDirectories</strong>(<abbr title="Thelia\Core\Template\Smarty\unknown">unknown</abbr> $templateType)</code>
     </h3>
@@ -355,7 +354,7 @@
     </div>
 
                 <h3 id="method_removeBlankLines">
-        <div class="location">at line 140</div>
+        <div class="location">at line 134</div>
         <code>            public            
     <strong>removeBlankLines</strong>($tpl_source, <abbr title="Thelia\Core\Template\Smarty\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
     </h3>
@@ -389,7 +388,7 @@
     </div>
 
                 <h3 id="method_theliaEscape">
-        <div class="location">at line 145</div>
+        <div class="location">at line 139</div>
         <code>        static    public            
     <strong>theliaEscape</strong>($content, $smarty)</code>
     </h3>
@@ -423,7 +422,7 @@
     </div>
 
                 <h3 id="method_setTemplateDefinition">
-        <div class="location">at line 157</div>
+        <div class="location">at line 151</div>
         <code>            public            
     <strong>setTemplateDefinition</strong>(<a href="../../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a> $templateDefinition)</code>
     </h3>
@@ -451,24 +450,43 @@
     </div>
 
                 <h3 id="method_getTemplateDefinition">
-        <div class="location">at line 185</div>
-        <code>            public            
-    <strong>getTemplateDefinition</strong>()</code>
+        <div class="location">at line 187</div>
+        <code>            public            <a href="../../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
+    <strong>getTemplateDefinition</strong>(bool $webAssetTemplate = false)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Get template definition</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$webAssetTemplate</td>
+                <td>Allow to load asset from another template If the name of the template if provided</td>
+            </tr>
+            </table>
+
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_getTemplate">
-        <div class="location">at line 190</div>
+        <div class="location">at line 200</div>
         <code>            public            
     <strong>getTemplate</strong>()</code>
     </h3>
@@ -485,7 +503,7 @@
     </div>
 
                 <h3 id="method_render">
-        <div class="location">at line 222</div>
+        <div class="location">at line 232</div>
         <code>            public            string
     <strong>render</strong>(string $realTemplateName, array $parameters = array())</code>
     </h3>
@@ -525,7 +543,7 @@
     </div>
 
                 <h3 id="method_renderString">
-        <div class="location">at line 238</div>
+        <div class="location">at line 248</div>
         <code>            public            string
     <strong>renderString</strong>(string $templateText, array $parameters = array())</code>
     </h3>
@@ -565,7 +583,7 @@
     </div>
 
                 <h3 id="method_setContent">
-        <div class="location">at line 249</div>
+        <div class="location">at line 259</div>
         <code>            public            
     <strong>setContent</strong>(string|<abbr title="Thelia\Core\Template\Smarty\Thelia\Core\HttpFoundation\Response">Response</abbr> $content)</code>
     </h3>
@@ -592,7 +610,7 @@
     </div>
 
                 <h3 id="method_getStatus">
-        <div class="location">at line 258</div>
+        <div class="location">at line 268</div>
         <code>            public            <abbr title="Thelia\Core\Template\Smarty\type">type</abbr>
     <strong>getStatus</strong>()</code>
     </h3>
@@ -618,7 +636,7 @@
     </div>
 
                 <h3 id="method_setStatus">
-        <div class="location">at line 269</div>
+        <div class="location">at line 279</div>
         <code>            public            
     <strong>setStatus</strong>(int $status)</code>
     </h3>
@@ -645,7 +663,7 @@
     </div>
 
                 <h3 id="method_addPlugins">
-        <div class="location">at line 274</div>
+        <div class="location">at line 284</div>
         <code>            public            
     <strong>addPlugins</strong>(<a href="../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a> $plugin)</code>
     </h3>
@@ -673,7 +691,7 @@
     </div>
 
                 <h3 id="method_registerPlugins">
-        <div class="location">at line 279</div>
+        <div class="location">at line 289</div>
         <code>            public            
     <strong>registerPlugins</strong>()</code>
     </h3>
