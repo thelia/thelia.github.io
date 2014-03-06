@@ -10,7 +10,7 @@ subnav: plugin_payment
     <h1>Modules : <small>Payment module</small></h1>
 </div>
 
-A payment module is like a classic module. The main class must extends the ```Thelia\Module\PaymentInterface``` interface and the ```pay``` and ```isValidPayment``` methods.
+A payment module is like a classic module. The main class must extends the ```Thelia\Module\PaymentModuleInterface``` interface and implement the ```pay``` and ```isValidPayment``` methods.
 
 # isValidPayment method
 
