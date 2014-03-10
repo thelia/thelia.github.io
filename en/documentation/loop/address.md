@@ -16,7 +16,7 @@ arguments :
 
 outputs :
     - {name: "$ID", description: "the address id"}
-    - {name: "$NAME", description: "the address name"}
+    - {name: "$LABEL", description: "the address label"}
     - {name: "$CUSTOMER", description: "the customer the address is link to which might be use in <a href=\"/en/documentation/loop/customer.html\">customer loop</a>"}
     - {name: "$TITLE", description: "the address title which might be use in <a href=\"/en/documentation/loop/title.html\">title loop</a>"}
     - {name: "$COMPANY", description: "the address company"}
