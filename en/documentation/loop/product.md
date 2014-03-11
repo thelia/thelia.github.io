@@ -28,6 +28,7 @@ arguments :
     - {name: "min_stock", description: "An integer value. Equal value matches.", example: "min_stock=\"3\""}
     - {name: "min_weight", description: "A float value. Equal value matches.", example: "min_weight=\"32.1\""}
     - {name: "max_weight", description: "A float value. Equal value matches.", example: "max_weight=\"32.1\""}
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {name: "current", description: "A boolean value which allows either to exclude current product from results either to match only this product", example: "current=\"yes\""}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of product ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
@@ -104,10 +105,10 @@ outputs :
     - {name: "$POSITION", description: "the product position"}
     - {name: "$TAX_RULE_ID", description: "the product's tax rule ID"}
     - {name: "$TEMPLATE", description: "the template id associated to this product"}
-    - {name: "$HAS_PREVIOUS", description: "check if this product has a previous product"}
-    - {name: "$HAS_NEXT", description: "check if this product has a next product"}
-    - {name: "$PREVIOUS", description: "the previous product id if exists"}
-    - {name: "$NEXT", description: "the next product id if exists"}
+    - {name: "$HAS_PREVIOUS", description: "check if this product has a previous product. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$HAS_NEXT", description: "check if this product has a next product. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$PREVIOUS", description: "the previous product id if exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$NEXT", description: "the next product id if exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
     - {name: "$DEFAULT_CATEGORY", description: "the default category id associated to this product"}
 
 
