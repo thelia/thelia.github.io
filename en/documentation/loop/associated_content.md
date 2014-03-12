@@ -11,8 +11,8 @@ type: associated_content
 arguments :
     - {name: "product", description: "A single product id.", example: "product=\"2\"", mandatory: "double"}
     - {name: "category", description: "A single category id.", example: "category=\"5\"", mandatory: "double"}
-    - {name: "exclude_product", description: "A single or a list of product ids. If a content is in multiple products which are not all excluded it will not be excluded.", example: "exclude_product=\"5\"",}
-    - {name: "exclude_category", description: "A single or a list of category ids. If a content is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"5\"",}
+    - {name: "exclude_product", description: "A single or a list of product ids. If a content is in multiple products which are not all excluded it will not be excluded.", example: "exclude_product=\"5\""}
+    - {name: "exclude_category", description: "A single or a list of category ids. If a content is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"5\""}
     - {
         name: "order", description: "A list of values", example: "order=\"associated_content\"", default: "associated_content",
         expected_values: [
