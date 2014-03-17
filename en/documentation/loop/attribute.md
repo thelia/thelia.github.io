@@ -13,7 +13,6 @@ arguments :
     - {name: "product", description: "A single or a list of product ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "template", description: "A single or a list of template ids. Only features attached to these templates will be returned.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "exclude_template", description: "A single or a list of template ids. Only features NOT attached to these templates will be returned.", example: "id=\"2\", id=\"1,4,7\""}
-    - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of attribute ids to exclude.", example: "exclude=\"456,123\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
@@ -28,6 +27,7 @@ arguments :
 
 outputs :
     - {name: "$ID", description: "the attribute id"}
+    - {name: "$IS_TRANSLATED", description: "check if the product is translated or not"}
     - {name: "$TITLE", description: "the attribute title"}
     - {name: "$CHAPO", description: "the attribute chapo"}
     - {name: "$DESCRIPTION", description: "the attribute description"}
