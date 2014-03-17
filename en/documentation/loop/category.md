@@ -11,6 +11,8 @@ type: category
 arguments :
     - {name: "id", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "parent", description: "A single or a list of category ids.", example: "category=\"3\", category=\"2,5,8\""}
+    - {name: "product", description: "A single product id.", example: "product=\"3\""}
+    - {name: "exclude_product", description: "A single product id to exclude.", example: "exclude_product=\"3\""}
     - {name: "current", description: "A boolean value which allows either to exclude current category from results either to match only this category", example: "current=\"yes\""}
     - {name: "not_empty", description: "A boolean value.", example: "not_empty=\"yes\"", default: "no"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
@@ -31,6 +33,8 @@ arguments :
       }
 outputs :
     - {name: "$ID", description: "the category id"}
+    - {name: "$IS_TRANSLATED", description: "check if the category is translated or not"}
+    - {name: "$LOCALE", description: "the locale used for this loop"}
     - {name: "$TITLE", description: "the category title"}
     - {name: "$CHAPO", description: "the category chapo"}
     - {name: "$DESCRIPTION", description: "the category description"}
@@ -47,6 +51,7 @@ outputs :
     - {name: "$VERSION_DATE", description: "the category version date"}
     - {name: "$VERSION_AUTHOR", description: "the category version author"}
     - {name: "$POSITION", description: "the category position"}
+    - {name: "$VISIBLE", description: "Return if the category is visible or not"}
     - {name: "$PRODUCT_COUNT", description: "Number of product contained by the current category. Only available if <strong>need_product_count</strong> parameter is set to true"}
     - {name: "$CHILD_COUNT", description: "Number of subcategories contained by the current category. Only available if <strong>need_count_child</strong> parameter is set to true"}
     - {name: "$HAS_PREVIOUS", description: "Return 1 if the current category has a previous category. 0 otherwise. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
