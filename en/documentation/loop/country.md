@@ -16,6 +16,8 @@ arguments :
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
 outputs :
     - {name: "$ID", description: "the country id"}
+    - {name: "$IS_TRANSLATED", description: "check if the country is translated"}
+    - {name: "$LOCALE", description: "The locale used for this research"}
     - {name: "$AREA", description: "the area the country belongs"}
     - {name: "$TITLE", description: "the country title"}
     - {name: "$CHAPO", description: "the country chapo"}
