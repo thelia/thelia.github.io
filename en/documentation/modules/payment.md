@@ -31,11 +31,22 @@ The Container is available when this method is called and you can use it by call
 */
 public function isValidPayment()
 {
-    //retrive current order
-    $order = $this->container->get('request')->getSession()->getOrder();
+    /** @var Session $session */
+    $session = $this->container->get('request')->getSession();
+    /** @var Cart $cart */
+    $cart = $session->getCart();
+    /** @var \Thelia\Model\Order $order */
+    $order = $session->getOrder();
+    /** @var \Thelia\TaxEngine\TaxEngine $taxEngine */
+    $taxEngine = $this->container->get("thelia.taxengine");
+    /** @var \Thelia\Model\Country $country */
+    $country = $taxEngine->getDeliveryCountry();
 
-    //verify if all condition are ok for Paypal
-    return $order->getOrderProducts()->count() <= 10 && $order->getTotalAmount() < 8000;
+    $item_number = $cart->countCartItems();
+    $price = $cart->getTaxedAmount($country) + $order->getPostage();
+
+    return $item_number <= 10 &&
+        $price < 8000;
 }
 ```
 
