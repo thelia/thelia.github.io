@@ -24,7 +24,7 @@ The Container is available when this method is called and you can use it by call
 *
 * This method is call on Payment loop.
 *
-* If you return true, the payment method will de display
+* If you return true, the payment method will be display
 * If you return false, the payment method will not be display
 *
 * @return boolean
