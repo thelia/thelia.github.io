@@ -13,6 +13,7 @@ arguments :
     - {name: "category", description: "a category identifier. The loop will return this category's images", example: "category=\"2\""}
     - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\""}
     - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
+    - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}
     - {
         name: "source", description: "", example: "source=\"category\"",
         expected_values: [
@@ -54,6 +55,7 @@ arguments :
     }
 outputs :
     - {name: "$ID", description: "the image ID"}
+    - {name: "$LOCALE", description: "The locale used for this research"}
     - {name: "$IMAGE_URL", description: "The absolute URL to the generated image"}
     - {name: "$ORIGINAL_IMAGE_URL", description: "The absolute URL to the original image"}
     - {name: "$IMAGE_PATH", description: "The absolute path to the generated image file"}
