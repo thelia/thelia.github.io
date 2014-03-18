@@ -21,8 +21,7 @@ arguments :
             {name: "name",              description: "order by currency name"},
             {name: "name_reverse",      description: "reverse order by currency name"},
             {name: "code",              description: "order by currency code"},
-            {name: "code_reverse",      description: "reverse order by currency code"},
-
+            {name: "code_reverse",      description: "reverse order by currency code"}
         ]
       }
 outputs :

@@ -7,7 +7,7 @@
             <li class="{% if page.sidebar == section.sidebar_name %} active {% endif %}">
                 <a href="{% if section.url == null %}#{{section.sidebar_name}}{% else %}{{section.url}}{% endif %}" {% if section.url == null %}data-toggle="collapse"{% endif %}>{{ section.name }}</a>
                 {% if section.subsections != nil AND section.subsections != '' %}
-                <ul id="{{ section.sidebar_name }}" class="nav collapse">
+                <ul id="{{ section.sidebar_name }}" class="nav collapse {% if page.sidebar == section.sidebar_name %} in {% endif %}">
                     {% for subsection in section.subsections %}
                     <li class="{% if page.subnav == subsection.sidebar_name %} active {% endif %}">
                         {% if subsection.url != nil AND subsection.url != '' %}

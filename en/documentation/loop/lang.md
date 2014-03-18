@@ -18,8 +18,7 @@ arguments :
           {name: "id",           description: "id order"},
           {name: "id_reverse",           description: "reverse id order"},
           {name: "alpha",           description: "alpha order"},
-          {name: "alpha_reverse",           description: "alpha order reverse"},
-
+          {name: "alpha_reverse",           description: "alpha order reverse"}
       ]
     }
 
