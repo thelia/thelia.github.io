@@ -24,8 +24,7 @@ arguments :
             {name: "title",             description: "order by title"},
             {name: "title_reverse",     description: "order by title"},
             {name: "value",             description: "order by variable value"},
-            {name: "value_reverse",     description: "reverse order by variable value"},
-
+            {name: "value_reverse",     description: "reverse order by variable value"}
         ]
       }
 outputs :
