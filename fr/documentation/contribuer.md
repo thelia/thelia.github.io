@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Contribuer
-sidebar: contribuer
+sidebar: contribute
 lang: fr
 ---
 <div class="page-header">
