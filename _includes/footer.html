@@ -1,3 +1,13 @@
+<footer role="contentinfo" class="thelia-footer clearfix">
+    <div class="container">
+        <ul class="breadcrumb text-right">
+            {% for lang in site.languages %}
+            <li><a href="{{lang.url}}" title="{{lang.name}}">{{lang.code}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</footer>
+
 <!-- JavaScript -->
 <!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!--<![endif]-->
@@ -10,13 +20,3 @@
 <script src="/js/libs/bootstrap.min.js"></script>
 <script src="/js/libs/anchorify/src/anchorify.js"></script>
 <script src="/js/main.js"></script>
-
-<footer role="contentinfo" class="thelia-footer clearfix">
-    <div class="container">
-        <ul class="breadcrumb text-right">
-            {% for lang in site.languages %}
-            <li><a href="{{lang.url}}" title="{{lang.name}}">{{lang.code}}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-</footer>
