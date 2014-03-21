@@ -7,7 +7,7 @@ lang: en
 subnav: loop_feature_availability
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
-type: feature_availability
+type: "feature-availability"
 arguments :
     - {name: "id", description: "A single or a list of feature availability ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "feature", description: "A single or a list of feature ids.", example: "id=\"2\", id=\"1,4,7\""}
@@ -25,6 +25,8 @@ arguments :
 
 outputs :
     - {name: "$ID", description: "the feature availability id"}
+    - {name: "$IS_TRANSLATED", description: "check if the feature_availability is translated"}
+    - {name: "$LOCALE", description: "The locale used for this research"}
     - {name: "$TITLE", description: "the feature availability title"}
     - {name: "$CHAPO", description: "the feature availability chapo"}
     - {name: "$DESCRIPTION", description: "the feature availability description"}

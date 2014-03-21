@@ -33,13 +33,27 @@ languages:
               [
                { name: "About coupons", sidebar_name: "features_coupons_index", url: "/en/documentation/features/coupons/index.html" },
                { name: "Effects", sidebar_name: "features_coupons_effects", url: "/en/documentation/features/coupons/effects.html" },
-               { name: "Rules", sidebar_name: "features_coupons_rules", url: "/en/documentation/features/coupons/rules.html" }
+               { name: "Conditions", sidebar_name: "features_coupons_conditions", url: "/en/documentation/features/coupons/conditions.html" }
+              ]
+            },
+            { name: "Administration permissions", sidebar_name: "features_permissions", subsections:
+              [
+               { name: "Administrators and profiles", sidebar_name: "features_permissions_admin", url: "/en/documentation/features/permissions/admin.html" },
+               { name: "Permissions in modules", sidebar_name: "features_permissions_module", url: "/en/documentation/features/permissions/module.html" }
+              ]
+            },
+            { name: "Tax engine", sidebar_name: "features_tax", subsections:
+              [
+               { name: "Manage taxes", sidebar_name: "features_tax_admin", url: "/en/documentation/features/tax/admin.html" },
+               { name: "Tax type", sidebar_name: "features_tax_type", url: "/en/documentation/features/tax/type.html" }
               ]
             }
           ]
         },
         { name: "Modules", sidebar_name: "plugin", subsections: [
            { name: "Starting", sidebar_name: "plugin_index", url: "/en/documentation/modules/index.html" },
+           { name: "Payment module", sidebar_name: "plugin_payment", url: "/en/documentation/modules/payment.html" },
+           { name: "Delivery module", sidebar_name: "plugin_delivery", url: "/en/documentation/modules/delivery.html" },
            { name: "Loops", sidebar_name: "plugin_loop", url: "/en/documentation/modules/loops.html" },
            { name: "Actions", sidebar_name: "plugin_action", url: "/en/documentation/modules/actions.html" },
            { name: "Commands", sidebar_name: "plugin_command", url: "/en/documentation/modules/commands.html" },
@@ -57,23 +71,43 @@ languages:
             { name: "About loops", sidebar_name: "loop_index", url: "/en/documentation/loop/index.html" },
             { name: "Accessory loop", sidebar_name: "loop_accessory", url: "/en/documentation/loop/accessory.html" },
             { name: "Address loop", sidebar_name: "loop_address", url: "/en/documentation/loop/address.html" },
+            { name: "Admin loop", sidebar_name: "loop_admin", url: "/en/documentation/loop/admin.html" },
+            { name: "Area loop", sidebar_name: "loop_area", url: "/en/documentation/loop/area.html" },
             { name: "Associated content loop", sidebar_name: "loop_associated_content", url: "/en/documentation/loop/associated_content.html" },
             { name: "Attribute loop", sidebar_name: "loop_attribute", url: "/en/documentation/loop/attribute.html" },
             { name: "Attribute availability loop", sidebar_name: "loop_attribute_availability", url: "/en/documentation/loop/attribute_availability.html" },
             { name: "Attribute combination", sidebar_name: "loop_attribute_combination", url: "/en/documentation/loop/attribute_combination.html" },
             { name: "Auth loop", sidebar_name: "loop_auth", url: "/en/documentation/loop/auth.html" },
+            { name: "Cart loop", sidebar_name: "loop_cart", url: "/en/documentation/loop/cart.html" },
             { name: "Category loop", sidebar_name: "loop_category", url: "/en/documentation/loop/category.html" },
+            { name: "Category path loop", sidebar_name: "loop_category_path", url: "/en/documentation/loop/category_path.html" },
+            { name: "Category tree loop", sidebar_name: "loop_category_tree", url: "/en/documentation/loop/category_tree.html" },
+            { name: "Config loop", sidebar_name: "loop_config", url: "/en/documentation/loop/config_loop.html" },
             { name: "Content loop", sidebar_name: "loop_content", url: "/en/documentation/loop/content.html" },
             { name: "Country loop", sidebar_name: "loop_country", url: "/en/documentation/loop/country.html" },
             { name: "Currency loop", sidebar_name: "loop_currency", url: "/en/documentation/loop/currency.html" },
             { name: "Customer loop", sidebar_name: "loop_customer", url: "/en/documentation/loop/customer.html" },
+            { name: "Delivery loop", sidebar_name: "loop_delivery", url: "/en/documentation/loop/delivery.html" },
+            { name: "Document loop", sidebar_name: "loop_document", url: "/en/documentation/loop/document.html" },
             { name: "Feature loop", sidebar_name: "loop_feature", url: "/en/documentation/loop/feature.html" },
             { name: "Feature availability loop", sidebar_name: "loop_feature_availability", url: "/en/documentation/loop/feature_availability.html" },
             { name: "Feature value loop", sidebar_name: "loop_feature_value", url: "/en/documentation/loop/feature_value.html" },
             { name: "Folder loop", sidebar_name: "loop_folder", url: "/en/documentation/loop/folder.html" },
+            { name: "Folder path loop", sidebar_name: "loop_folder_path", url: "/en/documentation/loop/folder_path.html" },
+            { name: "Folder tree loop", sidebar_name: "loop_folder_tree", url: "/en/documentation/loop/folder_tree.html" },
             { name: "Image loop", sidebar_name: "loop_image", url: "/en/documentation/loop/image.html" },
+            { name: "Lang loop", sidebar_name: "loop_lang", url: "/en/documentation/loop/lang.html" },
+            { name: "Order loop", sidebar_name: "loop_order", url: "/en/documentation/loop/order.html" },
+            { name: "Order address loop", sidebar_name: "loop_order_address", url: "/en/documentation/loop/order_address.html" },
+            { name: "Order coupon loop", sidebar_name: "loop_order_coupon", url: "/en/documentation/loop/order_coupon.html" },
+            { name: "Order product loop", sidebar_name: "loop_order_product", url: "/en/documentation/loop/order_product.html" },
+            { name: "Order product attribute combination loop", sidebar_name: "loop_order_product_attribute_combination", url: "/en/documentation/loop/order_product_attribute_combination.html" },
+            { name: "Order status loop", sidebar_name: "loop_order_status", url: "/en/documentation/loop/order_status.html" },
+            { name: "Payment loop", sidebar_name: "loop_payment", url: "/en/documentation/loop/payment.html" },
             { name: "Product loop", sidebar_name: "loop_product", url: "/en/documentation/loop/product.html" },
             { name: "Product sale elements loop", sidebar_name: "loop_product_sale_elements", url: "/en/documentation/loop/product_sale_elements.html" },
+            { name: "Tax loop", sidebar_name: "loop_tax", url: "/en/documentation/loop/tax.html" },
+            { name: "TaxRule loop", sidebar_name: "loop_tax_rule", url: "/en/documentation/loop/tax_rule.html" },
             { name: "Title loop", sidebar_name: "loop_title", url: "/en/documentation/loop/title.html" }
           ]
         },
@@ -90,7 +124,7 @@ languages:
             { name: "Front-office", sidebar_name: "templates_front_office", url: "/en/documentation/templates/front_office.html" },
             { name: "Back-office", sidebar_name: "templates_back_office", url: "/en/documentation/templates/back_office.html" },
             { name: "PDF", sidebar_name: "templates_pdf", url: "/en/documentation/templates/pdf.html" },
-            { name: "E-mails", sidebar_name: "templates_emails", url: "/en/documentation/templates/emails.html" },
+            { name: "E-mails", sidebar_name: "templates_emails", url: "/en/documentation/templates/emails.html" }
           ]
         }
       ]

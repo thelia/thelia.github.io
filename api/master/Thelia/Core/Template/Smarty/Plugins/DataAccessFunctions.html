@@ -72,7 +72,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, <a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a> $securityContext, <a href="../../../../../Thelia/Core/Template/ParserContext.html"><abbr title="Thelia\Core\Template\ParserContext">ParserContext</abbr></a> $parserContext, <abbr title="Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher">ContainerAwareEventDispatcher</abbr> $dispatcher)
+                    <a href="#method___construct">__construct</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, <a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a> $securityContext, <a href="../../../../../Thelia/TaxEngine/TaxEngine.html"><abbr title="Thelia\TaxEngine\TaxEngine">TaxEngine</abbr></a> $taxEngine, <a href="../../../../../Thelia/Core/Template/ParserContext.html"><abbr title="Thelia\Core\Template\ParserContext">ParserContext</abbr></a> $parserContext, <abbr title="Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher">ContainerAwareEventDispatcher</abbr> $dispatcher)
                     <p>
 </p>
                 </td>
@@ -200,7 +200,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_ConfigDataAccess">ConfigDataAccess</a>($params, $smarty)
+                    <a href="#method_configDataAccess">configDataAccess</a>($params, $smarty)
                     <p>
 </p>
                 </td>
@@ -211,7 +211,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_StatsAccess">StatsAccess</a>($params, $smarty)
+                    <a href="#method_statsAccess">statsAccess</a>($params, $smarty)
                     <p>
 </p>
                 </td>
@@ -323,7 +323,7 @@
     </div>
 
                 <h3 id="method_getPluginDescriptors">
-        <div class="location">at line 438</div>
+        <div class="location">at line 452</div>
         <code>            public            <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
     <strong>getPluginDescriptors</strong>()</code>
     </h3>
@@ -348,9 +348,9 @@
     </div>
 
                 <h3 id="method___construct">
-        <div class="location">at line 63</div>
+        <div class="location">at line 66</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, <a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a> $securityContext, <a href="../../../../../Thelia/Core/Template/ParserContext.html"><abbr title="Thelia\Core\Template\ParserContext">ParserContext</abbr></a> $parserContext, <abbr title="Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher">ContainerAwareEventDispatcher</abbr> $dispatcher)</code>
+    <strong>__construct</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, <a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a> $securityContext, <a href="../../../../../Thelia/TaxEngine/TaxEngine.html"><abbr title="Thelia\TaxEngine\TaxEngine">TaxEngine</abbr></a> $taxEngine, <a href="../../../../../Thelia/Core/Template/ParserContext.html"><abbr title="Thelia\Core\Template\ParserContext">ParserContext</abbr></a> $parserContext, <abbr title="Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher">ContainerAwareEventDispatcher</abbr> $dispatcher)</code>
     </h3>
     <div class="details">
         <p>
@@ -370,6 +370,12 @@
                     <tr>
                 <td><a href="../../../../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a></td>
                 <td>$securityContext</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Thelia/TaxEngine/TaxEngine.html"><abbr title="Thelia\TaxEngine\TaxEngine">TaxEngine</abbr></a></td>
+                <td>$taxEngine</td>
                 <td>
 </td>
             </tr>
@@ -394,7 +400,7 @@
     </div>
 
                 <h3 id="method_adminDataAccess">
-        <div class="location">at line 78</div>
+        <div class="location">at line 82</div>
         <code>            public            string
     <strong>adminDataAccess</strong>(array $params, <abbr title="Thelia\Core\Template\Smarty\Plugins\unknown">unknown</abbr> $smarty)</code>
     </h3>
@@ -436,7 +442,7 @@
     </div>
 
                 <h3 id="method_customerDataAccess">
-        <div class="location">at line 90</div>
+        <div class="location">at line 94</div>
         <code>            public            string
     <strong>customerDataAccess</strong>(array $params, <abbr title="Thelia\Core\Template\Smarty\Plugins\unknown">unknown</abbr> $smarty)</code>
     </h3>
@@ -478,7 +484,7 @@
     </div>
 
                 <h3 id="method_productDataAccess">
-        <div class="location">at line 95</div>
+        <div class="location">at line 99</div>
         <code>            public            
     <strong>productDataAccess</strong>($params, $smarty)</code>
     </h3>
@@ -512,7 +518,7 @@
     </div>
 
                 <h3 id="method_categoryDataAccess">
-        <div class="location">at line 108</div>
+        <div class="location">at line 112</div>
         <code>            public            
     <strong>categoryDataAccess</strong>($params, $smarty)</code>
     </h3>
@@ -546,7 +552,7 @@
     </div>
 
                 <h3 id="method_contentDataAccess">
-        <div class="location">at line 121</div>
+        <div class="location">at line 125</div>
         <code>            public            
     <strong>contentDataAccess</strong>($params, $smarty)</code>
     </h3>
@@ -580,7 +586,7 @@
     </div>
 
                 <h3 id="method_folderDataAccess">
-        <div class="location">at line 134</div>
+        <div class="location">at line 138</div>
         <code>            public            
     <strong>folderDataAccess</strong>($params, $smarty)</code>
     </h3>
@@ -614,7 +620,7 @@
     </div>
 
                 <h3 id="method_currencyDataAccess">
-        <div class="location">at line 153</div>
+        <div class="location">at line 157</div>
         <code>            public            
     <strong>currencyDataAccess</strong>(<abbr title="Thelia\Core\Template\Smarty\Plugins\$params">$params</abbr> $params, <abbr title="Thelia\Core\Template\Smarty\Plugins\$smarty">$smarty</abbr> $smarty)</code>
     </h3>
@@ -647,7 +653,7 @@
     </div>
 
                 <h3 id="method_countryDataAccess">
-        <div class="location">at line 165</div>
+        <div class="location">at line 169</div>
         <code>            public            
     <strong>countryDataAccess</strong>($params, $smarty)</code>
     </h3>
@@ -681,7 +687,7 @@
     </div>
 
                 <h3 id="method_cartDataAccess">
-        <div class="location">at line 181</div>
+        <div class="location">at line 185</div>
         <code>            public            
     <strong>cartDataAccess</strong>($params, $smarty)</code>
     </h3>
@@ -715,7 +721,7 @@
     </div>
 
                 <h3 id="method_orderDataAccess">
-        <div class="location">at line 207</div>
+        <div class="location">at line 214</div>
         <code>            public            
     <strong>orderDataAccess</strong>($params, $smarty)</code>
     </h3>
@@ -749,7 +755,7 @@
     </div>
 
                 <h3 id="method_langDataAccess">
-        <div class="location">at line 235</div>
+        <div class="location">at line 244</div>
         <code>            public            string
     <strong>langDataAccess</strong>(<abbr title="Thelia\Core\Template\Smarty\Plugins\$params">$params</abbr> $params, <abbr title="Thelia\Core\Template\Smarty\Plugins\$smarty">$smarty</abbr> $smarty)</code>
     </h3>
@@ -791,10 +797,10 @@
                     </div>
     </div>
 
-                <h3 id="method_ConfigDataAccess">
-        <div class="location">at line 240</div>
+                <h3 id="method_configDataAccess">
+        <div class="location">at line 249</div>
         <code>            public            
-    <strong>ConfigDataAccess</strong>($params, $smarty)</code>
+    <strong>configDataAccess</strong>($params, $smarty)</code>
     </h3>
     <div class="details">
         <p>
@@ -825,10 +831,10 @@
                     </div>
     </div>
 
-                <h3 id="method_StatsAccess">
-        <div class="location">at line 251</div>
+                <h3 id="method_statsAccess">
+        <div class="location">at line 260</div>
         <code>            public            
-    <strong>StatsAccess</strong>($params, $smarty)</code>
+    <strong>statsAccess</strong>($params, $smarty)</code>
     </h3>
     <div class="details">
         <p>
@@ -860,7 +866,7 @@
     </div>
 
                 <h3 id="method_getDispatcher">
-        <div class="location">at line 462</div>
+        <div class="location">at line 476</div>
         <code>            public            <abbr title="Symfony\Component\EventDispatcher\EventDispatcher">EventDispatcher</abbr>
     <strong>getDispatcher</strong>()</code>
     </h3>

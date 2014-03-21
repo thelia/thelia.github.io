@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Coupon\Type\CouponAbstract | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Coupon/Type.html">Thelia\Coupon\Type</a>\CouponAbstract</h1>
+    </div>
+        <div class="content">
+                <p>abstract     class
+    <strong>CouponAbstract</strong>        implements
+        <a href="../../../Thelia/Coupon/Type/CouponInterface.html"><abbr title="Thelia\Coupon\Type\CouponInterface">CouponInterface</abbr></a></p>
+
+            <div class="description">
+            <p>Assist in writing a CouponInterface</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>INPUT_EXTENDED__NAME</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INPUT_AMOUNT_NAME</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade)
+                    <p>Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setOrganizer">setOrganizer</a>(<a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a> $organizer)
+                    <p>Set Condition Organizer</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)
+                    <p>Set Coupon</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getCode">getCode</a>()
+                    <p>Return Coupon code (ex: XMAS)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTitle">getTitle</a>()
+                    <p>Return Coupon title (ex: Coupon for XMAS)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getShortDescription">getShortDescription</a>()
+                    <p>Return Coupon short description</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDescription">getDescription</a>()
+                    <p>Return Coupon description</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isCumulative">isCumulative</a>()
+                    <p>If Coupon is cumulative or prevent any accumulation If is cumulative you can sum Coupon effects If not cancel all other Coupon and take the last given</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isRemovingPostage">isRemovingPostage</a>()
+                    <p>If Coupon is removing Checkout Postage</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_exec">exec</a>()
+                    <p>Return effects generated by the coupon A negative value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConditions">getConditions</a>()
+                    <p>Return condition to validate the Coupon or not</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setConditions">setConditions</a>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)
+                    <p>Replace the existing Conditions by those given in parameter If one Condition is badly implemented, no Condition will be added</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getExpirationDate">getExpirationDate</a>()
+                    <p>Return Coupon expiration date</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAvailableOnSpecialOffers">isAvailableOnSpecialOffers</a>()
+                    <p>Check if the Coupon can be used against a product already with a special offer price</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEnabled">isEnabled</a>()
+                    <p>Check if Coupon has been disabled by admin</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getMaxUsage">getMaxUsage</a>()
+                    <p>Return how many time the Coupon can be used again Ex : -1 unlimited</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isExpired">isExpired</a>()
+                    <p>Check if the Coupon is already Expired</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getServiceId">getServiceId</a>()
+                    <p>Get Coupon Manager service Id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isMatching">isMatching</a>()
+                    <p>Check if the current state of the application is matching this Coupon conditions Thelia variables are given by the FacadeInterface</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_drawBackOfficeInputs">drawBackOfficeInputs</a>()
+                    <p>Draw the input displayed in the BackOffice allowing Admin to set its Coupon effect</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getExtendedInputs">getExtendedInputs</a>()
+                    <p>Get all extended inputs name to manage</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 108</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a></td>
+                <td>$facade</td>
+                <td>Service facade</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOrganizer">
+        <div class="location">at line 122</div>
+        <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+    <strong>setOrganizer</strong>(<a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a> $organizer)</code>
+    </h3>
+    <div class="details">
+        <p>Set Condition Organizer</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a></td>
+                <td>$organizer</td>
+                <td>Manage Condition groups (&amp;&amp; and ||)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Coupon\Type\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 148</div>
+        <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+    <strong>set</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)</code>
+    </h3>
+    <div class="details">
+        <p>Set Coupon</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a></td>
+                <td>$facade</td>
+                <td>Provides necessary value from Thelia</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>Coupon code (ex: XMAS)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td>Coupon title (ex: Coupon for XMAS)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$shortDescription</td>
+                <td>Coupon short description</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>Coupon description</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$effects</td>
+                <td>Coupon effects params</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isCumulative</td>
+                <td>If Coupon is cumulative</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isRemovingPostage</td>
+                <td>If Coupon is removing postage</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAvailableOnSpecialOffers</td>
+                <td>If available on Product already on special offer price</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isEnabled</td>
+                <td>False if Coupon is disabled by admin</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maxUsage</td>
+                <td>How many usage left</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr></td>
+                <td>$expirationDate</td>
+                <td>When the Code is expiring</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Coupon\Type\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCode">
+        <div class="location">at line 188</div>
+        <code>            public            string
+    <strong>getCode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return Coupon code (ex: XMAS)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTitle">
+        <div class="location">at line 198</div>
+        <code>            public            string
+    <strong>getTitle</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return Coupon title (ex: Coupon for XMAS)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getShortDescription">
+        <div class="location">at line 208</div>
+        <code>            public            string
+    <strong>getShortDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return Coupon short description</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDescription">
+        <div class="location">at line 218</div>
+        <code>            public            string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return Coupon description</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isCumulative">
+        <div class="location">at line 230</div>
+        <code>            public            bool
+    <strong>isCumulative</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>If Coupon is cumulative or prevent any accumulation If is cumulative you can sum Coupon effects If not cancel all other Coupon and take the last given</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isRemovingPostage">
+        <div class="location">at line 240</div>
+        <code>            public            bool
+    <strong>isRemovingPostage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>If Coupon is removing Checkout Postage</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exec">
+        <div class="location">at line 251</div>
+        <code>            public            float
+    <strong>exec</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return effects generated by the coupon A negative value</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>Amount removed from the Total Checkout</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConditions">
+        <div class="location">at line 261</div>
+        <code>            public            <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
+    <strong>getConditions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return condition to validate the Coupon or not</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a></td>
+            <td>A set of ConditionInterface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConditions">
+        <div class="location">at line 275</div>
+        <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+    <strong>setConditions</strong>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)</code>
+    </h3>
+    <div class="details">
+        <p>Replace the existing Conditions by those given in parameter If one Condition is badly implemented, no Condition will be added</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a></td>
+                <td>$conditions</td>
+                <td>ConditionInterface to add</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Coupon\Type\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Exception/InvalidConditionException.html"><abbr title="Thelia\Exception\InvalidConditionException">InvalidConditionException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExpirationDate">
+        <div class="location">at line 287</div>
+        <code>            public            <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
+    <strong>getExpirationDate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return Coupon expiration date</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAvailableOnSpecialOffers">
+        <div class="location">at line 298</div>
+        <code>            public            boolean
+    <strong>isAvailableOnSpecialOffers</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the Coupon can be used against a product already with a special offer price</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEnabled">
+        <div class="location">at line 308</div>
+        <code>            public            boolean
+    <strong>isEnabled</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if Coupon has been disabled by admin</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMaxUsage">
+        <div class="location">at line 319</div>
+        <code>            public            int
+    <strong>getMaxUsage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return how many time the Coupon can be used again Ex : -1 unlimited</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isExpired">
+        <div class="location">at line 329</div>
+        <code>            public            bool
+    <strong>isExpired</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the Coupon is already Expired</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getServiceId">
+        <div class="location">at line 346</div>
+        <code>            public            string
+    <strong>getServiceId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Coupon Manager service Id</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isMatching">
+        <div class="location">at line 357</div>
+        <code>            public            bool
+    <strong>isMatching</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the current state of the application is matching this Coupon conditions Thelia variables are given by the FacadeInterface</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_drawBackOfficeInputs">
+        <div class="location">at line 368</div>
+        <code>            public            string
+    <strong>drawBackOfficeInputs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Draw the input displayed in the BackOffice allowing Admin to set its Coupon effect</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>HTML string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtendedInputs">
+        <div class="location">at line 388</div>
+        <code>            public            mixed
+    <strong>getExtendedInputs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all extended inputs name to manage</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

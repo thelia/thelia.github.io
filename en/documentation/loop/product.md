@@ -1,7 +1,7 @@
 ---
 layout: loop
 title: Product Loop
-description: Product loop lists products from your shop. You very probably will have to use the <a href="/documentation/loop/product_sale_elements.html">product sale elements loop</a> inside your product loop.
+description: Product loop lists products from your shop. You very probably will have to use the <a href="/en/documentation/loop/product_sale_elements.html">product sale elements loop</a> inside your product loop.
 sidebar: loop
 lang: en
 subnav: loop_product
@@ -25,16 +25,19 @@ arguments :
     - {name: "promo", description: "A boolean value.", example: "promo=\"yes\""}
     - {name: "min_price", description: "A float value. Equal value matches.", example: "min_price=\"12.3\""}
     - {name: "max_price", description: "A float value. Equal value matches.", example: "max_price=\"32.1\""}
+    - {name: "min_stock", description: "An integer value. Equal value matches.", example: "min_stock=\"3\""}
     - {name: "min_weight", description: "A float value. Equal value matches.", example: "min_weight=\"32.1\""}
     - {name: "max_weight", description: "A float value. Equal value matches.", example: "max_weight=\"32.1\""}
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {name: "current", description: "A boolean value which allows either to exclude current product from results either to match only this product", example: "current=\"yes\""}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of product ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_category", description: "A single or a list of category ids. If a product is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"2\", exclude_category=\"1,4,7\""}
-    - {name: "feature_available", description: "A list of mandatory features and the feature_available expected for these.", example: "feature_available=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_available 1 or 2 AND feature 2 must be set to any feature_available AND feature 3 must have feature_available 10 or both feature_available 11 and 12"}
-    - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_available=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_available AND feature 3 must have feature value \"foobar\""}
+    - {name: "feature_availability", description: "A list of mandatory features and the feature_availability expected for these.", example: "feature_availability=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_availability 1 or 2 AND feature 2 must be set to any feature_availability AND feature 3 must have feature_availability 10 or both feature_availability 11 and 12"}
+    - {name: "feature_values", description: "A list of mandatory features and the string value expected for these.", example: "feature_availability=\"1: (foo | bar) , 2:*, 3: foobar\" : feature 1 must have feature value \"foo\" or \"bar\" AND feature 2 must be set to any feature_availability AND feature 3 must have feature value \"foobar\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
+    - {name: "title", description: "filter by title", example: "title=\"foo\""}
     - {
         name: "attribute_non_strict_match",
         description: "<strong>Only available if complex='true'</strong><br />promo, new, quantity, weight or price may differ in the different product sale element depending on the different attributes. This parameter allows to provide a list of non-strict attributes.",
@@ -71,6 +74,8 @@ arguments :
 outputs :
     - {name: "$ID", description: "the product id"}
     - {name: "$REF", description: "the product reference"}
+    - {name: "$IS_TRANSLATED", description: "check if the product is translated or not"}
+    - {name: "$LOCALE", description: "the locale used for this loop"}
     - {name: "$BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
     - {name: "$BEST_PRICE_TAX", description: "the best price taxes amount"}
     - {name: "$BEST_TAXED_PRICE", description: "the best price including taxes"}
@@ -88,13 +93,23 @@ outputs :
         description: "<strong>If complex='true'</strong><br />returns if at least one of it's product sale element is in promo<br /><strong>If complex='false'</strong><br />returns if the default product sale element is in promo"}
     - {name: "$IS_NEW",
         description: "<strong>If complex='true'</strong><br />returns if at least one of it's product sale element is new<br /><strong>If complex='false'</strong><br />returns if the default product sale element is new"}
+    - {name: "$VISIBLE", description: "Return if the product is visible or not"}
     - {name: "$TITLE", description: "the product title"}
     - {name: "$CHAPO", description: "the product chapo"}
     - {name: "$DESCRIPTION", description: "the product description"}
     - {name: "$POSTSCTIPTUM", description: "the product postscriptum"}
+    - {name: "$META_TITLE", description: "the product meta title"}
+    - {name: "$META_DESCRIPTION", description: "the product meta description"}
+    - {name: "$META_KEYWORDS", description: "the product meta keywords"}
     - {name: "$URL", description: "the product URL"}
     - {name: "$POSITION", description: "the product position"}
     - {name: "$TAX_RULE_ID", description: "the product's tax rule ID"}
+    - {name: "$TEMPLATE", description: "the template id associated to this product"}
+    - {name: "$HAS_PREVIOUS", description: "check if this product has a previous product. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$HAS_NEXT", description: "check if this product has a next product. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$PREVIOUS", description: "the previous product id if exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$NEXT", description: "the next product id if exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$DEFAULT_CATEGORY", description: "the default category id associated to this product"}
 
 
 
@@ -110,7 +125,7 @@ outputs :
 {% highlight smarty %}
 
 <ul>
-{loop type="product" name="my_product_loop" category="1,2" depth="2" feature_available="1:13|17" order="min_price"}
+{loop type="product" name="my_product_loop" category="1,2" depth="2" feature_availability="1:13|17" order="min_price"}
     <li>{$TITLE} ({$REF})</li>
 {/loop}
 </ul>

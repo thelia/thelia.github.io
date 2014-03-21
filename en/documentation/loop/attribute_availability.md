@@ -26,6 +26,8 @@ arguments :
 outputs :
     - {name: "$ID", description: "the attribute availability id"}
     - {name: "$ATTRIBUTE_ID", description: "the ID of the attribute this attribute availability belongs"}
+    - {name: "$IS_TRANSLATED", description: "check if the product is translated or not"}
+    - {name: "$LOCALE", description: "the locale used for this loop"}
     - {name: "$TITLE", description: "the attribute availability title"}
     - {name: "$CHAPO", description: "the attribute availability chapo"}
     - {name: "$DESCRIPTION", description: "the attribute availability description"}

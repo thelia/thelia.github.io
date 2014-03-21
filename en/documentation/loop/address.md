@@ -16,9 +16,9 @@ arguments :
 
 outputs :
     - {name: "$ID", description: "the address id"}
-    - {name: "$NAME", description: "the address name"}
-    - {name: "$CUSTOMER", description: "the customer the address is link to which might be use in <a href=\"/documentation/loop/customer.html\">customer loop</a>"}
-    - {name: "$TITLE", description: "the address title which might be use in <a href=\"/documentation/loop/title.html\">title loop</a>"}
+    - {name: "$LABEL", description: "the address label"}
+    - {name: "$CUSTOMER", description: "the customer the address is link to which might be use in <a href=\"/en/documentation/loop/customer.html\">customer loop</a>"}
+    - {name: "$TITLE", description: "the address title which might be use in <a href=\"/en/documentation/loop/title.html\">title loop</a>"}
     - {name: "$COMPANY", description: "the address company"}
     - {name: "$FIRSTNAME", description: "the address firstname"}
     - {name: "$LASTNAME", description: "the address lastname"}
@@ -27,7 +27,7 @@ outputs :
     - {name: "$ADDRESS3", description: "the third address line"}
     - {name: "$ZIPCODE", description: "the address zipcode"}
     - {name: "$CITY", description: "the address city"}
-    - {name: "$COUNTRY", description: "the address country which might be use in <a href=\"/documentation/loop/country.html\">country loop</a>"}
+    - {name: "$COUNTRY", description: "the address country which might be use in <a href=\"/en/documentation/loop/country.html\">country loop</a>"}
     - {name: "$PHONE", description: "the address phone"}
     - {name: "$CELLPHONE", description: "the address cellphone"}
     - {name: "$DEFAULT", description: "return if address title is by default address"}

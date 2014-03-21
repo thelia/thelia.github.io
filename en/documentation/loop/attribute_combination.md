@@ -10,6 +10,7 @@ returns_global_outputs: { countable : true, timestampable : true, versionable : 
 type: attribute_combination
 arguments :
     - {name: "product_sale_elements", description: "A single product sale elements id.", example: "product=\"2\"", mandatory: "true"}
+    - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
             name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
             expected_values: [
@@ -19,6 +20,7 @@ arguments :
           }
 
 outputs :
+    - {name: "$LOCALE", description: "the locale used for this loop"}
     - {name: "$ATTRIBUTE_TITLE", description: "the attribute title"}
     - {name: "$ATTRIBUTE_CHAPO", description: "the attribute chapo"}
     - {name: "$ATTRIBUTE_DESCRIPTION", description: "the attribute description"}

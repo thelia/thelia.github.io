@@ -19,6 +19,7 @@ arguments :
     - {name: "exclude", description: "A single or a list of content ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_folder", description: "A single or a list of folder ids. If a content is in multiple folders which are not all excluded it will not be excluded.", example: "exclude_folder=\"2\", exclude_folder=\"1,4,7\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
+    - {name: "tile", description: "A title string", example: "title=\"foo\""}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
@@ -32,10 +33,16 @@ arguments :
       }
 outputs :
     - {name: "$ID", description: "the content id"}
+    - {name: "$IS_TRANSLATED", description: "check if the content is translated"}
+    - {name: "$LOCALE", description: "The locale used for this research"}
     - {name: "$TITLE", description: "the content title"}
     - {name: "$CHAPO", description: "the content chapo"}
     - {name: "$DESCRIPTION", description: "the content description"}
     - {name: "$POSTSCTIPTUM", description: "the content postscriptum"}
+    - {name: "$META_TITLE", description: "the content meta title"}
+    - {name: "$META_DESCRIPTION", description: "the content meta description"}
+    - {name: "$META_KEYWORDS", description: "the content meta keywords"}
     - {name: "$URL", description: "the content URL"}
+    - {name: "$DEFAULT_FOLDER", description: "the default folder id for the current content"}
     - {name: "$POSITION", description: "the content position"}
 ---

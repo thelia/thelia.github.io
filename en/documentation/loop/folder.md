@@ -10,8 +10,9 @@ returns_global_outputs: { countable : true, timestampable : true, versionable : 
 type: folder
 arguments :
     - {name: "id", description: "A single or a list of folder ids.", example: "id=\"2\", id=\"1,4,7\""}
-    - {name: "parent", description: "A single or a list of folder ids.", example: "folder=\"3\", folder=\"2,5,8\""}
+    - {name: "parent", description: "A single folder id.", example: "folder=\"3\""}
     - {name: "current", description: "A boolean value which allows either to exclude current folder from results either to match only this folder", example: "current=\"yes\""}
+    - {name: "content", description: "A single content id.", example: "content=\"3\""}
     - {name: "not_empty", description: "A boolean value.", example: "not_empty=\"yes\"", default: "no"}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of folder ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
@@ -28,10 +29,15 @@ arguments :
       }
 outputs :
     - {name: "$ID", description: "the folder id"}
+    - {name: "$IS_TRANSLATED", description: "check if the folder is translated"}
+    - {name: "$LOCALE", description: "The locale used for this research"}
     - {name: "$TITLE", description: "the folder title"}
     - {name: "$CHAPO", description: "the folder chapo"}
     - {name: "$DESCRIPTION", description: "the folder description"}
     - {name: "$POSTSCTIPTUM", description: "the folder postscriptum"}
+    - {name: "$META_TITLE", description: "the folder meta title"}
+    - {name: "$META_DESCRIPTION", description: "the folder meta description"}
+    - {name: "$META_KEYWORDS", description: "the folder meta keywords"}
     - {name: "$URL", description: "the folder URL"}
     - {name: "$PARENT", description: "the parent folder"}
     - {name: "$CONTENT_COUNT", description: "the number of visible contents for this folder"}
