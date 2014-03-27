@@ -1,6 +1,6 @@
 ---
 layout: home
-title: installation
+title: Installation
 sidebar: installation
 lang: fr
 ---
@@ -84,6 +84,21 @@ $ ./reset_install.sh
 ```
 
 Cette tâche recharge la base de données, insert de fausses données en utilisant le "faker" et crée un compte admin dont l'identifiant et le mot de passe sont __thelia2__.
+
+<div class="page-header">
+    <h1>Mise à jour vers la dernière version</h1>
+</div>
+
+## Comment mettre à jour votre Thelia ?
+
+Si vous avez déjà installé Thelia mais qu'une nouvelle version est disponible, vous pouvez effectuer une mise à jour simplement :
+
+- effacez tous les caches en lançant la commande ```php Thelia cache:clear```
+- copiez tous les fichiers de la nouvelle version de Thelia (les fichiers de local/modules/* y compris)
+- lancez la commande ```php Thelia thelia:update```
+- effacez de nouveau tous les caches sur tous les environnements :
+    - ```php Thelia cache:clear```
+    - ```php Thelia cache:clear --env=prod```
 
 <div class="page-header">
     <h1>Utilisation</h1>

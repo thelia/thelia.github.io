@@ -1,6 +1,6 @@
 ---
 layout: home
-title: installation
+title: Installation
 sidebar: installation
 lang: en
 ---
@@ -85,6 +85,21 @@ $ ./reset_install.sh
 ```
 
 this task reload the database, insert fake data using faker script and create an admin with thelia2 as username and password
+
+<div class="page-header">
+    <h1>Update to latest version</h1>
+</div>
+
+## How to update your Thelia ?
+
+If you have already installed Thelia but a new version is available, you can update easily :
+
+- clear all caches running ```php Thelia cache:clear```
+- copy all files from the thelia new version (local/modules/* files too)
+- run ```php Thelia thelia:update```
+- again clear all caches in all environment :
+    - ```php Thelia cache:clear```
+    - ```php Thelia cache:clear --env=prod```
 
 <div class="page-header">
     <h1>Usage</h1>
