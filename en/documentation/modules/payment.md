@@ -132,7 +132,7 @@ protected function pay(Order $order)
 }
 ```
 
-If you have a specific API, call it with the required parameters, and depending on the result, redirect to the succes or failure page.
+If you have a specific API, call it with the required parameters, and depending on the result, redirect to the success or failure page.
 
 ```
 /**
@@ -314,9 +314,7 @@ To make a class (here `SendConfirmationEmail`) an event listener, add the requir
 </services>
 ```
 
-We have then to create the `Payzen\EventListener\SendConfirmationEmail` class, that will process events.
-
-To 
+We have then to create the `Payzen\EventListener\SendConfirmationEmail` class, that will process events, generate the email body, and send the e-mail.
 
 ```
 class SendConfirmationEmail extends BaseAction implements EventSubscriberInterface
@@ -397,7 +395,7 @@ We can build and send our mail now. In the "example below, a message with code `
     }
 ```
 
-We have to explicitely subscribe to some events, by implementins the `EventSubscriberInterface::getSubscribedEvents()` method. This methos returns an array, where the event is the key. The value is an array which contains the name of the method that should be invoked (here, updateOrderStatus), and the priority in the invocation chain, as a integer between 0 and 255.
+We have to explicitly subscribe to some events, by implementing the `EventSubscriberInterface::getSubscribedEvents()` method. This method returns an array, where the event is the key. The value is an array which contains the name of the method that should be invoked (here, updateOrderStatus), and the priority in the invocation chain, as a integer between 0 and 255.
 
 ```
     public static function getSubscribedEvents()
