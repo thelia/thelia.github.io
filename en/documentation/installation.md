@@ -48,13 +48,40 @@ $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar create-project thelia/thelia path/ 2.0.0-RC1
 ```
 
-Finish the installation using cli tools :
+## Install it
+
+You can install Thelia by two different way
+
+### Using install wizard
+
+Installing thelia with the web install wizard allow to create an administrator, add some informations about your shop, etc
+
+First of all, you have to configure a vhost as describe in [configuration](/en/documentation/configuration.html) section.
+
+The install wizard in accessible with your favorite browser :
+
+``` bash
+http://yourdomain.tld/[/subdomain_if_needed]/install
+```
+
+For example, I have thelia downloaded at http://thelia.net and my vhost is correctly configured, I have to reach this address :
+
+``` bash
+http://thelia.net/install
+```
+
+### Using cli tools
 
 ``` bash
 $ php Thelia thelia:install
 ```
 
 You just have to follow all instructions.
+
+
+### After installing Thelia
+
+Remove the ```web/install``` directory
 
 ## How to create an admin account ?
 

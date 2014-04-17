@@ -66,7 +66,7 @@ Apache write in some directories so check this directories and change their righ
 
 In order to configure your database connection, you have to rename the ```local/config/database.yml.sample``` file into ```local/config/database.yml``` and edit it.
 
-Here is an exemple of database connection configuration :
+Here is an example of database connection configuration :
 
 ``` yaml
 database:

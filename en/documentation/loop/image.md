@@ -36,7 +36,7 @@ arguments :
         expected_values: [
           {name: "gamma:value",                          description: "change the image Gamma to the specified value. Example: gamma:0.7."},
           {name: "grayscale or greyscale",               description: "switch image to grayscale."},
-          {name: "colorize:color",                       description: "apply a color mask to the image. The color format is $rgb or $rrggbb. Exemple: colorize:$ff2244."},
+          {name: "colorize:color",                       description: "apply a color mask to the image. The color format is $rgb or $rrggbb. Example: colorize:$ff2244."},
           {name: "negative",                             description: "transform the image in its negative equivalent."},
           {name: "vflip or vertical_flip",               description: "flip the image vertically."},
           {name: "hflip or horizontal_flip",             description: "flip the image horizontally."}

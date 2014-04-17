@@ -33,7 +33,7 @@ For example, a minimal layout is :
 
 You should use the `nofilter` flag to prevent html-escaping of the `$message_body` variable content: Thelia templating system always escape variable contents.
 
-There are no specific limitations in the content of the layout. For exemple, you
+There are no specific limitations in the content of the layout. For example, you
 can forecast inheritance, using a block :
 
 {block name='message-body'}{$message_body nofilter}{/block}

@@ -25,7 +25,7 @@ Various image processing options are available (see the Image loop)
 - effects. The effects are applied in the specified order. The following effects are available:
     - gamma:value : change the image Gamma to the specified value. Example: `gamma:0.7`
     - grayscale or greyscale: switch image to grayscale
-    - colorize:color : apply a color mask to the image. Exemple: `colorize:#ff2244`
+    - colorize:color : apply a color mask to the image. Example: `colorize:#ff2244`
     - negative : transform the image in its negative equivalent
     - vflip or vertical_flip : vertical flip
     - hflip or horizontal_flip : horizontal flip
