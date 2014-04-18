@@ -1,22 +1,22 @@
 <!doctype html>
-<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="no-js oldie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js oldie ie7" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="{{page.lang}}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{{page.lang}}" class="no-js"> <!--<![endif]-->
 <head>
     {% include header.html %}
 </head>
 
-<body>
+<body itemtype="http://schema.org/WebPage" itemscope>
 
 {% include navbar.html %}
 
-<section class="container">
+<section role="document" class="container">
     <section class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="col-lg-3 col-md-3 col-sm-3" itemtype="http://schema.org/SiteNavigationElement" itemscope>
             <aside role="navigation" class="thelia-sidebar">{% include sidebar.html %}</aside>
         </div>
-        <main role="main" class="col-lg-9  col-md-9 col-sm-9">{{content}}</main>
+        <main role="main" class="col-lg-9 col-md-9 col-sm-9">{{content}}</main>
     </section>
 </section>
 
