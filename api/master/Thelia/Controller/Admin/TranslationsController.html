@@ -76,7 +76,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_redirectToRoute">redirectToRoute</a>($routeId, array $urlParameters = array(), array $routeParameters = array())
+                    <a href="#method_redirectToRoute">redirectToRoute</a>(string $routeId, array $urlParameters = array(), array $routeParameters = array())
                     <p>Redirect to à route ID related URL</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></small></td>
@@ -109,7 +109,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_adminLogAppend">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 76</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 66</div>
         <code>            public            
     <strong>adminLogAppend</strong>(string $resource, string $action, string $message)</code>
     </h3>
@@ -148,7 +148,7 @@
     </div>
 
                 <h3 id="method_processTemplateAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 87</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 77</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>processTemplateAction</strong>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $template)</code>
     </h3>
@@ -184,9 +184,9 @@
     </div>
 
                 <h3 id="method_redirectToRoute">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 272</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 263</div>
         <code>            public            
-    <strong>redirectToRoute</strong>($routeId, array $urlParameters = array(), array $routeParameters = array())</code>
+    <strong>redirectToRoute</strong>(string $routeId, array $urlParameters = array(), array $routeParameters = array())</code>
     </h3>
     <div class="details">
         <p>Redirect to à route ID related URL</p>
@@ -197,16 +197,14 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$routeId</td>
-                <td>
-</td>
+                <td>the route ID, as found in Config/Resources/routing/admin.xml</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$urlParameters</td>
-                <td>
-</td>
+                <td>the URL parameters, as a var/value pair array</td>
             </tr>
                     <tr>
                 <td>array</td>
@@ -223,7 +221,7 @@
     </div>
 
                 <h3 id="method_defaultAction">
-        <div class="location">at line 155</div>
+        <div class="location">at line 263</div>
         <code>            public            
     <strong>defaultAction</strong>()</code>
     </h3>
@@ -240,7 +238,7 @@
     </div>
 
                 <h3 id="method_updateAction">
-        <div class="location">at line 161</div>
+        <div class="location">at line 269</div>
         <code>            public            
     <strong>updateAction</strong>()</code>
     </h3>

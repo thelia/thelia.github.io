@@ -79,6 +79,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isActive">isActive</a>(<a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a> $tplDefinition)
+                    <p>Check if a template definition is the current active template</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
                 </td>
                 <td class="last">
@@ -122,10 +132,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Thelia\Core\Template\An">An</abbr>
+                    <a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>[]
                 </td>
                 <td class="last">
-                    <a href="#method_getList">getList</a>(int $templateType)
+                    <a href="#method_getList">getList</a>(int $templateType, string $base = THELIA_TEMPLATE_DIR)
                     <p>Return a list of existing templates for a given template type</p>
                 </td>
                 <td></td>
@@ -135,7 +145,7 @@
                     <abbr title="Thelia\Core\Template\number">number</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_walkDir">walkDir</a>(string $directory, string $walkMode, <a href="../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a> $translator, string $currentLocale, array $strings)
+                    <a href="#method_walkDir">walkDir</a>(string $directory, string $walkMode, <a href="../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a> $translator, string $currentLocale, string $domain, array $strings)
                     <p>Recursively examine files in a directory tree, and extract translatable strings.</p>
                 </td>
                 <td></td>
@@ -145,7 +155,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_write_translation">write_translation</a>($file, $texts, $translations)
+                    <a href="#method_writeTranslation">writeTranslation</a>($file, $texts, $translations, $createIfNotExists = false)
                     <p>
 </p>
                 </td>
@@ -157,7 +167,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_getInstance">
-        <div class="location">at line 43</div>
+        <div class="location">at line 33</div>
         <code>        static    public            
     <strong>getInstance</strong>()</code>
     </h3>
@@ -174,7 +184,7 @@
     </div>
 
                 <h3 id="method_getActiveMailTemplate">
-        <div class="location">at line 52</div>
+        <div class="location">at line 42</div>
         <code>            public            <a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
     <strong>getActiveMailTemplate</strong>()</code>
     </h3>
@@ -200,8 +210,44 @@
                     </div>
     </div>
 
+                <h3 id="method_isActive">
+        <div class="location">at line 56</div>
+        <code>            public            bool
+    <strong>isActive</strong>(<a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a> $tplDefinition)</code>
+    </h3>
+    <div class="details">
+        <p>Check if a template definition is the current active template</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a></td>
+                <td>$tplDefinition</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>true is the given template is the active template</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_getActivePdfTemplate">
-        <div class="location">at line 63</div>
+        <div class="location">at line 78</div>
         <code>            public            <a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
     <strong>getActivePdfTemplate</strong>()</code>
     </h3>
@@ -228,7 +274,7 @@
     </div>
 
                 <h3 id="method_getActiveAdminTemplate">
-        <div class="location">at line 74</div>
+        <div class="location">at line 89</div>
         <code>            public            <a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
     <strong>getActiveAdminTemplate</strong>()</code>
     </h3>
@@ -255,7 +301,7 @@
     </div>
 
                 <h3 id="method_getActiveFrontTemplate">
-        <div class="location">at line 85</div>
+        <div class="location">at line 100</div>
         <code>            public            <a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
     <strong>getActiveFrontTemplate</strong>()</code>
     </h3>
@@ -282,7 +328,7 @@
     </div>
 
                 <h3 id="method_getStandardTemplateDefinitions">
-        <div class="location">at line 96</div>
+        <div class="location">at line 111</div>
         <code>            public            
     <strong>getStandardTemplateDefinitions</strong>()</code>
     </h3>
@@ -298,9 +344,9 @@
     </div>
 
                 <h3 id="method_getList">
-        <div class="location">at line 112</div>
-        <code>            public            <abbr title="Thelia\Core\Template\An">An</abbr>
-    <strong>getList</strong>(int $templateType)</code>
+        <div class="location">at line 128</div>
+        <code>            public            <a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>[]
+    <strong>getList</strong>(int $templateType, string $base = THELIA_TEMPLATE_DIR)</code>
     </h3>
     <div class="details">
         <p>Return a list of existing templates for a given template type</p>
@@ -315,6 +361,11 @@
                 <td>$templateType</td>
                 <td>the template type</td>
             </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td>the template base (module or core, default to core).</td>
+            </tr>
             </table>
 
             
@@ -322,8 +373,8 @@
 
                     <table>
         <tr>
-            <td><abbr title="Thelia\Core\Template\An">An</abbr></td>
-            <td>array of \Thelia\Core\Template\TemplateDefinition</td>
+            <td><a href="../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>[]</td>
+            <td>of \Thelia\Core\Template\TemplateDefinition</td>
         </tr>
     </table>
 
@@ -333,9 +384,9 @@
     </div>
 
                 <h3 id="method_walkDir">
-        <div class="location">at line 170</div>
+        <div class="location">at line 192</div>
         <code>            public            <abbr title="Thelia\Core\Template\number">number</abbr>
-    <strong>walkDir</strong>(string $directory, string $walkMode, <a href="../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a> $translator, string $currentLocale, array $strings)</code>
+    <strong>walkDir</strong>(string $directory, string $walkMode, <a href="../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a> $translator, string $currentLocale, string $domain, array $strings)</code>
     </h3>
     <div class="details">
         <p>Recursively examine files in a directory tree, and extract translatable strings.</p>
@@ -369,6 +420,11 @@
                 <td>the current locale</td>
             </tr>
                     <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>the translation domain (fontoffice, backoffice, module, etc...)</td>
+            </tr>
+                    <tr>
                 <td>array</td>
                 <td>$strings</td>
                 <td>the list of strings</td>
@@ -399,10 +455,10 @@
                     </div>
     </div>
 
-                <h3 id="method_write_translation">
-        <div class="location">at line 252</div>
+                <h3 id="method_writeTranslation">
+        <div class="location">at line 275</div>
         <code>            public            
-    <strong>write_translation</strong>($file, $texts, $translations)</code>
+    <strong>writeTranslation</strong>($file, $texts, $translations, $createIfNotExists = false)</code>
     </h3>
     <div class="details">
         <p>
@@ -428,6 +484,12 @@
                     <tr>
                 <td></td>
                 <td>$translations</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$createIfNotExists</td>
                 <td>
 </td>
             </tr>
