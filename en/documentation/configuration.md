@@ -61,19 +61,5 @@ Apache write in some directories so check this directories and change their righ
 * cache
 * log
 * local/session
-
-## Database configuration
-
-In order to configure your database connection, you have to rename the ```local/config/database.yml.sample``` file into ```local/config/database.yml``` and edit it.
-
-Here is an example of database connection configuration :
-
-``` yaml
-database:
-  connection:
-    driver: mysql
-    user: root
-    password: root
-    dsn: mysql:dbname=thelia;host:localhost
-    classname: \Propel\Runtime\Connection\DebugPDO #Only in debug mode and if you want all query debug information
-```
+* local/media
+* web
