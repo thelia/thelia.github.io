@@ -102,13 +102,13 @@ $ php Thelia admin:create
 For a demo with fake but realistic products
 
 ``` bash
-$ php install/import.php
+$ php setup/import.php
 ```
 
 For dev data
 
 ```bash
-$ php install/faker.php
+$ php setup/faker.php
 ```
 
 (composer must be install [`globally`](http://getcomposer.org/doc/00-intro.md#globally))
