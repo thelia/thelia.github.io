@@ -73,19 +73,18 @@ only the ```web``` directory has to be accessible :
 
 ```
 server {
-
     listen          80;
 
     server_name     domain.tld;
 
     root            /var/www/thelia/web;
-    index           index.php index.html index.htm;
+    index           index.php;
 
-    error_log       /var/log/nginx/domain_error.log;
-    access_log      /var/log/nginx/domain_access.log;
+    error_log       /var/log/nginx/domain_error.log warn;
+    access_log      /var/log/nginx/domain_access.log combined;
 
     location / {
-        try_files $uri @rewriteapp;
+        try_files $uri $uri/ @rewriteapp;
     }
 
     location @rewriteapp {
@@ -93,23 +92,26 @@ server {
         rewrite ^(.*)$ /index.php/$1 last;
     }
 
-    location ~ ^/(index|index_dev)\.php(/|$) {
+    location ~ ^(/install)?/(index|index_dev)\.php(/|$) {
         fastcgi_pass unix:/var/run/php5-fpm.sock;
+        # or 
+        # fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
         fastcgi_split_path_info ^(.+\.php)(/.*)$;
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param HTTPS off;
     }
 
     # Security. discard all files and folders starting with a "."
     location ~ /\. {
-        deny  all;
+        deny all;
         access_log off;
         log_not_found off;
     }
     
     # Stuffs
     location = /favicon.ico {
+        expires max;
         allow all;
         access_log off;
         log_not_found off;
