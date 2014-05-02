@@ -33,7 +33,9 @@ www <- your web root directory
         web
 ```
 
-only the ```web``` directory have to be accessible with apache, you can configure your vhost like this (here /var/www is your web root directory) :
+### Apache configuration
+
+only the ```web``` directory has to be accessible with apache, you can configure your vhost like this (here /var/www is your web root directory) :
 
 ```
 <virtualhost *:80>
@@ -63,3 +65,66 @@ Apache write in some directories so check this directories and change their righ
 * local/session
 * local/media
 * web
+
+
+### nginx configuration
+
+only the ```web``` directory has to be accessible :
+
+```
+server {
+
+    listen          80;
+
+    server_name     domain.tld;
+
+    root            /var/www/thelia/web;
+    index           index.php index.html index.htm;
+
+    error_log       /var/log/nginx/domain_error.log;
+    access_log      /var/log/nginx/domain_access.log;
+
+    location / {
+        try_files $uri @rewriteapp;
+    }
+
+    location @rewriteapp {
+        # rewrite all to index.php
+        rewrite ^(.*)$ /index.php/$1 last;
+    }
+
+    location ~ ^/(index|index_dev)\.php(/|$) {
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param HTTPS off;
+    }
+
+    # Security. discard all files and folders starting with a "."
+    location ~ /\. {
+        deny  all;
+        access_log off;
+        log_not_found off;
+    }
+    
+    # Stuffs
+    location = /favicon.ico {
+        allow all;
+        access_log off;
+        log_not_found off;
+    }
+    location ~ /robots.txt {
+        allow  all;
+        access_log off;
+        log_not_found off;
+    }
+    
+    # Static files
+    location ~* ^.+\.(jpg|jpeg|gif|css|png|js|pdf|zip)$ {
+        expires     30d;
+        access_log  off;
+        log_not_found off;
+    }
+}
+```
