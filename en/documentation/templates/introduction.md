@@ -53,8 +53,8 @@ The `d` parameter is the message domain, a set of internationalized messages. Th
 - In Modules :
     - *module_code* (eg : `paypal`) => fore module core translations
     - *module_code*.ai (eg : `paypal.ai`) => used in AdminIncludes templates
-    - bo.*module_code*.*template_name* (eg : `bo.paypal.default`) => used in back office template
-    - fo.*module_code*.*template_name* (eg : `fo.paypal.default`) => used in front office template
+    - *module_code*.bo.*template_name* (eg : `paypal.bo.default`) => used in back office template
+    - *module_code*.fo.*template_name* (eg : `paypal.fo.default`) => used in front office template
 
 This parameter is mostly used in modules. Other templates (front-office, back-office, PDF and email) may use the `{default_translation_domain}` function to define a template-wide message domain, and the `d` parameter could then be omitted.
 
