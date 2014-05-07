@@ -73,30 +73,43 @@ only the ```web``` directory has to be accessible :
 
 ```
 server {
-    listen          80;
-
-    server_name     domain.tld;
-
-    root            /var/www/thelia/web;
-    index           index.php;
-
-    error_log       /var/log/nginx/domain_error.log warn;
-    access_log      /var/log/nginx/domain_access.log combined;
+    listen 80;
+    server_name domain.tld;
+    
+    root /Path/To/Thelia/web/;
+    index index.php;
+    
+    access_log      /var/log/nginx/domain.tld_access.log;
+    error_log       /var/log/nginx/domain.tld_error.log;
+    
 
     location / {
         try_files $uri $uri/ @rewriteapp;
     }
 
     location @rewriteapp {
-        # rewrite all to index.php
-        rewrite ^(.*)$ /index.php/$1 last;
+    # rewrite all to index.php
+        rewrite ^(.*)$ /index.php?$1 last;
     }
 
-    location ~ ^(/install)?/(index|index_dev)\.php(/|$) {
+    # Php configuration
+    location ~ ^/(index|index_dev)\.php(/|$) {
+        # Php-FPM Config (Socks or Network) 
         fastcgi_pass unix:/var/run/php5-fpm.sock;
-        # or 
         # fastcgi_pass 127.0.0.1:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+    # This rule is just needed if you want to use the web installer
+    # in production you have to remove this 
+    # and also remove the "install" directory in the "web" directory   
+    location /install {
         fastcgi_index index.php;
+        # Php-FPM Config (Socks or Network) 
+        fastcgi_pass unix:/var/run/php5-fpm.sock; 
+        #fastcgi_pass 127.0.0.1:9000;
         fastcgi_split_path_info ^(.+\.php)(/.*)$;
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -104,14 +117,13 @@ server {
 
     # Security. discard all files and folders starting with a "."
     location ~ /\. {
-        deny all;
+        deny  all;
         access_log off;
         log_not_found off;
     }
-    
+
     # Stuffs
     location = /favicon.ico {
-        expires max;
         allow all;
         access_log off;
         log_not_found off;
@@ -121,7 +133,7 @@ server {
         access_log off;
         log_not_found off;
     }
-    
+
     # Static files
     location ~* ^.+\.(jpg|jpeg|gif|css|png|js|pdf|zip)$ {
         expires     30d;
