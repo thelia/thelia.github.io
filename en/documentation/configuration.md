@@ -23,7 +23,7 @@ www <- your web root directory
         bin
         cache
         core
-        install
+        setup
         local
             config
             modules
