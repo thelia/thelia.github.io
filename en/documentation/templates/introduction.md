@@ -9,6 +9,26 @@ subnav: templates_introduction
 
 Thelia templates uses the Smarty template engine, enriched by many Thelia additions, such as loops, data access functions, internationalization function, etc. 
 
+## Managing assets
+
+**TBC**
+
+### {declare_assets}
+
+**TBC**
+
+### {stylesheets}
+
+**TBC**
+
+### {images}
+
+**TBC**
+
+### {javascripts}
+
+**TBC**
+
 ## Internationalization
 
 If you want to create multilingual compatible templates, you have to pay a special attention to :
@@ -84,12 +104,12 @@ Use this function to format a date according to the current locale standards.
 
 #### Parameters
 
-`date`: a DateTime object (required)
-`format`: the expected format. The current locale format will be used if this parameter is empty or missing
-`output`: the type of desired ouput, one of :
-- `date`: the date only
-- `time`: the time only 
-- `datetime`: the date and the time (default)
+- `date`: a DateTime object (required)
+- `format`: the expected format. The current locale format will be used if this parameter is empty or missing
+- `output`: the type of desired ouput, one of :
+    - `date`: the date only
+    - `time`: the time only 
+    - `datetime`: the date and the time (default)
 
 
 ### {format_number}
@@ -107,10 +127,10 @@ Use this function to format a number according to the current locale standards, 
 
 #### Parameters
 
-`number`: int or float number
-`decimals`: how many decimals format expected
-`dec_point`: separator for the decimal point
-`thousands_sep`: thousands separator
+- `number`: int or float number
+- `decimals`: how many decimals format expected
+- `dec_point`: separator for the decimal point
+- `thousands_sep`: thousands separator
 
 
 ### {format_money}
@@ -127,10 +147,10 @@ Use this function to format an amount of money according to the current locale s
 
 #### Parameters
 
-`number`: int or float number
-`decimals`: how many decimals format expected
-`dec_point`: separator for the decimal point
-`thousands_sep`: thousands separator
-`symbol`: Currency symbol
+- `number`: int or float number
+- `decimals`: how many decimals format expected
+- `dec_point`: separator for the decimal point
+- `thousands_sep`: thousands separator
+- `symbol`: Currency symbol
 
 **TBC**
