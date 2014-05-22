@@ -51,7 +51,7 @@ When assets are generated, a new `assets` directory is created in the `web` dire
 
 The assets file names are not the same as the original ones, and some of them may be merged in a unique file, depending of the filters applied during assets processing.
 
-## Using assets in you templates ##
+## Using assets in your templates ##
 
 To use this feature, you'll have to add some specific directives to your template files.
 
@@ -60,7 +60,7 @@ To use this feature, you'll have to add some specific directives to your templat
 
 ### {declare_assets} ###
 
-This directive tells the Thelia template system where you assets are located, e.g. the name of the root directory which contains all your assets.
+This directive tells the Thelia template system where your assets are located, e.g. the name of the root directory which contains all your assets.
 
 For example, the default front-office template stores its template in the `assets` directory :
 
@@ -107,12 +107,12 @@ Apply a filter to the source(s) files. Available filters are :
 
 When in the templates files of a module, use this parameter to specify that the source of the asset has to be searched within the module's path instead of the main template path.
 
-For example, in the `MyModule/templates/frontOffice/default` directory, you'll define some templates that will be dispolayed in the front office.
+For example, in the `MyModule/templates/frontOffice/default` directory, you'll define some templates that will be displayed in the front office.
 
 You can define module specific assets in the `MyModule/templates/frontOffice/default/assets` directory. To instruct the Thelia template system to get assets from your module's directory
 
 
-    {stylesheets source="MyModule" file='assets/css/style.css' template"default"}
+    {stylesheets source="MyModule" file='assets/css/style.css' template="default"}
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
     {stylesheet}
 
@@ -122,11 +122,11 @@ The example above Will use the style.css file defined by MyModule, and located i
 
 You may want to use an asset located in another template of the same type (for example, another front office template). To do so, specify the name o this template in the `template` parameter :
 
-    {stylesheets file='assets/css/style.css' template"default"}
+    {stylesheets file='assets/css/style.css' template="default"}
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
     {stylesheet}
 
-The example above Will use the style.css file, located in the `assets/css` directory of the `default` front office template (the file path is `templates/frontOffice/default/assets/css/style.css`).
+The example above will use the style.css file, located in the `assets/css` directory of the `default` front office template (the file path is `templates/frontOffice/default/assets/css/style.css`).
 
 
 ### {images} ###
