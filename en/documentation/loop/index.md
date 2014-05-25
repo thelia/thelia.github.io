@@ -8,7 +8,7 @@ subnav: loop_index
 
 #{{ page.title }}
 
-Loops are the most convenient feature in Thelia for front developers. Already there in Thelia's first version, the deserved a makeover for Thelia v2.
+Loops are the most convenient feature in Thelia for front developers. Already there in Thelia's first version, they deserved a makeover for Thelia v2.
 
 Loops allow to gather data from your shop and display them in your front view. In Thelia v2, loops are a <a href="http://www.smarty.net" target="_blank">Smarty v3</a> plugin.
 
