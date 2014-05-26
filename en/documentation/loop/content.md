@@ -28,7 +28,7 @@ arguments :
             {name: "manual",            description: "`content` argument must be set"},
             {name: "manual_reverse",    description: "`content` argument must be set"},
             {name: "random",            description: ""},
-            {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"}
+            {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"},
             {name: "created",           description: "ascending order on date of content creation"},
             {name: "created_reverse",   description: "descending order on date of content creation"},
             {name: "updated",           description: "ascending order on date of content update"},
