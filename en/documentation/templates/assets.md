@@ -22,6 +22,7 @@ Template assets are managed in a sub-directory of the template directory. For ex
           + js
           + font
           + less
+          + img
           + ...
 
 Thus, assets are not available to the Web server, as they're not physically located in the 'web' directory.
@@ -64,20 +65,20 @@ This directive tells the Thelia template system where your assets are located, e
 
 For example, the default front-office template stores its template in the `assets` directory :
 
-    {declare_assets directory='assets'}
+    {declare_assets directory="assets"}
 
 
 ### {stylesheets} ###
 
 This directive processes your CSS style sheets.
 
-    {stylesheets file='assets/css/*.less' filters="less"}
+    {stylesheets file="assets/css/*.less" filters="less"}
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
     {/stylesheets}
 
 Or
 
-    {stylesheets file='assets/css/style.css'}
+    {stylesheets file="assets/css/style.css"}
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
     {/stylesheets}
 
@@ -93,7 +94,7 @@ The valid parameters are :
 
 This is the path to the file (or files, as jokers like '*' are allowed), relative to the template base path.
 
-The value of this parameter is a file path, form example `assets/syles/my_style.css`, of a set of files, like `assets/css/*.css`
+The value of this parameter is a file path, form example `assets/syles/my_style.css`, or a set of files, like `assets/css/*.css`
 
 #### filters ####
 
@@ -112,7 +113,7 @@ For example, in the `MyModule/templates/frontOffice/default` directory, you'll d
 You can define module specific assets in the `MyModule/templates/frontOffice/default/assets` directory. To instruct the Thelia template system to get assets from your module's directory
 
 
-    {stylesheets source="MyModule" file='assets/css/style.css' template="default"}
+    {stylesheets source="MyModule" file="assets/css/style.css" template="default"}
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
     {stylesheet}
 
@@ -122,7 +123,7 @@ The example above Will use the style.css file defined by MyModule, and located i
 
 You may want to use an asset located in another template of the same type (for example, another front office template). To do so, specify the name o this template in the `template` parameter :
 
-    {stylesheets file='assets/css/style.css' template="default"}
+    {stylesheets file="assets/css/style.css" template="default"}
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
     {stylesheet}
 
@@ -131,8 +132,56 @@ The example above will use the style.css file, located in the `assets/css` direc
 
 ### {images} ###
 
-**TBC**
+This directive process your statics images used in your template.
+
+    {images file='assets/img/favicon.ico'}
+        <link rel="shortcut icon" type="image/x-icon" href="{$asset_url}">
+    {/images}
+
+This block return only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
+
+The valid parameters are :
+- file
+- source
+- template
+
+#### file ####
+
+This is the path to the file, relative to the template base path.
+
+In the path joker characters, like "*", are **NOT** allowed.
+
+#### source ####
+
+see the source chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
+
+#### template ####
+
+see the template chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
 
 ### {javascripts} ###
 
-**TBC**
+This directive process your javascript files
+
+    {javascripts file='assets/js/script.js'}
+        <script type="text/javascript" src="{$asset_url}"></script>
+    {/javascripts}
+
+The valid parameters are :
+- file
+- source
+- template
+
+#### file ####
+
+This is the path to the file (or files, as jokers like '*' are allowed), relative to the template base path.
+
+The value of this parameter is a file path, form example `assets/js/script.js`, or a set of files, like `assets/js/*.js`
+
+#### source ####
+
+see the source chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
+
+#### template ####
+
+see the template chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
