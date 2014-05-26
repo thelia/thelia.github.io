@@ -2,8 +2,8 @@
 layout: home
 title: Forms
 sidebar: form
+subnav: form_template
 lang: en
-subnav: form_action
 ---
 
 # Display your form
