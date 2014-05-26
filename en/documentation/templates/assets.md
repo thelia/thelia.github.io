@@ -149,15 +149,15 @@ The valid parameters are :
 
 This is the path to the file, relative to the template base path.
 
-In the path joker characters, like "*", are **NOT** allowed.
+In the file name joker characters, like "*", are **NOT** allowed.
 
 #### source ####
 
-see the source chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
+see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#source)
 
 #### template ####
 
-see the template chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
+see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
 
 ### {javascripts} ###
 
@@ -176,12 +176,12 @@ The valid parameters are :
 
 This is the path to the file (or files, as jokers like '*' are allowed), relative to the template base path.
 
-The value of this parameter is a file path, form example `assets/js/script.js`, or a set of files, like `assets/js/*.js`
+The value of this parameter is a file path, for example `assets/js/script.js`, or a set of files, like `assets/js/*.js`
 
 #### source ####
 
-see the source chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
+see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#source)
 
 #### template ####
 
-see the template chapter for [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#{stylesheets}) block
+see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
