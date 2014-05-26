@@ -382,6 +382,46 @@
                     <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
                 </td>
                 <td class="last">
+                    <a href="#method_filterByCouponCustomerCount">filterByCouponCustomerCount</a>(<a href="../../../Thelia/Model/CouponCustomerCount.html"><abbr title="Thelia\Model\CouponCustomerCount">CouponCustomerCount</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $couponCustomerCount, string $comparison = null)
+                    <p>Filter the query by a related \Thelia\Model\CouponCustomerCount object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinCouponCustomerCount">joinCouponCustomerCount</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Adds a JOIN clause to the query using the CouponCustomerCount relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CouponCustomerCountQuery.html"><abbr title="Thelia\Model\CouponCustomerCountQuery">CouponCustomerCountQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_useCouponCustomerCountQuery">useCouponCustomerCountQuery</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Use the CouponCustomerCount relation CouponCustomerCount object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByCoupon">filterByCoupon</a>(<a href="../../../Thelia/Model/Base/Coupon.html"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a> $coupon, string $comparison = Criteria::EQUAL)
+                    <p>Filter the query by a related Coupon object using the coupon<em>customer</em>count table as cross reference</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
+                </td>
+                <td class="last">
                     <a href="#method_prune">prune</a>(<a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer = null)
                     <p>Exclude object from result</p>
                 </td>
@@ -939,6 +979,36 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_leftJoinCouponCustomerCount">leftJoinCouponCustomerCount</a>($relationAlias = null)
+                    <p>Adds a LEFT JOIN clause to the query using the CouponCustomerCount relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoinCouponCustomerCount">rightJoinCouponCustomerCount</a>($relationAlias = null)
+                    <p>Adds a RIGHT JOIN clause to the query using the CouponCustomerCount relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoinCouponCustomerCount">innerJoinCouponCustomerCount</a>($relationAlias = null)
+                    <p>Adds a INNER JOIN clause to the query using the CouponCustomerCount relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <abbr title="ChildCustomer">ChildCustomer</abbr>
                 </td>
                 <td class="last">
@@ -1283,7 +1353,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 126</div>
+        <div class="location">at line 130</div>
         <code>            public            
     <strong>__construct</strong>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\Customer&#039;, string $modelAlias = null)</code>
     </h3>
@@ -1319,7 +1389,7 @@
     </div>
 
                 <h3 id="method_create">
-        <div class="location">at line 139</div>
+        <div class="location">at line 143</div>
         <code>        static    public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>create</strong>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)</code>
     </h3>
@@ -1360,7 +1430,7 @@
     </div>
 
                 <h3 id="method_findPk">
-        <div class="location">at line 169</div>
+        <div class="location">at line 173</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>|array|mixed
     <strong>findPk</strong>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1404,7 +1474,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_findPks">
-        <div class="location">at line 251</div>
+        <div class="location">at line 255</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
     <strong>findPks</strong>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1444,7 +1514,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKey">
-        <div class="location">at line 272</div>
+        <div class="location">at line 276</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByPrimaryKey</strong>(mixed $key)</code>
     </h3>
@@ -1479,7 +1549,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKeys">
-        <div class="location">at line 285</div>
+        <div class="location">at line 289</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByPrimaryKeys</strong>(array $keys)</code>
     </h3>
@@ -1514,7 +1584,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterById">
-        <div class="location">at line 309</div>
+        <div class="location">at line 313</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
     </h3>
@@ -1558,7 +1628,7 @@ $query->filterById(array('min' => 12)); // WHERE id > 12
     </div>
 
                 <h3 id="method_filterByRef">
-        <div class="location">at line 347</div>
+        <div class="location">at line 351</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByRef</strong>(string $ref = null, string $comparison = null)</code>
     </h3>
@@ -1601,7 +1671,7 @@ $query->filterByRef('%fooValue%'); // WHERE ref LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByTitleId">
-        <div class="location">at line 381</div>
+        <div class="location">at line 385</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByTitleId</strong>(mixed $titleId = null, string $comparison = null)</code>
     </h3>
@@ -1654,7 +1724,7 @@ $query->filterByTitleId(array('min' => 12)); // WHERE title_id > 12
     </div>
 
                 <h3 id="method_filterByFirstname">
-        <div class="location">at line 419</div>
+        <div class="location">at line 423</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByFirstname</strong>(string $firstname = null, string $comparison = null)</code>
     </h3>
@@ -1697,7 +1767,7 @@ $query->filterByFirstname('%fooValue%'); // WHERE firstname LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByLastname">
-        <div class="location">at line 448</div>
+        <div class="location">at line 452</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByLastname</strong>(string $lastname = null, string $comparison = null)</code>
     </h3>
@@ -1740,7 +1810,7 @@ $query->filterByLastname('%fooValue%'); // WHERE lastname LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByEmail">
-        <div class="location">at line 477</div>
+        <div class="location">at line 481</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByEmail</strong>(string $email = null, string $comparison = null)</code>
     </h3>
@@ -1783,7 +1853,7 @@ $query->filterByEmail('%fooValue%'); // WHERE email LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByPassword">
-        <div class="location">at line 506</div>
+        <div class="location">at line 510</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByPassword</strong>(string $password = null, string $comparison = null)</code>
     </h3>
@@ -1826,7 +1896,7 @@ $query->filterByPassword('%fooValue%'); // WHERE password LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByAlgo">
-        <div class="location">at line 535</div>
+        <div class="location">at line 539</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByAlgo</strong>(string $algo = null, string $comparison = null)</code>
     </h3>
@@ -1869,7 +1939,7 @@ $query->filterByAlgo('%fooValue%'); // WHERE algo LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByReseller">
-        <div class="location">at line 567</div>
+        <div class="location">at line 571</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByReseller</strong>(mixed $reseller = null, string $comparison = null)</code>
     </h3>
@@ -1913,7 +1983,7 @@ $query->filterByReseller(array('min' => 12)); // WHERE reseller > 12
     </div>
 
                 <h3 id="method_filterByLang">
-        <div class="location">at line 605</div>
+        <div class="location">at line 609</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByLang</strong>(string $lang = null, string $comparison = null)</code>
     </h3>
@@ -1956,7 +2026,7 @@ $query->filterByLang('%fooValue%'); // WHERE lang LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterBySponsor">
-        <div class="location">at line 634</div>
+        <div class="location">at line 638</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterBySponsor</strong>(string $sponsor = null, string $comparison = null)</code>
     </h3>
@@ -1999,7 +2069,7 @@ $query->filterBySponsor('%fooValue%'); // WHERE sponsor LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByDiscount">
-        <div class="location">at line 666</div>
+        <div class="location">at line 670</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByDiscount</strong>(mixed $discount = null, string $comparison = null)</code>
     </h3>
@@ -2043,7 +2113,7 @@ $query->filterByDiscount(array('min' => 12)); // WHERE discount > 12
     </div>
 
                 <h3 id="method_filterByRememberMeToken">
-        <div class="location">at line 704</div>
+        <div class="location">at line 708</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByRememberMeToken</strong>(string $rememberMeToken = null, string $comparison = null)</code>
     </h3>
@@ -2086,7 +2156,7 @@ $query->filterByRememberMeToken('%fooValue%'); // WHERE remember<em>me</em>token
     </div>
 
                 <h3 id="method_filterByRememberMeSerial">
-        <div class="location">at line 733</div>
+        <div class="location">at line 737</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByRememberMeSerial</strong>(string $rememberMeSerial = null, string $comparison = null)</code>
     </h3>
@@ -2129,7 +2199,7 @@ $query->filterByRememberMeSerial('%fooValue%'); // WHERE remember<em>me</em>seri
     </div>
 
                 <h3 id="method_filterByCreatedAt">
-        <div class="location">at line 767</div>
+        <div class="location">at line 771</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
     </h3>
@@ -2173,7 +2243,7 @@ $query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2
     </div>
 
                 <h3 id="method_filterByUpdatedAt">
-        <div class="location">at line 810</div>
+        <div class="location">at line 814</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
     </h3>
@@ -2217,7 +2287,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByCustomerTitle">
-        <div class="location">at line 841</div>
+        <div class="location">at line 845</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByCustomerTitle</strong>(<a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $customerTitle, string $comparison = null)</code>
     </h3>
@@ -2257,7 +2327,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinCustomerTitle">
-        <div class="location">at line 866</div>
+        <div class="location">at line 870</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>joinCustomerTitle</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2297,7 +2367,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useCustomerTitleQuery">
-        <div class="location">at line 901</div>
+        <div class="location">at line 905</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerTitleQuery.html"><abbr title="Thelia\Model\CustomerTitleQuery">CustomerTitleQuery</abbr></a>
     <strong>useCustomerTitleQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2346,7 +2416,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByAddress">
-        <div class="location">at line 916</div>
+        <div class="location">at line 920</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByAddress</strong>(<a href="../../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $address, string $comparison = null)</code>
     </h3>
@@ -2386,7 +2456,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinAddress">
-        <div class="location">at line 939</div>
+        <div class="location">at line 943</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>joinAddress</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2426,7 +2496,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useAddressQuery">
-        <div class="location">at line 974</div>
+        <div class="location">at line 978</div>
         <code>            public            <a href="../../../Thelia/Model/AddressQuery.html"><abbr title="Thelia\Model\AddressQuery">AddressQuery</abbr></a>
     <strong>useAddressQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2475,7 +2545,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByOrder">
-        <div class="location">at line 989</div>
+        <div class="location">at line 993</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByOrder</strong>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $order, string $comparison = null)</code>
     </h3>
@@ -2515,7 +2585,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinOrder">
-        <div class="location">at line 1012</div>
+        <div class="location">at line 1016</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>joinOrder</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2555,7 +2625,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useOrderQuery">
-        <div class="location">at line 1047</div>
+        <div class="location">at line 1051</div>
         <code>            public            <a href="../../../Thelia/Model/OrderQuery.html"><abbr title="Thelia\Model\OrderQuery">OrderQuery</abbr></a>
     <strong>useOrderQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2604,7 +2674,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByCart">
-        <div class="location">at line 1062</div>
+        <div class="location">at line 1066</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>filterByCart</strong>(<a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $cart, string $comparison = null)</code>
     </h3>
@@ -2644,7 +2714,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinCart">
-        <div class="location">at line 1085</div>
+        <div class="location">at line 1089</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>joinCart</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2684,7 +2754,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useCartQuery">
-        <div class="location">at line 1120</div>
+        <div class="location">at line 1124</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>useCartQuery</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2732,8 +2802,177 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_filterByCouponCustomerCount">
+        <div class="location">at line 1139</div>
+        <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
+    <strong>filterByCouponCustomerCount</strong>(<a href="../../../Thelia/Model/CouponCustomerCount.html"><abbr title="Thelia\Model\CouponCustomerCount">CouponCustomerCount</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $couponCustomerCount, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a related \Thelia\Model\CouponCustomerCount object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/CouponCustomerCount.html"><abbr title="Thelia\Model\CouponCustomerCount">CouponCustomerCount</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$couponCustomerCount</td>
+                <td>the related object to use as filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinCouponCustomerCount">
+        <div class="location">at line 1162</div>
+        <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
+    <strong>joinCouponCustomerCount</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query using the CouponCustomerCount relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useCouponCustomerCountQuery">
+        <div class="location">at line 1197</div>
+        <code>            public            <a href="../../../Thelia/Model/CouponCustomerCountQuery.html"><abbr title="Thelia\Model\CouponCustomerCountQuery">CouponCustomerCountQuery</abbr></a>
+    <strong>useCouponCustomerCountQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Use the CouponCustomerCount relation CouponCustomerCount object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation, to be used as main alias in the secondary query</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CouponCustomerCountQuery.html"><abbr title="Thelia\Model\CouponCustomerCountQuery">CouponCustomerCountQuery</abbr></a></td>
+            <td>A secondary query class using the current class as primary query</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>useQuery()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_filterByCoupon">
+        <div class="location">at line 1213</div>
+        <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
+    <strong>filterByCoupon</strong>(<a href="../../../Thelia/Model/Base/Coupon.html"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a> $coupon, string $comparison = Criteria::EQUAL)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a related Coupon object using the coupon<em>customer</em>count table as cross reference</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/Base/Coupon.html"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a></td>
+                <td>$coupon</td>
+                <td>the related object to use as filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_prune">
-        <div class="location">at line 1134</div>
+        <div class="location">at line 1228</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>prune</strong>(<a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer = null)</code>
     </h3>
@@ -2768,7 +3007,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">at line 1149</div>
+        <div class="location">at line 1243</div>
         <code>            public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2803,7 +3042,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 1186</div>
+        <div class="location">at line 1280</div>
         <code>            public            int
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2848,7 +3087,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyUpdated">
-        <div class="location">at line 1227</div>
+        <div class="location">at line 1321</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>recentlyUpdated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -2883,7 +3122,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyCreated">
-        <div class="location">at line 1239</div>
+        <div class="location">at line 1333</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>recentlyCreated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -2918,7 +3157,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastUpdatedFirst">
-        <div class="location">at line 1249</div>
+        <div class="location">at line 1343</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>lastUpdatedFirst</strong>()</code>
     </h3>
@@ -2943,7 +3182,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstUpdatedFirst">
-        <div class="location">at line 1259</div>
+        <div class="location">at line 1353</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>firstUpdatedFirst</strong>()</code>
     </h3>
@@ -2968,7 +3207,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastCreatedFirst">
-        <div class="location">at line 1269</div>
+        <div class="location">at line 1363</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>lastCreatedFirst</strong>()</code>
     </h3>
@@ -2993,7 +3232,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstCreatedFirst">
-        <div class="location">at line 1279</div>
+        <div class="location">at line 1373</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>firstCreatedFirst</strong>()</code>
     </h3>
@@ -3018,7 +3257,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderById">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderById</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3055,7 +3294,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByRef">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByRef</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3092,7 +3331,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByTitleId">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByTitleId</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3129,7 +3368,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByFirstname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByFirstname</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3166,7 +3405,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByLastname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByLastname</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3203,7 +3442,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByEmail">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByEmail</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3240,7 +3479,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByPassword">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByPassword</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3277,7 +3516,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByAlgo">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByAlgo</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3314,7 +3553,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByReseller">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByReseller</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3351,7 +3590,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByLang">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByLang</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3388,7 +3627,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderBySponsor">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderBySponsor</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3425,7 +3664,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByDiscount">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByDiscount</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3462,7 +3701,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByRememberMeToken">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByRememberMeToken</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3499,7 +3738,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByRememberMeSerial">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByRememberMeSerial</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3536,7 +3775,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByCreatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByCreatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3573,7 +3812,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByUpdatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>orderByUpdatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3610,7 +3849,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupById">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupById</strong>()</code>
     </h3>
@@ -3636,7 +3875,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByRef">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByRef</strong>()</code>
     </h3>
@@ -3662,7 +3901,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByTitleId">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByTitleId</strong>()</code>
     </h3>
@@ -3688,7 +3927,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByFirstname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByFirstname</strong>()</code>
     </h3>
@@ -3714,7 +3953,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByLastname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByLastname</strong>()</code>
     </h3>
@@ -3740,7 +3979,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByEmail">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByEmail</strong>()</code>
     </h3>
@@ -3766,7 +4005,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByPassword">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByPassword</strong>()</code>
     </h3>
@@ -3792,7 +4031,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByAlgo">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByAlgo</strong>()</code>
     </h3>
@@ -3818,7 +4057,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByReseller">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByReseller</strong>()</code>
     </h3>
@@ -3844,7 +4083,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByLang">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByLang</strong>()</code>
     </h3>
@@ -3870,7 +4109,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupBySponsor">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupBySponsor</strong>()</code>
     </h3>
@@ -3896,7 +4135,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByDiscount">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByDiscount</strong>()</code>
     </h3>
@@ -3922,7 +4161,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByRememberMeToken">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByRememberMeToken</strong>()</code>
     </h3>
@@ -3948,7 +4187,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByRememberMeSerial">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByRememberMeSerial</strong>()</code>
     </h3>
@@ -3974,7 +4213,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByCreatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByCreatedAt</strong>()</code>
     </h3>
@@ -4000,7 +4239,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByUpdatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>groupByUpdatedAt</strong>()</code>
     </h3>
@@ -4026,7 +4265,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoin">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>leftJoin</strong>($relation)</code>
     </h3>
@@ -4063,7 +4302,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoin">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>rightJoin</strong>($relation)</code>
     </h3>
@@ -4100,7 +4339,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoin">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>innerJoin</strong>($relation)</code>
     </h3>
@@ -4137,7 +4376,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinCustomerTitle">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>leftJoinCustomerTitle</strong>($relationAlias = null)</code>
     </h3>
@@ -4174,7 +4413,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinCustomerTitle">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>rightJoinCustomerTitle</strong>($relationAlias = null)</code>
     </h3>
@@ -4211,7 +4450,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinCustomerTitle">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>innerJoinCustomerTitle</strong>($relationAlias = null)</code>
     </h3>
@@ -4248,7 +4487,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinAddress">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>leftJoinAddress</strong>($relationAlias = null)</code>
     </h3>
@@ -4285,7 +4524,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinAddress">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>rightJoinAddress</strong>($relationAlias = null)</code>
     </h3>
@@ -4322,7 +4561,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinAddress">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>innerJoinAddress</strong>($relationAlias = null)</code>
     </h3>
@@ -4359,7 +4598,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinOrder">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>leftJoinOrder</strong>($relationAlias = null)</code>
     </h3>
@@ -4396,7 +4635,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinOrder">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>rightJoinOrder</strong>($relationAlias = null)</code>
     </h3>
@@ -4433,7 +4672,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinOrder">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>innerJoinOrder</strong>($relationAlias = null)</code>
     </h3>
@@ -4470,7 +4709,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinCart">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>leftJoinCart</strong>($relationAlias = null)</code>
     </h3>
@@ -4507,7 +4746,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinCart">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>rightJoinCart</strong>($relationAlias = null)</code>
     </h3>
@@ -4544,7 +4783,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinCart">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
     <strong>innerJoinCart</strong>($relationAlias = null)</code>
     </h3>
@@ -4580,8 +4819,119 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_leftJoinCouponCustomerCount">
+        <div class="location">at line 120</div>
+        <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
+    <strong>leftJoinCouponCustomerCount</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query using the CouponCustomerCount relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoinCouponCustomerCount">
+        <div class="location">at line 120</div>
+        <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
+    <strong>rightJoinCouponCustomerCount</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query using the CouponCustomerCount relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoinCouponCustomerCount">
+        <div class="location">at line 120</div>
+        <code>                        <abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr>
+    <strong>innerJoinCouponCustomerCount</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query using the CouponCustomerCount relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildCustomerQuery">ChildCustomerQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_findOne">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOne</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -4618,7 +4968,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneOrCreate">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneOrCreate</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -4655,7 +5005,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneById">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -4692,7 +5042,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByRef">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByRef</strong>(<abbr title="string ">string </abbr> $ref)</code>
     </h3>
@@ -4729,7 +5079,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByTitleId">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByTitleId</strong>(<abbr title="int ">int </abbr> $title_id)</code>
     </h3>
@@ -4766,7 +5116,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByFirstname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByFirstname</strong>(<abbr title="string ">string </abbr> $firstname)</code>
     </h3>
@@ -4803,7 +5153,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByLastname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByLastname</strong>(<abbr title="string ">string </abbr> $lastname)</code>
     </h3>
@@ -4840,7 +5190,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByEmail">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByEmail</strong>(<abbr title="string ">string </abbr> $email)</code>
     </h3>
@@ -4877,7 +5227,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByPassword">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByPassword</strong>(<abbr title="string ">string </abbr> $password)</code>
     </h3>
@@ -4914,7 +5264,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByAlgo">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByAlgo</strong>(<abbr title="string ">string </abbr> $algo)</code>
     </h3>
@@ -4951,7 +5301,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByReseller">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByReseller</strong>(<abbr title="int ">int </abbr> $reseller)</code>
     </h3>
@@ -4988,7 +5338,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByLang">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByLang</strong>(<abbr title="string ">string </abbr> $lang)</code>
     </h3>
@@ -5025,7 +5375,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneBySponsor">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneBySponsor</strong>(<abbr title="string ">string </abbr> $sponsor)</code>
     </h3>
@@ -5062,7 +5412,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByDiscount">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByDiscount</strong>(<abbr title="double ">double </abbr> $discount)</code>
     </h3>
@@ -5099,7 +5449,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByRememberMeToken">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByRememberMeToken</strong>(<abbr title="string ">string </abbr> $remember_me_token)</code>
     </h3>
@@ -5136,7 +5486,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByRememberMeSerial">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByRememberMeSerial</strong>(<abbr title="string ">string </abbr> $remember_me_serial)</code>
     </h3>
@@ -5173,7 +5523,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByCreatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -5210,7 +5560,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByUpdatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        <abbr title="ChildCustomer">ChildCustomer</abbr>
     <strong>findOneByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>
@@ -5247,7 +5597,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findById">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -5284,7 +5634,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByRef">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByRef</strong>(<abbr title="string ">string </abbr> $ref)</code>
     </h3>
@@ -5321,7 +5671,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByTitleId">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByTitleId</strong>(<abbr title="int ">int </abbr> $title_id)</code>
     </h3>
@@ -5358,7 +5708,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByFirstname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByFirstname</strong>(<abbr title="string ">string </abbr> $firstname)</code>
     </h3>
@@ -5395,7 +5745,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByLastname">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByLastname</strong>(<abbr title="string ">string </abbr> $lastname)</code>
     </h3>
@@ -5432,7 +5782,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByEmail">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByEmail</strong>(<abbr title="string ">string </abbr> $email)</code>
     </h3>
@@ -5469,7 +5819,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByPassword">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByPassword</strong>(<abbr title="string ">string </abbr> $password)</code>
     </h3>
@@ -5506,7 +5856,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByAlgo">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByAlgo</strong>(<abbr title="string ">string </abbr> $algo)</code>
     </h3>
@@ -5543,7 +5893,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByReseller">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByReseller</strong>(<abbr title="int ">int </abbr> $reseller)</code>
     </h3>
@@ -5580,7 +5930,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByLang">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByLang</strong>(<abbr title="string ">string </abbr> $lang)</code>
     </h3>
@@ -5617,7 +5967,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findBySponsor">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findBySponsor</strong>(<abbr title="string ">string </abbr> $sponsor)</code>
     </h3>
@@ -5654,7 +6004,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByDiscount">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByDiscount</strong>(<abbr title="double ">double </abbr> $discount)</code>
     </h3>
@@ -5691,7 +6041,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByRememberMeToken">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByRememberMeToken</strong>(<abbr title="string ">string </abbr> $remember_me_token)</code>
     </h3>
@@ -5728,7 +6078,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByRememberMeSerial">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByRememberMeSerial</strong>(<abbr title="string ">string </abbr> $remember_me_serial)</code>
     </h3>
@@ -5765,7 +6115,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByCreatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -5802,7 +6152,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByUpdatedAt">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>                        array
     <strong>findByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>

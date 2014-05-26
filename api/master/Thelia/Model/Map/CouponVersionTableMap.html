@@ -198,6 +198,14 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
                 </td>
             </tr>
                     <tr>
+                <td>PER_CUSTOMER_USAGE_COUNT</td>
+                <td class="last">
+                    <p><em>the column name for the PER<em>CUSTOMER</em>USAGE_COUNT field</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
                 <td>CREATED_AT</td>
                 <td class="last">
                     <p><em>the column name for the CREATED_AT field</em></p>
@@ -392,7 +400,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
         <h2>Details</h2>
 
                         <h3 id="method_initialize">
-        <div class="location">at line 190</div>
+        <div class="location">at line 195</div>
         <code>            public            void
     <strong>initialize</strong>()</code>
     </h3>
@@ -428,7 +436,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
     </div>
 
                 <h3 id="method_buildRelations">
-        <div class="location">at line 219</div>
+        <div class="location">at line 225</div>
         <code>            public            
     <strong>buildRelations</strong>()</code>
     </h3>
@@ -444,7 +452,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
     </div>
 
                 <h3 id="method_addInstanceToPool">
-        <div class="location">at line 235</div>
+        <div class="location">at line 241</div>
         <code>        static    public            
     <strong>addInstanceToPool</strong>(<a href="../../../Thelia/Model/CouponVersion.html"><abbr title="Thelia\Model\CouponVersion">CouponVersion</abbr></a> $obj, string $key = null)</code>
     </h3>
@@ -477,7 +485,7 @@ and findPk</em>() calls.</p>
     </div>
 
                 <h3 id="method_removeInstanceFromPool">
-        <div class="location">at line 255</div>
+        <div class="location">at line 261</div>
         <code>        static    public            
     <strong>removeInstanceFromPool</strong>(mixed $value)</code>
     </h3>
@@ -505,7 +513,7 @@ from the cache in order to prevent returning objects that no longer exist.</p>
     </div>
 
                 <h3 id="method_getPrimaryKeyHashFromRow">
-        <div class="location">at line 288</div>
+        <div class="location">at line 294</div>
         <code>        static    public            
     <strong>getPrimaryKeyHashFromRow</strong>(array $row, int $offset, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -541,7 +549,7 @@ a multi-column primary key, a serialize()d version of the primary key will be re
     </div>
 
                 <h3 id="method_getPrimaryKeyFromRow">
-        <div class="location">at line 310</div>
+        <div class="location">at line 316</div>
         <code>        static    public            mixed
     <strong>getPrimaryKeyFromRow</strong>(array $row, int $offset, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -586,7 +594,7 @@ a multi-column primary key, an array of the primary key columns will be returned
     </div>
 
                 <h3 id="method_getOMClass">
-        <div class="location">at line 327</div>
+        <div class="location">at line 333</div>
         <code>        static    public            string
     <strong>getOMClass</strong>(boolean $withPrefix = true)</code>
     </h3>
@@ -623,7 +631,7 @@ relative to a location on the PHP include_path.
     </div>
 
                 <h3 id="method_populateObject">
-        <div class="location">at line 345</div>
+        <div class="location">at line 351</div>
         <code>        static    public            array
     <strong>populateObject</strong>(array $row, int $offset, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -677,7 +685,7 @@ relative to a location on the PHP include_path.
     </div>
 
                 <h3 id="method_populateObjects">
-        <div class="location">at line 372</div>
+        <div class="location">at line 378</div>
         <code>        static    public            array
     <strong>populateObjects</strong>(<abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr> $dataFetcher)</code>
     </h3>
@@ -723,7 +731,7 @@ relative to a location on the PHP include_path.
     </div>
 
                 <h3 id="method_addSelectColumns">
-        <div class="location">at line 408</div>
+        <div class="location">at line 414</div>
         <code>        static    public            
     <strong>addSelectColumns</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria, string $alias = null)</code>
     </h3>
@@ -764,7 +772,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_getTableMap">
-        <div class="location">at line 452</div>
+        <div class="location">at line 460</div>
         <code>        static    public            <abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr>
     <strong>getTableMap</strong>()</code>
     </h3>
@@ -798,7 +806,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_buildTableMap">
-        <div class="location">at line 460</div>
+        <div class="location">at line 468</div>
         <code>        static    public            
     <strong>buildTableMap</strong>()</code>
     </h3>
@@ -814,7 +822,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_doDelete">
-        <div class="location">at line 479</div>
+        <div class="location">at line 487</div>
         <code>        static    public            int
     <strong>doDelete</strong>(mixed $values, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -863,7 +871,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">at line 523</div>
+        <div class="location">at line 531</div>
         <code>        static    public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -898,7 +906,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_doInsert">
-        <div class="location">at line 537</div>
+        <div class="location">at line 545</div>
         <code>        static    public            mixed
     <strong>doInsert</strong>(mixed $criteria, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>

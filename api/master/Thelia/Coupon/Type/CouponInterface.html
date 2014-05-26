@@ -52,16 +52,6 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_getInputName">getInputName</a>()
-                    <p>Get I18n amount input name</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    string
-                </td>
-                <td class="last">
                     <a href="#method_getToolTip">getToolTip</a>()
                     <p>Get I18n tooltip</p>
                 </td>
@@ -82,7 +72,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)
+                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForCountries, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForModules, bool $perCustomerUsageCount)
                     <p>Set Coupon</p>
                 </td>
                 <td></td>
@@ -192,6 +182,16 @@
                     boolean
                 </td>
                 <td class="last">
+                    <a href="#method_getPerCustomerUsageCount">getPerCustomerUsageCount</a>()
+                    <p>Check if the Coupon can be used against a product already with a special offer price</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
                     <a href="#method_isEnabled">isEnabled</a>()
                     <p>Check if Coupon has been disabled by admin</p>
                 </td>
@@ -257,13 +257,35 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getFreeShippingForCountries">getFreeShippingForCountries</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getFreeShippingForModules">getFreeShippingForModules</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method_getName">
-        <div class="location">at line 32</div>
+        <div class="location">at line 33</div>
         <code>            public            string
     <strong>getName</strong>()</code>
     </h3>
@@ -288,34 +310,8 @@
                     </div>
     </div>
 
-                <h3 id="method_getInputName">
-        <div class="location">at line 39</div>
-        <code>            public            string
-    <strong>getInputName</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Get I18n amount input name</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>string</td>
-            <td>
-</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_getToolTip">
-        <div class="location">at line 46</div>
+        <div class="location">at line 40</div>
         <code>            public            string
     <strong>getToolTip</strong>()</code>
     </h3>
@@ -341,7 +337,7 @@
     </div>
 
                 <h3 id="method_getServiceId">
-        <div class="location">at line 53</div>
+        <div class="location">at line 47</div>
         <code>            public            string
     <strong>getServiceId</strong>()</code>
     </h3>
@@ -367,9 +363,9 @@
     </div>
 
                 <h3 id="method_set">
-        <div class="location">at line 72</div>
+        <div class="location">at line 69</div>
         <code>            public            
-    <strong>set</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate)</code>
+    <strong>set</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForCountries, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForModules, bool $perCustomerUsageCount)</code>
     </h3>
     <div class="details">
         <p>Set Coupon</p>
@@ -439,6 +435,21 @@
                 <td>$expirationDate</td>
                 <td>When the Code is expiring</td>
             </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$freeShippingForCountries</td>
+                <td>list of countries which shipping is free. All if empty</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$freeShippingForModules</td>
+                <td>list of modules for which shipping is free. All if empty</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$perCustomerUsageCount</td>
+                <td>true if usage count is per customer only</td>
+            </tr>
             </table>
 
             
@@ -448,7 +459,7 @@
     </div>
 
                 <h3 id="method_getCode">
-        <div class="location">at line 91</div>
+        <div class="location">at line 92</div>
         <code>            public            string
     <strong>getCode</strong>()</code>
     </h3>
@@ -474,7 +485,7 @@
     </div>
 
                 <h3 id="method_getTitle">
-        <div class="location">at line 98</div>
+        <div class="location">at line 99</div>
         <code>            public            string
     <strong>getTitle</strong>()</code>
     </h3>
@@ -500,7 +511,7 @@
     </div>
 
                 <h3 id="method_getShortDescription">
-        <div class="location">at line 105</div>
+        <div class="location">at line 106</div>
         <code>            public            string
     <strong>getShortDescription</strong>()</code>
     </h3>
@@ -526,7 +537,7 @@
     </div>
 
                 <h3 id="method_getDescription">
-        <div class="location">at line 112</div>
+        <div class="location">at line 113</div>
         <code>            public            string
     <strong>getDescription</strong>()</code>
     </h3>
@@ -552,7 +563,7 @@
     </div>
 
                 <h3 id="method_isCumulative">
-        <div class="location">at line 121</div>
+        <div class="location">at line 122</div>
         <code>            public            bool
     <strong>isCumulative</strong>()</code>
     </h3>
@@ -578,7 +589,7 @@
     </div>
 
                 <h3 id="method_isRemovingPostage">
-        <div class="location">at line 128</div>
+        <div class="location">at line 129</div>
         <code>            public            bool
     <strong>isRemovingPostage</strong>()</code>
     </h3>
@@ -604,7 +615,7 @@
     </div>
 
                 <h3 id="method_getConditions">
-        <div class="location">at line 135</div>
+        <div class="location">at line 136</div>
         <code>            public            <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
     <strong>getConditions</strong>()</code>
     </h3>
@@ -629,7 +640,7 @@
     </div>
 
                 <h3 id="method_setConditions">
-        <div class="location">at line 146</div>
+        <div class="location">at line 147</div>
         <code>            public            <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
     <strong>setConditions</strong>(<a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a> $conditions)</code>
     </h3>
@@ -675,7 +686,7 @@
     </div>
 
                 <h3 id="method_getExpirationDate">
-        <div class="location">at line 153</div>
+        <div class="location">at line 154</div>
         <code>            public            <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
     <strong>getExpirationDate</strong>()</code>
     </h3>
@@ -701,7 +712,7 @@
     </div>
 
                 <h3 id="method_isAvailableOnSpecialOffers">
-        <div class="location">at line 161</div>
+        <div class="location">at line 162</div>
         <code>            public            boolean
     <strong>isAvailableOnSpecialOffers</strong>()</code>
     </h3>
@@ -726,8 +737,34 @@
                     </div>
     </div>
 
+                <h3 id="method_getPerCustomerUsageCount">
+        <div class="location">at line 170</div>
+        <code>            public            boolean
+    <strong>getPerCustomerUsageCount</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the Coupon can be used against a product already with a special offer price</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_isEnabled">
-        <div class="location">at line 168</div>
+        <div class="location">at line 177</div>
         <code>            public            boolean
     <strong>isEnabled</strong>()</code>
     </h3>
@@ -753,7 +790,7 @@
     </div>
 
                 <h3 id="method_getMaxUsage">
-        <div class="location">at line 176</div>
+        <div class="location">at line 185</div>
         <code>            public            int
     <strong>getMaxUsage</strong>()</code>
     </h3>
@@ -779,7 +816,7 @@
     </div>
 
                 <h3 id="method_isExpired">
-        <div class="location">at line 183</div>
+        <div class="location">at line 192</div>
         <code>            public            bool
     <strong>isExpired</strong>()</code>
     </h3>
@@ -805,7 +842,7 @@
     </div>
 
                 <h3 id="method_exec">
-        <div class="location">at line 196</div>
+        <div class="location">at line 205</div>
         <code>            public            float
     <strong>exec</strong>()</code>
     </h3>
@@ -832,7 +869,7 @@ Hence affecting a wide variety of Thelia elements</p>
     </div>
 
                 <h3 id="method_isMatching">
-        <div class="location">at line 204</div>
+        <div class="location">at line 213</div>
         <code>            public            bool
     <strong>isMatching</strong>()</code>
     </h3>
@@ -858,7 +895,7 @@ Hence affecting a wide variety of Thelia elements</p>
     </div>
 
                 <h3 id="method_drawBackOfficeInputs">
-        <div class="location">at line 212</div>
+        <div class="location">at line 221</div>
         <code>            public            string
     <strong>drawBackOfficeInputs</strong>()</code>
     </h3>
@@ -883,7 +920,7 @@ Hence affecting a wide variety of Thelia elements</p>
     </div>
 
                 <h3 id="method_getExtendedInputs">
-        <div class="location">at line 219</div>
+        <div class="location">at line 228</div>
         <code>            public            mixed
     <strong>getExtendedInputs</strong>()</code>
     </h3>
@@ -900,6 +937,58 @@ Hence affecting a wide variety of Thelia elements</p>
             <td>mixed</td>
             <td>
 </td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFreeShippingForCountries">
+        <div class="location">at line 233</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+    <strong>getFreeShippingForCountries</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+            <td>list of country IDs for which shipping is free. All if empty</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFreeShippingForModules">
+        <div class="location">at line 238</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+    <strong>getFreeShippingForModules</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+            <td>list of module IDs for which shipping is free. All if empty</td>
         </tr>
     </table>
 

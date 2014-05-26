@@ -64,8 +64,30 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(string $code, float $discount = null, bool $isValid = null)
+                    <a href="#method___construct">__construct</a>(string $code, float $discount = null, bool $isValid = null, bool $freeShipping = false)
                     <p>Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFreeShipping">setFreeShipping</a>(boolean $freeShipping)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_getFreeShipping">getFreeShipping</a>()
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -197,9 +219,9 @@
     </div>
 
                 <h3 id="method___construct">
-        <div class="location">at line 42</div>
+        <div class="location">at line 45</div>
         <code>            public            
-    <strong>__construct</strong>(string $code, float $discount = null, bool $isValid = null)</code>
+    <strong>__construct</strong>(string $code, float $discount = null, bool $isValid = null, bool $freeShipping = false)</code>
     </h3>
     <div class="details">
         <p>Constructor</p>
@@ -222,7 +244,12 @@
                     <tr>
                 <td>bool</td>
                 <td>$isValid</td>
-                <td>If Coupon is valid or if Customer meets coupon conditions</td>
+                <td>If Coupon is valid or f Customer meets coupon conditions</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$freeShipping</td>
+                <td>true if coupon offers free shipping</td>
             </tr>
             </table>
 
@@ -232,8 +259,63 @@
                     </div>
     </div>
 
+                <h3 id="method_setFreeShipping">
+        <div class="location">at line 57</div>
+        <code>            public            
+    <strong>setFreeShipping</strong>(boolean $freeShipping)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$freeShipping</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFreeShipping">
+        <div class="location">at line 67</div>
+        <code>            public            boolean
+    <strong>getFreeShipping</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setCode">
-        <div class="location">at line 56</div>
+        <div class="location">at line 79</div>
         <code>            public            <abbr title="Thelia\Core\Event\Coupon\$this">$this</abbr>
     <strong>setCode</strong>(string $code)</code>
     </h3>
@@ -269,7 +351,7 @@
     </div>
 
                 <h3 id="method_getCode">
-        <div class="location">at line 68</div>
+        <div class="location">at line 91</div>
         <code>            public            string
     <strong>getCode</strong>()</code>
     </h3>
@@ -295,7 +377,7 @@
     </div>
 
                 <h3 id="method_setDiscount">
-        <div class="location">at line 80</div>
+        <div class="location">at line 103</div>
         <code>            public            <abbr title="Thelia\Core\Event\Coupon\$this">$this</abbr>
     <strong>setDiscount</strong>(float $discount)</code>
     </h3>
@@ -331,7 +413,7 @@
     </div>
 
                 <h3 id="method_getDiscount">
-        <div class="location">at line 92</div>
+        <div class="location">at line 115</div>
         <code>            public            float
     <strong>getDiscount</strong>()</code>
     </h3>
@@ -357,7 +439,7 @@
     </div>
 
                 <h3 id="method_setIsValid">
-        <div class="location">at line 105</div>
+        <div class="location">at line 128</div>
         <code>            public            <abbr title="Thelia\Core\Event\Coupon\$this">$this</abbr>
     <strong>setIsValid</strong>(boolean $isValid)</code>
     </h3>
@@ -393,7 +475,7 @@
     </div>
 
                 <h3 id="method_getIsValid">
-        <div class="location">at line 117</div>
+        <div class="location">at line 140</div>
         <code>            public            boolean
     <strong>getIsValid</strong>()</code>
     </h3>

@@ -62,7 +62,7 @@
                     bool
                 </td>
                 <td class="last">
-                    <a href="#method_isCouponRemovingPostage">isCouponRemovingPostage</a>()
+                    <a href="#method_isCouponRemovingPostage">isCouponRemovingPostage</a>(<a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order)
                     <p>Check if there is a Coupon removing Postage</p>
                 </td>
                 <td></td>
@@ -112,7 +112,7 @@
                     int
                 </td>
                 <td class="last">
-                    <a href="#method_decrementQuantity">decrementQuantity</a>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)
+                    <a href="#method_decrementQuantity">decrementQuantity</a>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon, int|null $customerId = null)
                     <p>Decrement this coupon quantity</p>
                 </td>
                 <td></td>
@@ -123,7 +123,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 46</div>
+        <div class="location">at line 53</div>
         <code>            public            
     <strong>__construct</strong>(<abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)</code>
     </h3>
@@ -149,7 +149,7 @@
     </div>
 
                 <h3 id="method_getDiscount">
-        <div class="location">at line 58</div>
+        <div class="location">at line 65</div>
         <code>            public            
     <strong>getDiscount</strong>()</code>
     </h3>
@@ -165,15 +165,26 @@
     </div>
 
                 <h3 id="method_isCouponRemovingPostage">
-        <div class="location">at line 81</div>
+        <div class="location">at line 88</div>
         <code>            public            bool
-    <strong>isCouponRemovingPostage</strong>()</code>
+    <strong>isCouponRemovingPostage</strong>(<a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order)</code>
     </h3>
     <div class="details">
         <p>Check if there is a Coupon removing Postage</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
@@ -191,7 +202,7 @@
     </div>
 
                 <h3 id="method_addAvailableCoupon">
-        <div class="location">at line 173</div>
+        <div class="location">at line 234</div>
         <code>            public            
     <strong>addAvailableCoupon</strong>(<a href="../../Thelia/Coupon/Type/CouponInterface.html"><abbr title="Thelia\Coupon\Type\CouponInterface">CouponInterface</abbr></a> $coupon)</code>
     </h3>
@@ -217,7 +228,7 @@
     </div>
 
                 <h3 id="method_getAvailableCoupons">
-        <div class="location">at line 183</div>
+        <div class="location">at line 244</div>
         <code>            public            array
     <strong>getAvailableCoupons</strong>()</code>
     </h3>
@@ -243,7 +254,7 @@
     </div>
 
                 <h3 id="method_addAvailableCondition">
-        <div class="location">at line 193</div>
+        <div class="location">at line 254</div>
         <code>            public            
     <strong>addAvailableCondition</strong>(<a href="../../Thelia/Condition/Implementation/ConditionInterface.html"><abbr title="Thelia\Condition\Implementation\ConditionInterface">ConditionInterface</abbr></a> $condition)</code>
     </h3>
@@ -269,7 +280,7 @@
     </div>
 
                 <h3 id="method_getAvailableConditions">
-        <div class="location">at line 203</div>
+        <div class="location">at line 264</div>
         <code>            public            array
     <strong>getAvailableConditions</strong>()</code>
     </h3>
@@ -295,9 +306,9 @@
     </div>
 
                 <h3 id="method_decrementQuantity">
-        <div class="location">at line 217</div>
+        <div class="location">at line 279</div>
         <code>            public            int
-    <strong>decrementQuantity</strong>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)</code>
+    <strong>decrementQuantity</strong>(<a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon, int|null $customerId = null)</code>
     </h3>
     <div class="details">
         <p>Decrement this coupon quantity</p>
@@ -310,6 +321,11 @@
                 <td><a href="../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a></td>
                 <td>$coupon</td>
                 <td>Coupon consumed</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$customerId</td>
+                <td>the ID of the ordering customer</td>
             </tr>
             </table>
 
