@@ -274,13 +274,27 @@ The template (```templates/frontOffice/default/related-content.html```) :
     <li class="list-item">
         <h4 class="list-item-title">{$TITLE}</h4>
         <p class="list-item-chapo">{$CHAPO}</p>
-        <p class="list-item-more"><a href="{$URL}">{intl l="view full article" d="MyModule"}</a></p>
+        <p class="list-item-more">
+            <a href="{$URL}">
+                {images file='img/more.png' source='MyModule'}<img src="{$asset_url}" alt="{intl l="view full article" d="mymodule.fo.default"}" />{/images}
+                {intl l="view full article" d="mymodule.fo.default"}
+            </a>
+        </p>
     </li>
     {/loop}
 {/loop}
 </ul>
 {/ifloop}
 ```
+
+As you can see, you can use **assets** and **translations** in your smarty template. To keep the module isolated and independent, you have to use the concept of domain in the assets and translate functions.
+
+For translate function (eg: intl) you should use the ```d``` attribute with a special code. You can learn more about the intl function on this page : [internationalization](/en/documentation/templates/i18n.html#{intl})
+
+For assets functions (eg: image, images, stylesheets, javascripts) you should use the ```source``` attribute with your module code. 
+
+We've added a system of overriding for assets allowing you to redefine the asset in the template you use. For example, if you use the default template, and use the image ```img/more.png``` in your smarty template, you could override this image in your template if you put your own image in ```template/frontOffice/default/modules/MyModule/img/more.png```
+
 
 ###Going even further
 
