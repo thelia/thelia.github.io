@@ -1,0 +1,64 @@
+---
+global_fields :
+- {name: "success_url", description: "url where the customer is redirect if no error occurs.", mandatory: "false"}
+- {name: "error_message", description: "customer message if an error occur", mandatory: "false"}
+
+---
+<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js oldie ie7" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="{{page.lang}}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{{page.lang}}" class="no-js"> <!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+
+<body itemtype="http://schema.org/WebPage" itemscope>
+
+{% include navbar.html %}
+
+<section role="document" class="container">
+    <section class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3" itemtype="http://schema.org/SiteNavigationElement" itemscope>
+            <aside role="navigation" class="thelia-sidebar">{% include sidebar.html %}</aside>
+        </div>
+        <main role="main" class="col-lg-9 col-md-9 col-sm-9">
+
+            <h1>{{ page.title }}</h1>
+
+            {% for description_p in page.description %}
+
+            <p>{{ description_p }}</p>
+
+            {% endfor %}
+
+{% highlight smarty %}
+{form name="{{ page.form_name }}" }
+    ...
+{/form}
+{% endhighlight %}
+    <hr />
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#argument" data-toggle="tab">fields</a></li>
+        <li><a href="#example" data-toggle="tab">Examples</a></li>
+    </ul>
+
+    <div class="tab-content">
+    <div class="tab-pane active fade in" id="argument">
+        {% include form/field_row.html %}
+    </div>
+    <div class="tab-pane fade" id="example">
+        {{ content }}
+    </div>
+    </div>
+
+    </main>
+
+    </section>
+    </section>
+
+{% include footer.html %}
+
+</body>
+</html>

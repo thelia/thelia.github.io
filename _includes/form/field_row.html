@@ -1,0 +1,59 @@
+<div class="alert alert-warning">
+    <h4>Important informations :</h4>
+
+    <p>
+        * : field is mandatory<br/>
+    </p>
+</div>
+
+
+<h4>Fields</h4>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for field in page.global_fields %}
+        <tr>
+            <td>{{ field.name }} {% if field.mandatory == "true" %}*{% endif %}</td>
+                <td>
+                <p>{{ field.description }}</p>
+                {% if field.example != nil AND field.example != '' %}
+                <p>
+                example : <em>{{ argument.example }}</em>
+                </p>
+                {% endif %}
+                </td>
+                </tr>
+                {% endfor %}
+        {% for field in page.fields %}
+        <tr>
+            <td>{{ field.name }} {% if field.mandatory == "true" %}*{% endif %}</td>
+            <td>
+                <p>{{ field.description }}</p>
+                {% if field.values != nil AND field.values != '' %}
+                    <div class="expected_values">
+                    values available :
+                    <ul>
+                        {% for value in field.values %}
+                        <li>{{ value.value }}{% if value.description != nil and value.description != '' %} : <em>{{ value.description }}</em>{% endif %}</li>
+                        {% endfor %}
+                    </ul>
+                    </div>
+                {% endif %}
+                {% if field.example != nil AND field.example != '' %}
+                <p>
+                example : <em>{{ argument.example }}</em>
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
