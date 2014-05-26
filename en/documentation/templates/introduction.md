@@ -7,130 +7,73 @@ subnav: templates_introduction
 ---
 # About Thelia Templates #
 
-Thelia templates uses the Smarty template engine, enriched by many Thelia additions, such as loops, data access functions, internationalization function, etc. 
+Thelia templates uses the [Smarty](http://www.smarty.net/) template engine, enriched by many Thelia additions, such as loops, data access functions, internationalization function, etc. 
 
-## Internationalization
+Be sure to have a basic Smarty knowledge before starting to write a new template. The [Smarty documentation](http://www.smarty.net/docs/en/) will help you.
 
-If you want to create multilingual compatible templates, you have to pay a special attention to :
-- static text
-- date formatting
-- number formatting
-- money formatting
+The `default` templates provides guidelines and good practices to build a Thelia template.
 
-Thelia provides several Smarty functions to help you.
+## Structure of a template ##
 
-### {intl}
+Thelia templates are located in the `templates` sub-directory. This directory contains two sub-directories :
 
-The {intl} function translates a string. 
+- `backOffice` : this is where back-office templates are located.
+- `frontOffice` : this is where front-office templates are located.
+- `pdf` : contains templates of the PDF documents, like invoices.
+- `mail` : contains templates of the e-mail sent by Thelia to customers or administrators.
 
-    {intl l="This is a string to translate"}
-    
-    or 
-    
-    {intl l="This is another string to translate" d="mymodule.ai"}
+These directories have identical structures; they contains an unlimited number of directories, each of them containing a complete template :
 
-    or
+    + templates
+      |
+      + frontOffice
+      | |
+      | + default
+      | + my-first-template
+      | + my-other-template
+      | + ...
+      |
+      + backOffice
+        |
+        + default
+        + ...
+      + pdf
+        |
+        + default
+        + ...
+      + mail
+        |
+        + default
+        + ...
 
-    {intl l="Hello, %name, how do you do ?" name=$name}
+Each of the templates directories contains a set of HTML files, and related resources (CSS, JS, images, layouts, etc.).
 
-We have here three typical uses of {intl}
+## Selecting the current template
 
-#### `l`
+To select the current template, set the name of the template directory in the following configuration variables :
 
-The `l` parameter contains the string that will be translated. This string should not contains any variable, such as `{intl l="Hello, $name, how do you do ?"}`, internal variables should be used instead. Every `%varname` found in the string will be replaced by the value of the `varname` parameter. For example: `{intl l="Hello, %user, how do you do ?" user=$name}` is fine.
+ 	active-admin-template : the back-office template
+	active-front-template : the front-office template
+	active-mail-template : the mail template
+	active-pdf-template : the PDF template
 
-If no translation can be found for a given string, the translator will return either the value of the `l` parameter, or an empty string, depending on the "Languages & URLs" parameters.  
+## Content of a template
 
-#### `d`
+Thelia template file names should have the `.html` extension.
 
-The `d` parameter is the message domain, a set of internationalized messages. Thelia contains the following domains :
+First, using [Smarty inheritance](http://www.smarty.net/inheritance) may save a lot of time and code duplication.
 
-- `core` => for thelia core translations
-- bo.*template_name* (eg : `bo.default`) => for each back-office template
-- fo.*template_name* (eg : `fo.default`) => for each front-office template
-- pdf.*template_name* (eg : `pdf.default`) => for each PDF template
-- email.*template_name* (eg : `email.default`) => for each email template
-- In Modules :
-    - *module_code* (eg : `paypal`) => fore module core translations
-    - *module_code*.ai (eg : `paypal.ai`) => used in AdminIncludes templates
-    - bo.*module_code*.*template_name* (eg : `bo.paypal.default`) => used in back office template
-    - fo.*module_code*.*template_name* (eg : `fo.paypal.default`) => used in front office template
+The default front office (and back-office) template uses a global layout, in the `layout.tpl` file, which contains template-wide common code and declarations.
 
-This parameter is mostly used in modules. Other templates (front-office, back-office, PDF and email) may use the `{default_translation_domain}` function to define a template-wide message domain, and the `d` parameter could then be omitted.
+## Predefined names ##
 
-For examples, in the `layout.tpl` file of the default front-office template, you'll find `{default_translation_domain domain='fo.default'}`.
+Every template should contains specific template files, which are views for Thelia invoked in the Fron Offices controllers. These files are :
 
-#### Translating your templates
-
-Translations is done through the back-office -> Configuration -> Translation. The string are automatically collected in your template, and you'll be able to enter the translation for any language defined in your store (see Configuration, -> Languages & URLs).
-
-### {format_date}
-
-Use this function to format a date according to the current locale standards.
-
-#### Examples
-
-    Return the given date using the locale date format as date and time
-    {format_date date=$dateTimeObject}
-
-    Return the given date using a specified format    
-    {format_date date=$dateTimeObject format="Y-m-d H:i:s"}
-
-    Return the given date as a date string, using the locale date
-    {format_date date=$dateTimeObject output="date"}
-
-    Return the given date as a time string, using the locale date
-    {format_date date=$dateTimeObject output="time"}
-
-#### Parameters
-
-`date`: a DateTime object (required)
-`format`: the expected format. The current locale format will be used if this parameter is empty or missing
-`output`: the type of desired ouput, one of :
-- `date`: the date only
-- `time`: the time only 
-- `datetime`: the date and the time (default)
+- product. html
+- content.html
+- category.html
+- folder.html
 
 
-### {format_number}
+You can add as many templates as you want. The URL of such templates is `http://www.yourshop.com/template_file_name_without_extension`. For exemple, if your template contains a contact.html
 
-Use this function to format a number according to the current locale standards, or a specific format.
-
-#### Examples
-
-    Outputs "1 246,1"
-    {format_number number="1246.12" decimals="1" dec_point="," thousands_sep=" "}
-
-    Outputs "1246,12" if locale is fr_FR, 1 246.12 if locale is en_US
-    {format_number number="1246.12"}
-
-
-#### Parameters
-
-`number`: int or float number
-`decimals`: how many decimals format expected
-`dec_point`: separator for the decimal point
-`thousands_sep`: thousands separator
-
-
-### {format_money}
-
-Use this function to format an amount of money according to the current locale standards, or a specific format.
-
-#### Examples
-
-    Outputs "1 246,1 €"
-    {format_money number="1246.12" decimals="1" dec_point="," thousands_sep=" " symbol="€"}
-
-    Outputs "1246,12 €" if locale is fr_FR, "€ 1 246.12" if locale is en_US
-    {format_money number="1246.12"}
-
-#### Parameters
-
-`number`: int or float number
-`decimals`: how many decimals format expected
-`dec_point`: separator for the decimal point
-`thousands_sep`: thousands separator
-`symbol`: Currency symbol
-
-**TBC**

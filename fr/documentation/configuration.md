@@ -23,7 +23,7 @@ www <- repertoire racine de votre serveur
         bin
         cache
         core
-        install
+        setup
         local
             config
             modules
