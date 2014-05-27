@@ -1,13 +1,13 @@
 ---
 layout: form
-title: customer update password
+title: customer password update
 form_name: thelia.front.customer.password.update
 sidebar: form
 subnav: form_list_updatepassword
 fields:
-    - { name: "password_old", mandatory: "true", description: "customer's old password"}
-    - { name: "password", mandatory: "true", description: "customer's password. min length : 4"}
-    - { name: "password_confirm", mandatory: "true", description: "customer's password verification. Check if password and password_confirm are the same"}
+    - { name: "password_old", mandatory: "true", description: "customer old password"}
+    - { name: "password", mandatory: "true", description: "customer password. min length : 4"}
+    - { name: "password_confirm", mandatory: "true", description: "Customer password verification. Thelia will checks that password and password_confirm are identical."}
 lang: en
 
 ---

@@ -5,10 +5,10 @@ form_name: thelia.cart.add
 sidebar: form
 subnav: form_list_cartadd
 fields:
-    - { name: "product", mandatory: "true", description: "product id added to the cart"}
+    - { name: "product", mandatory: "true", description: "ID of the product added to the cart"}
     - { name: "product_sale_elements_id", mandatory: "true", description: "product sale elements id added to the cart"}
     - { name: "quantity", mandatory: "true", description: "quantity added to the cart. Must be superior to 0 if the stock is not managed in the store"}
-    - { name: "append", mandatory: "false", description: "if the value is 1, increment the stock if the combination of product and product_sale_elements_id already exist in the cart"}
+    - { name: "append", mandatory: "false", description: "if the value is 1, increment the quantity if the combination of product and product_sale_elements_id already exists in the cart"}
     - { name: "newness", mandatory: "false", description: "if the value is 1, create a new entry if the combination of product and product_sale_elements_id already exist in the cart"}
 lang: en
 

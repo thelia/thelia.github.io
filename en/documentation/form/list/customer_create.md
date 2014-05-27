@@ -5,24 +5,24 @@ form_name: thelia.front.customer.create
 sidebar: form
 subnav: form_list_customercreate
 fields:
-    - { name: "company", mandatory: "false", description: "customer's company name"}
-    - { name: "title", mandatory: "true", description: "customer's title id. See [title loop](http://doc.thelia.net/en/documentation/loop/title.html)"}
-    - { name: "firstname", mandatory: "true", description: "customer's first name"}
-    - { name: "lastname", mandatory: "true", description: "customer's last name"}
-    - { name: "address1", mandatory: "true", description: "customer's street address"}
-    - { name: "address2", mandatory: "false", description: "customer's street address complement"}
-    - { name: "address3", mandatory: "false", description: "customer's street address complement"}
-    - { name: "zipcode", mandatory: "true", description: "customer's zip code"}
-    - { name: "city", mandatory: "true", description: "customer's city"}
-    - { name: "country", mandatory: "true", description: "customer's country id"}
-    - { name: "phone", mandatory: "false", description: "customer's phone"}
-    - { name: "cellphone", mandatory: "false", description: "customer's cell phone"}
-    - { name: "email", mandatory: "true", description: "customer's email address"}
-    - { name: "password", mandatory: "true", description: "customer's password. min length : 4"}
-    - { name: "password_confirm", mandatory: "true", description: "customer's password verification. Check if password and password_confirm are the same"}
-    - { name: "agreed", mandatory: "true", description: "for the customer to accept the terms and conditions"}
-    - { name: "newsletter", mandatory: "false", description: "for saving the customer in the newsletter subscriber list"}
-    - { name: "auto_login", mandatory: "false", description: "customer auto log in"}
+    - { name: "company", mandatory: "false", description: "customer company name"}
+    - { name: "title", mandatory: "true", description: "customer title ID. See [title loop](http://doc.thelia.net/en/documentation/loop/title.html)"}
+    - { name: "firstname", mandatory: "true", description: "customer first name"}
+    - { name: "lastname", mandatory: "true", description: "customer last name"}
+    - { name: "address1", mandatory: "true", description: "customer street address"}
+    - { name: "address2", mandatory: "false", description: "customer street address complement"}
+    - { name: "address3", mandatory: "false", description: "customer street address complement"}
+    - { name: "zipcode", mandatory: "true", description: "customer zip code"}
+    - { name: "city", mandatory: "true", description: "customer city"}
+    - { name: "country", mandatory: "true", description: "customer country id"}
+    - { name: "phone", mandatory: "false", description: "customer phone"}
+    - { name: "cellphone", mandatory: "false", description: "customer cell phone"}
+    - { name: "email", mandatory: "true", description: "customer email address"}
+    - { name: "password", mandatory: "true", description: "customer password. min length : 4"}
+    - { name: "password_confirm", mandatory: "true", description: "customer password verification. Thelia will check if password and password_confirm are identical"}
+    - { name: "agreed", mandatory: "true", description: "If true, the customer has accepted the store's terms and conditions."}
+    - { name: "newsletter", mandatory: "false", description: "If true, the customer is added to the newsletter subscribers list"}
+    - { name: "auto_login", mandatory: "false", description: "If true, enables automatic customer login for future visits"}
 lang: en
 
 ---

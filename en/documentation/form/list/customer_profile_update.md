@@ -1,15 +1,15 @@
 ---
 layout: form
-title: customer update profile
+title: customer profile update
 form_name: thelia.front.customer.profile.update
 sidebar: form
 subnav: form_list_customer_updateprofile
 fields:
-    - { name: "title", mandatory: "true", description: "customer's title id. See [title loop](http://doc.thelia.net/en/documentation/loop/title.html)"}
-    - { name: "firstname", mandatory: "true", description: "customer's first name"}
-    - { name: "lastname", mandatory: "true", description: "customer's last name"}
-    - { name: "email", mandatory: "true", description: "customer's email address"}
-    - { name: "newsletter", mandatory: "false", description: "for saving the customer in the newsletter subscriber list"}
+    - { name: "title", mandatory: "true", description: "customer title ID. See [title loop](http://doc.thelia.net/en/documentation/loop/title.html)"}
+    - { name: "firstname", mandatory: "true", description: "customer first name"}
+    - { name: "lastname", mandatory: "true", description: "customer last name"}
+    - { name: "email", mandatory: "true", description: "customer email address"}
+    - { name: "newsletter", mandatory: "false", description: "If true, the customer is added to the newsletter subscribers list. If false, he/she is removed from this list."}
 lang: en
 
 ---

@@ -7,8 +7,8 @@ subnav: form_list_contact
 fields:
     - { name: "name", mandatory: "true", description: "name of the customer who is contacting you"}
     - { name: "email", mandatory: "true", description: "email of the customer who is contacting you"}
-    - { name: "subject", mandatory: "true", description: "message's subject"}
-    - { name: "message", mandatory: "true", description: "message's content"}
+    - { name: "subject", mandatory: "true", description: "Subject of the message"}
+    - { name: "message", mandatory: "true", description: "content of the message"}
 
 lang: en
 

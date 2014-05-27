@@ -5,10 +5,10 @@ form_name: thelia.front.customer.login
 sidebar: form
 subnav: form_list_customerlogin
 fields :
-    - { name: "email", mandatory: "true", description: "customer's email address"}
-    - { name: "account", mandatory: "true", description: "check if the customer already had an account", values: [
-        {value: "0", description: "The customer is a new customer"},
-        {value: "1", description: "The customer already had an account"}
+    - { name: "email", mandatory: "true", description: "customer email address"}
+    - { name: "account", mandatory: "true", description: "Flag set by the customer to specify if he/she already has a customer account", values: [
+        {value: "0", description: "The customer is a new customer, and wishes to create a customer account"},
+        {value: "1", description: "The customer is a returning customer, and already has an account"}
     ]}
     - { name: "password", mandatory: "true", description: "customer's password"}
 lang: en

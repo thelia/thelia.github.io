@@ -1,11 +1,11 @@
 ---
 layout: form
-title: Newsletter
+title: Newsletter subscription
 form_name: thelia.front.newsletter
 sidebar: form
 subnav: form_list_newsletter
 fields:
-    - { name: "email", mandatory: "true", description: "email subscribing to the newsletter"}
+    - { name: "email", mandatory: "true", description: "E-mail address to add to the newsletter subscribers list"}
 lang: en
 
 ---

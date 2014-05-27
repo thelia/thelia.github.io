@@ -6,21 +6,18 @@ sidebar: form
 subnav: form_list_addresscreate
 fields:
     - { name: "label", mandatory: "true", description: "label for identifying the address"}
-    - { name: "title", mandatory: "true", description: "customer's title id. See [title loop](http://doc.thelia.net/en/documentation/loop/title.html)"}
-    - { name: "firstname", mandatory: "true", description: "customer's first name"}
-    - { name: "lastname", mandatory: "true", description: "customer's last name"}
-    - { name: "address1", mandatory: "true", description: "customer's street address"}
-    - { name: "address2", mandatory: "false", description: "customer's street address complement"}
-    - { name: "address3", mandatory: "false", description: "customer's street address complement"}
-    - { name: "zipcode", mandatory: "true", description: "customer's zip code"}
-    - { name: "city", mandatory: "true", description: "customer's city"}
-    - { name: "country", mandatory: "true", description: "customer's country id"}
-    - { name: "phone", mandatory: "false", description: "customer's phone"}
-    - { name: "cellphone", mandatory: "false", description: "customer's cell phone"}
-    - { name: "email", mandatory: "true", description: "customer's email address"}
-    - { name: "password", mandatory: "true", description: "customer's password. min length : 4"}
-    - { name: "password_confirm", mandatory: "true", description: "customer's password verification. Check if password and password_confirm are the same"}
-    - { name: "is_default", mandatory: "false", description: "send this parameter to true if the address is the default one"}
+    - { name: "title", mandatory: "true", description: "customer title ID. See [title loop](http://doc.thelia.net/en/documentation/loop/title.html)"}
+    - { name: "firstname", mandatory: "true", description: "customer first name"}
+    - { name: "lastname", mandatory: "true", description: "customer last name"}
+    - { name: "address1", mandatory: "true", description: "customer street address"}
+    - { name: "address2", mandatory: "false", description: "customer street address complement"}
+    - { name: "address3", mandatory: "false", description: "customer street address complement"}
+    - { name: "zipcode", mandatory: "true", description: "customer zip code"}
+    - { name: "city", mandatory: "true", description: "customer city"}
+    - { name: "country", mandatory: "true", description: "customer country ID"}
+    - { name: "phone", mandatory: "false", description: "customer phone"}
+    - { name: "cellphone", mandatory: "false", description: "customer cell phone"}
+    - { name: "is_default", mandatory: "false", description: "set this parameter to true if this address is the default one"}
 lang: en
 
 ---

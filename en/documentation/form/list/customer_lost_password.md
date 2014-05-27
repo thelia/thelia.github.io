@@ -5,7 +5,7 @@ form_name: thelia.front.customer.lostpassword
 sidebar: form
 subnav: form_list_customerpassword
 fields :
-    - { name: "email", mandatory: "true", description: "customer's email address"}
+    - { name: "email", mandatory: "true", description: "customer email address"}
 lang: en
 
 ---
