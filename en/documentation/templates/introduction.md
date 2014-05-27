@@ -56,24 +56,3 @@ To select the current template, set the name of the template directory in the fo
 	active-front-template : the front-office template
 	active-mail-template : the mail template
 	active-pdf-template : the PDF template
-
-## Content of a template
-
-Thelia template file names should have the `.html` extension.
-
-First, using [Smarty inheritance](http://www.smarty.net/inheritance) may save a lot of time and code duplication.
-
-The default front office (and back-office) template uses a global layout, in the `layout.tpl` file, which contains template-wide common code and declarations.
-
-## Predefined names ##
-
-Every template should contains specific template files, which are views for Thelia invoked in the Fron Offices controllers. These files are :
-
-- product. html
-- content.html
-- category.html
-- folder.html
-
-
-You can add as many templates as you want. The URL of such templates is `http://www.yourshop.com/template_file_name_without_extension`. For exemple, if your template contains a contact.html
-
