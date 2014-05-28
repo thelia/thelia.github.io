@@ -10,7 +10,7 @@ subnav: plugin_hook
     <h1>Create hooks | <small>Hooks</small></h1>
 </div>
 
-If you want to attach your module to some Hooks, you can do this pretty easily by following these steps :
+If you want to attach your module to some hooks, you can do this pretty easily by following these steps :
 
 
 ##Declare hook
@@ -51,7 +51,7 @@ the ```tag``` tag indicates a method that will handle a defined hook :
 <tag name="hook.event_listener" event="product.additional" type="front" method="onProductAdditionalContents" />
 ```
 
-Some attributes here are optional. ```name="hook.event_listener"``` must be defined as well. The ```event``` attribute represents the hook *code* for which it wants to respond. The ```type``` attribute indicate the context of the hook : frontOffice (default), backOffice, pdf or email. At last, ```method``` attribute indicate the method to be called. By default, it will be based on the name of the hook. eg : for ```product.additional``` hook the method ```onProductAdditional``` will be called (*CamelCase prefixed by on*).
+Some attributes here are optional. ```name="hook.event_listener"``` must be defined as well. The ```event``` attribute represents the hook *code* for which it wants to respond. The ```type``` attribute indicate the context of the hook : frontOffice (default), backOffice, pdf or email. At last, ```method``` attribute indicate the method to be called. By default, it will be based on the name of the hook. eg : for ```product.additional``` hook, the method ```onProductAdditional``` will be called (*CamelCase prefixed by on*).
 
 
 ##Implement the class
@@ -113,7 +113,7 @@ class Front extends BaseHook {
                 }
             }
         }
-        $event->add("This product is not in your cart.");
+        $event->add("<p>This product is not in your cart.</p>");
     }
 
 }
@@ -238,7 +238,7 @@ First, you have to put your templates inside the `Template` directory. The locat
 
 You can override these smarty templates in the current template. You have to put your templates in this directory (with default template) : ```template/frontOffice/default/modules/MyModule/```
 
-The function revisited :
+The revisited function :
 
 ```php
 <?php
