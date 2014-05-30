@@ -1,18 +1,22 @@
 ---
 layout: home
-title: Hooks - Modules
+title: About Hooks - Modules
 sidebar: plugin
 lang: en
 subnav: plugin_hook
 ---
 
 <div class="page-header">
-    <h1>Hooks | <small>Hooks</small></h1>
+    <h1>Hooks : <small>about</small></h1>
+</div>
+
+<div class="alert alert-warning">
+<p>This is a functionality in development and not available in the current version of Thelia</p>
 </div>
 
 When you create a module for Thelia, you might want it to interact with the site in 2 ways :
 
-- The heart of Thelia to generate new behaviors, such as sendign an email to the administrator when a product is no longer available. On Thelia, this functionality is managed by the Events Listener/Dispatcher.
+- The heart of Thelia to generate new behaviors, such as sending an email to the administrator when a product is no longer available. On Thelia, this functionality is managed by the Events Listener/Dispatcher.
 - Changing the display of certain pages. This feature is made ​​possible by **Hooks**
 
 The **Hooks** are actually entry points in the templates in which the modules will insert their own code, add new features and change the appearance of the site.
@@ -52,7 +56,7 @@ In this example, the hook code is ```product.details.top``` and the code generat
 ```
 
 
-### Exemple of a hook block :
+### Example of a hook block :
 
 The smarty block is a little bit more complex but more flexible. This hook provides a list of row, each row having a list of variables. It is used in conjunction with the ```hookFor``` block that allow you to iterate on each row and assign variables to smarty. The variables may be different depending on the hook. You have to refer to the documentation of that hook.
 

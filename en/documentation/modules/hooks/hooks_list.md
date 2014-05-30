@@ -1,15 +1,18 @@
 ---
 layout: home
-title: Hooks - Modules
+title: Hooks List - Modules
 sidebar: plugin
 lang: en
 subnav: plugin_hook
 ---
 
 <div class="page-header">
-    <h1>list of hooks | <small>Hooks</small></h1>
+    <h1>Hooks : <small>list of hooks</small></h1>
 </div>
 
+<div class="alert alert-warning">
+<p>This is a functionality in development and not available in the current version of Thelia</p>
+</div>
 
 ## Front Office 
 

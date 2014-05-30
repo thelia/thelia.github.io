@@ -1,13 +1,17 @@
 ---
 layout: home
-title: Hooks - Modules
+title: Create Hooks - Modules
 sidebar: plugin
 lang: en
 subnav: plugin_hook
 ---
 
 <div class="page-header">
-    <h1>Create hooks | <small>Hooks</small></h1>
+    <h1>Hooks : <small>creation</small></h1>
+</div>
+
+<div class="alert alert-warning">
+<p>This is a functionality in development and not available in the current version of Thelia</p>
 </div>
 
 If you want to attach your module to some hooks, you can do this pretty easily by following these steps :
@@ -58,7 +62,7 @@ Some attributes here are optional. ```name="hook.event_listener"``` must be defi
 
 Your class must extend ```Thelia\Core\Hook\BaseHook```. This class provides some useful methods to generate code or to retrieve objects from the session : cart, customer, ...
 
-When a hook is called from the template, an event for this hook is created and dispatched by Thelia. If your module listens to this hook the method that you indicate in your config.xml is called with as argument the event generated.  
+When a hook is called from the template, an event for this hook is created and dispatched by Thelia. If your module listens to this hook the method that you indicate in your ```config.xml``` is called with as argument the event generated.  
 
 This event could be a ```Thelia\Core\Event\Hook\HookRenderEvent``` (*for hook function*) or ```Thelia\Core\Event\Hook\HookRenderlockEvent``` (*for hook block*). 
 
@@ -126,7 +130,7 @@ Other methods like ```getCart``` are available thanks to BaseHook class :
 
 - ```getOrder``` : the order.
 - ```getCustomer``` : the customer logged in.
-- ```getLang``` the current lang.
+- ```getLang``` the current language.
 - ```getCurrency``` : the current currency.
 - ```getView``` : the current view displayed (category, product, contact, ...)
 - ```getRequest``` : the ```Symfony\Component\HttpFoundation\Request``` object that allows you to access get, post, server parameters ...
@@ -289,13 +293,13 @@ The template (```templates/frontOffice/default/related-content.html```) :
 
 As you can see, you can use **assets** and **translations** in your smarty template. To keep the module isolated and independent, you have to use the concept of domain in the assets and translate functions.
 
-For translate function (eg: intl) you should use the ```d``` attribute with a special code. You can learn more about the intl function on this page : [internationalization](/en/documentation/templates/i18n.html#{intl})
+For translate function (eg: intl) you should use the ```d``` attribute with a special code. You can learn more about the intl function on this page : [internationalizationn](/en/documentation/templates/i18n.html#{intl})
 
 For assets functions (eg: image, images, stylesheets, javascripts) you should use the ```source``` attribute with your module code. 
 
 We've added a system of overriding for assets allowing you to redefine the asset in the template you use. For example, if you use the default template, and use the image ```img/more.png``` in your smarty template, you could override this image in your template if you put your own image in ```template/frontOffice/default/modules/MyModule/img/more.png```
 
 
-###Going even further
+###Going further
 
 TBC
