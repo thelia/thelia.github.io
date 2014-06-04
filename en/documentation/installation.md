@@ -45,7 +45,7 @@ export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
 
 ### Using composer
 
-``` bash
+```bash
 $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar create-project thelia/thelia path/ 2.0.1
 ```
@@ -68,19 +68,19 @@ First of all, you have to configure a vhost as describe in [configuration](/en/d
 
 The install wizard in accessible with your favorite browser :
 
-``` bash
+```bash
 http://yourdomain.tld/[/subdomain_if_needed]/install
 ```
 
 For example, I have thelia downloaded at http://thelia.net and my vhost is correctly configured, I have to reach this address :
 
-``` bash
+```bash
 http://thelia.net/install
 ```
 
 ### Using cli tools
 
-``` bash
+```bash
 $ php Thelia thelia:install
 ```
 
@@ -101,7 +101,7 @@ $ php Thelia admin:create
 
 For a demo with fake but realistic products
 
-``` bash
+```bash
 $ php setup/import.php
 ```
 
@@ -146,7 +146,7 @@ You can create a virtual host and choose web folder for root directory.
 
 To run tests (phpunit required) :
 
-``` bash
+```bash
 $ phpunit
 ```
 
