@@ -8,9 +8,9 @@ subnav: templates_postage
 
 # Postage amount for cart #
 
-The postage loop (smarty block) retrieve the postage amount of the current cart if it exists.
+The postage Smarty block retrieves the postage amount of the current cart if it exists.
 
-The default country used for get the postage amount depends on several elements :
+Thelia uses the following rules to select the country :
 
   - the country of the delivery address of the customer related to the cart if it exists
   - the country saved in cookie if customer have changed the default country
