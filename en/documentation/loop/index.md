@@ -131,6 +131,7 @@ A page loop is therefore linked to a classic loop using the ```rel``` attribute 
 By default, 10 pages are displayed. You can change this value using ```numPage``` parameter.
 
 List of output parameters :
+
 <div class="table-responsive">
     <table class="table table-striped table-bordered">
         <thead>

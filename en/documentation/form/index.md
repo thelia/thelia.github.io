@@ -23,7 +23,7 @@ If the form cannot be processed, the form "action" attribute is then used. Thus,
 
 ## How to declare your forms ?
 
-Like loops, you have to declare your form in config file using <forms> and <form> elements :
+Like loops, you have to declare your form in config file using ```<forms>``` and ```<form>``` elements :
 
 ```xml
 <forms>
@@ -32,7 +32,7 @@ Like loops, you have to declare your form in config file using <forms> and <form
 </forms>
 ```
 
-In the <forms> element, the number of forms is not limited, declare as many form you as you want. For each form, you should define a unique name, and provide the full qualified name for class path (remember: your module must be PSR-0 compliant).
+In the ```<forms>``` element, the number of forms is not limited, declare as many form you as you want. For each form, you should define a unique name, and provide the full qualified name for class path (remember: your module must be PSR-0 compliant).
 
 The form name is mandatory, and will be used in your templates in order to display the form.
 
@@ -42,7 +42,7 @@ Each form class must extend *Thelia\Form\BaseForm*. This class is abstract and y
 
 ### getName method
 
-The *getName* method must return the name of your form. A good practice is to return the same name as the one defined in the <form> configuration element.
+The *getName* method must return the name of your form. A good practice is to return the same name as the one defined in the ```<form>``` configuration element.
 
 ### buildForm method
 

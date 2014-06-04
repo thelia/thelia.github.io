@@ -57,7 +57,7 @@ The assets file names are not the same as the original ones, and some of them ma
 To use this feature, you'll have to add some specific directives to your template files.
 
 > Note that you may create a template which uses an assets directory directly located in the web directory, but you'll miss some interesting features, like css, js and images preprocessing and caching.
- 
+
 
 ### {declare_assets} ###
 
@@ -92,7 +92,7 @@ The valid parameters are :
 
 #### file ####
 
-This is the path to the file (or files, as jokers like '*' are allowed), relative to the template base path.
+This is the path to the file (or files, as jokers like '\*' are allowed), relative to the template base path.
 
 The value of this parameter is a file path, form example `assets/syles/my_style.css`, or a set of files, like `assets/css/*.css`
 
@@ -149,7 +149,7 @@ The valid parameters are :
 
 This is the path to the file, relative to the template base path.
 
-In the file name joker characters, like "*", are **NOT** allowed.
+In the file name joker characters, like "\*", are **NOT** allowed.
 
 #### source ####
 
@@ -174,7 +174,7 @@ The valid parameters are :
 
 #### file ####
 
-This is the path to the file (or files, as jokers like '*' are allowed), relative to the template base path.
+This is the path to the file (or files, as jokers like '\*' are allowed), relative to the template base path.
 
 The value of this parameter is a file path, for example `assets/js/script.js`, or a set of files, like `assets/js/*.js`
 
