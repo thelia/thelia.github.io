@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Developement - Events
+title: Development - Events
 sidebar: development
 lang: en
 subnav: development_events
