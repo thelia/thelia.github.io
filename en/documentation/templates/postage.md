@@ -3,7 +3,7 @@ layout: home
 title: Thelia Template Postage
 sidebar: templates
 lang: en
-subnav: template
+subnav: templates_postage
 ---
 
 # Postage amount for cart #
