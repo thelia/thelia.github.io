@@ -128,7 +128,7 @@ Page loops can be use on any classic loop which has ```page``` parameter. Page l
 
 A page loop is therefore linked to a classic loop using the ```rel``` attribute which must match a classic loop ```name``` attribute.
 
-By default, 10 pages are displayed. You can change this value using ```numPage``` parameter.
+By default, 10 pages are displayed. You can change this value using ```limit``` parameter.
 
 List of output parameters :
 <div class="table-responsive">
@@ -195,7 +195,7 @@ List of output parameters :
 ```smarty
 <div class="text-center">
     <ul class="pagination pagination-centered">
-    {pageloop rel="customer_list" numPage="20"}
+    {pageloop rel="customer_list" limit="20"}
         {if $PAGE == $CURRENT && $PAGE > 2}
             <li><a href="{url path="/admin/customers" page=$PREV}">&lsaquo;</a></li>
         {/if}
