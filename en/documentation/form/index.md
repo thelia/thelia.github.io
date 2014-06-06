@@ -66,7 +66,7 @@ public function buildForm()
 {
     $this->formBuilder
         ->add("field name", "type", array("label" => "field label")
-        ->add("other field", "typ", array("label" => "other field label");
+        ->add("other field", "type", array("label" => "other field label");
 }
 ```
 
