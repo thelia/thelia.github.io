@@ -78,7 +78,9 @@ This command line generate a module with all needed classes, files and folders
 $ php Thelia module:generate:model ModuleName
 ```
 <br />
-This command search the schema.xml file and parse it using Propel command line. This file is explain in this chapter.
+This command search the schema.xml file and parse it using Propel command line.
+<br />
+This file is explain in [Propel documentation](http://propelorm.org/reference/schema.html)
 
 ##How to generate the sql
 
