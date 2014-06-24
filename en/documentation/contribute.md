@@ -40,4 +40,4 @@ $ git push origin new-branch
 
 Next and last step, submit a Pull Request as indicated in the [GitHub documentation](https://help.github.com/articles/creating-a-pull-request).
 
-If you wan't to do more, read this usefull blog post : [http://williamdurand.fr/2013/11/20/on-creating-pull-requests/](http://williamdurand.fr/2013/11/20/on-creating-pull-requests/)
+If you want to do more, read this usefull blog post : [http://williamdurand.fr/2013/11/20/on-creating-pull-requests/](http://williamdurand.fr/2013/11/20/on-creating-pull-requests/)
