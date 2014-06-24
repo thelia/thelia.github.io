@@ -66,13 +66,13 @@ $ php Thelia admin:create
 Pour un site de démo contenant de faux produits (mais réalistes)
 
 ``` bash
-$ php install/import.php
+$ php setup/import.php
 ```
 
 Pour des données sur un environnement de développement
 
 ```bash
-$ php install/faker.php
+$ php setup/faker.php
 ```
 
 (composer doit être installé [`globalement`](http://getcomposer.org/doc/00-intro.md#globally))
