@@ -154,7 +154,7 @@ Here is a complete example with the customer creation form (note that customer t
 	and passed back to the form plugin through the ParserContext.
 	*}
 
-	{if #form_error}<div class="alert alert-error">#form_error_message</div>{/if}
+	{if $form_error}<div class="alert alert-danger">{$form_error_message}</div>{/if}
 
 
     {form_hidden_fields form=$form}
@@ -259,28 +259,28 @@ Here is a complete example with the customer creation form (note that customer t
 
     {form_field form=$form field="email"}
         {form_error form=$form field="email"}
-            {#message}
+            {$message}
         {/form_error}
         <label><span>{intl l="{$label}"}</span></label><input type="email" name="{$name}" value="{$value}" {$attr} ><br />
     {/form_field}
 
     {form_field form=$form field="email_confirm"}
         {form_error form=$form field="email_confirm"}
-            {#message}
+            {$message}
         {/form_error}
         <label><span>{intl l="{$label}"}</span></label><input type="email" name="{$name}" {$attr} ><br />
     {/form_field}
 
     {form_field form=$form field="password"}
         {form_error form=$form field="password"}
-            {#message}
+            {$message}
         {/form_error}
         <label><span>{intl l="{$label}"}</span></label><input type="password" name="{$name}" {$attr} ><br />
     {/form_field}
 
     {form_field form=$form field="password_confirm"}
         {form_error form=$form field="password_confirm"}
-            {#message}
+            {$message}
         {/form_error}
         <label><span>{intl l="{$label}"}</span></label><input type="password" name="{$name}" {$attr} ><br />
     {/form_field}
