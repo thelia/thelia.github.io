@@ -79,7 +79,7 @@ In ```config.xml``` :
         <tag name="hook.event_listener" event="product.top" />
         <!--
         same as :
-        <tag name="hook.event_listener" event="product.top" type="front" method="onProductTop" />
+        <tag name="hook.event_listener" event="product.top" type="front" method="onProductTop" active="1" />
         -->
     </hook>   
 </hooks> 
@@ -205,14 +205,14 @@ The associated template in product page :
 ```html
     <section id="product-tabs">
         
-        {hookBlock name="product.additional" product="{product attr="id"}"}
+        {hookblock name="product.additional" product="{product attr="id"}"}
         
         <ul class="nav nav-tabs" role="tablist">
             <li class="active" role="presentation"><a id="tab1" href="#description" data-toggle="tab" role="tab">{intl l="Description"}</a></li>
 
-            {forHook rel="product.additional"}
+            {forhook rel="product.additional"}
                 <li role="presentation"><a id="tab{$id}" href="#{$id}" data-toggle="tab" role="tab">{$title}</a></li>
-            {/forHook}
+            {/forhook}
 
         </ul>
         <div class="tab-content">
@@ -220,14 +220,14 @@ The associated template in product page :
                 <p>{$DESCRIPTION|default:'N/A' nofilter}</p>
             </div>
             
-            {forHook rel="product.additional"}
+            {forhook rel="product.additional"}
             <div class="tab-pane" id="{$id}" role="tabpanel" aria-labelledby="tab{$id}">
                 {$content nofilter}
             </div>
-            {/forHook}
+            {/forhook}
 
         </div>
-        {/hookBlock}
+        {/hookblock}
     </section>
 ```
 
