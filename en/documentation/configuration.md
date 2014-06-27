@@ -30,8 +30,9 @@ www <- your web root directory
             session
         log
         templates
-        web
+        web <- the only directory accessible by your web server
 ```
+
 
 ### Apache configuration
 
@@ -45,9 +46,14 @@ only the ```web``` directory has to be accessible with apache, you can configure
 
 	<Directory "/var/www/thelia/web">
 	    AllowOverride All
-        Order allow,deny
-        Allow from all
-	</Directory>
+        
+        # on apache 2.2 use :
+        #Order allow,deny
+        #Allow from all
+        
+        # on apache 2.4 use :
+        Require all granted
+    </Directory>
 
 	# Custom log file
     Loglevel warn
