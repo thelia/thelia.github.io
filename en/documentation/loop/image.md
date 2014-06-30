@@ -14,6 +14,7 @@ arguments :
     - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\""}
     - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
     - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}
+    - {name: "brand", description: "a brand identifier. The loop will return this brand's images", example: "brand=\"2\""}
     - {
         name: "source", description: "", example: "source=\"category\"",
         expected_values: [
@@ -21,6 +22,7 @@ arguments :
             {name: "product",     description: ""},
             {name: "folder",            description: ""},
             {name: "content",    description: ""},
+            {name: "brand",    description: ""},
             {name: "module",    description: ""}
         ]
     }

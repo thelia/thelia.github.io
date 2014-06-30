@@ -14,13 +14,15 @@ arguments :
     - {name: "product", description: "a product identifier. The loop will return this product's documents", example: "product=\"2\""}
     - {name: "folder", description: "a folder identifier. The loop will return this folder's documents", example: "folder=\"2\""}
     - {name: "content", description: "a content identifier. The loop will return this content's documents", example: "content=\"2\""}
+    - {name: "brand", description: "a brand identifier. The loop will return this brand's documents", example: "brand=\"2\""}
     - {
         name: "source", description: "", example: "source=\"category\"",
         expected_values: [
             {name: "category",             description: ""},
             {name: "product",     description: ""},
             {name: "folder",            description: ""},
-            {name: "content",    description: ""}
+            {name: "content",    description: ""},
+            {name: "brand",    description: ""}
         ]
     }
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
