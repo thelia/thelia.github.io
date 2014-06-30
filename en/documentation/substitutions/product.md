@@ -9,6 +9,8 @@ prefix: product
 attributes :
     - {name: "id", description: ""}
     - {name: "ref", description: ""}
+    - {name: "default_category", description: ""}
+    - {name: "brand_id", description: ""}
     - {name: "title", description: ""}
     - {name: "chapo", description: ""}
     - {name: "description", description: ""}
