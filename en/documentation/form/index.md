@@ -77,6 +77,54 @@ You can also create your own validator, following the Symfony validator guidelin
 
 The list of available validator constrains is here : [http://symfony.com/doc/current/reference/constraints.html](http://symfony.com/doc/current/reference/constraints.html)
 
+## Fields
+
+Some (but not all) of Symphony form definition attributes are supported :
+
+<table>
+<tr>
+    <td>name</td>
+ 	<td>The name HTML attribute, and the form field name.</td>
+</tr>
+<tr>
+    <td>constraints</td>
+    <td>An array of constraints to be checked against the field value</td>
+</tr>
+<tr>
+    <td>value</td>
+    <td>The value that will be used when rendering (commonly the value HTML attribute).</td>
+</tr>
+<tr>
+    <td>read_only</td>
+    <td>If true, readonly="readonly" is added to the field.</td>
+</tr>
+<tr>
+    <td>disabled</td>
+    <td>If true, disabled="disabled" is added to the field.</td>
+</tr>
+<tr>
+    <td>required</td>
+    <td>If true, a required attribute is added to the field to activate HTML5 validation. </td>
+</tr>
+<tr>
+    <td>max_length</td>
+    <td>Adds a maxlength HTML attribute to the element.</td>
+</tr>
+<tr>
+    <td>label</td>
+    <td>The string label that will be rendered.</td>
+</tr>
+<tr>
+    <td>attr</td>
+    <td>A key-value array that will be rendered as HTML attributes on the field.</td>
+</tr>
+<tr>
+    <td>label_attr</td>
+    <td>A key-value array that will be rendered as HTML attributes on the label.</td>
+</tr>
+</table>
+
+
 ## Example
 
 Below a complete form example, the customer creation form.
@@ -243,4 +291,58 @@ class CustomerCreation extends BaseForm
     }
 }
 ```
+
+### Back-office
+
+Thelia provides the `StandardDescriptionFieldsTrait` trait which processes title, locale, chapo, description and postscriptum fields, used on a lot of Thelia objects.
+
+If you want to use such field sets in your forms, just use the trait in your form definition class, and invoke the following method for adding the field to your builder :
+
+ $this->addStandardDescFields($array);
+
+The array parameter is a list of fields that should not be added bit the trait, for example the title if you have defined a more specific field than the one that exists in the trait.
+
+In your template, you just have to include the `includes/standard-description-form-fields.html` template fragment to render these fields.
+
+Example with the 'brand' modification form :
+
+```smarty
+{form name="thelia.admin.brand.modification"}
+
+    <form method="POST" action="{url path="/admin/brand/save/{$ID}"}" {form_enctype form=$form} class="clearfix">
+
+        {form_hidden_fields form=$form}
+
+        {render_form_field form=$form field="success_url" value={url path="/admin/brand"}}
+        {render_form_field form=$form field="locale" value={$edit_language_locale}}
+
+        {if $form_error}
+            <div class="alert alert-danger">{$form_error_message}</div>
+        {/if}
+
+        <div class="row">
+            <div class="col-md-8">
+                {include file="includes/standard-description-form-fields.html"}
+            </div>
+
+            <div class="col-md-4">
+                {render_form_field form=$form field="visible"}
+
+                {custom_render_form_field form=$form field='logo_image_id'}
+                    <select {form_field_attributes form=$form field='logo_image_id' extra_class='brand-image-selector'} >
+                        <option value="">{intl l="No logo image"}</option>
+
+                        {loop name="brand-images" type="image" brand=$ID width="90" height="90" resize_mode="crop"}
+                            <option value="{$ID}" data-img-src="{$IMAGE_URL}" {if $LOGO_IMAGE_ID == $ID}selected="selected"{/if}>{$TITLE}</option>
+                        {/loop}
+                    </select>
+                {/custom_render_form_field}
+            </div>
+        </div>
+    </form>
+{/form}
+```
+
+
+
 
