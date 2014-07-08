@@ -19,7 +19,7 @@ arguments :
     - {name: "exclude", description: "A single or a list of content ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_folder", description: "A single or a list of folder ids. If a content is in multiple folders which are not all excluded it will not be excluded.", example: "exclude_folder=\"2\", exclude_folder=\"1,4,7\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
-    - {name: "tile", description: "A title string", example: "title=\"foo\""}
+    - {name: "title", description: "A title string", example: "title=\"foo\""}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
