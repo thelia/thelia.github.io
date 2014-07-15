@@ -1,7 +1,7 @@
 ---
 layout: loop
 title: Accessory Loop
-description: Accessory loop lists accessories of a product. It behaves like a product loop therefore you might use all <a href="/en/documentation/loop/product.html">product loop</a> arguments and outputs.
+description: The accessory loop lists products accessories. As an accessory is itself a product, this loop behaves like a product loop. Therefore you can use all <a href="/en/documentation/loop/product.html">product loop</a> arguments and outputs.
 sidebar: loop
 lang: en
 subnav: loop_accessory
@@ -20,7 +20,9 @@ arguments :
           }
     - {name: "all <a href=\"/en/documentation/loop/product.html\">product loop</a> arguments", example: "order=\"min_price\", max_price=\"100\""}
 outputs :
-    - {name: "all <a href=\"/en/documentation/loop/product.html\">product loop</a> outputs"}
+    - {name: "$ID", description: "The accessory ID"}
+    - {name: "$ACCESSORY_ID", description: "The product ID of the accessory"}
+    - {name: "all <a href=\"/en/documentation/loop/product.html\">product loop</a> outputs, except ID, which is the accessory ID"}
 ---
 
 <div class="description large-12">
