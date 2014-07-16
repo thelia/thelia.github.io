@@ -21,10 +21,12 @@ arguments :
 
 outputs :
     - {name: "$LOCALE", description: "the locale used for this loop"}
+    - {name: "$ATTRIBUTE_ID", description: "the attribute id"}
     - {name: "$ATTRIBUTE_TITLE", description: "the attribute title"}
     - {name: "$ATTRIBUTE_CHAPO", description: "the attribute chapo"}
     - {name: "$ATTRIBUTE_DESCRIPTION", description: "the attribute description"}
     - {name: "$ATTRIBUTE_POSTSCRIPTUM", description: "the attribute postscriptum"}
+    - {name: "$ATTRIBUTE_AVAILABILITY_ID", description: "the attribute availability id"}
     - {name: "$ATTRIBUTE_AVAILABILITY_TITLE", description: "the attribute availability title"}
     - {name: "$ATTRIBUTE_AVAILABILITY_CHAPO", description: "the attribute availability chapo"}
     - {name: "$ATTRIBUTE_AVAILABILITY_DESCRIPTION", description: "the attribute availability description"}
@@ -45,7 +47,7 @@ examples :
 {loop name="pse" type="product_sale_elements" product="$PRODUCT_ID"}
     <div>
         {loop name="combi" type="attribute_combination" product_sale_elements="$ID"}
-        {$ATTRIBUTE_TITLE} = {$ATTRIBUTE_AVAILABILITY_TITLE}<br />
+        {$ATTRIBUTE_ID}. {$ATTRIBUTE_TITLE} = {$ATTRIBUTE_AVAILABILITY_ID}. {$ATTRIBUTE_AVAILABILITY_TITLE}<br />
         {/loop}
         <br />{$WEIGHT} g
         <br /><strong>{if $IS_PROMO == 1} {$PROMO_PRICE} € (instead of {$PRICE}) {else} {$PRICE} € {/if}</strong>
