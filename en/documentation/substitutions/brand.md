@@ -5,7 +5,7 @@ description: Brand Substitution provides current brand, identified by `brand_id`
 sidebar: substitution
 lang: en
 subnav: substitution_brand
-prefix: content
+prefix: brand
 attributes :
     - {name: "id", description: ""}
     - {name: "title", description: ""}
