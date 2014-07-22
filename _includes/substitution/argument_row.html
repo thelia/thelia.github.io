@@ -1,0 +1,21 @@
+{% if page.arguments != nil %}
+<h3>
+    Arguments
+</h3>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        {% for argument in page.arguments %}
+        <tr>
+            <td>
+                {{ argument.name }}
+            </td>
+            <td>
+                {{ argument.description }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endif %}
