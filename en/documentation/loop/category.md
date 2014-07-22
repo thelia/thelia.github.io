@@ -14,7 +14,7 @@ arguments :
     - {name: "product", description: "A single product id.", example: "product=\"3\""}
     - {name: "exclude_product", description: "A single product id to exclude.", example: "exclude_product=\"3\""}
     - {name: "current", description: "A boolean value which allows either to exclude current category from results either to match only this category", example: "current=\"yes\""}
-    - {name: "not_empty", description: "A boolean value.", example: "not_empty=\"yes\"", default: "no"}
+    - {name: "not_empty", description: "(**not implemented yet**) A boolean value.", example: "not_empty=\"yes\"", default: "no"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {name: "need_count_child", descripion: "A boolean. If set to true, count how many subcategories contains the current category", example: "need_count_child=\"yes\"", default: "false"}
     - {name: "need_product_count", description: "A boolean. If set to true, count how many products contains the current category", example: "need_product_count=\"yes\"", default: "false"}
