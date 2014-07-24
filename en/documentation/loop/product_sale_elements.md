@@ -24,18 +24,20 @@ arguments :
             ]
           }
 outputs :
-    - {name: "$ID", description: "the product sale elements id"}
-    - {name: "$PRICE", description: "the product sale elements price"}
-    - {name: "$PRICE_TAX", description: "the product sale elements price tax"}
-    - {name: "$TAXED_PRICE", description: "the product sale elements taxed price"}
-    - {name: "$PROMO_PRICE", description: "the product sale elements promo price"}
-    - {name: "$PROMO_PRICE_TAX", description: "the product sale elements promo price tax"}
-    - {name: "$TAXED_PROMO_PRICE", description: "the product sale elements taxed promo price"}
+    - {name: "$ID", description: "the product sale element id"}
+    - {name: "$IS_DEFAULT", description: "returns if the product sale element is the default product sale element for the product"}
     - {name: "$IS_PROMO", description: "returns if the product sale element is in promo"}
     - {name: "$IS_NEW", description: "returns if the product sale element is new"}
-    - {name: "$WEIGHT", description: "the product sale elements weight"}
-    - {name: "$QUANTITY", description: "the product sale elements stock quantity"}
-    - {name: "$EAN_CODE", description: "the product sale elements EAN Code"}
+    - {name: "$WEIGHT", description: "the product sale element weight"}
+    - {name: "$QUANTITY", description: "the product sale element stock quantity"}
+    - {name: "$REF", description: "the product sale element reference"}
+    - {name: "$EAN_CODE", description: "the product sale element EAN Code"}
+    - {name: "$PRICE", description: "the product sale element price"}
+    - {name: "$PRICE_TAX", description: "the product sale element price tax"}
+    - {name: "$TAXED_PRICE", description: "the product sale element taxed price"}
+    - {name: "$PROMO_PRICE", description: "the product sale element promo price"}
+    - {name: "$PROMO_PRICE_TAX", description: "the product sale element promo price tax"}
+    - {name: "$TAXED_PROMO_PRICE", description: "the product sale element taxed promo price"}
 ---
 
 <div class="description large-12">
