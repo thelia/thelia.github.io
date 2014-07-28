@@ -7,7 +7,7 @@ lang: en
 subnav: loop_category_tree
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : false, versionable : false }
-type: category
+type: category-tree
 arguments :
     - {name: "category", description: "A single category id.", example: "category=\"2\"", mandatory: "true"}
     - {name: "depth", description: "The max depth", example: "depth=\"5\""}
@@ -24,3 +24,21 @@ outputs :
     - {name: "$PREV_LEVEL", description: ""}
 
 ---
+
+<div class="description large-12">
+    I want to display a select list with all visible categories.
+</div>
+
+<div class="code large-12">
+
+{% highlight smarty %}
+
+<select name="category">
+    {loop name="categories-tree" type="category-tree" category="0"}
+        <option value="{$ID}">{"-"|str_repeat:$LEVEL} {$TITLE} {if $CHILD_COUNT != 0}({$CHILD_COUNT}){/if}</option>
+    {/loop}
+</select>
+
+{% endhighlight %}
+
+</div>&nbsp;

@@ -1,3 +1,4 @@
+{% if page.attributes != nil %}
 <h3>
     {% if page.attribute != nil and page.attribute != '' %}`{{ page.attribute }}` available values{% else %}Attributes{% endif %}
 </h3>
@@ -21,6 +22,7 @@
     <strong>*</strong> : this is a DateTime information.<br />
     You can therefore specify 2 optional specific parameters :<br />
     - `output` which takes 'date', 'datetime' or 'time' as value<br />
-    - `format` which take a <a href="http://php.net/manual/fr/function.date.php" target="_blank">PHP date format</a><br />
+    - `format` which take a <a href="http://php.net/manual/fr/function.date.php" target="_blank">PHP date format</a>. The locale format for the current language will be used if this parameter is empty or missing<br />
     ie : {product attr='createdAt' output='date' format='Y-m-d'}
 </p>
+{% endif %}
