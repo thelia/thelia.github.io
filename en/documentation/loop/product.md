@@ -31,7 +31,7 @@ arguments :
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {name: "brand", description: "A single or a list of brand ids.", example: "brand=\"2\", brand=\"1,4,7\""}
     - {name: "current", description: "A boolean value which allows either to exclude current product from results either to match only this product", example: "current=\"yes\""}
-    - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
+    - {name: "visible", description: "A boolean value or * for all", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of product ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_category", description: "A single or a list of category ids. If a product is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"2\", exclude_category=\"1,4,7\""}
     - {name: "feature_availability", description: "A list of mandatory features and the feature_availability expected for these.", example: "feature_availability=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_availability 1 or 2 AND feature 2 must be set to any feature_availability AND feature 3 must have feature_availability 10 or both feature_availability 11 and 12"}
