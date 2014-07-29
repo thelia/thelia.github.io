@@ -7,7 +7,7 @@ lang: en
 subnav: loop_brand
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : false, versionable : false }
-type: content
+type: brand
 arguments :
     - {name: "id", description: "A single or a list of brand ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "current", description: "A boolean value which allows either to exclude current brand from results either to match only this content", example: "current=\"yes\""}
