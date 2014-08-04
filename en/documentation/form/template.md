@@ -115,6 +115,7 @@ These plugins uses field data defined in the form definition to build the HTML f
 - field : the field name
 - value : a value, which will be used if the form field value is not defined.
 - extra_class : one or more extra classes; that will be added to the standard input field class.
+- show_label : if false, the field label and help text are not displayed.
 - template : name of the template fragments that will be used to generate the code (see "Templates Fragments" below)
 
 In most cases, you'll use `render_form_field`. However, in some cases you need to perform specific  operations. For example if the field value should be defined using a loop. In such cases, you'll use the `custom_render_form_field` block, providing yourself the field HTML code.
