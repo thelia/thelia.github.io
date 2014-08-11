@@ -99,7 +99,7 @@ outputs :
     - {name: "$TITLE", description: "the product title"}
     - {name: "$CHAPO", description: "the product chapo"}
     - {name: "$DESCRIPTION", description: "the product description"}
-    - {name: "$POSTSCTIPTUM", description: "the product postscriptum"}
+    - {name: "$POSTSCRIPTUM", description: "the product postscriptum"}
     - {name: "$META_TITLE", description: "the product meta title"}
     - {name: "$META_DESCRIPTION", description: "the product meta description"}
     - {name: "$META_KEYWORDS", description: "the product meta keywords"}

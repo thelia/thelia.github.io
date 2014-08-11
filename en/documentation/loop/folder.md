@@ -34,7 +34,7 @@ outputs :
     - {name: "$TITLE", description: "the folder title"}
     - {name: "$CHAPO", description: "the folder chapo"}
     - {name: "$DESCRIPTION", description: "the folder description"}
-    - {name: "$POSTSCTIPTUM", description: "the folder postscriptum"}
+    - {name: "$POSTSCRIPTUM", description: "the folder postscriptum"}
     - {name: "$META_TITLE", description: "the folder meta title"}
     - {name: "$META_DESCRIPTION", description: "the folder meta description"}
     - {name: "$META_KEYWORDS", description: "the folder meta keywords"}
