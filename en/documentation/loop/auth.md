@@ -14,12 +14,12 @@ arguments :
     - {name: "role", description: "A comma separated list of user roles", mandatory: "true", example: "role=\"ADMIN\" or can be role=\"CUSTOMER\""}
     - {name: "resource", description: "A comma separated list of resources"}
     - {name: "module", description: "A comma separated list of modules"}
-    - {name: "access", description: "A comma separated list of access. If empty or missing, the authorization is checked against the roles only",
+    - {name: "access", description: "A comma separated list of access, . If empty or missing, the authorization is checked against the roles only",
         expected_values: [
-            {name: "view"},
-            {name: "update"},
-            {name: "create"},
-            {name: "delete"}
+            {name: "VIEW"},
+            {name: "UPDATE"},
+            {name: "CREATE"},
+            {name: "DELETE"}
         ]
     }
 ---
@@ -32,10 +32,10 @@ arguments :
 
 {% highlight smarty %}
 
-{loop name="top-bar-search" type="auth" roles="ADMIN" permissions="admin.search"}
-    <form class="form-search" action="{url path='/admin/search'}">
-        ... form content ...
-	</form>
+{loop type="auth" name="can_create" role="ADMIN" resource="admin.administrator" access="CREATE"}
+    <a title="{intl l='Create a new administrator'}" href="#administrator_create_dialog" data-toggle="modal">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
 {/loop}
 
 
@@ -46,7 +46,8 @@ arguments :
  <div class="postscriptum large-12">
 
     The role is ADMIN, which mean that the current user should have the "ADMIN" role.
-    The permission is "admin.search", which is the identifier of the search permission.
+    The permission is "admin.administrator", which is the identifier of the administrator permission.
+    According to the access attribute, the current user should have the CREATE permission.
 
 </div>
 
@@ -58,7 +59,7 @@ arguments :
 
 {% highlight smarty %}
 
-{loop type="auth" name="customer_info_block" roles="CUSTOMER"}
+{loop type="auth" name="customer_info_block" role="CUSTOMER"}
     <p>Your are logged in. <a href="{viewurl view='index' action='logoutCustomer'}">Logout</a></p>
 {/loop}
 

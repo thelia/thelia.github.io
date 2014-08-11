@@ -42,7 +42,7 @@ outputs :
     - {name: "$TITLE", description: "the content title"}
     - {name: "$CHAPO", description: "the content chapo"}
     - {name: "$DESCRIPTION", description: "the content description"}
-    - {name: "$POSTSCTIPTUM", description: "the content postscriptum"}
+    - {name: "$POSTSCRIPTUM", description: "the content postscriptum"}
     - {name: "$META_TITLE", description: "the content meta title"}
     - {name: "$META_DESCRIPTION", description: "the content meta description"}
     - {name: "$META_KEYWORDS", description: "the content meta keywords"}

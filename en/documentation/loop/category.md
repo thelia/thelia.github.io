@@ -38,7 +38,7 @@ outputs :
     - {name: "$TITLE", description: "the category title"}
     - {name: "$CHAPO", description: "the category chapo"}
     - {name: "$DESCRIPTION", description: "the category description"}
-    - {name: "$POSTSCTIPTUM", description: "the category postscriptum"}
+    - {name: "$POSTSCRIPTUM", description: "the category postscriptum"}
     - {name: "$META_TITLE", description: "the category meta title"}
     - {name: "$META_DESCRIPTION", description: "the category meta description"}
     - {name: "$META_KEYWORD", description: "the category meta keyword"}
