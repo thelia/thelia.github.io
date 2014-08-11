@@ -85,6 +85,6 @@ In Thelia, a formatter is a service. If you to register your formatter into the 
 
 ```xml
 <service id="my.super.formatter" class="My\Super\Formatter">
-    <tag name="thelia.manager.formatter" />
+    <tag name="thelia.formatter" />
 </service>
 ```

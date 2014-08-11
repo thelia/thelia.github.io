@@ -98,10 +98,10 @@ $zip->getExtension();
 ```
 
 ## Create an archive builder
-If you want to create an archive builder, create a class that extends ```Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder``` and implement the functions above, then create a service with the tag ```thelia.manager.archive_builder```, like this:
+If you want to create an archive builder, create a class that extends ```Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder``` and implement the functions above, then create a service with the tag ```thelia.archive_builder```, like this:
 
 ```xml
-<service id="thelia.manager.zip_archive_builder" class="Thelia\Core\FileFormat\Archive\ArchiveBuilder\ZipArchiveBuilder">
-    <tag name="thelia.manager.archive_builder" />
+<service id="thelia.zip_archive_builder" class="Thelia\Core\FileFormat\Archive\ArchiveBuilder\ZipArchiveBuilder">
+    <tag name="thelia.archive_builder" />
 </service>
 ```
