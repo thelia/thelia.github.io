@@ -1,26 +1,28 @@
 ---
 layout: home
 title: Feature - Export
-sidebar: import_export
+sidebar: features
 lang: en
 subnav: do_export
 ---
 ---
 
-# Thelia Exports
+# Thelia exports
 
 ## How to create an export ?
 
-To create an export you have to create a class that extends Thelia\ImportExport\Export\ExportHandler . You have to implement the methods:
+To create an export you have to create a class that extends ```Thelia\ImportExport\Export\ExportHandler```. You have to implement the methods:
+
 ```php
  public function getHandledTypes();
  public function buildDataSet(Lang $lang);
 ```
 
-```getHandledTypes``` must return an array or a string, this is used to match with Formatters ( see [Formatting](#formatting) ), an export may be handled by only one formatter, are by all.
+```getHandledTypes``` must return an array or a string, this is used to match with [Formatters](formatters.html), an export may be handled by only one formatter, are by all.
 To match them, we use strings defined in ```Thelia\Core\FileFormat\FormatType```
 
 ```buildDataSet``` may return 3 types of object:
+
 - An array
 - A Propel ModelCriteria ( Query objects )
 - A BaseLoop
@@ -30,6 +32,7 @@ In the case of a ModelCriteria, the query is executed and the result is placed f
 In the case of a BaseLoop, the loop is executed and the results are explored, placed into an array, and placed for formatting.
 
 Two other methods may be useful:
+
 ```php
 protected function getAliases();
 protected function getDefaultOrder();
@@ -40,6 +43,7 @@ protected function getDefaultOrder();
 ```getDefaultOrder``` has to return a array. Place your aliased names in the order you want them to appear in the file ( for formatters which support this option ( CSV ) ).
 
 Moreover, you have an helper for the loops:
+
 ```php
 public function buildDataSet(Lang $lang) {
     return $this->renderLoop("myLoopName", ["my"=>1, "super"=>["arguments"]]);
@@ -47,10 +51,11 @@ public function buildDataSet(Lang $lang) {
 ```
 And you're done with your export ;)
 
-### Register an export <a name="register_export"></a>
+## Register an export <a name="register_export"></a>
 To register an export in a module, you have to edit your Config/config.xml
 
 Your have to add in "exports" a tag with that skeleton:
+
 ```xml
 <exports>
     <export id="your.export.id" class="Your\ExportHandler" category_id="the.category_id">
@@ -70,12 +75,15 @@ Your have to add in "exports" a tag with that skeleton:
 ```
 
 Thelia export categories ids are:
+
 - thelia.export.customer : Exports conserning Customers
 - thelia.export.products : Exports conserning Products
 - thelia.export.content : Exports conserning Contents
 - thelia.export.orders : Exports conserning Orders
+- thelia.export.modules : Module related exports
 
-If you want to create a new category, you have to put in your Config/config.xml:
+If you want to create a new category, you have to put in your ```Config/config.xml```:
+
 ```xml
 <export_categories>
         <export_category id="your.category.id">
