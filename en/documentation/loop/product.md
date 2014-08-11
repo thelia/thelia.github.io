@@ -80,6 +80,7 @@ outputs :
     - {name: "$BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
     - {name: "$BEST_PRICE_TAX", description: "the best price taxes amount"}
     - {name: "$BEST_TAXED_PRICE", description: "the best price including taxes"}
+    - {name: "$PSE_COUNT", description: "<strong>Only available if complex='false'</strong><br />the number of product sale elements"}
     - {name: "$PRODUCT_SALE_ELEMENT", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements id"}
     - {name: "$WEIGHT", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements weight"}
     - {name: "$QUANTITY", description: "<strong>Only available if complex='false'</strong><br />the default product sale elements stock quantity"}
