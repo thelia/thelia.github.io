@@ -25,24 +25,24 @@ outputs:
     - {"name":"delivery_company", "description":"The delivery address' company"}
     - {"name":"delivery_first_name", "description":"The delivery address' first name"}
     - {"name":"delivery_last_name", "description":"The delivery address' last name"}
-    - {"name":"delivery_address1", "description":""}
-    - {"name":"delivery_address2", "description":""}
-    - {"name":"delivery_address3", "description":""}
-    - {"name":"delivery_zip_code", "description":""}
-    - {"name":"delivery_city", "description":""}
-    - {"name":"delivery_country", "description":""}
-    - {"name":"delivery_phone", "description":""}
+    - {"name":"delivery_address1", "description":"The delivery street address 1"}
+    - {"name":"delivery_address2", "description":"The delivery street address 2"}
+    - {"name":"delivery_address3", "description":"The delivery street address 3"}
+    - {"name":"delivery_zip_code", "description":"The delivery address' zipcode"}
+    - {"name":"delivery_city", "description":"The delivery address' city"}
+    - {"name":"delivery_country", "description":"The delivery address' country"}
+    - {"name":"delivery_phone", "description":"The delivery address' phone"}
     - {"name":"invoice_title", "description":"The invoice address' title (Mr, Miss, ...)"}
     - {"name":"invoice_company", "description":"The invoice address' company"}
     - {"name":"invoice_first_name", "description":"The invoice address' first name"}
     - {"name":"invoice_last_name", "description":"The invoice address' last name"}
-    - {"name":"invoice_address1", "description":""}
-    - {"name":"invoice_address2", "description":""}
-    - {"name":"invoice_address3", "description":""}
-    - {"name":"invoice_zip_code", "description":""}
-    - {"name":"invoice_city", "description":""}
-    - {"name":"invoice_country", "description":""}
-    - {"name":"invoice_phone", "description":""}
+    - {"name":"invoice_address1", "description":"The invoice street address 1"}
+    - {"name":"invoice_address2", "description":"The invoice street address 2"}
+    - {"name":"invoice_address3", "description":"The invoice street address 3"}
+    - {"name":"invoice_zip_code", "description":"The invoice address' zipcode"}
+    - {"name":"invoice_city", "description":"The invoice address' city"}
+    - {"name":"invoice_country", "description":"The invoice address' country"}
+    - {"name":"invoice_phone", "description":"The invoice address' phone"}
     - {"name":"product_title", "description":"The products' names"}
     - {"name":"price", "description":"The products' prices without taxes"}
     - {"name":"taxed_price", "description":"The products' taxed prices"}

@@ -1,7 +1,7 @@
 ---
 layout: export
 title: Customers export
-description: Export your customers
+description: Export your contents and folders
 sidebar: features
 lang: en
 subnav: thelia_customers_export
@@ -19,17 +19,17 @@ outputs:
     - {"name": "last_order_amount", "description":"The amount of the customer's last order"}
     - {"name": "last_order_date", "description":"The date of the customer's last order"}
     - {"name": "label", "description":"The customer addresses' label"}
-    - {"name": "address_title", "description":"The customer addresses' title (Mr, Miss, ...)"}
-    - {"name": "address_first_name", "description":"The customer addresses' first name"}
-    - {"name": "address_last_name", "description":"The customer addresses' last name"}
-    - {"name": "company", "description":"The customer addresses' company name"}
-    - {"name": "address1", "description":""}
-    - {"name": "address2", "description":""}
-    - {"name": "address3", "description":""}
-    - {"name": "zipcode", "description":""}
-    - {"name": "city", "description":""}
-    - {"name": "country", "description":""}
-    - {"name": "phone", "description":""}
-    - {"name": "cellphone", "description":""}
+    - {"name": "address_title", "description":"The customer addresses' titles (Mr, Miss, ...)"}
+    - {"name": "address_first_name", "description":"The customer addresses' first names"}
+    - {"name": "address_last_name", "description":"The customer addresses' last names"}
+    - {"name": "company", "description":"The customer addresses' company names"}
+    - {"name": "address1", "description":"The customer street addresses' 1"}
+    - {"name": "address2", "description":"The customer street addresses' 2"}
+    - {"name": "address3", "description":"The customer street addresses' 3"}
+    - {"name": "zipcode", "description":"The customer addresses' zicodes"}
+    - {"name": "city", "description":"The customer addresses' cities"}
+    - {"name": "country", "description":"The customer addresses' countries"}
+    - {"name": "phone", "description":"The customer addresses' phones"}
+    - {"name": "cellphone", "description":"The customer addresses' cellphones"}
     - {"name": "is_default_address", "description":"1 if the address is the customer's default, 0 otherwise"}
 ---

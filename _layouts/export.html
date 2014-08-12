@@ -26,7 +26,28 @@
 
             {% endfor %}
             <hr />
-                
+            
+            {% if page.has_images || page.has_documents %}
+            <div class="row">
+                {% if page.has_images %}
+                    <div class="col-md-6">
+                        <div class="alert alert-success">
+                            This type can export images.
+                        </div>
+                    </div>
+                {% endif %}
+                {% if page.has_documents %}
+                    <div class="col-md-6">
+                        <div class="alert alert-success">
+                            This type can export documents.
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            <h2>Outputs</h2>
+            
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
                     <thead>
@@ -52,6 +73,38 @@
                     </tbody>
                 </table>
             </div>
+            
+            {% if page.opt_outputs %}
+            
+                    <h2> Optionnal outputs </h2>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Output name</th>
+                                    <th>Output description</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                {% for output in page.opt_outputs %}
+                                
+                                <tr>
+                                    <td class="col-md-4">
+                                        {{ output.name }}
+                                    </td>
+                                    <td class="col-md-8">
+                                        {{ output.description }}
+                                    </td>
+                                </tr>
+                                
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+            
+            {% endif %}
         </main>
 
     </section>

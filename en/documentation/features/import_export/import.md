@@ -74,6 +74,6 @@ If you want to create a new category, you have to put in your Config/config.xml:
         </import_category>
         <import_category id="your.other.category.id">
             <!-- here's another import category -->
-        </import_category
+        </import_category>
 </import_categories>
 ```
