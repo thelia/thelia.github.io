@@ -4,7 +4,7 @@ title: Products untaxed prices import
 description: Import your product untaxed prices
 sidebar: features
 lang: en
-subnav: thelia_product_prices_import
+subnav: thelia_untaxed_prices_import
 
 inputs:
     - {"name":"ref", "description":"The product sale element's ref"}
