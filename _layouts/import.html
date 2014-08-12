@@ -1,0 +1,97 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js oldie ie7" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="{{page.lang}}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{{page.lang}}" class="no-js"> <!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+
+<body itemtype="http://schema.org/WebPage" itemscope>
+
+{% include navbar.html %}
+
+<section role="document" class="container">
+    <section class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3" itemtype="http://schema.org/SiteNavigationElement" itemscope>
+            <aside role="navigation" class="thelia-sidebar">{% include sidebar.html %}</aside>
+        </div>
+        <main role="main" class="col-lg-9 col-md-9 col-sm-9">
+
+            <h1>{{ page.title }}</h1>
+
+            {% for description_p in page.description %}
+
+            <p>{{ description_p }}</p>
+
+            {% endfor %}
+            <hr />
+            
+            <h2>Inputs</h2>
+            
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Input name</th>
+                            <th>Input description</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        {% for input in page.inputs %}
+                        
+                        <tr>
+                            <td class="col-md-4">
+                                {{ input.name }}
+                            </td>
+                            <td class="col-md-8">
+                                {{ input.description }}
+                            </td>
+                        </tr>
+                        
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+            {% if page.opt_inputs %}
+            
+                    <h2> Optionnal inputs </h2>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Input name</th>
+                                    <th>Input description</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                {% for input in page.opt_inputs %}
+                                
+                                <tr>
+                                    <td class="col-md-4">
+                                        {{ input.name }}
+                                    </td>
+                                    <td class="col-md-8">
+                                        {{ input.description }}
+                                    </td>
+                                </tr>
+                                
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+            
+            {% endif %}
+        </main>
+
+    </section>
+</section>
+
+{% include footer.html %}
+
+</body>
+</html>
