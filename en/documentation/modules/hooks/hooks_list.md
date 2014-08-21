@@ -3,7 +3,7 @@ layout: home
 title: Hooks List - Modules
 sidebar: plugin
 lang: en
-subnav: plugin_hook
+subnav: plugin_hooks_list
 ---
 
 <div class="page-header">
