@@ -11,7 +11,7 @@ subnav: plugin_hook
 </div>
 
 <div class="alert alert-warning">
-<p>This is a functionality in development and not available in the current version of Thelia</p>
+<p>This is a functionality in development and not available in the current version of Thelia. This is planned for version 2.1</p>
 </div>
 
 - [Front Office](#front-office)
@@ -26,7 +26,7 @@ subnav: plugin_hook
 - **404.content** : content area
 - **404.stylesheet** : CSS stylesheet
 - **404.after-javascript-include** : after javascript include
-- **404.after-javascript-initialization** : after javascript initialisation
+- **404.javascript-initialization** : after javascript initialisation
 
 ### customer account
 
@@ -34,7 +34,7 @@ subnav: plugin_hook
 - **account.bottom** : at the bottom
 - **account.stylesheet** : CSS stylesheet
 - **account.after-javascript-include** : after javascript include
-- **account.after-javascript-initialization** : after javascript initialisation
+- **account.javascript-initialization** : after javascript initialisation
 
 ### Change password
 
@@ -42,7 +42,7 @@ subnav: plugin_hook
 - **account-password.bottom** : at the bottom
 - **account-password.stylesheet** : CSS stylesheet
 - **account-password.after-javascript-include** : after javascript include
-- **account-password.after-javascript-initialization** : after javascript initialisation
+- **account-password.javascript-initialization** : after javascript initialisation
 
 ### Update customer account
 
@@ -52,7 +52,7 @@ subnav: plugin_hook
 - **account-update.bottom** : at the bottom
 - **account-update.stylesheet** : CSS stylesheet
 - **account-update.after-javascript-include** : after javascript include
-- **account-update.after-javascript-initialization** : after javascript initialisation
+- **account-update.javascript-initialization** : after javascript initialisation
 
 ### Address creation
 
@@ -62,7 +62,7 @@ subnav: plugin_hook
 - **address-create.bottom** : at the bottom
 - **address-create.stylesheet** : CSS stylesheet
 - **address-create.after-javascript-include** : after javascript include
-- **address-create.after-javascript-initialization** : after javascript initialisation
+- **address-create.javascript-initialization** : after javascript initialisation
 
 ### Address update
 
@@ -72,7 +72,7 @@ subnav: plugin_hook
 - **address-update.bottom** : at the bottom
 - **address-update.stylesheet** : CSS stylesheet
 - **address-update.after-javascript-include** : after javascript include
-- **address-update.after-javascript-initialization** : after javascript initialisation
+- **address-update.javascript-initialization** : after javascript initialisation
 
 ### Payment failed
 
@@ -96,7 +96,7 @@ subnav: plugin_hook
 - **category.bottom** : at the bottom
 - **category.stylesheet** : CSS stylesheet
 - **category.after-javascript-include** : after javascript include
-- **category.after-javascript-initialization** : after javascript initialisation
+- **category.javascript-initialization** : after javascript initialisation
 - **category.sidebar-top** : at the top of the sidebar
 - **category.sidebar-body** : the body of the sidebar
 - **category.sidebar-bottom** : at the bottom of the sidebar
@@ -119,7 +119,7 @@ subnav: plugin_hook
 - **content.bottom** : at the bottom
 - **content.stylesheet** : CSS stylesheet
 - **content.after-javascript-include** : after javascript include
-- **content.after-javascript-initialization** : after javascript initialisation
+- **content.javascript-initialization** : after javascript initialisation
 - **content.sidebar-top** : at the top of the sidebar
 - **content.sidebar-body** : the body of the sidebar
 - **content.sidebar-bottom** : at the bottom of the sidebar
@@ -130,7 +130,7 @@ subnav: plugin_hook
 - **currency.bottom** : at the bottom
 - **currency.stylesheet** : CSS stylesheet
 - **currency.after-javascript-include** : after javascript include
-- **currency.after-javascript-initialization** : after javascript initialisation
+- **currency.javascript-initialization** : after javascript initialisation
 
 ### Folder page
 
@@ -140,14 +140,14 @@ subnav: plugin_hook
 - **folder.bottom** : at the bottom
 - **folder.stylesheet** : CSS stylesheet
 - **folder.after-javascript-include** : after javascript include
-- **folder.after-javascript-initialization** : after javascript initialisation
+- **folder.javascript-initialization** : after javascript initialisation
 
 ### Home page
 
 - **home.body** : main area
 - **home.stylesheet** : CSS stylesheet
 - **home.after-javascript-include** : after javascript include
-- **home.after-javascript-initialization** : after javascript initialisation
+- **home.javascript-initialization** : after javascript initialisation
 
 ### language selection page
 
@@ -155,7 +155,7 @@ subnav: plugin_hook
 - **language.bottom** : at the bottom
 - **language.stylesheet** : CSS stylesheet
 - **language.after-javascript-include** : after javascript include
-- **language.after-javascript-initialization** : after javascript initialisation
+- **language.javascript-initialization** : after javascript initialisation
 
 ### Login page
 
@@ -167,7 +167,7 @@ subnav: plugin_hook
 - **login.bottom** : at the bottom
 - **login.stylesheet** : CSS stylesheet
 - **login.after-javascript-include** : after javascript include
-- **login.after-javascript-initialization** : after javascript initialisation
+- **login.javascript-initialization** : after javascript initialisation
 
 ### HTML layout
 
@@ -194,7 +194,7 @@ subnav: plugin_hook
 - **newsletter.bottom** : at the bottom
 - **newsletter.stylesheet** : CSS stylesheet
 - **newsletter.after-javascript-include** : after javascript include
-- **newsletter.after-javascript-initialization** : after javascript initialisation
+- **newsletter.javascript-initialization** : after javascript initialisation
 
 ### Delivery choice
 
@@ -202,7 +202,7 @@ subnav: plugin_hook
 - **order-delivery.form-top** : at the top of the form
 - **order-delivery.form-bottom** : at the bottom of the form
 - **order-delivery.bottom** : at the bottom
-- **order-delivery.after-javascript-initialization** : after javascript initialisation
+- **order-delivery.javascript-initialization** : after javascript initialisation
 - **order-delivery.stylesheet** : CSS stylesheet
 - **order-delivery.after-javascript-include** : after javascript include
 - **order-delivery.extra** : extra area (*by module*)
@@ -214,7 +214,7 @@ subnav: plugin_hook
 - **order-failed.bottom** : at the bottom
 - **order-failed.stylesheet** : CSS stylesheet
 - **order-failed.after-javascript-include** : after javascript include
-- **order-failed.after-javascript-initialization** : after javascript initialisation
+- **order-failed.javascript-initialization** : after javascript initialisation
 
 ### Invoice choice
 
@@ -222,7 +222,7 @@ subnav: plugin_hook
 - **order-invoice.delivery-address** : delivery address (*by module*)
 - **order-invoice.payment-extra** : extra payment zone (*by module*)
 - **order-invoice.bottom** : at the bottom
-- **order-invoice.after-javascript-initialization** : after javascript initialisation
+- **order-invoice.javascript-initialization** : after javascript initialisation
 - **order-invoice.stylesheet** : CSS stylesheet
 - **order-invoice.after-javascript-include** : after javascript include
 
@@ -230,7 +230,7 @@ subnav: plugin_hook
 
 - **order-payment-gateway.body** : main area (*by module*)
 - **order-payment-gateway.javascript** : javascript (*by module*)
-- **order-payment-gateway.after-javascript-initialization** : after javascript initialisation
+- **order-payment-gateway.javascript-initialization** : after javascript initialisation
 - **order-payment-gateway.stylesheet** : CSS stylesheet
 - **order-payment-gateway.after-javascript-include** : after javascript include
 
@@ -239,7 +239,7 @@ subnav: plugin_hook
 - **order-placed.body** : main area (*by module*)
 - **order-placed.stylesheet** : CSS stylesheet
 - **order-placed.after-javascript-include** : after javascript include
-- **order-placed.after-javascript-initialization** : after javascript initialisation
+- **order-placed.javascript-initialization** : after javascript initialisation
 
 ### Lost password
 
@@ -261,7 +261,7 @@ subnav: plugin_hook
 - **product.bottom** : at the bottom
 - **product.stylesheet** : CSS stylesheet
 - **product.after-javascript-include** : after javascript include
-- **product.after-javascript-initialization** : after javascript initialisation
+- **product.javascript-initialization** : after javascript initialisation
 
 ### Register
 
@@ -271,13 +271,13 @@ subnav: plugin_hook
 - **register.bottom** : at the bottom
 - **register.stylesheet** : CSS stylesheet
 - **register.after-javascript-include** : after javascript include
-- **register.after-javascript-initialization** : after javascript initialisation
+- **register.javascript-initialization** : after javascript initialisation
 
 ### Search page
 
 - **search.stylesheet** : CSS stylesheet
 - **search.after-javascript-include** : after javascript include
-- **search.after-javascript-initialization** : after javascript initialisation
+- **search.javascript-initialization** : after javascript initialisation
 
 ### Product loop
 
@@ -294,7 +294,7 @@ subnav: plugin_hook
 - **viewall.bottom** : at the bottom
 - **viewall.stylesheet** : CSS stylesheet
 - **viewall.after-javascript-include** : after javascript include
-- **viewall.after-javascript-initialization** : after javascript initialisation
+- **viewall.javascript-initialization** : after javascript initialisation
 
 
 ## Back Office 

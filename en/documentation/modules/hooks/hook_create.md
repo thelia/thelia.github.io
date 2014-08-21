@@ -7,11 +7,11 @@ subnav: plugin_hook
 ---
 
 <div class="page-header">
-    <h1>Hooks : <small>creation</small></h1>
+    <h1>Hooks : <small>quick start guide</small></h1>
 </div>
 
 <div class="alert alert-warning">
-<p>This is a functionality in development and not available in the current version of Thelia</p>
+<p>This is a functionality in development and not available in the current version of Thelia. This is planned for version 2.1</p>
 </div>
 
 If you want to attach your module to some hooks, you can do this pretty easily by following these steps :
@@ -54,8 +54,13 @@ The ```tag``` tag indicates a method that will handle a defined hook :
 <tag name="hook.event_listener" event="product.additional" type="front" method="onProductAdditionalContents" active="0" />
 ```
 
-Some attributes here are optionals. ```name="hook.event_listener"``` must be defined as well. The ```event``` attribute represents the hook *code* for which it wants to respond. The ```type``` attribute indicate the context of the hook : frontOffice (default), backOffice, pdf or email. At last, ```method``` attribute indicate the method to be called. By default, it will be based on the name of the hook. eg : for ```product.additional``` hook, the method ```onProductAdditional``` will be called (*CamelCase prefixed by on*).  
-Finally, ```active``` allow you to activate the hook or not when the module is installed.
+Some attributes here are optionals. Attributes :
+
+- ```name="hook.event_listener"``` must be defined as well. 
+- ```event``` : represents the hook *code* for which it wants to respond. 
+- ```type``` : indicate the context of the hook : frontOffice (default), backOffice, pdf or email. 
+- ```method``` : indicate the method to be called. By default, it will be based on the name of the hook. eg : for ```product.additional``` hook, the method ```onProductAdditional``` will be called (*CamelCase prefixed by on*).
+- ```active``` : allow you to activate the hook (**set to 1** - *default*) or not (**set to 0**) when the module is installed.    
 
 
 ## Implement the class
