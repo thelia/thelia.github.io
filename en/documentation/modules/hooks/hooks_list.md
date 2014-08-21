@@ -3,7 +3,7 @@ layout: home
 title: Hooks List - Modules
 sidebar: plugin
 lang: en
-subnav: plugin_hook
+subnav: plugin_hooks_list
 ---
 
 <div class="page-header">
@@ -19,7 +19,7 @@ subnav: plugin_hook
 - [PDF](#pdf)
 
 
-## Front Office 
+## Front Office <a name="front-office"></a>
 
 ### Page 404
 
@@ -297,10 +297,7 @@ subnav: plugin_hook
 - **viewall.javascript-initialization** : after javascript initialisation
 
 
-## Back Office 
-
-
-
+## Back Office <a name="back-office"></a>
 
 ### Logs
 
@@ -770,7 +767,7 @@ subnav: plugin_hook
 - **zone.delete-form** : delete form
 
 
-## PDF 
+## PDF <a name="pdf"></a>
 
 ### Delivery
 
