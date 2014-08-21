@@ -19,7 +19,7 @@ subnav: plugin_hooks_list
 - [PDF](#pdf)
 
 
-## Front Office 
+## Front Office <a name="front-office"></a>
 
 ### Page 404
 
@@ -297,10 +297,7 @@ subnav: plugin_hooks_list
 - **viewall.javascript-initialization** : after javascript initialisation
 
 
-## Back Office 
-
-
-
+## Back Office <a name="back-office"></a>
 
 ### Logs
 
@@ -770,7 +767,7 @@ subnav: plugin_hooks_list
 - **zone.delete-form** : delete form
 
 
-## PDF 
+## PDF <a name="pdf"></a>
 
 ### Delivery
 
