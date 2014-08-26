@@ -9,8 +9,9 @@ uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: loop_product_sale_elements
 arguments :
+    - {name: "id", description: "A comma separated list of product sale elements id. Mandatory if the 'product' parameter is not present", example: "id=\"1,3,8\""}
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
-    - {name: "product", description: "A single product id.", example: "product=\"2\"", mandatory: "true"}
+    - {name: "product", description: "A single product id. Mandatory if the 'id' parameter is not present", example: "product=\"2\""}
     - {
             name: "order", description: "A list of values", example: "order=\"promo,min_price\"", default: "random",
             expected_values: [
@@ -25,6 +26,7 @@ arguments :
           }
 outputs :
     - {name: "$ID", description: "the product sale element id"}
+    - {name: "$PRODUCT_ID", description: "the related product id"}
     - {name: "$IS_DEFAULT", description: "returns if the product sale element is the default product sale element for the product"}
     - {name: "$IS_PROMO", description: "returns if the product sale element is in promo"}
     - {name: "$IS_NEW", description: "returns if the product sale element is new"}
