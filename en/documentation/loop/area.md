@@ -13,6 +13,7 @@ arguments :
     - {name: "with_zone", description: "A module ID. Returns shipping zones which are assigned to this module ID"}
     - {name: "without_zone", description: "A module ID. Returns shipping zones which are not assigned to this module ID"}
     - {name: "unassigned", description: "If true, returns shipping zones not assigned to any delivery module."}
+    - {name: "module_id", description: "A comma separated list of module IDs. If not empty, only zones for the specified modules are returned."}
 
 outputs :
     - {name: "$ID", description: "the shipping zone id"}
