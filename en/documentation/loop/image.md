@@ -32,7 +32,7 @@ arguments :
     - {name: "height", description: "A height in pixels, for resizing image. If only the height is provided, the image ratio is preserved.", example: "height=\"200\""}
     - {name: "resize_mode", description: "If 'crop', the image will have the exact specified width and height, and will be cropped if required. If 'borders', the image will have the exact specified width and height, and some borders may be added. The border color is the one specified by 'background_color'. If 'none' or missing, the image ratio is preserved, and depending od this ratio, may not have the exact width and height required.", example: "resize_mode=\"crop\""}
     - {name: "rotation", description: "The rotation angle in degrees (positive or negative) applied to the image. The background color of the empty areas is the one specified by 'background_color'", example: "rotation=\"90\""}
-    - {name: "background_color", description: "The color applied to empty image parts during processing. Use $rgb or $rrggbb color format", example: "background_color=\"$cc8000\""}
+    - {name: "background_color", description: "The color applied to empty image parts during processing. Use rgb or rrggbb color format", example: "background_color=\"cc8000\" or background_color=\"fff\""}
     - {name: "quality", description: "The generated image quality, from 0(!) to 100%. The default value is 75% (you can hange this in the Administration panel)", example: "quality=\"70\""}
     - {name: "effects", description: "One or more comma separated effects definitions, that will be applied to the image in the specified order. Please see below a detailed description of available effects", example: "effects=\"greyscale,gamma:0.7,vflip\"",
         expected_values: [
