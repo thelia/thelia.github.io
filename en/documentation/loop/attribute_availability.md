@@ -1,7 +1,7 @@
 ---
 layout: loop
 title: Attribute availability Loop
-description: Attribute availability loop lists attribute availabilities.
+description: Attribute availability loop lists attribute availabilities (e.g., attribute values).
 sidebar: loop
 lang: en
 subnav: loop_attribute_availability
@@ -11,6 +11,7 @@ type: attribute_availability
 arguments :
     - {name: "id", description: "A single or a list of attribute availability ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "attribute", description: "A single or a list of attribute ids.", example: "id=\"2\", id=\"1,4,7\""}
+    - {name: "product", description: "A product ID. If present, only attribute values that are part of this product's combinations are returned", example: "product=\"279\""}
     - {name: "exclude", description: "A single or a list of attribute availability ids to exclude.", example: "exclude=\"456,123\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
