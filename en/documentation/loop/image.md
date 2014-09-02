@@ -28,6 +28,7 @@ arguments :
     }
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
     - {name: "exclude", description: "A single or a comma-separated list of image IDs to exclude from the list.", example: "exclude=\"456,123\""}
+    - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "*"}
     - {name: "width", description: "A width in pixels, for resizing image. If only the width is provided, the image ratio is preserved.", example: "width=\"200\""}
     - {name: "height", description: "A height in pixels, for resizing image. If only the height is provided, the image ratio is preserved.", example: "height=\"200\""}
     - {name: "resize_mode", description: "If 'crop', the image will have the exact specified width and height, and will be cropped if required. If 'borders', the image will have the exact specified width and height, and some borders may be added. The border color is the one specified by 'background_color'. If 'none' or missing, the image ratio is preserved, and depending od this ratio, may not have the exact width and height required.", example: "resize_mode=\"crop\""}
@@ -69,6 +70,7 @@ outputs :
     - {name: "$POSITION", description: "the position of this image in the object's image list"}
     - {name: "$OBJECT_TYPE", description: "The object type (e.g., produc, category, etc. see 'source' parameter for possible values)"}
     - {name: "$OBJECT_ID", description: "The object ID"}
+    - {name: "$VISIBLE", description: "true if the image is visible. False otherwise"}
  
 examples :
     - {description: "Resize category images the 200x100, adding (white) borders if required.", code: ""}
