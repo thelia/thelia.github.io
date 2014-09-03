@@ -27,6 +27,7 @@ arguments :
     }
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
     - {name: "exclude", description: "A single or a comma-separated list of document IDs to exclude from the list.", example: "exclude=\"456,123\""}
+    - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "lang", description: "A language identifier, to specify the language in which the document information will be returned"}
     - {
         name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
@@ -51,4 +52,5 @@ outputs :
     - {name: "$POSITION", description: "the position of this document in the object's document list"}
     - {name: "$OBJECT_TYPE", description: "The object type (e.g., produc, category, etc. see 'source' parameter for possible values)"}
     - {name: "$OBJECT_ID", description: "The object ID"}
+    - {name: "$VISIBLE", description: "true if the document is visible. False otherwise"}
 ---
