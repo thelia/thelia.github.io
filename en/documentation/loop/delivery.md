@@ -10,6 +10,17 @@ returns_global_outputs: { countable : true, timestampable : true, versionable : 
 type: delivery
 arguments :
     - {name: "country", description: "A country id.", example: "country=\"2\""}
+    - {
+        name: "order", description: "A single value in the list below", example: "order=\"id_reverse\"", default: "manual",
+        expected_values: [
+            {name: "alpha",             description: "alphabetical order on title"},
+            {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
+            {name: "manual",            description: "same position as defined in back-office"},
+            {name: "manual_reverse",    description: "reverse position as defined in back-office"},
+            {name: "id",                description: "sort by id"},
+            {name: "id_reverse",        description: "sort by id reverse"}
+        ]
+      }
 
 outputs :
     - {name: "$ID", description: "the delivery module id"}
