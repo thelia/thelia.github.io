@@ -12,7 +12,10 @@ arguments :
     - {name: "id", description: "A comma separated list of product sale elements id. Mandatory if the 'product' parameter is not present", example: "id=\"1,3,8\""}
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
     - {name: "product", description: "A single product id. Mandatory if the 'id' parameter is not present", example: "product=\"2\""}
-    - {
+   - {name: "new", description: "A boolean value. If true, returns only product sale elements for which promo is on. The reverse with 'false'", example: "new=\"yes\""}
+   - {name: "promo", description: "A boolean value. If true, returns only product sale elements for which new is on. The reverse with 'false'", example: "promo=\"yes\""}
+   - {name: "default", description: "A boolean value. If true, returns only the default product sale elements. If false, the default product sale element is not returned", example: "default=\"yes\""}
+   - {
             name: "order", description: "A list of values", example: "order=\"promo,min_price\"", default: "random",
             expected_values: [
                 {name: "min_price",         description: "ascending price"},

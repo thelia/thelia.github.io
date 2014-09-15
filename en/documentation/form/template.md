@@ -52,6 +52,23 @@ Thelia uses hidden fields internally. In order to display these fields (and all 
 {/form}
 ```
 
+If you want to manage yourself one or more hidden field (for exemple to set its value), you may pass these field  names to the form_hidden_fields function using the "exclude" parameter. The field names listed in this parameter will not be processed by the function:
+
+```smarty
+{form name="thelia.customer.creation"}
+    <form method="post" action="{url path='your/target'}" {form_enctype form=$form}>
+
+        {form_hidden_fields form=$form exclude="area_id,some_other_field"}
+
+        {render_form_field form=$form field="area_id" value={$area_id}}
+        {render_form_field form=$form field="some_other_field" value="the field value"}
+
+        ...
+    </form>
+{/form}
+```
+
+
 ## Displaying a form field
 
 For displaying a field, you have to use the *{form_field}* block, and put the name of the field you want to display in the "field" parameter :
