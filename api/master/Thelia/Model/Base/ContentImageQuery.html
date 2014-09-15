@@ -132,6 +132,16 @@
                     <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
                 </td>
                 <td class="last">
+                    <a href="#method_filterByVisible">filterByVisible</a>(mixed $visible = null, string $comparison = null)
+                    <p>Filter the query on the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
+                </td>
+                <td class="last">
                     <a href="#method_filterByPosition">filterByPosition</a>(mixed $position = null, string $comparison = null)
                     <p>Filter the query on the position column</p>
                 </td>
@@ -372,6 +382,16 @@
                     <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
                 </td>
                 <td class="last">
+                    <a href="#method_orderByVisible">orderByVisible</a>($order = Criteria::ASC)
+                    <p>Order by the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
+                </td>
+                <td class="last">
                     <a href="#method_orderByPosition">orderByPosition</a>($order = Criteria::ASC)
                     <p>Order by the position column</p>
                 </td>
@@ -424,6 +444,16 @@
                 <td class="last">
                     <a href="#method_groupByFile">groupByFile</a>()
                     <p>Group by the file column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByVisible">groupByVisible</a>()
+                    <p>Group by the visible column</p>
                 </td>
                 <td></td>
             </tr>
@@ -602,6 +632,16 @@
                     <abbr title="ChildContentImage">ChildContentImage</abbr>
                 </td>
                 <td class="last">
+                    <a href="#method_findOneByVisible">findOneByVisible</a>(<abbr title="int ">int </abbr> $visible)
+                    <p>Return the first ChildContentImage filtered by the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentImage">ChildContentImage</abbr>
+                </td>
+                <td class="last">
                     <a href="#method_findOneByPosition">findOneByPosition</a>(<abbr title="int ">int </abbr> $position)
                     <p>Return the first ChildContentImage filtered by the position column</p>
                 </td>
@@ -662,6 +702,16 @@
                     array
                 </td>
                 <td class="last">
+                    <a href="#method_findByVisible">findByVisible</a>(<abbr title="int ">int </abbr> $visible)
+                    <p>Return ChildContentImage objects filtered by the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
                     <a href="#method_findByPosition">findByPosition</a>(<abbr title="int ">int </abbr> $position)
                     <p>Return ChildContentImage objects filtered by the position column</p>
                 </td>
@@ -693,7 +743,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 79</div>
+        <div class="location">at line 83</div>
         <code>            public            
     <strong>__construct</strong>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\ContentImage&#039;, string $modelAlias = null)</code>
     </h3>
@@ -729,7 +779,7 @@
     </div>
 
                 <h3 id="method_create">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>        static    public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>create</strong>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)</code>
     </h3>
@@ -770,7 +820,7 @@
     </div>
 
                 <h3 id="method_findPk">
-        <div class="location">at line 122</div>
+        <div class="location">at line 126</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImage.html"><abbr title="Thelia\Model\ContentImage">ContentImage</abbr></a>|array|mixed
     <strong>findPk</strong>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -814,7 +864,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_findPks">
-        <div class="location">at line 204</div>
+        <div class="location">at line 208</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
     <strong>findPks</strong>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -854,7 +904,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKey">
-        <div class="location">at line 225</div>
+        <div class="location">at line 229</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByPrimaryKey</strong>(mixed $key)</code>
     </h3>
@@ -889,7 +939,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKeys">
-        <div class="location">at line 238</div>
+        <div class="location">at line 242</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByPrimaryKeys</strong>(array $keys)</code>
     </h3>
@@ -924,7 +974,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterById">
-        <div class="location">at line 262</div>
+        <div class="location">at line 266</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
     </h3>
@@ -968,7 +1018,7 @@ $query->filterById(array('min' => 12)); // WHERE id > 12
     </div>
 
                 <h3 id="method_filterByContentId">
-        <div class="location">at line 305</div>
+        <div class="location">at line 309</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByContentId</strong>(mixed $contentId = null, string $comparison = null)</code>
     </h3>
@@ -1021,7 +1071,7 @@ $query->filterByContentId(array('min' => 12)); // WHERE content_id > 12
     </div>
 
                 <h3 id="method_filterByFile">
-        <div class="location">at line 343</div>
+        <div class="location">at line 347</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByFile</strong>(string $file = null, string $comparison = null)</code>
     </h3>
@@ -1063,8 +1113,52 @@ $query->filterByFile('%fooValue%'); // WHERE file LIKE '%fooValue%'
                     </div>
     </div>
 
+                <h3 id="method_filterByVisible">
+        <div class="location">at line 379</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
+    <strong>filterByVisible</strong>(mixed $visible = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the visible column</p>
+        <p>Example usage:
+<code>
+$query->filterByVisible(1234); // WHERE visible = 1234
+$query->filterByVisible(array(12, 34)); // WHERE visible IN (12, 34)
+$query->filterByVisible(array('min' => 12)); // WHERE visible > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$visible</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_filterByPosition">
-        <div class="location">at line 375</div>
+        <div class="location">at line 420</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByPosition</strong>(mixed $position = null, string $comparison = null)</code>
     </h3>
@@ -1108,7 +1202,7 @@ $query->filterByPosition(array('min' => 12)); // WHERE position > 12
     </div>
 
                 <h3 id="method_filterByCreatedAt">
-        <div class="location">at line 418</div>
+        <div class="location">at line 463</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
     </h3>
@@ -1152,7 +1246,7 @@ $query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2
     </div>
 
                 <h3 id="method_filterByUpdatedAt">
-        <div class="location">at line 461</div>
+        <div class="location">at line 506</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
     </h3>
@@ -1196,7 +1290,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByContent">
-        <div class="location">at line 492</div>
+        <div class="location">at line 537</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByContent</strong>(<a href="../../../Thelia/Model/Content.html"><abbr title="Thelia\Model\Content">Content</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $content, string $comparison = null)</code>
     </h3>
@@ -1236,7 +1330,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinContent">
-        <div class="location">at line 517</div>
+        <div class="location">at line 562</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>joinContent</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -1276,7 +1370,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useContentQuery">
-        <div class="location">at line 552</div>
+        <div class="location">at line 597</div>
         <code>            public            <a href="../../../Thelia/Model/ContentQuery.html"><abbr title="Thelia\Model\ContentQuery">ContentQuery</abbr></a>
     <strong>useContentQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -1325,7 +1419,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByContentImageI18n">
-        <div class="location">at line 567</div>
+        <div class="location">at line 612</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>filterByContentImageI18n</strong>(<a href="../../../Thelia/Model/ContentImageI18n.html"><abbr title="Thelia\Model\ContentImageI18n">ContentImageI18n</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $contentImageI18n, string $comparison = null)</code>
     </h3>
@@ -1365,7 +1459,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinContentImageI18n">
-        <div class="location">at line 590</div>
+        <div class="location">at line 635</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>joinContentImageI18n</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
     </h3>
@@ -1405,7 +1499,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useContentImageI18nQuery">
-        <div class="location">at line 625</div>
+        <div class="location">at line 670</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageI18nQuery.html"><abbr title="Thelia\Model\ContentImageI18nQuery">ContentImageI18nQuery</abbr></a>
     <strong>useContentImageI18nQuery</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
     </h3>
@@ -1454,7 +1548,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_prune">
-        <div class="location">at line 639</div>
+        <div class="location">at line 684</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>prune</strong>(<a href="../../../Thelia/Model/ContentImage.html"><abbr title="Thelia\Model\ContentImage">ContentImage</abbr></a> $contentImage = null)</code>
     </h3>
@@ -1489,7 +1583,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">at line 654</div>
+        <div class="location">at line 699</div>
         <code>            public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1524,7 +1618,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 691</div>
+        <div class="location">at line 736</div>
         <code>            public            int
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1569,7 +1663,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyUpdated">
-        <div class="location">at line 732</div>
+        <div class="location">at line 777</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>recentlyUpdated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -1604,7 +1698,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyCreated">
-        <div class="location">at line 744</div>
+        <div class="location">at line 789</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>recentlyCreated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -1639,7 +1733,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastUpdatedFirst">
-        <div class="location">at line 754</div>
+        <div class="location">at line 799</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>lastUpdatedFirst</strong>()</code>
     </h3>
@@ -1664,7 +1758,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstUpdatedFirst">
-        <div class="location">at line 764</div>
+        <div class="location">at line 809</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>firstUpdatedFirst</strong>()</code>
     </h3>
@@ -1689,7 +1783,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastCreatedFirst">
-        <div class="location">at line 774</div>
+        <div class="location">at line 819</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>lastCreatedFirst</strong>()</code>
     </h3>
@@ -1714,7 +1808,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstCreatedFirst">
-        <div class="location">at line 784</div>
+        <div class="location">at line 829</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>firstCreatedFirst</strong>()</code>
     </h3>
@@ -1739,7 +1833,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinI18n">
-        <div class="location">at line 800</div>
+        <div class="location">at line 845</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>joinI18n</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1784,7 +1878,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinWithI18n">
-        <div class="location">at line 818</div>
+        <div class="location">at line 863</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageQuery.html"><abbr title="Thelia\Model\ContentImageQuery">ContentImageQuery</abbr></a>
     <strong>joinWithI18n</strong>(string $locale = &#039;en_US&#039;, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1823,7 +1917,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useI18nQuery">
-        <div class="location">at line 839</div>
+        <div class="location">at line 884</div>
         <code>            public            <a href="../../../Thelia/Model/ContentImageI18nQuery.html"><abbr title="Thelia\Model\ContentImageI18nQuery">ContentImageI18nQuery</abbr></a>
     <strong>useI18nQuery</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1877,7 +1971,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderById">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>orderById</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -1914,7 +2008,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByContentId">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>orderByContentId</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -1951,7 +2045,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByFile">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>orderByFile</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -1987,8 +2081,45 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_orderByVisible">
+        <div class="location">at line 73</div>
+        <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
+    <strong>orderByVisible</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_orderByPosition">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>orderByPosition</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2025,7 +2156,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByCreatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>orderByCreatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2062,7 +2193,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByUpdatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>orderByUpdatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2099,7 +2230,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupById">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>groupById</strong>()</code>
     </h3>
@@ -2125,7 +2256,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByContentId">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>groupByContentId</strong>()</code>
     </h3>
@@ -2151,7 +2282,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByFile">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>groupByFile</strong>()</code>
     </h3>
@@ -2176,8 +2307,34 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_groupByVisible">
+        <div class="location">at line 73</div>
+        <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
+    <strong>groupByVisible</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_groupByPosition">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>groupByPosition</strong>()</code>
     </h3>
@@ -2203,7 +2360,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByCreatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>groupByCreatedAt</strong>()</code>
     </h3>
@@ -2229,7 +2386,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByUpdatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>groupByUpdatedAt</strong>()</code>
     </h3>
@@ -2255,7 +2412,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoin">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>leftJoin</strong>($relation)</code>
     </h3>
@@ -2292,7 +2449,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoin">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>rightJoin</strong>($relation)</code>
     </h3>
@@ -2329,7 +2486,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoin">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>innerJoin</strong>($relation)</code>
     </h3>
@@ -2366,7 +2523,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinContent">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>leftJoinContent</strong>($relationAlias = null)</code>
     </h3>
@@ -2403,7 +2560,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinContent">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>rightJoinContent</strong>($relationAlias = null)</code>
     </h3>
@@ -2440,7 +2597,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinContent">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>innerJoinContent</strong>($relationAlias = null)</code>
     </h3>
@@ -2477,7 +2634,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinContentImageI18n">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>leftJoinContentImageI18n</strong>($relationAlias = null)</code>
     </h3>
@@ -2514,7 +2671,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinContentImageI18n">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>rightJoinContentImageI18n</strong>($relationAlias = null)</code>
     </h3>
@@ -2551,7 +2708,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinContentImageI18n">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImageQuery">ChildContentImageQuery</abbr>
     <strong>innerJoinContentImageI18n</strong>($relationAlias = null)</code>
     </h3>
@@ -2588,7 +2745,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOne">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOne</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -2625,7 +2782,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneOrCreate">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOneOrCreate</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -2662,7 +2819,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneById">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOneById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -2699,7 +2856,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByContentId">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOneByContentId</strong>(<abbr title="int ">int </abbr> $content_id)</code>
     </h3>
@@ -2736,7 +2893,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByFile">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOneByFile</strong>(<abbr title="string ">string </abbr> $file)</code>
     </h3>
@@ -2772,8 +2929,45 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_findOneByVisible">
+        <div class="location">at line 73</div>
+        <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
+    <strong>findOneByVisible</strong>(<abbr title="int ">int </abbr> $visible)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentImage filtered by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$visible</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentImage">ChildContentImage</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_findOneByPosition">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOneByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
     </h3>
@@ -2810,7 +3004,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByCreatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOneByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -2847,7 +3041,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByUpdatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        <abbr title="ChildContentImage">ChildContentImage</abbr>
     <strong>findOneByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>
@@ -2884,7 +3078,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findById">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        array
     <strong>findById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -2921,7 +3115,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByContentId">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        array
     <strong>findByContentId</strong>(<abbr title="int ">int </abbr> $content_id)</code>
     </h3>
@@ -2958,7 +3152,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByFile">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        array
     <strong>findByFile</strong>(<abbr title="string ">string </abbr> $file)</code>
     </h3>
@@ -2994,8 +3188,45 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_findByVisible">
+        <div class="location">at line 73</div>
+        <code>                        array
+    <strong>findByVisible</strong>(<abbr title="int ">int </abbr> $visible)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentImage objects filtered by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$visible</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_findByPosition">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        array
     <strong>findByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
     </h3>
@@ -3032,7 +3263,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByCreatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        array
     <strong>findByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -3069,7 +3300,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByUpdatedAt">
-        <div class="location">at line 69</div>
+        <div class="location">at line 73</div>
         <code>                        array
     <strong>findByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>

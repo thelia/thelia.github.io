@@ -1018,6 +1018,16 @@ long as it does not already exist in the output directory.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../Thelia/Model/Base/MessageQuery.html#method_findByVersionCreatedBy"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../Thelia/Model/Message.html"><abbr title="Thelia\Model\Message">Message</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFromName">getFromName</a>(string $messageName)
+                    <p>Load a message from its name, throwing an excemtoipn is none is found.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
@@ -1220,7 +1230,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKeys">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByPrimaryKeys"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 268</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByPrimaryKeys"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 269</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByPrimaryKeys</strong>(array $keys)</code>
     </h3>
@@ -1255,7 +1265,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterById">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterById"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 291</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterById"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 293</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
     </h3>
@@ -1299,7 +1309,7 @@ $query->filterById(array('min' => 12)); // WHERE id > 12
     </div>
 
                 <h3 id="method_filterByName">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 329</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 331</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByName</strong>(string $name = null, string $comparison = null)</code>
     </h3>
@@ -1342,7 +1352,7 @@ $query->filterByName('%fooValue%'); // WHERE name LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterBySecured">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterBySecured"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 361</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterBySecured"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 363</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterBySecured</strong>(mixed $secured = null, string $comparison = null)</code>
     </h3>
@@ -1386,7 +1396,7 @@ $query->filterBySecured(array('min' => 12)); // WHERE secured > 12
     </div>
 
                 <h3 id="method_filterByTextLayoutFileName">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByTextLayoutFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 399</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByTextLayoutFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 401</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByTextLayoutFileName</strong>(string $textLayoutFileName = null, string $comparison = null)</code>
     </h3>
@@ -1429,7 +1439,7 @@ $query->filterByTextLayoutFileName('%fooValue%'); // WHERE text</em>layout<em>fi
     </div>
 
                 <h3 id="method_filterByTextTemplateFileName">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByTextTemplateFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 428</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByTextTemplateFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 430</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByTextTemplateFileName</strong>(string $textTemplateFileName = null, string $comparison = null)</code>
     </h3>
@@ -1472,7 +1482,7 @@ $query->filterByTextTemplateFileName('%fooValue%'); // WHERE text</em>template<e
     </div>
 
                 <h3 id="method_filterByHtmlLayoutFileName">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByHtmlLayoutFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 457</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByHtmlLayoutFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 459</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByHtmlLayoutFileName</strong>(string $htmlLayoutFileName = null, string $comparison = null)</code>
     </h3>
@@ -1515,7 +1525,7 @@ $query->filterByHtmlLayoutFileName('%fooValue%'); // WHERE html</em>layout<em>fi
     </div>
 
                 <h3 id="method_filterByHtmlTemplateFileName">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByHtmlTemplateFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 486</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByHtmlTemplateFileName"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 488</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByHtmlTemplateFileName</strong>(string $htmlTemplateFileName = null, string $comparison = null)</code>
     </h3>
@@ -1558,7 +1568,7 @@ $query->filterByHtmlTemplateFileName('%fooValue%'); // WHERE html</em>template<e
     </div>
 
                 <h3 id="method_filterByCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByCreatedAt"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 520</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByCreatedAt"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 522</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
     </h3>
@@ -1602,7 +1612,7 @@ $query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2
     </div>
 
                 <h3 id="method_filterByUpdatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByUpdatedAt"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 563</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByUpdatedAt"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 565</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
     </h3>
@@ -1646,7 +1656,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByVersion"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 604</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByVersion"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 606</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByVersion</strong>(mixed $version = null, string $comparison = null)</code>
     </h3>
@@ -1690,7 +1700,7 @@ $query->filterByVersion(array('min' => 12)); // WHERE version > 12
     </div>
 
                 <h3 id="method_filterByVersionCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByVersionCreatedAt"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 647</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByVersionCreatedAt"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 649</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByVersionCreatedAt</strong>(mixed $versionCreatedAt = null, string $comparison = null)</code>
     </h3>
@@ -1734,7 +1744,7 @@ $query->filterByVersionCreatedAt(array('max' => 'yesterday')); // WHERE version<
     </div>
 
                 <h3 id="method_filterByVersionCreatedBy">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByVersionCreatedBy"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 685</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByVersionCreatedBy"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 687</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByVersionCreatedBy</strong>(string $versionCreatedBy = null, string $comparison = null)</code>
     </h3>
@@ -1777,7 +1787,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_filterByMessageI18n">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByMessageI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 707</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByMessageI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 709</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByMessageI18n</strong>(<a href="../../Thelia/Model/MessageI18n.html"><abbr title="Thelia\Model\MessageI18n">MessageI18n</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $messageI18n, string $comparison = null)</code>
     </h3>
@@ -1817,7 +1827,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_joinMessageI18n">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinMessageI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 730</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinMessageI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 732</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>joinMessageI18n</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
     </h3>
@@ -1857,7 +1867,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_useMessageI18nQuery">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_useMessageI18nQuery"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 765</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_useMessageI18nQuery"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 767</div>
         <code>            public            <a href="../../Thelia/Model/MessageI18nQuery.html"><abbr title="Thelia\Model\MessageI18nQuery">MessageI18nQuery</abbr></a>
     <strong>useMessageI18nQuery</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
     </h3>
@@ -1906,7 +1916,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_filterByMessageVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByMessageVersion"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 780</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_filterByMessageVersion"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 782</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>filterByMessageVersion</strong>(<a href="../../Thelia/Model/MessageVersion.html"><abbr title="Thelia\Model\MessageVersion">MessageVersion</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $messageVersion, string $comparison = null)</code>
     </h3>
@@ -1946,7 +1956,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_joinMessageVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinMessageVersion"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 803</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinMessageVersion"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 805</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>joinMessageVersion</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -1986,7 +1996,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_useMessageVersionQuery">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_useMessageVersionQuery"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 838</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_useMessageVersionQuery"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 840</div>
         <code>            public            <a href="../../Thelia/Model/MessageVersionQuery.html"><abbr title="Thelia\Model\MessageVersionQuery">MessageVersionQuery</abbr></a>
     <strong>useMessageVersionQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2035,7 +2045,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_prune">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_prune"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 852</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_prune"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 854</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>prune</strong>(<a href="../../Thelia/Model/Message.html"><abbr title="Thelia\Model\Message">Message</abbr></a> $message = null)</code>
     </h3>
@@ -2070,7 +2080,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_doDeleteAll"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 867</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_doDeleteAll"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 869</div>
         <code>            public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2105,7 +2115,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_delete"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 904</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_delete"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 906</div>
         <code>            public            int
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2150,7 +2160,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_recentlyUpdated">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_recentlyUpdated"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 944</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_recentlyUpdated"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 947</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>recentlyUpdated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -2185,7 +2195,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_recentlyCreated">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_recentlyCreated"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 956</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_recentlyCreated"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 959</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>recentlyCreated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -2220,7 +2230,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_lastUpdatedFirst">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_lastUpdatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 966</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_lastUpdatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 969</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>lastUpdatedFirst</strong>()</code>
     </h3>
@@ -2245,7 +2255,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_firstUpdatedFirst">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_firstUpdatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 976</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_firstUpdatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 979</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>firstUpdatedFirst</strong>()</code>
     </h3>
@@ -2270,7 +2280,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_lastCreatedFirst">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_lastCreatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 986</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_lastCreatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 989</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>lastCreatedFirst</strong>()</code>
     </h3>
@@ -2295,7 +2305,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_firstCreatedFirst">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_firstCreatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 996</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_firstCreatedFirst"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 999</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>firstCreatedFirst</strong>()</code>
     </h3>
@@ -2320,7 +2330,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_joinI18n">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1012</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1015</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>joinI18n</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2365,7 +2375,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_joinWithI18n">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinWithI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1030</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_joinWithI18n"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1033</div>
         <code>            public            <a href="../../Thelia/Model/MessageQuery.html"><abbr title="Thelia\Model\MessageQuery">MessageQuery</abbr></a>
     <strong>joinWithI18n</strong>(string $locale = &#039;en_US&#039;, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2404,7 +2414,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_useI18nQuery">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_useI18nQuery"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1051</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_useI18nQuery"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1054</div>
         <code>            public            <a href="../../Thelia/Model/MessageI18nQuery.html"><abbr title="Thelia\Model\MessageI18nQuery">MessageI18nQuery</abbr></a>
     <strong>useI18nQuery</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2458,7 +2468,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_isVersioningEnabled">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_isVersioningEnabled"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1065</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_isVersioningEnabled"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1068</div>
         <code>        static    public            boolean
     <strong>isVersioningEnabled</strong>()</code>
     </h3>
@@ -2484,7 +2494,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_enableVersioning">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_enableVersioning"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1073</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_enableVersioning"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1076</div>
         <code>        static    public            
     <strong>enableVersioning</strong>()</code>
     </h3>
@@ -2500,7 +2510,7 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </div>
 
                 <h3 id="method_disableVersioning">
-        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_disableVersioning"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1081</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/MessageQuery.html#method_disableVersioning"><abbr title="Thelia\Model\Base\MessageQuery">MessageQuery</abbr></a> at line 1084</div>
         <code>        static    public            
     <strong>disableVersioning</strong>()</code>
     </h3>
@@ -4562,6 +4572,50 @@ $query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>
     </table>
 
             
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFromName">
+        <div class="location">at line 26</div>
+        <code>        static    public            <a href="../../Thelia/Model/Message.html"><abbr title="Thelia\Model\Message">Message</abbr></a>
+    <strong>getFromName</strong>(string $messageName)</code>
+    </h3>
+    <div class="details">
+        <p>Load a message from its name, throwing an excemtoipn is none is found.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$messageName</td>
+                <td>the message name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/Message.html"><abbr title="Thelia\Model\Message">Message</abbr></a></td>
+            <td>the loaded message</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>if the message could not be loaded</td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>

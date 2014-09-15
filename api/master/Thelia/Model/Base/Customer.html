@@ -51,6 +51,16 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_applyDefaultValues">applyDefaultValues</a>()
+                    <p>Applies default values to this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method___construct">__construct</a>()
                     <p>Initializes internal state of Thelia\Model\Base\Customer object.</p>
                 </td>
@@ -388,6 +398,36 @@
             </tr>
                     <tr>
                 <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getVersion">getVersion</a>()
+                    <p>Get the [version] column value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getVersionCreatedAt">getVersionCreatedAt</a>(string $format = NULL)
+                    <p>Get the [optionally formatted] temporal [version<em>created</em>at] column value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getVersionCreatedBy">getVersionCreatedBy</a>()
+                    <p>Get the [version<em>created</em>by] column value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
                 </td>
                 <td class="last">
@@ -543,6 +583,36 @@
                 <td class="last">
                     <a href="#method_setUpdatedAt">setUpdatedAt</a>(mixed $v)
                     <p>Sets the value of [updated_at] column to a normalized version of the date/time value specified.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setVersion">setVersion</a>(int $v)
+                    <p>Set the value of [version] column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setVersionCreatedAt">setVersionCreatedAt</a>(mixed $v)
+                    <p>Sets the value of [version<em>created</em>at] column to a normalized version of the date/time value specified.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setVersionCreatedBy">setVersionCreatedBy</a>(string $v)
+                    <p>Set the value of [version<em>created</em>by] column.</p>
                 </td>
                 <td></td>
             </tr>
@@ -1020,6 +1090,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getOrdersJoinCart">getOrdersJoinCart</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)
+                    <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     void
                 </td>
                 <td class="last">
@@ -1225,6 +1305,87 @@
                     void
                 </td>
                 <td class="last">
+                    <a href="#method_clearCustomerVersions">clearCustomerVersions</a>()
+                    <p>Clears out the collCustomerVersions collection</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetPartialCustomerVersions">resetPartialCustomerVersions</a>($v = true)
+                    <p>Reset is the collCustomerVersions collection loaded partially.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_initCustomerVersions">initCustomerVersions</a>(boolean $overrideExisting = true)
+                    <p>Initializes the collCustomerVersions collection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getCustomerVersions">getCustomerVersions</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Gets an array of ChildCustomerVersion objects which contain a foreign key that references this object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setCustomerVersions">setCustomerVersions</a>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $customerVersions, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Sets a collection of CustomerVersion objects related by a one-to-many relationship to the current object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countCustomerVersions">countCustomerVersions</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Returns the number of related CustomerVersion objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addCustomerVersion">addCustomerVersion</a>(<a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a> $l)
+                    <p>Method called to associate a ChildCustomerVersion object to this object through the ChildCustomerVersion foreign key attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeCustomerVersion">removeCustomerVersion</a>(<a href="../../../Thelia/Model/Base/CustomerVersion.html"><abbr title="Thelia\Model\Base\CustomerVersion">CustomerVersion</abbr></a> $customerVersion)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
                     <a href="#method_clearCoupons">clearCoupons</a>()
                     <p>Clears out the collCoupons collection</p>
                 </td>
@@ -1332,6 +1493,126 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_enforceVersioning">enforceVersioning</a>()
+                    <p>Enforce a new Version of this object upon next save.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isVersioningNecessary">isVersioningNecessary</a>($con = null)
+                    <p>Checks whether the current state must be recorded as a version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addVersion">addVersion</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Creates a version of the current object and saves it.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_toVersion">toVersion</a>(integer $versionNumber, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Sets the properties of the current object to the value they had at a specific version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_populateFromVersion">populateFromVersion</a>(<a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a> $version, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $loadedObjects = array())
+                    <p>Sets the properties of the current object to the value they had at a specific version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getLastVersionNumber">getLastVersionNumber</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Gets the latest persisted version number for the current object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isLastVersion">isLastVersion</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Checks whether the current object is the latest one</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOneVersion">getOneVersion</a>(integer $versionNumber, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Retrieves a version object for this entity and a version number</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getAllVersions">getAllVersions</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Gets all the versions of this object, in incremental order</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_compareVersion">compareVersion</a>(integer $versionNumber, string $keys = &#039;columns&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $ignoredColumns = array())
+                    <p>Compares the current object with another of its version.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_compareVersions">compareVersions</a>(integer $fromVersionNumber, integer $toVersionNumber, string $keys = &#039;columns&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $ignoredColumns = array())
+                    <p>Compares two versions of the current object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Model\Base\PropelCollection">PropelCollection</abbr>|array
+                </td>
+                <td class="last">
+                    <a href="#method_getLastVersions">getLastVersions</a>($number = 10, $criteria = null, $con = null)
+                    <p>retrieve the last $number versions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     boolean
                 </td>
                 <td class="last">
@@ -1425,8 +1706,33 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 241</div>
+                        <h3 id="method_applyDefaultValues">
+        <div class="location">at line 288</div>
+        <code>            public            
+    <strong>applyDefaultValues</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Applies default values to this object.</p>
+        <p>This method should be called from the object's constructor (or
+equivalent initialization method).</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>__construct()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 297</div>
         <code>            public            
     <strong>__construct</strong>()</code>
     </h3>
@@ -1438,11 +1744,20 @@
             
             
             
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>applyDefaults()</td>
+                <td></td>
+            </tr>
+            </table>
+
                     </div>
     </div>
 
                 <h3 id="method_isModified">
-        <div class="location">at line 250</div>
+        <div class="location">at line 307</div>
         <code>            public            boolean
     <strong>isModified</strong>()</code>
     </h3>
@@ -1467,7 +1782,7 @@
     </div>
 
                 <h3 id="method_isColumnModified">
-        <div class="location">at line 261</div>
+        <div class="location">at line 318</div>
         <code>            public            boolean
     <strong>isColumnModified</strong>(string $col)</code>
     </h3>
@@ -1502,7 +1817,7 @@
     </div>
 
                 <h3 id="method_getModifiedColumns">
-        <div class="location">at line 270</div>
+        <div class="location">at line 327</div>
         <code>            public            array
     <strong>getModifiedColumns</strong>()</code>
     </h3>
@@ -1527,7 +1842,7 @@
     </div>
 
                 <h3 id="method_isNew">
-        <div class="location">at line 282</div>
+        <div class="location">at line 339</div>
         <code>            public            boolean
     <strong>isNew</strong>()</code>
     </h3>
@@ -1553,7 +1868,7 @@ and then saved.</p>
     </div>
 
                 <h3 id="method_setNew">
-        <div class="location">at line 293</div>
+        <div class="location">at line 350</div>
         <code>            public            
     <strong>setNew</strong>(boolean $b)</code>
     </h3>
@@ -1579,7 +1894,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_isDeleted">
-        <div class="location">at line 302</div>
+        <div class="location">at line 359</div>
         <code>            public            boolean
     <strong>isDeleted</strong>()</code>
     </h3>
@@ -1604,7 +1919,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDeleted">
-        <div class="location">at line 312</div>
+        <div class="location">at line 369</div>
         <code>            public            void
     <strong>setDeleted</strong>(boolean $b)</code>
     </h3>
@@ -1640,7 +1955,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_resetModified">
-        <div class="location">at line 322</div>
+        <div class="location">at line 379</div>
         <code>            public            void
     <strong>resetModified</strong>(string $col = null)</code>
     </h3>
@@ -1676,7 +1991,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_equals">
-        <div class="location">at line 341</div>
+        <div class="location">at line 398</div>
         <code>            public            boolean
     <strong>equals</strong>(mixed $obj)</code>
     </h3>
@@ -1712,7 +2027,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hashCode">
-        <div class="location">at line 366</div>
+        <div class="location">at line 423</div>
         <code>            public            int
     <strong>hashCode</strong>()</code>
     </h3>
@@ -1736,7 +2051,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumns">
-        <div class="location">at line 380</div>
+        <div class="location">at line 437</div>
         <code>            public            array
     <strong>getVirtualColumns</strong>()</code>
     </h3>
@@ -1762,7 +2077,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hasVirtualColumn">
-        <div class="location">at line 391</div>
+        <div class="location">at line 448</div>
         <code>            public            boolean
     <strong>hasVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -1798,7 +2113,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumn">
-        <div class="location">at line 404</div>
+        <div class="location">at line 461</div>
         <code>            public            mixed
     <strong>getVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -1844,7 +2159,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setVirtualColumn">
-        <div class="location">at line 421</div>
+        <div class="location">at line 478</div>
         <code>            public            <a href="../../../Thelia/Model/Base/Customer.html"><abbr title="Thelia\Model\Base\Customer">Customer</abbr></a>
     <strong>setVirtualColumn</strong>(string $name, mixed $value)</code>
     </h3>
@@ -1884,7 +2199,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_importFrom">
-        <div class="location">at line 453</div>
+        <div class="location">at line 510</div>
         <code>            public            <a href="../../../Thelia/Model/Base/Customer.html"><abbr title="Thelia\Model\Base\Customer">Customer</abbr></a>
     <strong>importFrom</strong>(mixed $parser, string $data)</code>
     </h3>
@@ -1924,7 +2239,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_exportTo">
-        <div class="location">at line 476</div>
+        <div class="location">at line 533</div>
         <code>            public            string
     <strong>exportTo</strong>(mixed $parser, boolean $includeLazyLoadColumns = true)</code>
     </h3>
@@ -1964,7 +2279,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method___sleep">
-        <div class="location">at line 489</div>
+        <div class="location">at line 546</div>
         <code>            public            
     <strong>__sleep</strong>()</code>
     </h3>
@@ -1980,7 +2295,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getId">
-        <div class="location">at line 501</div>
+        <div class="location">at line 558</div>
         <code>            public            int
     <strong>getId</strong>()</code>
     </h3>
@@ -2006,7 +2321,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getRef">
-        <div class="location">at line 512</div>
+        <div class="location">at line 569</div>
         <code>            public            string
     <strong>getRef</strong>()</code>
     </h3>
@@ -2032,7 +2347,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getTitleId">
-        <div class="location">at line 523</div>
+        <div class="location">at line 580</div>
         <code>            public            int
     <strong>getTitleId</strong>()</code>
     </h3>
@@ -2058,7 +2373,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getFirstname">
-        <div class="location">at line 534</div>
+        <div class="location">at line 591</div>
         <code>            public            string
     <strong>getFirstname</strong>()</code>
     </h3>
@@ -2084,7 +2399,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getLastname">
-        <div class="location">at line 545</div>
+        <div class="location">at line 602</div>
         <code>            public            string
     <strong>getLastname</strong>()</code>
     </h3>
@@ -2110,7 +2425,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getEmail">
-        <div class="location">at line 556</div>
+        <div class="location">at line 613</div>
         <code>            public            string
     <strong>getEmail</strong>()</code>
     </h3>
@@ -2136,7 +2451,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getPassword">
-        <div class="location">at line 567</div>
+        <div class="location">at line 624</div>
         <code>            public            string
     <strong>getPassword</strong>()</code>
     </h3>
@@ -2162,7 +2477,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getAlgo">
-        <div class="location">at line 578</div>
+        <div class="location">at line 635</div>
         <code>            public            string
     <strong>getAlgo</strong>()</code>
     </h3>
@@ -2188,7 +2503,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getReseller">
-        <div class="location">at line 589</div>
+        <div class="location">at line 646</div>
         <code>            public            int
     <strong>getReseller</strong>()</code>
     </h3>
@@ -2214,7 +2529,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getLang">
-        <div class="location">at line 600</div>
+        <div class="location">at line 657</div>
         <code>            public            string
     <strong>getLang</strong>()</code>
     </h3>
@@ -2240,7 +2555,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getSponsor">
-        <div class="location">at line 611</div>
+        <div class="location">at line 668</div>
         <code>            public            string
     <strong>getSponsor</strong>()</code>
     </h3>
@@ -2266,7 +2581,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getDiscount">
-        <div class="location">at line 622</div>
+        <div class="location">at line 679</div>
         <code>            public            double
     <strong>getDiscount</strong>()</code>
     </h3>
@@ -2292,7 +2607,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getRememberMeToken">
-        <div class="location">at line 633</div>
+        <div class="location">at line 690</div>
         <code>            public            string
     <strong>getRememberMeToken</strong>()</code>
     </h3>
@@ -2318,7 +2633,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getRememberMeSerial">
-        <div class="location">at line 644</div>
+        <div class="location">at line 701</div>
         <code>            public            string
     <strong>getRememberMeSerial</strong>()</code>
     </h3>
@@ -2344,7 +2659,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCreatedAt">
-        <div class="location">at line 661</div>
+        <div class="location">at line 718</div>
         <code>            public            mixed
     <strong>getCreatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -2391,7 +2706,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getUpdatedAt">
-        <div class="location">at line 681</div>
+        <div class="location">at line 738</div>
         <code>            public            mixed
     <strong>getUpdatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -2437,8 +2752,107 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
+                <h3 id="method_getVersion">
+        <div class="location">at line 752</div>
+        <code>            public            int
+    <strong>getVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the [version] column value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVersionCreatedAt">
+        <div class="location">at line 769</div>
+        <code>            public            mixed
+    <strong>getVersionCreatedAt</strong>(string $format = NULL)</code>
+    </h3>
+    <div class="details">
+        <p>Get the [optionally formatted] temporal [version<em>created</em>at] column value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>The date/time format string (either date()-style or strftime()-style). If format is NULL, then the raw \DateTime object will be returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Formatted date/time value as string or \DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td><ul>
+<li>if unable to parse/validate the date/time value.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVersionCreatedBy">
+        <div class="location">at line 783</div>
+        <code>            public            string
+    <strong>getVersionCreatedBy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the [version<em>created</em>by] column value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setId">
-        <div class="location">at line 696</div>
+        <div class="location">at line 795</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setId</strong>(int $v)</code>
     </h3>
@@ -2473,7 +2887,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setRef">
-        <div class="location">at line 717</div>
+        <div class="location">at line 816</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setRef</strong>(string $v)</code>
     </h3>
@@ -2508,7 +2922,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setTitleId">
-        <div class="location">at line 738</div>
+        <div class="location">at line 837</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setTitleId</strong>(int $v)</code>
     </h3>
@@ -2543,7 +2957,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setFirstname">
-        <div class="location">at line 763</div>
+        <div class="location">at line 862</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setFirstname</strong>(string $v)</code>
     </h3>
@@ -2578,7 +2992,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setLastname">
-        <div class="location">at line 784</div>
+        <div class="location">at line 883</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setLastname</strong>(string $v)</code>
     </h3>
@@ -2613,7 +3027,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setEmail">
-        <div class="location">at line 805</div>
+        <div class="location">at line 904</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setEmail</strong>(string $v)</code>
     </h3>
@@ -2648,7 +3062,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setPassword">
-        <div class="location">at line 826</div>
+        <div class="location">at line 925</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setPassword</strong>(string $v)</code>
     </h3>
@@ -2683,7 +3097,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setAlgo">
-        <div class="location">at line 847</div>
+        <div class="location">at line 946</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setAlgo</strong>(string $v)</code>
     </h3>
@@ -2718,7 +3132,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setReseller">
-        <div class="location">at line 868</div>
+        <div class="location">at line 967</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setReseller</strong>(int $v)</code>
     </h3>
@@ -2753,7 +3167,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setLang">
-        <div class="location">at line 889</div>
+        <div class="location">at line 988</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setLang</strong>(string $v)</code>
     </h3>
@@ -2788,7 +3202,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setSponsor">
-        <div class="location">at line 910</div>
+        <div class="location">at line 1009</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setSponsor</strong>(string $v)</code>
     </h3>
@@ -2823,7 +3237,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDiscount">
-        <div class="location">at line 931</div>
+        <div class="location">at line 1030</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setDiscount</strong>(double $v)</code>
     </h3>
@@ -2858,7 +3272,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setRememberMeToken">
-        <div class="location">at line 952</div>
+        <div class="location">at line 1051</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setRememberMeToken</strong>(string $v)</code>
     </h3>
@@ -2893,7 +3307,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setRememberMeSerial">
-        <div class="location">at line 973</div>
+        <div class="location">at line 1072</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setRememberMeSerial</strong>(string $v)</code>
     </h3>
@@ -2928,7 +3342,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCreatedAt">
-        <div class="location">at line 995</div>
+        <div class="location">at line 1094</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setCreatedAt</strong>(mixed $v)</code>
     </h3>
@@ -2963,7 +3377,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setUpdatedAt">
-        <div class="location">at line 1016</div>
+        <div class="location">at line 1115</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setUpdatedAt</strong>(mixed $v)</code>
     </h3>
@@ -2997,8 +3411,113 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
+                <h3 id="method_setVersion">
+        <div class="location">at line 1135</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>setVersion</strong>(int $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of [version] column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setVersionCreatedAt">
+        <div class="location">at line 1157</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>setVersionCreatedAt</strong>(mixed $v)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the value of [version<em>created</em>at] column to a normalized version of the date/time value specified.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$v</td>
+                <td>string, integer (timestamp), or \DateTime value. Empty strings are treated as NULL.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setVersionCreatedBy">
+        <div class="location">at line 1177</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>setVersionCreatedBy</strong>(string $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of [version<em>created</em>by] column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_hasOnlyDefaultValues">
-        <div class="location">at line 1038</div>
+        <div class="location">at line 1200</div>
         <code>            public            boolean
     <strong>hasOnlyDefaultValues</strong>()</code>
     </h3>
@@ -3023,7 +3542,7 @@ modified <em>and</em> has some values set which are non-default.</p>
     </div>
 
                 <h3 id="method_hydrate">
-        <div class="location">at line 1062</div>
+        <div class="location">at line 1228</div>
         <code>            public            int
     <strong>hydrate</strong>(array $row, int $startcol, boolean $rehydrate = false, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -3087,7 +3606,7 @@ more tables.</p>
     </div>
 
                 <h3 id="method_ensureConsistency">
-        <div class="location">at line 1148</div>
+        <div class="location">at line 1326</div>
         <code>            public            
     <strong>ensureConsistency</strong>()</code>
     </h3>
@@ -3118,7 +3637,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_reload">
-        <div class="location">at line 1165</div>
+        <div class="location">at line 1343</div>
         <code>            public            void
     <strong>reload</strong>(boolean $deep = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3170,7 +3689,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 1214</div>
+        <div class="location">at line 1394</div>
         <code>            public            void
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3230,7 +3749,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_save">
-        <div class="location">at line 1256</div>
+        <div class="location">at line 1436</div>
         <code>            public            int
     <strong>save</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3287,7 +3806,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByName">
-        <div class="location">at line 1619</div>
+        <div class="location">at line 1846</div>
         <code>            public            mixed
     <strong>getByName</strong>(string $name, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -3327,7 +3846,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByPosition">
-        <div class="location">at line 1634</div>
+        <div class="location">at line 1861</div>
         <code>            public            mixed
     <strong>getByPosition</strong>(int $pos)</code>
     </h3>
@@ -3361,7 +3880,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_toArray">
-        <div class="location">at line 1706</div>
+        <div class="location">at line 1942</div>
         <code>            public            array
     <strong>toArray</strong>(string $keyType = TableMap::TYPE_PHPNAME, boolean $includeLazyLoadColumns = true, array $alreadyDumpedObjects = array(), boolean $includeForeignObjects = false)</code>
     </h3>
@@ -3411,7 +3930,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByName">
-        <div class="location">at line 1768</div>
+        <div class="location">at line 2010</div>
         <code>            public            void
     <strong>setByName</strong>(string $name, mixed $value, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -3458,7 +3977,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByPosition">
-        <div class="location">at line 1783</div>
+        <div class="location">at line 2025</div>
         <code>            public            void
     <strong>setByPosition</strong>(int $pos, mixed $value)</code>
     </h3>
@@ -3498,7 +4017,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_fromArray">
-        <div class="location">at line 1854</div>
+        <div class="location">at line 2105</div>
         <code>            public            void
     <strong>fromArray</strong>(array $arr, string $keyType = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -3546,7 +4065,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildCriteria">
-        <div class="location">at line 1881</div>
+        <div class="location">at line 2135</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildCriteria</strong>()</code>
     </h3>
@@ -3571,7 +4090,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildPkeyCriteria">
-        <div class="location">at line 1913</div>
+        <div class="location">at line 2170</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildPkeyCriteria</strong>()</code>
     </h3>
@@ -3596,7 +4115,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_getPrimaryKey">
-        <div class="location">at line 1925</div>
+        <div class="location">at line 2182</div>
         <code>            public            int
     <strong>getPrimaryKey</strong>()</code>
     </h3>
@@ -3622,7 +4141,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_setPrimaryKey">
-        <div class="location">at line 1936</div>
+        <div class="location">at line 2193</div>
         <code>            public            void
     <strong>setPrimaryKey</strong>(int $key)</code>
     </h3>
@@ -3658,7 +4177,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_isPrimaryKeyNull">
-        <div class="location">at line 1945</div>
+        <div class="location">at line 2202</div>
         <code>            public            boolean
     <strong>isPrimaryKeyNull</strong>()</code>
     </h3>
@@ -3684,7 +4203,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_copyInto">
-        <div class="location">at line 1962</div>
+        <div class="location">at line 2219</div>
         <code>            public            
     <strong>copyInto</strong>(object $copyObj, boolean $deepCopy = false, boolean $makeNew = true)</code>
     </h3>
@@ -3730,7 +4249,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_copy">
-        <div class="location">at line 2029</div>
+        <div class="location">at line 2295</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>copy</strong>(boolean $deepCopy = false)</code>
     </h3>
@@ -3778,7 +4297,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setCustomerTitle">
-        <div class="location">at line 2046</div>
+        <div class="location">at line 2312</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setCustomerTitle</strong>(<a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a> $v = null)</code>
     </h3>
@@ -3824,7 +4343,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getCustomerTitle">
-        <div class="location">at line 2074</div>
+        <div class="location">at line 2340</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a>
     <strong>getCustomerTitle</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3869,7 +4388,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_initRelation">
-        <div class="location">at line 2099</div>
+        <div class="location">at line 2365</div>
         <code>            public            void
     <strong>initRelation</strong>(string $relationName)</code>
     </h3>
@@ -3905,7 +4424,7 @@ that wouldn't work when StandardEnglishPluralizer is used.</p>
     </div>
 
                 <h3 id="method_clearAddresses">
-        <div class="location">at line 2124</div>
+        <div class="location">at line 2393</div>
         <code>            public            void
     <strong>clearAddresses</strong>()</code>
     </h3>
@@ -3940,7 +4459,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialAddresses">
-        <div class="location">at line 2132</div>
+        <div class="location">at line 2401</div>
         <code>            public            
     <strong>resetPartialAddresses</strong>($v = true)</code>
     </h3>
@@ -3967,7 +4486,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initAddresses">
-        <div class="location">at line 2149</div>
+        <div class="location">at line 2418</div>
         <code>            public            void
     <strong>initAddresses</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -4004,7 +4523,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getAddresses">
-        <div class="location">at line 2172</div>
+        <div class="location">at line 2441</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>[]
     <strong>getAddresses</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4057,7 +4576,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setAddresses">
-        <div class="location">at line 2228</div>
+        <div class="location">at line 2497</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setAddresses</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $addresses, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4097,7 +4616,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countAddresses">
-        <div class="location">at line 2259</div>
+        <div class="location">at line 2528</div>
         <code>            public            int
     <strong>countAddresses</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4155,7 +4674,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addAddress">
-        <div class="location">at line 2291</div>
+        <div class="location">at line 2560</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>addAddress</strong>(<a href="../../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a> $l)</code>
     </h3>
@@ -4190,7 +4709,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeAddress">
-        <div class="location">at line 2318</div>
+        <div class="location">at line 2587</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>removeAddress</strong>(<a href="../../../Thelia/Model/Base/Address.html"><abbr title="Thelia\Model\Base\Address">Address</abbr></a> $address)</code>
     </h3>
@@ -4226,7 +4745,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_getAddressesJoinCustomerTitle">
-        <div class="location">at line 2350</div>
+        <div class="location">at line 2619</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>[]
     <strong>getAddressesJoinCustomerTitle</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4276,7 +4795,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getAddressesJoinCountry">
-        <div class="location">at line 2375</div>
+        <div class="location">at line 2644</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>[]
     <strong>getAddressesJoinCountry</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4326,7 +4845,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_clearOrders">
-        <div class="location">at line 2392</div>
+        <div class="location">at line 2661</div>
         <code>            public            void
     <strong>clearOrders</strong>()</code>
     </h3>
@@ -4361,7 +4880,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialOrders">
-        <div class="location">at line 2400</div>
+        <div class="location">at line 2669</div>
         <code>            public            
     <strong>resetPartialOrders</strong>($v = true)</code>
     </h3>
@@ -4388,7 +4907,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initOrders">
-        <div class="location">at line 2417</div>
+        <div class="location">at line 2686</div>
         <code>            public            void
     <strong>initOrders</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -4425,7 +4944,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getOrders">
-        <div class="location">at line 2440</div>
+        <div class="location">at line 2709</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrders</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4478,7 +4997,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setOrders">
-        <div class="location">at line 2496</div>
+        <div class="location">at line 2765</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setOrders</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $orders, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4518,7 +5037,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countOrders">
-        <div class="location">at line 2527</div>
+        <div class="location">at line 2796</div>
         <code>            public            int
     <strong>countOrders</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4576,7 +5095,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addOrder">
-        <div class="location">at line 2559</div>
+        <div class="location">at line 2828</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>addOrder</strong>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $l)</code>
     </h3>
@@ -4611,7 +5130,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeOrder">
-        <div class="location">at line 2586</div>
+        <div class="location">at line 2855</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>removeOrder</strong>(<a href="../../../Thelia/Model/Base/Order.html"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> $order)</code>
     </h3>
@@ -4647,7 +5166,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_getOrdersJoinCurrency">
-        <div class="location">at line 2618</div>
+        <div class="location">at line 2887</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersJoinCurrency</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4697,7 +5216,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getOrdersJoinOrderAddressRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 2643</div>
+        <div class="location">at line 2912</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersJoinOrderAddressRelatedByInvoiceOrderAddressId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4747,7 +5266,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getOrdersJoinOrderAddressRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2668</div>
+        <div class="location">at line 2937</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersJoinOrderAddressRelatedByDeliveryOrderAddressId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4797,7 +5316,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getOrdersJoinOrderStatus">
-        <div class="location">at line 2693</div>
+        <div class="location">at line 2962</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersJoinOrderStatus</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4847,7 +5366,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getOrdersJoinModuleRelatedByPaymentModuleId">
-        <div class="location">at line 2718</div>
+        <div class="location">at line 2987</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersJoinModuleRelatedByPaymentModuleId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4897,7 +5416,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getOrdersJoinModuleRelatedByDeliveryModuleId">
-        <div class="location">at line 2743</div>
+        <div class="location">at line 3012</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersJoinModuleRelatedByDeliveryModuleId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4947,7 +5466,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getOrdersJoinLang">
-        <div class="location">at line 2768</div>
+        <div class="location">at line 3037</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersJoinLang</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4996,8 +5515,58 @@ actually need in Customer.</p>
                     </div>
     </div>
 
+                <h3 id="method_getOrdersJoinCart">
+        <div class="location">at line 3062</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+    <strong>getOrdersJoinCart</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+        <p>Otherwise if this Customer is new, it will return
+an empty collection; or if this Customer has previously
+been saved, it will retrieve related Orders from storage.</p>
+
+<p>This method is protected by default in order to keep the public
+api reasonable.  You can provide public methods for those you
+actually need in Customer.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>optional Criteria object to narrow the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>optional connection object</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinBehavior</td>
+                <td>optional join type to use (defaults to Criteria::LEFT_JOIN)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]</td>
+            <td>List of ChildOrder objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_clearCarts">
-        <div class="location">at line 2785</div>
+        <div class="location">at line 3079</div>
         <code>            public            void
     <strong>clearCarts</strong>()</code>
     </h3>
@@ -5032,7 +5601,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialCarts">
-        <div class="location">at line 2793</div>
+        <div class="location">at line 3087</div>
         <code>            public            
     <strong>resetPartialCarts</strong>($v = true)</code>
     </h3>
@@ -5059,7 +5628,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initCarts">
-        <div class="location">at line 2810</div>
+        <div class="location">at line 3104</div>
         <code>            public            void
     <strong>initCarts</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -5096,7 +5665,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getCarts">
-        <div class="location">at line 2833</div>
+        <div class="location">at line 3127</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>[]
     <strong>getCarts</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5149,7 +5718,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setCarts">
-        <div class="location">at line 2889</div>
+        <div class="location">at line 3183</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setCarts</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $carts, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5189,7 +5758,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countCarts">
-        <div class="location">at line 2920</div>
+        <div class="location">at line 3214</div>
         <code>            public            int
     <strong>countCarts</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5247,7 +5816,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addCart">
-        <div class="location">at line 2952</div>
+        <div class="location">at line 3246</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>addCart</strong>(<a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a> $l)</code>
     </h3>
@@ -5282,7 +5851,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeCart">
-        <div class="location">at line 2979</div>
+        <div class="location">at line 3273</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>removeCart</strong>(<a href="../../../Thelia/Model/Base/Cart.html"><abbr title="Thelia\Model\Base\Cart">Cart</abbr></a> $cart)</code>
     </h3>
@@ -5318,7 +5887,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_getCartsJoinAddressRelatedByAddressDeliveryId">
-        <div class="location">at line 3011</div>
+        <div class="location">at line 3305</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>[]
     <strong>getCartsJoinAddressRelatedByAddressDeliveryId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -5368,7 +5937,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getCartsJoinAddressRelatedByAddressInvoiceId">
-        <div class="location">at line 3036</div>
+        <div class="location">at line 3330</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>[]
     <strong>getCartsJoinAddressRelatedByAddressInvoiceId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -5418,7 +5987,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_getCartsJoinCurrency">
-        <div class="location">at line 3061</div>
+        <div class="location">at line 3355</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>[]
     <strong>getCartsJoinCurrency</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -5468,7 +6037,7 @@ actually need in Customer.</p>
     </div>
 
                 <h3 id="method_clearCouponCustomerCounts">
-        <div class="location">at line 3078</div>
+        <div class="location">at line 3372</div>
         <code>            public            void
     <strong>clearCouponCustomerCounts</strong>()</code>
     </h3>
@@ -5503,7 +6072,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialCouponCustomerCounts">
-        <div class="location">at line 3086</div>
+        <div class="location">at line 3380</div>
         <code>            public            
     <strong>resetPartialCouponCustomerCounts</strong>($v = true)</code>
     </h3>
@@ -5530,7 +6099,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initCouponCustomerCounts">
-        <div class="location">at line 3103</div>
+        <div class="location">at line 3397</div>
         <code>            public            void
     <strong>initCouponCustomerCounts</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -5567,7 +6136,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getCouponCustomerCounts">
-        <div class="location">at line 3126</div>
+        <div class="location">at line 3420</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/CouponCustomerCount.html"><abbr title="Thelia\Model\CouponCustomerCount">CouponCustomerCount</abbr></a>[]
     <strong>getCouponCustomerCounts</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5620,7 +6189,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setCouponCustomerCounts">
-        <div class="location">at line 3182</div>
+        <div class="location">at line 3476</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setCouponCustomerCounts</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $couponCustomerCounts, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5660,7 +6229,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countCouponCustomerCounts">
-        <div class="location">at line 3213</div>
+        <div class="location">at line 3507</div>
         <code>            public            int
     <strong>countCouponCustomerCounts</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5718,7 +6287,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addCouponCustomerCount">
-        <div class="location">at line 3245</div>
+        <div class="location">at line 3539</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>addCouponCustomerCount</strong>(<a href="../../../Thelia/Model/CouponCustomerCount.html"><abbr title="Thelia\Model\CouponCustomerCount">CouponCustomerCount</abbr></a> $l)</code>
     </h3>
@@ -5753,7 +6322,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeCouponCustomerCount">
-        <div class="location">at line 3272</div>
+        <div class="location">at line 3566</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>removeCouponCustomerCount</strong>(<a href="../../../Thelia/Model/Base/CouponCustomerCount.html"><abbr title="Thelia\Model\Base\CouponCustomerCount">CouponCustomerCount</abbr></a> $couponCustomerCount)</code>
     </h3>
@@ -5789,7 +6358,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_getCouponCustomerCountsJoinCoupon">
-        <div class="location">at line 3304</div>
+        <div class="location">at line 3598</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/CouponCustomerCount.html"><abbr title="Thelia\Model\CouponCustomerCount">CouponCustomerCount</abbr></a>[]
     <strong>getCouponCustomerCountsJoinCoupon</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -5838,8 +6407,329 @@ actually need in Customer.</p>
                     </div>
     </div>
 
+                <h3 id="method_clearCustomerVersions">
+        <div class="location">at line 3615</div>
+        <code>            public            void
+    <strong>clearCustomerVersions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears out the collCustomerVersions collection</p>
+        <p>This does not modify the database; however, it will remove any associated objects, causing
+them to be refetched by subsequent calls to accessor method.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addCustomerVersions()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_resetPartialCustomerVersions">
+        <div class="location">at line 3623</div>
+        <code>            public            
+    <strong>resetPartialCustomerVersions</strong>($v = true)</code>
+    </h3>
+    <div class="details">
+        <p>Reset is the collCustomerVersions collection loaded partially.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initCustomerVersions">
+        <div class="location">at line 3640</div>
+        <code>            public            void
+    <strong>initCustomerVersions</strong>(boolean $overrideExisting = true)</code>
+    </h3>
+    <div class="details">
+        <p>Initializes the collCustomerVersions collection.</p>
+        <p>By default this just sets the collCustomerVersions collection to an empty array (like clearcollCustomerVersions());
+however, you may wish to override this method in your stub class to provide setting appropriate
+to your application -- for example, setting the initial array to the values stored in database.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$overrideExisting</td>
+                <td>If set to true, the method call initializes the collection even if it is not empty</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCustomerVersions">
+        <div class="location">at line 3663</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a>[]
+    <strong>getCustomerVersions</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets an array of ChildCustomerVersion objects which contain a foreign key that references this object.</p>
+        <p>If the $criteria is not null, it is used to always fetch the results from the database.
+Otherwise the results are fetched from the database the first time, then cached.
+Next time the same method is called without $criteria, the cached collection is returned.
+If this ChildCustomer is new, it will return
+an empty collection or the current collection; the criteria is ignored on a new object.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>optional Criteria object to narrow the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a>[]</td>
+            <td>List of ChildCustomerVersion objects</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCustomerVersions">
+        <div class="location">at line 3719</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>setCustomerVersions</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $customerVersions, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a collection of CustomerVersion objects related by a one-to-many relationship to the current object.</p>
+        <p>It will also schedule objects for deletion based on a diff between old objects (aka persisted)
+and new objects from the given Propel collection.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></td>
+                <td>$customerVersions</td>
+                <td>A Propel collection.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countCustomerVersions">
+        <div class="location">at line 3753</div>
+        <code>            public            int
+    <strong>countCustomerVersions</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of related CustomerVersion objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$distinct</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>Count of related CustomerVersion objects.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addCustomerVersion">
+        <div class="location">at line 3785</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>addCustomerVersion</strong>(<a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a> $l)</code>
+    </h3>
+    <div class="details">
+        <p>Method called to associate a ChildCustomerVersion object to this object through the ChildCustomerVersion foreign key attribute.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a></td>
+                <td>$l</td>
+                <td>ChildCustomerVersion</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeCustomerVersion">
+        <div class="location">at line 3812</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>removeCustomerVersion</strong>(<a href="../../../Thelia/Model/Base/CustomerVersion.html"><abbr title="Thelia\Model\Base\CustomerVersion">CustomerVersion</abbr></a> $customerVersion)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/Base/CustomerVersion.html"><abbr title="Thelia\Model\Base\CustomerVersion">CustomerVersion</abbr></a></td>
+                <td>$customerVersion</td>
+                <td>The customerVersion object to remove.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_clearCoupons">
-        <div class="location">at line 3321</div>
+        <div class="location">at line 3836</div>
         <code>            public            void
     <strong>clearCoupons</strong>()</code>
     </h3>
@@ -5874,7 +6764,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initCoupons">
-        <div class="location">at line 3336</div>
+        <div class="location">at line 3851</div>
         <code>            public            void
     <strong>initCoupons</strong>()</code>
     </h3>
@@ -5901,7 +6791,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getCoupons">
-        <div class="location">at line 3357</div>
+        <div class="location">at line 3872</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|<a href="../../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a>[]
     <strong>getCoupons</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5944,7 +6834,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setCoupons">
-        <div class="location">at line 3387</div>
+        <div class="location">at line 3902</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>setCoupons</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $coupons, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5984,7 +6874,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countCoupons">
-        <div class="location">at line 3415</div>
+        <div class="location">at line 3930</div>
         <code>            public            int
     <strong>countCoupons</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6029,7 +6919,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addCoupon">
-        <div class="location">at line 3442</div>
+        <div class="location">at line 3957</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>addCoupon</strong>(<a href="../../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)</code>
     </h3>
@@ -6064,7 +6954,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeCoupon">
-        <div class="location">at line 3479</div>
+        <div class="location">at line 3994</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>removeCoupon</strong>(<a href="../../../Thelia/Model/Coupon.html"><abbr title="Thelia\Model\Coupon">Coupon</abbr></a> $coupon)</code>
     </h3>
@@ -6099,7 +6989,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_clear">
-        <div class="location">at line 3498</div>
+        <div class="location">at line 4013</div>
         <code>            public            
     <strong>clear</strong>()</code>
     </h3>
@@ -6115,7 +7005,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_clearAllReferences">
-        <div class="location">at line 3532</div>
+        <div class="location">at line 4051</div>
         <code>            public            
     <strong>clearAllReferences</strong>(boolean $deep = false)</code>
     </h3>
@@ -6142,7 +7032,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">at line 3575</div>
+        <div class="location">at line 4100</div>
         <code>            public            string
     <strong>__toString</strong>()</code>
     </h3>
@@ -6168,7 +7058,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_keepUpdateDateUnchanged">
-        <div class="location">at line 3587</div>
+        <div class="location">at line 4112</div>
         <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>keepUpdateDateUnchanged</strong>()</code>
     </h3>
@@ -6192,8 +7082,504 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
                     </div>
     </div>
 
+                <h3 id="method_enforceVersioning">
+        <div class="location">at line 4126</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>enforceVersioning</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Enforce a new Version of this object upon next save.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isVersioningNecessary">
+        <div class="location">at line 4138</div>
+        <code>            public            boolean
+    <strong>isVersioningNecessary</strong>($con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the current state must be recorded as a version</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addVersion">
+        <div class="location">at line 4173</div>
+        <code>            public            <a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a>
+    <strong>addVersion</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a version of the current object and saves it.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a></td>
+            <td>A version object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toVersion">
+        <div class="location">at line 4215</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>toVersion</strong>(integer $versionNumber, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the properties of the current object to the value they had at a specific version</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$versionNumber</td>
+                <td>The version number to read</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>The connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_populateFromVersion">
+        <div class="location">at line 4235</div>
+        <code>            public            <a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
+    <strong>populateFromVersion</strong>(<a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a> $version, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $loadedObjects = array())</code>
+    </h3>
+    <div class="details">
+        <p>Sets the properties of the current object to the value they had at a specific version</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a></td>
+                <td>$version</td>
+                <td>The version object to use</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$loadedObjects</td>
+                <td>objects that been loaded in a chain of populateFromVersion calls on referrer or fk objects.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastVersionNumber">
+        <div class="location">at line 4290</div>
+        <code>            public            integer
+    <strong>getLastVersionNumber</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the latest persisted version number for the current object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isLastVersion">
+        <div class="location">at line 4310</div>
+        <code>            public            Boolean
+    <strong>isLastVersion</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the current object is the latest one</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOneVersion">
+        <div class="location">at line 4323</div>
+        <code>            public            <a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a>
+    <strong>getOneVersion</strong>(integer $versionNumber, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves a version object for this entity and a version number</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$versionNumber</td>
+                <td>The version number to read</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CustomerVersion.html"><abbr title="Thelia\Model\CustomerVersion">CustomerVersion</abbr></a></td>
+            <td>A version object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllVersions">
+        <div class="location">at line 4338</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+    <strong>getAllVersions</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets all the versions of this object, in incremental order</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+            <td>A list of ChildCustomerVersion objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_compareVersion">
+        <div class="location">at line 4363</div>
+        <code>            public            array
+    <strong>compareVersion</strong>(integer $versionNumber, string $keys = &#039;columns&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $ignoredColumns = array())</code>
+    </h3>
+    <div class="details">
+        <p>Compares the current object with another of its version.</p>
+        <p><code>
+print_r($book->compareVersion(1));
+=> array(
+  '1' => array('Title' => 'Book title at version 1'),
+  '2' => array('Title' => 'Book title at version 2')
+);
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$versionNumber</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$keys</td>
+                <td>Main key used for the result diff (versions|columns)</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ignoredColumns</td>
+                <td>The columns to exclude from the diff.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>A list of differences</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_compareVersions">
+        <div class="location">at line 4389</div>
+        <code>            public            array
+    <strong>compareVersions</strong>(integer $fromVersionNumber, integer $toVersionNumber, string $keys = &#039;columns&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $ignoredColumns = array())</code>
+    </h3>
+    <div class="details">
+        <p>Compares two versions of the current object.</p>
+        <p><code>
+print_r($book->compareVersions(1, 2));
+=> array(
+  '1' => array('Title' => 'Book title at version 1'),
+  '2' => array('Title' => 'Book title at version 2')
+);
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$fromVersionNumber</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$toVersionNumber</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$keys</td>
+                <td>Main key used for the result diff (versions|columns)</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ignoredColumns</td>
+                <td>The columns to exclude from the diff.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>A list of differences</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastVersions">
+        <div class="location">at line 4452</div>
+        <code>            public            <abbr title="Thelia\Model\Base\PropelCollection">PropelCollection</abbr>|array
+    <strong>getLastVersions</strong>($number = 10, $criteria = null, $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>retrieve the last $number versions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$number</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\Base\PropelCollection">PropelCollection</abbr>|array</td>
+            <td>\Thelia\Model\CustomerVersion[] List of \Thelia\Model\CustomerVersion objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_preSave">
-        <div class="location">at line 3599</div>
+        <div class="location">at line 4465</div>
         <code>            public            boolean
     <strong>preSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6230,7 +7616,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postSave">
-        <div class="location">at line 3608</div>
+        <div class="location">at line 4474</div>
         <code>            public            
     <strong>postSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6257,7 +7643,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preInsert">
-        <div class="location">at line 3618</div>
+        <div class="location">at line 4484</div>
         <code>            public            boolean
     <strong>preInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6294,7 +7680,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postInsert">
-        <div class="location">at line 3627</div>
+        <div class="location">at line 4493</div>
         <code>            public            
     <strong>postInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6321,7 +7707,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preUpdate">
-        <div class="location">at line 3637</div>
+        <div class="location">at line 4503</div>
         <code>            public            boolean
     <strong>preUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6358,7 +7744,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postUpdate">
-        <div class="location">at line 3646</div>
+        <div class="location">at line 4512</div>
         <code>            public            
     <strong>postUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6385,7 +7771,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preDelete">
-        <div class="location">at line 3656</div>
+        <div class="location">at line 4522</div>
         <code>            public            boolean
     <strong>preDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6422,7 +7808,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postDelete">
-        <div class="location">at line 3665</div>
+        <div class="location">at line 4531</div>
         <code>            public            
     <strong>postDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6449,7 +7835,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___call">
-        <div class="location">at line 3682</div>
+        <div class="location">at line 4548</div>
         <code>            public            array|string
     <strong>__call</strong>(string $name, mixed $params)</code>
     </h3>

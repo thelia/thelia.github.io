@@ -54,17 +54,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_redirect">redirect</a>(string $url, int $status = 302, array $cookies = array())
-                    <p>redirect request to the specified url</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Thelia/Controller/BaseController.html#method_redirect"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="Swift_Mailer">Swift_Mailer</abbr>
+                    <a href="../../../Thelia/Mailer/MailerFactory.html"><abbr title="Thelia\Mailer\MailerFactory">MailerFactory</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getMailer">getMailer</a>()
@@ -77,10 +67,20 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_redirectToRoute">redirectToRoute</a>($routeId, array $urlParameters = array(), array $routeParameters = array(), $referenceType = Router::ABSOLUTE_PATH)
+                    <a href="#method_redirect">redirect</a>(string $url, int $status = 302, array $cookies = array())
+                    <p>redirect request to the specified url</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Controller/BaseController.html#method_redirect"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_redirectToRoute">redirectToRoute</a>(string $routeId, array $urlParameters = array(), array $routeParameters = array())
                     <p>Redirect to à route ID related URL</p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Controller/BaseController.html#method_redirectToRoute"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -99,7 +99,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_getDispatcher">
-        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_getDispatcher"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 103</div>
+        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_getDispatcher"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 110</div>
         <code>            public            <abbr title="Symfony\Component\EventDispatcher\EventDispatcher">EventDispatcher</abbr>
     <strong>getDispatcher</strong>()</code>
     </h3>
@@ -125,7 +125,7 @@
     </div>
 
                 <h3 id="method_getTranslator">
-        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_getTranslator"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 114</div>
+        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_getTranslator"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 121</div>
         <code>            public            <a href="../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a>
     <strong>getTranslator</strong>()</code>
     </h3>
@@ -150,8 +150,34 @@
                     </div>
     </div>
 
+                <h3 id="method_getMailer">
+        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_getMailer"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 459</div>
+        <code>            public            <a href="../../../Thelia/Mailer/MailerFactory.html"><abbr title="Thelia\Mailer\MailerFactory">MailerFactory</abbr></a>
+    <strong>getMailer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return an instance of \Swift_Mailer with good Transporter configured.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Mailer/MailerFactory.html"><abbr title="Thelia\Mailer\MailerFactory">MailerFactory</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_redirect">
-        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_redirect"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 255</div>
+        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_redirect"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 513</div>
         <code>            public            
     <strong>redirect</strong>(string $url, int $status = 302, array $cookies = array())</code>
     </h3>
@@ -185,39 +211,22 @@
             
             
             
-                    </div>
-    </div>
-
-                <h3 id="method_getMailer">
-        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_getMailer"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 345</div>
-        <code>            public            <abbr title="Swift_Mailer">Swift_Mailer</abbr>
-    <strong>getMailer</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>return an instance of \Swift_Mailer with good Transporter configured.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
+                            <h4>See also</h4>
 
                     <table>
-        <tr>
-            <td><abbr title="Swift_Mailer">Swift_Mailer</abbr></td>
-            <td>
-</td>
-        </tr>
-    </table>
+                    <tr>
+                <td>generateRedirect</td>
+                <td>instead of this method</td>
+            </tr>
+            </table>
 
-            
-            
                     </div>
     </div>
 
                 <h3 id="method_redirectToRoute">
-        <div class="location">at line 45</div>
+        <div class="location">in <a href="../../../Thelia/Controller/BaseController.html#method_redirectToRoute"><abbr title="Thelia\Controller\BaseController">BaseController</abbr></a> at line 529</div>
         <code>            public            
-    <strong>redirectToRoute</strong>($routeId, array $urlParameters = array(), array $routeParameters = array(), $referenceType = Router::ABSOLUTE_PATH)</code>
+    <strong>redirectToRoute</strong>(string $routeId, array $urlParameters = array(), array $routeParameters = array())</code>
     </h3>
     <div class="details">
         <p>Redirect to à route ID related URL</p>
@@ -228,26 +237,18 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$routeId</td>
-                <td>
-</td>
+                <td>the route ID, as found in Config/Resources/routing/admin.xml</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$urlParameters</td>
-                <td>
-</td>
+                <td>the URL parameters, as a var/value pair array</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$routeParameters</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td></td>
-                <td>$referenceType</td>
                 <td>
 </td>
             </tr>
@@ -256,11 +257,20 @@
             
             
             
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>generateRedirectFromRoute</td>
+                <td></td>
+            </tr>
+            </table>
+
                     </div>
     </div>
 
                 <h3 id="method_checkAuth">
-        <div class="location">at line 50</div>
+        <div class="location">at line 29</div>
         <code>            public            
     <strong>checkAuth</strong>()</code>
     </h3>

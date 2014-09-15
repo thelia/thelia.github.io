@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\Event\ImportExport | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Core/Event.html">Thelia\Core\Event</a>\ImportExport</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>ImportExport</strong>        extends <a href="../../../Thelia/Core/Event/ActionEvent.html"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a></p>
+
+            <div class="description">
+            <p>Class Export</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___set">__set</a>($name, $value)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Core/Event/ActionEvent.html#method___set"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>($name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Core/Event/ActionEvent.html#method___get"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a> $formatter = null, <a href="../../../Thelia/ImportExport/AbstractHandler.html"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a> $handler = null, <a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a> $data = null, <a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> $archiveBuilder = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Event\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setArchiveBuilder">setArchiveBuilder</a>(<a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> $archiveBuilder)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getArchiveBuilder">getArchiveBuilder</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Event\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setFormatter">setFormatter</a>(<a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a> $formatter)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFormatter">getFormatter</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Event\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setHandler">setHandler</a>(<a href="../../../Thelia/ImportExport/Export/ExportHandler.html"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> $handler)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/ImportExport/Export/ExportHandler.html"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getHandler">getHandler</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Event\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setData">setData</a>(<a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a> $data)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getData">getData</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Event\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setContent">setContent</a>(<abbr title="Thelia\Core\Event\$content">$content</abbr> $content)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getContent">getContent</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isArchive">isArchive</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___set">
+        <div class="location">in <a href="../../../Thelia/Core/Event/ActionEvent.html#method___set"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a> at line 27</div>
+        <code>            public            
+    <strong>__set</strong>($name, $value)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">in <a href="../../../Thelia/Core/Event/ActionEvent.html#method___get"><abbr title="Thelia\Core\Event\ActionEvent">ActionEvent</abbr></a> at line 32</div>
+        <code>            public            
+    <strong>__get</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 42</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a> $formatter = null, <a href="../../../Thelia/ImportExport/AbstractHandler.html"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a> $handler = null, <a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a> $data = null, <a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> $archiveBuilder = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a></td>
+                <td>$formatter</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Thelia/ImportExport/AbstractHandler.html"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a></td>
+                <td>$handler</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a></td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></td>
+                <td>$archiveBuilder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setArchiveBuilder">
+        <div class="location">at line 58</div>
+        <code>            public            <abbr title="Thelia\Core\Event\$this">$this</abbr>
+    <strong>setArchiveBuilder</strong>(<a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> $archiveBuilder)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></td>
+                <td>$archiveBuilder</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Event\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getArchiveBuilder">
+        <div class="location">at line 68</div>
+        <code>            public            <a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a>
+    <strong>getArchiveBuilder</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFormatter">
+        <div class="location">at line 77</div>
+        <code>            public            <abbr title="Thelia\Core\Event\$this">$this</abbr>
+    <strong>setFormatter</strong>(<a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a> $formatter)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a></td>
+                <td>$formatter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Event\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFormatter">
+        <div class="location">at line 87</div>
+        <code>            public            <a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a>
+    <strong>getFormatter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Core/FileFormat/Formatting/AbstractFormatter.html"><abbr title="Thelia\Core\FileFormat\Formatting\AbstractFormatter">AbstractFormatter</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHandler">
+        <div class="location">at line 96</div>
+        <code>            public            <abbr title="Thelia\Core\Event\$this">$this</abbr>
+    <strong>setHandler</strong>(<a href="../../../Thelia/ImportExport/Export/ExportHandler.html"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> $handler)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/ImportExport/Export/ExportHandler.html"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></td>
+                <td>$handler</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Event\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHandler">
+        <div class="location">at line 106</div>
+        <code>            public            <a href="../../../Thelia/ImportExport/Export/ExportHandler.html"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a>
+    <strong>getHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/ImportExport/Export/ExportHandler.html"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setData">
+        <div class="location">at line 115</div>
+        <code>            public            <abbr title="Thelia\Core\Event\$this">$this</abbr>
+    <strong>setData</strong>(<a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a> $data)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a></td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Event\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getData">
+        <div class="location">at line 125</div>
+        <code>            public            <a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a>
+    <strong>getData</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setContent">
+        <div class="location">at line 134</div>
+        <code>            public            <abbr title="Thelia\Core\Event\$this">$this</abbr>
+    <strong>setContent</strong>(<abbr title="Thelia\Core\Event\$content">$content</abbr> $content)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\Event\$content">$content</abbr></td>
+                <td>$content</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Event\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContent">
+        <div class="location">at line 144</div>
+        <code>            public            mixed
+    <strong>getContent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isArchive">
+        <div class="location">at line 149</div>
+        <code>            public            
+    <strong>isArchive</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -238,6 +238,14 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
                 </td>
             </tr>
                     <tr>
+                <td>CART_ID</td>
+                <td class="last">
+                    <p><em>the column name for the CART_ID field</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
                 <td>CREATED_AT</td>
                 <td class="last">
                     <p><em>the column name for the CREATED_AT field</em></p>
@@ -249,6 +257,30 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
                 <td>UPDATED_AT</td>
                 <td class="last">
                     <p><em>the column name for the UPDATED_AT field</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VERSION</td>
+                <td class="last">
+                    <p><em>the column name for the VERSION field</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VERSION_CREATED_AT</td>
+                <td class="last">
+                    <p><em>the column name for the VERSION<em>CREATED</em>AT field</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VERSION_CREATED_BY</td>
+                <td class="last">
+                    <p><em>the column name for the VERSION<em>CREATED</em>BY field</em></p>
                     <p>
 </p>
                 </td>
@@ -424,7 +456,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
         <h2>Details</h2>
 
                         <h3 id="method_initialize">
-        <div class="location">at line 210</div>
+        <div class="location">at line 230</div>
         <code>            public            void
     <strong>initialize</strong>()</code>
     </h3>
@@ -460,7 +492,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
     </div>
 
                 <h3 id="method_buildRelations">
-        <div class="location">at line 243</div>
+        <div class="location">at line 267</div>
         <code>            public            
     <strong>buildRelations</strong>()</code>
     </h3>
@@ -476,7 +508,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
     </div>
 
                 <h3 id="method_getBehaviors">
-        <div class="location">at line 263</div>
+        <div class="location">at line 289</div>
         <code>            public            array
     <strong>getBehaviors</strong>()</code>
     </h3>
@@ -501,7 +533,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
     </div>
 
                 <h3 id="method_clearRelatedInstancePool">
-        <div class="location">at line 272</div>
+        <div class="location">at line 299</div>
         <code>        static    public            
     <strong>clearRelatedInstancePool</strong>()</code>
     </h3>
@@ -517,7 +549,7 @@ ORDER BY clause to know whether it needs to apply SQL to make the ORDER BY case-
     </div>
 
                 <h3 id="method_getPrimaryKeyHashFromRow">
-        <div class="location">at line 291</div>
+        <div class="location">at line 319</div>
         <code>        static    public            
     <strong>getPrimaryKeyHashFromRow</strong>(array $row, int $offset, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -553,7 +585,7 @@ a multi-column primary key, a serialize()d version of the primary key will be re
     </div>
 
                 <h3 id="method_getPrimaryKeyFromRow">
-        <div class="location">at line 313</div>
+        <div class="location">at line 341</div>
         <code>        static    public            mixed
     <strong>getPrimaryKeyFromRow</strong>(array $row, int $offset, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -598,7 +630,7 @@ a multi-column primary key, an array of the primary key columns will be returned
     </div>
 
                 <h3 id="method_getOMClass">
-        <div class="location">at line 334</div>
+        <div class="location">at line 362</div>
         <code>        static    public            string
     <strong>getOMClass</strong>(boolean $withPrefix = true)</code>
     </h3>
@@ -635,7 +667,7 @@ relative to a location on the PHP include_path.
     </div>
 
                 <h3 id="method_populateObject">
-        <div class="location">at line 352</div>
+        <div class="location">at line 380</div>
         <code>        static    public            array
     <strong>populateObject</strong>(array $row, int $offset, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -689,7 +721,7 @@ relative to a location on the PHP include_path.
     </div>
 
                 <h3 id="method_populateObjects">
-        <div class="location">at line 379</div>
+        <div class="location">at line 407</div>
         <code>        static    public            array
     <strong>populateObjects</strong>(<abbr title="Propel\Runtime\DataFetcher\DataFetcherInterface">DataFetcherInterface</abbr> $dataFetcher)</code>
     </h3>
@@ -735,7 +767,7 @@ relative to a location on the PHP include_path.
     </div>
 
                 <h3 id="method_addSelectColumns">
-        <div class="location">at line 415</div>
+        <div class="location">at line 443</div>
         <code>        static    public            
     <strong>addSelectColumns</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria, string $alias = null)</code>
     </h3>
@@ -776,7 +808,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_getTableMap">
-        <div class="location">at line 467</div>
+        <div class="location">at line 503</div>
         <code>        static    public            <abbr title="Propel\Runtime\Map\TableMap">TableMap</abbr>
     <strong>getTableMap</strong>()</code>
     </h3>
@@ -810,7 +842,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_buildTableMap">
-        <div class="location">at line 475</div>
+        <div class="location">at line 511</div>
         <code>        static    public            
     <strong>buildTableMap</strong>()</code>
     </h3>
@@ -826,7 +858,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_doDelete">
-        <div class="location">at line 494</div>
+        <div class="location">at line 530</div>
         <code>        static    public            int
     <strong>doDelete</strong>(mixed $values, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -875,7 +907,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">at line 528</div>
+        <div class="location">at line 564</div>
         <code>        static    public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -910,7 +942,7 @@ on demand.</p>
     </div>
 
                 <h3 id="method_doInsert">
-        <div class="location">at line 542</div>
+        <div class="location">at line 578</div>
         <code>        static    public            mixed
     <strong>doInsert</strong>(mixed $criteria, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>

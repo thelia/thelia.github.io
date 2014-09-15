@@ -69,20 +69,30 @@ Control Files and Images</p>
                     <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_processTemplateAction">processTemplateAction</a>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $template)
+                    <a href="#method_processTemplateAction">processTemplateAction</a>(string $template)
                     <p>This method process the rendering of view called from an admin page</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <a href="../../../Thelia/Files/FileManager.html"><abbr title="Thelia\Files\FileManager">FileManager</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_redirectToRoute">redirectToRoute</a>(string $routeId, array $urlParameters = array(), array $routeParameters = array())
-                    <p>Redirect to à route ID related URL</p>
+                    <a href="#method_getFileManager">getFileManager</a>()
+                    <p>Get the FileManager</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></small></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_saveFileAjaxAction">saveFileAjaxAction</a>(int $parentId, string $parentType, string $objectType, array $validMimeTypes = array(), array $extBlackList = array())
+                    <p>Manage how a file collection has to be saved</p>
+                </td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -189,8 +199,39 @@ Control Files and Images</p>
                     <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
                 </td>
                 <td class="last">
+                    <a href="#method_deleteFileAction">deleteFileAction</a>(int $fileId, string $parentType, string $objectType, string $eventName)
+                    <p>Manage how a image has to be deleted (AJAX)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </td>
+                <td class="last">
                     <a href="#method_deleteImageAction">deleteImageAction</a>(int $imageId, string $parentType)
                     <p>Manage how a image has to be deleted (AJAX)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deleteDocumentAction">deleteDocumentAction</a>(int $documentId, string $parentType)
+                    <p>Manage how a document has to be deleted (AJAX)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateFilePositionAction">updateFilePositionAction</a>($parentType, $parentId, $objectType, $eventName)
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -218,21 +259,34 @@ Control Files and Images</p>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                    
                 </td>
                 <td class="last">
-                    <a href="#method_deleteDocumentAction">deleteDocumentAction</a>(int $documentId, string $parentType)
-                    <p>Manage how a document has to be deleted (AJAX)</p>
+                    <a href="#method_toggleVisibilityFileAction">toggleVisibilityFileAction</a>($documentId, $parentType, $objectType, $eventName)
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    bool
+                    
                 </td>
                 <td class="last">
-                    <a href="#method_isParentTypeValid">isParentTypeValid</a>(string $parentType)
-                    <p>Check if parent type is valid or not</p>
+                    <a href="#method_toggleVisibilityDocumentAction">toggleVisibilityDocumentAction</a>($parentType, $documentId)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toggleVisibilityImageAction">toggleVisibilityImageAction</a>($parentType, $documentId)
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -242,7 +296,7 @@ Control Files and Images</p>
         <h2>Details</h2>
 
                         <h3 id="method_adminLogAppend">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 67</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 55</div>
         <code>            public            
     <strong>adminLogAppend</strong>(string $resource, string $action, string $message)</code>
     </h3>
@@ -281,9 +335,9 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_processTemplateAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 78</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 66</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
-    <strong>processTemplateAction</strong>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $template)</code>
+    <strong>processTemplateAction</strong>(string $template)</code>
     </h3>
     <div class="details">
         <p>This method process the rendering of view called from an admin page</p>
@@ -294,10 +348,9 @@ Control Files and Images</p>
 
                     <table>
                     <tr>
-                <td><abbr title="Thelia\Controller\Admin\unknown">unknown</abbr></td>
+                <td>string</td>
                 <td>$template</td>
-                <td>
-</td>
+                <td>the template name</td>
             </tr>
             </table>
 
@@ -316,13 +369,39 @@ Control Files and Images</p>
                     </div>
     </div>
 
-                <h3 id="method_redirectToRoute">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 264</div>
-        <code>            public            
-    <strong>redirectToRoute</strong>(string $routeId, array $urlParameters = array(), array $routeParameters = array())</code>
+                <h3 id="method_getFileManager">
+        <div class="location">at line 52</div>
+        <code>            public            <a href="../../../Thelia/Files/FileManager.html"><abbr title="Thelia\Files\FileManager">FileManager</abbr></a>
+    <strong>getFileManager</strong>()</code>
     </h3>
     <div class="details">
-        <p>Redirect to à route ID related URL</p>
+        <p>Get the FileManager</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Files/FileManager.html"><abbr title="Thelia\Files\FileManager">FileManager</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveFileAjaxAction">
+        <div class="location">at line 67</div>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+    <strong>saveFileAjaxAction</strong>(int $parentId, string $parentType, string $objectType, array $validMimeTypes = array(), array $extBlackList = array())</code>
+    </h3>
+    <div class="details">
+        <p>Manage how a file collection has to be saved</p>
         <p>
 </p>
         <div class="tags">
@@ -330,31 +409,50 @@ Control Files and Images</p>
 
                     <table>
                     <tr>
+                <td>int</td>
+                <td>$parentId</td>
+                <td>Parent id owning files being saved</td>
+            </tr>
+                    <tr>
                 <td>string</td>
-                <td>$routeId</td>
-                <td>the route ID, as found in Config/Resources/routing/admin.xml</td>
+                <td>$parentType</td>
+                <td>Parent Type owning files being saved (product, category, content, etc.)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$objectType</td>
+                <td>Object type, e.g. image or document</td>
             </tr>
                     <tr>
                 <td>array</td>
-                <td>$urlParameters</td>
-                <td>the URL parameters, as a var/value pair array</td>
+                <td>$validMimeTypes</td>
+                <td>an array of valid mime types. If empty, any mime type is allowed.</td>
             </tr>
                     <tr>
                 <td>array</td>
-                <td>$routeParameters</td>
-                <td>
-</td>
+                <td>$extBlackList</td>
+                <td>an array of blacklisted extensions.</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_saveImageAjaxAction">
-        <div class="location">at line 62</div>
+        <div class="location">at line 203</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>saveImageAjaxAction</strong>(int $parentId, string $parentType)</code>
     </h3>
@@ -395,7 +493,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_saveDocumentAjaxAction">
-        <div class="location">at line 152</div>
+        <div class="location">at line 225</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>saveDocumentAjaxAction</strong>(int $parentId, string $parentType)</code>
     </h3>
@@ -436,7 +534,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_getImageListAjaxAction">
-        <div class="location">at line 230</div>
+        <div class="location">at line 252</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>getImageListAjaxAction</strong>(int $parentId, string $parentType)</code>
     </h3>
@@ -477,7 +575,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_getDocumentListAjaxAction">
-        <div class="location">at line 247</div>
+        <div class="location">at line 269</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>getDocumentListAjaxAction</strong>(int $parentId, string $parentType)</code>
     </h3>
@@ -518,7 +616,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_getImageFormAjaxAction">
-        <div class="location">at line 264</div>
+        <div class="location">at line 286</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>getImageFormAjaxAction</strong>(int $parentId, string $parentType)</code>
     </h3>
@@ -559,7 +657,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_getDocumentFormAjaxAction">
-        <div class="location">at line 281</div>
+        <div class="location">at line 303</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>getDocumentFormAjaxAction</strong>(int $parentId, string $parentType)</code>
     </h3>
@@ -600,7 +698,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_viewImageAction">
-        <div class="location">at line 298</div>
+        <div class="location">at line 320</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>viewImageAction</strong>(int $imageId, string $parentType)</code>
     </h3>
@@ -641,7 +739,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_viewDocumentAction">
-        <div class="location">at line 327</div>
+        <div class="location">at line 354</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>viewDocumentAction</strong>(int $documentId, string $parentType)</code>
     </h3>
@@ -682,7 +780,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_updateImageAction">
-        <div class="location">at line 356</div>
+        <div class="location">at line 500</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>updateImageAction</strong>(int $imageId, string $parentType)</code>
     </h3>
@@ -723,7 +821,7 @@ Control Files and Images</p>
     </div>
 
                 <h3 id="method_updateDocumentAction">
-        <div class="location">at line 433</div>
+        <div class="location">at line 528</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>updateDocumentAction</strong>(int $documentId, string $parentType)</code>
     </h3>
@@ -763,8 +861,59 @@ Control Files and Images</p>
                     </div>
     </div>
 
+                <h3 id="method_deleteFileAction">
+        <div class="location">at line 559</div>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+    <strong>deleteFileAction</strong>(int $fileId, string $parentType, string $objectType, string $eventName)</code>
+    </h3>
+    <div class="details">
+        <p>Manage how a image has to be deleted (AJAX)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$fileId</td>
+                <td>Parent id owning image being deleted</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parentType</td>
+                <td>Parent Type owning image being deleted</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$objectType</td>
+                <td>the type of the file, image or document</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$eventName</td>
+                <td>the event type.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_deleteImageAction">
-        <div class="location">at line 510</div>
+        <div class="location">at line 631</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>deleteImageAction</strong>(int $imageId, string $parentType)</code>
     </h3>
@@ -804,76 +953,8 @@ Control Files and Images</p>
                     </div>
     </div>
 
-                <h3 id="method_updateImagePositionAction">
-        <div class="location">at line 588</div>
-        <code>            public            
-    <strong>updateImagePositionAction</strong>($parentType, $parentId)</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td></td>
-                <td>$parentType</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td></td>
-                <td>$parentId</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_updateDocumentPositionAction">
-        <div class="location">at line 642</div>
-        <code>            public            
-    <strong>updateDocumentPositionAction</strong>($parentType, $parentId)</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td></td>
-                <td>$parentType</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td></td>
-                <td>$parentId</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_deleteDocumentAction">
-        <div class="location">at line 704</div>
+        <div class="location">at line 644</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>deleteDocumentAction</strong>(int $documentId, string $parentType)</code>
     </h3>
@@ -913,13 +994,14 @@ Control Files and Images</p>
                     </div>
     </div>
 
-                <h3 id="method_isParentTypeValid">
-        <div class="location">at line 798</div>
-        <code>            public            bool
-    <strong>isParentTypeValid</strong>(string $parentType)</code>
+                <h3 id="method_updateFilePositionAction">
+        <div class="location">at line 649</div>
+        <code>            public            
+    <strong>updateFilePositionAction</strong>($parentType, $parentId, $objectType, $eventName)</code>
     </h3>
     <div class="details">
-        <p>Check if parent type is valid or not</p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -927,23 +1009,214 @@ Control Files and Images</p>
 
                     <table>
                     <tr>
-                <td>string</td>
+                <td></td>
                 <td>$parentType</td>
-                <td>Parent type</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parentId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$objectType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$eventName</td>
+                <td>
+</td>
             </tr>
             </table>
 
             
-                            <h4>Return Value</h4>
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateImagePositionAction">
+        <div class="location">at line 695</div>
+        <code>            public            
+    <strong>updateImagePositionAction</strong>($parentType, $parentId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
 
                     <table>
-        <tr>
-            <td>bool</td>
-            <td>
+                    <tr>
+                <td></td>
+                <td>$parentType</td>
+                <td>
 </td>
-        </tr>
-    </table>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parentId</td>
+                <td>
+</td>
+            </tr>
+            </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateDocumentPositionAction">
+        <div class="location">at line 702</div>
+        <code>            public            
+    <strong>updateDocumentPositionAction</strong>($parentType, $parentId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$parentType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parentId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleVisibilityFileAction">
+        <div class="location">at line 709</div>
+        <code>            public            
+    <strong>toggleVisibilityFileAction</strong>($documentId, $parentType, $objectType, $eventName)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$documentId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parentType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$objectType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$eventName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleVisibilityDocumentAction">
+        <div class="location">at line 754</div>
+        <code>            public            
+    <strong>toggleVisibilityDocumentAction</strong>($parentType, $documentId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$parentType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$documentId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleVisibilityImageAction">
+        <div class="location">at line 759</div>
+        <code>            public            
+    <strong>toggleVisibilityImageAction</strong>($parentType, $documentId)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$parentType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$documentId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
             
             
                     </div>
