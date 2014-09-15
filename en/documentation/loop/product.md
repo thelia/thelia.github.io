@@ -77,7 +77,7 @@ outputs :
     - {name: "$ID", description: "the product id"}
     - {name: "$REF", description: "the product reference"}
     - {name: "$IS_TRANSLATED", description: "check if the product is translated or not"}
-    - e: "$LOCALE", description: "the locale used for this loop"}
+    - {name: "$LOCALE", description: "the locale used for this loop"}
     - {name: "$BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
     - {name: "$BEST_PRICE_TAX", description: "the best price taxes amount"}
     - {name: "$BEST_TAXED_PRICE", description: "the best price including taxes"}
