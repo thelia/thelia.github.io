@@ -41,6 +41,7 @@ outputs :
     - {name: "$TRANSACTION_REF", description: "the order transaction reference. It's usually the unique identifier shared between the e-shop and it's bank"}
     - {name: "$DELIVERY_REF", description: "the order delivery reference. It's usually use for tracking package"}
     - {name: "$INVOICE_REF", description: "the order invoice reference"}
+    - {name: "$VIRTUAL", description: "the order has at least one product which is a virtual product"}
     - {name: "$POSTAGE", description: "the order postage"}
     - {name: "$PAYMENT_MODULE", description: "the order payment module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}
     - {name: "$DELIVERY_MODULE", description: "the order delivery module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}

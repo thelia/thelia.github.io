@@ -10,6 +10,7 @@ returns_global_outputs: { countable : true, timestampable : true, versionable : 
 type: order_product
 arguments :
     - {name: "order", description: "A single order id.", example: "order=\"2\"", mandatory: "true"}
+    - {name: "virtual", description: "A boolean value.", example: "new=\"yes\""}
 outputs :
     - {name: "$ID", description: "the order product id"}
     - {name: "$REF", description: "the order product reference"}
@@ -21,9 +22,10 @@ outputs :
     - {name: "$CHAPO", description: "the order product short description"}
     - {name: "$DESCRIPTION", description: "the order product description"}
     - {name: "$POSTSCRIPTUM", description: "the order product postscriptum"}
+    - {name: "$VIRTUAL", description: "whatever the order product is a virtual product or not"}
+    - {name: "$VIRTUAL_DOCUMENT", description: "the name of the file if the product is virtual."}
     - {name: "$QUANTITY", description: "the order product ordered quantity"}
     - {name: "$PRICE", description: "the order product price"}
-    - {name: "$PRICE", description: ""}
     - {name: "$PRICE_TAX", description: ""}
     - {name: "$TAXED_PRICE", description: ""}
     - {name: "$PROMO_PRICE", description: ""}

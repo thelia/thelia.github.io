@@ -32,6 +32,7 @@ arguments :
     - {name: "brand", description: "A single or a list of brand ids.", example: "brand=\"2\", brand=\"1,4,7\""}
     - {name: "current", description: "A boolean value which allows either to exclude current product from results either to match only this product", example: "current=\"yes\""}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
+    - {name: "virtual", description: "A boolean value.", example: "new=\"yes\""}
     - {name: "exclude", description: "A single or a list of product ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "exclude_category", description: "A single or a list of category ids. If a product is in multiple categories which are not all excluded it will not be excluded.", example: "exclude_category=\"2\", exclude_category=\"1,4,7\""}
     - {name: "feature_availability", description: "A list of mandatory features and the feature_availability expected for these.", example: "feature_availability=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : feature 1 must have feature_availability 1 or 2 AND feature 2 must be set to any feature_availability AND feature 3 must have feature_availability 10 or both feature_availability 11 and 12"}
@@ -76,7 +77,7 @@ outputs :
     - {name: "$ID", description: "the product id"}
     - {name: "$REF", description: "the product reference"}
     - {name: "$IS_TRANSLATED", description: "check if the product is translated or not"}
-    - {name: "$LOCALE", description: "the locale used for this loop"}
+    - e: "$LOCALE", description: "the locale used for this loop"}
     - {name: "$BEST_PRICE", description: "the product best tax-free price for the received arguments, depending on the attributes and promo status."}
     - {name: "$BEST_PRICE_TAX", description: "the best price taxes amount"}
     - {name: "$BEST_TAXED_PRICE", description: "the best price including taxes"}
@@ -96,6 +97,7 @@ outputs :
     - {name: "$IS_NEW",
         description: "<strong>If complex='true'</strong><br />returns if at least one of it's product sale element is new<br /><strong>If complex='false'</strong><br />returns if the default product sale element is new"}
     - {name: "$VISIBLE", description: "Return if the product is visible or not"}
+    - {name: "$VIRTUAL", description: "Return if the product is a virtual product or not"}
     - {name: "$TITLE", description: "the product title"}
     - {name: "$CHAPO", description: "the product chapo"}
     - {name: "$DESCRIPTION", description: "the product description"}
