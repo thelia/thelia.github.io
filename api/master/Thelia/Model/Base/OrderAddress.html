@@ -698,6 +698,46 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setCustomerTitle">setCustomerTitle</a>(<a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a> $v = null)
+                    <p>Declares an association between this object and a ChildCustomerTitle object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCustomerTitle">getCustomerTitle</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Get the associated ChildCustomerTitle object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setCountry">setCountry</a>(<a href="../../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a> $v = null)
+                    <p>Declares an association between this object and a ChildCountry object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCountry">getCountry</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Get the associated ChildCountry object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     void
                 </td>
                 <td class="last">
@@ -849,6 +889,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getOrdersRelatedByInvoiceOrderAddressIdJoinCart">getOrdersRelatedByInvoiceOrderAddressIdJoinCart</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)
+                    <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     void
                 </td>
                 <td class="last">
@@ -990,6 +1040,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getOrdersRelatedByDeliveryOrderAddressIdJoinCart">getOrdersRelatedByDeliveryOrderAddressIdJoinCart</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)
+                    <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     
                 </td>
                 <td class="last">
@@ -1124,7 +1184,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 179</div>
+        <div class="location">at line 193</div>
         <code>            public            
     <strong>__construct</strong>()</code>
     </h3>
@@ -1140,7 +1200,7 @@
     </div>
 
                 <h3 id="method_isModified">
-        <div class="location">at line 188</div>
+        <div class="location">at line 202</div>
         <code>            public            boolean
     <strong>isModified</strong>()</code>
     </h3>
@@ -1165,7 +1225,7 @@
     </div>
 
                 <h3 id="method_isColumnModified">
-        <div class="location">at line 199</div>
+        <div class="location">at line 213</div>
         <code>            public            boolean
     <strong>isColumnModified</strong>(string $col)</code>
     </h3>
@@ -1200,7 +1260,7 @@
     </div>
 
                 <h3 id="method_getModifiedColumns">
-        <div class="location">at line 208</div>
+        <div class="location">at line 222</div>
         <code>            public            array
     <strong>getModifiedColumns</strong>()</code>
     </h3>
@@ -1225,7 +1285,7 @@
     </div>
 
                 <h3 id="method_isNew">
-        <div class="location">at line 220</div>
+        <div class="location">at line 234</div>
         <code>            public            boolean
     <strong>isNew</strong>()</code>
     </h3>
@@ -1251,7 +1311,7 @@ and then saved.</p>
     </div>
 
                 <h3 id="method_setNew">
-        <div class="location">at line 231</div>
+        <div class="location">at line 245</div>
         <code>            public            
     <strong>setNew</strong>(boolean $b)</code>
     </h3>
@@ -1277,7 +1337,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_isDeleted">
-        <div class="location">at line 240</div>
+        <div class="location">at line 254</div>
         <code>            public            boolean
     <strong>isDeleted</strong>()</code>
     </h3>
@@ -1302,7 +1362,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDeleted">
-        <div class="location">at line 250</div>
+        <div class="location">at line 264</div>
         <code>            public            void
     <strong>setDeleted</strong>(boolean $b)</code>
     </h3>
@@ -1338,7 +1398,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_resetModified">
-        <div class="location">at line 260</div>
+        <div class="location">at line 274</div>
         <code>            public            void
     <strong>resetModified</strong>(string $col = null)</code>
     </h3>
@@ -1374,7 +1434,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_equals">
-        <div class="location">at line 279</div>
+        <div class="location">at line 293</div>
         <code>            public            boolean
     <strong>equals</strong>(mixed $obj)</code>
     </h3>
@@ -1410,7 +1470,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hashCode">
-        <div class="location">at line 304</div>
+        <div class="location">at line 318</div>
         <code>            public            int
     <strong>hashCode</strong>()</code>
     </h3>
@@ -1434,7 +1494,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumns">
-        <div class="location">at line 318</div>
+        <div class="location">at line 332</div>
         <code>            public            array
     <strong>getVirtualColumns</strong>()</code>
     </h3>
@@ -1460,7 +1520,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hasVirtualColumn">
-        <div class="location">at line 329</div>
+        <div class="location">at line 343</div>
         <code>            public            boolean
     <strong>hasVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -1496,7 +1556,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumn">
-        <div class="location">at line 342</div>
+        <div class="location">at line 356</div>
         <code>            public            mixed
     <strong>getVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -1542,7 +1602,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setVirtualColumn">
-        <div class="location">at line 359</div>
+        <div class="location">at line 373</div>
         <code>            public            <a href="../../../Thelia/Model/Base/OrderAddress.html"><abbr title="Thelia\Model\Base\OrderAddress">OrderAddress</abbr></a>
     <strong>setVirtualColumn</strong>(string $name, mixed $value)</code>
     </h3>
@@ -1582,7 +1642,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_importFrom">
-        <div class="location">at line 391</div>
+        <div class="location">at line 405</div>
         <code>            public            <a href="../../../Thelia/Model/Base/OrderAddress.html"><abbr title="Thelia\Model\Base\OrderAddress">OrderAddress</abbr></a>
     <strong>importFrom</strong>(mixed $parser, string $data)</code>
     </h3>
@@ -1622,7 +1682,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_exportTo">
-        <div class="location">at line 414</div>
+        <div class="location">at line 428</div>
         <code>            public            string
     <strong>exportTo</strong>(mixed $parser, boolean $includeLazyLoadColumns = true)</code>
     </h3>
@@ -1662,7 +1722,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method___sleep">
-        <div class="location">at line 427</div>
+        <div class="location">at line 441</div>
         <code>            public            
     <strong>__sleep</strong>()</code>
     </h3>
@@ -1678,7 +1738,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getId">
-        <div class="location">at line 439</div>
+        <div class="location">at line 453</div>
         <code>            public            int
     <strong>getId</strong>()</code>
     </h3>
@@ -1704,7 +1764,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCustomerTitleId">
-        <div class="location">at line 450</div>
+        <div class="location">at line 464</div>
         <code>            public            int
     <strong>getCustomerTitleId</strong>()</code>
     </h3>
@@ -1730,7 +1790,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCompany">
-        <div class="location">at line 461</div>
+        <div class="location">at line 475</div>
         <code>            public            string
     <strong>getCompany</strong>()</code>
     </h3>
@@ -1756,7 +1816,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getFirstname">
-        <div class="location">at line 472</div>
+        <div class="location">at line 486</div>
         <code>            public            string
     <strong>getFirstname</strong>()</code>
     </h3>
@@ -1782,7 +1842,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getLastname">
-        <div class="location">at line 483</div>
+        <div class="location">at line 497</div>
         <code>            public            string
     <strong>getLastname</strong>()</code>
     </h3>
@@ -1808,7 +1868,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getAddress1">
-        <div class="location">at line 494</div>
+        <div class="location">at line 508</div>
         <code>            public            string
     <strong>getAddress1</strong>()</code>
     </h3>
@@ -1834,7 +1894,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getAddress2">
-        <div class="location">at line 505</div>
+        <div class="location">at line 519</div>
         <code>            public            string
     <strong>getAddress2</strong>()</code>
     </h3>
@@ -1860,7 +1920,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getAddress3">
-        <div class="location">at line 516</div>
+        <div class="location">at line 530</div>
         <code>            public            string
     <strong>getAddress3</strong>()</code>
     </h3>
@@ -1886,7 +1946,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getZipcode">
-        <div class="location">at line 527</div>
+        <div class="location">at line 541</div>
         <code>            public            string
     <strong>getZipcode</strong>()</code>
     </h3>
@@ -1912,7 +1972,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCity">
-        <div class="location">at line 538</div>
+        <div class="location">at line 552</div>
         <code>            public            string
     <strong>getCity</strong>()</code>
     </h3>
@@ -1938,7 +1998,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getPhone">
-        <div class="location">at line 549</div>
+        <div class="location">at line 563</div>
         <code>            public            string
     <strong>getPhone</strong>()</code>
     </h3>
@@ -1964,7 +2024,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCountryId">
-        <div class="location">at line 560</div>
+        <div class="location">at line 574</div>
         <code>            public            int
     <strong>getCountryId</strong>()</code>
     </h3>
@@ -1990,7 +2050,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCreatedAt">
-        <div class="location">at line 577</div>
+        <div class="location">at line 591</div>
         <code>            public            mixed
     <strong>getCreatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -2037,7 +2097,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getUpdatedAt">
-        <div class="location">at line 597</div>
+        <div class="location">at line 611</div>
         <code>            public            mixed
     <strong>getUpdatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -2084,7 +2144,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setId">
-        <div class="location">at line 612</div>
+        <div class="location">at line 626</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setId</strong>(int $v)</code>
     </h3>
@@ -2119,7 +2179,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCustomerTitleId">
-        <div class="location">at line 633</div>
+        <div class="location">at line 647</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setCustomerTitleId</strong>(int $v)</code>
     </h3>
@@ -2154,7 +2214,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCompany">
-        <div class="location">at line 654</div>
+        <div class="location">at line 672</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setCompany</strong>(string $v)</code>
     </h3>
@@ -2189,7 +2249,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setFirstname">
-        <div class="location">at line 675</div>
+        <div class="location">at line 693</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setFirstname</strong>(string $v)</code>
     </h3>
@@ -2224,7 +2284,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setLastname">
-        <div class="location">at line 696</div>
+        <div class="location">at line 714</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setLastname</strong>(string $v)</code>
     </h3>
@@ -2259,7 +2319,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setAddress1">
-        <div class="location">at line 717</div>
+        <div class="location">at line 735</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setAddress1</strong>(string $v)</code>
     </h3>
@@ -2294,7 +2354,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setAddress2">
-        <div class="location">at line 738</div>
+        <div class="location">at line 756</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setAddress2</strong>(string $v)</code>
     </h3>
@@ -2329,7 +2389,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setAddress3">
-        <div class="location">at line 759</div>
+        <div class="location">at line 777</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setAddress3</strong>(string $v)</code>
     </h3>
@@ -2364,7 +2424,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setZipcode">
-        <div class="location">at line 780</div>
+        <div class="location">at line 798</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setZipcode</strong>(string $v)</code>
     </h3>
@@ -2399,7 +2459,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCity">
-        <div class="location">at line 801</div>
+        <div class="location">at line 819</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setCity</strong>(string $v)</code>
     </h3>
@@ -2434,7 +2494,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setPhone">
-        <div class="location">at line 822</div>
+        <div class="location">at line 840</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setPhone</strong>(string $v)</code>
     </h3>
@@ -2469,7 +2529,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCountryId">
-        <div class="location">at line 843</div>
+        <div class="location">at line 861</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setCountryId</strong>(int $v)</code>
     </h3>
@@ -2504,7 +2564,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCreatedAt">
-        <div class="location">at line 865</div>
+        <div class="location">at line 887</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setCreatedAt</strong>(mixed $v)</code>
     </h3>
@@ -2539,7 +2599,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setUpdatedAt">
-        <div class="location">at line 886</div>
+        <div class="location">at line 908</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setUpdatedAt</strong>(mixed $v)</code>
     </h3>
@@ -2574,7 +2634,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hasOnlyDefaultValues">
-        <div class="location">at line 908</div>
+        <div class="location">at line 930</div>
         <code>            public            boolean
     <strong>hasOnlyDefaultValues</strong>()</code>
     </h3>
@@ -2599,7 +2659,7 @@ modified <em>and</em> has some values set which are non-default.</p>
     </div>
 
                 <h3 id="method_hydrate">
-        <div class="location">at line 932</div>
+        <div class="location">at line 954</div>
         <code>            public            int
     <strong>hydrate</strong>(array $row, int $startcol, boolean $rehydrate = false, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -2663,7 +2723,7 @@ more tables.</p>
     </div>
 
                 <h3 id="method_ensureConsistency">
-        <div class="location">at line 1012</div>
+        <div class="location">at line 1034</div>
         <code>            public            
     <strong>ensureConsistency</strong>()</code>
     </h3>
@@ -2694,7 +2754,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_reload">
-        <div class="location">at line 1026</div>
+        <div class="location">at line 1054</div>
         <code>            public            void
     <strong>reload</strong>(boolean $deep = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2746,7 +2806,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 1069</div>
+        <div class="location">at line 1099</div>
         <code>            public            void
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2806,7 +2866,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_save">
-        <div class="location">at line 1111</div>
+        <div class="location">at line 1141</div>
         <code>            public            int
     <strong>save</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2863,7 +2923,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByName">
-        <div class="location">at line 1389</div>
+        <div class="location">at line 1438</div>
         <code>            public            mixed
     <strong>getByName</strong>(string $name, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -2903,7 +2963,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByPosition">
-        <div class="location">at line 1404</div>
+        <div class="location">at line 1453</div>
         <code>            public            mixed
     <strong>getByPosition</strong>(int $pos)</code>
     </h3>
@@ -2937,7 +2997,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_toArray">
-        <div class="location">at line 1470</div>
+        <div class="location">at line 1519</div>
         <code>            public            array
     <strong>toArray</strong>(string $keyType = TableMap::TYPE_PHPNAME, boolean $includeLazyLoadColumns = true, array $alreadyDumpedObjects = array(), boolean $includeForeignObjects = false)</code>
     </h3>
@@ -2987,7 +3047,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByName">
-        <div class="location">at line 1521</div>
+        <div class="location">at line 1576</div>
         <code>            public            void
     <strong>setByName</strong>(string $name, mixed $value, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -3034,7 +3094,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByPosition">
-        <div class="location">at line 1536</div>
+        <div class="location">at line 1591</div>
         <code>            public            void
     <strong>setByPosition</strong>(int $pos, mixed $value)</code>
     </h3>
@@ -3074,7 +3134,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_fromArray">
-        <div class="location">at line 1601</div>
+        <div class="location">at line 1656</div>
         <code>            public            void
     <strong>fromArray</strong>(array $arr, string $keyType = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -3122,7 +3182,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildCriteria">
-        <div class="location">at line 1626</div>
+        <div class="location">at line 1681</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildCriteria</strong>()</code>
     </h3>
@@ -3147,7 +3207,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildPkeyCriteria">
-        <div class="location">at line 1656</div>
+        <div class="location">at line 1711</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildPkeyCriteria</strong>()</code>
     </h3>
@@ -3172,7 +3232,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_getPrimaryKey">
-        <div class="location">at line 1668</div>
+        <div class="location">at line 1723</div>
         <code>            public            int
     <strong>getPrimaryKey</strong>()</code>
     </h3>
@@ -3198,7 +3258,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_setPrimaryKey">
-        <div class="location">at line 1679</div>
+        <div class="location">at line 1734</div>
         <code>            public            void
     <strong>setPrimaryKey</strong>(int $key)</code>
     </h3>
@@ -3234,7 +3294,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_isPrimaryKeyNull">
-        <div class="location">at line 1688</div>
+        <div class="location">at line 1743</div>
         <code>            public            boolean
     <strong>isPrimaryKeyNull</strong>()</code>
     </h3>
@@ -3260,7 +3320,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_copyInto">
-        <div class="location">at line 1705</div>
+        <div class="location">at line 1760</div>
         <code>            public            
     <strong>copyInto</strong>(object $copyObj, boolean $deepCopy = false, boolean $makeNew = true)</code>
     </h3>
@@ -3306,7 +3366,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_copy">
-        <div class="location">at line 1758</div>
+        <div class="location">at line 1813</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>copy</strong>(boolean $deepCopy = false)</code>
     </h3>
@@ -3353,8 +3413,190 @@ objects.</p>
                     </div>
     </div>
 
+                <h3 id="method_setCustomerTitle">
+        <div class="location">at line 1830</div>
+        <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
+    <strong>setCustomerTitle</strong>(<a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a> $v = null)</code>
+    </h3>
+    <div class="details">
+        <p>Declares an association between this object and a ChildCustomerTitle object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a></td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCustomerTitle">
+        <div class="location">at line 1858</div>
+        <code>            public            <a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a>
+    <strong>getCustomerTitle</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the associated ChildCustomerTitle object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional Connection object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CustomerTitle.html"><abbr title="Thelia\Model\CustomerTitle">CustomerTitle</abbr></a></td>
+            <td>The associated ChildCustomerTitle object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCountry">
+        <div class="location">at line 1881</div>
+        <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
+    <strong>setCountry</strong>(<a href="../../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a> $v = null)</code>
+    </h3>
+    <div class="details">
+        <p>Declares an association between this object and a ChildCountry object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a></td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCountry">
+        <div class="location">at line 1909</div>
+        <code>            public            <a href="../../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a>
+    <strong>getCountry</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the associated ChildCountry object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional Connection object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/Country.html"><abbr title="Thelia\Model\Country">Country</abbr></a></td>
+            <td>The associated ChildCountry object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
                 <h3 id="method_initRelation">
-        <div class="location">at line 1777</div>
+        <div class="location">at line 1934</div>
         <code>            public            void
     <strong>initRelation</strong>(string $relationName)</code>
     </h3>
@@ -3390,7 +3632,7 @@ that wouldn't work when StandardEnglishPluralizer is used.</p>
     </div>
 
                 <h3 id="method_clearOrdersRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1796</div>
+        <div class="location">at line 1953</div>
         <code>            public            void
     <strong>clearOrdersRelatedByInvoiceOrderAddressId</strong>()</code>
     </h3>
@@ -3425,7 +3667,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialOrdersRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1804</div>
+        <div class="location">at line 1961</div>
         <code>            public            
     <strong>resetPartialOrdersRelatedByInvoiceOrderAddressId</strong>($v = true)</code>
     </h3>
@@ -3452,7 +3694,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initOrdersRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1821</div>
+        <div class="location">at line 1978</div>
         <code>            public            void
     <strong>initOrdersRelatedByInvoiceOrderAddressId</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -3489,7 +3731,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getOrdersRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1844</div>
+        <div class="location">at line 2001</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByInvoiceOrderAddressId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3542,7 +3784,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setOrdersRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1900</div>
+        <div class="location">at line 2057</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setOrdersRelatedByInvoiceOrderAddressId</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $ordersRelatedByInvoiceOrderAddressId, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3582,7 +3824,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countOrdersRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1931</div>
+        <div class="location">at line 2088</div>
         <code>            public            int
     <strong>countOrdersRelatedByInvoiceOrderAddressId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3640,7 +3882,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addOrderRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1963</div>
+        <div class="location">at line 2120</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>addOrderRelatedByInvoiceOrderAddressId</strong>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $l)</code>
     </h3>
@@ -3675,7 +3917,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeOrderRelatedByInvoiceOrderAddressId">
-        <div class="location">at line 1990</div>
+        <div class="location">at line 2147</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>removeOrderRelatedByInvoiceOrderAddressId</strong>(<abbr title="Thelia\Model\Base\OrderRelatedByInvoiceOrderAddressId">OrderRelatedByInvoiceOrderAddressId</abbr> $orderRelatedByInvoiceOrderAddressId)</code>
     </h3>
@@ -3711,7 +3953,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByInvoiceOrderAddressIdJoinCurrency">
-        <div class="location">at line 2022</div>
+        <div class="location">at line 2179</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByInvoiceOrderAddressIdJoinCurrency</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3761,7 +4003,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByInvoiceOrderAddressIdJoinCustomer">
-        <div class="location">at line 2047</div>
+        <div class="location">at line 2204</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByInvoiceOrderAddressIdJoinCustomer</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3811,7 +4053,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByInvoiceOrderAddressIdJoinOrderStatus">
-        <div class="location">at line 2072</div>
+        <div class="location">at line 2229</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByInvoiceOrderAddressIdJoinOrderStatus</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3861,7 +4103,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByInvoiceOrderAddressIdJoinModuleRelatedByPaymentModuleId">
-        <div class="location">at line 2097</div>
+        <div class="location">at line 2254</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByInvoiceOrderAddressIdJoinModuleRelatedByPaymentModuleId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3911,7 +4153,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByInvoiceOrderAddressIdJoinModuleRelatedByDeliveryModuleId">
-        <div class="location">at line 2122</div>
+        <div class="location">at line 2279</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByInvoiceOrderAddressIdJoinModuleRelatedByDeliveryModuleId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3961,7 +4203,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByInvoiceOrderAddressIdJoinLang">
-        <div class="location">at line 2147</div>
+        <div class="location">at line 2304</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByInvoiceOrderAddressIdJoinLang</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4010,8 +4252,58 @@ actually need in OrderAddress.</p>
                     </div>
     </div>
 
+                <h3 id="method_getOrdersRelatedByInvoiceOrderAddressIdJoinCart">
+        <div class="location">at line 2329</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+    <strong>getOrdersRelatedByInvoiceOrderAddressIdJoinCart</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+        <p>Otherwise if this OrderAddress is new, it will return
+an empty collection; or if this OrderAddress has previously
+been saved, it will retrieve related OrdersRelatedByInvoiceOrderAddressId from storage.</p>
+
+<p>This method is protected by default in order to keep the public
+api reasonable.  You can provide public methods for those you
+actually need in OrderAddress.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>optional Criteria object to narrow the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>optional connection object</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinBehavior</td>
+                <td>optional join type to use (defaults to Criteria::LEFT_JOIN)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]</td>
+            <td>List of ChildOrder objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_clearOrdersRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2164</div>
+        <div class="location">at line 2346</div>
         <code>            public            void
     <strong>clearOrdersRelatedByDeliveryOrderAddressId</strong>()</code>
     </h3>
@@ -4046,7 +4338,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialOrdersRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2172</div>
+        <div class="location">at line 2354</div>
         <code>            public            
     <strong>resetPartialOrdersRelatedByDeliveryOrderAddressId</strong>($v = true)</code>
     </h3>
@@ -4073,7 +4365,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initOrdersRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2189</div>
+        <div class="location">at line 2371</div>
         <code>            public            void
     <strong>initOrdersRelatedByDeliveryOrderAddressId</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -4110,7 +4402,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getOrdersRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2212</div>
+        <div class="location">at line 2394</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByDeliveryOrderAddressId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4163,7 +4455,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setOrdersRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2268</div>
+        <div class="location">at line 2450</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>setOrdersRelatedByDeliveryOrderAddressId</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $ordersRelatedByDeliveryOrderAddressId, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4203,7 +4495,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countOrdersRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2299</div>
+        <div class="location">at line 2481</div>
         <code>            public            int
     <strong>countOrdersRelatedByDeliveryOrderAddressId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4261,7 +4553,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addOrderRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2331</div>
+        <div class="location">at line 2513</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>addOrderRelatedByDeliveryOrderAddressId</strong>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $l)</code>
     </h3>
@@ -4296,7 +4588,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeOrderRelatedByDeliveryOrderAddressId">
-        <div class="location">at line 2358</div>
+        <div class="location">at line 2540</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>removeOrderRelatedByDeliveryOrderAddressId</strong>(<abbr title="Thelia\Model\Base\OrderRelatedByDeliveryOrderAddressId">OrderRelatedByDeliveryOrderAddressId</abbr> $orderRelatedByDeliveryOrderAddressId)</code>
     </h3>
@@ -4332,7 +4624,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByDeliveryOrderAddressIdJoinCurrency">
-        <div class="location">at line 2390</div>
+        <div class="location">at line 2572</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByDeliveryOrderAddressIdJoinCurrency</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4382,7 +4674,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByDeliveryOrderAddressIdJoinCustomer">
-        <div class="location">at line 2415</div>
+        <div class="location">at line 2597</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByDeliveryOrderAddressIdJoinCustomer</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4432,7 +4724,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByDeliveryOrderAddressIdJoinOrderStatus">
-        <div class="location">at line 2440</div>
+        <div class="location">at line 2622</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByDeliveryOrderAddressIdJoinOrderStatus</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4482,7 +4774,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByDeliveryOrderAddressIdJoinModuleRelatedByPaymentModuleId">
-        <div class="location">at line 2465</div>
+        <div class="location">at line 2647</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByDeliveryOrderAddressIdJoinModuleRelatedByPaymentModuleId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4532,7 +4824,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByDeliveryOrderAddressIdJoinModuleRelatedByDeliveryModuleId">
-        <div class="location">at line 2490</div>
+        <div class="location">at line 2672</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByDeliveryOrderAddressIdJoinModuleRelatedByDeliveryModuleId</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4582,7 +4874,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_getOrdersRelatedByDeliveryOrderAddressIdJoinLang">
-        <div class="location">at line 2515</div>
+        <div class="location">at line 2697</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
     <strong>getOrdersRelatedByDeliveryOrderAddressIdJoinLang</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -4631,8 +4923,58 @@ actually need in OrderAddress.</p>
                     </div>
     </div>
 
+                <h3 id="method_getOrdersRelatedByDeliveryOrderAddressIdJoinCart">
+        <div class="location">at line 2722</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+    <strong>getOrdersRelatedByDeliveryOrderAddressIdJoinCart</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+        <p>Otherwise if this OrderAddress is new, it will return
+an empty collection; or if this OrderAddress has previously
+been saved, it will retrieve related OrdersRelatedByDeliveryOrderAddressId from storage.</p>
+
+<p>This method is protected by default in order to keep the public
+api reasonable.  You can provide public methods for those you
+actually need in OrderAddress.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>optional Criteria object to narrow the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>optional connection object</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinBehavior</td>
+                <td>optional join type to use (defaults to Criteria::LEFT_JOIN)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]</td>
+            <td>List of ChildOrder objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_clear">
-        <div class="location">at line 2526</div>
+        <div class="location">at line 2733</div>
         <code>            public            
     <strong>clear</strong>()</code>
     </h3>
@@ -4648,7 +4990,7 @@ actually need in OrderAddress.</p>
     </div>
 
                 <h3 id="method_clearAllReferences">
-        <div class="location">at line 2558</div>
+        <div class="location">at line 2765</div>
         <code>            public            
     <strong>clearAllReferences</strong>(boolean $deep = false)</code>
     </h3>
@@ -4675,7 +5017,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">at line 2582</div>
+        <div class="location">at line 2791</div>
         <code>            public            string
     <strong>__toString</strong>()</code>
     </h3>
@@ -4701,7 +5043,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_keepUpdateDateUnchanged">
-        <div class="location">at line 2594</div>
+        <div class="location">at line 2803</div>
         <code>            public            <a href="../../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>keepUpdateDateUnchanged</strong>()</code>
     </h3>
@@ -4726,7 +5068,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preSave">
-        <div class="location">at line 2606</div>
+        <div class="location">at line 2815</div>
         <code>            public            boolean
     <strong>preSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4763,7 +5105,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postSave">
-        <div class="location">at line 2615</div>
+        <div class="location">at line 2824</div>
         <code>            public            
     <strong>postSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4790,7 +5132,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preInsert">
-        <div class="location">at line 2625</div>
+        <div class="location">at line 2834</div>
         <code>            public            boolean
     <strong>preInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4827,7 +5169,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postInsert">
-        <div class="location">at line 2634</div>
+        <div class="location">at line 2843</div>
         <code>            public            
     <strong>postInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4854,7 +5196,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preUpdate">
-        <div class="location">at line 2644</div>
+        <div class="location">at line 2853</div>
         <code>            public            boolean
     <strong>preUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4891,7 +5233,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postUpdate">
-        <div class="location">at line 2653</div>
+        <div class="location">at line 2862</div>
         <code>            public            
     <strong>postUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4918,7 +5260,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preDelete">
-        <div class="location">at line 2663</div>
+        <div class="location">at line 2872</div>
         <code>            public            boolean
     <strong>preDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4955,7 +5297,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postDelete">
-        <div class="location">at line 2672</div>
+        <div class="location">at line 2881</div>
         <code>            public            
     <strong>postDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4982,7 +5324,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___call">
-        <div class="location">at line 2689</div>
+        <div class="location">at line 2898</div>
         <code>            public            array|string
     <strong>__call</strong>(string $name, mixed $params)</code>
     </h3>

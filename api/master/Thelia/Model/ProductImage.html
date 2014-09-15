@@ -24,7 +24,8 @@
     </div>
         <div class="content">
                 <p>    class
-    <strong>ProductImage</strong>        extends <a href="../../Thelia/Model/Base/ProductImage.html"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></p>
+    <strong>ProductImage</strong>        extends <a href="../../Thelia/Model/Base/ProductImage.html"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a>        implements
+        <a href="../../Thelia/Model/Breadcrumb/BreadcrumbInterface.html"><abbr title="Thelia\Model\Breadcrumb\BreadcrumbInterface">BreadcrumbInterface</abbr></a>, <a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a></p>
 
     
             <h2>Constants</h2>
@@ -45,6 +46,16 @@
             <h2>Methods</h2>
 
             <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_applyDefaultValues">applyDefaultValues</a>()
+                    <p>Applies default values to this object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_applyDefaultValues"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
                     <tr>
                 <td class="type">
                     
@@ -260,6 +271,16 @@
                     int
                 </td>
                 <td class="last">
+                    <a href="#method_getVisible">getVisible</a>()
+                    <p>Get the [visible] column value.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_getVisible"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
                     <a href="#method_getPosition">getPosition</a>()
                     <p>Get the [position] column value.</p>
                 </td>
@@ -314,6 +335,16 @@
                     <p>Set the value of [file] column.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_setFile"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setVisible">setVisible</a>(int $v)
+                    <p>Set the value of [visible] column.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_setVisible"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -570,6 +601,97 @@
                     void
                 </td>
                 <td class="last">
+                    <a href="#method_clearProductSaleElementsProductImages">clearProductSaleElementsProductImages</a>()
+                    <p>Clears out the collProductSaleElementsProductImages collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_clearProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetPartialProductSaleElementsProductImages">resetPartialProductSaleElementsProductImages</a>($v = true)
+                    <p>Reset is the collProductSaleElementsProductImages collection loaded partially.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_resetPartialProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_initProductSaleElementsProductImages">initProductSaleElementsProductImages</a>(boolean $overrideExisting = true)
+                    <p>Initializes the collProductSaleElementsProductImages collection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_initProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getProductSaleElementsProductImages">getProductSaleElementsProductImages</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Gets an array of ChildProductSaleElementsProductImage objects which contain a foreign key that references this object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_getProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setProductSaleElementsProductImages">setProductSaleElementsProductImages</a>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $productSaleElementsProductImages, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Sets a collection of ProductSaleElementsProductImage objects related by a one-to-many relationship to the current object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_setProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countProductSaleElementsProductImages">countProductSaleElementsProductImages</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Returns the number of related ProductSaleElementsProductImage objects.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_countProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addProductSaleElementsProductImage">addProductSaleElementsProductImage</a>(<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a> $l)
+                    <p>Method called to associate a ChildProductSaleElementsProductImage object to this object through the ChildProductSaleElementsProductImage foreign key attribute.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_addProductSaleElementsProductImage"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeProductSaleElementsProductImage">removeProductSaleElementsProductImage</a>(<a href="../../Thelia/Model/Base/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\Base\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a> $productSaleElementsProductImage)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_removeProductSaleElementsProductImage"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getProductSaleElementsProductImagesJoinProductSaleElements">getProductSaleElementsProductImagesJoinProductSaleElements</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)
+                    <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_getProductSaleElementsProductImagesJoinProductSaleElements"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
                     <a href="#method_clearProductImageI18ns">clearProductImageI18ns</a>()
                     <p>Clears out the collProductImageI18ns collection</p>
                 </td>
@@ -645,6 +767,76 @@
 </p>
                 </td>
                 <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_removeProductImageI18n"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_clearProductSaleElementss">clearProductSaleElementss</a>()
+                    <p>Clears out the collProductSaleElementss collection</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_clearProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_initProductSaleElementss">initProductSaleElementss</a>()
+                    <p>Initializes the collProductSaleElementss collection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_initProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|<a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getProductSaleElementss">getProductSaleElementss</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Gets a collection of ChildProductSaleElements objects related by a many-to-many relationship to the current object by way of the product<em>sale</em>elements<em>product</em>image cross-reference table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_getProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setProductSaleElementss">setProductSaleElementss</a>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $productSaleElementss, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Sets a collection of ProductSaleElements objects related by a many-to-many relationship to the current object by way of the product<em>sale</em>elements<em>product</em>image cross-reference table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_setProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countProductSaleElementss">countProductSaleElementss</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Gets the number of ChildProductSaleElements objects related by a many-to-many relationship to the current object by way of the product<em>sale</em>elements<em>product</em>image cross-reference table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_countProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addProductSaleElements">addProductSaleElements</a>(<a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a> $productSaleElements)
+                    <p>Associate a ChildProductSaleElements object to this object through the product<em>sale</em>elements<em>product</em>image cross reference table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_addProductSaleElements"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeProductSaleElements">removeProductSaleElements</a>(<a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a> $productSaleElements)
+                    <p>Remove a ChildProductSaleElements object to this object through the product<em>sale</em>elements<em>product</em>image cross reference table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/ProductImage.html#method_removeProductSaleElements"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -842,7 +1034,8 @@
                 </td>
                 <td class="last">
                     <a href="#method_preInsert">preInsert</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
-                    <p>Code to be run before inserting to database</p>
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -908,11 +1101,12 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Thelia\Model\$this">$this</abbr>
+                    <abbr title="Thelia\Files\$this">$this</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_setParentId">setParentId</a>(int $parentId)
-                    <p>Set Image parent id</p>
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -922,7 +1116,82 @@
                 </td>
                 <td class="last">
                     <a href="#method_getParentId">getParentId</a>()
-                    <p>Get Image parent id</p>
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBreadcrumb">getBreadcrumb</a>(<abbr title="Symfony\Component\Routing\Router">Router</abbr> $router, <abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container, string $tab, string $locale)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Model\FileModelParentInterface">FileModelParentInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getParentFileModel">getParentFileModel</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Form/BaseForm.html"><abbr title="Thelia\Form\BaseForm">BaseForm</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getUpdateFormId">getUpdateFormId</a>()
+                    <p>Get the ID of the form used to change this object information</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Form/BaseForm.html"><abbr title="Thelia\Form\BaseForm">BaseForm</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getUpdateFormInstance">getUpdateFormInstance</a>(<a href="../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a> $request)
+                    <p>Get the form instance used to change this object information</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUploadDir">getUploadDir</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRedirectionUrl">getRedirectionUrl</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryInstance">getQueryInstance</a>()
+                    <p>Get the Query instance for this object</p>
                 </td>
                 <td></td>
             </tr>
@@ -931,8 +1200,33 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___construct"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 139</div>
+                        <h3 id="method_applyDefaultValues">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_applyDefaultValues"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 177</div>
+        <code>            public            
+    <strong>applyDefaultValues</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Applies default values to this object.</p>
+        <p>This method should be called from the object's constructor (or
+equivalent initialization method).</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>__construct()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___construct"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 186</div>
         <code>            public            
     <strong>__construct</strong>()</code>
     </h3>
@@ -944,11 +1238,20 @@
             
             
             
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>applyDefaults()</td>
+                <td></td>
+            </tr>
+            </table>
+
                     </div>
     </div>
 
                 <h3 id="method_isModified">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isModified"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 148</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isModified"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 196</div>
         <code>            public            boolean
     <strong>isModified</strong>()</code>
     </h3>
@@ -973,7 +1276,7 @@
     </div>
 
                 <h3 id="method_isColumnModified">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isColumnModified"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 159</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isColumnModified"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 207</div>
         <code>            public            boolean
     <strong>isColumnModified</strong>(string $col)</code>
     </h3>
@@ -1008,7 +1311,7 @@
     </div>
 
                 <h3 id="method_getModifiedColumns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getModifiedColumns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 168</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getModifiedColumns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 216</div>
         <code>            public            array
     <strong>getModifiedColumns</strong>()</code>
     </h3>
@@ -1033,7 +1336,7 @@
     </div>
 
                 <h3 id="method_isNew">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isNew"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 180</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isNew"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 228</div>
         <code>            public            boolean
     <strong>isNew</strong>()</code>
     </h3>
@@ -1059,7 +1362,7 @@ and then saved.</p>
     </div>
 
                 <h3 id="method_setNew">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setNew"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 191</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setNew"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 239</div>
         <code>            public            
     <strong>setNew</strong>(boolean $b)</code>
     </h3>
@@ -1085,7 +1388,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_isDeleted">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isDeleted"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 200</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isDeleted"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 248</div>
         <code>            public            boolean
     <strong>isDeleted</strong>()</code>
     </h3>
@@ -1110,7 +1413,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDeleted">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setDeleted"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 210</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setDeleted"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 258</div>
         <code>            public            void
     <strong>setDeleted</strong>(boolean $b)</code>
     </h3>
@@ -1146,7 +1449,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_resetModified">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_resetModified"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 220</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_resetModified"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 268</div>
         <code>            public            void
     <strong>resetModified</strong>(string $col = null)</code>
     </h3>
@@ -1182,7 +1485,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_equals">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_equals"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 239</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_equals"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 287</div>
         <code>            public            boolean
     <strong>equals</strong>(mixed $obj)</code>
     </h3>
@@ -1218,7 +1521,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hashCode">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hashCode"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 264</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hashCode"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 312</div>
         <code>            public            int
     <strong>hashCode</strong>()</code>
     </h3>
@@ -1242,7 +1545,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getVirtualColumns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 278</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getVirtualColumns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 326</div>
         <code>            public            array
     <strong>getVirtualColumns</strong>()</code>
     </h3>
@@ -1268,7 +1571,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hasVirtualColumn">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hasVirtualColumn"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 289</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hasVirtualColumn"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 337</div>
         <code>            public            boolean
     <strong>hasVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -1304,7 +1607,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumn">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getVirtualColumn"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 302</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getVirtualColumn"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 350</div>
         <code>            public            mixed
     <strong>getVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -1350,7 +1653,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setVirtualColumn">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setVirtualColumn"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 319</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setVirtualColumn"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 367</div>
         <code>            public            <a href="../../Thelia/Model/Base/ProductImage.html"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a>
     <strong>setVirtualColumn</strong>(string $name, mixed $value)</code>
     </h3>
@@ -1390,7 +1693,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_importFrom">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_importFrom"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 351</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_importFrom"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 399</div>
         <code>            public            <a href="../../Thelia/Model/Base/ProductImage.html"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a>
     <strong>importFrom</strong>(mixed $parser, string $data)</code>
     </h3>
@@ -1430,7 +1733,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_exportTo">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_exportTo"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 374</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_exportTo"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 422</div>
         <code>            public            string
     <strong>exportTo</strong>(mixed $parser, boolean $includeLazyLoadColumns = true)</code>
     </h3>
@@ -1470,7 +1773,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method___sleep">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___sleep"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 387</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___sleep"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 435</div>
         <code>            public            
     <strong>__sleep</strong>()</code>
     </h3>
@@ -1486,7 +1789,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getId">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 399</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 447</div>
         <code>            public            int
     <strong>getId</strong>()</code>
     </h3>
@@ -1512,7 +1815,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getProductId">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProductId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 409</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProductId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 458</div>
         <code>            public            int
     <strong>getProductId</strong>()</code>
     </h3>
@@ -1538,7 +1841,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getFile">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getFile"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 419</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getFile"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 469</div>
         <code>            public            string
     <strong>getFile</strong>()</code>
     </h3>
@@ -1563,8 +1866,34 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
+                <h3 id="method_getVisible">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getVisible"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 480</div>
+        <code>            public            int
+    <strong>getVisible</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the [visible] column value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_getPosition">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 429</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 491</div>
         <code>            public            int
     <strong>getPosition</strong>()</code>
     </h3>
@@ -1590,7 +1919,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getCreatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 445</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getCreatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 508</div>
         <code>            public            mixed
     <strong>getCreatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -1637,7 +1966,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getUpdatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getUpdatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 465</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getUpdatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 528</div>
         <code>            public            mixed
     <strong>getUpdatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -1684,7 +2013,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setId">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 480</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 543</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setId</strong>(int $v)</code>
     </h3>
@@ -1719,7 +2048,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setProductId">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProductId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 500</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProductId"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 564</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setProductId</strong>(int $v)</code>
     </h3>
@@ -1754,7 +2083,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setFile">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setFile"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 524</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setFile"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 589</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setFile</strong>(string $v)</code>
     </h3>
@@ -1788,8 +2117,43 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
+                <h3 id="method_setVisible">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setVisible"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 610</div>
+        <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+    <strong>setVisible</strong>(int $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of [visible] column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setPosition">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 544</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 631</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setPosition</strong>(int $v)</code>
     </h3>
@@ -1824,7 +2188,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setCreatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 565</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setCreatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 653</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setCreatedAt</strong>(mixed $v)</code>
     </h3>
@@ -1859,7 +2223,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setUpdatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setUpdatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 585</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setUpdatedAt"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 674</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setUpdatedAt</strong>(mixed $v)</code>
     </h3>
@@ -1894,7 +2258,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hasOnlyDefaultValues">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hasOnlyDefaultValues"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 606</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hasOnlyDefaultValues"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 696</div>
         <code>            public            boolean
     <strong>hasOnlyDefaultValues</strong>()</code>
     </h3>
@@ -1919,7 +2283,7 @@ modified <em>and</em> has some values set which are non-default.</p>
     </div>
 
                 <h3 id="method_hydrate">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hydrate"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 630</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_hydrate"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 724</div>
         <code>            public            int
     <strong>hydrate</strong>(array $row, int $startcol, boolean $rehydrate = false, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -1983,7 +2347,7 @@ more tables.</p>
     </div>
 
                 <h3 id="method_ensureConsistency">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_ensureConsistency"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 686</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_ensureConsistency"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 783</div>
         <code>            public            
     <strong>ensureConsistency</strong>()</code>
     </h3>
@@ -2014,7 +2378,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_reload">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_reload"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 703</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_reload"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 800</div>
         <code>            public            void
     <strong>reload</strong>(boolean $deep = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2066,7 +2430,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_delete"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 745</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_delete"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 845</div>
         <code>            public            void
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2126,7 +2490,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_save">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_save"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 787</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_save"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 887</div>
         <code>            public            int
     <strong>save</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2183,7 +2547,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByName">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getByName"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1012</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getByName"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1162</div>
         <code>            public            mixed
     <strong>getByName</strong>(string $name, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -2223,7 +2587,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByPosition">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getByPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1027</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getByPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1177</div>
         <code>            public            mixed
     <strong>getByPosition</strong>(int $pos)</code>
     </h3>
@@ -2257,7 +2621,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_toArray">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_toArray"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1069</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_toArray"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1222</div>
         <code>            public            array
     <strong>toArray</strong>(string $keyType = TableMap::TYPE_PHPNAME, boolean $includeLazyLoadColumns = true, array $alreadyDumpedObjects = array(), boolean $includeForeignObjects = false)</code>
     </h3>
@@ -2307,7 +2671,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByName">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setByName"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1112</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setByName"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1269</div>
         <code>            public            void
     <strong>setByName</strong>(string $name, mixed $value, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -2354,7 +2718,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByPosition">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setByPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1127</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setByPosition"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1284</div>
         <code>            public            void
     <strong>setByPosition</strong>(int $pos, mixed $value)</code>
     </h3>
@@ -2394,7 +2758,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_fromArray">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_fromArray"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1168</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_fromArray"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1328</div>
         <code>            public            void
     <strong>fromArray</strong>(array $arr, string $keyType = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -2442,7 +2806,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildCriteria">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_buildCriteria"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1185</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_buildCriteria"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1346</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildCriteria</strong>()</code>
     </h3>
@@ -2467,7 +2831,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildPkeyCriteria">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_buildPkeyCriteria"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1206</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_buildPkeyCriteria"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1369</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildPkeyCriteria</strong>()</code>
     </h3>
@@ -2492,7 +2856,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_getPrimaryKey">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getPrimaryKey"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1218</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getPrimaryKey"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1381</div>
         <code>            public            int
     <strong>getPrimaryKey</strong>()</code>
     </h3>
@@ -2518,7 +2882,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_setPrimaryKey">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setPrimaryKey"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1229</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setPrimaryKey"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1392</div>
         <code>            public            void
     <strong>setPrimaryKey</strong>(int $key)</code>
     </h3>
@@ -2554,7 +2918,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_isPrimaryKeyNull">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isPrimaryKeyNull"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1238</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_isPrimaryKeyNull"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1401</div>
         <code>            public            boolean
     <strong>isPrimaryKeyNull</strong>()</code>
     </h3>
@@ -2580,7 +2944,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_copyInto">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_copyInto"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1254</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_copyInto"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1418</div>
         <code>            public            
     <strong>copyInto</strong>(object $copyObj, boolean $deepCopy = false, boolean $makeNew = true)</code>
     </h3>
@@ -2626,7 +2990,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_copy">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_copy"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1293</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_copy"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1464</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>copy</strong>(boolean $deepCopy = false)</code>
     </h3>
@@ -2674,7 +3038,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setProduct">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProduct"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1310</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProduct"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1481</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setProduct</strong>(<a href="../../Thelia/Model/Product.html"><abbr title="Thelia\Model\Product">Product</abbr></a> $v = null)</code>
     </h3>
@@ -2720,7 +3084,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getProduct">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProduct"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1336</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProduct"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1509</div>
         <code>            public            <a href="../../Thelia/Model/Product.html"><abbr title="Thelia\Model\Product">Product</abbr></a>
     <strong>getProduct</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2765,7 +3129,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_initRelation">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_initRelation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1360</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_initRelation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1534</div>
         <code>            public            void
     <strong>initRelation</strong>(string $relationName)</code>
     </h3>
@@ -2800,8 +3164,379 @@ that wouldn't work when StandardEnglishPluralizer is used.</p>
                     </div>
     </div>
 
+                <h3 id="method_clearProductSaleElementsProductImages">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clearProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1553</div>
+        <code>            public            void
+    <strong>clearProductSaleElementsProductImages</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears out the collProductSaleElementsProductImages collection</p>
+        <p>This does not modify the database; however, it will remove any associated objects, causing
+them to be refetched by subsequent calls to accessor method.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addProductSaleElementsProductImages()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_resetPartialProductSaleElementsProductImages">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_resetPartialProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1561</div>
+        <code>            public            
+    <strong>resetPartialProductSaleElementsProductImages</strong>($v = true)</code>
+    </h3>
+    <div class="details">
+        <p>Reset is the collProductSaleElementsProductImages collection loaded partially.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$v</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initProductSaleElementsProductImages">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_initProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1578</div>
+        <code>            public            void
+    <strong>initProductSaleElementsProductImages</strong>(boolean $overrideExisting = true)</code>
+    </h3>
+    <div class="details">
+        <p>Initializes the collProductSaleElementsProductImages collection.</p>
+        <p>By default this just sets the collProductSaleElementsProductImages collection to an empty array (like clearcollProductSaleElementsProductImages());
+however, you may wish to override this method in your stub class to provide setting appropriate
+to your application -- for example, setting the initial array to the values stored in database.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$overrideExisting</td>
+                <td>If set to true, the method call initializes the collection even if it is not empty</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProductSaleElementsProductImages">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1601</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a>[]
+    <strong>getProductSaleElementsProductImages</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets an array of ChildProductSaleElementsProductImage objects which contain a foreign key that references this object.</p>
+        <p>If the $criteria is not null, it is used to always fetch the results from the database.
+Otherwise the results are fetched from the database the first time, then cached.
+Next time the same method is called without $criteria, the cached collection is returned.
+If this ChildProductImage is new, it will return
+an empty collection or the current collection; the criteria is ignored on a new object.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>optional Criteria object to narrow the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a>[]</td>
+            <td>List of ChildProductSaleElementsProductImage objects</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setProductSaleElementsProductImages">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1657</div>
+        <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+    <strong>setProductSaleElementsProductImages</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $productSaleElementsProductImages, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a collection of ProductSaleElementsProductImage objects related by a one-to-many relationship to the current object.</p>
+        <p>It will also schedule objects for deletion based on a diff between old objects (aka persisted)
+and new objects from the given Propel collection.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></td>
+                <td>$productSaleElementsProductImages</td>
+                <td>A Propel collection.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countProductSaleElementsProductImages">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_countProductSaleElementsProductImages"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1688</div>
+        <code>            public            int
+    <strong>countProductSaleElementsProductImages</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of related ProductSaleElementsProductImage objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$distinct</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>Count of related ProductSaleElementsProductImage objects.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addProductSaleElementsProductImage">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_addProductSaleElementsProductImage"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1720</div>
+        <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+    <strong>addProductSaleElementsProductImage</strong>(<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a> $l)</code>
+    </h3>
+    <div class="details">
+        <p>Method called to associate a ChildProductSaleElementsProductImage object to this object through the ChildProductSaleElementsProductImage foreign key attribute.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a></td>
+                <td>$l</td>
+                <td>ChildProductSaleElementsProductImage</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeProductSaleElementsProductImage">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_removeProductSaleElementsProductImage"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1747</div>
+        <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+    <strong>removeProductSaleElementsProductImage</strong>(<a href="../../Thelia/Model/Base/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\Base\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a> $productSaleElementsProductImage)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Model/Base/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\Base\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a></td>
+                <td>$productSaleElementsProductImage</td>
+                <td>The productSaleElementsProductImage object to remove.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProductSaleElementsProductImagesJoinProductSaleElements">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProductSaleElementsProductImagesJoinProductSaleElements"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1779</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a>[]
+    <strong>getProductSaleElementsProductImagesJoinProductSaleElements</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+        <p>Otherwise if this ProductImage is new, it will return
+an empty collection; or if this ProductImage has previously
+been saved, it will retrieve related ProductSaleElementsProductImages from storage.</p>
+
+<p>This method is protected by default in order to keep the public
+api reasonable.  You can provide public methods for those you
+actually need in ProductImage.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>optional Criteria object to narrow the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>optional connection object</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinBehavior</td>
+                <td>optional join type to use (defaults to Criteria::LEFT_JOIN)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/ProductSaleElementsProductImage.html"><abbr title="Thelia\Model\ProductSaleElementsProductImage">ProductSaleElementsProductImage</abbr></a>[]</td>
+            <td>List of ChildProductSaleElementsProductImage objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_clearProductImageI18ns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clearProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1376</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clearProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1796</div>
         <code>            public            void
     <strong>clearProductImageI18ns</strong>()</code>
     </h3>
@@ -2836,7 +3571,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialProductImageI18ns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_resetPartialProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1384</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_resetPartialProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1804</div>
         <code>            public            
     <strong>resetPartialProductImageI18ns</strong>($v = true)</code>
     </h3>
@@ -2863,7 +3598,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initProductImageI18ns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_initProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1401</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_initProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1821</div>
         <code>            public            void
     <strong>initProductImageI18ns</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -2900,7 +3635,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getProductImageI18ns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1424</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1844</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a>[]
     <strong>getProductImageI18ns</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2953,7 +3688,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setProductImageI18ns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1480</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1900</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setProductImageI18ns</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $productImageI18ns, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2993,7 +3728,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countProductImageI18ns">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_countProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1514</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_countProductImageI18ns"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1934</div>
         <code>            public            int
     <strong>countProductImageI18ns</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3051,7 +3786,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addProductImageI18n">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_addProductImageI18n"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1546</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_addProductImageI18n"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1966</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>addProductImageI18n</strong>(<a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a> $l)</code>
     </h3>
@@ -3086,7 +3821,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeProductImageI18n">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_removeProductImageI18n"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1577</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_removeProductImageI18n"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1997</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>removeProductImageI18n</strong>(<a href="../../Thelia/Model/Base/ProductImageI18n.html"><abbr title="Thelia\Model\Base\ProductImageI18n">ProductImageI18n</abbr></a> $productImageI18n)</code>
     </h3>
@@ -3121,8 +3856,268 @@ and new objects from the given Propel collection.</p>
                     </div>
     </div>
 
+                <h3 id="method_clearProductSaleElementss">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clearProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2021</div>
+        <code>            public            void
+    <strong>clearProductSaleElementss</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears out the collProductSaleElementss collection</p>
+        <p>This does not modify the database; however, it will remove any associated objects, causing
+them to be refetched by subsequent calls to accessor method.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>addProductSaleElementss()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_initProductSaleElementss">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_initProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2036</div>
+        <code>            public            void
+    <strong>initProductSaleElementss</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Initializes the collProductSaleElementss collection.</p>
+        <p>By default this just sets the collProductSaleElementss collection to an empty collection (like clearProductSaleElementss());
+however, you may wish to override this method in your stub class to provide setting appropriate
+to your application -- for example, setting the initial array to the values stored in database.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProductSaleElementss">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2057</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|<a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a>[]
+    <strong>getProductSaleElementss</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a collection of ChildProductSaleElements objects related by a many-to-many relationship to the current object by way of the product<em>sale</em>elements<em>product</em>image cross-reference table.</p>
+        <p>If the $criteria is not null, it is used to always fetch the results from the database.
+Otherwise the results are fetched from the database the first time, then cached.
+Next time the same method is called without $criteria, the cached collection is returned.
+If this ChildProductImage is new, it will return
+an empty collection or the current collection; the criteria is ignored on a new object.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>Optional query object to filter the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|<a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a>[]</td>
+            <td>List of ChildProductSaleElements objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setProductSaleElementss">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2087</div>
+        <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+    <strong>setProductSaleElementss</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $productSaleElementss, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets a collection of ProductSaleElements objects related by a many-to-many relationship to the current object by way of the product<em>sale</em>elements<em>product</em>image cross-reference table.</p>
+        <p>It will also schedule objects for deletion based on a diff between old objects (aka persisted)
+and new objects from the given Propel collection.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr></td>
+                <td>$productSaleElementss</td>
+                <td>A Propel collection.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countProductSaleElementss">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_countProductSaleElementss"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2115</div>
+        <code>            public            int
+    <strong>countProductSaleElementss</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the number of ChildProductSaleElements objects related by a many-to-many relationship to the current object by way of the product<em>sale</em>elements<em>product</em>image cross-reference table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>Optional query object to filter the query</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$distinct</td>
+                <td>Set to true to force count distinct</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>the number of related ChildProductSaleElements objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addProductSaleElements">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_addProductSaleElements"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2142</div>
+        <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+    <strong>addProductSaleElements</strong>(<a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a> $productSaleElements)</code>
+    </h3>
+    <div class="details">
+        <p>Associate a ChildProductSaleElements object to this object through the product<em>sale</em>elements<em>product</em>image cross reference table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a></td>
+                <td>$productSaleElements</td>
+                <td>The ChildProductSaleElementsProductImage object to relate</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeProductSaleElements">
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_removeProductSaleElements"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2179</div>
+        <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
+    <strong>removeProductSaleElements</strong>(<a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a> $productSaleElements)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a ChildProductSaleElements object to this object through the product<em>sale</em>elements<em>product</em>image cross reference table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Model/ProductSaleElements.html"><abbr title="Thelia\Model\ProductSaleElements">ProductSaleElements</abbr></a></td>
+                <td>$productSaleElements</td>
+                <td>The ChildProductSaleElementsProductImage object to relate</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_clear">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clear"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1595</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clear"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2198</div>
         <code>            public            
     <strong>clear</strong>()</code>
     </h3>
@@ -3138,7 +4133,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_clearAllReferences">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clearAllReferences"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1619</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_clearAllReferences"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2224</div>
         <code>            public            
     <strong>clearAllReferences</strong>(boolean $deep = false)</code>
     </h3>
@@ -3165,7 +4160,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___toString"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1642</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___toString"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2259</div>
         <code>            public            string
     <strong>__toString</strong>()</code>
     </h3>
@@ -3191,7 +4186,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_keepUpdateDateUnchanged">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_keepUpdateDateUnchanged"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1654</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_keepUpdateDateUnchanged"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2271</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>keepUpdateDateUnchanged</strong>()</code>
     </h3>
@@ -3216,7 +4211,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_setLocale">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setLocale"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1670</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setLocale"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2287</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>setLocale</strong>(string $locale = &#039;en_US&#039;)</code>
     </h3>
@@ -3251,7 +4246,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getLocale">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getLocale"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1682</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getLocale"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2299</div>
         <code>            public            string
     <strong>getLocale</strong>()</code>
     </h3>
@@ -3276,7 +4271,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getTranslation">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getTranslation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1694</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getTranslation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2311</div>
         <code>            public            <a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a>
     <strong>getTranslation</strong>(string $locale = &#039;en_US&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3317,7 +4312,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_removeTranslation">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_removeTranslation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1729</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_removeTranslation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2346</div>
         <code>            public            <a href="../../Thelia/Model/ProductImage.html"><abbr title="Thelia\Model\ProductImage">ProductImage</abbr></a>
     <strong>removeTranslation</strong>(string $locale = &#039;en_US&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3357,7 +4352,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getCurrentTranslation">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getCurrentTranslation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1755</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getCurrentTranslation"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2372</div>
         <code>            public            <a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a>
     <strong>getCurrentTranslation</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3393,7 +4388,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getTitle">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getTitle"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1766</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getTitle"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2383</div>
         <code>            public            string
     <strong>getTitle</strong>()</code>
     </h3>
@@ -3419,7 +4414,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_setTitle">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setTitle"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1778</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setTitle"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2395</div>
         <code>            public            <a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a>
     <strong>setTitle</strong>(string $v)</code>
     </h3>
@@ -3454,7 +4449,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getDescription">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getDescription"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1790</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getDescription"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2407</div>
         <code>            public            string
     <strong>getDescription</strong>()</code>
     </h3>
@@ -3480,7 +4475,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_setDescription">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setDescription"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1802</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setDescription"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2419</div>
         <code>            public            <a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a>
     <strong>setDescription</strong>(string $v)</code>
     </h3>
@@ -3515,7 +4510,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getChapo">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getChapo"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1814</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getChapo"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2431</div>
         <code>            public            string
     <strong>getChapo</strong>()</code>
     </h3>
@@ -3541,7 +4536,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_setChapo">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setChapo"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1826</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setChapo"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2443</div>
         <code>            public            <a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a>
     <strong>setChapo</strong>(string $v)</code>
     </h3>
@@ -3576,7 +4571,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getPostscriptum">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getPostscriptum"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1838</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_getPostscriptum"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2455</div>
         <code>            public            string
     <strong>getPostscriptum</strong>()</code>
     </h3>
@@ -3602,7 +4597,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_setPostscriptum">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setPostscriptum"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1850</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_setPostscriptum"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2467</div>
         <code>            public            <a href="../../Thelia/Model/ProductImageI18n.html"><abbr title="Thelia\Model\ProductImageI18n">ProductImageI18n</abbr></a>
     <strong>setPostscriptum</strong>(string $v)</code>
     </h3>
@@ -3637,7 +4632,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preSave">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_preSave"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1861</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_preSave"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2478</div>
         <code>            public            boolean
     <strong>preSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3674,7 +4669,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postSave">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postSave"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1870</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postSave"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2487</div>
         <code>            public            
     <strong>postSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3701,12 +4696,13 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preInsert">
-        <div class="location">at line 24</div>
+        <div class="location">at line 38</div>
         <code>            public            boolean
     <strong>preInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
     <div class="details">
-        <p>Code to be run before inserting to database</p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -3738,7 +4734,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postInsert">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postInsert"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1889</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postInsert"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2506</div>
         <code>            public            
     <strong>postInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3765,7 +4761,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preUpdate">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_preUpdate"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1899</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_preUpdate"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2516</div>
         <code>            public            boolean
     <strong>preUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3802,7 +4798,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postUpdate">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postUpdate"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1908</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postUpdate"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2525</div>
         <code>            public            
     <strong>postUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3829,7 +4825,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preDelete">
-        <div class="location">at line 55</div>
+        <div class="location">at line 63</div>
         <code>            public            boolean
     <strong>preDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3866,7 +4862,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postDelete">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postDelete"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1927</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method_postDelete"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2544</div>
         <code>            public            
     <strong>postDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -3893,7 +4889,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___call">
-        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___call"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 1944</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/ProductImage.html#method___call"><abbr title="Thelia\Model\Base\ProductImage">ProductImage</abbr></a> at line 2561</div>
         <code>            public            array|string
     <strong>__call</strong>(string $name, mixed $params)</code>
     </h3>
@@ -3936,12 +4932,13 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_setParentId">
-        <div class="location">at line 38</div>
-        <code>            public            <abbr title="Thelia\Model\$this">$this</abbr>
+        <div class="location">at line 48</div>
+        <code>            public            <abbr title="Thelia\Files\$this">$this</abbr>
     <strong>setParentId</strong>(int $parentId)</code>
     </h3>
     <div class="details">
-        <p>Set Image parent id</p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -3960,7 +4957,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
 
                     <table>
         <tr>
-            <td><abbr title="Thelia\Model\$this">$this</abbr></td>
+            <td><abbr title="Thelia\Files\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -3972,12 +4969,13 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_getParentId">
-        <div class="location">at line 50</div>
+        <div class="location">at line 58</div>
         <code>            public            int
     <strong>getParentId</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get Image parent id</p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -3988,6 +4986,221 @@ Allows to define default __call() behavior if you overwrite __call()</p>
         <tr>
             <td>int</td>
             <td>parent id</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBreadcrumb">
+        <div class="location">at line 77</div>
+        <code>            public            array
+    <strong>getBreadcrumb</strong>(<abbr title="Symfony\Component\Routing\Router">Router</abbr> $router, <abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container, string $tab, string $locale)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\Routing\Router">Router</abbr></td>
+                <td>$router</td>
+                <td>the router where to find routes</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td>the container</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tab</td>
+                <td>the tab to return to (probably 'image' or 'document')</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>the current locale</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>an array of (label => URL)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParentFileModel">
+        <div class="location">at line 85</div>
+        <code>            public            <abbr title="Thelia\Model\FileModelParentInterface">FileModelParentInterface</abbr>
+    <strong>getParentFileModel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\FileModelParentInterface">FileModelParentInterface</abbr></td>
+            <td>the parent file model</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUpdateFormId">
+        <div class="location">at line 95</div>
+        <code>            public            <a href="../../Thelia/Form/BaseForm.html"><abbr title="Thelia\Form\BaseForm">BaseForm</abbr></a>
+    <strong>getUpdateFormId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the ID of the form used to change this object information</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Form/BaseForm.html"><abbr title="Thelia\Form\BaseForm">BaseForm</abbr></a></td>
+            <td>the form</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUpdateFormInstance">
+        <div class="location">at line 107</div>
+        <code>            public            <a href="../../Thelia/Form/BaseForm.html"><abbr title="Thelia\Form\BaseForm">BaseForm</abbr></a>
+    <strong>getUpdateFormInstance</strong>(<a href="../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a> $request)</code>
+    </h3>
+    <div class="details">
+        <p>Get the form instance used to change this object information</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>the current request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Form/BaseForm.html"><abbr title="Thelia\Form\BaseForm">BaseForm</abbr></a></td>
+            <td>the form</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUploadDir">
+        <div class="location">at line 115</div>
+        <code>            public            string
+    <strong>getUploadDir</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the path to the upload directory where files are stored, without final slash</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRedirectionUrl">
+        <div class="location">at line 125</div>
+        <code>            public            string
+    <strong>getRedirectionUrl</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the URL to redirect to after update from the back-office</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryInstance">
+        <div class="location">at line 135</div>
+        <code>            public            <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr>
+    <strong>getQueryInstance</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the Query instance for this object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></td>
+            <td>
+</td>
         </tr>
     </table>
 

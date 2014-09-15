@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\Security\User\UserInterface | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../traits.html">Traits</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../Thelia/Core/Security/User.html">Thelia\Core\Security\User</a>\UserInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>UserInterface</strong></p>
+
+            <div class="description">
+            <p>This interface should be implemented by user classes</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getUsername">getUsername</a>()
+                    <p>Return the user unique name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPassword">getPassword</a>()
+                    <p>Return the user encoded password</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_checkPassword">checkPassword</a>($password)
+                    <p>Check a string against a the user password</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\Security\User\Role">Role</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRoles">getRoles</a>()
+                    <p>Returns the roles granted to the user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_eraseCredentials">eraseCredentials</a>()
+                    <p>Removes sensitive data from the user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getToken">getToken</a>()
+                    <p>return the user token (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setToken">setToken</a>($token)
+                    <p>Set a token in the user data (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getSerial">getSerial</a>()
+                    <p>return the user serial  (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSerial">setSerial</a>($serial)
+                    <p>Set a serial number int the user data  (used by remember me authnetication system)</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getUsername">
+        <div class="location">at line 26</div>
+        <code>            public            
+    <strong>getUsername</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the user unique name</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPassword">
+        <div class="location">at line 31</div>
+        <code>            public            
+    <strong>getPassword</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the user encoded password</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_checkPassword">
+        <div class="location">at line 36</div>
+        <code>            public            
+    <strong>checkPassword</strong>($password)</code>
+    </h3>
+    <div class="details">
+        <p>Check a string against a the user password</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$password</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoles">
+        <div class="location">at line 50</div>
+        <code>            public            <abbr title="Thelia\Core\Security\User\Role">Role</abbr>[]
+    <strong>getRoles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the roles granted to the user.</p>
+        <p><code>
+public function getRoles()
+{
+    return array('USER');
+}
+</code></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\Security\User\Role">Role</abbr>[]</td>
+            <td>The user roles</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_eraseCredentials">
+        <div class="location">at line 60</div>
+        <code>            public            void
+    <strong>eraseCredentials</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Removes sensitive data from the user.</p>
+        <p>This is important if, at any given point, sensitive information like
+the plain-text password is stored on this object.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getToken">
+        <div class="location">at line 65</div>
+        <code>            public            
+    <strong>getToken</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return the user token (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setToken">
+        <div class="location">at line 70</div>
+        <code>            public            
+    <strong>setToken</strong>($token)</code>
+    </h3>
+    <div class="details">
+        <p>Set a token in the user data (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$token</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSerial">
+        <div class="location">at line 75</div>
+        <code>            public            
+    <strong>getSerial</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>return the user serial  (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSerial">
+        <div class="location">at line 80</div>
+        <code>            public            
+    <strong>setSerial</strong>($serial)</code>
+    </h3>
+    <div class="details">
+        <p>Set a serial number int the user data  (used by remember me authnetication system)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

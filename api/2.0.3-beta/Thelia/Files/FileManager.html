@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Files\FileManager | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Files.html">Thelia\Files</a>\FileManager</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>FileManager</strong></p>
+
+            <div class="description">
+            <p>File Manager</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $supportedFileModels)
+                    <p>Create a new FileManager instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getModelInstance">getModelInstance</a>(string $fileType, string $parentType)
+                    <p>Create a new FileModelInterface instance, from the supportedFileModels table</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addFileModel">addFileModel</a>(string $fileType, string $parentType, string $fullyQualifiedClassName)
+                    <p>A a new FileModelInterface class name to the supported class list.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_copyUploadedFile">copyUploadedFile</a>(<a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $model, <abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr> $uploadedFile)
+                    <p>Copy UploadedFile into the server storage directory</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_saveImage">saveImage</a>(<a href="../../Thelia/Core/Event/Image/ImageCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\Image\ImageCreateOrUpdateEvent">ImageCreateOrUpdateEvent</abbr></a> $event, <a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $imageModel)
+                    <p>Save file into the database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_saveDocument">saveDocument</a>(<a href="../../Thelia/Core/Event/Document/DocumentCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\Document\DocumentCreateOrUpdateEvent">DocumentCreateOrUpdateEvent</abbr></a> $event, <a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $documentModel)
+                    <p>Save file into the database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_sanitizeFileName">sanitizeFileName</a>(string $string)
+                    <p>Sanitizes a filename replacing whitespace with dashes</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFile">deleteFile</a>(<a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $model)
+                    <p>Delete image from file storage and database</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renameFile">renameFile</a>(int $modelId, <abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr> $uploadedFile)
+                    <p>Rename file with image model id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isImage">isImage</a>(string $mimeType)
+                    <p>Check if a file is an image Check based on mime type</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 37</div>
+        <code>            public            
+    <strong>__construct</strong>(array $supportedFileModels)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new FileManager instance.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$supportedFileModels</td>
+                <td>The key should have form type.parent, where type is the file type (document or image) and parent is the parent object of the file, form example product, brand, folder, etc.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModelInstance">
+        <div class="location">at line 62</div>
+        <code>            public            <a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a>
+    <strong>getModelInstance</strong>(string $fileType, string $parentType)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new FileModelInterface instance, from the supportedFileModels table</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fileType</td>
+                <td>the file type, such as document, image, etc.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parentType</td>
+                <td>the parent type, such as product, category, etc.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a></td>
+            <td>a file model interface instance</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="FileException">FileException</abbr></td>
+                <td>if the file type is not supported, or if the class does not implements FileModelInterface</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addFileModel">
+        <div class="location">at line 92</div>
+        <code>            public            
+    <strong>addFileModel</strong>(string $fileType, string $parentType, string $fullyQualifiedClassName)</code>
+    </h3>
+    <div class="details">
+        <p>A a new FileModelInterface class name to the supported class list.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fileType</td>
+                <td>the file type, such as document, image, etc.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parentType</td>
+                <td>the parent type, such as Product, Category, etc.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fullyQualifiedClassName</td>
+                <td>the fully qualified class name</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copyUploadedFile">
+        <div class="location">at line 105</div>
+        <code>            public            <abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr>
+    <strong>copyUploadedFile</strong>(<a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $model, <abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr> $uploadedFile)</code>
+    </h3>
+    <div class="details">
+        <p>Copy UploadedFile into the server storage directory</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a></td>
+                <td>$model</td>
+                <td>Model saved</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr></td>
+                <td>$uploadedFile</td>
+                <td>Ready to be uploaded file</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Exception/ImageException.html"><abbr title="Thelia\Exception\ImageException">ImageException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveImage">
+        <div class="location">at line 172</div>
+        <code>            public            int
+    <strong>saveImage</strong>(<a href="../../Thelia/Core/Event/Image/ImageCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\Image\ImageCreateOrUpdateEvent">ImageCreateOrUpdateEvent</abbr></a> $event, <a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $imageModel)</code>
+    </h3>
+    <div class="details">
+        <p>Save file into the database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Image/ImageCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\Image\ImageCreateOrUpdateEvent">ImageCreateOrUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>the event</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a></td>
+                <td>$imageModel</td>
+                <td>the file model object (image or document) to save.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>number of modified rows in database</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveDocument">
+        <div class="location">at line 185</div>
+        <code>            public            int
+    <strong>saveDocument</strong>(<a href="../../Thelia/Core/Event/Document/DocumentCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\Document\DocumentCreateOrUpdateEvent">DocumentCreateOrUpdateEvent</abbr></a> $event, <a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $documentModel)</code>
+    </h3>
+    <div class="details">
+        <p>Save file into the database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Document/DocumentCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\Document\DocumentCreateOrUpdateEvent">DocumentCreateOrUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>the event</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a></td>
+                <td>$documentModel</td>
+                <td>the file model object (image or document) to save.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>number of modified rows in database</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sanitizeFileName">
+        <div class="location">at line 201</div>
+        <code>            public            string
+    <strong>sanitizeFileName</strong>(string $string)</code>
+    </h3>
+    <div class="details">
+        <p>Sanitizes a filename replacing whitespace with dashes</p>
+        <p>Removes special characters that are illegal in filenames on certain
+operating systems and special characters requiring special escaping
+to manipulate at the command line.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td>The filename to be sanitized</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The sanitized filename</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFile">
+        <div class="location">at line 211</div>
+        <code>            public            
+    <strong>deleteFile</strong>(<a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a> $model)</code>
+    </h3>
+    <div class="details">
+        <p>Delete image from file storage and database</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">FileModelInterface</abbr></a></td>
+                <td>$model</td>
+                <td>File being deleted</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renameFile">
+        <div class="location">at line 228</div>
+        <code>            public            string
+    <strong>renameFile</strong>(int $modelId, <abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr> $uploadedFile)</code>
+    </h3>
+    <div class="details">
+        <p>Rename file with image model id</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$modelId</td>
+                <td>Model id</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\File\UploadedFile">UploadedFile</abbr></td>
+                <td>$uploadedFile</td>
+                <td>File being saved</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isImage">
+        <div class="location">at line 253</div>
+        <code>            public            bool
+    <strong>isImage</strong>(string $mimeType)</code>
+    </h3>
+    <div class="details">
+        <p>Check if a file is an image Check based on mime type</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$mimeType</td>
+                <td>File mime type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -312,6 +312,36 @@
                     <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
                 </td>
                 <td class="last">
+                    <a href="#method_filterByOrder">filterByOrder</a>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $order, string $comparison = null)
+                    <p>Filter the query by a related \Thelia\Model\Order object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinOrder">joinOrder</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Adds a JOIN clause to the query using the Order relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/OrderQuery.html"><abbr title="Thelia\Model\OrderQuery">OrderQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_useOrderQuery">useOrderQuery</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Use the Order relation Order object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
+                </td>
+                <td class="last">
                     <a href="#method_filterByCartItem">filterByCartItem</a>(<a href="../../../Thelia/Model/CartItem.html"><abbr title="Thelia\Model\CartItem">CartItem</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $cartItem, string $comparison = null)
                     <p>Filter the query by a related \Thelia\Model\CartItem object</p>
                 </td>
@@ -762,6 +792,36 @@
                     <abbr title="ChildCartQuery">ChildCartQuery</abbr>
                 </td>
                 <td class="last">
+                    <a href="#method_leftJoinOrder">leftJoinOrder</a>($relationAlias = null)
+                    <p>Adds a LEFT JOIN clause to the query using the Order relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildCartQuery">ChildCartQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoinOrder">rightJoinOrder</a>($relationAlias = null)
+                    <p>Adds a RIGHT JOIN clause to the query using the Order relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildCartQuery">ChildCartQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoinOrder">innerJoinOrder</a>($relationAlias = null)
+                    <p>Adds a INNER JOIN clause to the query using the Order relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildCartQuery">ChildCartQuery</abbr>
+                </td>
+                <td class="last">
                     <a href="#method_leftJoinCartItem">leftJoinCartItem</a>($relationAlias = null)
                     <p>Adds a LEFT JOIN clause to the query using the CartItem relation</p>
                 </td>
@@ -993,7 +1053,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 102</div>
+        <div class="location">at line 106</div>
         <code>            public            
     <strong>__construct</strong>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\Cart&#039;, string $modelAlias = null)</code>
     </h3>
@@ -1029,7 +1089,7 @@
     </div>
 
                 <h3 id="method_create">
-        <div class="location">at line 115</div>
+        <div class="location">at line 119</div>
         <code>        static    public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>create</strong>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)</code>
     </h3>
@@ -1070,7 +1130,7 @@
     </div>
 
                 <h3 id="method_findPk">
-        <div class="location">at line 145</div>
+        <div class="location">at line 149</div>
         <code>            public            <a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>|array|mixed
     <strong>findPk</strong>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1114,7 +1174,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_findPks">
-        <div class="location">at line 227</div>
+        <div class="location">at line 231</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
     <strong>findPks</strong>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1154,7 +1214,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKey">
-        <div class="location">at line 248</div>
+        <div class="location">at line 252</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByPrimaryKey</strong>(mixed $key)</code>
     </h3>
@@ -1189,7 +1249,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKeys">
-        <div class="location">at line 261</div>
+        <div class="location">at line 265</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByPrimaryKeys</strong>(array $keys)</code>
     </h3>
@@ -1224,7 +1284,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterById">
-        <div class="location">at line 285</div>
+        <div class="location">at line 289</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
     </h3>
@@ -1268,7 +1328,7 @@ $query->filterById(array('min' => 12)); // WHERE id > 12
     </div>
 
                 <h3 id="method_filterByToken">
-        <div class="location">at line 323</div>
+        <div class="location">at line 327</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByToken</strong>(string $token = null, string $comparison = null)</code>
     </h3>
@@ -1311,7 +1371,7 @@ $query->filterByToken('%fooValue%'); // WHERE token LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByCustomerId">
-        <div class="location">at line 357</div>
+        <div class="location">at line 361</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByCustomerId</strong>(mixed $customerId = null, string $comparison = null)</code>
     </h3>
@@ -1364,7 +1424,7 @@ $query->filterByCustomerId(array('min' => 12)); // WHERE customer_id > 12
     </div>
 
                 <h3 id="method_filterByAddressDeliveryId">
-        <div class="location">at line 400</div>
+        <div class="location">at line 404</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByAddressDeliveryId</strong>(mixed $addressDeliveryId = null, string $comparison = null)</code>
     </h3>
@@ -1417,7 +1477,7 @@ $query->filterByAddressDeliveryId(array('min' => 12)); // WHERE address<em>deliv
     </div>
 
                 <h3 id="method_filterByAddressInvoiceId">
-        <div class="location">at line 443</div>
+        <div class="location">at line 447</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByAddressInvoiceId</strong>(mixed $addressInvoiceId = null, string $comparison = null)</code>
     </h3>
@@ -1470,7 +1530,7 @@ $query->filterByAddressInvoiceId(array('min' => 12)); // WHERE address<em>invoic
     </div>
 
                 <h3 id="method_filterByCurrencyId">
-        <div class="location">at line 486</div>
+        <div class="location">at line 490</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByCurrencyId</strong>(mixed $currencyId = null, string $comparison = null)</code>
     </h3>
@@ -1523,7 +1583,7 @@ $query->filterByCurrencyId(array('min' => 12)); // WHERE currency_id > 12
     </div>
 
                 <h3 id="method_filterByDiscount">
-        <div class="location">at line 527</div>
+        <div class="location">at line 531</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByDiscount</strong>(mixed $discount = null, string $comparison = null)</code>
     </h3>
@@ -1567,7 +1627,7 @@ $query->filterByDiscount(array('min' => 12)); // WHERE discount > 12
     </div>
 
                 <h3 id="method_filterByCreatedAt">
-        <div class="location">at line 570</div>
+        <div class="location">at line 574</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
     </h3>
@@ -1611,7 +1671,7 @@ $query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2
     </div>
 
                 <h3 id="method_filterByUpdatedAt">
-        <div class="location">at line 613</div>
+        <div class="location">at line 617</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
     </h3>
@@ -1655,7 +1715,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByCustomer">
-        <div class="location">at line 644</div>
+        <div class="location">at line 648</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByCustomer</strong>(<a href="../../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $customer, string $comparison = null)</code>
     </h3>
@@ -1695,7 +1755,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinCustomer">
-        <div class="location">at line 669</div>
+        <div class="location">at line 673</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>joinCustomer</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1735,7 +1795,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useCustomerQuery">
-        <div class="location">at line 704</div>
+        <div class="location">at line 708</div>
         <code>            public            <a href="../../../Thelia/Model/CustomerQuery.html"><abbr title="Thelia\Model\CustomerQuery">CustomerQuery</abbr></a>
     <strong>useCustomerQuery</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1784,7 +1844,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByAddressRelatedByAddressDeliveryId">
-        <div class="location">at line 719</div>
+        <div class="location">at line 723</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByAddressRelatedByAddressDeliveryId</strong>(<a href="../../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $address, string $comparison = null)</code>
     </h3>
@@ -1824,7 +1884,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinAddressRelatedByAddressDeliveryId">
-        <div class="location">at line 744</div>
+        <div class="location">at line 748</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>joinAddressRelatedByAddressDeliveryId</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1864,7 +1924,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useAddressRelatedByAddressDeliveryIdQuery">
-        <div class="location">at line 779</div>
+        <div class="location">at line 783</div>
         <code>            public            <a href="../../../Thelia/Model/AddressQuery.html"><abbr title="Thelia\Model\AddressQuery">AddressQuery</abbr></a>
     <strong>useAddressRelatedByAddressDeliveryIdQuery</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1913,7 +1973,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByAddressRelatedByAddressInvoiceId">
-        <div class="location">at line 794</div>
+        <div class="location">at line 798</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByAddressRelatedByAddressInvoiceId</strong>(<a href="../../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $address, string $comparison = null)</code>
     </h3>
@@ -1953,7 +2013,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinAddressRelatedByAddressInvoiceId">
-        <div class="location">at line 819</div>
+        <div class="location">at line 823</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>joinAddressRelatedByAddressInvoiceId</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -1993,7 +2053,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useAddressRelatedByAddressInvoiceIdQuery">
-        <div class="location">at line 854</div>
+        <div class="location">at line 858</div>
         <code>            public            <a href="../../../Thelia/Model/AddressQuery.html"><abbr title="Thelia\Model\AddressQuery">AddressQuery</abbr></a>
     <strong>useAddressRelatedByAddressInvoiceIdQuery</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2042,7 +2102,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByCurrency">
-        <div class="location">at line 869</div>
+        <div class="location">at line 873</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByCurrency</strong>(<a href="../../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $currency, string $comparison = null)</code>
     </h3>
@@ -2082,7 +2142,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinCurrency">
-        <div class="location">at line 894</div>
+        <div class="location">at line 898</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>joinCurrency</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2122,7 +2182,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useCurrencyQuery">
-        <div class="location">at line 929</div>
+        <div class="location">at line 933</div>
         <code>            public            <a href="../../../Thelia/Model/CurrencyQuery.html"><abbr title="Thelia\Model\CurrencyQuery">CurrencyQuery</abbr></a>
     <strong>useCurrencyQuery</strong>(string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -2170,8 +2230,137 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_filterByOrder">
+        <div class="location">at line 948</div>
+        <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
+    <strong>filterByOrder</strong>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $order, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a related \Thelia\Model\Order object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$order</td>
+                <td>the related object to use as filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinOrder">
+        <div class="location">at line 971</div>
+        <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
+    <strong>joinOrder</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query using the Order relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useOrderQuery">
+        <div class="location">at line 1006</div>
+        <code>            public            <a href="../../../Thelia/Model/OrderQuery.html"><abbr title="Thelia\Model\OrderQuery">OrderQuery</abbr></a>
+    <strong>useOrderQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Use the Order relation Order object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation, to be used as main alias in the secondary query</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/OrderQuery.html"><abbr title="Thelia\Model\OrderQuery">OrderQuery</abbr></a></td>
+            <td>A secondary query class using the current class as primary query</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>useQuery()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
                 <h3 id="method_filterByCartItem">
-        <div class="location">at line 944</div>
+        <div class="location">at line 1021</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>filterByCartItem</strong>(<a href="../../../Thelia/Model/CartItem.html"><abbr title="Thelia\Model\CartItem">CartItem</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $cartItem, string $comparison = null)</code>
     </h3>
@@ -2211,7 +2400,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinCartItem">
-        <div class="location">at line 967</div>
+        <div class="location">at line 1044</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>joinCartItem</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2251,7 +2440,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useCartItemQuery">
-        <div class="location">at line 1002</div>
+        <div class="location">at line 1079</div>
         <code>            public            <a href="../../../Thelia/Model/CartItemQuery.html"><abbr title="Thelia\Model\CartItemQuery">CartItemQuery</abbr></a>
     <strong>useCartItemQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2300,7 +2489,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_prune">
-        <div class="location">at line 1016</div>
+        <div class="location">at line 1093</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>prune</strong>(<a href="../../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a> $cart = null)</code>
     </h3>
@@ -2335,7 +2524,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">at line 1031</div>
+        <div class="location">at line 1108</div>
         <code>            public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2370,7 +2559,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 1068</div>
+        <div class="location">at line 1145</div>
         <code>            public            int
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2415,7 +2604,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyUpdated">
-        <div class="location">at line 1109</div>
+        <div class="location">at line 1186</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>recentlyUpdated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -2450,7 +2639,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyCreated">
-        <div class="location">at line 1121</div>
+        <div class="location">at line 1198</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>recentlyCreated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -2485,7 +2674,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastUpdatedFirst">
-        <div class="location">at line 1131</div>
+        <div class="location">at line 1208</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>lastUpdatedFirst</strong>()</code>
     </h3>
@@ -2510,7 +2699,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstUpdatedFirst">
-        <div class="location">at line 1141</div>
+        <div class="location">at line 1218</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>firstUpdatedFirst</strong>()</code>
     </h3>
@@ -2535,7 +2724,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastCreatedFirst">
-        <div class="location">at line 1151</div>
+        <div class="location">at line 1228</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>lastCreatedFirst</strong>()</code>
     </h3>
@@ -2560,7 +2749,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstCreatedFirst">
-        <div class="location">at line 1161</div>
+        <div class="location">at line 1238</div>
         <code>            public            <a href="../../../Thelia/Model/CartQuery.html"><abbr title="Thelia\Model\CartQuery">CartQuery</abbr></a>
     <strong>firstCreatedFirst</strong>()</code>
     </h3>
@@ -2585,7 +2774,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderById">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderById</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2622,7 +2811,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByToken">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByToken</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2659,7 +2848,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByCustomerId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByCustomerId</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2696,7 +2885,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByAddressDeliveryId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByAddressDeliveryId</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2733,7 +2922,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByAddressInvoiceId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByAddressInvoiceId</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2770,7 +2959,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByCurrencyId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByCurrencyId</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2807,7 +2996,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByDiscount">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByDiscount</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2844,7 +3033,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByCreatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByCreatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2881,7 +3070,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByUpdatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>orderByUpdatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -2918,7 +3107,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupById">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupById</strong>()</code>
     </h3>
@@ -2944,7 +3133,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByToken">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByToken</strong>()</code>
     </h3>
@@ -2970,7 +3159,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByCustomerId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByCustomerId</strong>()</code>
     </h3>
@@ -2996,7 +3185,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByAddressDeliveryId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByAddressDeliveryId</strong>()</code>
     </h3>
@@ -3022,7 +3211,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByAddressInvoiceId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByAddressInvoiceId</strong>()</code>
     </h3>
@@ -3048,7 +3237,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByCurrencyId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByCurrencyId</strong>()</code>
     </h3>
@@ -3074,7 +3263,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByDiscount">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByDiscount</strong>()</code>
     </h3>
@@ -3100,7 +3289,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByCreatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByCreatedAt</strong>()</code>
     </h3>
@@ -3126,7 +3315,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByUpdatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>groupByUpdatedAt</strong>()</code>
     </h3>
@@ -3152,7 +3341,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoin">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>leftJoin</strong>($relation)</code>
     </h3>
@@ -3189,7 +3378,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoin">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>rightJoin</strong>($relation)</code>
     </h3>
@@ -3226,7 +3415,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoin">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>innerJoin</strong>($relation)</code>
     </h3>
@@ -3263,7 +3452,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinCustomer">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>leftJoinCustomer</strong>($relationAlias = null)</code>
     </h3>
@@ -3300,7 +3489,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinCustomer">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>rightJoinCustomer</strong>($relationAlias = null)</code>
     </h3>
@@ -3337,7 +3526,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinCustomer">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>innerJoinCustomer</strong>($relationAlias = null)</code>
     </h3>
@@ -3374,7 +3563,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinAddressRelatedByAddressDeliveryId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>leftJoinAddressRelatedByAddressDeliveryId</strong>($relationAlias = null)</code>
     </h3>
@@ -3411,7 +3600,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinAddressRelatedByAddressDeliveryId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>rightJoinAddressRelatedByAddressDeliveryId</strong>($relationAlias = null)</code>
     </h3>
@@ -3448,7 +3637,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinAddressRelatedByAddressDeliveryId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>innerJoinAddressRelatedByAddressDeliveryId</strong>($relationAlias = null)</code>
     </h3>
@@ -3485,7 +3674,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinAddressRelatedByAddressInvoiceId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>leftJoinAddressRelatedByAddressInvoiceId</strong>($relationAlias = null)</code>
     </h3>
@@ -3522,7 +3711,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinAddressRelatedByAddressInvoiceId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>rightJoinAddressRelatedByAddressInvoiceId</strong>($relationAlias = null)</code>
     </h3>
@@ -3559,7 +3748,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinAddressRelatedByAddressInvoiceId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>innerJoinAddressRelatedByAddressInvoiceId</strong>($relationAlias = null)</code>
     </h3>
@@ -3596,7 +3785,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinCurrency">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>leftJoinCurrency</strong>($relationAlias = null)</code>
     </h3>
@@ -3633,7 +3822,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinCurrency">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>rightJoinCurrency</strong>($relationAlias = null)</code>
     </h3>
@@ -3670,7 +3859,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinCurrency">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>innerJoinCurrency</strong>($relationAlias = null)</code>
     </h3>
@@ -3706,8 +3895,119 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_leftJoinOrder">
+        <div class="location">at line 96</div>
+        <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
+    <strong>leftJoinOrder</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query using the Order relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildCartQuery">ChildCartQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoinOrder">
+        <div class="location">at line 96</div>
+        <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
+    <strong>rightJoinOrder</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query using the Order relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildCartQuery">ChildCartQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoinOrder">
+        <div class="location">at line 96</div>
+        <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
+    <strong>innerJoinOrder</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query using the Order relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildCartQuery">ChildCartQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_leftJoinCartItem">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>leftJoinCartItem</strong>($relationAlias = null)</code>
     </h3>
@@ -3744,7 +4044,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinCartItem">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>rightJoinCartItem</strong>($relationAlias = null)</code>
     </h3>
@@ -3781,7 +4081,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinCartItem">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCartQuery">ChildCartQuery</abbr>
     <strong>innerJoinCartItem</strong>($relationAlias = null)</code>
     </h3>
@@ -3818,7 +4118,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOne">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOne</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -3855,7 +4155,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneOrCreate">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneOrCreate</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -3892,7 +4192,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneById">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -3929,7 +4229,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByToken">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByToken</strong>(<abbr title="string ">string </abbr> $token)</code>
     </h3>
@@ -3966,7 +4266,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByCustomerId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByCustomerId</strong>(<abbr title="int ">int </abbr> $customer_id)</code>
     </h3>
@@ -4003,7 +4303,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByAddressDeliveryId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByAddressDeliveryId</strong>(<abbr title="int ">int </abbr> $address_delivery_id)</code>
     </h3>
@@ -4040,7 +4340,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByAddressInvoiceId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByAddressInvoiceId</strong>(<abbr title="int ">int </abbr> $address_invoice_id)</code>
     </h3>
@@ -4077,7 +4377,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByCurrencyId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByCurrencyId</strong>(<abbr title="int ">int </abbr> $currency_id)</code>
     </h3>
@@ -4114,7 +4414,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByDiscount">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByDiscount</strong>(<abbr title="double ">double </abbr> $discount)</code>
     </h3>
@@ -4151,7 +4451,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByCreatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -4188,7 +4488,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByUpdatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        <abbr title="ChildCart">ChildCart</abbr>
     <strong>findOneByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>
@@ -4225,7 +4525,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findById">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -4262,7 +4562,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByToken">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByToken</strong>(<abbr title="string ">string </abbr> $token)</code>
     </h3>
@@ -4299,7 +4599,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByCustomerId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByCustomerId</strong>(<abbr title="int ">int </abbr> $customer_id)</code>
     </h3>
@@ -4336,7 +4636,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByAddressDeliveryId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByAddressDeliveryId</strong>(<abbr title="int ">int </abbr> $address_delivery_id)</code>
     </h3>
@@ -4373,7 +4673,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByAddressInvoiceId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByAddressInvoiceId</strong>(<abbr title="int ">int </abbr> $address_invoice_id)</code>
     </h3>
@@ -4410,7 +4710,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByCurrencyId">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByCurrencyId</strong>(<abbr title="int ">int </abbr> $currency_id)</code>
     </h3>
@@ -4447,7 +4747,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByDiscount">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByDiscount</strong>(<abbr title="double ">double </abbr> $discount)</code>
     </h3>
@@ -4484,7 +4784,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByCreatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -4521,7 +4821,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByUpdatedAt">
-        <div class="location">at line 92</div>
+        <div class="location">at line 96</div>
         <code>                        array
     <strong>findByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>

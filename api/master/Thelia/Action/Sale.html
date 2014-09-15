@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Action\Sale | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Action.html">Thelia\Action</a>\Sale</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Sale</strong>        extends <a href="../../Thelia/Action/BaseAction.html"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a>        implements
+        <abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr></p>
+
+            <div class="description">
+            <p>Class Sale</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_genericToggleVisibility">genericToggleVisibility</a>(<abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, <a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a> $event)
+                    <p>Toggle visibility for an object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateProductsSaleStatus">updateProductsSaleStatus</a>(<a href="../../Thelia/Core/Event/Sale/ProductSaleStatusUpdateEvent.html"><abbr title="Thelia\Core\Event\Sale\ProductSaleStatusUpdateEvent">ProductSaleStatusUpdateEvent</abbr></a> $event)
+                    <p>Update the promo status of the sale's selected products and combinations</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(<a href="../../Thelia/Core/Event/Sale/SaleCreateEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleCreateEvent">SaleCreateEvent</abbr></a> $event)
+                    <p>Create a new Sale</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(<a href="../../Thelia/Core/Event/Sale/SaleUpdateEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleUpdateEvent">SaleUpdateEvent</abbr></a> $event)
+                    <p>Process update sale</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toggleActivity">toggleActivity</a>(<a href="../../Thelia/Core/Event/Sale/SaleToggleActivityEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleToggleActivityEvent">SaleToggleActivityEvent</abbr></a> $event)
+                    <p>Toggle Sale activity</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(<a href="../../Thelia/Core/Event/Sale/SaleDeleteEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleDeleteEvent">SaleDeleteEvent</abbr></a> $event)
+                    <p>Delete a sale</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearStatus">clearStatus</a>(<a href="../../Thelia/Core/Event/Sale/SaleClearStatusEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleClearStatusEvent">SaleClearStatusEvent</abbr></a> $event)
+                    <p>Clear all sales</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_checkSaleActivation">checkSaleActivation</a>(<a href="../../Thelia/Core/Event/Sale/SaleActiveStatusCheckEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleActiveStatusCheckEvent">SaleActiveStatusCheckEvent</abbr></a> $event)
+                    <p>This method check the activation and deactivation dates of sales, and perform the required action depending on the current date.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getSubscribedEvents">getSubscribedEvents</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_genericToggleVisibility">
+        <div class="location">in <a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a> at line 95</div>
+        <code>            public            mixed
+    <strong>genericToggleVisibility</strong>(<abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, <a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Toggle visibility for an object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></td>
+                <td>$query</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateProductsSaleStatus">
+        <div class="location">at line 118</div>
+        <code>            public            
+    <strong>updateProductsSaleStatus</strong>(<a href="../../Thelia/Core/Event/Sale/ProductSaleStatusUpdateEvent.html"><abbr title="Thelia\Core\Event\Sale\ProductSaleStatusUpdateEvent">ProductSaleStatusUpdateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Update the promo status of the sale's selected products and combinations</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Sale/ProductSaleStatusUpdateEvent.html"><abbr title="Thelia\Core\Event\Sale\ProductSaleStatusUpdateEvent">ProductSaleStatusUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 203</div>
+        <code>            public            
+    <strong>create</strong>(<a href="../../Thelia/Core/Event/Sale/SaleCreateEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleCreateEvent">SaleCreateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new Sale</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Sale/SaleCreateEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleCreateEvent">SaleCreateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 223</div>
+        <code>            public            
+    <strong>update</strong>(<a href="../../Thelia/Core/Event/Sale/SaleUpdateEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleUpdateEvent">SaleUpdateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Process update sale</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Sale/SaleUpdateEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleUpdateEvent">SaleUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleActivity">
+        <div class="location">at line 326</div>
+        <code>            public            
+    <strong>toggleActivity</strong>(<a href="../../Thelia/Core/Event/Sale/SaleToggleActivityEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleToggleActivityEvent">SaleToggleActivityEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Toggle Sale activity</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Sale/SaleToggleActivityEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleToggleActivityEvent">SaleToggleActivityEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 363</div>
+        <code>            public            
+    <strong>delete</strong>(<a href="../../Thelia/Core/Event/Sale/SaleDeleteEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleDeleteEvent">SaleDeleteEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Delete a sale</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Sale/SaleDeleteEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleDeleteEvent">SaleDeleteEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearStatus">
+        <div class="location">at line 404</div>
+        <code>            public            
+    <strong>clearStatus</strong>(<a href="../../Thelia/Core/Event/Sale/SaleClearStatusEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleClearStatusEvent">SaleClearStatusEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Clear all sales</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Sale/SaleClearStatusEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleClearStatusEvent">SaleClearStatusEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_checkSaleActivation">
+        <div class="location">at line 437</div>
+        <code>            public            
+    <strong>checkSaleActivation</strong>(<a href="../../Thelia/Core/Event/Sale/SaleActiveStatusCheckEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleActiveStatusCheckEvent">SaleActiveStatusCheckEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>This method check the activation and deactivation dates of sales, and perform the required action depending on the current date.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Sale/SaleActiveStatusCheckEvent.html"><abbr title="Thelia\Core\Event\Sale\SaleActiveStatusCheckEvent">SaleActiveStatusCheckEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSubscribedEvents">
+        <div class="location">at line 493</div>
+        <code>        static    public            
+    <strong>getSubscribedEvents</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

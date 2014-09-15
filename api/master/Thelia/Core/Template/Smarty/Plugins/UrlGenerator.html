@@ -67,7 +67,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../../../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a> $request)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a> $request, <a href="../../../../../Thelia/Tools/TokenProvider.html"><abbr title="Thelia\Tools\TokenProvider">TokenProvider</abbr></a> $tokenProvider)
                     <p>
 </p>
                 </td>
@@ -111,6 +111,27 @@
                     <a href="#method_navigateToUrlFunction">navigateToUrlFunction</a>($params, $smarty)
                     <p>
 </p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_generateUrlWithToken">generateUrlWithToken</a>($params, $smarty)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPreviousUrlFunction">setPreviousUrlFunction</a>(array $params, <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $smarty)
+                    <p>Set the <em>previous</em>url request attribute, to define the previous URL, or prevent saving the current URL as the previous one.</p>
                 </td>
                 <td></td>
             </tr>
@@ -210,7 +231,7 @@
     </div>
 
                 <h3 id="method_getPluginDescriptors">
-        <div class="location">at line 139</div>
+        <div class="location">at line 185</div>
         <code>            public            <abbr title="Thelia\Core\Template\Smarty\Plugins\an">an</abbr>
     <strong>getPluginDescriptors</strong>()</code>
     </h3>
@@ -235,9 +256,9 @@
     </div>
 
                 <h3 id="method___construct">
-        <div class="location">at line 25</div>
+        <div class="location">at line 28</div>
         <code>            public            
-    <strong>__construct</strong>(<a href="../../../../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a> $request)</code>
+    <strong>__construct</strong>(<a href="../../../../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a> $request, <a href="../../../../../Thelia/Tools/TokenProvider.html"><abbr title="Thelia\Tools\TokenProvider">TokenProvider</abbr></a> $tokenProvider)</code>
     </h3>
     <div class="details">
         <p>
@@ -254,6 +275,12 @@
                 <td>
 </td>
             </tr>
+                    <tr>
+                <td><a href="../../../../../Thelia/Tools/TokenProvider.html"><abbr title="Thelia\Tools\TokenProvider">TokenProvider</abbr></a></td>
+                <td>$tokenProvider</td>
+                <td>
+</td>
+            </tr>
             </table>
 
             
@@ -263,7 +290,7 @@
     </div>
 
                 <h3 id="method_generateUrlFunction">
-        <div class="location">at line 37</div>
+        <div class="location">at line 41</div>
         <code>            public            string
     <strong>generateUrlFunction</strong>(array $params, <abbr title="Thelia\Core\Template\Smarty\Plugins\unknown">unknown</abbr> $smarty)</code>
     </h3>
@@ -305,7 +332,7 @@
     </div>
 
                 <h3 id="method_generateFrontViewUrlFunction">
-        <div class="location">at line 74</div>
+        <div class="location">at line 78</div>
         <code>            public            string
     <strong>generateFrontViewUrlFunction</strong>(array $params, <abbr title="Thelia\Core\Template\Smarty\Plugins\unknown">unknown</abbr> $smarty)</code>
     </h3>
@@ -347,7 +374,7 @@
     </div>
 
                 <h3 id="method_generateAdminViewUrlFunction">
-        <div class="location">at line 86</div>
+        <div class="location">at line 90</div>
         <code>            public            string
     <strong>generateAdminViewUrlFunction</strong>(array $params, <abbr title="Thelia\Core\Template\Smarty\Plugins\unknown">unknown</abbr> $smarty)</code>
     </h3>
@@ -389,7 +416,7 @@
     </div>
 
                 <h3 id="method_navigateToUrlFunction">
-        <div class="location">at line 91</div>
+        <div class="location">at line 95</div>
         <code>            public            
     <strong>navigateToUrlFunction</strong>($params, $smarty)</code>
     </h3>
@@ -410,6 +437,73 @@
             </tr>
                     <tr>
                 <td></td>
+                <td>$smarty</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_generateUrlWithToken">
+        <div class="location">at line 138</div>
+        <code>            public            
+    <strong>generateUrlWithToken</strong>($params, $smarty)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$smarty</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPreviousUrlFunction">
+        <div class="location">at line 169</div>
+        <code>            public            
+    <strong>setPreviousUrlFunction</strong>(array $params, <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $smarty)</code>
+    </h3>
+    <div class="details">
+        <p>Set the <em>previous</em>url request attribute, to define the previous URL, or prevent saving the current URL as the previous one.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
                 <td>$smarty</td>
                 <td>
 </td>

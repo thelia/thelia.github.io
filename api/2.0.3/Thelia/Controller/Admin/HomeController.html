@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Controller\Admin\HomeController | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Controller/Admin.html">Thelia\Controller\Admin</a>\HomeController</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>HomeController</strong>        extends <a href="../../../Thelia/Controller/Admin/BaseAdminController.html"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></p>
+
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>TEMPLATE_404</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_CODE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_adminLogAppend">adminLogAppend</a>(string $resource, string $action, string $message)
+                    <p>Helper to append a message to the admin log.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_processTemplateAction">processTemplateAction</a>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $template)
+                    <p>This method process the rendering of view called from an admin page</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_redirectToRoute">redirectToRoute</a>(string $routeId, array $urlParameters = array(), array $routeParameters = array())
+                    <p>Redirect to à route ID related URL</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_defaultAction">defaultAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Controller\Admin\Thelia\Core\HttpFoundation\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getLatestTheliaVersion">getLatestTheliaVersion</a>()
+                    <p>Get the latest available Thelia version from the Thelia web site.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadStatsAjaxAction">loadStatsAjaxAction</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_adminLogAppend">
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_adminLogAppend"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 66</div>
+        <code>            public            
+    <strong>adminLogAppend</strong>(string $resource, string $action, string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Helper to append a message to the admin log.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_processTemplateAction">
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_processTemplateAction"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 77</div>
+        <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+    <strong>processTemplateAction</strong>(<abbr title="Thelia\Controller\Admin\unknown">unknown</abbr> $template)</code>
+    </h3>
+    <div class="details">
+        <p>This method process the rendering of view called from an admin page</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Controller\Admin\unknown">unknown</abbr></td>
+                <td>$template</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td>the response which contains the rendered view</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_redirectToRoute">
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/BaseAdminController.html#method_redirectToRoute"><abbr title="Thelia\Controller\Admin\BaseAdminController">BaseAdminController</abbr></a> at line 263</div>
+        <code>            public            
+    <strong>redirectToRoute</strong>(string $routeId, array $urlParameters = array(), array $routeParameters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Redirect to à route ID related URL</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$routeId</td>
+                <td>the route ID, as found in Config/Resources/routing/admin.xml</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$urlParameters</td>
+                <td>the URL parameters, as a var/value pair array</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$routeParameters</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_defaultAction">
+        <div class="location">at line 24</div>
+        <code>            public            
+    <strong>defaultAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLatestTheliaVersion">
+        <div class="location">at line 37</div>
+        <code>            public            <abbr title="Thelia\Controller\Admin\Thelia\Core\HttpFoundation\Response">Response</abbr>
+    <strong>getLatestTheliaVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the latest available Thelia version from the Thelia web site.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Controller\Admin\Thelia\Core\HttpFoundation\Response">Response</abbr></td>
+            <td>the response</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadStatsAjaxAction">
+        <div class="location">at line 52</div>
+        <code>            public            
+    <strong>loadStatsAjaxAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

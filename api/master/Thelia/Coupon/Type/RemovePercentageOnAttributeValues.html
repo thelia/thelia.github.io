@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Coupon\Type\RemovePercentageOnAttributeValues | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Coupon/Type.html">Thelia\Coupon\Type</a>\RemovePercentageOnAttributeValues</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>RemovePercentageOnAttributeValues</strong>        extends <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></p>
+
+            <div class="description">
+            <p>Allow to remove an amount from the checkout total</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>COUPON_DATASET_NAME</td>
+                <td class="last">
+                    <p><em>The dataset name for all coupon specific input fields, that do not appear in the CouPonCreationForm form.</em></p>
+                    <p>In the input form, these fields have to be created like:</p>
+
+<p>thelia<em>coupon</em>specific[my<em>field, thelia</em>coupon<em>creation</em>extended[my<em>other</em>field]</p>
+
+<p>use the makeCouponField() method to do that safely.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_FIELD_NAME</td>
+                <td class="last">
+                    <p><em>A standard 'amount' filed name, thant can be used in coupons which extends this class</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTES_AV_LIST</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PERCENTAGE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_attributeAvList">
+                                                            
+                </td>
+                <td>$attributeAvList</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attribute">
+                                                            
+                </td>
+                <td>$attribute</td>
+                <td class="last">
+</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFieldsValue">setFieldsValue</a>(Array $effects)
+                    <p>Set the value of specific coupon fields.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_setFieldsValue"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getCartItemDiscount">getCartItemDiscount</a>(<a href="../../../Thelia/Model/CartItem.html"><abbr title="Thelia\Model\CartItem">CartItem</abbr></a> $cartItem)
+                    <p>Get the discount for a specific cart item.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_getCartItemDiscount"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForCountries, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForModules, bool $perCustomerUsageCount)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_set"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_exec">exec</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_exec"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_drawBaseBackOfficeInputs">drawBaseBackOfficeInputs</a>(string $templateName, array $otherFields)
+                    <p>Renders the template which implements coupon specific user-input, using the provided template file, and a list of specific input fields.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_drawBaseBackOfficeInputs"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getBaseFieldList">getBaseFieldList</a>($otherFields)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_getBaseFieldList"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_checkBaseCouponFieldValue">checkBaseCouponFieldValue</a>($fieldName, $fieldValue)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_checkBaseCouponFieldValue"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getToolTip">getToolTip</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_drawBackOfficeInputs">drawBackOfficeInputs</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setFieldsValue">
+        <div class="location">in <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_setFieldsValue"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a> at line 38</div>
+        <code>    abstract        public            
+    <strong>setFieldsValue</strong>(Array $effects)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of specific coupon fields.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Array</td>
+                <td>$effects</td>
+                <td>the Coupon effects params</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCartItemDiscount">
+        <div class="location">in <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_getCartItemDiscount"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a> at line 46</div>
+        <code>    abstract        public            float
+    <strong>getCartItemDiscount</strong>(<a href="../../../Thelia/Model/CartItem.html"><abbr title="Thelia\Model\CartItem">CartItem</abbr></a> $cartItem)</code>
+    </h3>
+    <div class="details">
+        <p>Get the discount for a specific cart item.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/CartItem.html"><abbr title="Thelia\Model\CartItem">CartItem</abbr></a></td>
+                <td>$cartItem</td>
+                <td>the cart item</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>the discount value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">in <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_set"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a> at line 51</div>
+        <code>            public            
+    <strong>set</strong>(<a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a> $facade, string $code, string $title, string $shortDescription, string $description, array $effects, bool $isCumulative, bool $isRemovingPostage, bool $isAvailableOnSpecialOffers, bool $isEnabled, int $maxUsage, <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForCountries, <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForModules, bool $perCustomerUsageCount)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></a></td>
+                <td>$facade</td>
+                <td>Provides necessary value from Thelia</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>Coupon code (ex: XMAS)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td>Coupon title (ex: Coupon for XMAS)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$shortDescription</td>
+                <td>Coupon short description</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>Coupon description</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$effects</td>
+                <td>Coupon effects params</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isCumulative</td>
+                <td>If Coupon is cumulative</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isRemovingPostage</td>
+                <td>If Coupon is removing postage</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAvailableOnSpecialOffers</td>
+                <td>If available on Product already on special offer price</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isEnabled</td>
+                <td>False if Coupon is disabled by admin</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maxUsage</td>
+                <td>How many usage left</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr></td>
+                <td>$expirationDate</td>
+                <td>When the Code is expiring</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$freeShippingForCountries</td>
+                <td>list of countries which shipping is free. All if empty</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$freeShippingForModules</td>
+                <td>list of modules for which shipping is free. All if empty</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$perCustomerUsageCount</td>
+                <td>true if usage count is per customer only</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exec">
+        <div class="location">in <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_exec"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a> at line 91</div>
+        <code>            public            float
+    <strong>exec</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>Amount removed from the cart total</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_drawBaseBackOfficeInputs">
+        <div class="location">in <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_drawBaseBackOfficeInputs"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a> at line 133</div>
+        <code>            public            string
+    <strong>drawBaseBackOfficeInputs</strong>(string $templateName, array $otherFields)</code>
+    </h3>
+    <div class="details">
+        <p>Renders the template which implements coupon specific user-input, using the provided template file, and a list of specific input fields.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$templateName</td>
+                <td>the path to the template</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$otherFields</td>
+                <td>the list of additional fields fields</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>the rendered template.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBaseFieldList">
+        <div class="location">in <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_getBaseFieldList"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a> at line 150</div>
+        <code>            public            
+    <strong>getBaseFieldList</strong>($otherFields)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$otherFields</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_checkBaseCouponFieldValue">
+        <div class="location">in <a href="../../../Thelia/Coupon/Type/AbstractRemoveOnAttributeValues.html#method_checkBaseCouponFieldValue"><abbr title="Thelia\Coupon\Type\AbstractRemoveOnAttributeValues">AbstractRemoveOnAttributeValues</abbr></a> at line 158</div>
+        <code>            public            
+    <strong>checkBaseCouponFieldValue</strong>($fieldName, $fieldValue)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$fieldName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldValue</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getToolTip">
+        <div class="location">at line 51</div>
+        <code>            public            
+    <strong>getToolTip</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_drawBackOfficeInputs">
+        <div class="location">at line 66</div>
+        <code>            public            
+    <strong>drawBackOfficeInputs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\Template\Assets\AssetManagerInterface | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../traits.html">Traits</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../Thelia/Core/Template/Assets.html">Thelia\Core\Template\Assets</a>\AssetManagerInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>AssetManagerInterface</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_prepareAssets">prepareAssets</a>(string $sourceAssetsDirectory, string $webAssetsDirectoryBase, <abbr title="Thelia\Core\Template\Assets\$webAssetsTemplate">$webAssetsTemplate</abbr> $webAssetsTemplate, string $webAssetsKey)
+                    <p>Prepare an asset directory by checking that no changes occured in the source directory.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_processAsset">processAsset</a>(<abbr title="Thelia\Core\Template\Assets\$assetSource">$assetSource</abbr> $assetSource, <abbr title="Thelia\Core\Template\Assets\$assetDirectoryBase">$assetDirectoryBase</abbr> $assetDirectoryBase, string $webAssetsDirectoryBase, string $webAssetsTemplate, <abbr title="Thelia\Core\Template\Assets\$webAssetsKey">$webAssetsKey</abbr> $webAssetsKey, string $outputUrl, string $assetType, array $filters, boolean $debug)
+                    <p>Generates assets from $asset<em>path in $output</em>path, using $filters.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_prepareAssets">
+        <div class="location">at line 33</div>
+        <code>            public            
+    <strong>prepareAssets</strong>(string $sourceAssetsDirectory, string $webAssetsDirectoryBase, <abbr title="Thelia\Core\Template\Assets\$webAssetsTemplate">$webAssetsTemplate</abbr> $webAssetsTemplate, string $webAssetsKey)</code>
+    </h3>
+    <div class="details">
+        <p>Prepare an asset directory by checking that no changes occured in the source directory.</p>
+        <p>If any change is detected, the whole asset directory
+is copied in the web space.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sourceAssetsDirectory</td>
+                <td>the full path to the source asstes directory</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$webAssetsDirectoryBase</td>
+                <td>the base directory of the web based asset directory</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Assets\$webAssetsTemplate">$webAssetsTemplate</abbr></td>
+                <td>$webAssetsTemplate</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$webAssetsKey</td>
+                <td>the assets key : module name or 0 for base template</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if something goes wrong.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_processAsset">
+        <div class="location">at line 56</div>
+        <code>            public            string
+    <strong>processAsset</strong>(<abbr title="Thelia\Core\Template\Assets\$assetSource">$assetSource</abbr> $assetSource, <abbr title="Thelia\Core\Template\Assets\$assetDirectoryBase">$assetDirectoryBase</abbr> $assetDirectoryBase, string $webAssetsDirectoryBase, string $webAssetsTemplate, <abbr title="Thelia\Core\Template\Assets\$webAssetsKey">$webAssetsKey</abbr> $webAssetsKey, string $outputUrl, string $assetType, array $filters, boolean $debug)</code>
+    </h3>
+    <div class="details">
+        <p>Generates assets from $asset<em>path in $output</em>path, using $filters.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Assets\$assetSource">$assetSource</abbr></td>
+                <td>$assetSource</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Assets\$assetDirectoryBase">$assetDirectoryBase</abbr></td>
+                <td>$assetDirectoryBase</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$webAssetsDirectoryBase</td>
+                <td>the full path to the asset file (or file collection, e.g. *.less)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$webAssetsTemplate</td>
+                <td>the full disk path to the base assets output directory in the web space</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Assets\$webAssetsKey">$webAssetsKey</abbr></td>
+                <td>$webAssetsKey</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$outputUrl</td>
+                <td>the URL to the base assets output directory in the web space</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$assetType</td>
+                <td>the asset type: css, js, ... The generated files will have this extension. Pass an empty string to use the asset source extension.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td>a list of filters, as defined below (see switch($filter_name) ...)</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$debug</td>
+                <td>true / false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The URL to the generated asset file.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

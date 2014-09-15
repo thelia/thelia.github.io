@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Model\Base\MetaDataQuery | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Model/Base.html">Thelia\Model\Base</a>\MetaDataQuery</h1>
+    </div>
+        <div class="content">
+                <p>abstract     class
+    <strong>MetaDataQuery</strong>        extends <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></p>
+
+            <div class="description">
+            <p>Base class that represents a query for the 'meta_data' table.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\MetaData&#039;, string $modelAlias = null)
+                    <p>Initializes internal state of \Thelia\Model\Base\MetaDataQuery object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)
+                    <p>Returns a new ChildMetaDataQuery object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaData.html"><abbr title="Thelia\Model\MetaData">MetaData</abbr></a>|array|mixed
+                </td>
+                <td class="last">
+                    <a href="#method_findPk">findPk</a>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Find object by primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Model\Base\ObjectCollection">ObjectCollection</abbr>|array|mixed
+                </td>
+                <td class="last">
+                    <a href="#method_findPks">findPks</a>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); </code></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPrimaryKey">filterByPrimaryKey</a>(mixed $key)
+                    <p>Filter the query by primary key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPrimaryKeys">filterByPrimaryKeys</a>(array $keys)
+                    <p>Filter the query by a list of primary keys</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterById">filterById</a>(mixed $id = null, string $comparison = null)
+                    <p>Filter the query on the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByMetaKey">filterByMetaKey</a>(string $metaKey = null, string $comparison = null)
+                    <p>Filter the query on the meta_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByElementKey">filterByElementKey</a>(string $elementKey = null, string $comparison = null)
+                    <p>Filter the query on the element_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByElementId">filterByElementId</a>(mixed $elementId = null, string $comparison = null)
+                    <p>Filter the query on the element_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByIsSerialized">filterByIsSerialized</a>(boolean|string $isSerialized = null, string $comparison = null)
+                    <p>Filter the query on the is_serialized column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByValue">filterByValue</a>(string $value = null, string $comparison = null)
+                    <p>Filter the query on the value column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_prune">prune</a>(<a href="../../../Thelia/Model/MetaData.html"><abbr title="Thelia\Model\MetaData">MetaData</abbr></a> $metaData = null)
+                    <p>Exclude object from result</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_doDeleteAll">doDeleteAll</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Deletes all rows from the meta_data table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Performs a DELETE on the database, given a ChildMetaData or Criteria object OR a primary key value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderById">orderById</a>($order = Criteria::ASC)
+                    <p>Order by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByMetaKey">orderByMetaKey</a>($order = Criteria::ASC)
+                    <p>Order by the meta_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByElementKey">orderByElementKey</a>($order = Criteria::ASC)
+                    <p>Order by the element_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByElementId">orderByElementId</a>($order = Criteria::ASC)
+                    <p>Order by the element_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByIsSerialized">orderByIsSerialized</a>($order = Criteria::ASC)
+                    <p>Order by the is_serialized column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByValue">orderByValue</a>($order = Criteria::ASC)
+                    <p>Order by the value column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupById">groupById</a>()
+                    <p>Group by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByMetaKey">groupByMetaKey</a>()
+                    <p>Group by the meta_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByElementKey">groupByElementKey</a>()
+                    <p>Group by the element_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByElementId">groupByElementId</a>()
+                    <p>Group by the element_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByIsSerialized">groupByIsSerialized</a>()
+                    <p>Group by the is_serialized column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByValue">groupByValue</a>()
+                    <p>Group by the value column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_leftJoin">leftJoin</a>($relation)
+                    <p>Adds a LEFT JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoin">rightJoin</a>($relation)
+                    <p>Adds a RIGHT JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoin">innerJoin</a>($relation)
+                    <p>Adds a INNER JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOne">findOne</a>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)
+                    <p>Return the first ChildMetaData matching the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneOrCreate">findOneOrCreate</a>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)
+                    <p>Return the first ChildMetaData matching the query, or a new ChildMetaData object populated from the query conditions when no match is found</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneById">findOneById</a>(<abbr title="int ">int </abbr> $id)
+                    <p>Return the first ChildMetaData filtered by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByMetaKey">findOneByMetaKey</a>(<abbr title="string ">string </abbr> $meta_key)
+                    <p>Return the first ChildMetaData filtered by the meta_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByElementKey">findOneByElementKey</a>(<abbr title="string ">string </abbr> $element_key)
+                    <p>Return the first ChildMetaData filtered by the element_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByElementId">findOneByElementId</a>(<abbr title="int ">int </abbr> $element_id)
+                    <p>Return the first ChildMetaData filtered by the element_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByIsSerialized">findOneByIsSerialized</a>(<abbr title="boolean ">boolean </abbr> $is_serialized)
+                    <p>Return the first ChildMetaData filtered by the is_serialized column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildMetaData">ChildMetaData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByValue">findOneByValue</a>(<abbr title="string ">string </abbr> $value)
+                    <p>Return the first ChildMetaData filtered by the value column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findById">findById</a>(<abbr title="int ">int </abbr> $id)
+                    <p>Return ChildMetaData objects filtered by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByMetaKey">findByMetaKey</a>(<abbr title="string ">string </abbr> $meta_key)
+                    <p>Return ChildMetaData objects filtered by the meta_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByElementKey">findByElementKey</a>(<abbr title="string ">string </abbr> $element_key)
+                    <p>Return ChildMetaData objects filtered by the element_key column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByElementId">findByElementId</a>(<abbr title="int ">int </abbr> $element_id)
+                    <p>Return ChildMetaData objects filtered by the element_id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByIsSerialized">findByIsSerialized</a>(<abbr title="boolean ">boolean </abbr> $is_serialized)
+                    <p>Return ChildMetaData objects filtered by the is_serialized column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByValue">findByValue</a>(<abbr title="string ">string </abbr> $value)
+                    <p>Return ChildMetaData objects filtered by the value column</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 67</div>
+        <code>            public            
+    <strong>__construct</strong>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\MetaData&#039;, string $modelAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Initializes internal state of \Thelia\Model\Base\MetaDataQuery object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dbName</td>
+                <td>The database name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modelName</td>
+                <td>The phpName of a model, e.g. 'Book'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modelAlias</td>
+                <td>The alias for the model in this query, e.g. 'b'</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 80</div>
+        <code>        static    public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>create</strong>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a new ChildMetaDataQuery object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$modelAlias</td>
+                <td>The alias of a model in the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>Optional Criteria to build the query from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findPk">
+        <div class="location">at line 110</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaData.html"><abbr title="Thelia\Model\MetaData">MetaData</abbr></a>|array|mixed
+    <strong>findPk</strong>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Find object by primary key.</p>
+        <p>Propel uses the instance pool to skip the database if the object exists.
+Go fast if the query is untouched.</p>
+
+<p><code>
+$obj  = $c->findPk(12, $con);
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td>Primary key to use for the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>an optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaData.html"><abbr title="Thelia\Model\MetaData">MetaData</abbr></a>|array|mixed</td>
+            <td>the result, formatted by the current formatter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findPks">
+        <div class="location">at line 192</div>
+        <code>            public            <abbr title="Thelia\Model\Base\ObjectCollection">ObjectCollection</abbr>|array|mixed
+    <strong>findPks</strong>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); </code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>Primary keys to use for the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>an optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\Base\ObjectCollection">ObjectCollection</abbr>|array|mixed</td>
+            <td>the list of results, formatted by the current formatter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPrimaryKey">
+        <div class="location">at line 213</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterByPrimaryKey</strong>(mixed $key)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by primary key</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td>Primary key to use for the query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPrimaryKeys">
+        <div class="location">at line 226</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterByPrimaryKeys</strong>(array $keys)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a list of primary keys</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>The list of primary key to use for the query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterById">
+        <div class="location">at line 250</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the id column</p>
+        <p>Example usage:
+<code>
+$query->filterById(1234); // WHERE id = 1234
+$query->filterById(array(12, 34)); // WHERE id IN (12, 34)
+$query->filterById(array('min' => 12)); // WHERE id > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByMetaKey">
+        <div class="location">at line 288</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterByMetaKey</strong>(string $metaKey = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the meta_key column</p>
+        <p>Example usage:
+<code>
+$query->filterByMetaKey('fooValue');   // WHERE meta<em>key = 'fooValue'
+$query->filterByMetaKey('%fooValue%'); // WHERE meta</em>key LIKE '%fooValue%'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$metaKey</td>
+                <td>The value to use as filter. Accepts wildcards (* and % trigger a LIKE)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByElementKey">
+        <div class="location">at line 317</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterByElementKey</strong>(string $elementKey = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the element_key column</p>
+        <p>Example usage:
+<code>
+$query->filterByElementKey('fooValue');   // WHERE element<em>key = 'fooValue'
+$query->filterByElementKey('%fooValue%'); // WHERE element</em>key LIKE '%fooValue%'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$elementKey</td>
+                <td>The value to use as filter. Accepts wildcards (* and % trigger a LIKE)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByElementId">
+        <div class="location">at line 349</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterByElementId</strong>(mixed $elementId = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the element_id column</p>
+        <p>Example usage:
+<code>
+$query->filterByElementId(1234); // WHERE element<em>id = 1234
+$query->filterByElementId(array(12, 34)); // WHERE element</em>id IN (12, 34)
+$query->filterByElementId(array('min' => 12)); // WHERE element_id > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$elementId</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByIsSerialized">
+        <div class="location">at line 390</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterByIsSerialized</strong>(boolean|string $isSerialized = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the is_serialized column</p>
+        <p>Example usage:
+<code>
+$query->filterByIsSerialized(true); // WHERE is<em>serialized = true
+$query->filterByIsSerialized('yes'); // WHERE is</em>serialized = true
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean|string</td>
+                <td>$isSerialized</td>
+                <td>The value to use as filter. Non-boolean arguments are converted using the following rules: * 1, '1', 'true',  'on',  and 'yes' are converted to boolean true * 0, '0', 'false', 'off', and 'no'  are converted to boolean false Check on string values is case insensitive (so 'FaLsE' is seen as 'false').</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByValue">
+        <div class="location">at line 414</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>filterByValue</strong>(string $value = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the value column</p>
+        <p>Example usage:
+<code>
+$query->filterByValue('fooValue');   // WHERE value = 'fooValue'
+$query->filterByValue('%fooValue%'); // WHERE value LIKE '%fooValue%'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>The value to use as filter. Accepts wildcards (* and % trigger a LIKE)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prune">
+        <div class="location">at line 435</div>
+        <code>            public            <a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a>
+    <strong>prune</strong>(<a href="../../../Thelia/Model/MetaData.html"><abbr title="Thelia\Model\MetaData">MetaData</abbr></a> $metaData = null)</code>
+    </h3>
+    <div class="details">
+        <p>Exclude object from result</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/MetaData.html"><abbr title="Thelia\Model\MetaData">MetaData</abbr></a></td>
+                <td>$metaData</td>
+                <td>Object to remove from the list of results</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/MetaDataQuery.html"><abbr title="Thelia\Model\MetaDataQuery">MetaDataQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doDeleteAll">
+        <div class="location">at line 450</div>
+        <code>            public            int
+    <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all rows from the meta_data table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of affected rows (if supported by underlying database driver).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 487</div>
+        <code>            public            int
+    <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Performs a DELETE on the database, given a ChildMetaData or Criteria object OR a primary key value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>Any exceptions caught during processing will be rethrown wrapped into a PropelException.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderById">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>orderById</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByMetaKey">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>orderByMetaKey</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the meta_key column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByElementKey">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>orderByElementKey</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the element_key column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByElementId">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>orderByElementId</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the element_id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByIsSerialized">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>orderByIsSerialized</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the is_serialized column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByValue">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>orderByValue</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the value column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupById">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>groupById</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByMetaKey">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>groupByMetaKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the meta_key column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByElementKey">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>groupByElementKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the element_key column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByElementId">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>groupByElementId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the element_id column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByIsSerialized">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>groupByIsSerialized</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the is_serialized column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByValue">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>groupByValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the value column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leftJoin">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>leftJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoin">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>rightJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoin">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr>
+    <strong>innerJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaDataQuery">ChildMetaDataQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOne">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOne</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData matching the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ConnectionInterface ">ConnectionInterface </abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneOrCreate">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOneOrCreate</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData matching the query, or a new ChildMetaData object populated from the query conditions when no match is found</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ConnectionInterface ">ConnectionInterface </abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneById">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOneById</strong>(<abbr title="int ">int </abbr> $id)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData filtered by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByMetaKey">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOneByMetaKey</strong>(<abbr title="string ">string </abbr> $meta_key)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData filtered by the meta_key column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$meta_key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByElementKey">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOneByElementKey</strong>(<abbr title="string ">string </abbr> $element_key)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData filtered by the element_key column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$element_key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByElementId">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOneByElementId</strong>(<abbr title="int ">int </abbr> $element_id)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData filtered by the element_id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$element_id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByIsSerialized">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOneByIsSerialized</strong>(<abbr title="boolean ">boolean </abbr> $is_serialized)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData filtered by the is_serialized column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$is_serialized</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByValue">
+        <div class="location">at line 57</div>
+        <code>                        <abbr title="ChildMetaData">ChildMetaData</abbr>
+    <strong>findOneByValue</strong>(<abbr title="string ">string </abbr> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildMetaData filtered by the value column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildMetaData">ChildMetaData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findById">
+        <div class="location">at line 57</div>
+        <code>                        array
+    <strong>findById</strong>(<abbr title="int ">int </abbr> $id)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildMetaData objects filtered by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByMetaKey">
+        <div class="location">at line 57</div>
+        <code>                        array
+    <strong>findByMetaKey</strong>(<abbr title="string ">string </abbr> $meta_key)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildMetaData objects filtered by the meta_key column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$meta_key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByElementKey">
+        <div class="location">at line 57</div>
+        <code>                        array
+    <strong>findByElementKey</strong>(<abbr title="string ">string </abbr> $element_key)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildMetaData objects filtered by the element_key column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$element_key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByElementId">
+        <div class="location">at line 57</div>
+        <code>                        array
+    <strong>findByElementId</strong>(<abbr title="int ">int </abbr> $element_id)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildMetaData objects filtered by the element_id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$element_id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByIsSerialized">
+        <div class="location">at line 57</div>
+        <code>                        array
+    <strong>findByIsSerialized</strong>(<abbr title="boolean ">boolean </abbr> $is_serialized)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildMetaData objects filtered by the is_serialized column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="boolean ">boolean </abbr></td>
+                <td>$is_serialized</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByValue">
+        <div class="location">at line 57</div>
+        <code>                        array
+    <strong>findByValue</strong>(<abbr title="string ">string </abbr> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildMetaData objects filtered by the value column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

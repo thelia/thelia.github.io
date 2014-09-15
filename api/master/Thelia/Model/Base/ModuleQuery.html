@@ -392,6 +392,36 @@
                     <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
                 </td>
                 <td class="last">
+                    <a href="#method_filterByModuleHook">filterByModuleHook</a>(<a href="../../../Thelia/Model/ModuleHook.html"><abbr title="Thelia\Model\ModuleHook">ModuleHook</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $moduleHook, string $comparison = null)
+                    <p>Filter the query by a related \Thelia\Model\ModuleHook object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinModuleHook">joinModuleHook</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Adds a JOIN clause to the query using the ModuleHook relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ModuleHookQuery.html"><abbr title="Thelia\Model\ModuleHookQuery">ModuleHookQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_useModuleHookQuery">useModuleHookQuery</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Use the ModuleHook relation ModuleHook object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
+                </td>
+                <td class="last">
                     <a href="#method_filterByModuleI18n">filterByModuleI18n</a>(<a href="../../../Thelia/Model/ModuleI18n.html"><abbr title="Thelia\Model\ModuleI18n">ModuleI18n</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $moduleI18n, string $comparison = null)
                     <p>Filter the query by a related \Thelia\Model\ModuleI18n object</p>
                 </td>
@@ -962,6 +992,36 @@
                     <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
                 </td>
                 <td class="last">
+                    <a href="#method_leftJoinModuleHook">leftJoinModuleHook</a>($relationAlias = null)
+                    <p>Adds a LEFT JOIN clause to the query using the ModuleHook relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoinModuleHook">rightJoinModuleHook</a>($relationAlias = null)
+                    <p>Adds a RIGHT JOIN clause to the query using the ModuleHook relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoinModuleHook">innerJoinModuleHook</a>($relationAlias = null)
+                    <p>Adds a INNER JOIN clause to the query using the ModuleHook relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
+                </td>
+                <td class="last">
                     <a href="#method_leftJoinModuleI18n">leftJoinModuleI18n</a>($relationAlias = null)
                     <p>Adds a LEFT JOIN clause to the query using the ModuleI18n relation</p>
                 </td>
@@ -1173,7 +1233,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 111</div>
+        <div class="location">at line 115</div>
         <code>            public            
     <strong>__construct</strong>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\Module&#039;, string $modelAlias = null)</code>
     </h3>
@@ -1209,7 +1269,7 @@
     </div>
 
                 <h3 id="method_create">
-        <div class="location">at line 124</div>
+        <div class="location">at line 128</div>
         <code>        static    public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>create</strong>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)</code>
     </h3>
@@ -1250,7 +1310,7 @@
     </div>
 
                 <h3 id="method_findPk">
-        <div class="location">at line 154</div>
+        <div class="location">at line 158</div>
         <code>            public            <a href="../../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a>|array|mixed
     <strong>findPk</strong>(mixed $key, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1294,7 +1354,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_findPks">
-        <div class="location">at line 236</div>
+        <div class="location">at line 240</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
     <strong>findPks</strong>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -1334,7 +1394,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKey">
-        <div class="location">at line 257</div>
+        <div class="location">at line 261</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByPrimaryKey</strong>(mixed $key)</code>
     </h3>
@@ -1369,7 +1429,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterByPrimaryKeys">
-        <div class="location">at line 270</div>
+        <div class="location">at line 274</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByPrimaryKeys</strong>(array $keys)</code>
     </h3>
@@ -1404,7 +1464,7 @@ $obj  = $c->findPk(12, $con);
     </div>
 
                 <h3 id="method_filterById">
-        <div class="location">at line 294</div>
+        <div class="location">at line 298</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
     </h3>
@@ -1448,7 +1508,7 @@ $query->filterById(array('min' => 12)); // WHERE id > 12
     </div>
 
                 <h3 id="method_filterByCode">
-        <div class="location">at line 332</div>
+        <div class="location">at line 336</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByCode</strong>(string $code = null, string $comparison = null)</code>
     </h3>
@@ -1491,7 +1551,7 @@ $query->filterByCode('%fooValue%'); // WHERE code LIKE '%fooValue%'
     </div>
 
                 <h3 id="method_filterByType">
-        <div class="location">at line 364</div>
+        <div class="location">at line 368</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByType</strong>(mixed $type = null, string $comparison = null)</code>
     </h3>
@@ -1535,7 +1595,7 @@ $query->filterByType(array('min' => 12)); // WHERE type > 12
     </div>
 
                 <h3 id="method_filterByActivate">
-        <div class="location">at line 405</div>
+        <div class="location">at line 409</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByActivate</strong>(mixed $activate = null, string $comparison = null)</code>
     </h3>
@@ -1579,7 +1639,7 @@ $query->filterByActivate(array('min' => 12)); // WHERE activate > 12
     </div>
 
                 <h3 id="method_filterByPosition">
-        <div class="location">at line 446</div>
+        <div class="location">at line 450</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByPosition</strong>(mixed $position = null, string $comparison = null)</code>
     </h3>
@@ -1623,7 +1683,7 @@ $query->filterByPosition(array('min' => 12)); // WHERE position > 12
     </div>
 
                 <h3 id="method_filterByFullNamespace">
-        <div class="location">at line 484</div>
+        <div class="location">at line 488</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByFullNamespace</strong>(string $fullNamespace = null, string $comparison = null)</code>
     </h3>
@@ -1666,7 +1726,7 @@ $query->filterByFullNamespace('%fooValue%'); // WHERE full</em>namespace LIKE '%
     </div>
 
                 <h3 id="method_filterByCreatedAt">
-        <div class="location">at line 518</div>
+        <div class="location">at line 522</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
     </h3>
@@ -1710,7 +1770,7 @@ $query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2
     </div>
 
                 <h3 id="method_filterByUpdatedAt">
-        <div class="location">at line 561</div>
+        <div class="location">at line 565</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
     </h3>
@@ -1754,7 +1814,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByOrderRelatedByPaymentModuleId">
-        <div class="location">at line 592</div>
+        <div class="location">at line 596</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByOrderRelatedByPaymentModuleId</strong>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $order, string $comparison = null)</code>
     </h3>
@@ -1794,7 +1854,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinOrderRelatedByPaymentModuleId">
-        <div class="location">at line 615</div>
+        <div class="location">at line 619</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinOrderRelatedByPaymentModuleId</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -1834,7 +1894,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useOrderRelatedByPaymentModuleIdQuery">
-        <div class="location">at line 650</div>
+        <div class="location">at line 654</div>
         <code>            public            <a href="../../../Thelia/Model/OrderQuery.html"><abbr title="Thelia\Model\OrderQuery">OrderQuery</abbr></a>
     <strong>useOrderRelatedByPaymentModuleIdQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -1883,7 +1943,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByOrderRelatedByDeliveryModuleId">
-        <div class="location">at line 665</div>
+        <div class="location">at line 669</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByOrderRelatedByDeliveryModuleId</strong>(<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $order, string $comparison = null)</code>
     </h3>
@@ -1923,7 +1983,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinOrderRelatedByDeliveryModuleId">
-        <div class="location">at line 688</div>
+        <div class="location">at line 692</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinOrderRelatedByDeliveryModuleId</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -1963,7 +2023,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useOrderRelatedByDeliveryModuleIdQuery">
-        <div class="location">at line 723</div>
+        <div class="location">at line 727</div>
         <code>            public            <a href="../../../Thelia/Model/OrderQuery.html"><abbr title="Thelia\Model\OrderQuery">OrderQuery</abbr></a>
     <strong>useOrderRelatedByDeliveryModuleIdQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2012,7 +2072,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByAreaDeliveryModule">
-        <div class="location">at line 738</div>
+        <div class="location">at line 742</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByAreaDeliveryModule</strong>(<a href="../../../Thelia/Model/AreaDeliveryModule.html"><abbr title="Thelia\Model\AreaDeliveryModule">AreaDeliveryModule</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $areaDeliveryModule, string $comparison = null)</code>
     </h3>
@@ -2052,7 +2112,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinAreaDeliveryModule">
-        <div class="location">at line 761</div>
+        <div class="location">at line 765</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinAreaDeliveryModule</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2092,7 +2152,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useAreaDeliveryModuleQuery">
-        <div class="location">at line 796</div>
+        <div class="location">at line 800</div>
         <code>            public            <a href="../../../Thelia/Model/AreaDeliveryModuleQuery.html"><abbr title="Thelia\Model\AreaDeliveryModuleQuery">AreaDeliveryModuleQuery</abbr></a>
     <strong>useAreaDeliveryModuleQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2141,7 +2201,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByProfileModule">
-        <div class="location">at line 811</div>
+        <div class="location">at line 815</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByProfileModule</strong>(<a href="../../../Thelia/Model/ProfileModule.html"><abbr title="Thelia\Model\ProfileModule">ProfileModule</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $profileModule, string $comparison = null)</code>
     </h3>
@@ -2181,7 +2241,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinProfileModule">
-        <div class="location">at line 834</div>
+        <div class="location">at line 838</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinProfileModule</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2221,7 +2281,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useProfileModuleQuery">
-        <div class="location">at line 869</div>
+        <div class="location">at line 873</div>
         <code>            public            <a href="../../../Thelia/Model/ProfileModuleQuery.html"><abbr title="Thelia\Model\ProfileModuleQuery">ProfileModuleQuery</abbr></a>
     <strong>useProfileModuleQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2270,7 +2330,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByModuleImage">
-        <div class="location">at line 884</div>
+        <div class="location">at line 888</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByModuleImage</strong>(<a href="../../../Thelia/Model/ModuleImage.html"><abbr title="Thelia\Model\ModuleImage">ModuleImage</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $moduleImage, string $comparison = null)</code>
     </h3>
@@ -2310,7 +2370,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinModuleImage">
-        <div class="location">at line 907</div>
+        <div class="location">at line 911</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinModuleImage</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2350,7 +2410,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useModuleImageQuery">
-        <div class="location">at line 942</div>
+        <div class="location">at line 946</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleImageQuery.html"><abbr title="Thelia\Model\ModuleImageQuery">ModuleImageQuery</abbr></a>
     <strong>useModuleImageQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2399,7 +2459,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByCouponModule">
-        <div class="location">at line 957</div>
+        <div class="location">at line 961</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByCouponModule</strong>(<a href="../../../Thelia/Model/CouponModule.html"><abbr title="Thelia\Model\CouponModule">CouponModule</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $couponModule, string $comparison = null)</code>
     </h3>
@@ -2439,7 +2499,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinCouponModule">
-        <div class="location">at line 980</div>
+        <div class="location">at line 984</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinCouponModule</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2479,7 +2539,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useCouponModuleQuery">
-        <div class="location">at line 1015</div>
+        <div class="location">at line 1019</div>
         <code>            public            <a href="../../../Thelia/Model/CouponModuleQuery.html"><abbr title="Thelia\Model\CouponModuleQuery">CouponModuleQuery</abbr></a>
     <strong>useCouponModuleQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2528,7 +2588,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByOrderCouponModule">
-        <div class="location">at line 1030</div>
+        <div class="location">at line 1034</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByOrderCouponModule</strong>(<a href="../../../Thelia/Model/OrderCouponModule.html"><abbr title="Thelia\Model\OrderCouponModule">OrderCouponModule</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $orderCouponModule, string $comparison = null)</code>
     </h3>
@@ -2568,7 +2628,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinOrderCouponModule">
-        <div class="location">at line 1053</div>
+        <div class="location">at line 1057</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinOrderCouponModule</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2608,7 +2668,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useOrderCouponModuleQuery">
-        <div class="location">at line 1088</div>
+        <div class="location">at line 1092</div>
         <code>            public            <a href="../../../Thelia/Model/OrderCouponModuleQuery.html"><abbr title="Thelia\Model\OrderCouponModuleQuery">OrderCouponModuleQuery</abbr></a>
     <strong>useOrderCouponModuleQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
     </h3>
@@ -2656,8 +2716,137 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_filterByModuleHook">
+        <div class="location">at line 1107</div>
+        <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
+    <strong>filterByModuleHook</strong>(<a href="../../../Thelia/Model/ModuleHook.html"><abbr title="Thelia\Model\ModuleHook">ModuleHook</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $moduleHook, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a related \Thelia\Model\ModuleHook object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/ModuleHook.html"><abbr title="Thelia\Model\ModuleHook">ModuleHook</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$moduleHook</td>
+                <td>the related object to use as filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinModuleHook">
+        <div class="location">at line 1130</div>
+        <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
+    <strong>joinModuleHook</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query using the ModuleHook relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useModuleHookQuery">
+        <div class="location">at line 1165</div>
+        <code>            public            <a href="../../../Thelia/Model/ModuleHookQuery.html"><abbr title="Thelia\Model\ModuleHookQuery">ModuleHookQuery</abbr></a>
+    <strong>useModuleHookQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Use the ModuleHook relation ModuleHook object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation, to be used as main alias in the secondary query</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ModuleHookQuery.html"><abbr title="Thelia\Model\ModuleHookQuery">ModuleHookQuery</abbr></a></td>
+            <td>A secondary query class using the current class as primary query</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>useQuery()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
                 <h3 id="method_filterByModuleI18n">
-        <div class="location">at line 1103</div>
+        <div class="location">at line 1180</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByModuleI18n</strong>(<a href="../../../Thelia/Model/ModuleI18n.html"><abbr title="Thelia\Model\ModuleI18n">ModuleI18n</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $moduleI18n, string $comparison = null)</code>
     </h3>
@@ -2697,7 +2886,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinModuleI18n">
-        <div class="location">at line 1126</div>
+        <div class="location">at line 1203</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinModuleI18n</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
     </h3>
@@ -2737,7 +2926,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useModuleI18nQuery">
-        <div class="location">at line 1161</div>
+        <div class="location">at line 1238</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleI18nQuery.html"><abbr title="Thelia\Model\ModuleI18nQuery">ModuleI18nQuery</abbr></a>
     <strong>useModuleI18nQuery</strong>(string $relationAlias = null, string $joinType = &#039;LEFT JOIN&#039;)</code>
     </h3>
@@ -2786,7 +2975,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByCoupon">
-        <div class="location">at line 1177</div>
+        <div class="location">at line 1254</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByCoupon</strong>(<a href="../../../Thelia/Model/Base/Coupon.html"><abbr title="Thelia\Model\Base\Coupon">Coupon</abbr></a> $coupon, string $comparison = Criteria::EQUAL)</code>
     </h3>
@@ -2826,7 +3015,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_filterByOrderCoupon">
-        <div class="location">at line 1194</div>
+        <div class="location">at line 1271</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>filterByOrderCoupon</strong>(<a href="../../../Thelia/Model/Base/OrderCoupon.html"><abbr title="Thelia\Model\Base\OrderCoupon">OrderCoupon</abbr></a> $orderCoupon, string $comparison = Criteria::EQUAL)</code>
     </h3>
@@ -2866,7 +3055,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_prune">
-        <div class="location">at line 1209</div>
+        <div class="location">at line 1286</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>prune</strong>(<a href="../../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a> $module = null)</code>
     </h3>
@@ -2901,7 +3090,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_doDeleteAll">
-        <div class="location">at line 1224</div>
+        <div class="location">at line 1301</div>
         <code>            public            int
     <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2936,7 +3125,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 1261</div>
+        <div class="location">at line 1338</div>
         <code>            public            int
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -2981,7 +3170,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyUpdated">
-        <div class="location">at line 1302</div>
+        <div class="location">at line 1379</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>recentlyUpdated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -3016,7 +3205,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_recentlyCreated">
-        <div class="location">at line 1314</div>
+        <div class="location">at line 1391</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>recentlyCreated</strong>(int $nbDays = 7)</code>
     </h3>
@@ -3051,7 +3240,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastUpdatedFirst">
-        <div class="location">at line 1324</div>
+        <div class="location">at line 1401</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>lastUpdatedFirst</strong>()</code>
     </h3>
@@ -3076,7 +3265,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstUpdatedFirst">
-        <div class="location">at line 1334</div>
+        <div class="location">at line 1411</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>firstUpdatedFirst</strong>()</code>
     </h3>
@@ -3101,7 +3290,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_lastCreatedFirst">
-        <div class="location">at line 1344</div>
+        <div class="location">at line 1421</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>lastCreatedFirst</strong>()</code>
     </h3>
@@ -3126,7 +3315,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_firstCreatedFirst">
-        <div class="location">at line 1354</div>
+        <div class="location">at line 1431</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>firstCreatedFirst</strong>()</code>
     </h3>
@@ -3151,7 +3340,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinI18n">
-        <div class="location">at line 1370</div>
+        <div class="location">at line 1447</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinI18n</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3196,7 +3385,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_joinWithI18n">
-        <div class="location">at line 1388</div>
+        <div class="location">at line 1465</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleQuery.html"><abbr title="Thelia\Model\ModuleQuery">ModuleQuery</abbr></a>
     <strong>joinWithI18n</strong>(string $locale = &#039;en_US&#039;, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3235,7 +3424,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_useI18nQuery">
-        <div class="location">at line 1409</div>
+        <div class="location">at line 1486</div>
         <code>            public            <a href="../../../Thelia/Model/ModuleI18nQuery.html"><abbr title="Thelia\Model\ModuleI18nQuery">ModuleI18nQuery</abbr></a>
     <strong>useI18nQuery</strong>(string $locale = &#039;en_US&#039;, string $relationAlias = null, string $joinType = Criteria::LEFT_JOIN)</code>
     </h3>
@@ -3289,7 +3478,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderById">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderById</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3326,7 +3515,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByCode">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderByCode</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3363,7 +3552,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByType">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderByType</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3400,7 +3589,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByActivate">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderByActivate</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3437,7 +3626,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByPosition">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderByPosition</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3474,7 +3663,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByFullNamespace">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderByFullNamespace</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3511,7 +3700,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByCreatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderByCreatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3548,7 +3737,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_orderByUpdatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>orderByUpdatedAt</strong>($order = Criteria::ASC)</code>
     </h3>
@@ -3585,7 +3774,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupById">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupById</strong>()</code>
     </h3>
@@ -3611,7 +3800,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByCode">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupByCode</strong>()</code>
     </h3>
@@ -3637,7 +3826,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByType">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupByType</strong>()</code>
     </h3>
@@ -3663,7 +3852,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByActivate">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupByActivate</strong>()</code>
     </h3>
@@ -3689,7 +3878,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByPosition">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupByPosition</strong>()</code>
     </h3>
@@ -3715,7 +3904,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByFullNamespace">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupByFullNamespace</strong>()</code>
     </h3>
@@ -3741,7 +3930,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByCreatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupByCreatedAt</strong>()</code>
     </h3>
@@ -3767,7 +3956,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_groupByUpdatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>groupByUpdatedAt</strong>()</code>
     </h3>
@@ -3793,7 +3982,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoin">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoin</strong>($relation)</code>
     </h3>
@@ -3830,7 +4019,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoin">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoin</strong>($relation)</code>
     </h3>
@@ -3867,7 +4056,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoin">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoin</strong>($relation)</code>
     </h3>
@@ -3904,7 +4093,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinOrderRelatedByPaymentModuleId">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinOrderRelatedByPaymentModuleId</strong>($relationAlias = null)</code>
     </h3>
@@ -3941,7 +4130,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinOrderRelatedByPaymentModuleId">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinOrderRelatedByPaymentModuleId</strong>($relationAlias = null)</code>
     </h3>
@@ -3978,7 +4167,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinOrderRelatedByPaymentModuleId">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinOrderRelatedByPaymentModuleId</strong>($relationAlias = null)</code>
     </h3>
@@ -4015,7 +4204,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinOrderRelatedByDeliveryModuleId">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinOrderRelatedByDeliveryModuleId</strong>($relationAlias = null)</code>
     </h3>
@@ -4052,7 +4241,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinOrderRelatedByDeliveryModuleId">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinOrderRelatedByDeliveryModuleId</strong>($relationAlias = null)</code>
     </h3>
@@ -4089,7 +4278,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinOrderRelatedByDeliveryModuleId">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinOrderRelatedByDeliveryModuleId</strong>($relationAlias = null)</code>
     </h3>
@@ -4126,7 +4315,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinAreaDeliveryModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinAreaDeliveryModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4163,7 +4352,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinAreaDeliveryModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinAreaDeliveryModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4200,7 +4389,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinAreaDeliveryModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinAreaDeliveryModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4237,7 +4426,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinProfileModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinProfileModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4274,7 +4463,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinProfileModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinProfileModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4311,7 +4500,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinProfileModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinProfileModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4348,7 +4537,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinModuleImage">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinModuleImage</strong>($relationAlias = null)</code>
     </h3>
@@ -4385,7 +4574,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinModuleImage">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinModuleImage</strong>($relationAlias = null)</code>
     </h3>
@@ -4422,7 +4611,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinModuleImage">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinModuleImage</strong>($relationAlias = null)</code>
     </h3>
@@ -4459,7 +4648,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinCouponModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinCouponModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4496,7 +4685,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinCouponModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinCouponModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4533,7 +4722,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinCouponModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinCouponModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4570,7 +4759,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_leftJoinOrderCouponModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinOrderCouponModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4607,7 +4796,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinOrderCouponModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinOrderCouponModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4644,7 +4833,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinOrderCouponModule">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinOrderCouponModule</strong>($relationAlias = null)</code>
     </h3>
@@ -4680,8 +4869,119 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
                     </div>
     </div>
 
+                <h3 id="method_leftJoinModuleHook">
+        <div class="location">at line 105</div>
+        <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
+    <strong>leftJoinModuleHook</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query using the ModuleHook relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildModuleQuery">ChildModuleQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoinModuleHook">
+        <div class="location">at line 105</div>
+        <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
+    <strong>rightJoinModuleHook</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query using the ModuleHook relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildModuleQuery">ChildModuleQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoinModuleHook">
+        <div class="location">at line 105</div>
+        <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
+    <strong>innerJoinModuleHook</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query using the ModuleHook relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildModuleQuery">ChildModuleQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_leftJoinModuleI18n">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>leftJoinModuleI18n</strong>($relationAlias = null)</code>
     </h3>
@@ -4718,7 +5018,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_rightJoinModuleI18n">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>rightJoinModuleI18n</strong>($relationAlias = null)</code>
     </h3>
@@ -4755,7 +5055,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_innerJoinModuleI18n">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModuleQuery">ChildModuleQuery</abbr>
     <strong>innerJoinModuleI18n</strong>($relationAlias = null)</code>
     </h3>
@@ -4792,7 +5092,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOne">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOne</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -4829,7 +5129,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneOrCreate">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneOrCreate</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
     </h3>
@@ -4866,7 +5166,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneById">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -4903,7 +5203,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByCode">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneByCode</strong>(<abbr title="string ">string </abbr> $code)</code>
     </h3>
@@ -4940,7 +5240,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByType">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneByType</strong>(<abbr title="int ">int </abbr> $type)</code>
     </h3>
@@ -4977,7 +5277,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByActivate">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneByActivate</strong>(<abbr title="int ">int </abbr> $activate)</code>
     </h3>
@@ -5014,7 +5314,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByPosition">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
     </h3>
@@ -5051,7 +5351,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByFullNamespace">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneByFullNamespace</strong>(<abbr title="string ">string </abbr> $full_namespace)</code>
     </h3>
@@ -5088,7 +5388,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByCreatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -5125,7 +5425,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findOneByUpdatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        <abbr title="ChildModule">ChildModule</abbr>
     <strong>findOneByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>
@@ -5162,7 +5462,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findById">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findById</strong>(<abbr title="int ">int </abbr> $id)</code>
     </h3>
@@ -5199,7 +5499,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByCode">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findByCode</strong>(<abbr title="string ">string </abbr> $code)</code>
     </h3>
@@ -5236,7 +5536,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByType">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findByType</strong>(<abbr title="int ">int </abbr> $type)</code>
     </h3>
@@ -5273,7 +5573,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByActivate">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findByActivate</strong>(<abbr title="int ">int </abbr> $activate)</code>
     </h3>
@@ -5310,7 +5610,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByPosition">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
     </h3>
@@ -5347,7 +5647,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByFullNamespace">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findByFullNamespace</strong>(<abbr title="string ">string </abbr> $full_namespace)</code>
     </h3>
@@ -5384,7 +5684,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByCreatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
     </h3>
@@ -5421,7 +5721,7 @@ $query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2
     </div>
 
                 <h3 id="method_findByUpdatedAt">
-        <div class="location">at line 101</div>
+        <div class="location">at line 105</div>
         <code>                        array
     <strong>findByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
     </h3>

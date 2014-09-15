@@ -879,6 +879,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getOrdersJoinCart">getOrdersJoinCart</a>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)
+                    <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     
                 </td>
                 <td class="last">
@@ -4010,8 +4020,58 @@ actually need in Lang.</p>
                     </div>
     </div>
 
+                <h3 id="method_getOrdersJoinCart">
+        <div class="location">at line 2211</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]
+    <strong>getOrdersJoinCart</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, string $joinBehavior = Criteria::LEFT_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>If this collection has already been initialized with an identical criteria, it returns the collection.</p>
+        <p>Otherwise if this Lang is new, it will return
+an empty collection; or if this Lang has previously
+been saved, it will retrieve related Orders from storage.</p>
+
+<p>This method is protected by default in order to keep the public
+api reasonable.  You can provide public methods for those you
+actually need in Lang.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>optional Criteria object to narrow the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>optional connection object</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinBehavior</td>
+                <td>optional join type to use (defaults to Criteria::LEFT_JOIN)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>[]</td>
+            <td>List of ChildOrder objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_clear">
-        <div class="location">at line 2197</div>
+        <div class="location">at line 2222</div>
         <code>            public            
     <strong>clear</strong>()</code>
     </h3>
@@ -4027,7 +4087,7 @@ actually need in Lang.</p>
     </div>
 
                 <h3 id="method_clearAllReferences">
-        <div class="location">at line 2230</div>
+        <div class="location">at line 2255</div>
         <code>            public            
     <strong>clearAllReferences</strong>(boolean $deep = false)</code>
     </h3>
@@ -4054,7 +4114,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">at line 2248</div>
+        <div class="location">at line 2273</div>
         <code>            public            string
     <strong>__toString</strong>()</code>
     </h3>
@@ -4080,7 +4140,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_keepUpdateDateUnchanged">
-        <div class="location">at line 2260</div>
+        <div class="location">at line 2285</div>
         <code>            public            <a href="../../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a>
     <strong>keepUpdateDateUnchanged</strong>()</code>
     </h3>
@@ -4105,7 +4165,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preSave">
-        <div class="location">at line 2272</div>
+        <div class="location">at line 2297</div>
         <code>            public            boolean
     <strong>preSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4142,7 +4202,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postSave">
-        <div class="location">at line 2281</div>
+        <div class="location">at line 2306</div>
         <code>            public            
     <strong>postSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4169,7 +4229,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preInsert">
-        <div class="location">at line 2291</div>
+        <div class="location">at line 2316</div>
         <code>            public            boolean
     <strong>preInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4206,7 +4266,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postInsert">
-        <div class="location">at line 2300</div>
+        <div class="location">at line 2325</div>
         <code>            public            
     <strong>postInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4233,7 +4293,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preUpdate">
-        <div class="location">at line 2310</div>
+        <div class="location">at line 2335</div>
         <code>            public            boolean
     <strong>preUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4270,7 +4330,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postUpdate">
-        <div class="location">at line 2319</div>
+        <div class="location">at line 2344</div>
         <code>            public            
     <strong>postUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4297,7 +4357,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_preDelete">
-        <div class="location">at line 2329</div>
+        <div class="location">at line 2354</div>
         <code>            public            boolean
     <strong>preDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4334,7 +4394,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_postDelete">
-        <div class="location">at line 2338</div>
+        <div class="location">at line 2363</div>
         <code>            public            
     <strong>postDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4361,7 +4421,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___call">
-        <div class="location">at line 2355</div>
+        <div class="location">at line 2380</div>
         <code>            public            array|string
     <strong>__call</strong>(string $name, mixed $params)</code>
     </h3>
