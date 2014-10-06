@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\Template\Smarty\Assets\SmartyAssetsManager | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../traits.html">Traits</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../Thelia/Core/Template/Smarty/Assets.html">Thelia\Core\Template\Smarty\Assets</a>\SmartyAssetsManager</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>SmartyAssetsManager</strong></p>
+
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>ASSET_TYPE_AUTO</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a> $assetsManager, string $web_root, string $path_relative_to_web_root)
+                    <p>Creates a new SmartyAssetsManager instance</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_prepareAssets">prepareAssets</a>($assets_directory, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_computeAssetUrl">computeAssetUrl</a>(string $assetType, array $params, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                    <p>Retrieve asset URL</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_processSmartyPluginCall">processSmartyPluginCall</a>($assetType, $params, $content, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a> $assetsManager, string $web_root, string $path_relative_to_web_root)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new SmartyAssetsManager instance</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a></td>
+                <td>$assetsManager</td>
+                <td>an asset manager instance</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$web_root</td>
+                <td>the disk path to the web root (with final /)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path_relative_to_web_root</td>
+                <td>the path (relative to web root) where the assets will be generated</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepareAssets">
+        <div class="location">at line 49</div>
+        <code>            public            
+    <strong>prepareAssets</strong>($assets_directory, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$assets_directory</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_computeAssetUrl">
+        <div class="location">at line 97</div>
+        <code>            public            string
+    <strong>computeAssetUrl</strong>(string $assetType, array $params, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve asset URL</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$assetType</td>
+                <td>js|css|image</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Parameters - file File path in the default template - source module asset - filters filter to apply - debug - template if you want to load asset from another template</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td>Smarty Template</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_processSmartyPluginCall">
+        <div class="location">at line 246</div>
+        <code>            public            
+    <strong>processSmartyPluginCall</strong>($assetType, $params, $content, <abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$assetType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\Template\Smarty\Assets\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repeat</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

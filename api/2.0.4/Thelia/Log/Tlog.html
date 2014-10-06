@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Log\Tlog | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Log.html">Thelia\Log</a>\Tlog</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Tlog</strong>        implements
+        <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></p>
+
+            <div class="description">
+            <p>Thelia Logger</p>
+            <p>Allow to define different level and output.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>VAR_LEVEL</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VAR_DESTINATIONS</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VAR_PREFIXE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VAR_FILES</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VAR_IP</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VAR_SHOW_REDIRECT</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEBUG</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INFO</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOTICE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WARNING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERROR</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRITICAL</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ALERT</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EMERGENCY</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MUET</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_LEVEL</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAUT_DESTINATIONS</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAUT_PREFIXE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAUT_FILES</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAUT_IP</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAUT_SHOW_REDIRECT</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_dir_destinations">
+                                                            
+                </td>
+                <td>$dir_destinations</td>
+                <td class="last">
+</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getInstance">getInstance</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNewInstance">getNewInstance</a>()
+                    <p>Create a new Tlog instance, that could be configured without interfering with the "main" instance</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDestinations">setDestinations</a>(string $destinations)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDestinationsDirectories">getDestinationsDirectories</a>()
+                    <p>Return the directories where destinations classes should be searched.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLevel">setLevel</a>(int $level)
+                    <p>change the debug level.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPrefix">setPrefix</a>($prefix)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFiles">setFiles</a>($files)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIp">setIp</a>($ips)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setShowRedirect">setShowRedirect</a>($bool)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConfig">setConfig</a>($destination, $param, $valeur)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getConfig">getConfig</a>($destination, $param)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_debug">debug</a>(string $message, array $context = array())
+                    <p>Detailed debug information.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addDebug">addDebug</a>()
+                    <p>Alias of debug method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_info">info</a>(string $message, array $context = array())
+                    <p>Interesting events.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addInfo">addInfo</a>()
+                    <p>Alias of info method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_notice">notice</a>(string $message, array $context = array())
+                    <p>Normal but significant events.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addNotice">addNotice</a>()
+                    <p>Alias of notice method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_warning">warning</a>(string $message, array $context = array())
+                    <p>Exceptional occurrences that are not errors.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addWarning">addWarning</a>()
+                    <p>Alias of warning method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_error">error</a>(string $message, array $context = array())
+                    <p>Runtime errors that do not require immediate action but should typically be logged and monitored.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addError">addError</a>()
+                    <p>Alias of error method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_err">err</a>($message, array $context = array())
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_critical">critical</a>(string $message, array $context = array())
+                    <p>Critical conditions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addCritical">addCritical</a>()
+                    <p>Alias of critical method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_crit">crit</a>($message, array $context = array())
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_alert">alert</a>(string $message, array $context = array())
+                    <p>Action must be taken immediately.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAlert">addAlert</a>()
+                    <p>Alias of alert method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_emergency">emergency</a>(string $message, array $context = array())
+                    <p>System is unusable.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addEmergency">addEmergency</a>()
+                    <p>Alias of emergency method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_log">log</a>(mixed $level, string $message, array $context = array())
+                    <p>Logs with an arbitrary level.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_write">write</a>(string $res)
+                    <p>final end method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_writeOnExit">writeOnExit</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_showRedirect">showRedirect</a>($url)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isActivated">isActivated</a>(int $level)
+                    <p>check if level is activated and control if current file is activated</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isActivedFile">isActivedFile</a>(string $file)
+                    <p>check if $file is in authorized files</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getInstance">
+        <div class="location">at line 102</div>
+        <code>        static    public            <a href="../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a>
+    <strong>getInstance</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNewInstance">
+        <div class="location">at line 121</div>
+        <code>        static    public            <a href="../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a>
+    <strong>getNewInstance</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Create a new Tlog instance, that could be configured without interfering with the "main" instance</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a></td>
+            <td>a new Tlog instance.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDestinations">
+        <div class="location">at line 160</div>
+        <code>            public            
+    <strong>setDestinations</strong>(string $destinations)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$destinations</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDestinationsDirectories">
+        <div class="location">at line 179</div>
+        <code>            public            array
+    <strong>getDestinationsDirectories</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the directories where destinations classes should be searched.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>of directories</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLevel">
+        <div class="location">at line 190</div>
+        <code>            public            
+    <strong>setLevel</strong>(int $level)</code>
+    </h3>
+    <div class="details">
+        <p>change the debug level.</p>
+        <p>Use Tlog constant : \Thelia\Log\Tlog::DEBUG set level to Debug</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrefix">
+        <div class="location">at line 197</div>
+        <code>            public            
+    <strong>setPrefix</strong>($prefix)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$prefix</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFiles">
+        <div class="location">at line 204</div>
+        <code>            public            
+    <strong>setFiles</strong>($files)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$files</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIp">
+        <div class="location">at line 213</div>
+        <code>            public            
+    <strong>setIp</strong>($ips)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$ips</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setShowRedirect">
+        <div class="location">at line 220</div>
+        <code>            public            
+    <strong>setShowRedirect</strong>($bool)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$bool</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfig">
+        <div class="location">at line 228</div>
+        <code>            public            
+    <strong>setConfig</strong>($destination, $param, $valeur)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$destination</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$valeur</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfig">
+        <div class="location">at line 238</div>
+        <code>            public            
+    <strong>getConfig</strong>($destination, $param)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$destination</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_debug">
+        <div class="location">at line 257</div>
+        <code>            public            null
+    <strong>debug</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Detailed debug information.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDebug">
+        <div class="location">at line 269</div>
+        <code>            public            
+    <strong>addDebug</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of debug method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addDebug($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_info">
+        <div class="location">at line 287</div>
+        <code>            public            null
+    <strong>info</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Interesting events.</p>
+        <p>Example: User logs in, SQL logs.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addInfo">
+        <div class="location">at line 299</div>
+        <code>            public            
+    <strong>addInfo</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of info method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addInfo($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_notice">
+        <div class="location">at line 315</div>
+        <code>            public            null
+    <strong>notice</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Normal but significant events.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addNotice">
+        <div class="location">at line 327</div>
+        <code>            public            
+    <strong>addNotice</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of notice method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addNotice($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_warning">
+        <div class="location">at line 346</div>
+        <code>            public            null
+    <strong>warning</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Exceptional occurrences that are not errors.</p>
+        <p>Example: Use of deprecated APIs, poor use of an API, undesirable things
+that are not necessarily wrong.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addWarning">
+        <div class="location">at line 358</div>
+        <code>            public            
+    <strong>addWarning</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of warning method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addWarning($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_error">
+        <div class="location">at line 375</div>
+        <code>            public            null
+    <strong>error</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Runtime errors that do not require immediate action but should typically be logged and monitored.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addError">
+        <div class="location">at line 387</div>
+        <code>            public            
+    <strong>addError</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of error method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addError($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_err">
+        <div class="location">at line 400</div>
+        <code>            public            
+    <strong>err</strong>($message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>error()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_critical">
+        <div class="location">at line 414</div>
+        <code>            public            null
+    <strong>critical</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Critical conditions.</p>
+        <p>Example: Application component unavailable, unexpected exception.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addCritical">
+        <div class="location">at line 426</div>
+        <code>            public            
+    <strong>addCritical</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of critical method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addCritical($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_crit">
+        <div class="location">at line 439</div>
+        <code>            public            
+    <strong>crit</strong>($message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>critical()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_alert">
+        <div class="location">at line 454</div>
+        <code>            public            null
+    <strong>alert</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Action must be taken immediately.</p>
+        <p>Example: Entire website down, database unavailable, etc. This should
+trigger the SMS alerts and wake you up.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAlert">
+        <div class="location">at line 466</div>
+        <code>            public            
+    <strong>addAlert</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of alert method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addAlert($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_emergency">
+        <div class="location">at line 482</div>
+        <code>            public            null
+    <strong>emergency</strong>(string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>System is unusable.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addEmergency">
+        <div class="location">at line 494</div>
+        <code>            public            
+    <strong>addEmergency</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Alias of emergency method.</p>
+        <p>With this method you can put all parameter you want</p>
+
+<p>ex : Tlog::getInstance()->addEmergency($arg1, $arg2, $arg3);</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_log">
+        <div class="location">at line 511</div>
+        <code>            public            null
+    <strong>log</strong>(mixed $level, string $message, array $context = array())</code>
+    </h3>
+    <div class="details">
+        <p>Logs with an arbitrary level.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$level</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_write">
+        <div class="location">at line 527</div>
+        <code>            public            void
+    <strong>write</strong>(string $res)</code>
+    </h3>
+    <div class="details">
+        <p>final end method.</p>
+        <p>Write log for each destination handler</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$res</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_writeOnExit">
+        <div class="location">at line 542</div>
+        <code>            public            
+    <strong>writeOnExit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>write()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_showRedirect">
+        <div class="location">at line 555</div>
+        <code>            public            
+    <strong>showRedirect</strong>($url)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isActivated">
+        <div class="location">at line 580</div>
+        <code>            public            boolean
+    <strong>isActivated</strong>(int $level)</code>
+    </h3>
+    <div class="details">
+        <p>check if level is activated and control if current file is activated</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isActivedFile">
+        <div class="location">at line 603</div>
+        <code>            public            boolean
+    <strong>isActivedFile</strong>(string $file)</code>
+    </h3>
+    <div class="details">
+        <p>check if $file is in authorized files</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
