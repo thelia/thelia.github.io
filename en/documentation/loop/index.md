@@ -14,7 +14,7 @@ Loops allow to gather data from your shop and display them in your front view. I
 
 ###Classic loop
 
-Here is a peace of html code which intends to list 4 random products from your shop.
+Here is a piece of html code which intends to list 4 random products from your shop.
 
 ```html
 <div>
@@ -42,7 +42,7 @@ Here is a peace of html code which intends to list 4 random products from your s
 ```
 &nbsp;
 
-How to make this peace of code dynamic ? Gathering the products you set up in your Thelia v2 back-office ?
+How to make this piece of code dynamic ? Gathering the products you set up in your Thelia v2 back-office ?
 
 Just use a Thelia <a href="product.html" target="_blank">product loop</a> :
 
