@@ -17,7 +17,7 @@ All you need is knowing the form name and all the field names of your form.
 First of all you have to call the form you need by using the form block :
 
 ```smarty
-{form name="thelia.customer.creation"}
+{form name="thelia.customer.creation" type="myFormType"}
     ...
 {/form}
 ```
@@ -34,6 +34,25 @@ You can open now the form html tag :
     ...
     </form>
 {/form}
+```
+
+### Nested forms
+
+If your form is a collection of many types, you have to use points to get the field.
+For example, if you have a field like this:
+
+```php
+<?php
+$builder->add("customer_data", "customer")
+```
+
+And the type "customer" adds a field "first_name",
+you can access to this field in your template:
+
+```smarty
+{form_field form=$form field="customer_data.first_name"}
+
+{/form_field}
 ```
 
 ### Hidden fields
