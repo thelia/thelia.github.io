@@ -11,7 +11,7 @@ subnav: plugin_hooks_create_own
 </div>
 
 <div class="alert alert-warning">
-<p>This is a functionality in development and not available in the current vers$
+<p>This is a functionality in development and not available in the current version of Thelia. This is planned for version 2.1</p>
 </div>
 
 ## The template entry point
@@ -23,6 +23,15 @@ The name parameter will match with the "event" one of the [service tag](hook_cre
 ```smarty
 {hook name="my_hook_name"}
 ```
+
+<div class="alert alert-info">
+<h4>Naming convention</h4>
+<p>The name of the hook should be composed with 2 parts separated by a dot : the first one is the name of the page, the second is the position in the page. Words can be separated by dash :</p>
+<ul>
+    <li>**product.top** : at the top of the product page</li>
+    <li>**product.javascript-initialization** : to initialize javascript (after javascript include) in the product page</li>
+</ul>
+</div>
 
 ## Declare your hook
 
@@ -38,6 +47,7 @@ You have to return a collection of associative array composed of those keys:
 - chapo : Same as title
 - active : Boolean value, if true the hook will be automatically activated (default: false)
 - block : Boolean value, set it at true if your hook is a block (default: false)
+- module : Boolean value, set it at true if your hook is [relative to a module](index.html#module) (default: false)
 
 <small> keys marked with an asterisk (*) are mandatory </small>
 

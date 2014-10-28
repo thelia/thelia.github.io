@@ -113,9 +113,19 @@ example :
 {hook name="order-invoice.delivery-address" module="{order attr="delivery_module"}"}
 ```
 
+In place of the `module` argument you can use the `modulecode` argument which do the same but waiting for a module code instead of a module id.
+
 ##### location
 
-This argument exists only for retro compatibility with the module_include function used in the backOffice template. 
+This argument exists only for retro compatibility with the module_include function used in the backOffice template in Thelia version prior to the version 2.1.
+
+for example :
+
+```smarty
+{hook name="customer.top" location="customer_top" }
+```
+
+First, modules that are attached to `customer.hook` hook will be called. Then old `{module_include location="customer_top"}` will be append to the event (in fact all templates in `{modules}/AdminIncludes/customer_top.html`).
 
 ##### others
 
