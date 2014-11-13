@@ -8,7 +8,7 @@ subnav: form_action
 
 # Use your form class in order to validate data
 
-In next [chapter](/documentation/form/index.html) you'll see how to create your own form class, adding fields and fields constraints.
+In previous [chapter](/documentation/form/index.html) you've seen how to create your own form class, adding fields and fields constraints.
 
 Validating your form is very easy. You have to bind your form with the current request and check that the form is valid.
 

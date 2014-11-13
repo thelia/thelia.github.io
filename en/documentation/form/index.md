@@ -8,10 +8,11 @@ subnav: form_index
 
 # How form works ?
 
-With Thelia 2, form management is completely new. Each form has a dedicated class allowing to control many things like validation, default values, etc.
+With Thelia 2, form management is completely new. 
+Each form has a dedicated class allowing to control many things like validation, default values, etc.
 
 Form in Thelia 2 use Forms Symfony component. We made a wrapper that initializes all form processing for you, you just have to declare all your fields and to define options
-on each field manually, such as validation. Using form process is not mandatory but highly recommended !
+on each field manually, such as validation. You can now use _form types_. Using form process is not mandatory but highly recommended !
 
 # Form lifecycle
 
@@ -43,6 +44,22 @@ Each form class must extend *Thelia\Form\BaseForm*. This class is abstract and y
 ### getName method
 
 The *getName* method must return the name of your form. A good practice is to return the same name as the one defined in the ```<form>``` configuration element.
+
+This value is used by thelia for dispatching two events.
+Those two events names are composed of ```Thelia\Core\Event\TheliaEvents::FORM_BEFORE_BUILD``` and ```Thelia\Core\Event\TheliaEvents::FORM_AFTER_BUILD``` 
+suffixed with a point and your form name.
+
+You can listen to those events this way:
+
+```php
+<?php
+public static function getSubscribedEvents()
+{
+	return array(
+		\Thelia\Core\Event\TheliaEvents::FORM_BEFORE_BUILD . ".my_form_name" => arrya("method", 128),
+	);
+}
+```
 
 ### buildForm method
 
@@ -124,6 +141,45 @@ Some (but not all) of Symphony form definition attributes are supported :
 </tr>
 </table>
 
+## Form types / extensions
+
+You can register form types or extensions, or event type extensions by using three tags.
+
+### Form types
+
+To create a form type, you must create a class that extends ```Symfony\Component\Form\AbstractType```
+
+Then define ```buildForm``` and/or ```setDefaultOptions``` to create your type. You may also extend another type by overriding ```getParent```.
+
+When you're done, in your config.xml, just add the service like this:
+```xml
+<service id="your_type_id" class="Your\Super\Form\Type">
+	<tag name="thelia.form.type" />
+</service>
+```
+
+### Form extension
+
+To register a form extension, you have to use the tag ```thelia.form.extension```
+
+```xml
+<service id="your_extension_id" class="Your\Super\Form\Extension">
+        <tag name="thelia.form.extension" />
+</service>
+```
+
+### Form type extension
+
+To register a form type extension, you have to use the tag ```thelia.form.type_extension```
+
+
+```xml
+<service id="your_type_extension_id" class="Your\Super\Form\Type\Extension">
+        <tag name="thelia.form.type_extension" />
+</service>
+```
+
+Unlike full-stack symfony, we register form types name directly with their "getName" method, not with an alias.
 
 ## Example
 

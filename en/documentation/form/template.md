@@ -17,7 +17,7 @@ All you need is knowing the form name and all the field names of your form.
 First of all you have to call the form you need by using the form block :
 
 ```smarty
-{form name="thelia.customer.creation"}
+{form name="thelia.customer.creation" type="myFormType"}
     ...
 {/form}
 ```
@@ -34,6 +34,25 @@ You can open now the form html tag :
     ...
     </form>
 {/form}
+```
+
+### Nested forms
+
+If your form is a collection of many types, you have to use points to get the field.
+For example, if you have a field like this:
+
+```php
+<?php
+$builder->add("customer_data", "customer")
+```
+
+And the type "customer" adds a field "first_name",
+you can access to this field in your template:
+
+```smarty
+{form_field form=$form field="customer_data.first_name"}
+
+{/form_field}
 ```
 
 ### Hidden fields
@@ -268,6 +287,31 @@ An alternative to the *{form_error}* block is using the $error and $message valu
 ```
 
 Please note that the standard form field generators generates all the required code to process errors.
+
+## Form collection fields
+
+Collection are treated differently than other types in Thelia. You have three functions to know when you deal with them.
+
+- ```form_collection``` That checks if the collection exists, loops and injects the row data.
+    It has an optional parameter "row" that can take a symfony form (example: a collection into a collection).
+    As the fields are stacked in a collection, you can use the "limit" parameter to display them by groups. It outputs 3 variables:
+    - ```$row```: the collection
+    - ```$collection_current```: The current loop index.
+    - ```$collection_count```: The total count of collection entries
+- ```form_collection_field```: It has the same behavior has ```form_field```, but for collections.
+- ```form_collection_count```: Counts the collection entries ( even before the ```form_collection``` call ). Warning: entries are used a stack, if you use this function AFTER the ```form_collection```  call, you will get 0 as result.
+
+Example:
+
+```smarty
+{form name="book-form"}
+    {form_collection form=$form collection="books"}
+       {form_collection_field form=$form row=$row field="author"}
+           {$label} : <input type="text" name="{$name}" id="{$label_attr.for}" value="{$value}" />
+       {/form_collection_field}
+    {/form_collection}
+{/form}
+```
 
 ### A complete example
  
