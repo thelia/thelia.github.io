@@ -366,3 +366,9 @@ public function onMainStylesheet(HookRenderEvent $event)
     $event->add($content);
 }
 ```
+
+## The new module configuration
+
+Before the hooks, modules had the oppotunity to interact with backOffice template with the module_include function, especially to create a link in modules page to add a configuration page.
+
+Now, adding shortcuts to your module is simpler as you can add entries in the main navigation bar or elsewhere if needed. You can still add a link in the modules page to the configuration page of your module in attaching your module to the `module.configuration` hook. The `module_include` module_configuration is now deprecated but still works as expected.
