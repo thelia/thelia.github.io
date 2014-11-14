@@ -1,8 +1,9 @@
 ---
 layout: api
-title: Customer title
+title: Customer titles
 sidebar: api
 lang: en
+subnav: api_c_titles
 
 description:
     - Manage the customer titles
@@ -21,7 +22,6 @@ methods:
 If you want to create a title, you have to send the following fields with the POST method.
 
 <ul>
-    <li>default : true or false. (optional)</li>
     <li>
         i18n  : a collection of the following fields:
         <ul>
@@ -30,10 +30,43 @@ If you want to create a title, you have to send the following fields with the PO
             <li>long: The title long (optional). Example: Mister </li>
         </ul>
     </li>
+    <li>default : if true, toggle the title to be the default one (optional)</li>
 </ul>
+
+<h4> Example </h4>
+```json
+{
+    "default": 1,
+    "i18n": [
+        {
+            "locale": "en_US",
+            "short": "Mr",
+            "long": "Mister"
+        },
+        {
+            "locale": "fr_FR",
+            "short": "Mo",
+            "long": "Monsieur"
+        }
+    ]
+}
+```
 
 <h2>Update</h2>
 
 To update a customer title, you have to send the same data ( only updated ones ) as for a create, but with the PUT method.
 
 Moreover, you have to add the "title_id" field.
+
+<h4> Example </h4>
+```json
+{
+    "title_id": 42,
+    "i18n": [
+        {
+            "locale": "fr_FR",
+            "short": "M"
+        }
+    ]
+}
+```
