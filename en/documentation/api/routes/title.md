@@ -17,23 +17,17 @@ methods:
 ---
 ---
 
-<h2>Creation</h2>
+## Creation
 
 If you want to create a title, you have to send the following fields with the POST method.
 
-<ul>
-    <li>
-        i18n  : a collection of the following fields:
-        <ul>
-            <li>locale: The lang locale. Example: en_US </li>
-            <li>short: The title short (optional). Example: Mr </li>
-            <li>long: The title long (optional). Example: Mister </li>
-        </ul>
-    </li>
-    <li>default : if true, toggle the title to be the default one (optional)</li>
-</ul>
+- i18n  : a collection of the following fields:
+    - locale: The lang locale. Example: en\_US 
+    - short: The title short (optional). Example: Mr 
+    - long: The title long (optional). Example: Mister 
+- default : if true, toggle the title to be the default one (optional)
 
-<h4> Example </h4>
+### Example
 ```json
 {
     "default": 1,
@@ -52,13 +46,13 @@ If you want to create a title, you have to send the following fields with the PO
 }
 ```
 
-<h2>Update</h2>
+## Update
 
 To update a customer title, you have to send the same data ( only updated ones ) as for a create, but with the PUT method.
 
-Moreover, you have to add the "title_id" field.
+Moreover, you have to add the "title\_id" field.
 
-<h4> Example </h4>
+### Example
 ```json
 {
     "title_id": 42,

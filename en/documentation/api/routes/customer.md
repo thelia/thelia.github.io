@@ -17,33 +17,30 @@ methods:
 ---
 ---
 
-<h2>Creation</h2>
+## Creation
 
 If you want to create a customer, you have to send the following fields with the POST method.
 
-<h5> General information </h5>
+##### General information
 
-<ul>
-    <li>title : The <a href="title.html">customer title</a> id</li>
-    <li>firstname  : The customer first name</li>
-    <li>lastname  : The customer last name</li>
-    <li>email  : The customer email address</li>
-    <li>password  : The customer password</li>
-    <li>lang : The customer <a href="lang.html">lang</a> id</li>
-</ul>
+- title : The [customer title](title.html) id</li>
+- firstname  : The customer first name
+- lastname  : The customer last name
+- email  : The customer email address
+- password  : The customer password
+- lang : The customer [lang](lang.html) id
 
-<h5> The address <h5>
 
-<ul>
-    <li> country : The address <a href="country.html">country</a> id </li>
-    <li> zipcode : The address zipcode </li>
-    <li> city : The address city </li>
-    <li> address1 : The address (street, number, ... ) </li>
-    <li> address2 : The additional address (optional) </li>
-    <li> address3 : Another additional address (optional) </li>
-</ul>
+##### The address
 
-<h4> Example </h4>
+-  country : The address [country](country.html) id 
+-  zipcode : The address zipcode 
+-  city : The address city 
+-  address1 : The address (street, number, ...) 
+-  address2 : The additional address (optional) 
+-  address3 : Another additional address (optional) 
+
+### Example
 ```json
 {
     "title": 1,
@@ -59,13 +56,13 @@ If you want to create a customer, you have to send the following fields with the
 }
 ```
 
-<h2>Update</h2>
+## Update
 
-To update a customer, you have to send the same data ( only updated ones ) as for a create, but with the PUT method.
+To update a customer, you have to send the same data (only updated ones) as for a create, but with the PUT method.
 
 Moreover, you have to add the "id" field.
 
-<h4> Example </h4>
+### Example
 ```json
 {
     "id": 1,

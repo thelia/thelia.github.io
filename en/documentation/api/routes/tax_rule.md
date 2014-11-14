@@ -17,25 +17,19 @@ methods:
 ---
 ---
 
-<h2>Creation</h2>
+## Creation
 
 If you want to create a tax rule, you have to send the following fields with the POST method.
 
-<ul>
-    <li>country : a collection of <a href="country.html">country</a> id</li>
-    <li>tax : a collection of <a href="tax.html">tax</a> id</li>
-    <li>
-        i18n  : a collection of the following fields:
-        <ul>
-            <li>locale: The lang locale. Example: en_US </li>
-            <li>title: The tax rule title. </li>
-            <li>description: The tax rule description (optional). </li>
-        </ul>
-    </li>
-    <li>default : if true, toggle the tax rule to be the default one (optional)</li>
-</ul>
+- country : a collection of [country](country.html) id
+- tax : a collection of [tax](tax.html) id
+- i18n  : a collection of the following fields:
+    - locale: The lang locale. Example: en\_US 
+    - title: The tax rule title. 
+    - description: The tax rule description (optional). 
+- default : if true, toggle the tax rule to be the default one (optional)
 
-<h4> Example </h4>
+### Example 
 ```json
 {
     "default": 1,
@@ -55,13 +49,13 @@ If you want to create a tax rule, you have to send the following fields with the
 }
 ```
 
-<h2>Update</h2>
+## Update
 
-To update a tax rule, you have to send the same data ( only updated ones ) as for a create, but with the PUT method.
+To update a tax rule, you have to send the same data (only updated ones) as for a create, but with the PUT method.
 
 Moreover, you have to add the "id" field.
 
-<h4> Example </h4>
+### Example
 ```json
 {
     "id": 42,

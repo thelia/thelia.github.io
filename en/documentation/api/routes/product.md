@@ -17,35 +17,31 @@ methods:
 ---
 ---
 
-<h2>Creation</h2>
+## Creation
 
 If you want to create a product, you have to send the following fields with the POST method.
 
-<h5> General information </h5>
+##### General information 
 
-<ul>
-    <li>ref : The product reference</li>
-    <li>default_category  : The product default <a href="category.html">category</a> id</li>
-    <li>price  : The product default price</li>
-    <li>currency  : The product price <a href="currency.html">currency</a> id</li>
-    <li>tax_rule  : The product tax_rule <a href="tax_rule.html">tax rule</a> id</li>
-    <li>password  : The product password</li>
-    <li>lang : The product <a href="lang.html">lang</a> id</li>
-    <li>weight  : The product weight (optional)</li>
-    <li>visible  : If true, the product will be visible (optional)</li>
-</ul>
+- ref : The product reference
+- default\_category  : The product default [category](category.html) id
+- price  : The product default price
+- currency  : The product price [currency](currency.html) id
+- tax\_rule  : The product tax\_rule [tax rule](tax_rule.html)</a> id
+- password  : The product password
+- lang : The product [lang](lang.html) id
+- weight  : The product weight (optional)
+- visible  : If true, the product will be visible (optional)
 
-<h5> Descriptive </h5>
+##### Descriptive
 
-<ul>
-    <li>locale: The lang locale</li>
-    <li>title: The product title</li>
-    <li>chapo: The product short description (optional)</li>
-    <li>description: The product description (optional)</li>
-    <li>postscriptum: The product conclusion (optional)</li>
-</ul>
+- locale: The lang locale
+- title: The product title
+- chapo: The product short description (optional)
+- description: The product description (optional)
+- postscriptum: The product conclusion (optional)
 
-<h4> Example </h4>
+### Example
 ```json
 {
     "ref": "foo",
@@ -62,13 +58,13 @@ If you want to create a product, you have to send the following fields with the 
 }
 ```
 
-<h2>Update</h2>
+## Update
 
-To update a product, you have to send the same data ( only updated ones ) as for a create, but with the PUT method.
+To update a product, you have to send the same data (only updated ones) as for a create, but with the PUT method.
 
 Moreover, you have to add the "id" field.
 
-<h4> Example </h4>
+### Example
 ```json
 {
     "ref": "bar",
