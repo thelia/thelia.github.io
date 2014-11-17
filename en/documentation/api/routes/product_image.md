@@ -6,7 +6,7 @@ lang: en
 subnav: api_c_product_images
 
 description:
-    - Manage the tax rules
+    - Manage the products images
 
 methods:
     - { name: GET, route: "/api/products/{entityId}/images", parameters: "entityId: The product id", return_code: 200, return: "Results of the 'image' loop" }

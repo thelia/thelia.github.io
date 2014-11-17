@@ -6,7 +6,7 @@ lang: en
 subnav: api_c_product_sale_elements
 
 description:
-    - Manage the customer titles
+    - Manage the product sale elements
 
 methods:
     - { name: GET, route: /api/pse, return_code: 200, return: "Results of the 'product-sale-elements' loop" }

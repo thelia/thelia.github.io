@@ -62,8 +62,6 @@ If you want to create a product, you have to send the following fields with the 
 
 To update a product, you have to send the same data (only updated ones) as for a create, but with the PUT method.
 
-Moreover, you have to add the "id" field.
-
 ### Example
 ```json
 {
