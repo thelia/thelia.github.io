@@ -10,6 +10,8 @@ subnav: plugin_routing
     <h1>Modules : <small>Routing</small></h1>
 </div>
 
+<div class="alert alert-info">You can use symfony a:b:c notation since v2.1.0-alpha2</div>
+
 You can define your own routing rules for your Module.
 Routing definition uses XML files
 
@@ -32,9 +34,21 @@ The routing.xml file contains something like this :
         <default key="_controller">Thelia\Controller\Front\DefaultController::noAction</default>
         <default key="_view">index</default>
     </route>
+    
+    <route id="MyModule.foo" path="/mymodule/foo" >
+        <default key="_controller">Thelia:Front\Default:no</default>
+        <default key="_view">foo</default>
+    </route>
 
     <route id="MyModule.create.something" path="/mymodule/something/create">
-        <default key="_controller">MyModule\Controller\Something::createAction</default>
+        <default key="_controller">MyModule\Controller\SomethingController::createAction</default>
+    </route>
+    
+    <route id="MyModule.update.something" path="/mymodule/something/update">
+        <default key="_controller">MyModule:Something:update</default> 
+        <!-- It is the same as:
+        <default key="_controller">MyModule\Controller\SomethingController::updateAction</default> 
+        -->
     </route>
 
 </routes>

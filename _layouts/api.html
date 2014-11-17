@@ -1,0 +1,89 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js oldie ie6" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js oldie ie7" lang="{{page.lang}}"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="{{page.lang}}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{{page.lang}}" class="no-js"> <!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+
+<body itemtype="http://schema.org/WebPage" itemscope>
+
+{% include navbar.html %}
+
+<section role="document" class="container">
+    <section class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3" itemtype="http://schema.org/SiteNavigationElement" itemscope>
+            <aside role="navigation" class="thelia-sidebar">{% include sidebar.html %}</aside>
+        </div>
+        <main role="main" class="col-lg-9 col-md-9 col-sm-9">
+
+            <h1>{{ page.title }}</h1>
+
+            {% for description_p in page.description %}
+
+            <p>{{ description_p }}</p>
+
+            {% endfor %}
+            <hr />
+
+            <h2>Routes</h2>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr>
+                        <th>
+                            Method name
+                        </th>
+
+                        <th>
+                            Route
+                        </th>
+
+                        <th>
+                            Parameters
+                        </th>
+
+                        <th>
+                            OK return code
+                        </th>
+
+                        <th>
+                            Return
+                        </th>
+                    </tr>
+
+                    {% for method in page.methods %}
+                    <tr>
+                        <td>
+                            {{ method.name }}
+                        </td>
+
+                        <td>
+                            {{ method.route }}
+                        </td>
+
+                        <td>
+                            {{ method.parameters }}
+                        </td>
+
+                        <td>
+                            {{ method.return_code }}
+                        </td>
+
+                        <td>
+                            {{ method.return }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            {{content}}
+    </section>
+</section>
+
+{% include footer.html %}
+
+</body>
+</html>
