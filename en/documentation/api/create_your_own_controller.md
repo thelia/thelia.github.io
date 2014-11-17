@@ -210,7 +210,7 @@ class MyCRUDController extends AbstractCrudApiController
 ```
 
 <div class="alert alert-info">
-    You only have to build ```__construct``` and ```getLoop``` to have a reading service (get and list).
+    You only have to build "__construct" and "getLoop" to have a reading service (get and list).
     You can leave the other methods blank
 </div>
 

@@ -8,6 +8,10 @@ subnav: api_authentication
 
 #{{ page.title }}
 
+<div class="alert alert-danger">
+    For security reasons, you should always use the API over an SSL layer (https)
+</div>
+
 In order to use Thelia API in another application, you have to authenticate.
 
 The authentication is done using a token. This token is generated when the API access is created in the admin.
