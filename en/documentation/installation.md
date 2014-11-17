@@ -135,14 +135,54 @@ this task reload the database, insert fake data using faker script and create an
 
 ## How to update your Thelia ?
 
-If you have already installed Thelia but a new version is available, you can update easily :
+If you have already installed Thelia but a new version is available, you can update easily.
+
+<div class="alert alert-warning">
+<p>Before proceeding to the update, it's strongly recommended to backup your website (files and database).</p>
+<p><em>You can backup your database with tools such as phpmyadmin or mysqldump.</em></p>
+</div>
+
+Once the backup is done, you first have to :
 
 - clear all caches running ```php Thelia cache:clear```
 - copy all files from the thelia new version (local/modules/* files too)
+
+Then you have 3 differents ways to proceed :
+
+### use Thelia command
+
 - run ```php Thelia thelia:update```
 - again clear all caches in all environment :
     - ```php Thelia cache:clear```
     - ```php Thelia cache:clear --env=prod```
+
+This command **can fail** on some updates and you will have to use the next methods.
+
+### use the update script (since version 2.1)
+
+run ```php setup/update.php```
+
+This script is standalone. Moreover, it will automatically backup your database and restore it if a problem is detected.
+
+If your database is big, it's recommended to backup your database by your hands and not to use the backup proposed by the script.
+
+### use the update wizard (since version 2.1)
+
+An update wizard is available in the ```web/install``` directory. It's the same directory used by the install wizard.
+
+**You have to protect the web folder if your site is public (htaccess,  List of allowed IP, ...).**
+
+The update wizard in accessible with your favorite browser :
+
+```bash
+http://yourdomain.tld/[/subdomain_if_needed]/install
+```
+
+Note: 
+
+- the wizard is available only if your Thelia is not already in the latest version.
+- if your database is big, it's recommended to backup your database by your hands and not to use the backup proposed by the wizard.
+
 
 <div class="page-header">
     <h1>Usage</h1>
