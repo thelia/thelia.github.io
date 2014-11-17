@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Countries
+title: API - Countries
 sidebar: api
 lang: en
 subnav: api_c_countries

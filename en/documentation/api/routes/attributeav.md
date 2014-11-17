@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Attributes
+title: API - Attributes
 sidebar: api
 lang: en
 subnav: api_c_attributes

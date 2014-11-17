@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Brands
+title: API - Brands
 sidebar: api
 lang: en
 subnav: api_c_brands

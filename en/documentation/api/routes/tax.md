@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Taxes
+title: API - Taxes
 sidebar: api
 lang: en
 subnav: api_c_taxes

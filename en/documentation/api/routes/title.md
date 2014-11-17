@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Customer titles
+title: API - Customer titles
 sidebar: api
 lang: en
 subnav: api_c_titles

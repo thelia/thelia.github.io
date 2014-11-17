@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Product sale elements
+title: API - Product sale elements
 sidebar: api
 lang: en
 subnav: api_c_product_sale_elements

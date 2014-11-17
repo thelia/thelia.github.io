@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Tax rules
+title: API - Tax rules
 sidebar: api
 lang: en
 subnav: api_c_tax_rules

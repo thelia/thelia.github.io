@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Products
+title: API - Products
 sidebar: api
 lang: en
 subnav: api_c_products

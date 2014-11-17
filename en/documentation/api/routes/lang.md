@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Languages
+title: API - Languages
 sidebar: api
 lang: en
 subnav: api_c_languages

@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Customers
+title: API - Customers
 sidebar: api
 lang: en
 subnav: api_c_customers

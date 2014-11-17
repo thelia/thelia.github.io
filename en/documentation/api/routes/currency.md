@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Currencies
+title: API - Currencies
 sidebar: api
 lang: en
 subnav: api_c_currencies

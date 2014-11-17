@@ -1,6 +1,6 @@
 ---
 layout: api
-title: Images
+title: API - Images
 sidebar: api
 lang: en
 subnav: api_c_product_images
