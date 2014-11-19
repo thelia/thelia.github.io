@@ -45,6 +45,8 @@ arguments :
           {name: "hflip or horizontal_flip",             description: "flip the image horizontally."}
         ]
      }
+   - {name: "ignore_processing_errors", description: "If true, the loop will return a result even if the image processing fails, and set the PROCESSING_ERROR variable to true if an error occurs. If false, images for which the processing fails are not returned.", example: "ignore_processing_errors=\"false\""}
+
     - {name: "lang", description: "A language identifier, to specify the language in which the image information will be returned"}
     - {
         name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
@@ -59,7 +61,7 @@ arguments :
 outputs :
     - {name: "$ID", description: "the image ID"}
     - {name: "$LOCALE", description: "The locale used for this research"}
-    - {name: "$IMAGE_URL", description: "The absolute URL to the generated image"}
+    - {name: "$IMAGE_URL", description: "The absolute URL to the generated image."}
     - {name: "$ORIGINAL_IMAGE_URL", description: "The absolute URL to the original image"}
     - {name: "$IMAGE_PATH", description: "The absolute path to the generated image file"}
     - {name: "$ORIGINAL_IMAGE_PATH", description: "The absolute path to the original image file"}
@@ -71,6 +73,7 @@ outputs :
     - {name: "$OBJECT_TYPE", description: "The object type (e.g., produc, category, etc. see 'source' parameter for possible values)"}
     - {name: "$OBJECT_ID", description: "The object ID"}
     - {name: "$VISIBLE", description: "true if the image is visible. False otherwise"}
+    - {name: "$PROCESSING_ERROR", description: "true if the image processing fails. In this case, $IMAGE_URL, $ORIGINAL_IMAGE_URL, and $IMAGE_PATH will be empty."}
  
 examples :
     - {description: "Resize category images the 200x100, adding (white) borders if required.", code: ""}
