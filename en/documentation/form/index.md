@@ -56,7 +56,7 @@ You can listen to those events this way:
 public static function getSubscribedEvents()
 {
 	return array(
-		\Thelia\Core\Event\TheliaEvents::FORM_BEFORE_BUILD . ".my_form_name" => arrya("method", 128),
+		\Thelia\Core\Event\TheliaEvents::FORM_BEFORE_BUILD . ".my_form_name" => array("method", 128),
 	);
 }
 ```
