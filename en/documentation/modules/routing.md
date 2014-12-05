@@ -77,3 +77,19 @@ class Something extends BaseFrontController
     }
 }
 ```
+
+If you want to generate URL from route id in controllers, keep attention to use the right router. For example, if you want to use the `generateRedirectFromRoute` with a route defined in your module, you should set the current router properly : 
+
+```php
+<?php
+
+class Something extends BaseFrontController
+{
+    protected $currentRouter = "router.mymodule";
+    
+    public function redirectAction()
+    {
+        return $this->generateRedirectFromRoute('mymodule.create.success');
+    }
+}
+```
