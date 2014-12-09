@@ -7,15 +7,17 @@ lang: en
 subnav: loop_sale
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
-type: content
+type: sale
 arguments :
     - {name: "id", description: "A single or a list of sale ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "exclude", description: "A single or a list of sale ids to excluded from results.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "active", description: "A boolean value, to get only active (1) or inactive sales (0) or both (*)", example: "active=\"1\"", default: "1"}
-    - {name: "product", description: "A single or a list of product IDs. If specified, the loop will return the sales in which these products are selected", , example: "id=\"2\", id=\"1,4,7\""}
+    - {name: "product", description: "A single or a list of product IDs. If specified, the loop will return the sales in which these products are selected", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "currency", description: "A currency id, to get the price offset defined for this currency", example: "currency=\"1\"", default: "The current shop currency"}
     - {
-        name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
+        name: "order",
+        description: "A list of values", example: "order=\"random\"",
+        default: "manual",
         expected_values: [
             {name: "id",                 description: "ID order"},
             {name: "id-reverse",         description: "reverse ID order"},
@@ -32,7 +34,7 @@ arguments :
             {name: "created",            description: "ascending order on date of sale creation"},
             {name: "created-reverse",    description: "descending order on date of sale creation"},
             {name: "updated",            description: "ascending order on date of sale update"},
-            {name: "updated-reverse",    description: "descending order on date of sale update"},
+            {name: "updated-reverse",    description: "descending order on date of sale update"}
         ]
       }
 outputs :
