@@ -674,11 +674,11 @@ eventsProduct:
         eventClassApi: "/api/master/Thelia/Core/Event/ProductSaleElement/ProductSaleElementDeleteEvent.html"
       }
     - {
-        name: "action.deleteProductSaleElement",
+        name: "action.productCombinationGeneration",
         const: PRODUCT\_COMBINATION_GENERATION,
         desc: "Generate combinations. All existing combinations for the product are deleted.",
         eventClass: "Thelia\\Core\\Event\\ProductSaleElement\\ProductCombinationGenerationEvent",
-        eventClassApi: "/api/master/Thelia/Core/Event/ProductSaleElement/ProductCombinationGenerationEvent.html"
+        eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductCombinationGenerationEvent.html"
       }
     - {
         name: "action.productSetTemplate",
@@ -757,10 +757,10 @@ eventsShippingZone:
     <h1>Events</h1>
 </div>
 
-Thelia usee the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern) for managing all the action like creating a new customer, updating a product.
+Thelia use the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern) for managing all the action like creating a new customer, updating a product.
 For each action an event is dispatching containing an event object. Event object contains only data.
 
-##List of event
+##List of events
 
 This list is maybe not complete. All events constant are in [{{ page.eventClass }}](/api/master/Thelia/Core/Event/TheliaEvents.html)
 
