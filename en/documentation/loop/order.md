@@ -51,4 +51,11 @@ outputs :
     - {name: "$TOTAL_TAX", description: "the order taxes amount"}
     - {name: "$TOTAL_AMOUNT", description: "the order amount without taxes"}
     - {name: "$TOTAL_TAXED_AMOUNT", description: "the order amount including taxes"}
+    - {name: "$IS_PAID", description: "True is the order has been paid (whatever current status is), false otherwise"}
+    - {name: "$HAS_PAID_STATUS", description: "True is the order has the 'paid' status, false otherwise"}
+    - {name: "$IS_CANCELED", description: "True is the order has the 'canceled' status, false otherwise"}
+    - {name: "$IS_NOT_PAID", description: "True is the order has the 'not paid' status, false otherwise"}
+    - {name: "$IS_SENT", description: "True is the order has the 'sent' status, false otherwise"}
+    - {name: "$IS_PROCESSING", description: "True is the order has the 'processing' status, false otherwise"}
+ 
 ---
