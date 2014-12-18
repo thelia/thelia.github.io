@@ -45,8 +45,7 @@ arguments :
           {name: "hflip or horizontal_flip",             description: "flip the image horizontally."}
         ]
      }
-   - {name: "ignore_processing_errors", description: "If true, the loop will return a result even if the image processing fails, and set the PROCESSING_ERROR variable to true if an error occurs. If false, images for which the processing fails are not returned.", example: "ignore_processing_errors=\"false\""}
-
+    - {name: "ignore_processing_errors", description: "If true, the loop will return a result even if the image processing fails, and set the PROCESSING_ERROR variable to true if an error occurs. If false, images for which the processing fails are not returned.", example: "ignore_processing_errors=\"false\""}
     - {name: "lang", description: "A language identifier, to specify the language in which the image information will be returned"}
     - {
         name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",

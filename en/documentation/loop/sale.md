@@ -36,7 +36,7 @@ arguments :
             {name: "updated",            description: "ascending order on date of sale update"},
             {name: "updated-reverse",    description: "descending order on date of sale update"}
         ]
-      }
+    }
 outputs :
     - {name: "$ID", description: "the content id"}
     - {name: "$IS_TRANSLATED", description: "check if the content is translated"}
@@ -55,4 +55,4 @@ outputs :
     - {name: "$PRICE_OFFSET_TYPE", description: "the price offset type, P for a percentage, A for an amount"}
     - {name: "$PRICE_OFFSET_SYMBOL", description: "the offset unit symbol, % for a percentage, the currency symbol for an amount"}
     - {name: "$PRICE_OFFSET_VALUE", description: "the price offset value, as a percentage (0-100) or a constant amount."}
-  ---
+---
