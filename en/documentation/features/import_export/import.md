@@ -16,6 +16,7 @@ For an import, you have to create a class that extends Thelia\Importimport\Impor
 ```php
 protected function getMandatoryColumns();
 public function retrieveFromFormatterData(FormatterData $data);
+public function getHandledTypes();
 ```
 
 ```getMandatoryColumns``` must return an array with the name of mandatory columns. If you're doing a couple import/import, it should have the same values as your mandatory import aliases.
@@ -23,6 +24,15 @@ public function retrieveFromFormatterData(FormatterData $data);
 ```retrieveFromFormatterData(FormatterData $data)``` is the method were you must put your import logic.
 
 ```Thelia\Core\FileFormat\Formatting\FormatterData``` is an array wrapper but is not Iterable. 
+
+```getHandledTypes()``` must return an array with handled formatters types.
+Example : 
+```php
+return array(
+    FormatType::TABLE, // For tabled formats (CSV, ODS, ...)
+    FormatType::UNBOUNDED, // For unbounded formats (XML, json, ..)
+);
+```
 
 A simple way to treat your data is to do:
 
