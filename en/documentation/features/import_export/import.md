@@ -24,16 +24,6 @@ public function getHandledTypes();
 ```retrieveFromFormatterData(FormatterData $data)``` is the method were you must put your import logic.
 
 ```Thelia\Core\FileFormat\Formatting\FormatterData``` is an array wrapper but is not Iterable. 
-
-```getHandledTypes()``` must return an array with handled formatters types.
-Example : 
-```php
-return array(
-    FormatType::TABLE, // For tabled formats (CSV, ODS, ...)
-    FormatType::UNBOUNDED, // For unbounded formats (XML, json, ..)
-);
-```
-
 A simple way to treat your data is to do:
 
 ```php
@@ -44,6 +34,15 @@ public function retrieveFromFormatterData(FormatterData $data) {
          // Your treatement here
     }
 }
+```
+
+```getHandledTypes()``` must return an array with handled formatters types.
+Example : 
+```php
+return array(
+    FormatType::TABLE, // For tabled formats (CSV, ODS, ...)
+    FormatType::UNBOUNDED, // For unbounded formats (XML, json, ..)
+);
 ```
 
 ## Register an Import
