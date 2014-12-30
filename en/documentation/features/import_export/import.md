@@ -45,14 +45,14 @@ Your have to add in "imports" a tag with that skeleton:
 ```xml
 <imports>
     <import id="your.import.id" class="Your\ImportHandler" category_id="the.category_id">
-        <descriptive locale="en_US">
+        <import_descriptive locale="en_US">
             <title>Your import title </title>
              <!-- you may add an optionnal description -->
              <description> ... </description>
-        </descriptive>
-        <descriptive locale="fr_FR">
+        </import_descriptive>
+        <import_descriptive locale="fr_FR">
             <!-- Here's for another locale -->
-        </descriptive>
+        </import_descriptive>
     </import>
     <import>
         <!-- here's another import -->
