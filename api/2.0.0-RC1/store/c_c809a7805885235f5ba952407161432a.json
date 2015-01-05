@@ -1,0 +1,1624 @@
+{
+    "name": "Thelia\\Tools\\FileManager",
+    "line": 72,
+    "short_desc": "Created by JetBrains PhpStorm.",
+    "long_desc": "Date: 9\/19\/13\nTime: 3:24 PM\n\nFile Manager",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "File"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Tools",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Tools\/FileManager.php",
+    "hash": "1fe2bf0cc9a53e403da7b4575d1eaf7871f369d9",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "UploadedFile": "Symfony\\Component\\HttpFoundation\\File\\UploadedFile",
+        "DocumentCreateOrUpdateEvent": "Thelia\\Core\\Event\\Document\\DocumentCreateOrUpdateEvent",
+        "ImageCreateOrUpdateEvent": "Thelia\\Core\\Event\\Image\\ImageCreateOrUpdateEvent",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "ImageException": "Thelia\\Exception\\ImageException",
+        "CategoryDocumentModification": "Thelia\\Form\\CategoryDocumentModification",
+        "CategoryImageModification": "Thelia\\Form\\CategoryImageModification",
+        "ContentDocumentModification": "Thelia\\Form\\ContentDocumentModification",
+        "ContentImageModification": "Thelia\\Form\\ContentImageModification",
+        "FolderDocumentModification": "Thelia\\Form\\FolderDocumentModification",
+        "FolderImageModification": "Thelia\\Form\\FolderImageModification",
+        "ProductDocumentModification": "Thelia\\Form\\ProductDocumentModification",
+        "ProductImageModification": "Thelia\\Form\\ProductImageModification",
+        "CategoryDocument": "Thelia\\Model\\CategoryDocument",
+        "CategoryDocumentQuery": "Thelia\\Model\\CategoryDocumentQuery",
+        "CategoryImage": "Thelia\\Model\\CategoryImage",
+        "CategoryImageQuery": "Thelia\\Model\\CategoryImageQuery",
+        "CategoryQuery": "Thelia\\Model\\CategoryQuery",
+        "ContentDocument": "Thelia\\Model\\ContentDocument",
+        "ContentDocumentQuery": "Thelia\\Model\\ContentDocumentQuery",
+        "ContentImage": "Thelia\\Model\\ContentImage",
+        "ContentImageQuery": "Thelia\\Model\\ContentImageQuery",
+        "ContentQuery": "Thelia\\Model\\ContentQuery",
+        "InvalidArgumentException": "Thelia\\Model\\Exception\\InvalidArgumentException",
+        "FolderDocument": "Thelia\\Model\\FolderDocument",
+        "FolderDocumentQuery": "Thelia\\Model\\FolderDocumentQuery",
+        "FolderImage": "Thelia\\Model\\FolderImage",
+        "FolderImageQuery": "Thelia\\Model\\FolderImageQuery",
+        "FolderQuery": "Thelia\\Model\\FolderQuery",
+        "ProductDocument": "Thelia\\Model\\ProductDocument",
+        "ProductDocumentQuery": "Thelia\\Model\\ProductDocumentQuery",
+        "ProductImage": "Thelia\\Model\\ProductImage",
+        "ProductImageQuery": "Thelia\\Model\\ProductImageQuery",
+        "ProductQuery": "Thelia\\Model\\ProductQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": {
+        "availableType": {
+            "name": "availableType",
+            "line": 603,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Available file parent type",
+            "tags": [
+
+            ],
+            "modifiers": 9,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        },
+        "availableFileType": {
+            "name": "availableFileType",
+            "line": 612,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Available file type type",
+            "tags": [
+
+            ],
+            "modifiers": 9,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        }
+    },
+    "methods": {
+        "copyUploadedFile": {
+            "name": "copyUploadedFile",
+            "line": 95,
+            "short_desc": "Copy UploadedFile into the server storage directory",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Symfony\\Component\\HttpFoundation\\File\\UploadedFile",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\ImageException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 95,
+                    "short_desc": "Parent id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 95,
+                    "short_desc": "Image type",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "model": {
+                    "name": "model",
+                    "line": 95,
+                    "short_desc": "Model saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\FolderImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ContentImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\CategoryImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ProductImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\FolderDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ContentDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\CategoryDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ProductDocument",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "uploadedFile": {
+                    "name": "uploadedFile",
+                    "line": 95,
+                    "short_desc": "Ready to be uploaded file",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpFoundation\\File\\UploadedFile",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "fileType": {
+                    "name": "fileType",
+                    "line": 95,
+                    "short_desc": "File type ex FileManager::FILE_TYPE_IMAGES",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "saveImage": {
+            "name": "saveImage",
+            "line": 130,
+            "short_desc": "Save image into the database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Nb lines modified",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\ImageException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 130,
+                    "short_desc": "Image event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Image\\ImageCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ImageCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "modelImage": {
+                    "name": "modelImage",
+                    "line": 130,
+                    "short_desc": "Image to save",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\FolderImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ContentImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\CategoryImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ProductImage",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "saveDocument": {
+            "name": "saveDocument",
+            "line": 188,
+            "short_desc": "Save document into the database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Nb lines modified",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "documents",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Model\\Exception\\InvalidArgumentException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 188,
+                    "short_desc": "Image event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Document\\DocumentCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DocumentCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "modelDocument": {
+                    "name": "modelDocument",
+                    "line": 188,
+                    "short_desc": "Document to save",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\FolderDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ContentDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\CategoryDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ProductDocument",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "sanitizeFileName": {
+            "name": "sanitizeFileName",
+            "line": 247,
+            "short_desc": "Sanitizes a filename replacing whitespace with dashes",
+            "long_desc": "Removes special characters that are illegal in filenames on certain\noperating systems and special characters requiring special escaping\nto manipulate at the command line.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "The sanitized filename",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "string": {
+                    "name": "string",
+                    "line": 247,
+                    "short_desc": "The filename to be sanitized",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteFile": {
+            "name": "deleteFile",
+            "line": 261,
+            "short_desc": "Delete image from file storage and database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "model": {
+                    "name": "model",
+                    "line": 261,
+                    "short_desc": "File being deleted",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\CategoryImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ProductImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ContentImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\FolderImage",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\CategoryDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ProductDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\ContentDocument",
+                            false
+                        ],
+                        [
+                            "Thelia\\Model\\FolderDocument",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 261,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "fileType": {
+                    "name": "fileType",
+                    "line": 261,
+                    "short_desc": "File type ex FileManager::FILE_TYPE_DOCUMENTS",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getImageModel": {
+            "name": "getImageModel",
+            "line": 277,
+            "short_desc": "Get image model from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\CategoryImage",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\ContentImage",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\FolderImage",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\ProductImage",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 277,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getDocumentModel": {
+            "name": "getDocumentModel",
+            "line": 308,
+            "short_desc": "Get document model from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\ProductDocument",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\CategoryDocument",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\ContentDocument",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\FolderDocument",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "documents",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 308,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getImageModelQuery": {
+            "name": "getImageModelQuery",
+            "line": 339,
+            "short_desc": "Get image model query from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\CategoryImageQuery",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\ContentImageQuery",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\FolderImageQuery",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\ProductImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 339,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getDocumentModelQuery": {
+            "name": "getDocumentModelQuery",
+            "line": 370,
+            "short_desc": "Get document model query from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\ProductDocumentQuery",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\CategoryDocumentQuery",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\ContentDocumentQuery",
+                    false
+                ],
+                [
+                    "Thelia\\Model\\FolderDocumentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "documents",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 370,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getFormId": {
+            "name": "getFormId",
+            "line": 402,
+            "short_desc": "Get form service id from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "documents",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 402,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "fileType": {
+                    "name": "fileType",
+                    "line": 402,
+                    "short_desc": "Parent id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getParentFileModel": {
+            "name": "getParentFileModel",
+            "line": 445,
+            "short_desc": "Get image parent model from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\Category",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\Content",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\Folder",
+                    false
+                ],
+                [
+                    "\\Thelia\\Model\\Product",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 445,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentId": {
+                    "name": "parentId",
+                    "line": 445,
+                    "short_desc": "Parent Id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getImageForm": {
+            "name": "getImageForm",
+            "line": 476,
+            "short_desc": "Get image parent model from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Form\\ProductImageModification",
+                    false
+                ],
+                [
+                    "Thelia\\Form\\CategoryImageModification",
+                    false
+                ],
+                [
+                    "Thelia\\Form\\ContentImageModification",
+                    false
+                ],
+                [
+                    "Thelia\\Form\\FolderImageModification",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 476,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "request": {
+                    "name": "request",
+                    "line": 476,
+                    "short_desc": "Request service",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getDocumentForm": {
+            "name": "getDocumentForm",
+            "line": 508,
+            "short_desc": "Get document parent model from type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Form\\ProductDocumentModification",
+                    false
+                ],
+                [
+                    "Thelia\\Form\\CategoryDocumentModification",
+                    false
+                ],
+                [
+                    "Thelia\\Form\\ContentDocumentModification",
+                    false
+                ],
+                [
+                    "Thelia\\Form\\FolderDocumentModification",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "document",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 508,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "request": {
+                    "name": "request",
+                    "line": 508,
+                    "short_desc": "Request service",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getUploadDir": {
+            "name": "getUploadDir",
+            "line": 539,
+            "short_desc": "Get image upload dir",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Uri",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 539,
+                    "short_desc": "Parent type ex FileManager::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "fileType": {
+                    "name": "fileType",
+                    "line": 539,
+                    "short_desc": "File type ex : self::FILE_TYPE_DOCUMENTS",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getRedirectionUrl": {
+            "name": "getRedirectionUrl",
+            "line": 575,
+            "short_desc": "Deduce image redirecting URL from parent type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 575,
+                    "short_desc": "Parent type ex : self::TYPE_PRODUCT",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentId": {
+                    "name": "parentId",
+                    "line": 575,
+                    "short_desc": "Parent id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "fileType": {
+                    "name": "fileType",
+                    "line": 575,
+                    "short_desc": "File type ex : self::FILE_TYPE_DOCUMENTS",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "renameFile": {
+            "name": "renameFile",
+            "line": 625,
+            "short_desc": "Rename file with image model id",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "modelId": {
+                    "name": "modelId",
+                    "line": 625,
+                    "short_desc": "Model id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "uploadedFile": {
+                    "name": "uploadedFile",
+                    "line": 625,
+                    "short_desc": "File being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpFoundation\\File\\UploadedFile",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isImage": {
+            "name": "isImage",
+            "line": 650,
+            "short_desc": "Check if a file is an image Check based on mime type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "mimeType": {
+                    "name": "mimeType",
+                    "line": 650,
+                    "short_desc": "File mime type",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAvailableTypes": {
+            "name": "getAvailableTypes",
+            "line": 667,
+            "short_desc": "Return all document and image types",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": {
+        "TYPE_PRODUCT": {
+            "name": "TYPE_PRODUCT",
+            "line": 74,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "TYPE_CATEGORY": {
+            "name": "TYPE_CATEGORY",
+            "line": 75,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "TYPE_CONTENT": {
+            "name": "TYPE_CONTENT",
+            "line": 76,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "TYPE_FOLDER": {
+            "name": "TYPE_FOLDER",
+            "line": 77,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "TYPE_MODULE": {
+            "name": "TYPE_MODULE",
+            "line": 78,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "FILE_TYPE_IMAGES": {
+            "name": "FILE_TYPE_IMAGES",
+            "line": 80,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "FILE_TYPE_DOCUMENTS": {
+            "name": "FILE_TYPE_DOCUMENTS",
+            "line": 81,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

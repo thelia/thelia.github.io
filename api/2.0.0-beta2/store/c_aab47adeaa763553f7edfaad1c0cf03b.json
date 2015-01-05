@@ -1,0 +1,356 @@
+{
+    "name": "Thelia\\Controller\\Admin\\LangController",
+    "line": 49,
+    "short_desc": "Class LangController",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Controller\\Admin"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Controller\/Admin\/LangController.php",
+    "hash": "57935d8ee9f4de69f63f0bd6dc25ab52a805f8bb",
+    "parent": "Thelia\\Controller\\Admin\\BaseAdminController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Form": "Symfony\\Component\\Form\\Form",
+        "LangCreateEvent": "Thelia\\Core\\Event\\Lang\\LangCreateEvent",
+        "LangDefaultBehaviorEvent": "Thelia\\Core\\Event\\Lang\\LangDefaultBehaviorEvent",
+        "LangDeleteEvent": "Thelia\\Core\\Event\\Lang\\LangDeleteEvent",
+        "LangToggleDefaultEvent": "Thelia\\Core\\Event\\Lang\\LangToggleDefaultEvent",
+        "LangUpdateEvent": "Thelia\\Core\\Event\\Lang\\LangUpdateEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "LangCreateForm": "Thelia\\Form\\Lang\\LangCreateForm",
+        "LangDefaultBehaviorForm": "Thelia\\Form\\Lang\\LangDefaultBehaviorForm",
+        "LangUpdateForm": "Thelia\\Form\\Lang\\LangUpdateForm",
+        "LangUrlEvent": "Thelia\\Form\\Lang\\LangUrlEvent",
+        "LangUrlForm": "Thelia\\Form\\Lang\\LangUrlForm",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "LangQuery": "Thelia\\Model\\LangQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "defaultAction": {
+            "name": "defaultAction",
+            "line": 52,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "renderDefault": {
+            "name": "renderDefault",
+            "line": 58,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "param": {
+                    "name": "param",
+                    "line": 58,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateAction": {
+            "name": "updateAction",
+            "line": 73,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang_id": {
+                    "name": "lang_id",
+                    "line": 73,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "processUpdateAction": {
+            "name": "processUpdateAction",
+            "line": 97,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang_id": {
+                    "name": "lang_id",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleDefaultAction": {
+            "name": "toggleDefaultAction",
+            "line": 139,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang_id": {
+                    "name": "lang_id",
+                    "line": 139,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addAction": {
+            "name": "addAction",
+            "line": 170,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "deleteAction": {
+            "name": "deleteAction",
+            "line": 212,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "defaultBehaviorAction": {
+            "name": "defaultBehaviorAction",
+            "line": 236,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "domainAction": {
+            "name": "domainAction",
+            "line": 268,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "activateDomainAction": {
+            "name": "activateDomainAction",
+            "line": 305,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "deactivateDomainAction": {
+            "name": "deactivateDomainAction",
+            "line": 310,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

@@ -1,0 +1,203 @@
+{
+    "name": "Thelia\\Core\\EventListener\\ControllerListener",
+    "line": 32,
+    "short_desc": "Class ControllerListener",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\EventListener"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<manu@thelia.net>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\EventListener",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/EventListener\/ControllerListener.php",
+    "hash": "d09e8b9a69788227049893054f603fa4ca305335",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "FilterControllerEvent": "Symfony\\Component\\HttpKernel\\Event\\FilterControllerEvent",
+        "PreconditionFailedHttpException": "Symfony\\Component\\HttpKernel\\Exception\\PreconditionFailedHttpException",
+        "UnauthorizedHttpException": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+        "KernelEvents": "Symfony\\Component\\HttpKernel\\KernelEvents",
+        "BaseAdminController": "Thelia\\Controller\\Admin\\BaseAdminController",
+        "BaseApiController": "Thelia\\Controller\\Api\\BaseApiController",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "SecurityContext": "Thelia\\Core\\Security\\SecurityContext",
+        "AdminAccessDenied": "Thelia\\Exception\\AdminAccessDenied",
+        "ApiQuery": "Thelia\\Model\\ApiQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 36,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "securityContext": {
+                    "name": "securityContext",
+                    "line": 36,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Security\\SecurityContext",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "SecurityContext",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "adminFirewall": {
+            "name": "adminFirewall",
+            "line": 41,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 41,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpKernel\\Event\\FilterControllerEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FilterControllerEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "apiFirewall": {
+            "name": "apiFirewall",
+            "line": 52,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 52,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpKernel\\Event\\FilterControllerEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FilterControllerEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 109,
+            "short_desc": "Returns an array of event names this subscriber wants to listen to.",
+            "long_desc": "The array keys are event names and the value can be:\n\n * The method name to call (priority defaults to 0)\n * An array composed of the method name to call and the priority\n * An array of arrays composed of the method names to call and respective\n   priorities, or 0 if unset\n\nFor instance:\n\n * array('eventName' => 'methodName')\n * array('eventName' => array('methodName', $priority))\n * array('eventName' => array(array('methodName1', $priority), array('methodName2'))",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "The event names to listen to",
+            "tags": {
+                "api": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

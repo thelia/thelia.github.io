@@ -1,0 +1,820 @@
+{
+    "name": "Thelia\\Model\\Coupon",
+    "line": 41,
+    "short_desc": "Used to provide an effect (mostly a discount) at the end of the Customer checkout tunnel It will be usable for a Customer only if it matches the Coupon criteria (Rules)",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Model\/Coupon.php",
+    "hash": "5e174473520b5d7c1a919ba1e2e4cfecd21a0a17",
+    "parent": "Thelia\\Model\\Base\\Coupon",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Propel": "Propel\\Runtime\\Propel",
+        "BaseCoupon": "Thelia\\Model\\Base\\Coupon",
+        "InvalidArgumentException": "Thelia\\Model\\Exception\\InvalidArgumentException",
+        "CouponTableMap": "Thelia\\Model\\Map\\CouponTableMap",
+        "ModelEventDispatcherTrait": "Thelia\\Model\\Tools\\ModelEventDispatcherTrait"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "createOrUpdate": {
+            "name": "createOrUpdate",
+            "line": 72,
+            "short_desc": "Create or Update this Coupon",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Exception",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "code": {
+                    "name": "code",
+                    "line": 73,
+                    "short_desc": "Coupon Code",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "title": {
+                    "name": "title",
+                    "line": 73,
+                    "short_desc": "Coupon title",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "effects": {
+                    "name": "effects",
+                    "line": 73,
+                    "short_desc": "Ready to be serialized in JSON effect params",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 73,
+                    "short_desc": "Coupon type",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isRemovingPostage": {
+                    "name": "isRemovingPostage",
+                    "line": 73,
+                    "short_desc": "Is removing Postage",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "shortDescription": {
+                    "name": "shortDescription",
+                    "line": 73,
+                    "short_desc": "Coupon short description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "description": {
+                    "name": "description",
+                    "line": 73,
+                    "short_desc": "Coupon description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isEnabled": {
+                    "name": "isEnabled",
+                    "line": 74,
+                    "short_desc": "Enable\/Disable",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "expirationDate": {
+                    "name": "expirationDate",
+                    "line": 74,
+                    "short_desc": "Coupon expiration date",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isAvailableOnSpecialOffers": {
+                    "name": "isAvailableOnSpecialOffers",
+                    "line": 74,
+                    "short_desc": "Is available on special offers",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isCumulative": {
+                    "name": "isCumulative",
+                    "line": 74,
+                    "short_desc": "Is cumulative",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "maxUsage": {
+                    "name": "maxUsage",
+                    "line": 74,
+                    "short_desc": "Coupon quantity",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "defaultSerializedRule": {
+                    "name": "defaultSerializedRule",
+                    "line": 74,
+                    "short_desc": "Serialized default rule added if none found",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "locale": {
+                    "name": "locale",
+                    "line": 75,
+                    "short_desc": "Coupon Language code ISO (ex: fr_FR)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "freeShippingForCountries": {
+                    "name": "freeShippingForCountries",
+                    "line": 75,
+                    "short_desc": "ID of Countries to which shipping is free",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "freeShippingForMethods": {
+                    "name": "freeShippingForMethods",
+                    "line": 75,
+                    "short_desc": "ID of Shipping modules for which shipping is free",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "perCustomerUsageCount": {
+                    "name": "perCustomerUsageCount",
+                    "line": 76,
+                    "short_desc": "True if usage coiunt is per customer",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "createOrUpdateConditions": {
+            "name": "createOrUpdateConditions",
+            "line": 155,
+            "short_desc": "Create or Update this coupon condition",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Exception",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "serializableConditions": {
+                    "name": "serializableConditions",
+                    "line": 155,
+                    "short_desc": "Serialized conditions ready to be saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "locale": {
+                    "name": "locale",
+                    "line": 155,
+                    "short_desc": "Coupon Language code ISO (ex: fr_FR)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAmount": {
+            "name": "setAmount",
+            "line": 174,
+            "short_desc": "Set Coupon amount",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "amount": {
+                    "name": "amount",
+                    "line": 174,
+                    "short_desc": "Amount deduced from the Cart",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "float",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAmount": {
+            "name": "getAmount",
+            "line": 188,
+            "short_desc": "Get the amount removed from the coupon to the cart",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getEffects": {
+            "name": "getEffects",
+            "line": 202,
+            "short_desc": "Get the Coupon effects",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "Exception\\InvalidArgumentException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setEffects": {
+            "name": "setEffects",
+            "line": 217,
+            "short_desc": "Get the Coupon effects",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "Exception\\InvalidArgumentException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "effects": {
+                    "name": "effects",
+                    "line": 217,
+                    "short_desc": "Effect ready to be serialized",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "unserializeEffects": {
+            "name": "unserializeEffects",
+            "line": 231,
+            "short_desc": "Return unserialized effects",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "serializedEffects": {
+                    "name": "serializedEffects",
+                    "line": 231,
+                    "short_desc": "Serialized effect string to unserialize",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "serializeEffects": {
+            "name": "serializeEffects",
+            "line": 245,
+            "short_desc": "Return serialized effects",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "unserializedEffects": {
+                    "name": "unserializedEffects",
+                    "line": 245,
+                    "short_desc": "Unserialized array string to serialize",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getFreeShippingForCountries": {
+            "name": "getFreeShippingForCountries",
+            "line": 256,
+            "short_desc": "Return the countries for which free shipping is valid",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ],
+                [
+                    "\\Propel\\Runtime\\Collection\\ObjectCollection",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getFreeShippingForModules": {
+            "name": "getFreeShippingForModules",
+            "line": 266,
+            "short_desc": "Return the modules for which free shipping is valid",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ],
+                [
+                    "\\Propel\\Runtime\\Collection\\ObjectCollection",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isUsageUnlimited": {
+            "name": "isUsageUnlimited",
+            "line": 271,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getUsagesLeft": {
+            "name": "getUsagesLeft",
+            "line": 282,
+            "short_desc": "Get coupon usage left, either overall, or per customer.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "the usage left.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "customerId": {
+                    "name": "customerId",
+                    "line": 282,
+                    "short_desc": "the ID of the ordering customer",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "UNLIMITED_COUPON_USE": {
+            "name": "UNLIMITED_COUPON_USE",
+            "line": 45,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

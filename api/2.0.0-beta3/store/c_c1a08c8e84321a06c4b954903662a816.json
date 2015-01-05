@@ -1,0 +1,260 @@
+{
+    "name": "Thelia\\Condition\\Implementation\\MatchForTotalAmount",
+    "line": 40,
+    "short_desc": "Condition AvailableForTotalAmount Check if a Checkout total amount match criteria",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Condition"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Condition\\Implementation",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Condition\/Implementation\/MatchForTotalAmount.php",
+    "hash": "b42c89b8b97b9dcb7be43e46bb72ac8fa42c00f6",
+    "parent": "Thelia\\Condition\\Implementation\\ConditionAbstract",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ConditionAbstract": "Thelia\\Condition\\Implementation\\ConditionAbstract",
+        "Operators": "Thelia\\Condition\\Operators",
+        "InvalidConditionOperatorException": "Thelia\\Exception\\InvalidConditionOperatorException",
+        "Currency": "Thelia\\Model\\Currency",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "setValidatorsFromForm": {
+            "name": "setValidatorsFromForm",
+            "line": 74,
+            "short_desc": "Check validators relevancy and store them",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\Implementation\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\InvalidArgumentException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "operators": {
+                    "name": "operators",
+                    "line": 74,
+                    "short_desc": "Operators the Admin set in BackOffice",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "values": {
+                    "name": "values",
+                    "line": 74,
+                    "short_desc": "Values the Admin set in BackOffice",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isMatching": {
+            "name": "isMatching",
+            "line": 140,
+            "short_desc": "Test if Customer meets conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getName": {
+            "name": "getName",
+            "line": 164,
+            "short_desc": "Get I18n name",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getToolTip": {
+            "name": "getToolTip",
+            "line": 179,
+            "short_desc": "Get I18n tooltip Explain in detail what the Condition checks",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getSummary": {
+            "name": "getSummary",
+            "line": 196,
+            "short_desc": "Get I18n summary Explain briefly the condition with given values",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "drawBackOfficeInputs": {
+            "name": "drawBackOfficeInputs",
+            "line": 251,
+            "short_desc": "Draw the input displayed in the BackOffice allowing Admin to set its Coupon Conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML string",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": {
+        "INPUT1": {
+            "name": "INPUT1",
+            "line": 43,
+            "short_desc": "Condition 1st parameter : price",
+            "long_desc": ""
+        },
+        "INPUT2": {
+            "name": "INPUT2",
+            "line": 46,
+            "short_desc": "Condition 1st parameter : currency",
+            "long_desc": ""
+        }
+    }
+}

@@ -1,0 +1,362 @@
+{
+    "name": "Thelia\\Action\\Image",
+    "line": 78,
+    "short_desc": "Image management actions.",
+    "long_desc": "This class handles image processing and caching.\n\nBasically, images are stored outside of the web space (by default in local\/media\/images),\nand cached inside the web space (by default in web\/local\/images).\n\nIn the images caches directory, a subdirectory for images categories (eg. product, category, folder, etc.) is\nautomatically created, and the cached image is created here. Plugin may use their own subdirectory as required.\n\nThe cached image name contains a hash of the processing options, and the original (normalized) name of the image.\n\nA copy (or symbolic link, by default) of the original image is always created in the cache, so that the full\nresolution image is always available.\n\nVarious image processing options are available :\n\n- resizing, with border, crop, or by keeping image aspect ratio\n- rotation, in degrees, positive or negative\n- background color, applyed to empty background when creating borders or rotating\n- effects. The effects are applied in the specified order. The following effects are available:\n   - gamma:value : change the image Gamma to the specified value. Example: gamma:0.7\n   - grayscale or greyscale: switch image to grayscale\n   - colorize:color : apply a color mask to the image. Exemple: colorize:#ff2244\n   - negative : transform the image in its negative equivalent\n   - vflip or vertical_flip : vertical flip\n   - hflip or horizontal_flip : horizontal flip\n\nIf a problem occurs, an ImageException may be thrown.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Action"
+            ]
+        ],
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Action\/Image.php",
+    "hash": "fcd60c60e6e427975adee635d8dc15bfd78d6159",
+    "parent": "Thelia\\Action\\BaseCachedFile",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "ImageCreateOrUpdateEvent": "Thelia\\Core\\Event\\Image\\ImageCreateOrUpdateEvent",
+        "ImageDeleteEvent": "Thelia\\Core\\Event\\Image\\ImageDeleteEvent",
+        "ImageEvent": "Thelia\\Core\\Event\\Image\\ImageEvent",
+        "UpdateFilePositionEvent": "Thelia\\Core\\Event\\UpdateFilePositionEvent",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "FileManager": "Thelia\\Tools\\FileManager",
+        "URL": "Thelia\\Tools\\URL",
+        "ImagineInterface": "Imagine\\Image\\ImagineInterface",
+        "ImageInterface": "Imagine\\Image\\ImageInterface",
+        "Box": "Imagine\\Image\\Box",
+        "Color": "Imagine\\Image\\Color",
+        "Point": "Imagine\\Image\\Point",
+        "ImageException": "Thelia\\Exception\\ImageException",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "processImage": {
+            "name": "processImage",
+            "line": 105,
+            "short_desc": "Process image and write the result in the image cache.",
+            "long_desc": "If the image already exists in cache, the cache file is immediately returned, without any processing\nIf the original (full resolution) image is required, create either a symbolic link with the\noriginal image in the cache dir, or copy it in the cache dir.\n\nThis method updates the cache_file_path and file_url attributes of the event",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\InvalidArgumentException,",
+                    "ImageException"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 105,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Image\\ImageEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ImageEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "saveImage": {
+            "name": "saveImage",
+            "line": 256,
+            "short_desc": "Take care of saving image in the database and file storage",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\ImageException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 256,
+                    "short_desc": "Image event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Image\\ImageCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ImageCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateImage": {
+            "name": "updateImage",
+            "line": 287,
+            "short_desc": "Take care of updating image in the database and file storage",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\ImageException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 287,
+                    "short_desc": "Image event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Image\\ImageCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ImageCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updatePosition": {
+            "name": "updatePosition",
+            "line": 305,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 305,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdateFilePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdateFilePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteImage": {
+            "name": "deleteImage",
+            "line": 318,
+            "short_desc": "Take care of deleting image in the database and file storage",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "pictures",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Exception",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 318,
+                    "short_desc": "Image event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Image\\ImageDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ImageDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 442,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": {
+        "EXACT_RATIO_WITH_BORDERS": {
+            "name": "EXACT_RATIO_WITH_BORDERS",
+            "line": 81,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "EXACT_RATIO_WITH_CROP": {
+            "name": "EXACT_RATIO_WITH_CROP",
+            "line": 82,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "KEEP_IMAGE_RATIO": {
+            "name": "KEEP_IMAGE_RATIO",
+            "line": 83,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

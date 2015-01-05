@@ -1,0 +1,3070 @@
+{
+    "name": "Thelia\\Model\\Base\\ProfileResourceQuery",
+    "line": 64,
+    "short_desc": "Base class that represents a query for the 'profile_resource' table.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "method": [
+            [
+                "ChildProfileResourceQuery",
+                "orderByProfileId($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "profile_id",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "orderByResourceId($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "resource_id",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "orderByAccess($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "access",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "orderByCreatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "orderByUpdatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "groupByProfileId()",
+                "Group",
+                "by",
+                "the",
+                "profile_id",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "groupByResourceId()",
+                "Group",
+                "by",
+                "the",
+                "resource_id",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "groupByAccess()",
+                "Group",
+                "by",
+                "the",
+                "access",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "groupByCreatedAt()",
+                "Group",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "groupByUpdatedAt()",
+                "Group",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "leftJoin($relation)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "rightJoin($relation)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "innerJoin($relation)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "leftJoinProfile($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Profile",
+                "relation"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "rightJoinProfile($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Profile",
+                "relation"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "innerJoinProfile($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Profile",
+                "relation"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "leftJoinResource($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Resource",
+                "relation"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "rightJoinResource($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Resource",
+                "relation"
+            ],
+            [
+                "ChildProfileResourceQuery",
+                "innerJoinResource($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Resource",
+                "relation"
+            ],
+            [
+                "ChildProfileResource",
+                "findOne(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildProfileResource",
+                "matching",
+                "the",
+                "query"
+            ],
+            [
+                "ChildProfileResource",
+                "findOneOrCreate(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildProfileResource",
+                "matching",
+                "the",
+                "query,",
+                "or",
+                "a",
+                "new",
+                "ChildProfileResource",
+                "object",
+                "populated",
+                "from",
+                "the",
+                "query",
+                "conditions",
+                "when",
+                "no",
+                "match",
+                "is",
+                "found"
+            ],
+            [
+                "ChildProfileResource",
+                "findOneByProfileId(int",
+                "$profile_id)",
+                "Return",
+                "the",
+                "first",
+                "ChildProfileResource",
+                "filtered",
+                "by",
+                "the",
+                "profile_id",
+                "column"
+            ],
+            [
+                "ChildProfileResource",
+                "findOneByResourceId(int",
+                "$resource_id)",
+                "Return",
+                "the",
+                "first",
+                "ChildProfileResource",
+                "filtered",
+                "by",
+                "the",
+                "resource_id",
+                "column"
+            ],
+            [
+                "ChildProfileResource",
+                "findOneByAccess(int",
+                "$access)",
+                "Return",
+                "the",
+                "first",
+                "ChildProfileResource",
+                "filtered",
+                "by",
+                "the",
+                "access",
+                "column"
+            ],
+            [
+                "ChildProfileResource",
+                "findOneByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildProfileResource",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildProfileResource",
+                "findOneByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildProfileResource",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByProfileId(int",
+                "$profile_id)",
+                "Return",
+                "ChildProfileResource",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "profile_id",
+                "column"
+            ],
+            [
+                "array",
+                "findByResourceId(int",
+                "$resource_id)",
+                "Return",
+                "ChildProfileResource",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "resource_id",
+                "column"
+            ],
+            [
+                "array",
+                "findByAccess(int",
+                "$access)",
+                "Return",
+                "ChildProfileResource",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "access",
+                "column"
+            ],
+            [
+                "array",
+                "findByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "ChildProfileResource",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "ChildProfileResource",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model\\Base",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Base\/ProfileResourceQuery.php",
+    "hash": "b1387fa329fb8e7ce15ff3b6d0c36a81f47dd2c2",
+    "parent": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Exception": "Exception",
+        "PDO": "PDO",
+        "Propel": "Propel\\Runtime\\Propel",
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "ModelJoin": "Propel\\Runtime\\ActiveQuery\\ModelJoin",
+        "Collection": "Propel\\Runtime\\Collection\\Collection",
+        "ObjectCollection": "Propel\\Runtime\\Collection\\ObjectCollection",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "ChildProfileResource": "Thelia\\Model\\ProfileResource",
+        "ChildProfileResourceQuery": "Thelia\\Model\\ProfileResourceQuery",
+        "ProfileResourceTableMap": "Thelia\\Model\\Map\\ProfileResourceTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 74,
+            "short_desc": "Initializes internal state of \\Thelia\\Model\\Base\\ProfileResourceQuery object.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dbName": {
+                    "name": "dbName",
+                    "line": 74,
+                    "short_desc": "The database name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'thelia'",
+                    "is_by_ref": false
+                },
+                "modelName": {
+                    "name": "modelName",
+                    "line": 74,
+                    "short_desc": "The phpName of a model, e.g. 'Book'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'\\\\Thelia\\\\Model\\\\ProfileResource'",
+                    "is_by_ref": false
+                },
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 74,
+                    "short_desc": "The alias for the model in this query, e.g. 'b'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 87,
+            "short_desc": "Returns a new ChildProfileResourceQuery object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 87,
+                    "short_desc": "The alias of a model in the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "criteria": {
+                    "name": "criteria",
+                    "line": 87,
+                    "short_desc": "Optional Criteria to build the query from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\Criteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPk": {
+            "name": "findPk",
+            "line": 117,
+            "short_desc": "Find object by primary key.",
+            "long_desc": "Propel uses the instance pool to skip the database if the object exists.\nGo fast if the query is untouched.\n\n<code>\n$obj = $c->findPk(array(12, 34), $con);\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResource",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the result, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+                "The \"resource_id]\" @param tag variable name is wrong (should be \"key\")"
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 117,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 117,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPks": {
+            "name": "findPks",
+            "line": 200,
+            "short_desc": "Find objects by primary key <code> $objs = $c->findPks(array(array(12, 56), array(832, 123), array(123, 456)), $con); <\/code>",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\Collection\\ObjectCollection",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the list of results, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 200,
+                    "short_desc": "Primary keys to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 200,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKey": {
+            "name": "filterByPrimaryKey",
+            "line": 221,
+            "short_desc": "Filter the query by primary key",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 221,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKeys": {
+            "name": "filterByPrimaryKeys",
+            "line": 236,
+            "short_desc": "Filter the query by a list of primary keys",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 236,
+                    "short_desc": "The list of primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByProfileId": {
+            "name": "filterByProfileId",
+            "line": 271,
+            "short_desc": "Filter the query on the profile_id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByProfileId(1234); \/\/ WHERE profile_id = 1234\n$query->filterByProfileId(array(12, 34)); \/\/ WHERE profile_id IN (12, 34)\n$query->filterByProfileId(array('min' => 12)); \/\/ WHERE profile_id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": {
+                "see": [
+                    [
+                        "filterByProfile()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "profileId": {
+                    "name": "profileId",
+                    "line": 271,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 271,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByResourceId": {
+            "name": "filterByResourceId",
+            "line": 314,
+            "short_desc": "Filter the query on the resource_id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByResourceId(1234); \/\/ WHERE resource_id = 1234\n$query->filterByResourceId(array(12, 34)); \/\/ WHERE resource_id IN (12, 34)\n$query->filterByResourceId(array('min' => 12)); \/\/ WHERE resource_id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": {
+                "see": [
+                    [
+                        "filterByResource()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "resourceId": {
+                    "name": "resourceId",
+                    "line": 314,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 314,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByAccess": {
+            "name": "filterByAccess",
+            "line": 355,
+            "short_desc": "Filter the query on the access column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByAccess(1234); \/\/ WHERE access = 1234\n$query->filterByAccess(array(12, 34)); \/\/ WHERE access IN (12, 34)\n$query->filterByAccess(array('min' => 12)); \/\/ WHERE access > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "access": {
+                    "name": "access",
+                    "line": 355,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 355,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByCreatedAt": {
+            "name": "filterByCreatedAt",
+            "line": 398,
+            "short_desc": "Filter the query on the created_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByCreatedAt('2011-03-14'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt('now'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt(array('max' => 'yesterday')); \/\/ WHERE created_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "createdAt": {
+                    "name": "createdAt",
+                    "line": 398,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 398,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByUpdatedAt": {
+            "name": "filterByUpdatedAt",
+            "line": 441,
+            "short_desc": "Filter the query on the updated_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByUpdatedAt('2011-03-14'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt('now'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt(array('max' => 'yesterday')); \/\/ WHERE updated_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "line": 441,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 441,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByProfile": {
+            "name": "filterByProfile",
+            "line": 472,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\Profile object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "profile": {
+                    "name": "profile",
+                    "line": 472,
+                    "short_desc": "The related object(s) to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\Profile",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 472,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinProfile": {
+            "name": "joinProfile",
+            "line": 497,
+            "short_desc": "Adds a JOIN clause to the query using the Profile relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 497,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 497,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useProfileQuery": {
+            "name": "useProfileQuery",
+            "line": 532,
+            "short_desc": "Use the Profile relation Profile object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ProfileQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 532,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 532,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByResource": {
+            "name": "filterByResource",
+            "line": 547,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\Resource object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "resource": {
+                    "name": "resource",
+                    "line": 547,
+                    "short_desc": "The related object(s) to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\Resource",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 547,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinResource": {
+            "name": "joinResource",
+            "line": 572,
+            "short_desc": "Adds a JOIN clause to the query using the Resource relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 572,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 572,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useResourceQuery": {
+            "name": "useResourceQuery",
+            "line": 607,
+            "short_desc": "Use the Resource relation Resource object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 607,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 607,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "prune": {
+            "name": "prune",
+            "line": 621,
+            "short_desc": "Exclude object from result",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "profileResource": {
+                    "name": "profileResource",
+                    "line": 621,
+                    "short_desc": "Object to remove from the list of results",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\ProfileResource",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "doDeleteAll": {
+            "name": "doDeleteAll",
+            "line": 638,
+            "short_desc": "Deletes all rows from the profile_resource table.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 638,
+                    "short_desc": "the connection to use",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 675,
+            "short_desc": "Performs a DELETE on the database, given a ChildProfileResource or Criteria object OR a primary key value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "Any exceptions caught during processing will be rethrown wrapped into a PropelException."
+                ]
+            ],
+            "errors": [
+                "\"2\" @param tags are defined by \"1\" are expected"
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 675,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyUpdated": {
+            "name": "recentlyUpdated",
+            "line": 716,
+            "short_desc": "Filter by the latest updated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 716,
+                    "short_desc": "Maximum age of the latest update in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyCreated": {
+            "name": "recentlyCreated",
+            "line": 728,
+            "short_desc": "Filter by the latest created",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 728,
+                    "short_desc": "Maximum age of in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "lastUpdatedFirst": {
+            "name": "lastUpdatedFirst",
+            "line": 738,
+            "short_desc": "Order by update date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstUpdatedFirst": {
+            "name": "firstUpdatedFirst",
+            "line": 748,
+            "short_desc": "Order by update date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "lastCreatedFirst": {
+            "name": "lastCreatedFirst",
+            "line": 758,
+            "short_desc": "Order by create date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstCreatedFirst": {
+            "name": "firstCreatedFirst",
+            "line": 768,
+            "short_desc": "Order by create date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ProfileResourceQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "orderByProfileId": {
+            "name": "orderByProfileId",
+            "line": 64,
+            "short_desc": "Order by the profile_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByResourceId": {
+            "name": "orderByResourceId",
+            "line": 64,
+            "short_desc": "Order by the resource_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByAccess": {
+            "name": "orderByAccess",
+            "line": 64,
+            "short_desc": "Order by the access column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByCreatedAt": {
+            "name": "orderByCreatedAt",
+            "line": 64,
+            "short_desc": "Order by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByUpdatedAt": {
+            "name": "orderByUpdatedAt",
+            "line": 64,
+            "short_desc": "Order by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "groupByProfileId": {
+            "name": "groupByProfileId",
+            "line": 64,
+            "short_desc": "Group by the profile_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByResourceId": {
+            "name": "groupByResourceId",
+            "line": 64,
+            "short_desc": "Group by the resource_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByAccess": {
+            "name": "groupByAccess",
+            "line": 64,
+            "short_desc": "Group by the access column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByCreatedAt": {
+            "name": "groupByCreatedAt",
+            "line": 64,
+            "short_desc": "Group by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByUpdatedAt": {
+            "name": "groupByUpdatedAt",
+            "line": 64,
+            "short_desc": "Group by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "leftJoin": {
+            "name": "leftJoin",
+            "line": 64,
+            "short_desc": "Adds a LEFT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoin": {
+            "name": "rightJoin",
+            "line": 64,
+            "short_desc": "Adds a RIGHT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoin": {
+            "name": "innerJoin",
+            "line": 64,
+            "short_desc": "Adds a INNER JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinProfile": {
+            "name": "leftJoinProfile",
+            "line": 64,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the Profile relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinProfile": {
+            "name": "rightJoinProfile",
+            "line": 64,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the Profile relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinProfile": {
+            "name": "innerJoinProfile",
+            "line": 64,
+            "short_desc": "Adds a INNER JOIN clause to the query using the Profile relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinResource": {
+            "name": "leftJoinResource",
+            "line": 64,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the Resource relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinResource": {
+            "name": "rightJoinResource",
+            "line": 64,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the Resource relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinResource": {
+            "name": "innerJoinResource",
+            "line": 64,
+            "short_desc": "Adds a INNER JOIN clause to the query using the Resource relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResourceQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOne": {
+            "name": "findOne",
+            "line": 64,
+            "short_desc": "Return the first ChildProfileResource matching the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResource",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneOrCreate": {
+            "name": "findOneOrCreate",
+            "line": 64,
+            "short_desc": "Return the first ChildProfileResource matching the query, or a new ChildProfileResource object populated from the query conditions when no match is found",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResource",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByProfileId": {
+            "name": "findOneByProfileId",
+            "line": 64,
+            "short_desc": "Return the first ChildProfileResource filtered by the profile_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResource",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "profile_id": {
+                    "name": "profile_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByResourceId": {
+            "name": "findOneByResourceId",
+            "line": 64,
+            "short_desc": "Return the first ChildProfileResource filtered by the resource_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResource",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "resource_id": {
+                    "name": "resource_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByAccess": {
+            "name": "findOneByAccess",
+            "line": 64,
+            "short_desc": "Return the first ChildProfileResource filtered by the access column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResource",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "access": {
+                    "name": "access",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByCreatedAt": {
+            "name": "findOneByCreatedAt",
+            "line": 64,
+            "short_desc": "Return the first ChildProfileResource filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResource",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByUpdatedAt": {
+            "name": "findOneByUpdatedAt",
+            "line": 64,
+            "short_desc": "Return the first ChildProfileResource filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildProfileResource",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByProfileId": {
+            "name": "findByProfileId",
+            "line": 64,
+            "short_desc": "Return ChildProfileResource objects filtered by the profile_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "profile_id": {
+                    "name": "profile_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByResourceId": {
+            "name": "findByResourceId",
+            "line": 64,
+            "short_desc": "Return ChildProfileResource objects filtered by the resource_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "resource_id": {
+                    "name": "resource_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByAccess": {
+            "name": "findByAccess",
+            "line": 64,
+            "short_desc": "Return ChildProfileResource objects filtered by the access column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "access": {
+                    "name": "access",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByCreatedAt": {
+            "name": "findByCreatedAt",
+            "line": 64,
+            "short_desc": "Return ChildProfileResource objects filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByUpdatedAt": {
+            "name": "findByUpdatedAt",
+            "line": 64,
+            "short_desc": "Return ChildProfileResource objects filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

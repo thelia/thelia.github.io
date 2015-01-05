@@ -1,0 +1,282 @@
+{
+    "name": "Thelia\\Core\\Hook\\HookHelper",
+    "line": 27,
+    "short_desc": "Class HookHelper",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\Hook"
+            ]
+        ],
+        "author": [
+            [
+                "Julien",
+                "Chans\u00e9aume",
+                "<jchanseaume@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Hook",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/Hook\/HookHelper.php",
+    "hash": "478f6aa8afc38c86edf16dbcf69e569c52e6c70d",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ParserHelperInterface": "Thelia\\Core\\Template\\ParserHelperInterface",
+        "TemplateDefinition": "Thelia\\Core\\Template\\TemplateDefinition",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "Lang": "Thelia\\Model\\Lang"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 37,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parserHelper": {
+                    "name": "parserHelper",
+                    "line": 37,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\ParserHelperInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ParserHelperInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "parseActiveTemplate": {
+            "name": "parseActiveTemplate",
+            "line": 42,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateType": {
+                    "name": "templateType",
+                    "line": 42,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "TemplateDefinition::FRONT_OFFICE",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "parseTemplate": {
+            "name": "parseTemplate",
+            "line": 62,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateType": {
+                    "name": "templateType",
+                    "line": 62,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 62,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "walkDir": {
+            "name": "walkDir",
+            "line": 104,
+            "short_desc": "Recursively examine files in a directory tree, and extract translatable strings.",
+            "long_desc": "Returns an array of translatable strings, each item having with the following structure:\n'files' an array of file names in which the string appears,\n'text' the translatable text\n'translation' => the text translation, or an empty string if none available.\n'dollar'  => true if the translatable text contains a $",
+            "hint": [
+                [
+                    "Thelia\\Core\\Hook\\number",
+                    false
+                ]
+            ],
+            "hint_desc": "the total number of translatable texts",
+            "tags": {
+                "internal": [
+                    [
+                        "param",
+                        "string",
+                        "$walkMode",
+                        "type",
+                        "of",
+                        "file",
+                        "scanning:",
+                        "WALK_MODE_PHP",
+                        "or",
+                        "WALK_MODE_TEMPLATE"
+                    ],
+                    [
+                        "param",
+                        "\\Thelia\\Core\\Translation\\Translator",
+                        "$translator",
+                        "the",
+                        "current",
+                        "translator"
+                    ],
+                    [
+                        "param",
+                        "string",
+                        "$currentLocale",
+                        "the",
+                        "current",
+                        "locale"
+                    ],
+                    [
+                        "param",
+                        "string",
+                        "$domain",
+                        "the",
+                        "translation",
+                        "domain",
+                        "(fontoffice,",
+                        "backoffice,",
+                        "module,",
+                        "etc...)"
+                    ],
+                    [
+                        "param",
+                        "array",
+                        "$strings",
+                        "the",
+                        "list",
+                        "of",
+                        "strings"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "directory": {
+                    "name": "directory",
+                    "line": 104,
+                    "short_desc": "the path to the directory to examine",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "hooks": {
+                    "name": "hooks",
+                    "line": 104,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Hook\\$hooks",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

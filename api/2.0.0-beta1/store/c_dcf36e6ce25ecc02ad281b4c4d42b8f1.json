@@ -1,0 +1,292 @@
+{
+    "name": "Thelia\\Coupon\\CouponManager",
+    "line": 42,
+    "short_desc": "Created by JetBrains PhpStorm.",
+    "long_desc": "Date: 8\/19\/13\nTime: 3:24 PM\n\nManage how Coupons could interact with a Checkout",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Coupon",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Coupon\/CouponManager.php",
+    "hash": "bf3e9cff323e8691e8766127c2325a91d224d2bf",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ContainerInterface": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+        "ConditionManagerInterface": "Thelia\\Condition\\ConditionManagerInterface",
+        "CouponInterface": "Thelia\\Coupon\\Type\\CouponInterface",
+        "Coupon": "Thelia\\Model\\Coupon"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 64,
+            "short_desc": "Constructor",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "container": {
+                    "name": "container",
+                    "line": 64,
+                    "short_desc": "Service container",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ContainerInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getDiscount": {
+            "name": "getDiscount",
+            "line": 78,
+            "short_desc": "Get Discount for the given Coupons",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "api\n": [
+                    [
+                        "@return",
+                        "float",
+                        "checkout",
+                        "discount"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "addAvailableCoupon": {
+            "name": "addAvailableCoupon",
+            "line": 198,
+            "short_desc": "Add an available CouponManager (Services)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "coupon": {
+                    "name": "coupon",
+                    "line": 198,
+                    "short_desc": "CouponManager",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\Type\\CouponInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CouponInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAvailableCoupons": {
+            "name": "getAvailableCoupons",
+            "line": 208,
+            "short_desc": "Get all available CouponManagers (Services)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "addAvailableCondition": {
+            "name": "addAvailableCondition",
+            "line": 218,
+            "short_desc": "Add an available ConstraintManager (Services)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "condition": {
+                    "name": "condition",
+                    "line": 218,
+                    "short_desc": "ConditionManagerInterface",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\ConditionManagerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConditionManagerInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAvailableConditions": {
+            "name": "getAvailableConditions",
+            "line": 228,
+            "short_desc": "Get all available ConstraintManagers (Services)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "decrementeQuantity": {
+            "name": "decrementeQuantity",
+            "line": 242,
+            "short_desc": "Decrement this coupon quantity",
+            "long_desc": "To call when a coupon is consumed",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "coupon": {
+                    "name": "coupon",
+                    "line": 242,
+                    "short_desc": "Coupon consumed",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Coupon",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Coupon",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

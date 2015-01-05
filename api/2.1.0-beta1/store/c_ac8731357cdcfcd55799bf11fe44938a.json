@@ -1,0 +1,281 @@
+{
+    "name": "Thelia\\Controller\\Api\\ImageController",
+    "line": 39,
+    "short_desc": "Class ImageController",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Controller\\Api"
+            ]
+        ],
+        "author": [
+            [
+                "manuel",
+                "raynaud",
+                "<manu@thelia.net>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller\\Api",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Controller\/Api\/ImageController.php",
+    "hash": "a0a3b0c4dbfd1d20158ca551552e6ef3ec16f0c5",
+    "parent": "Thelia\\Controller\\Api\\BaseApiController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Propel": "Propel\\Runtime\\Propel",
+        "ServiceContainerInterface": "Propel\\Runtime\\ServiceContainer\\ServiceContainerInterface",
+        "FormEvent": "Symfony\\Component\\Form\\FormEvent",
+        "FormEvents": "Symfony\\Component\\Form\\FormEvents",
+        "JsonResponse": "Symfony\\Component\\HttpFoundation\\JsonResponse",
+        "HttpException": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
+        "FileController": "Thelia\\Controller\\Admin\\FileController",
+        "FileCreateOrUpdateEvent": "Thelia\\Core\\Event\\File\\FileCreateOrUpdateEvent",
+        "FileDeleteEvent": "Thelia\\Core\\Event\\File\\FileDeleteEvent",
+        "ImageCreateOrUpdateEvent": "Thelia\\Core\\Event\\Image\\ImageCreateOrUpdateEvent",
+        "ImageEvent": "Thelia\\Core\\Event\\Image\\ImageEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "Image": "Thelia\\Core\\Template\\Loop\\Image",
+        "FileConfiguration": "Thelia\\Files\\FileConfiguration",
+        "ProductQuery": "Thelia\\Model\\ProductQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "listAction": {
+            "name": "listAction",
+            "line": 45,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "entityId": {
+                    "name": "entityId",
+                    "line": 45,
+                    "short_desc": "source's primary key (product's pk, category's pk, etc)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "integer",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getImageAction": {
+            "name": "getImageAction",
+            "line": 77,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "entityId": {
+                    "name": "entityId",
+                    "line": 77,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "imageId": {
+                    "name": "imageId",
+                    "line": 77,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "createImageAction": {
+            "name": "createImageAction",
+            "line": 113,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "entityId": {
+                    "name": "entityId",
+                    "line": 113,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateImageAction": {
+            "name": "updateImageAction",
+            "line": 143,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "entityId": {
+                    "name": "entityId",
+                    "line": 143,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "imageId": {
+                    "name": "imageId",
+                    "line": 143,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteImageAction": {
+            "name": "deleteImageAction",
+            "line": 285,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "entityId": {
+                    "name": "entityId",
+                    "line": 285,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "imageId": {
+                    "name": "imageId",
+                    "line": 285,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

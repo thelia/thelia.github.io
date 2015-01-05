@@ -1,0 +1,1516 @@
+{
+    "name": "Thelia\\Controller\\Admin\\FileController",
+    "line": 47,
+    "short_desc": "Created by JetBrains PhpStorm.",
+    "long_desc": "Date: 8\/19\/13\nTime: 3:24 PM\n\nControl View and Action (Model) via Events\nControl Files and Images",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "File"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Controller\/Admin\/FileController.php",
+    "hash": "26ca71e7a5c21dd7f451ee2486a864c829a6397c",
+    "parent": "Thelia\\Controller\\Admin\\BaseAdminController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "UploadedFile": "Symfony\\Component\\HttpFoundation\\File\\UploadedFile",
+        "FileCreateOrUpdateEvent": "Thelia\\Core\\Event\\File\\FileCreateOrUpdateEvent",
+        "FileDeleteEvent": "Thelia\\Core\\Event\\File\\FileDeleteEvent",
+        "FileToggleVisibilityEvent": "Thelia\\Core\\Event\\File\\FileToggleVisibilityEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "UpdateFilePositionEvent": "Thelia\\Core\\Event\\UpdateFilePositionEvent",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "ProcessFileException": "Thelia\\Files\\Exception\\ProcessFileException",
+        "FileConfiguration": "Thelia\\Files\\FileConfiguration",
+        "FileManager": "Thelia\\Files\\FileManager",
+        "FileModelInterface": "Thelia\\Files\\FileModelInterface",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "Lang": "Thelia\\Model\\Lang",
+        "ResponseRest": "Thelia\\Tools\\Rest\\ResponseRest",
+        "URL": "Thelia\\Tools\\URL"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getFileManager": {
+            "name": "getFileManager",
+            "line": 54,
+            "short_desc": "Get the FileManager",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\FileManager",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "saveFileAjaxAction": {
+            "name": "saveFileAjaxAction",
+            "line": 69,
+            "short_desc": "Manage how a file collection has to be saved",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 70,
+                    "short_desc": "Parent id owning files being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 71,
+                    "short_desc": "Parent Type owning files being saved (product, category, content, etc.)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "objectType": {
+                    "name": "objectType",
+                    "line": 72,
+                    "short_desc": "Object type, e.g. image or document",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "validMimeTypes": {
+                    "name": "validMimeTypes",
+                    "line": 73,
+                    "short_desc": "an array of valid mime types. If empty, any mime type is allowed.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                },
+                "extBlackList": {
+                    "name": "extBlackList",
+                    "line": 74,
+                    "short_desc": "an array of blacklisted extensions.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "processImage": {
+            "name": "processImage",
+            "line": 117,
+            "short_desc": "Process file uploaded",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Tools\\Rest\\ResponseRest",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "fileBeingUploaded": {
+                    "name": "fileBeingUploaded",
+                    "line": 118,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpFoundation\\File\\UploadedFile",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentId": {
+                    "name": "parentId",
+                    "line": 119,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 120,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "objectType": {
+                    "name": "objectType",
+                    "line": 121,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "validMimeTypes": {
+                    "name": "validMimeTypes",
+                    "line": 122,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                },
+                "extBlackList": {
+                    "name": "extBlackList",
+                    "line": 123,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "saveImageAjaxAction": {
+            "name": "saveImageAjaxAction",
+            "line": 241,
+            "short_desc": "Manage how a image collection has to be saved",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 241,
+                    "short_desc": "Parent id owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 241,
+                    "short_desc": "Parent Type owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "saveDocumentAjaxAction": {
+            "name": "saveDocumentAjaxAction",
+            "line": 261,
+            "short_desc": "Manage how a document collection has to be saved",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 261,
+                    "short_desc": "Parent id owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 261,
+                    "short_desc": "Parent Type owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getImageListAjaxAction": {
+            "name": "getImageListAjaxAction",
+            "line": 281,
+            "short_desc": "Manage how a image list will be displayed in AJAX",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 281,
+                    "short_desc": "Parent id owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 281,
+                    "short_desc": "Parent Type owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getDocumentListAjaxAction": {
+            "name": "getDocumentListAjaxAction",
+            "line": 298,
+            "short_desc": "Manage how a document list will be displayed in AJAX",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 298,
+                    "short_desc": "Parent id owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 298,
+                    "short_desc": "Parent Type owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getImageFormAjaxAction": {
+            "name": "getImageFormAjaxAction",
+            "line": 315,
+            "short_desc": "Manage how an image list will be uploaded in AJAX",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 315,
+                    "short_desc": "Parent id owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 315,
+                    "short_desc": "Parent Type owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getDocumentFormAjaxAction": {
+            "name": "getDocumentFormAjaxAction",
+            "line": 332,
+            "short_desc": "Manage how an document list will be uploaded in AJAX",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 332,
+                    "short_desc": "Parent id owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 332,
+                    "short_desc": "Parent Type owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "viewImageAction": {
+            "name": "viewImageAction",
+            "line": 349,
+            "short_desc": "Manage how an image is viewed",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "imageId": {
+                    "name": "imageId",
+                    "line": 349,
+                    "short_desc": "Parent id owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 349,
+                    "short_desc": "Parent Type owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "viewDocumentAction": {
+            "name": "viewDocumentAction",
+            "line": 383,
+            "short_desc": "Manage how an document is viewed",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "documentId": {
+                    "name": "documentId",
+                    "line": 383,
+                    "short_desc": "Parent id owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 383,
+                    "short_desc": "Parent Type owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateImageAction": {
+            "name": "updateImageAction",
+            "line": 530,
+            "short_desc": "Manage how an image is updated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "imageId": {
+                    "name": "imageId",
+                    "line": 530,
+                    "short_desc": "Parent id owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 530,
+                    "short_desc": "Parent Type owning images being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateDocumentAction": {
+            "name": "updateDocumentAction",
+            "line": 558,
+            "short_desc": "Manage how an document is updated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "documentId": {
+                    "name": "documentId",
+                    "line": 558,
+                    "short_desc": "Parent id owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 558,
+                    "short_desc": "Parent Type owning documents being saved",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteFileAction": {
+            "name": "deleteFileAction",
+            "line": 588,
+            "short_desc": "Manage how a image has to be deleted (AJAX)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "fileId": {
+                    "name": "fileId",
+                    "line": 588,
+                    "short_desc": "Parent id owning image being deleted",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 588,
+                    "short_desc": "Parent Type owning image being deleted",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "objectType": {
+                    "name": "objectType",
+                    "line": 588,
+                    "short_desc": "the type of the file, image or document",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "eventName": {
+                    "name": "eventName",
+                    "line": 588,
+                    "short_desc": "the event type.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteImageAction": {
+            "name": "deleteImageAction",
+            "line": 660,
+            "short_desc": "Manage how a image has to be deleted (AJAX)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "imageId": {
+                    "name": "imageId",
+                    "line": 660,
+                    "short_desc": "Parent id owning image being deleted",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 660,
+                    "short_desc": "Parent Type owning image being deleted",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteDocumentAction": {
+            "name": "deleteDocumentAction",
+            "line": 673,
+            "short_desc": "Manage how a document has to be deleted (AJAX)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "documentId": {
+                    "name": "documentId",
+                    "line": 673,
+                    "short_desc": "Parent id owning document being deleted",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 673,
+                    "short_desc": "Parent Type owning document being deleted",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateFilePositionAction": {
+            "name": "updateFilePositionAction",
+            "line": 678,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 678,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentId": {
+                    "name": "parentId",
+                    "line": 678,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "objectType": {
+                    "name": "objectType",
+                    "line": 678,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "eventName": {
+                    "name": "eventName",
+                    "line": 678,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateImagePositionAction": {
+            "name": "updateImagePositionAction",
+            "line": 723,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 723,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentId": {
+                    "name": "parentId",
+                    "line": 723,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateDocumentPositionAction": {
+            "name": "updateDocumentPositionAction",
+            "line": 730,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 730,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentId": {
+                    "name": "parentId",
+                    "line": 730,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleVisibilityFileAction": {
+            "name": "toggleVisibilityFileAction",
+            "line": 737,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "documentId": {
+                    "name": "documentId",
+                    "line": 737,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parentType": {
+                    "name": "parentType",
+                    "line": 737,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "objectType": {
+                    "name": "objectType",
+                    "line": 737,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "eventName": {
+                    "name": "eventName",
+                    "line": 737,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleVisibilityDocumentAction": {
+            "name": "toggleVisibilityDocumentAction",
+            "line": 781,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 781,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "documentId": {
+                    "name": "documentId",
+                    "line": 781,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleVisibilityImageAction": {
+            "name": "toggleVisibilityImageAction",
+            "line": 786,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentType": {
+                    "name": "parentType",
+                    "line": 786,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "documentId": {
+                    "name": "documentId",
+                    "line": 786,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

@@ -1,0 +1,562 @@
+{
+    "name": "Thelia\\Tools\\URL",
+    "line": 23,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Tools",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Tools\/URL.php",
+    "hash": "23925eb40d21579778913b0019223df73d7672eb",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "RequestContext": "Symfony\\Component\\Routing\\RequestContext",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "RewritingResolver": "Thelia\\Rewriting\\RewritingResolver",
+        "RewritingRetriever": "Thelia\\Rewriting\\RewritingRetriever",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "ContainerInterface": "Symfony\\Component\\DependencyInjection\\ContainerInterface"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 42,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "container": {
+                    "name": "container",
+                    "line": 42,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ContainerInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getInstance": {
+            "name": "getInstance",
+            "line": 62,
+            "short_desc": "Return this class instance, only once instanciated.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Tools\\URL",
+                    false
+                ]
+            ],
+            "hint_desc": "the instance.",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    "if the class has not been instanciated."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getBaseUrl": {
+            "name": "getBaseUrl",
+            "line": 76,
+            "short_desc": "Return the base URL, either the base_url defined in Config, or the URL of the current language, if 'one_domain_foreach_lang' is enabled.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the base URL, with a trailing '\/'",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "scheme_only": {
+                    "name": "scheme_only",
+                    "line": 76,
+                    "short_desc": "if true, only the scheme will be returned. If false, the complete base URL, including path, is returned.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getIndexPage": {
+            "name": "getIndexPage",
+            "line": 105,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the index page, which is in fact the base URL.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "absoluteUrl": {
+            "name": "absoluteUrl",
+            "line": 122,
+            "short_desc": "Returns the Absolute URL for a given path relative to web root.",
+            "long_desc": "By default,\nthe script name (index_dev.php) is added to the URL in dev_environment, use\n$path_only = true to get a path without the index script.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "The generated URL",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "path": {
+                    "name": "path",
+                    "line": 122,
+                    "short_desc": "the relative path",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parameters": {
+                    "name": "parameters",
+                    "line": 122,
+                    "short_desc": "An array of parameters",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "path_only": {
+                    "name": "path_only",
+                    "line": 122,
+                    "short_desc": "if true (PATH_TO_FILE), getIndexPage() will  not be added",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "self::WITH_INDEX_PAGE",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "adminViewUrl": {
+            "name": "adminViewUrl",
+            "line": 188,
+            "short_desc": "Returns the Absolute URL to a administration view",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "The generated URL",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "viewName": {
+                    "name": "viewName",
+                    "line": 188,
+                    "short_desc": "the view name (e.g. login for login.html)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parameters": {
+                    "name": "parameters",
+                    "line": 188,
+                    "short_desc": "An array of parameters",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "viewUrl": {
+            "name": "viewUrl",
+            "line": 203,
+            "short_desc": "Returns the Absolute URL to a view",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "The generated URL",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "viewName": {
+                    "name": "viewName",
+                    "line": 203,
+                    "short_desc": "the view name (e.g. login for login.html)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parameters": {
+                    "name": "parameters",
+                    "line": 203,
+                    "short_desc": "An array of parameters",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "retrieve": {
+            "name": "retrieve",
+            "line": 219,
+            "short_desc": "Retrieve a rewritten URL from a view, a view id and a locale",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Rewriting\\RewritingRetriever",
+                    false
+                ]
+            ],
+            "hint_desc": "You can access $url and $rewrittenUrl properties",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "view": {
+                    "name": "view",
+                    "line": 219,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Tools\\$view",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "viewId": {
+                    "name": "viewId",
+                    "line": 219,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Tools\\$viewId",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "viewLocale": {
+                    "name": "viewLocale",
+                    "line": 219,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Tools\\$viewLocale",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "retrieveCurrent": {
+            "name": "retrieveCurrent",
+            "line": 243,
+            "short_desc": "Retrieve a rewritten URL from the current GET parameters",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Rewriting\\RewritingRetriever",
+                    false
+                ]
+            ],
+            "hint_desc": "You can access $url and $rewrittenUrl properties or use toString method",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 243,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "resolve": {
+            "name": "resolve",
+            "line": 282,
+            "short_desc": "Retrieve a rewritten URL from the current GET parameters or use toString method",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Rewriting\\RewritingResolver",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 282,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Tools\\$url",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "PATH_TO_FILE": {
+            "name": "PATH_TO_FILE",
+            "line": 34,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "WITH_INDEX_PAGE": {
+            "name": "WITH_INDEX_PAGE",
+            "line": 35,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

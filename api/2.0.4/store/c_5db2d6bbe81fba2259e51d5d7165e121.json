@@ -1,0 +1,158 @@
+{
+    "name": "Thelia\\Model\\FolderQuery",
+    "line": 17,
+    "short_desc": "Skeleton subclass for performing query and update operations on the 'folder' table.",
+    "long_desc": "You should add additional methods to this class to meet the\napplication requirements.  This class will only be generated as\nlong as it does not already exist in the output directory.",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/FolderQuery.php",
+    "hash": "63ecee5fc097ee9a6933631ab9b26efe9ed11d3c",
+    "parent": "Thelia\\Model\\Base\\FolderQuery",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "BaseFolderQuery": "Thelia\\Model\\Base\\FolderQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "countChild": {
+            "name": "countChild",
+            "line": 26,
+            "short_desc": "count how many direct contents a folder has",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parent": {
+                    "name": "parent",
+                    "line": 26,
+                    "short_desc": "folder id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findAllChild": {
+            "name": "findAllChild",
+            "line": 39,
+            "short_desc": "find all contents for a given folder.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Folder",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folderId": {
+                    "name": "folderId",
+                    "line": 39,
+                    "short_desc": "the folder id or an array of id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\$folderId",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "depth": {
+                    "name": "depth",
+                    "line": 39,
+                    "short_desc": "max depth you want to search",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                },
+                "currentPosition": {
+                    "name": "currentPosition",
+                    "line": 39,
+                    "short_desc": "don't change this param, it is used for recursion",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

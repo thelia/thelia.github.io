@@ -1,0 +1,159 @@
+{
+    "name": "Thelia\\Tools\\Version\\Constraints\\ConstraintInterface",
+    "line": 20,
+    "short_desc": "Class ContraintInterface",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Tools\\Version\\Constraints"
+            ]
+        ],
+        "author": [
+            [
+                "Julien",
+                "Chans\u00e9aume",
+                "<jchanseaume@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Tools\\Version\\Constraints",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Tools\/Version\/Constraints\/ConstraintInterface.php",
+    "hash": "574fd8c1a65220b4d0d6a3e6936219215371bed9",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [
+
+    ],
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "normalize": {
+            "name": "normalize",
+            "line": 28,
+            "short_desc": "Normalize a version number in a version that will be used in `version_compare`",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the normalized expression",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+                "\"1\" @param tags are defined by \"2\" are expected"
+            ],
+            "parameters": {
+                "version": {
+                    "name": "version",
+                    "line": 28,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "strict": {
+                    "name": "strict",
+                    "line": 28,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "test": {
+            "name": "test",
+            "line": 37,
+            "short_desc": "Test if the version number is valid",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "true if the version is equal, otherwise false",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version": {
+                    "name": "version",
+                    "line": 37,
+                    "short_desc": "the version number",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "strict": {
+                    "name": "strict",
+                    "line": 37,
+                    "short_desc": "if false precision will be normalized. eg: 2.1.0 > 2.1 will become 2.1.0 > 2.1.0 (default false)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

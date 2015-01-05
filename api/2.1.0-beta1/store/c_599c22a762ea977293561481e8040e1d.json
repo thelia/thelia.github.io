@@ -1,0 +1,153 @@
+{
+    "name": "Thelia\\Module\\DeliveryModuleInterface",
+    "line": 18,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Module",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Module\/DeliveryModuleInterface.php",
+    "hash": "fa29f604d231824970bba82cf1e54481d11ce527",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "Country": "Thelia\\Model\\Country",
+        "DeliveryException": "Thelia\\Module\\Exception\\DeliveryException"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Module\\BaseModuleInterface": "Thelia\\Module\\BaseModuleInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "isValidDelivery": {
+            "name": "isValidDelivery",
+            "line": 31,
+            "short_desc": "This method is called by the Delivery  loop, to check if the current module has to be displayed to the customer.",
+            "long_desc": "Override it to implements your delivery rules\/\n\nIf you return true, the delivery method will de displayed to the customer\nIf you return false, the delivery method will not be displayed",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "country": {
+                    "name": "country",
+                    "line": 31,
+                    "short_desc": "the country to deliver to.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getPostage": {
+            "name": "getPostage",
+            "line": 41,
+            "short_desc": "Calculate and return delivery price in the shop's default currency",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "the delivery price",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "DeliveryException",
+                    "if the postage price cannot be calculated."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "country": {
+                    "name": "country",
+                    "line": 41,
+                    "short_desc": "the country to deliver to.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "handleVirtualProductDelivery": {
+            "name": "handleVirtualProductDelivery",
+            "line": 49,
+            "short_desc": "This method return true if your delivery manages virtual product delivery.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

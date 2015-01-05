@@ -1,0 +1,465 @@
+{
+    "name": "Thelia\\Controller\\Admin\\CouponController",
+    "line": 46,
+    "short_desc": "Control View and Action (Model) via Events",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Controller\/Admin\/CouponController.php",
+    "hash": "14aa8aaad6c3c7edeb70c0359f6bc2d8fb9fbd83",
+    "parent": "Thelia\\Controller\\Admin\\BaseAdminController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Form": "Symfony\\Component\\Form\\Form",
+        "Request": "Symfony\\Component\\HttpFoundation\\Request",
+        "Response": "Symfony\\Component\\HttpFoundation\\Response",
+        "Router": "Symfony\\Component\\Routing\\Router",
+        "ConditionFactory": "Thelia\\Condition\\ConditionFactory",
+        "ConditionInterface": "Thelia\\Condition\\Implementation\\ConditionInterface",
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "CouponCreateOrUpdateEvent": "Thelia\\Core\\Event\\Coupon\\CouponCreateOrUpdateEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "CouponFactory": "Thelia\\Coupon\\CouponFactory",
+        "CouponManager": "Thelia\\Coupon\\CouponManager",
+        "ConditionCollection": "Thelia\\Condition\\ConditionCollection",
+        "CouponInterface": "Thelia\\Coupon\\Type\\CouponInterface",
+        "CouponCreationForm": "Thelia\\Form\\CouponCreationForm",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "Coupon": "Thelia\\Model\\Coupon",
+        "CouponCountry": "Thelia\\Model\\CouponCountry",
+        "CouponModule": "Thelia\\Model\\CouponModule",
+        "CouponQuery": "Thelia\\Model\\CouponQuery",
+        "LangQuery": "Thelia\\Model\\LangQuery",
+        "ResponseRest": "Thelia\\Tools\\Rest\\ResponseRest"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "browseAction": {
+            "name": "browseAction",
+            "line": 53,
+            "short_desc": "Manage Coupons list display",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "createAction": {
+            "name": "createAction",
+            "line": 69,
+            "short_desc": "Manage Coupons creation display",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "updateAction": {
+            "name": "updateAction",
+            "line": 114,
+            "short_desc": "Manage Coupons edition display",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponId": {
+                    "name": "couponId",
+                    "line": 114,
+                    "short_desc": "Coupon id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getConditionEmptyInputAjaxAction": {
+            "name": "getConditionEmptyInputAjaxAction",
+            "line": 256,
+            "short_desc": "Manage Coupons read display",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "conditionId": {
+                    "name": "conditionId",
+                    "line": 256,
+                    "short_desc": "Condition service id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getConditionToUpdateInputAjaxAction": {
+            "name": "getConditionToUpdateInputAjaxAction",
+            "line": 306,
+            "short_desc": "Manage Coupons read display",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponId": {
+                    "name": "couponId",
+                    "line": 306,
+                    "short_desc": "Coupon id being updated",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "conditionIndex": {
+                    "name": "conditionIndex",
+                    "line": 306,
+                    "short_desc": "Coupon Condition position in the collection",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "saveConditionsAction": {
+            "name": "saveConditionsAction",
+            "line": 360,
+            "short_desc": "Manage Coupons read display",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponId": {
+                    "name": "couponId",
+                    "line": 360,
+                    "short_desc": "Coupon id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteConditionsAction": {
+            "name": "deleteConditionsAction",
+            "line": 409,
+            "short_desc": "Manage Coupons condition deleteion",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponId": {
+                    "name": "couponId",
+                    "line": 409,
+                    "short_desc": "Coupon id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "conditionIndex": {
+                    "name": "conditionIndex",
+                    "line": 409,
+                    "short_desc": "Coupon condition index in the collection",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getBackOfficeInputsAjaxAction": {
+            "name": "getBackOfficeInputsAjaxAction",
+            "line": 620,
+            "short_desc": "Draw the input displayed in the BackOffice allowing Admin to set its Coupon effect",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Tools\\Rest\\ResponseRest",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponServiceId": {
+                    "name": "couponServiceId",
+                    "line": 620,
+                    "short_desc": "Coupon service id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getBackOfficeConditionSummariesAjaxAction": {
+            "name": "getBackOfficeConditionSummariesAjaxAction",
+            "line": 654,
+            "short_desc": "Draw the input displayed in the BackOffice allowing Admin to set its Coupon effect",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Tools\\Rest\\ResponseRest",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponId": {
+                    "name": "couponId",
+                    "line": 654,
+                    "short_desc": "Coupon id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

@@ -1,0 +1,203 @@
+{
+    "name": "Thelia\\Tools\\FileDownload\\FileDownloader",
+    "line": 28,
+    "short_desc": "Class FileDownloader",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Tools\\FileDownload"
+            ]
+        ],
+        "author": [
+            [
+                "Benjamin",
+                "Perche",
+                "<bperche@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Tools\\FileDownload",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Tools\/FileDownload\/FileDownloader.php",
+    "hash": "3f51237abc447c5aea961f677d05694ea0456fb2",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "LoggerInterface": "Psr\\Log\\LoggerInterface",
+        "Translator": "Symfony\\Component\\Translation\\Translator",
+        "TheliaTranslator": "Thelia\\Core\\Translation\\Translator",
+        "FileNotFoundException": "Thelia\\Exception\\FileNotFoundException",
+        "HttpUrlException": "Thelia\\Exception\\HttpUrlException",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "URL": "Thelia\\Tools\\URL"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Tools\\FileDownload\\FileDownloaderInterface": "Thelia\\Tools\\FileDownload\\FileDownloaderInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 36,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "logger": {
+                    "name": "logger",
+                    "line": 36,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Psr\\Log\\LoggerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "LoggerInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "translator": {
+                    "name": "translator",
+                    "line": 36,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\Translation\\Translator",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Translator",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getInstance": {
+            "name": "getInstance",
+            "line": 43,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Tools\\FileDownload\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "Returns an hydrated instance",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "download": {
+            "name": "download",
+            "line": 57,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\FileNotFoundException",
+                    ""
+                ],
+                [
+                    "\\ErrorException",
+                    ""
+                ],
+                [
+                    "\\HttpUrlException",
+                    "Downloads the file $url in $pathToStore"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 57,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "pathToStore": {
+                    "name": "pathToStore",
+                    "line": 57,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

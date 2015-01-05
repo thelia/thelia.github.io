@@ -1,0 +1,394 @@
+{
+    "name": "Thelia\\Action\\Sale",
+    "line": 47,
+    "short_desc": "Class Sale",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Action"
+            ]
+        ],
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Action\/Sale.php",
+    "hash": "e137b7787ab1a29cfdae70435525bec57fe54dac",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "Propel": "Propel\\Runtime\\Propel",
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "ProductSaleStatusUpdateEvent": "Thelia\\Core\\Event\\Sale\\ProductSaleStatusUpdateEvent",
+        "SaleActiveStatusCheckEvent": "Thelia\\Core\\Event\\Sale\\SaleActiveStatusCheckEvent",
+        "SaleClearStatusEvent": "Thelia\\Core\\Event\\Sale\\SaleClearStatusEvent",
+        "SaleCreateEvent": "Thelia\\Core\\Event\\Sale\\SaleCreateEvent",
+        "SaleDeleteEvent": "Thelia\\Core\\Event\\Sale\\SaleDeleteEvent",
+        "SaleToggleActivityEvent": "Thelia\\Core\\Event\\Sale\\SaleToggleActivityEvent",
+        "SaleUpdateEvent": "Thelia\\Core\\Event\\Sale\\SaleUpdateEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "ProductPriceQuery": "Thelia\\Model\\Base\\ProductPriceQuery",
+        "CountryModel": "Thelia\\Model\\Country",
+        "SaleTableMap": "Thelia\\Model\\Map\\SaleTableMap",
+        "ProductSaleElements": "Thelia\\Model\\ProductSaleElements",
+        "ProductSaleElementsQuery": "Thelia\\Model\\ProductSaleElementsQuery",
+        "SaleModel": "Thelia\\Model\\Sale",
+        "SaleOffsetCurrency": "Thelia\\Model\\SaleOffsetCurrency",
+        "SaleOffsetCurrencyQuery": "Thelia\\Model\\SaleOffsetCurrencyQuery",
+        "SaleProduct": "Thelia\\Model\\SaleProduct",
+        "SaleProductQuery": "Thelia\\Model\\SaleProductQuery",
+        "SaleQuery": "Thelia\\Model\\SaleQuery",
+        "Calculator": "Thelia\\TaxEngine\\Calculator"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "updateProductsSaleStatus": {
+            "name": "updateProductsSaleStatus",
+            "line": 114,
+            "short_desc": "Update the promo status of the sale's selected products and combinations",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    ""
+                ],
+                [
+                    "\\Exception",
+                    ""
+                ],
+                [
+                    "\\Propel\\Runtime\\Exception\\PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 114,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Sale\\ProductSaleStatusUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductSaleStatusUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 193,
+            "short_desc": "Create a new Sale",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 193,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Sale\\SaleCreateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "SaleCreateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 213,
+            "short_desc": "Process update sale",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 213,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Sale\\SaleUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "SaleUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleActivity": {
+            "name": "toggleActivity",
+            "line": 312,
+            "short_desc": "Toggle Sale activity",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Propel\\Runtime\\Exception\\PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 312,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Sale\\SaleToggleActivityEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "SaleToggleActivityEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 347,
+            "short_desc": "Delete a sale",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Propel\\Runtime\\Exception\\PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 347,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Sale\\SaleDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "SaleDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "clearStatus": {
+            "name": "clearStatus",
+            "line": 384,
+            "short_desc": "Clear all sales",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Propel\\Runtime\\Exception\\PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 384,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Sale\\SaleClearStatusEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "SaleClearStatusEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkSaleActivation": {
+            "name": "checkSaleActivation",
+            "line": 416,
+            "short_desc": "This method check the activation and deactivation dates of sales, and perform the required action depending on the current date.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Propel\\Runtime\\Exception\\PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 416,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Sale\\SaleActiveStatusCheckEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "SaleActiveStatusCheckEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 469,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

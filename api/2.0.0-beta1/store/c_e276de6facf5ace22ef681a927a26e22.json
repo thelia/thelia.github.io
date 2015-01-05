@@ -1,0 +1,201 @@
+{
+    "name": "Thelia\\Core\\Template\\Assets\\AsseticHelper",
+    "line": 39,
+    "short_desc": "This class is a simple helper for generating assets using Assetic.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Template\\Assets",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/Template\/Assets\/AsseticHelper.php",
+    "hash": "f6f21d20a6032d035eb10a0202425b1ae9e650c7",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "AssetManager": "Assetic\\AssetManager",
+        "FilterManager": "Assetic\\FilterManager",
+        "Filter": "Assetic\\Filter",
+        "AssetFactory": "Assetic\\Factory\\AssetFactory",
+        "CacheBustingWorker": "Assetic\\Factory\\Worker\\CacheBustingWorker",
+        "AssetWriter": "Assetic\\AssetWriter",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "asseticize": {
+            "name": "asseticize",
+            "line": 54,
+            "short_desc": "Generates assets from $asset_path in $output_path, using $filters.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "The URL to the generated asset file.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\InvalidArgumentException",
+                    "if an invalid filter name is found"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "asset_path": {
+                    "name": "asset_path",
+                    "line": 54,
+                    "short_desc": "the full path to the asset file (or file collection)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "output_path": {
+                    "name": "output_path",
+                    "line": 54,
+                    "short_desc": "the full disk path to the output directory (shoud be visible to web server)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "output_url": {
+                    "name": "output_url",
+                    "line": 54,
+                    "short_desc": "the URL to the generated asset directory",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "asset_type": {
+                    "name": "asset_type",
+                    "line": 54,
+                    "short_desc": "the asset type: css, js, ... The generated files will have this extension. Pass an empty string to use the asset source extension.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "filters": {
+                    "name": "filters",
+                    "line": 54,
+                    "short_desc": "a list of filters, as defined below (see switch($filter_name) ...)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "debug": {
+                    "name": "debug",
+                    "line": 54,
+                    "short_desc": "true \/ false",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "dev_mode": {
+                    "name": "dev_mode",
+                    "line": 54,
+                    "short_desc": "true \/ false. If true, assets are not cached and always compiled.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

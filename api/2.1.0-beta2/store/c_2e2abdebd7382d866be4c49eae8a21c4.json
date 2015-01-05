@@ -1,0 +1,240 @@
+{
+    "name": "Thelia\\Core\\Template\\Loop\\ProductSaleElements",
+    "line": 40,
+    "short_desc": "Product Sale Elements loop",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "todo": [
+            [
+                ":",
+                "manage",
+                "attribute_availability",
+                "?",
+                "Class",
+                "ProductSaleElements"
+            ]
+        ],
+        "package": [
+            [
+                "Thelia\\Core\\Template\\Loop"
+            ]
+        ],
+        "author": [
+            [
+                "Etienne",
+                "Roudeix",
+                "<eroudeix@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Template\\Loop",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/Template\/Loop\/ProductSaleElements.php",
+    "hash": "02fba007f486bcea757df274c9f8eeb2496282f2",
+    "parent": "Thelia\\Core\\Template\\Element\\BaseLoop",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "BaseLoop": "Thelia\\Core\\Template\\Element\\BaseLoop",
+        "LoopResult": "Thelia\\Core\\Template\\Element\\LoopResult",
+        "LoopResultRow": "Thelia\\Core\\Template\\Element\\LoopResultRow",
+        "PropelSearchLoopInterface": "Thelia\\Core\\Template\\Element\\PropelSearchLoopInterface",
+        "SearchLoopInterface": "Thelia\\Core\\Template\\Element\\SearchLoopInterface",
+        "Argument": "Thelia\\Core\\Template\\Loop\\Argument\\Argument",
+        "ArgumentCollection": "Thelia\\Core\\Template\\Loop\\Argument\\ArgumentCollection",
+        "TaxEngineException": "Thelia\\Exception\\TaxEngineException",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery",
+        "ProductSaleElementsTableMap": "Thelia\\Model\\Map\\ProductSaleElementsTableMap",
+        "ProductSaleElementsQuery": "Thelia\\Model\\ProductSaleElementsQuery",
+        "Type": "Thelia\\Type",
+        "TypeCollection": "Thelia\\Type\\TypeCollection"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Core\\Template\\Element\\PropelSearchLoopInterface": "Thelia\\Core\\Template\\Element\\PropelSearchLoopInterface",
+        "Thelia\\Core\\Template\\Element\\SearchLoopInterface": "Thelia\\Core\\Template\\Element\\SearchLoopInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "buildModelCriteria": {
+            "name": "buildModelCriteria",
+            "line": 80,
+            "short_desc": "this method returns a Propel ModelCriteria",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "parseResults": {
+            "name": "parseResults",
+            "line": 185,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\Element\\LoopResult",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "loopResult": {
+                    "name": "loopResult",
+                    "line": 185,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Element\\LoopResult",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "LoopResult",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSearchIn": {
+            "name": "getSearchIn",
+            "line": 249,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "of available field to search in",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "doSearch": {
+            "name": "doSearch",
+            "line": 256,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "search": {
+                    "name": "search",
+                    "line": 256,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                },
+                "searchTerm": {
+                    "name": "searchTerm",
+                    "line": 256,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "searchIn": {
+                    "name": "searchIn",
+                    "line": 256,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "searchCriteria": {
+                    "name": "searchCriteria",
+                    "line": 256,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

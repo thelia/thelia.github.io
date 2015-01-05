@@ -1,0 +1,404 @@
+{
+    "name": "Thelia\\Controller\\Admin\\AbstractCrudController",
+    "line": 35,
+    "short_desc": "An abstract CRUD controller for Thelia ADMIN, to manage basic CRUD operations on a givent object.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Controller\/Admin\/AbstractCrudController.php",
+    "hash": "7ce486bb6bf02fe3fb44ab06a3b591a299c1f6d8",
+    "parent": "Thelia\\Controller\\Admin\\BaseAdminController",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 68,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "objectName": {
+                    "name": "objectName",
+                    "line": 69,
+                    "short_desc": "the lower case object name. Example. \"message\"",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "defaultListOrder": {
+                    "name": "defaultListOrder",
+                    "line": 71,
+                    "short_desc": "the default object list order, or null if list is not sortable. Example: manual",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "orderRequestParameterName": {
+                    "name": "orderRequestParameterName",
+                    "line": 72,
+                    "short_desc": "Name of the request parameter that set the list order (null if list is not sortable)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "resourceCode": {
+                    "name": "resourceCode",
+                    "line": 74,
+                    "short_desc": "the 'resource' code. Example: \"admin.configuration.message\"",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "createEventIdentifier": {
+                    "name": "createEventIdentifier",
+                    "line": 76,
+                    "short_desc": "the dispatched create TheliaEvent identifier. Example: TheliaEvents::MESSAGE_CREATE",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "updateEventIdentifier": {
+                    "name": "updateEventIdentifier",
+                    "line": 77,
+                    "short_desc": "the dispatched update TheliaEvent identifier. Example: TheliaEvents::MESSAGE_UPDATE",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "deleteEventIdentifier": {
+                    "name": "deleteEventIdentifier",
+                    "line": 78,
+                    "short_desc": "the dispatched delete TheliaEvent identifier. Example: TheliaEvents::MESSAGE_DELETE",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "visibilityToggleEventIdentifier": {
+                    "name": "visibilityToggleEventIdentifier",
+                    "line": 79,
+                    "short_desc": "the dispatched visibility toggle TheliaEvent identifier, or null if the object has no visible options. Example: TheliaEvents::MESSAGE_TOGGLE_VISIBILITY",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "changePositionEventIdentifier": {
+                    "name": "changePositionEventIdentifier",
+                    "line": 80,
+                    "short_desc": "the dispatched position change TheliaEvent identifier, or null if the object has no position. Example: TheliaEvents::MESSAGE_UPDATE_POSITION",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "defaultAction": {
+            "name": "defaultAction",
+            "line": 268,
+            "short_desc": "The default action is displaying the list.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Controller\\Admin\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the response",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "createAction": {
+            "name": "createAction",
+            "line": 279,
+            "short_desc": "Create a new object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Controller\\Admin\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the response",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "updateAction": {
+            "name": "updateAction",
+            "line": 340,
+            "short_desc": "Load a object for modification, and display the edit template.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Controller\\Admin\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the response",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "processUpdateAction": {
+            "name": "processUpdateAction",
+            "line": 366,
+            "short_desc": "Save changes on a modified object, and either go back to the object list, or stay on the edition page.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Controller\\Admin\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the response",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "updatePositionAction": {
+            "name": "updatePositionAction",
+            "line": 431,
+            "short_desc": "Update object position (only for objects whichsupport that)",
+            "long_desc": "FIXME: integrate with genericUpdatePositionAction",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setToggleVisibilityAction": {
+            "name": "setToggleVisibilityAction",
+            "line": 499,
+            "short_desc": "Online status toggle (only for object which support it)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "deleteAction": {
+            "name": "deleteAction",
+            "line": 521,
+            "short_desc": "Delete an object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Controller\\Admin\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the response",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

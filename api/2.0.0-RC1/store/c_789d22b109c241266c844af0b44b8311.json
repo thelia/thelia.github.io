@@ -1,0 +1,3566 @@
+{
+    "name": "Thelia\\Model\\Base\\FolderImageQuery",
+    "line": 69,
+    "short_desc": "Base class that represents a query for the 'folder_image' table.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "method": [
+            [
+                "ChildFolderImageQuery",
+                "orderById($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "orderByFolderId($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "folder_id",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "orderByFile($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "file",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "orderByPosition($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "orderByCreatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "orderByUpdatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "groupById()",
+                "Group",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "groupByFolderId()",
+                "Group",
+                "by",
+                "the",
+                "folder_id",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "groupByFile()",
+                "Group",
+                "by",
+                "the",
+                "file",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "groupByPosition()",
+                "Group",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "groupByCreatedAt()",
+                "Group",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "groupByUpdatedAt()",
+                "Group",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "leftJoin($relation)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "rightJoin($relation)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "innerJoin($relation)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "leftJoinFolder($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Folder",
+                "relation"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "rightJoinFolder($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Folder",
+                "relation"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "innerJoinFolder($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Folder",
+                "relation"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "leftJoinFolderImageI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "FolderImageI18n",
+                "relation"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "rightJoinFolderImageI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "FolderImageI18n",
+                "relation"
+            ],
+            [
+                "ChildFolderImageQuery",
+                "innerJoinFolderImageI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "FolderImageI18n",
+                "relation"
+            ],
+            [
+                "ChildFolderImage",
+                "findOne(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "matching",
+                "the",
+                "query"
+            ],
+            [
+                "ChildFolderImage",
+                "findOneOrCreate(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "matching",
+                "the",
+                "query,",
+                "or",
+                "a",
+                "new",
+                "ChildFolderImage",
+                "object",
+                "populated",
+                "from",
+                "the",
+                "query",
+                "conditions",
+                "when",
+                "no",
+                "match",
+                "is",
+                "found"
+            ],
+            [
+                "ChildFolderImage",
+                "findOneById(int",
+                "$id)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildFolderImage",
+                "findOneByFolderId(int",
+                "$folder_id)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "filtered",
+                "by",
+                "the",
+                "folder_id",
+                "column"
+            ],
+            [
+                "ChildFolderImage",
+                "findOneByFile(string",
+                "$file)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "filtered",
+                "by",
+                "the",
+                "file",
+                "column"
+            ],
+            [
+                "ChildFolderImage",
+                "findOneByPosition(int",
+                "$position)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "filtered",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "ChildFolderImage",
+                "findOneByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildFolderImage",
+                "findOneByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildFolderImage",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "array",
+                "findById(int",
+                "$id)",
+                "Return",
+                "ChildFolderImage",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "array",
+                "findByFolderId(int",
+                "$folder_id)",
+                "Return",
+                "ChildFolderImage",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "folder_id",
+                "column"
+            ],
+            [
+                "array",
+                "findByFile(string",
+                "$file)",
+                "Return",
+                "ChildFolderImage",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "file",
+                "column"
+            ],
+            [
+                "array",
+                "findByPosition(int",
+                "$position)",
+                "Return",
+                "ChildFolderImage",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "array",
+                "findByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "ChildFolderImage",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "ChildFolderImage",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model\\Base",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Base\/FolderImageQuery.php",
+    "hash": "bc4cc8f20bccce6bb2864bcb324adde0203db9e3",
+    "parent": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Exception": "Exception",
+        "PDO": "PDO",
+        "Propel": "Propel\\Runtime\\Propel",
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "ModelJoin": "Propel\\Runtime\\ActiveQuery\\ModelJoin",
+        "Collection": "Propel\\Runtime\\Collection\\Collection",
+        "ObjectCollection": "Propel\\Runtime\\Collection\\ObjectCollection",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "ChildFolderImage": "Thelia\\Model\\FolderImage",
+        "ChildFolderImageI18nQuery": "Thelia\\Model\\FolderImageI18nQuery",
+        "ChildFolderImageQuery": "Thelia\\Model\\FolderImageQuery",
+        "FolderImageTableMap": "Thelia\\Model\\Map\\FolderImageTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 79,
+            "short_desc": "Initializes internal state of \\Thelia\\Model\\Base\\FolderImageQuery object.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dbName": {
+                    "name": "dbName",
+                    "line": 79,
+                    "short_desc": "The database name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'thelia'",
+                    "is_by_ref": false
+                },
+                "modelName": {
+                    "name": "modelName",
+                    "line": 79,
+                    "short_desc": "The phpName of a model, e.g. 'Book'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'\\\\Thelia\\\\Model\\\\FolderImage'",
+                    "is_by_ref": false
+                },
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 79,
+                    "short_desc": "The alias for the model in this query, e.g. 'b'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 92,
+            "short_desc": "Returns a new ChildFolderImageQuery object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 92,
+                    "short_desc": "The alias of a model in the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "criteria": {
+                    "name": "criteria",
+                    "line": 92,
+                    "short_desc": "Optional Criteria to build the query from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\Criteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPk": {
+            "name": "findPk",
+            "line": 122,
+            "short_desc": "Find object by primary key.",
+            "long_desc": "Propel uses the instance pool to skip the database if the object exists.\nGo fast if the query is untouched.\n\n<code>\n$obj  = $c->findPk(12, $con);\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImage",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the result, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 122,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 122,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPks": {
+            "name": "findPks",
+            "line": 204,
+            "short_desc": "Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); <\/code>",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\Collection\\ObjectCollection",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the list of results, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 204,
+                    "short_desc": "Primary keys to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 204,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKey": {
+            "name": "filterByPrimaryKey",
+            "line": 225,
+            "short_desc": "Filter the query by primary key",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 225,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKeys": {
+            "name": "filterByPrimaryKeys",
+            "line": 237,
+            "short_desc": "Filter the query by a list of primary keys",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 237,
+                    "short_desc": "The list of primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterById": {
+            "name": "filterById",
+            "line": 260,
+            "short_desc": "Filter the query on the id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterById(1234); \/\/ WHERE id = 1234\n$query->filterById(array(12, 34)); \/\/ WHERE id IN (12, 34)\n$query->filterById(array('min' => 12)); \/\/ WHERE id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 260,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 260,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByFolderId": {
+            "name": "filterByFolderId",
+            "line": 303,
+            "short_desc": "Filter the query on the folder_id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByFolderId(1234); \/\/ WHERE folder_id = 1234\n$query->filterByFolderId(array(12, 34)); \/\/ WHERE folder_id IN (12, 34)\n$query->filterByFolderId(array('min' => 12)); \/\/ WHERE folder_id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": {
+                "see": [
+                    [
+                        "filterByFolder()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folderId": {
+                    "name": "folderId",
+                    "line": 303,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 303,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByFile": {
+            "name": "filterByFile",
+            "line": 341,
+            "short_desc": "Filter the query on the file column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByFile('fooValue');   \/\/ WHERE file = 'fooValue'\n$query->filterByFile('%fooValue%'); \/\/ WHERE file LIKE '%fooValue%'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "file": {
+                    "name": "file",
+                    "line": 341,
+                    "short_desc": "The value to use as filter. Accepts wildcards (* and % trigger a LIKE)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 341,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPosition": {
+            "name": "filterByPosition",
+            "line": 373,
+            "short_desc": "Filter the query on the position column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByPosition(1234); \/\/ WHERE position = 1234\n$query->filterByPosition(array(12, 34)); \/\/ WHERE position IN (12, 34)\n$query->filterByPosition(array('min' => 12)); \/\/ WHERE position > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "position": {
+                    "name": "position",
+                    "line": 373,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 373,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByCreatedAt": {
+            "name": "filterByCreatedAt",
+            "line": 416,
+            "short_desc": "Filter the query on the created_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByCreatedAt('2011-03-14'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt('now'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt(array('max' => 'yesterday')); \/\/ WHERE created_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "createdAt": {
+                    "name": "createdAt",
+                    "line": 416,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 416,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByUpdatedAt": {
+            "name": "filterByUpdatedAt",
+            "line": 459,
+            "short_desc": "Filter the query on the updated_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByUpdatedAt('2011-03-14'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt('now'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt(array('max' => 'yesterday')); \/\/ WHERE updated_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "line": 459,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 459,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByFolder": {
+            "name": "filterByFolder",
+            "line": 490,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\Folder object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folder": {
+                    "name": "folder",
+                    "line": 490,
+                    "short_desc": "The related object(s) to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\Folder",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 490,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinFolder": {
+            "name": "joinFolder",
+            "line": 515,
+            "short_desc": "Adds a JOIN clause to the query using the Folder relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 515,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 515,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useFolderQuery": {
+            "name": "useFolderQuery",
+            "line": 550,
+            "short_desc": "Use the Folder relation Folder object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\FolderQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 550,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 550,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByFolderImageI18n": {
+            "name": "filterByFolderImageI18n",
+            "line": 565,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\FolderImageI18n object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folderImageI18n": {
+                    "name": "folderImageI18n",
+                    "line": 565,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\FolderImageI18n",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 565,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinFolderImageI18n": {
+            "name": "joinFolderImageI18n",
+            "line": 588,
+            "short_desc": "Adds a JOIN clause to the query using the FolderImageI18n relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 588,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 588,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'LEFT JOIN'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useFolderImageI18nQuery": {
+            "name": "useFolderImageI18nQuery",
+            "line": 623,
+            "short_desc": "Use the FolderImageI18n relation FolderImageI18n object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\FolderImageI18nQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 623,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 623,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'LEFT JOIN'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "prune": {
+            "name": "prune",
+            "line": 637,
+            "short_desc": "Exclude object from result",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folderImage": {
+                    "name": "folderImage",
+                    "line": 637,
+                    "short_desc": "Object to remove from the list of results",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\FolderImage",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "doDeleteAll": {
+            "name": "doDeleteAll",
+            "line": 652,
+            "short_desc": "Deletes all rows from the folder_image table.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 652,
+                    "short_desc": "the connection to use",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 689,
+            "short_desc": "Performs a DELETE on the database, given a ChildFolderImage or Criteria object OR a primary key value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "Any exceptions caught during processing will be rethrown wrapped into a PropelException."
+                ]
+            ],
+            "errors": [
+                "\"2\" @param tags are defined by \"1\" are expected"
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 689,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyUpdated": {
+            "name": "recentlyUpdated",
+            "line": 729,
+            "short_desc": "Filter by the latest updated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 729,
+                    "short_desc": "Maximum age of the latest update in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyCreated": {
+            "name": "recentlyCreated",
+            "line": 741,
+            "short_desc": "Filter by the latest created",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 741,
+                    "short_desc": "Maximum age of in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "lastUpdatedFirst": {
+            "name": "lastUpdatedFirst",
+            "line": 751,
+            "short_desc": "Order by update date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstUpdatedFirst": {
+            "name": "firstUpdatedFirst",
+            "line": 761,
+            "short_desc": "Order by update date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "lastCreatedFirst": {
+            "name": "lastCreatedFirst",
+            "line": 771,
+            "short_desc": "Order by create date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstCreatedFirst": {
+            "name": "firstCreatedFirst",
+            "line": 781,
+            "short_desc": "Order by create date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "joinI18n": {
+            "name": "joinI18n",
+            "line": 797,
+            "short_desc": "Adds a JOIN clause to the query using the i18n relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 797,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 797,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 797,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinWithI18n": {
+            "name": "joinWithI18n",
+            "line": 815,
+            "short_desc": "Adds a JOIN clause to the query and hydrates the related I18n object.",
+            "long_desc": "Shortcut for $c->joinI18n($locale)->with()",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 815,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 815,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useI18nQuery": {
+            "name": "useI18nQuery",
+            "line": 836,
+            "short_desc": "Use the I18n relation query object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\FolderImageI18nQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 836,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 836,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 836,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "orderById": {
+            "name": "orderById",
+            "line": 69,
+            "short_desc": "Order by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByFolderId": {
+            "name": "orderByFolderId",
+            "line": 69,
+            "short_desc": "Order by the folder_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByFile": {
+            "name": "orderByFile",
+            "line": 69,
+            "short_desc": "Order by the file column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByPosition": {
+            "name": "orderByPosition",
+            "line": 69,
+            "short_desc": "Order by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByCreatedAt": {
+            "name": "orderByCreatedAt",
+            "line": 69,
+            "short_desc": "Order by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByUpdatedAt": {
+            "name": "orderByUpdatedAt",
+            "line": 69,
+            "short_desc": "Order by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "groupById": {
+            "name": "groupById",
+            "line": 69,
+            "short_desc": "Group by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByFolderId": {
+            "name": "groupByFolderId",
+            "line": 69,
+            "short_desc": "Group by the folder_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByFile": {
+            "name": "groupByFile",
+            "line": 69,
+            "short_desc": "Group by the file column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByPosition": {
+            "name": "groupByPosition",
+            "line": 69,
+            "short_desc": "Group by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByCreatedAt": {
+            "name": "groupByCreatedAt",
+            "line": 69,
+            "short_desc": "Group by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByUpdatedAt": {
+            "name": "groupByUpdatedAt",
+            "line": 69,
+            "short_desc": "Group by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "leftJoin": {
+            "name": "leftJoin",
+            "line": 69,
+            "short_desc": "Adds a LEFT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoin": {
+            "name": "rightJoin",
+            "line": 69,
+            "short_desc": "Adds a RIGHT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoin": {
+            "name": "innerJoin",
+            "line": 69,
+            "short_desc": "Adds a INNER JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinFolder": {
+            "name": "leftJoinFolder",
+            "line": 69,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the Folder relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinFolder": {
+            "name": "rightJoinFolder",
+            "line": 69,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the Folder relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinFolder": {
+            "name": "innerJoinFolder",
+            "line": 69,
+            "short_desc": "Adds a INNER JOIN clause to the query using the Folder relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinFolderImageI18n": {
+            "name": "leftJoinFolderImageI18n",
+            "line": 69,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the FolderImageI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinFolderImageI18n": {
+            "name": "rightJoinFolderImageI18n",
+            "line": 69,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the FolderImageI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinFolderImageI18n": {
+            "name": "innerJoinFolderImageI18n",
+            "line": 69,
+            "short_desc": "Adds a INNER JOIN clause to the query using the FolderImageI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImageQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOne": {
+            "name": "findOne",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage matching the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneOrCreate": {
+            "name": "findOneOrCreate",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage matching the query, or a new ChildFolderImage object populated from the query conditions when no match is found",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneById": {
+            "name": "findOneById",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByFolderId": {
+            "name": "findOneByFolderId",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage filtered by the folder_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folder_id": {
+                    "name": "folder_id",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByFile": {
+            "name": "findOneByFile",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage filtered by the file column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "file": {
+                    "name": "file",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByPosition": {
+            "name": "findOneByPosition",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage filtered by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "position": {
+                    "name": "position",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByCreatedAt": {
+            "name": "findOneByCreatedAt",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByUpdatedAt": {
+            "name": "findOneByUpdatedAt",
+            "line": 69,
+            "short_desc": "Return the first ChildFolderImage filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildFolderImage",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findById": {
+            "name": "findById",
+            "line": 69,
+            "short_desc": "Return ChildFolderImage objects filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByFolderId": {
+            "name": "findByFolderId",
+            "line": 69,
+            "short_desc": "Return ChildFolderImage objects filtered by the folder_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folder_id": {
+                    "name": "folder_id",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByFile": {
+            "name": "findByFile",
+            "line": 69,
+            "short_desc": "Return ChildFolderImage objects filtered by the file column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "file": {
+                    "name": "file",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByPosition": {
+            "name": "findByPosition",
+            "line": 69,
+            "short_desc": "Return ChildFolderImage objects filtered by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "position": {
+                    "name": "position",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByCreatedAt": {
+            "name": "findByCreatedAt",
+            "line": 69,
+            "short_desc": "Return ChildFolderImage objects filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByUpdatedAt": {
+            "name": "findByUpdatedAt",
+            "line": 69,
+            "short_desc": "Return ChildFolderImage objects filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 69,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

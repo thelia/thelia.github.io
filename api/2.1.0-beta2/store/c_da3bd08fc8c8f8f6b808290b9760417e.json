@@ -1,0 +1,119 @@
+{
+    "name": "Thelia\\Core\\Template\\Loop\\CategoryPath",
+    "line": 47,
+    "short_desc": "Category path loop, to get the path to a given category.",
+    "long_desc": "- category is the category id\n- depth is the maximum depth to go, default unlimited\n- level is the exact level to return. Example: if level = 2 and the path is c1 -> c2 -> c3 -> c4, the loop will return c2\n- visible if true or missing, only visible categories will be displayed. If false, all categories (visible or not) are returned.\n\nexample :\n\n<THELIA_cat type=\"category-path\" category=\"3\">\n     <a href=\"#URL\">#TITLE<\/a>\n<\/THELIA_cat>\n\n\nClass CategoryPath",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\Template\\Loop"
+            ]
+        ],
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Template\\Loop",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/Template\/Loop\/CategoryPath.php",
+    "hash": "8584a20c6dfe9dc64020827966fcb6b100480ac7",
+    "parent": "Thelia\\Core\\Template\\Element\\BaseI18nLoop",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ArraySearchLoopInterface": "Thelia\\Core\\Template\\Element\\ArraySearchLoopInterface",
+        "BaseI18nLoop": "Thelia\\Core\\Template\\Element\\BaseI18nLoop",
+        "LoopResult": "Thelia\\Core\\Template\\Element\\LoopResult",
+        "LoopResultRow": "Thelia\\Core\\Template\\Element\\LoopResultRow",
+        "ArgumentCollection": "Thelia\\Core\\Template\\Loop\\Argument\\ArgumentCollection",
+        "Argument": "Thelia\\Core\\Template\\Loop\\Argument\\Argument",
+        "CategoryQuery": "Thelia\\Model\\CategoryQuery",
+        "Type": "Thelia\\Type",
+        "BooleanOrBothType": "Thelia\\Type\\BooleanOrBothType"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Core\\Template\\Element\\ArraySearchLoopInterface": "Thelia\\Core\\Template\\Element\\ArraySearchLoopInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "buildArray": {
+            "name": "buildArray",
+            "line": 61,
+            "short_desc": "this method returns an array",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "parseResults": {
+            "name": "parseResults",
+            "line": 116,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "loopResult": {
+                    "name": "loopResult",
+                    "line": 116,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Element\\LoopResult",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "LoopResult",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

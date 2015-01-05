@@ -1,0 +1,891 @@
+{
+    "name": "Thelia\\Coupon\\Type\\CouponAbstract",
+    "line": 28,
+    "short_desc": "Assist in writing a CouponInterface",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Coupon\\Type",
+    "file": "\/home\/manu\/dev\/thelia2\/core\/lib\/Thelia\/Coupon\/Type\/CouponAbstract.php",
+    "hash": "75ed0844c6ad346d25a2a931a58837c8ad9de56e",
+    "parent": null,
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ConditionEvaluator": "Thelia\\Condition\\ConditionEvaluator",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "FacadeInterface": "Thelia\\Coupon\\FacadeInterface",
+        "ConditionCollection": "Thelia\\Condition\\ConditionCollection",
+        "ConditionOrganizerInterface": "Thelia\\Condition\\ConditionOrganizerInterface"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Coupon\\Type\\CouponInterface": "Thelia\\Coupon\\Type\\CouponInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 96,
+            "short_desc": "Constructor",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "facade": {
+                    "name": "facade",
+                    "line": 96,
+                    "short_desc": "Service facade",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\FacadeInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FacadeInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setOrganizer": {
+            "name": "setOrganizer",
+            "line": 110,
+            "short_desc": "Set Condition Organizer",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Coupon\\Type\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "organizer": {
+                    "name": "organizer",
+                    "line": 110,
+                    "short_desc": "Manage Condition groups (&& and ||)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\ConditionOrganizerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "set": {
+            "name": "set",
+            "line": 136,
+            "short_desc": "Set Coupon",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Coupon\\Type\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "facade": {
+                    "name": "facade",
+                    "line": 137,
+                    "short_desc": "Provides necessary value from Thelia",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\FacadeInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FacadeInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "code": {
+                    "name": "code",
+                    "line": 138,
+                    "short_desc": "Coupon code (ex: XMAS)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "title": {
+                    "name": "title",
+                    "line": 139,
+                    "short_desc": "Coupon title (ex: Coupon for XMAS)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "shortDescription": {
+                    "name": "shortDescription",
+                    "line": 140,
+                    "short_desc": "Coupon short description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "description": {
+                    "name": "description",
+                    "line": 141,
+                    "short_desc": "Coupon description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "effects": {
+                    "name": "effects",
+                    "line": 142,
+                    "short_desc": "Coupon effects params",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isCumulative": {
+                    "name": "isCumulative",
+                    "line": 143,
+                    "short_desc": "If Coupon is cumulative",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isRemovingPostage": {
+                    "name": "isRemovingPostage",
+                    "line": 144,
+                    "short_desc": "If Coupon is removing postage",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isAvailableOnSpecialOffers": {
+                    "name": "isAvailableOnSpecialOffers",
+                    "line": 145,
+                    "short_desc": "If available on Product already on special offer price",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isEnabled": {
+                    "name": "isEnabled",
+                    "line": 146,
+                    "short_desc": "False if Coupon is disabled by admin",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "maxUsage": {
+                    "name": "maxUsage",
+                    "line": 147,
+                    "short_desc": "How many usage left",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "expirationDate": {
+                    "name": "expirationDate",
+                    "line": 148,
+                    "short_desc": "When the Code is expiring",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\Type\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DateTime",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCode": {
+            "name": "getCode",
+            "line": 176,
+            "short_desc": "Return Coupon code (ex: XMAS)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getTitle": {
+            "name": "getTitle",
+            "line": 186,
+            "short_desc": "Return Coupon title (ex: Coupon for XMAS)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getShortDescription": {
+            "name": "getShortDescription",
+            "line": 196,
+            "short_desc": "Return Coupon short description",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getDescription": {
+            "name": "getDescription",
+            "line": 206,
+            "short_desc": "Return Coupon description",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isCumulative": {
+            "name": "isCumulative",
+            "line": 218,
+            "short_desc": "If Coupon is cumulative or prevent any accumulation If is cumulative you can sum Coupon effects If not cancel all other Coupon and take the last given",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isRemovingPostage": {
+            "name": "isRemovingPostage",
+            "line": 228,
+            "short_desc": "If Coupon is removing Checkout Postage",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "exec": {
+            "name": "exec",
+            "line": 239,
+            "short_desc": "Return effects generated by the coupon A negative value",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "Amount removed from the Total Checkout",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getConditions": {
+            "name": "getConditions",
+            "line": 249,
+            "short_desc": "Return condition to validate the Coupon or not",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\ConditionCollection",
+                    false
+                ]
+            ],
+            "hint_desc": "A set of ConditionInterface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setConditions": {
+            "name": "setConditions",
+            "line": 263,
+            "short_desc": "Replace the existing Conditions by those given in parameter If one Condition is badly implemented, no Condition will be added",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Coupon\\Type\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\InvalidConditionException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "conditions": {
+                    "name": "conditions",
+                    "line": 263,
+                    "short_desc": "ConditionInterface to add",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\ConditionCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConditionCollection",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getExpirationDate": {
+            "name": "getExpirationDate",
+            "line": 275,
+            "short_desc": "Return Coupon expiration date",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isAvailableOnSpecialOffers": {
+            "name": "isAvailableOnSpecialOffers",
+            "line": 286,
+            "short_desc": "Check if the Coupon can be used against a product already with a special offer price",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isEnabled": {
+            "name": "isEnabled",
+            "line": 296,
+            "short_desc": "Check if Coupon has been disabled by admin",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getMaxUsage": {
+            "name": "getMaxUsage",
+            "line": 307,
+            "short_desc": "Return how many time the Coupon can be used again Ex : -1 unlimited",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isExpired": {
+            "name": "isExpired",
+            "line": 317,
+            "short_desc": "Check if the Coupon is already Expired",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getServiceId": {
+            "name": "getServiceId",
+            "line": 334,
+            "short_desc": "Get Coupon Manager service Id",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isMatching": {
+            "name": "isMatching",
+            "line": 345,
+            "short_desc": "Check if the current state of the application is matching this Coupon conditions Thelia variables are given by the FacadeInterface",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "drawBackOfficeInputs": {
+            "name": "drawBackOfficeInputs",
+            "line": 357,
+            "short_desc": "Draw the input displayed in the BackOffice allowing Admin to set its Coupon effect Override this method to do something useful",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML string",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getExtendedInputs": {
+            "name": "getExtendedInputs",
+            "line": 370,
+            "short_desc": "Get all extended inputs name to manage",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": {
+        "INPUT_EXTENDED__NAME": {
+            "name": "INPUT_EXTENDED__NAME",
+            "line": 30,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "INPUT_AMOUNT_NAME": {
+            "name": "INPUT_AMOUNT_NAME",
+            "line": 32,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

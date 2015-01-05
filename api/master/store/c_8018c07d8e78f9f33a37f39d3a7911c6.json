@@ -1,0 +1,637 @@
+{
+    "name": "Thelia\\Core\\FileFormat\\Archive\\ArchiveBuilderInterface",
+    "line": 22,
+    "short_desc": "Interface ArchiveBuilderInterface",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\FileFormat\\Archive"
+            ]
+        ],
+        "author": [
+            [
+                "Benjamin",
+                "Perche",
+                "<bperche@openstudio.fr>",
+                "This",
+                "interface",
+                "defines",
+                "the",
+                "methods",
+                "that",
+                "an",
+                "archive",
+                "builder",
+                "must",
+                "have."
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\FileFormat\\Archive",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/FileFormat\/Archive\/ArchiveBuilderInterface.php",
+    "hash": "458e2e5b4dbd6cbfa9d5d90560976d542003ba5c",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [
+
+    ],
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "addFile": {
+            "name": "addFile",
+            "line": 38,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\FileFormat\\Archive\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\FileNotFoundException",
+                    ""
+                ],
+                [
+                    "\\Thelia\\Exception\\FileNotReadableException",
+                    ""
+                ],
+                [
+                    "\\ErrorException",
+                    "This methods adds a file in the archive. If the file is local, $isOnline must be false, If the file online, $filePath must be an URL."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "filePath": {
+                    "name": "filePath",
+                    "line": 38,
+                    "short_desc": "It is the path to access the file.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "directoryInArchive": {
+                    "name": "directoryInArchive",
+                    "line": 38,
+                    "short_desc": "This is the directory where it will be stored in the archive",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'\/'",
+                    "is_by_ref": false
+                },
+                "name": {
+                    "name": "name",
+                    "line": 38,
+                    "short_desc": "The name of the file in the archive. if it null or empty, it keeps the same name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ],
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "isOnline": {
+                    "name": "isOnline",
+                    "line": 38,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addFileFromString": {
+            "name": "addFileFromString",
+            "line": 49,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\ErrorException",
+                    "This method creates a file in the archive with its content"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "content": {
+                    "name": "content",
+                    "line": 49,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Archive\\$content",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "name": {
+                    "name": "name",
+                    "line": 49,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Archive\\$name",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "directoryInArchive": {
+                    "name": "directoryInArchive",
+                    "line": 49,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'\/'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getFileContent": {
+            "name": "getFileContent",
+            "line": 60,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\FileNotFoundException",
+                    ""
+                ],
+                [
+                    "\\Thelia\\Exception\\FileNotReadableException",
+                    ""
+                ],
+                [
+                    "\\ErrorException",
+                    "This method returns a file content"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pathToFile": {
+                    "name": "pathToFile",
+                    "line": 60,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteFile": {
+            "name": "deleteFile",
+            "line": 69,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\FileFormat\\Archive\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\FileNotFoundException",
+                    ""
+                ],
+                [
+                    "\\ErrorException",
+                    "This method deletes a file in the archive"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pathInArchive": {
+                    "name": "pathInArchive",
+                    "line": 69,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Archive\\$pathInArchive",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addDirectory": {
+            "name": "addDirectory",
+            "line": 78,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\FileFormat\\Archive\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\ErrorException",
+                    "This method creates an empty directory"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "directoryPath": {
+                    "name": "directoryPath",
+                    "line": 78,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Archive\\$directoryPath",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "buildArchiveResponse": {
+            "name": "buildArchiveResponse",
+            "line": 86,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "This method return an instance of a Response with the archive as content.",
+            "tags": {
+                "params": [
+                    [
+                        "string",
+                        "$filename"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "filename": {
+                    "name": "filename",
+                    "line": 86,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "loadArchive": {
+            "name": "loadArchive",
+            "line": 97,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\FileFormat\\Archive\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\FileNotFoundException",
+                    ""
+                ],
+                [
+                    "\\Thelia\\Exception\\HttpUrlException",
+                    "Loads an archive"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pathToArchive": {
+                    "name": "pathToArchive",
+                    "line": 97,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isOnline": {
+                    "name": "isOnline",
+                    "line": 97,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "hasFile": {
+            "name": "hasFile",
+            "line": 105,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "Checks if the archive has a file",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pathToFile": {
+                    "name": "pathToFile",
+                    "line": 105,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Archive\\$pathToFile",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "hasDirectory": {
+            "name": "hasDirectory",
+            "line": 113,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "Check if the archive has a directory",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "directory": {
+                    "name": "directory",
+                    "line": 113,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isAvailable": {
+            "name": "isAvailable",
+            "line": 120,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "Returns conditions for archive builder to be available ( loaded libraries )",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

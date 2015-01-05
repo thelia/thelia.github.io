@@ -1,0 +1,139 @@
+{
+    "name": "Thelia\\Core\\Template\\Loop\\Category",
+    "line": 64,
+    "short_desc": "Category loop, all params available :",
+    "long_desc": "- id : can be an id (eq : 3) or a \"string list\" (eg: 3, 4, 5)\n- parent : categories having this parent id\n- current : current id is used if you are on a category page\n- not_empty : if value is 1, category and subcategories must have at least 1 product\n- visible : default 1, if you want category not visible put 0\n- order : all value available :  'alpha', 'alpha_reverse', 'manual' (default), 'manual_reverse', 'random'\n- exclude : all category id you want to exclude (as for id, an integer or a \"string list\" can be used)\n\nexample :\n\n<THELIA_cat type=\"category\" parent=\"3\" limit=\"4\">\n     #TITLE : #ID\n<\/THELIA_cat>\n\n\nClass Category",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\Template\\Loop"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ],
+            [
+                "Etienne",
+                "Roudeix",
+                "<eroudeix@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Template\\Loop",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/Template\/Loop\/Category.php",
+    "hash": "91e9a4044dfb03523a3aecb14cd341b866de0957",
+    "parent": "Thelia\\Core\\Template\\Element\\BaseI18nLoop",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "BaseI18nLoop": "Thelia\\Core\\Template\\Element\\BaseI18nLoop",
+        "LoopResult": "Thelia\\Core\\Template\\Element\\LoopResult",
+        "LoopResultRow": "Thelia\\Core\\Template\\Element\\LoopResultRow",
+        "ArgumentCollection": "Thelia\\Core\\Template\\Loop\\Argument\\ArgumentCollection",
+        "Argument": "Thelia\\Core\\Template\\Loop\\Argument\\Argument",
+        "CategoryQuery": "Thelia\\Model\\CategoryQuery",
+        "TypeCollection": "Thelia\\Type\\TypeCollection",
+        "Type": "Thelia\\Type",
+        "BooleanOrBothType": "Thelia\\Type\\BooleanOrBothType",
+        "ProductQuery": "Thelia\\Model\\ProductQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": {
+        "timestampable": {
+            "name": "timestampable",
+            "line": 66,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": 1,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        },
+        "versionable": {
+            "name": "versionable",
+            "line": 67,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": 1,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        }
+    },
+    "methods": {
+        "exec": {
+            "name": "exec",
+            "line": 98,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\Template\\Element\\LoopResult",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pagination": {
+                    "name": "pagination",
+                    "line": 98,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Loop\\$pagination",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

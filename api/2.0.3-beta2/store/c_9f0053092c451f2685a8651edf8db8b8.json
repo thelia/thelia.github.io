@@ -1,0 +1,321 @@
+{
+    "name": "Thelia\\Model\\ProductSaleElements",
+    "line": 10,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Model\/ProductSaleElements.php",
+    "hash": "06e502b7ad54ad2648eb930c71848a5102d5968a",
+    "parent": "Thelia\\Model\\Base\\ProductSaleElements",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "BaseProductSaleElements": "Thelia\\Model\\Base\\ProductSaleElements",
+        "ProductPriceTools": "Thelia\\Model\\Tools\\ProductPriceTools",
+        "Calculator": "Thelia\\TaxEngine\\Calculator"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getPrice": {
+            "name": "getPrice",
+            "line": 12,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "virtualColumnName": {
+                    "name": "virtualColumnName",
+                    "line": 12,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'price_PRICE'",
+                    "is_by_ref": false
+                },
+                "discount": {
+                    "name": "discount",
+                    "line": 12,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getPromoPrice": {
+            "name": "getPromoPrice",
+            "line": 27,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "virtualColumnName": {
+                    "name": "virtualColumnName",
+                    "line": 27,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'price_PROMO_PRICE'",
+                    "is_by_ref": false
+                },
+                "discount": {
+                    "name": "discount",
+                    "line": 27,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTaxedPrice": {
+            "name": "getTaxedPrice",
+            "line": 42,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "country": {
+                    "name": "country",
+                    "line": 42,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "virtualColumnName": {
+                    "name": "virtualColumnName",
+                    "line": 42,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'price_PRICE'",
+                    "is_by_ref": false
+                },
+                "discount": {
+                    "name": "discount",
+                    "line": 42,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTaxedPromoPrice": {
+            "name": "getTaxedPromoPrice",
+            "line": 49,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "country": {
+                    "name": "country",
+                    "line": 49,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "virtualColumnName": {
+                    "name": "virtualColumnName",
+                    "line": 49,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'price_PROMO_PRICE'",
+                    "is_by_ref": false
+                },
+                "discount": {
+                    "name": "discount",
+                    "line": 49,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getPricesByCurrency": {
+            "name": "getPricesByCurrency",
+            "line": 68,
+            "short_desc": "Get product prices for a specific currency.",
+            "long_desc": "When the currency is not the default currency, the product prices for this currency is :\n- calculated according to the product price of the default currency. It happens when no product price exists for\n     the currency or when the `from_default_currency` flag is set to `true`\n- set directly in the product price when `from_default_currency` is set to `false`",
+            "hint": [
+                [
+                    "Thelia\\Model\\Tools\\ProductPriceTools",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    ""
+                ]
+            ],
+            "errors": [
+                "\"1\" @param tags are defined by \"2\" are expected"
+            ],
+            "parameters": {
+                "currency": {
+                    "name": "currency",
+                    "line": 68,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Currency",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Currency",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "discount": {
+                    "name": "discount",
+                    "line": 68,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

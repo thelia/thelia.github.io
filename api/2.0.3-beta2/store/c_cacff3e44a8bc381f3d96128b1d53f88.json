@@ -1,0 +1,379 @@
+{
+    "name": "Thelia\\ImportExport\\Export\\ExportHandler",
+    "line": 29,
+    "short_desc": "Interface ExportHandler",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\ImportExport"
+            ]
+        ],
+        "author": [
+            [
+                "Benjamin",
+                "Perche",
+                "<bperche@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\ImportExport\\Export",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/ImportExport\/Export\/ExportHandler.php",
+    "hash": "80b2b15410cf0ce141d363e82bad1204e7db5b0e",
+    "parent": "Thelia\\ImportExport\\AbstractHandler",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "InvalidValueException": "Propel\\Runtime\\ActiveQuery\\Criterion\\Exception\\InvalidValueException",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "FormatterData": "Thelia\\Core\\FileFormat\\Formatting\\FormatterData",
+        "BaseLoop": "Thelia\\Core\\Template\\Element\\BaseLoop",
+        "LoopException": "Thelia\\Core\\Template\\Element\\Exception\\LoopException",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "FileModelInterface": "Thelia\\Files\\FileModelInterface",
+        "Lang": "Thelia\\Model\\Lang",
+        "AbstractHandler": "Thelia\\ImportExport\\AbstractHandler"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getOrder": {
+            "name": "getOrder",
+            "line": 69,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Use this method to access the order.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setOrder": {
+            "name": "setOrder",
+            "line": 80,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 80,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "buildData": {
+            "name": "buildData",
+            "line": 93,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\FileFormat\\Formatting\\FormatterData",
+                    false
+                ]
+            ],
+            "hint_desc": "The method builds the FormatterData for the formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 93,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Lang",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Lang",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "renderLoop": {
+            "name": "renderLoop",
+            "line": 126,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "type": {
+                    "name": "type",
+                    "line": 126,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "args": {
+                    "name": "args",
+                    "line": 126,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setDocumentExport": {
+            "name": "setDocumentExport",
+            "line": 175,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "bool": {
+                    "name": "bool",
+                    "line": 175,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setImageExport": {
+            "name": "setImageExport",
+            "line": 182,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "bool": {
+                    "name": "bool",
+                    "line": 182,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isDocumentExport": {
+            "name": "isDocumentExport",
+            "line": 189,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isImageExport": {
+            "name": "isImageExport",
+            "line": 194,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "buildDataSet": {
+            "name": "buildDataSet",
+            "line": 203,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "Thelia\\Core\\Template\\Element\\BaseLoop",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "17",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 203,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Lang",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Lang",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

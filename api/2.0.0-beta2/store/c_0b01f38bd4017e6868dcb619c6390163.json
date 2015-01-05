@@ -1,0 +1,235 @@
+{
+    "name": "Thelia\\Core\\TheliaHttpKernel",
+    "line": 44,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/TheliaHttpKernel.php",
+    "hash": "a2f6911474102e70d748aade8d2ed5e2ca446dd1",
+    "parent": "Symfony\\Component\\HttpKernel\\HttpKernel",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "HttpKernel": "Symfony\\Component\\HttpKernel\\HttpKernel",
+        "HttpKernelInterface": "Symfony\\Component\\HttpKernel\\HttpKernelInterface",
+        "Request": "Symfony\\Component\\HttpFoundation\\Request",
+        "RedirectResponse": "Symfony\\Component\\HttpFoundation\\RedirectResponse",
+        "ControllerResolverInterface": "Symfony\\Component\\HttpKernel\\Controller\\ControllerResolverInterface",
+        "ContainerInterface": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+        "EventDispatcherInterface": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+        "Session": "Symfony\\Component\\HttpFoundation\\Session",
+        "CurrencyEvent": "Thelia\\Core\\Event\\Currency\\CurrencyEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "Model": "Thelia\\Model"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 50,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dispatcher": {
+                    "name": "dispatcher",
+                    "line": 50,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "EventDispatcherInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "container": {
+                    "name": "container",
+                    "line": 50,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ContainerInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "controllerResolver": {
+                    "name": "controllerResolver",
+                    "line": 50,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpKernel\\Controller\\ControllerResolverInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ControllerResolverInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getContainer": {
+            "name": "getContainer",
+            "line": 57,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "handle": {
+            "name": "handle",
+            "line": 80,
+            "short_desc": "Handles a Request to convert it to a Response.",
+            "long_desc": "When $catch is true, the implementation must catch all exceptions\nand do its best to convert them to a Response instance.",
+            "hint": [
+                [
+                    "Thelia\\Core\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "A Response instance",
+            "tags": {
+                "api\n": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Exception",
+                    "When an Exception occurs during processing"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 80,
+                    "short_desc": "A Request instance",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 80,
+                    "short_desc": "The type of the request (one of HttpKernelInterface::MASTER_REQUEST or HttpKernelInterface::SUB_REQUEST)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "integer",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "HttpKernelInterface::MASTER_REQUEST",
+                    "is_by_ref": false
+                },
+                "catch": {
+                    "name": "catch",
+                    "line": 80,
+                    "short_desc": "Whether to catch exceptions or not",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

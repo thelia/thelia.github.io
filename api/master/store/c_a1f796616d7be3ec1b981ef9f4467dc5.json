@@ -1,0 +1,1647 @@
+{
+    "name": "Thelia\\Log\\Tlog",
+    "line": 27,
+    "short_desc": "Thelia Logger",
+    "long_desc": "Allow to define different level and output.",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ],
+            [
+                "Manuel",
+                "Raynaud",
+                "<manu@thelia.net>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Log",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Log\/Tlog.php",
+    "hash": "c6ebaa95e4f82873f32e626b99613252040069d4",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "LoggerInterface": "Psr\\Log\\LoggerInterface",
+        "Translator": "Thelia\\Core\\Translation\\Translator"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Psr\\Log\\LoggerInterface": "Psr\\Log\\LoggerInterface"
+    },
+    "properties": {
+        "dir_destinations": {
+            "name": "dir_destinations",
+            "line": 91,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": 1,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        }
+    },
+    "methods": {
+        "getInstance": {
+            "name": "getInstance",
+            "line": 104,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Log\\Tlog",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getNewInstance": {
+            "name": "getNewInstance",
+            "line": 123,
+            "short_desc": "Create a new Tlog instance, that could be configured without interfering with the \"main\" instance",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Log\\Tlog",
+                    false
+                ]
+            ],
+            "hint_desc": "a new Tlog instance.",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setDestinations": {
+            "name": "setDestinations",
+            "line": 161,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "destinations": {
+                    "name": "destinations",
+                    "line": 161,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getDestinationsDirectories": {
+            "name": "getDestinationsDirectories",
+            "line": 179,
+            "short_desc": "Return the directories where destinations classes should be searched.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "of directories",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setLevel": {
+            "name": "setLevel",
+            "line": 190,
+            "short_desc": "change the debug level.",
+            "long_desc": "Use Tlog constant : \\Thelia\\Log\\Tlog::DEBUG set level to Debug",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "level": {
+                    "name": "level",
+                    "line": 190,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setPrefix": {
+            "name": "setPrefix",
+            "line": 197,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "prefix": {
+                    "name": "prefix",
+                    "line": 197,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setFiles": {
+            "name": "setFiles",
+            "line": 204,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "files": {
+                    "name": "files",
+                    "line": 204,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setIp": {
+            "name": "setIp",
+            "line": 213,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "ips": {
+                    "name": "ips",
+                    "line": 213,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setShowRedirect": {
+            "name": "setShowRedirect",
+            "line": 222,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "bool": {
+                    "name": "bool",
+                    "line": 222,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setConfig": {
+            "name": "setConfig",
+            "line": 230,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "destination": {
+                    "name": "destination",
+                    "line": 230,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "param": {
+                    "name": "param",
+                    "line": 230,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "valeur": {
+                    "name": "valeur",
+                    "line": 230,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getConfig": {
+            "name": "getConfig",
+            "line": 240,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "destination": {
+                    "name": "destination",
+                    "line": 240,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "param": {
+                    "name": "param",
+                    "line": 240,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "debug": {
+            "name": "debug",
+            "line": 259,
+            "short_desc": "Detailed debug information.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 259,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 259,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addDebug": {
+            "name": "addDebug",
+            "line": 271,
+            "short_desc": "Alias of debug method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addDebug($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "info": {
+            "name": "info",
+            "line": 289,
+            "short_desc": "Interesting events.",
+            "long_desc": "Example: User logs in, SQL logs.",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 289,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 289,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addInfo": {
+            "name": "addInfo",
+            "line": 301,
+            "short_desc": "Alias of info method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addInfo($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "notice": {
+            "name": "notice",
+            "line": 317,
+            "short_desc": "Normal but significant events.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 317,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 317,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addNotice": {
+            "name": "addNotice",
+            "line": 329,
+            "short_desc": "Alias of notice method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addNotice($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "warning": {
+            "name": "warning",
+            "line": 348,
+            "short_desc": "Exceptional occurrences that are not errors.",
+            "long_desc": "Example: Use of deprecated APIs, poor use of an API, undesirable things\nthat are not necessarily wrong.",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 348,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 348,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addWarning": {
+            "name": "addWarning",
+            "line": 360,
+            "short_desc": "Alias of warning method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addWarning($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "error": {
+            "name": "error",
+            "line": 377,
+            "short_desc": "Runtime errors that do not require immediate action but should typically be logged and monitored.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 377,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 377,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addError": {
+            "name": "addError",
+            "line": 389,
+            "short_desc": "Alias of error method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addError($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "err": {
+            "name": "err",
+            "line": 402,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "see": [
+                    [
+                        "error()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 402,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 402,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "critical": {
+            "name": "critical",
+            "line": 416,
+            "short_desc": "Critical conditions.",
+            "long_desc": "Example: Application component unavailable, unexpected exception.",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 416,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 416,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addCritical": {
+            "name": "addCritical",
+            "line": 428,
+            "short_desc": "Alias of critical method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addCritical($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "crit": {
+            "name": "crit",
+            "line": 441,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "see": [
+                    [
+                        "critical()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 441,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 441,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "alert": {
+            "name": "alert",
+            "line": 456,
+            "short_desc": "Action must be taken immediately.",
+            "long_desc": "Example: Entire website down, database unavailable, etc. This should\ntrigger the SMS alerts and wake you up.",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 456,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 456,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addAlert": {
+            "name": "addAlert",
+            "line": 468,
+            "short_desc": "Alias of alert method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addAlert($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "emergency": {
+            "name": "emergency",
+            "line": 484,
+            "short_desc": "System is unusable.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 484,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 484,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addEmergency": {
+            "name": "addEmergency",
+            "line": 496,
+            "short_desc": "Alias of emergency method.",
+            "long_desc": "With this method you can put all parameter you want\n\nex : Tlog::getInstance()->addEmergency($arg1, $arg2, $arg3);",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "log": {
+            "name": "log",
+            "line": 513,
+            "short_desc": "Logs with an arbitrary level.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "level": {
+                    "name": "level",
+                    "line": 513,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "message": {
+                    "name": "message",
+                    "line": 513,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 513,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "write": {
+            "name": "write",
+            "line": 529,
+            "short_desc": "final end method.",
+            "long_desc": "Write log for each destination handler",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "res": {
+                    "name": "res",
+                    "line": 529,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "writeOnExit": {
+            "name": "writeOnExit",
+            "line": 546,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "see": [
+                    [
+                        "write()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "showRedirect": {
+            "name": "showRedirect",
+            "line": 558,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 558,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isActivated": {
+            "name": "isActivated",
+            "line": 583,
+            "short_desc": "check if level is activated and control if current file is activated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "level": {
+                    "name": "level",
+                    "line": 583,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isActivedFile": {
+            "name": "isActivedFile",
+            "line": 605,
+            "short_desc": "check if $file is in authorized files",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "file": {
+                    "name": "file",
+                    "line": 605,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "VAR_LEVEL": {
+            "name": "VAR_LEVEL",
+            "line": 30,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "VAR_DESTINATIONS": {
+            "name": "VAR_DESTINATIONS",
+            "line": 31,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "VAR_PREFIXE": {
+            "name": "VAR_PREFIXE",
+            "line": 32,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "VAR_FILES": {
+            "name": "VAR_FILES",
+            "line": 33,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "VAR_IP": {
+            "name": "VAR_IP",
+            "line": 34,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "VAR_SHOW_REDIRECT": {
+            "name": "VAR_SHOW_REDIRECT",
+            "line": 35,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "DEBUG": {
+            "name": "DEBUG",
+            "line": 38,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "INFO": {
+            "name": "INFO",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "NOTICE": {
+            "name": "NOTICE",
+            "line": 40,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "WARNING": {
+            "name": "WARNING",
+            "line": 41,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "ERROR": {
+            "name": "ERROR",
+            "line": 42,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "CRITICAL": {
+            "name": "CRITICAL",
+            "line": 43,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "ALERT": {
+            "name": "ALERT",
+            "line": 44,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "EMERGENCY": {
+            "name": "EMERGENCY",
+            "line": 45,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "MUET": {
+            "name": "MUET",
+            "line": 46,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "DEFAULT_LEVEL": {
+            "name": "DEFAULT_LEVEL",
+            "line": 60,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "DEFAUT_DESTINATIONS": {
+            "name": "DEFAUT_DESTINATIONS",
+            "line": 61,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "DEFAUT_PREFIXE": {
+            "name": "DEFAUT_PREFIXE",
+            "line": 62,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "DEFAUT_FILES": {
+            "name": "DEFAUT_FILES",
+            "line": 63,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "DEFAUT_IP": {
+            "name": "DEFAUT_IP",
+            "line": 64,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "DEFAUT_SHOW_REDIRECT": {
+            "name": "DEFAUT_SHOW_REDIRECT",
+            "line": 65,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

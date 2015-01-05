@@ -1,0 +1,6046 @@
+{
+    "name": "Thelia\\Model\\Base\\ContentQuery",
+    "line": 97,
+    "short_desc": "Base class that represents a query for the 'content' table.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "method": [
+            [
+                "ChildContentQuery",
+                "orderById($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "orderByVisible($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "visible",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "orderByPosition($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "orderByCreatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "orderByUpdatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "orderByVersion($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "version",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "orderByVersionCreatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "version_created_at",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "orderByVersionCreatedBy($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "version_created_by",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupById()",
+                "Group",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupByVisible()",
+                "Group",
+                "by",
+                "the",
+                "visible",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupByPosition()",
+                "Group",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupByCreatedAt()",
+                "Group",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupByUpdatedAt()",
+                "Group",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupByVersion()",
+                "Group",
+                "by",
+                "the",
+                "version",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupByVersionCreatedAt()",
+                "Group",
+                "by",
+                "the",
+                "version_created_at",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "groupByVersionCreatedBy()",
+                "Group",
+                "by",
+                "the",
+                "version_created_by",
+                "column"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoin($relation)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoin($relation)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoin($relation)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoinContentFolder($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentFolder",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoinContentFolder($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentFolder",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoinContentFolder($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentFolder",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoinContentImage($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentImage",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoinContentImage($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentImage",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoinContentImage($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentImage",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoinContentDocument($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentDocument",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoinContentDocument($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentDocument",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoinContentDocument($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentDocument",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoinProductAssociatedContent($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ProductAssociatedContent",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoinProductAssociatedContent($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ProductAssociatedContent",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoinProductAssociatedContent($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ProductAssociatedContent",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoinCategoryAssociatedContent($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "CategoryAssociatedContent",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoinCategoryAssociatedContent($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "CategoryAssociatedContent",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoinCategoryAssociatedContent($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "CategoryAssociatedContent",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoinContentI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentI18n",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoinContentI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentI18n",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoinContentI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentI18n",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "leftJoinContentVersion($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentVersion",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "rightJoinContentVersion($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentVersion",
+                "relation"
+            ],
+            [
+                "ChildContentQuery",
+                "innerJoinContentVersion($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "ContentVersion",
+                "relation"
+            ],
+            [
+                "ChildContent",
+                "findOne(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "matching",
+                "the",
+                "query"
+            ],
+            [
+                "ChildContent",
+                "findOneOrCreate(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "matching",
+                "the",
+                "query,",
+                "or",
+                "a",
+                "new",
+                "ChildContent",
+                "object",
+                "populated",
+                "from",
+                "the",
+                "query",
+                "conditions",
+                "when",
+                "no",
+                "match",
+                "is",
+                "found"
+            ],
+            [
+                "ChildContent",
+                "findOneById(int",
+                "$id)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildContent",
+                "findOneByVisible(int",
+                "$visible)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "visible",
+                "column"
+            ],
+            [
+                "ChildContent",
+                "findOneByPosition(int",
+                "$position)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "ChildContent",
+                "findOneByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildContent",
+                "findOneByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildContent",
+                "findOneByVersion(int",
+                "$version)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "version",
+                "column"
+            ],
+            [
+                "ChildContent",
+                "findOneByVersionCreatedAt(string",
+                "$version_created_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "version_created_at",
+                "column"
+            ],
+            [
+                "ChildContent",
+                "findOneByVersionCreatedBy(string",
+                "$version_created_by)",
+                "Return",
+                "the",
+                "first",
+                "ChildContent",
+                "filtered",
+                "by",
+                "the",
+                "version_created_by",
+                "column"
+            ],
+            [
+                "array",
+                "findById(int",
+                "$id)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "array",
+                "findByVisible(int",
+                "$visible)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "visible",
+                "column"
+            ],
+            [
+                "array",
+                "findByPosition(int",
+                "$position)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "position",
+                "column"
+            ],
+            [
+                "array",
+                "findByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByVersion(int",
+                "$version)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "version",
+                "column"
+            ],
+            [
+                "array",
+                "findByVersionCreatedAt(string",
+                "$version_created_at)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "version_created_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByVersionCreatedBy(string",
+                "$version_created_by)",
+                "Return",
+                "ChildContent",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "version_created_by",
+                "column"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model\\Base",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Base\/ContentQuery.php",
+    "hash": "64bfb0a2db6000db1df41a40bb938ffb2f7c3915",
+    "parent": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Exception": "Exception",
+        "PDO": "PDO",
+        "Propel": "Propel\\Runtime\\Propel",
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "ModelJoin": "Propel\\Runtime\\ActiveQuery\\ModelJoin",
+        "Collection": "Propel\\Runtime\\Collection\\Collection",
+        "ObjectCollection": "Propel\\Runtime\\Collection\\ObjectCollection",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "ChildContent": "Thelia\\Model\\Content",
+        "ChildContentI18nQuery": "Thelia\\Model\\ContentI18nQuery",
+        "ChildContentQuery": "Thelia\\Model\\ContentQuery",
+        "ContentTableMap": "Thelia\\Model\\Map\\ContentTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 114,
+            "short_desc": "Initializes internal state of \\Thelia\\Model\\Base\\ContentQuery object.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dbName": {
+                    "name": "dbName",
+                    "line": 114,
+                    "short_desc": "The database name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'thelia'",
+                    "is_by_ref": false
+                },
+                "modelName": {
+                    "name": "modelName",
+                    "line": 114,
+                    "short_desc": "The phpName of a model, e.g. 'Book'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'\\\\Thelia\\\\Model\\\\Content'",
+                    "is_by_ref": false
+                },
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 114,
+                    "short_desc": "The alias for the model in this query, e.g. 'b'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 127,
+            "short_desc": "Returns a new ChildContentQuery object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 127,
+                    "short_desc": "The alias of a model in the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "criteria": {
+                    "name": "criteria",
+                    "line": 127,
+                    "short_desc": "Optional Criteria to build the query from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\Criteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPk": {
+            "name": "findPk",
+            "line": 157,
+            "short_desc": "Find object by primary key.",
+            "long_desc": "Propel uses the instance pool to skip the database if the object exists.\nGo fast if the query is untouched.\n\n<code>\n$obj  = $c->findPk(12, $con);\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\Content",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the result, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 157,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 157,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPks": {
+            "name": "findPks",
+            "line": 239,
+            "short_desc": "Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); <\/code>",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\Collection\\ObjectCollection",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the list of results, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 239,
+                    "short_desc": "Primary keys to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 239,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKey": {
+            "name": "filterByPrimaryKey",
+            "line": 260,
+            "short_desc": "Filter the query by primary key",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 260,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKeys": {
+            "name": "filterByPrimaryKeys",
+            "line": 272,
+            "short_desc": "Filter the query by a list of primary keys",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 272,
+                    "short_desc": "The list of primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterById": {
+            "name": "filterById",
+            "line": 295,
+            "short_desc": "Filter the query on the id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterById(1234); \/\/ WHERE id = 1234\n$query->filterById(array(12, 34)); \/\/ WHERE id IN (12, 34)\n$query->filterById(array('min' => 12)); \/\/ WHERE id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 295,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 295,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByVisible": {
+            "name": "filterByVisible",
+            "line": 336,
+            "short_desc": "Filter the query on the visible column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByVisible(1234); \/\/ WHERE visible = 1234\n$query->filterByVisible(array(12, 34)); \/\/ WHERE visible IN (12, 34)\n$query->filterByVisible(array('min' => 12)); \/\/ WHERE visible > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "visible": {
+                    "name": "visible",
+                    "line": 336,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 336,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPosition": {
+            "name": "filterByPosition",
+            "line": 377,
+            "short_desc": "Filter the query on the position column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByPosition(1234); \/\/ WHERE position = 1234\n$query->filterByPosition(array(12, 34)); \/\/ WHERE position IN (12, 34)\n$query->filterByPosition(array('min' => 12)); \/\/ WHERE position > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "position": {
+                    "name": "position",
+                    "line": 377,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 377,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByCreatedAt": {
+            "name": "filterByCreatedAt",
+            "line": 420,
+            "short_desc": "Filter the query on the created_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByCreatedAt('2011-03-14'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt('now'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt(array('max' => 'yesterday')); \/\/ WHERE created_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "createdAt": {
+                    "name": "createdAt",
+                    "line": 420,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 420,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByUpdatedAt": {
+            "name": "filterByUpdatedAt",
+            "line": 463,
+            "short_desc": "Filter the query on the updated_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByUpdatedAt('2011-03-14'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt('now'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt(array('max' => 'yesterday')); \/\/ WHERE updated_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "line": 463,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 463,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByVersion": {
+            "name": "filterByVersion",
+            "line": 504,
+            "short_desc": "Filter the query on the version column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByVersion(1234); \/\/ WHERE version = 1234\n$query->filterByVersion(array(12, 34)); \/\/ WHERE version IN (12, 34)\n$query->filterByVersion(array('min' => 12)); \/\/ WHERE version > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version": {
+                    "name": "version",
+                    "line": 504,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 504,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByVersionCreatedAt": {
+            "name": "filterByVersionCreatedAt",
+            "line": 547,
+            "short_desc": "Filter the query on the version_created_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByVersionCreatedAt('2011-03-14'); \/\/ WHERE version_created_at = '2011-03-14'\n$query->filterByVersionCreatedAt('now'); \/\/ WHERE version_created_at = '2011-03-14'\n$query->filterByVersionCreatedAt(array('max' => 'yesterday')); \/\/ WHERE version_created_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "versionCreatedAt": {
+                    "name": "versionCreatedAt",
+                    "line": 547,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 547,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByVersionCreatedBy": {
+            "name": "filterByVersionCreatedBy",
+            "line": 585,
+            "short_desc": "Filter the query on the version_created_by column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByVersionCreatedBy('fooValue');   \/\/ WHERE version_created_by = 'fooValue'\n$query->filterByVersionCreatedBy('%fooValue%'); \/\/ WHERE version_created_by LIKE '%fooValue%'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "versionCreatedBy": {
+                    "name": "versionCreatedBy",
+                    "line": 585,
+                    "short_desc": "The value to use as filter. Accepts wildcards (* and % trigger a LIKE)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 585,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByContentFolder": {
+            "name": "filterByContentFolder",
+            "line": 607,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\ContentFolder object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "contentFolder": {
+                    "name": "contentFolder",
+                    "line": 607,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\ContentFolder",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 607,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinContentFolder": {
+            "name": "joinContentFolder",
+            "line": 630,
+            "short_desc": "Adds a JOIN clause to the query using the ContentFolder relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 630,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 630,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useContentFolderQuery": {
+            "name": "useContentFolderQuery",
+            "line": 665,
+            "short_desc": "Use the ContentFolder relation ContentFolder object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ContentFolderQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 665,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 665,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByContentImage": {
+            "name": "filterByContentImage",
+            "line": 680,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\ContentImage object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "contentImage": {
+                    "name": "contentImage",
+                    "line": 680,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\ContentImage",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 680,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinContentImage": {
+            "name": "joinContentImage",
+            "line": 703,
+            "short_desc": "Adds a JOIN clause to the query using the ContentImage relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 703,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 703,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useContentImageQuery": {
+            "name": "useContentImageQuery",
+            "line": 738,
+            "short_desc": "Use the ContentImage relation ContentImage object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ContentImageQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 738,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 738,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByContentDocument": {
+            "name": "filterByContentDocument",
+            "line": 753,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\ContentDocument object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "contentDocument": {
+                    "name": "contentDocument",
+                    "line": 753,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\ContentDocument",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 753,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinContentDocument": {
+            "name": "joinContentDocument",
+            "line": 776,
+            "short_desc": "Adds a JOIN clause to the query using the ContentDocument relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 776,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 776,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useContentDocumentQuery": {
+            "name": "useContentDocumentQuery",
+            "line": 811,
+            "short_desc": "Use the ContentDocument relation ContentDocument object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ContentDocumentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 811,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 811,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByProductAssociatedContent": {
+            "name": "filterByProductAssociatedContent",
+            "line": 826,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\ProductAssociatedContent object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productAssociatedContent": {
+                    "name": "productAssociatedContent",
+                    "line": 826,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\ProductAssociatedContent",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 826,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinProductAssociatedContent": {
+            "name": "joinProductAssociatedContent",
+            "line": 849,
+            "short_desc": "Adds a JOIN clause to the query using the ProductAssociatedContent relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 849,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 849,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useProductAssociatedContentQuery": {
+            "name": "useProductAssociatedContentQuery",
+            "line": 884,
+            "short_desc": "Use the ProductAssociatedContent relation ProductAssociatedContent object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ProductAssociatedContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 884,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 884,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByCategoryAssociatedContent": {
+            "name": "filterByCategoryAssociatedContent",
+            "line": 899,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\CategoryAssociatedContent object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "categoryAssociatedContent": {
+                    "name": "categoryAssociatedContent",
+                    "line": 899,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\CategoryAssociatedContent",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 899,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinCategoryAssociatedContent": {
+            "name": "joinCategoryAssociatedContent",
+            "line": 922,
+            "short_desc": "Adds a JOIN clause to the query using the CategoryAssociatedContent relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 922,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 922,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useCategoryAssociatedContentQuery": {
+            "name": "useCategoryAssociatedContentQuery",
+            "line": 957,
+            "short_desc": "Use the CategoryAssociatedContent relation CategoryAssociatedContent object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\CategoryAssociatedContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 957,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 957,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByContentI18n": {
+            "name": "filterByContentI18n",
+            "line": 972,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\ContentI18n object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "contentI18n": {
+                    "name": "contentI18n",
+                    "line": 972,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\ContentI18n",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 972,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinContentI18n": {
+            "name": "joinContentI18n",
+            "line": 995,
+            "short_desc": "Adds a JOIN clause to the query using the ContentI18n relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 995,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 995,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'LEFT JOIN'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useContentI18nQuery": {
+            "name": "useContentI18nQuery",
+            "line": 1030,
+            "short_desc": "Use the ContentI18n relation ContentI18n object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ContentI18nQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 1030,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 1030,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'LEFT JOIN'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByContentVersion": {
+            "name": "filterByContentVersion",
+            "line": 1045,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\ContentVersion object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "contentVersion": {
+                    "name": "contentVersion",
+                    "line": 1045,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\ContentVersion",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 1045,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinContentVersion": {
+            "name": "joinContentVersion",
+            "line": 1068,
+            "short_desc": "Adds a JOIN clause to the query using the ContentVersion relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 1068,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 1068,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useContentVersionQuery": {
+            "name": "useContentVersionQuery",
+            "line": 1103,
+            "short_desc": "Use the ContentVersion relation ContentVersion object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ContentVersionQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 1103,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 1103,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByFolder": {
+            "name": "filterByFolder",
+            "line": 1119,
+            "short_desc": "Filter the query by a related Folder object using the content_folder table as cross reference",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "folder": {
+                    "name": "folder",
+                    "line": 1119,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Base\\Folder",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 1119,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::EQUAL",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "prune": {
+            "name": "prune",
+            "line": 1134,
+            "short_desc": "Exclude object from result",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "content": {
+                    "name": "content",
+                    "line": 1134,
+                    "short_desc": "Object to remove from the list of results",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Content",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "doDeleteAll": {
+            "name": "doDeleteAll",
+            "line": 1149,
+            "short_desc": "Deletes all rows from the content table.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1149,
+                    "short_desc": "the connection to use",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 1186,
+            "short_desc": "Performs a DELETE on the database, given a ChildContent or Criteria object OR a primary key value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "Any exceptions caught during processing will be rethrown wrapped into a PropelException."
+                ]
+            ],
+            "errors": [
+                "\"2\" @param tags are defined by \"1\" are expected"
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1186,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyUpdated": {
+            "name": "recentlyUpdated",
+            "line": 1226,
+            "short_desc": "Filter by the latest updated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 1226,
+                    "short_desc": "Maximum age of the latest update in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyCreated": {
+            "name": "recentlyCreated",
+            "line": 1238,
+            "short_desc": "Filter by the latest created",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 1238,
+                    "short_desc": "Maximum age of in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "lastUpdatedFirst": {
+            "name": "lastUpdatedFirst",
+            "line": 1248,
+            "short_desc": "Order by update date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstUpdatedFirst": {
+            "name": "firstUpdatedFirst",
+            "line": 1258,
+            "short_desc": "Order by update date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "lastCreatedFirst": {
+            "name": "lastCreatedFirst",
+            "line": 1268,
+            "short_desc": "Order by create date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstCreatedFirst": {
+            "name": "firstCreatedFirst",
+            "line": 1278,
+            "short_desc": "Order by create date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "joinI18n": {
+            "name": "joinI18n",
+            "line": 1294,
+            "short_desc": "Adds a JOIN clause to the query using the i18n relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 1294,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 1294,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 1294,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinWithI18n": {
+            "name": "joinWithI18n",
+            "line": 1312,
+            "short_desc": "Adds a JOIN clause to the query and hydrates the related I18n object.",
+            "long_desc": "Shortcut for $c->joinI18n($locale)->with()",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 1312,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 1312,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useI18nQuery": {
+            "name": "useI18nQuery",
+            "line": 1333,
+            "short_desc": "Use the I18n relation query object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\ContentI18nQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 1333,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 1333,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 1333,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isVersioningEnabled": {
+            "name": "isVersioningEnabled",
+            "line": 1347,
+            "short_desc": "Checks whether versioning is enabled",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "enableVersioning": {
+            "name": "enableVersioning",
+            "line": 1355,
+            "short_desc": "Enables versioning",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "disableVersioning": {
+            "name": "disableVersioning",
+            "line": 1363,
+            "short_desc": "Disables versioning",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "orderById": {
+            "name": "orderById",
+            "line": 97,
+            "short_desc": "Order by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByVisible": {
+            "name": "orderByVisible",
+            "line": 97,
+            "short_desc": "Order by the visible column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByPosition": {
+            "name": "orderByPosition",
+            "line": 97,
+            "short_desc": "Order by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByCreatedAt": {
+            "name": "orderByCreatedAt",
+            "line": 97,
+            "short_desc": "Order by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByUpdatedAt": {
+            "name": "orderByUpdatedAt",
+            "line": 97,
+            "short_desc": "Order by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByVersion": {
+            "name": "orderByVersion",
+            "line": 97,
+            "short_desc": "Order by the version column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByVersionCreatedAt": {
+            "name": "orderByVersionCreatedAt",
+            "line": 97,
+            "short_desc": "Order by the version_created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByVersionCreatedBy": {
+            "name": "orderByVersionCreatedBy",
+            "line": 97,
+            "short_desc": "Order by the version_created_by column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "groupById": {
+            "name": "groupById",
+            "line": 97,
+            "short_desc": "Group by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByVisible": {
+            "name": "groupByVisible",
+            "line": 97,
+            "short_desc": "Group by the visible column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByPosition": {
+            "name": "groupByPosition",
+            "line": 97,
+            "short_desc": "Group by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByCreatedAt": {
+            "name": "groupByCreatedAt",
+            "line": 97,
+            "short_desc": "Group by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByUpdatedAt": {
+            "name": "groupByUpdatedAt",
+            "line": 97,
+            "short_desc": "Group by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByVersion": {
+            "name": "groupByVersion",
+            "line": 97,
+            "short_desc": "Group by the version column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByVersionCreatedAt": {
+            "name": "groupByVersionCreatedAt",
+            "line": 97,
+            "short_desc": "Group by the version_created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByVersionCreatedBy": {
+            "name": "groupByVersionCreatedBy",
+            "line": 97,
+            "short_desc": "Group by the version_created_by column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "leftJoin": {
+            "name": "leftJoin",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoin": {
+            "name": "rightJoin",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoin": {
+            "name": "innerJoin",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinContentFolder": {
+            "name": "leftJoinContentFolder",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the ContentFolder relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinContentFolder": {
+            "name": "rightJoinContentFolder",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the ContentFolder relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinContentFolder": {
+            "name": "innerJoinContentFolder",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query using the ContentFolder relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinContentImage": {
+            "name": "leftJoinContentImage",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the ContentImage relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinContentImage": {
+            "name": "rightJoinContentImage",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the ContentImage relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinContentImage": {
+            "name": "innerJoinContentImage",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query using the ContentImage relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinContentDocument": {
+            "name": "leftJoinContentDocument",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the ContentDocument relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinContentDocument": {
+            "name": "rightJoinContentDocument",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the ContentDocument relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinContentDocument": {
+            "name": "innerJoinContentDocument",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query using the ContentDocument relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinProductAssociatedContent": {
+            "name": "leftJoinProductAssociatedContent",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the ProductAssociatedContent relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinProductAssociatedContent": {
+            "name": "rightJoinProductAssociatedContent",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the ProductAssociatedContent relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinProductAssociatedContent": {
+            "name": "innerJoinProductAssociatedContent",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query using the ProductAssociatedContent relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinCategoryAssociatedContent": {
+            "name": "leftJoinCategoryAssociatedContent",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the CategoryAssociatedContent relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinCategoryAssociatedContent": {
+            "name": "rightJoinCategoryAssociatedContent",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the CategoryAssociatedContent relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinCategoryAssociatedContent": {
+            "name": "innerJoinCategoryAssociatedContent",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query using the CategoryAssociatedContent relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinContentI18n": {
+            "name": "leftJoinContentI18n",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the ContentI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinContentI18n": {
+            "name": "rightJoinContentI18n",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the ContentI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinContentI18n": {
+            "name": "innerJoinContentI18n",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query using the ContentI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinContentVersion": {
+            "name": "leftJoinContentVersion",
+            "line": 97,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the ContentVersion relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinContentVersion": {
+            "name": "rightJoinContentVersion",
+            "line": 97,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the ContentVersion relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinContentVersion": {
+            "name": "innerJoinContentVersion",
+            "line": 97,
+            "short_desc": "Adds a INNER JOIN clause to the query using the ContentVersion relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContentQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOne": {
+            "name": "findOne",
+            "line": 97,
+            "short_desc": "Return the first ChildContent matching the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneOrCreate": {
+            "name": "findOneOrCreate",
+            "line": 97,
+            "short_desc": "Return the first ChildContent matching the query, or a new ChildContent object populated from the query conditions when no match is found",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneById": {
+            "name": "findOneById",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByVisible": {
+            "name": "findOneByVisible",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the visible column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "visible": {
+                    "name": "visible",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByPosition": {
+            "name": "findOneByPosition",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "position": {
+                    "name": "position",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByCreatedAt": {
+            "name": "findOneByCreatedAt",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByUpdatedAt": {
+            "name": "findOneByUpdatedAt",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByVersion": {
+            "name": "findOneByVersion",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the version column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version": {
+                    "name": "version",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByVersionCreatedAt": {
+            "name": "findOneByVersionCreatedAt",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the version_created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version_created_at": {
+                    "name": "version_created_at",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByVersionCreatedBy": {
+            "name": "findOneByVersionCreatedBy",
+            "line": 97,
+            "short_desc": "Return the first ChildContent filtered by the version_created_by column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildContent",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version_created_by": {
+                    "name": "version_created_by",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findById": {
+            "name": "findById",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByVisible": {
+            "name": "findByVisible",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the visible column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "visible": {
+                    "name": "visible",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByPosition": {
+            "name": "findByPosition",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the position column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "position": {
+                    "name": "position",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByCreatedAt": {
+            "name": "findByCreatedAt",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByUpdatedAt": {
+            "name": "findByUpdatedAt",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByVersion": {
+            "name": "findByVersion",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the version column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version": {
+                    "name": "version",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByVersionCreatedAt": {
+            "name": "findByVersionCreatedAt",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the version_created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version_created_at": {
+                    "name": "version_created_at",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByVersionCreatedBy": {
+            "name": "findByVersionCreatedBy",
+            "line": 97,
+            "short_desc": "Return ChildContent objects filtered by the version_created_by column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "version_created_by": {
+                    "name": "version_created_by",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}
