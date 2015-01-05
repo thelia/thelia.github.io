@@ -16,6 +16,7 @@ For an import, you have to create a class that extends Thelia\Importimport\Impor
 ```php
 protected function getMandatoryColumns();
 public function retrieveFromFormatterData(FormatterData $data);
+public function getHandledTypes();
 ```
 
 ```getMandatoryColumns``` must return an array with the name of mandatory columns. If you're doing a couple import/import, it should have the same values as your mandatory import aliases.
@@ -23,7 +24,6 @@ public function retrieveFromFormatterData(FormatterData $data);
 ```retrieveFromFormatterData(FormatterData $data)``` is the method were you must put your import logic.
 
 ```Thelia\Core\FileFormat\Formatting\FormatterData``` is an array wrapper but is not Iterable. 
-
 A simple way to treat your data is to do:
 
 ```php
@@ -36,6 +36,15 @@ public function retrieveFromFormatterData(FormatterData $data) {
 }
 ```
 
+```getHandledTypes()``` must return an array with handled formatters types.
+Example : 
+```php
+return array(
+    FormatType::TABLE, // For tabled formats (CSV, ODS, ...)
+    FormatType::UNBOUNDED, // For unbounded formats (XML, json, ..)
+);
+```
+
 ## Register an Import
 
 To register an import in a module, you have to edit your Config/config.xml
@@ -45,14 +54,14 @@ Your have to add in "imports" a tag with that skeleton:
 ```xml
 <imports>
     <import id="your.import.id" class="Your\ImportHandler" category_id="the.category_id">
-        <descriptive locale="en_US">
+        <import_descriptive locale="en_US">
             <title>Your import title </title>
              <!-- you may add an optionnal description -->
              <description> ... </description>
-        </descriptive>
-        <descriptive locale="fr_FR">
+        </import_descriptive>
+        <import_descriptive locale="fr_FR">
             <!-- Here's for another locale -->
-        </descriptive>
+        </import_descriptive>
     </import>
     <import>
         <!-- here's another import -->
