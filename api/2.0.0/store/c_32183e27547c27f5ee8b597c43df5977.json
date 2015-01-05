@@ -1,0 +1,381 @@
+{
+    "name": "Thelia\\Model\\Admin",
+    "line": 26,
+    "short_desc": "Skeleton subclass for representing a row from the 'admin' table.",
+    "long_desc": "You should add additional methods to this class to meet the\napplication requirements.  This class will only be generated as\nlong as it does not already exist in the output directory.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "propel.generator.Thelia.Model"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Admin.php",
+    "hash": "df58caf0a51e98e2b584a4b6d7ac92ffe0a51d0d",
+    "parent": "Thelia\\Model\\Base\\Admin",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "UserInterface": "Thelia\\Core\\Security\\User\\UserInterface",
+        "Role": "Thelia\\Core\\Security\\Role\\Role",
+        "BaseAdmin": "Thelia\\Model\\Base\\Admin",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "ModelEventDispatcherTrait": "Thelia\\Model\\Tools\\ModelEventDispatcherTrait"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Core\\Security\\User\\UserInterface": "Thelia\\Core\\Security\\User\\UserInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "getPermissions": {
+            "name": "getPermissions",
+            "line": 35,
+            "short_desc": "Retrieve all permissions for the current admin",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "preInsert": {
+            "name": "preInsert",
+            "line": 69,
+            "short_desc": "Code to be run before inserting to database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 69,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setPassword": {
+            "name": "setPassword",
+            "line": 77,
+            "short_desc": "Set the value of [password] column.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Admin",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "password": {
+                    "name": "password",
+                    "line": 77,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkPassword": {
+            "name": "checkPassword",
+            "line": 95,
+            "short_desc": "Check a string against a the user password",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "password": {
+                    "name": "password",
+                    "line": 95,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getUsername": {
+            "name": "getUsername",
+            "line": 103,
+            "short_desc": "Return the user unique name",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "eraseCredentials": {
+            "name": "eraseCredentials",
+            "line": 111,
+            "short_desc": "Removes sensitive data from the user.",
+            "long_desc": "This is important if, at any given point, sensitive information like\nthe plain-text password is stored on this object.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getRoles": {
+            "name": "getRoles",
+            "line": 119,
+            "short_desc": "Returns the roles granted to the user.",
+            "long_desc": "<code>\npublic function getRoles()\n{\n    return array('USER');\n}\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Core\\Security\\User\\Role",
+                    true
+                ]
+            ],
+            "hint_desc": "The user roles",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getToken": {
+            "name": "getToken",
+            "line": 127,
+            "short_desc": "return the user token (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setToken": {
+            "name": "setToken",
+            "line": 135,
+            "short_desc": "Set a token in the user data (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "token": {
+                    "name": "token",
+                    "line": 135,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSerial": {
+            "name": "getSerial",
+            "line": 143,
+            "short_desc": "return the user serial  (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setSerial": {
+            "name": "setSerial",
+            "line": 151,
+            "short_desc": "Set a serial number int the user data  (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "serial": {
+                    "name": "serial",
+                    "line": 151,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

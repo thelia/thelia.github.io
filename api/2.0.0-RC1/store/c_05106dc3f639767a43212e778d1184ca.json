@@ -1,0 +1,354 @@
+{
+    "name": "Thelia\\Model\\OrderQuery",
+    "line": 25,
+    "short_desc": "Skeleton subclass for performing query and update operations on the 'order' table.",
+    "long_desc": "You should add additional methods to this class to meet the\napplication requirements.  This class will only be generated as\nlong as it does not already exist in the output directory.",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/OrderQuery.php",
+    "hash": "6cffec9236991e27d72daa3fcff1e3e61418fd03",
+    "parent": "Thelia\\Model\\Base\\OrderQuery",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "Join": "Propel\\Runtime\\ActiveQuery\\Join",
+        "Propel": "Propel\\Runtime\\Propel",
+        "BaseOrderQuery": "Thelia\\Model\\Base\\OrderQuery",
+        "OrderProductTableMap": "Thelia\\Model\\Map\\OrderProductTableMap",
+        "OrderProductTaxTableMap": "Thelia\\Model\\Map\\OrderProductTaxTableMap",
+        "OrderTableMap": "Thelia\\Model\\Map\\OrderTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getMonthlySaleStats": {
+            "name": "getMonthlySaleStats",
+            "line": 27,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "month": {
+                    "name": "month",
+                    "line": 27,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "year": {
+                    "name": "year",
+                    "line": 27,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getMonthlyOrdersStats": {
+            "name": "getMonthlyOrdersStats",
+            "line": 44,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "month": {
+                    "name": "month",
+                    "line": 44,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "year": {
+                    "name": "year",
+                    "line": 44,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "status": {
+                    "name": "status",
+                    "line": 44,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getFirstOrdersStats": {
+            "name": "getFirstOrdersStats",
+            "line": 63,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "month": {
+                    "name": "month",
+                    "line": 63,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "year": {
+                    "name": "year",
+                    "line": 63,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSaleStats": {
+            "name": "getSaleStats",
+            "line": 97,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "startDate": {
+                    "name": "startDate",
+                    "line": 97,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DateTime",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "endDate": {
+                    "name": "endDate",
+                    "line": 97,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DateTime",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "includeShipping": {
+                    "name": "includeShipping",
+                    "line": 97,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\$includeShipping",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getOrderStats": {
+            "name": "getOrderStats",
+            "line": 133,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "startDate": {
+                    "name": "startDate",
+                    "line": 133,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DateTime",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "endDate": {
+                    "name": "endDate",
+                    "line": 133,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DateTime",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "status": {
+                    "name": "status",
+                    "line": 133,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\$status",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array(1, 2, 3, 4)",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

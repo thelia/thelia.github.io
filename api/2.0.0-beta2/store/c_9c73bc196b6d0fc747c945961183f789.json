@@ -1,0 +1,324 @@
+{
+    "name": "Thelia\\Action\\Folder",
+    "line": 41,
+    "short_desc": "Class Folder",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Action"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Action\/Folder.php",
+    "hash": "8b160349e28ba9f356e4d7b98b3346ff77d180b8",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "FolderCreateEvent": "Thelia\\Core\\Event\\Folder\\FolderCreateEvent",
+        "FolderDeleteEvent": "Thelia\\Core\\Event\\Folder\\FolderDeleteEvent",
+        "FolderToggleVisibilityEvent": "Thelia\\Core\\Event\\Folder\\FolderToggleVisibilityEvent",
+        "FolderUpdateEvent": "Thelia\\Core\\Event\\Folder\\FolderUpdateEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent",
+        "UpdateSeoEvent": "Thelia\\Core\\Event\\UpdateSeoEvent",
+        "FolderQuery": "Thelia\\Model\\FolderQuery",
+        "FolderModel": "Thelia\\Model\\Folder"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "update": {
+            "name": "update",
+            "line": 43,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 43,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Folder\\FolderUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FolderUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateSeo": {
+            "name": "updateSeo",
+            "line": 71,
+            "short_desc": "Change Folder SEO",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 71,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdateSeoEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdateSeoEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 76,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 76,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Folder\\FolderDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FolderDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 89,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 89,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Folder\\FolderCreateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FolderCreateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleVisibility": {
+            "name": "toggleVisibility",
+            "line": 104,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 104,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Folder\\FolderToggleVisibilityEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FolderToggleVisibilityEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updatePosition": {
+            "name": "updatePosition",
+            "line": 117,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 117,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdatePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdatePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 156,
+            "short_desc": "Returns an array of event names this subscriber wants to listen to.",
+            "long_desc": "The array keys are event names and the value can be:\n\n * The method name to call (priority defaults to 0)\n * An array composed of the method name to call and the priority\n * An array of arrays composed of the method names to call and respective\n   priorities, or 0 if unset\n\nFor instance:\n\n * array('eventName' => 'methodName')\n * array('eventName' => array('methodName', $priority))\n * array('eventName' => array(array('methodName1', $priority), array('methodName2'))",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "The event names to listen to",
+            "tags": {
+                "api": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

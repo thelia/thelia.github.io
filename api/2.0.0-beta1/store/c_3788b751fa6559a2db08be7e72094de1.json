@@ -1,0 +1,301 @@
+{
+    "name": "Thelia\\Action\\Feature",
+    "line": 42,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Action\/Feature.php",
+    "hash": "b3d9918c1883ded216062b63154dde1c230b1485",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "FeatureQuery": "Thelia\\Model\\FeatureQuery",
+        "FeatureModel": "Thelia\\Model\\Feature",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "FeatureUpdateEvent": "Thelia\\Core\\Event\\Feature\\FeatureUpdateEvent",
+        "FeatureCreateEvent": "Thelia\\Core\\Event\\Feature\\FeatureCreateEvent",
+        "FeatureDeleteEvent": "Thelia\\Core\\Event\\Feature\\FeatureDeleteEvent",
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent",
+        "FeatureEvent": "Thelia\\Core\\Event\\Feature\\FeatureEvent",
+        "FeatureTemplate": "Thelia\\Model\\FeatureTemplate",
+        "FeatureTemplateQuery": "Thelia\\Model\\FeatureTemplateQuery",
+        "TemplateQuery": "Thelia\\Model\\TemplateQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "create": {
+            "name": "create",
+            "line": 49,
+            "short_desc": "Create a new feature entry",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 49,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Feature\\FeatureCreateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FeatureCreateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 75,
+            "short_desc": "Change a product feature",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 75,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Feature\\FeatureUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FeatureUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 101,
+            "short_desc": "Delete a product feature entry",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 101,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Feature\\FeatureDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FeatureDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updatePosition": {
+            "name": "updatePosition",
+            "line": 120,
+            "short_desc": "Changes position, selecting absolute ou relative change.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 120,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdatePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdatePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addToAllTemplates": {
+            "name": "addToAllTemplates",
+            "line": 143,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 143,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Feature\\FeatureEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FeatureEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "removeFromAllTemplates": {
+            "name": "removeFromAllTemplates",
+            "line": 148,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 148,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Feature\\FeatureEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FeatureEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 157,
+            "short_desc": "{@inheritDoc}",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

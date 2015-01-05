@@ -1,0 +1,460 @@
+{
+    "name": "Thelia\\Core\\Template\\Smarty\\Plugins\\UrlGenerator",
+    "line": 22,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Core\\Template\\Smarty\\Plugins",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/Template\/Smarty\/Plugins\/UrlGenerator.php",
+    "hash": "1f4d5e4822b82b3aa517735936abb237d251ad38",
+    "parent": "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "SmartyPluginDescriptor": "Thelia\\Core\\Template\\Smarty\\SmartyPluginDescriptor",
+        "AbstractSmartyPlugin": "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+        "TokenProvider": "Thelia\\Tools\\TokenProvider",
+        "URL": "Thelia\\Tools\\URL",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "Translator": "Thelia\\Core\\Translation\\Translator"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 28,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 28,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "tokenProvider": {
+                    "name": "tokenProvider",
+                    "line": 28,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Tools\\TokenProvider",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "TokenProvider",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "generateUrlFunction": {
+            "name": "generateUrlFunction",
+            "line": 41,
+            "short_desc": "Process url generator function",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "no text is returned.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 41,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "smarty": {
+                    "name": "smarty",
+                    "line": 41,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\unknown",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "generateFrontViewUrlFunction": {
+            "name": "generateFrontViewUrlFunction",
+            "line": 82,
+            "short_desc": "Process view url generator function",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "no text is returned.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 82,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "smarty": {
+                    "name": "smarty",
+                    "line": 82,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\unknown",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "generateAdminViewUrlFunction": {
+            "name": "generateAdminViewUrlFunction",
+            "line": 94,
+            "short_desc": "Process administration view url generator function",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "no text is returned.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 94,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "smarty": {
+                    "name": "smarty",
+                    "line": 94,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\unknown",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "navigateToUrlFunction": {
+            "name": "navigateToUrlFunction",
+            "line": 99,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 99,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "smarty": {
+                    "name": "smarty",
+                    "line": 99,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "generateUrlWithToken": {
+            "name": "generateUrlWithToken",
+            "line": 145,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 145,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "smarty": {
+                    "name": "smarty",
+                    "line": 145,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "setPreviousUrlFunction": {
+            "name": "setPreviousUrlFunction",
+            "line": 176,
+            "short_desc": "Set the _previous_url request attribute, to define the previous URL, or prevent saving the current URL as the previous one.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 176,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "smarty": {
+                    "name": "smarty",
+                    "line": 176,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "getPluginDescriptors": {
+            "name": "getPluginDescriptors",
+            "line": 192,
+            "short_desc": "Define the various smarty plugins handled by this class",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\Smarty\\Plugins\\an",
+                    false
+                ]
+            ],
+            "hint_desc": "array of smarty plugin descriptors",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

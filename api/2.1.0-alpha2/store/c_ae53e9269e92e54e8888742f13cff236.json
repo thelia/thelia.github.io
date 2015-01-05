@@ -1,0 +1,610 @@
+{
+    "name": "Thelia\\Coupon\\Type\\AbstractRemove",
+    "line": 24,
+    "short_desc": "Allow to remove an amount from the checkout total",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Coupon\\Type",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Coupon\/Type\/AbstractRemove.php",
+    "hash": "9107fc664b640e5cd0c3a14cf79ecc63326c1467",
+    "parent": "Thelia\\Coupon\\Type\\CouponAbstract",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "FacadeInterface": "Thelia\\Coupon\\FacadeInterface",
+        "CartItem": "Thelia\\Model\\CartItem"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Coupon\\Type\\AmountAndPercentageCouponInterface": "Thelia\\Coupon\\Type\\AmountAndPercentageCouponInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "setFieldsValue": {
+            "name": "setFieldsValue",
+            "line": 31,
+            "short_desc": "Set the value of specific coupon fields.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "17",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "effects": {
+                    "name": "effects",
+                    "line": 31,
+                    "short_desc": "the Coupon effects params",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCartItemDiscount": {
+            "name": "getCartItemDiscount",
+            "line": 39,
+            "short_desc": "Get the discount for a specific cart item.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "the discount value",
+            "tags": [
+
+            ],
+            "modifiers": "17",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "cartItem": {
+                    "name": "cartItem",
+                    "line": 39,
+                    "short_desc": "the cart item",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\CartItem",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CartItem",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "set": {
+            "name": "set",
+            "line": 44,
+            "short_desc": "Set Coupon",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "facade": {
+                    "name": "facade",
+                    "line": 45,
+                    "short_desc": "Provides necessary value from Thelia",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\FacadeInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FacadeInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "code": {
+                    "name": "code",
+                    "line": 46,
+                    "short_desc": "Coupon code (ex: XMAS)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "title": {
+                    "name": "title",
+                    "line": 47,
+                    "short_desc": "Coupon title (ex: Coupon for XMAS)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "shortDescription": {
+                    "name": "shortDescription",
+                    "line": 48,
+                    "short_desc": "Coupon short description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "description": {
+                    "name": "description",
+                    "line": 49,
+                    "short_desc": "Coupon description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "effects": {
+                    "name": "effects",
+                    "line": 50,
+                    "short_desc": "Coupon effects params",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isCumulative": {
+                    "name": "isCumulative",
+                    "line": 51,
+                    "short_desc": "If Coupon is cumulative",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isRemovingPostage": {
+                    "name": "isRemovingPostage",
+                    "line": 52,
+                    "short_desc": "If Coupon is removing postage",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isAvailableOnSpecialOffers": {
+                    "name": "isAvailableOnSpecialOffers",
+                    "line": 53,
+                    "short_desc": "If available on Product already on special offer price",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isEnabled": {
+                    "name": "isEnabled",
+                    "line": 54,
+                    "short_desc": "False if Coupon is disabled by admin",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "maxUsage": {
+                    "name": "maxUsage",
+                    "line": 55,
+                    "short_desc": "How many usage left",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "expirationDate": {
+                    "name": "expirationDate",
+                    "line": 56,
+                    "short_desc": "When the Code is expiring",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\Type\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DateTime",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "freeShippingForCountries": {
+                    "name": "freeShippingForCountries",
+                    "line": 57,
+                    "short_desc": "list of countries which shipping is free. All if empty",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "freeShippingForModules": {
+                    "name": "freeShippingForModules",
+                    "line": 58,
+                    "short_desc": "list of modules for which shipping is free. All if empty",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "perCustomerUsageCount": {
+                    "name": "perCustomerUsageCount",
+                    "line": 59,
+                    "short_desc": "true if usage count is per customer only",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "exec": {
+            "name": "exec",
+            "line": 86,
+            "short_desc": "Return an amount thant will be subtracted to the cart total, or zero.",
+            "long_desc": "This method could also perform something else than the calculating an amount to subtract from the cart. It may\nadd a product to the cart, for example. In this case, an amount of 0 will be returned.\n\nWARNING: this method could be called several times, so perform suitable checks before performing cart\nmanipulations, so that the coupon effect will not be applied several times.",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "Amount removed from the cart total",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "drawBaseBackOfficeInputs": {
+            "name": "drawBaseBackOfficeInputs",
+            "line": 116,
+            "short_desc": "Renders the template which implements coupon specific user-input, using the provided template file, and a list of specific input fields.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the rendered template.",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateName": {
+                    "name": "templateName",
+                    "line": 116,
+                    "short_desc": "the path to the template",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "otherFields": {
+                    "name": "otherFields",
+                    "line": 116,
+                    "short_desc": "the list of additional fields fields",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getBaseFieldList": {
+            "name": "getBaseFieldList",
+            "line": 124,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "otherFields": {
+                    "name": "otherFields",
+                    "line": 124,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkBaseCouponFieldValue": {
+            "name": "checkBaseCouponFieldValue",
+            "line": 132,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "fieldName": {
+                    "name": "fieldName",
+                    "line": 132,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "fieldValue": {
+                    "name": "fieldValue",
+                    "line": 132,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

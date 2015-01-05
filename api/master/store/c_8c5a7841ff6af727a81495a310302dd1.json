@@ -1,0 +1,174 @@
+{
+    "name": "Thelia\\Controller\\Admin\\BaseAdminController",
+    "line": 33,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Controller\/Admin\/BaseAdminController.php",
+    "hash": "f284a5cea2cbfe6529ab07a4130cb57024aa07cd",
+    "parent": "Thelia\\Controller\\BaseController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "RedirectResponse": "Symfony\\Component\\HttpFoundation\\RedirectResponse",
+        "HttpKernelInterface": "Symfony\\Component\\HttpKernel\\HttpKernelInterface",
+        "BaseController": "Thelia\\Controller\\BaseController",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "AuthenticationException": "Thelia\\Core\\Security\\Exception\\AuthenticationException",
+        "AuthorizationException": "Thelia\\Core\\Security\\Exception\\AuthorizationException",
+        "ParserInterface": "Thelia\\Core\\Template\\ParserInterface",
+        "TemplateDefinition": "Thelia\\Core\\Template\\TemplateDefinition",
+        "TemplateHelper": "Thelia\\Core\\Template\\TemplateHelper",
+        "BaseForm": "Thelia\\Form\\BaseForm",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "AdminLog": "Thelia\\Model\\AdminLog",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery",
+        "LangQuery": "Thelia\\Model\\LangQuery",
+        "URL": "Thelia\\Tools\\URL"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "adminLogAppend": {
+            "name": "adminLogAppend",
+            "line": 51,
+            "short_desc": "Helper to append a message to the admin log.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "resource": {
+                    "name": "resource",
+                    "line": 51,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "action": {
+                    "name": "action",
+                    "line": 51,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "message": {
+                    "name": "message",
+                    "line": 51,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "processTemplateAction": {
+            "name": "processTemplateAction",
+            "line": 62,
+            "short_desc": "This method process the rendering of view called from an admin page",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the response which contains the rendered view",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "template": {
+                    "name": "template",
+                    "line": 62,
+                    "short_desc": "the template name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "TEMPLATE_404": {
+            "name": "TEMPLATE_404",
+            "line": 35,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

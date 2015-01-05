@@ -1,0 +1,817 @@
+{
+    "name": "Thelia\\Core\\Template\\Smarty\\SmartyParser",
+    "line": 25,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ],
+            [
+                "Etienne",
+                "Roudeix",
+                "<eroudeix@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Template\\Smarty",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/Template\/Smarty\/SmartyParser.php",
+    "hash": "f55663d0e1afb3ead15b14ef1e4e6ab58f4788f5",
+    "parent": "Smarty",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Request": "Symfony\\Component\\HttpFoundation\\Request",
+        "EventDispatcherInterface": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+        "Smarty": "Smarty",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "ParserInterface": "Thelia\\Core\\Template\\ParserInterface",
+        "AbstractSmartyPlugin": "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+        "ResourceNotFoundException": "Thelia\\Core\\Template\\Exception\\ResourceNotFoundException",
+        "ParserContext": "Thelia\\Core\\Template\\ParserContext",
+        "TemplateDefinition": "Thelia\\Core\\Template\\TemplateDefinition",
+        "InvalidArgumentException": "Imagine\\Exception\\InvalidArgumentException",
+        "Translator": "Thelia\\Core\\Translation\\Translator"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Core\\Template\\ParserInterface": "Thelia\\Core\\Template\\ParserInterface"
+    },
+    "properties": {
+        "plugins": {
+            "name": "plugins",
+            "line": 27,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": 1,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 52,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 53,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "dispatcher": {
+                    "name": "dispatcher",
+                    "line": 53,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "EventDispatcherInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parserContext": {
+                    "name": "parserContext",
+                    "line": 53,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\ParserContext",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ParserContext",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "env": {
+                    "name": "env",
+                    "line": 54,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'prod'",
+                    "is_by_ref": false
+                },
+                "debug": {
+                    "name": "debug",
+                    "line": 54,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addTemplateDirectory": {
+            "name": "addTemplateDirectory",
+            "line": 105,
+            "short_desc": "Add a template directory to the current template list",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateType": {
+                    "name": "templateType",
+                    "line": 105,
+                    "short_desc": "the template type (a TemplateDefinition type constant)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\unknown",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "templateName": {
+                    "name": "templateName",
+                    "line": 105,
+                    "short_desc": "the template name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "templateDirectory": {
+                    "name": "templateDirectory",
+                    "line": 105,
+                    "short_desc": "path to the template dirtectory",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "key": {
+                    "name": "key",
+                    "line": 105,
+                    "short_desc": "???",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\unknown",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "unshift": {
+                    "name": "unshift",
+                    "line": 105,
+                    "short_desc": "??? Etienne ?",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTemplateDirectories": {
+            "name": "getTemplateDirectories",
+            "line": 127,
+            "short_desc": "Return the registeted template directories for a givent template type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\Smarty\\multitype:",
+                    false
+                ]
+            ],
+            "hint_desc": "an array of defined templates directories for the given template type",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "InvalidArgumentException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateType": {
+                    "name": "templateType",
+                    "line": 127,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\unknown",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "removeBlankLines": {
+            "name": "removeBlankLines",
+            "line": 136,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "tpl_source": {
+                    "name": "tpl_source",
+                    "line": 136,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 136,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Smarty_Internal_Template",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "theliaEscape": {
+            "name": "theliaEscape",
+            "line": 141,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "content": {
+                    "name": "content",
+                    "line": 141,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "smarty": {
+                    "name": "smarty",
+                    "line": 141,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setTemplateDefinition": {
+            "name": "setTemplateDefinition",
+            "line": 153,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateDefinition": {
+                    "name": "templateDefinition",
+                    "line": 153,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\TemplateDefinition",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "TemplateDefinition",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTemplateDefinition": {
+            "name": "getTemplateDefinition",
+            "line": 181,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getTemplate": {
+            "name": "getTemplate",
+            "line": 186,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "render": {
+            "name": "render",
+            "line": 218,
+            "short_desc": "Return a rendered template file",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the rendered template text",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "realTemplateName": {
+                    "name": "realTemplateName",
+                    "line": 218,
+                    "short_desc": "the template name (from the template directory)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parameters": {
+                    "name": "parameters",
+                    "line": 218,
+                    "short_desc": "an associative array of names \/ value pairs",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "renderString": {
+            "name": "renderString",
+            "line": 234,
+            "short_desc": "Return a rendered template text",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the rendered template text",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateText": {
+                    "name": "templateText",
+                    "line": 234,
+                    "short_desc": "the template text",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parameters": {
+                    "name": "parameters",
+                    "line": 234,
+                    "short_desc": "an associative array of names \/ value pairs",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setContent": {
+            "name": "setContent",
+            "line": 245,
+            "short_desc": "set $content with the body of the response or the Response object directly",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "content": {
+                    "name": "content",
+                    "line": 245,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Thelia\\Core\\HttpFoundation\\Response",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getStatus": {
+            "name": "getStatus",
+            "line": 254,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\Smarty\\type",
+                    false
+                ]
+            ],
+            "hint_desc": "the status of the response",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setStatus": {
+            "name": "setStatus",
+            "line": 265,
+            "short_desc": "status HTTP of the response",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "status": {
+                    "name": "status",
+                    "line": 265,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addPlugins": {
+            "name": "addPlugins",
+            "line": 270,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "plugin": {
+                    "name": "plugin",
+                    "line": 270,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "AbstractSmartyPlugin",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "registerPlugins": {
+            "name": "registerPlugins",
+            "line": 275,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

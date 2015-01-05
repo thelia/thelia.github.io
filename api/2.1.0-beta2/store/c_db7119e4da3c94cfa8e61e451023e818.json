@@ -1,0 +1,352 @@
+{
+    "name": "Thelia\\Form\\CouponCreationForm",
+    "line": 37,
+    "short_desc": "Allow to build a form Coupon",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Form",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Form\/CouponCreationForm.php",
+    "hash": "cac0dcb1acdb76f731ce3063cdd7d26e9a611120",
+    "parent": "Thelia\\Form\\BaseForm",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ContainerInterface": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+        "Request": "Symfony\\Component\\HttpFoundation\\Request",
+        "Callback": "Symfony\\Component\\Validator\\Constraints\\Callback",
+        "GreaterThanOrEqual": "Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqual",
+        "NotBlank": "Symfony\\Component\\Validator\\Constraints\\NotBlank",
+        "NotEqualTo": "Symfony\\Component\\Validator\\Constraints\\NotEqualTo",
+        "ExecutionContextInterface": "Symfony\\Component\\Validator\\ExecutionContextInterface",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "CountryQuery": "Thelia\\Model\\CountryQuery",
+        "CouponQuery": "Thelia\\Model\\CouponQuery",
+        "LangQuery": "Thelia\\Model\\LangQuery",
+        "Module": "Thelia\\Model\\Module",
+        "ModuleQuery": "Thelia\\Model\\ModuleQuery",
+        "BaseModule": "Thelia\\Module\\BaseModule"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 41,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 42,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 43,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'form'",
+                    "is_by_ref": false
+                },
+                "data": {
+                    "name": "data",
+                    "line": 44,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                },
+                "options": {
+                    "name": "options",
+                    "line": 45,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                },
+                "container": {
+                    "name": "container",
+                    "line": 46,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ContainerInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkDuplicateCouponCode": {
+            "name": "checkDuplicateCouponCode",
+            "line": 245,
+            "short_desc": "Check coupon code unicity",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "value": {
+                    "name": "value",
+                    "line": 245,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 245,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\Validator\\ExecutionContextInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ExecutionContextInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkCouponCodeChangedAndDoesntExists": {
+            "name": "checkCouponCodeChangedAndDoesntExists",
+            "line": 259,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "value": {
+                    "name": "value",
+                    "line": 259,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 259,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\Validator\\ExecutionContextInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ExecutionContextInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkLocalizedDate": {
+            "name": "checkLocalizedDate",
+            "line": 280,
+            "short_desc": "Validate a date entered with the default Language date format.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "value": {
+                    "name": "value",
+                    "line": 280,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "context": {
+                    "name": "context",
+                    "line": 280,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\Validator\\ExecutionContextInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ExecutionContextInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getName": {
+            "name": "getName",
+            "line": 302,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the name of you form. This name must be unique",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": {
+        "COUPON_CREATION_FORM_NAME": {
+            "name": "COUPON_CREATION_FORM_NAME",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

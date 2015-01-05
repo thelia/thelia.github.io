@@ -1,0 +1,223 @@
+{
+    "name": "Thelia\\Model\\Tools\\UrlRewritingTrait",
+    "line": 35,
+    "short_desc": "A trait for managing Rewriten URLs from model classes",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model\\Tools",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Tools\/UrlRewritingTrait.php",
+    "hash": "c09ab577da01147573e1cb50ca1b0c1804915cfc",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": true,
+    "is_interface": false,
+    "aliases": {
+        "GenerateRewrittenUrlEvent": "Thelia\\Core\\Event\\GenerateRewrittenUrlEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "UrlRewritingException": "Thelia\\Exception\\UrlRewritingException",
+        "RewritingUrlQuery": "Thelia\\Model\\RewritingUrlQuery",
+        "RewritingUrl": "Thelia\\Model\\RewritingUrl",
+        "URL": "Thelia\\Tools\\URL"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getUrl": {
+            "name": "getUrl",
+            "line": 47,
+            "short_desc": "Get the object URL for the given locale, rewriten if rewriting is enabled.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 47,
+                    "short_desc": "a valid locale (e.g. en_US)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "generateRewrittenUrl": {
+            "name": "generateRewrittenUrl",
+            "line": 60,
+            "short_desc": "Generate a rewriten URL from the object title, and store it in the rewriting table",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 60,
+                    "short_desc": "a valid locale (e.g. en_US)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getRewrittenUrl": {
+            "name": "getRewrittenUrl",
+            "line": 120,
+            "short_desc": "return the rewriten URL for the given locale",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 120,
+                    "short_desc": "a valid locale (e.g. en_US)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setRewrittenUrl": {
+            "name": "setRewrittenUrl",
+            "line": 146,
+            "short_desc": "Set the rewriten URL for the given locale",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Tools\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 146,
+                    "short_desc": "a valid locale (e.g. en_US)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "url": {
+                    "name": "url",
+                    "line": 146,
+                    "short_desc": "the wanted url",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Tools\\$url",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

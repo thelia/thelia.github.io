@@ -1,0 +1,165 @@
+{
+    "name": "Thelia\\ImportExport\\Export\\Type\\CustomerExport",
+    "line": 36,
+    "short_desc": "Class CustomerExport",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\ImportExport\\Export\\Type"
+            ]
+        ],
+        "author": [
+            [
+                "Benjamin",
+                "Perche",
+                "<bperche@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\ImportExport\\Export\\Type",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/ImportExport\/Export\/Type\/CustomerExport.php",
+    "hash": "66c24246195fce69010905bfacc6e69b4b6255b7",
+    "parent": "Thelia\\ImportExport\\Export\\ExportHandler",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "Join": "Propel\\Runtime\\ActiveQuery\\Join",
+        "FormatType": "Thelia\\Core\\FileFormat\\FormatType",
+        "ExportHandler": "Thelia\\ImportExport\\Export\\ExportHandler",
+        "Currency": "Thelia\\Model\\Currency",
+        "CustomerQuery": "Thelia\\Model\\CustomerQuery",
+        "Lang": "Thelia\\Model\\Lang",
+        "AddressTableMap": "Thelia\\Model\\Map\\AddressTableMap",
+        "CountryI18nTableMap": "Thelia\\Model\\Map\\CountryI18nTableMap",
+        "CountryTableMap": "Thelia\\Model\\Map\\CountryTableMap",
+        "CustomerTableMap": "Thelia\\Model\\Map\\CustomerTableMap",
+        "CustomerTitleI18nTableMap": "Thelia\\Model\\Map\\CustomerTitleI18nTableMap",
+        "NewsletterTableMap": "Thelia\\Model\\Map\\NewsletterTableMap",
+        "OrderQuery": "Thelia\\Model\\OrderQuery",
+        "I18n": "Thelia\\Tools\\I18n"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getHandledTypes": {
+            "name": "getHandledTypes",
+            "line": 53,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Define all the type of formatters that this can handle return a string if it handle a single type ( specific exports ), or an array if multiple. Thelia types are defined in \\Thelia\\Core\\FileFormat\\FormatType example: return array( FormatType::TABLE, FormatType::UNBOUNDED, );",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "buildDataSet": {
+            "name": "buildDataSet",
+            "line": 68,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "\\Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+                    false
+                ]
+            ],
+            "hint_desc": "The tax engine of Thelia is in PHP, so we can't compute orders for each customers directly in SQL, we need two SQL queries, and some computing to get the last order amount and total amount.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 68,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Lang",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Lang",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getOrder": {
+            "name": "getOrder",
+            "line": 326,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Use this method to access the order.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

@@ -1,0 +1,483 @@
+{
+    "name": "Thelia\\Action\\Coupon",
+    "line": 46,
+    "short_desc": "Process Coupon Events",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>,",
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Action\/Coupon.php",
+    "hash": "361b8fdf179cb52c1054f8d065f0cd5bf8a1f40e",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Propel": "Propel\\Runtime\\Propel",
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "ConditionCollection": "Thelia\\Condition\\ConditionCollection",
+        "ConditionFactory": "Thelia\\Condition\\ConditionFactory",
+        "ConditionInterface": "Thelia\\Condition\\Implementation\\ConditionInterface",
+        "CouponConsumeEvent": "Thelia\\Core\\Event\\Coupon\\CouponConsumeEvent",
+        "CouponCreateOrUpdateEvent": "Thelia\\Core\\Event\\Coupon\\CouponCreateOrUpdateEvent",
+        "OrderEvent": "Thelia\\Core\\Event\\Order\\OrderEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "CouponFactory": "Thelia\\Coupon\\CouponFactory",
+        "CouponManager": "Thelia\\Coupon\\CouponManager",
+        "CouponInterface": "Thelia\\Coupon\\Type\\CouponInterface",
+        "CouponModel": "Thelia\\Model\\Coupon",
+        "CouponCountry": "Thelia\\Model\\CouponCountry",
+        "CouponCountryQuery": "Thelia\\Model\\CouponCountryQuery",
+        "CouponModule": "Thelia\\Model\\CouponModule",
+        "CouponModuleQuery": "Thelia\\Model\\CouponModuleQuery",
+        "CouponQuery": "Thelia\\Model\\CouponQuery",
+        "OrderCouponTableMap": "Thelia\\Model\\Map\\OrderCouponTableMap",
+        "OrderCoupon": "Thelia\\Model\\OrderCoupon",
+        "OrderCouponCountry": "Thelia\\Model\\OrderCouponCountry",
+        "OrderCouponModule": "Thelia\\Model\\OrderCouponModule"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 65,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 65,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "couponFactory": {
+                    "name": "couponFactory",
+                    "line": 66,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\CouponFactory",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CouponFactory",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "couponManager": {
+                    "name": "couponManager",
+                    "line": 66,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\CouponManager",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CouponManager",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "noConditionRule": {
+                    "name": "noConditionRule",
+                    "line": 67,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\Implementation\\ConditionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConditionInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "conditionFactory": {
+                    "name": "conditionFactory",
+                    "line": 67,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\ConditionFactory",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConditionFactory",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 81,
+            "short_desc": "Occurring when a Coupon is about to be created",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 81,
+                    "short_desc": "Event creation or update Coupon",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Coupon\\CouponCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CouponCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 93,
+            "short_desc": "Occurring when a Coupon is about to be updated",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 93,
+                    "short_desc": "Event creation or update Coupon",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Coupon\\CouponCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CouponCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateCondition": {
+            "name": "updateCondition",
+            "line": 105,
+            "short_desc": "Occurring when a Coupon condition is about to be updated",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 105,
+                    "short_desc": "Event creation or update Coupon condition",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Coupon\\CouponCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CouponCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "consume": {
+            "name": "consume",
+            "line": 117,
+            "short_desc": "Occurring when a Coupon condition is about to be consumed",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 117,
+                    "short_desc": "Event consuming Coupon",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Coupon\\CouponConsumeEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CouponConsumeEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateOrderDiscount": {
+            "name": "updateOrderDiscount",
+            "line": 163,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 163,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "testFreePostage": {
+            "name": "testFreePostage",
+            "line": 249,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 249,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Order\\OrderEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "OrderEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "afterOrder": {
+            "name": "afterOrder",
+            "line": 268,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Exception",
+                    "if something goes wrong."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 268,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Order\\OrderEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "OrderEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 365,
+            "short_desc": "Returns an array of event names this subscriber listens to.",
+            "long_desc": "The array keys are event names and the value can be:\n\n * The method name to call (priority defaults to 0)\n * An array composed of the method name to call and the priority\n * An array of arrays composed of the method names to call and respective\n   priorities, or 0 if unset\n\nFor instance:\n\n * array('eventName' => 'methodName')\n * array('eventName' => array('methodName', $priority))\n * array('eventName' => array(array('methodName1', $priority), array('methodName2'))",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "The event names to listen to",
+            "tags": {
+                "api": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

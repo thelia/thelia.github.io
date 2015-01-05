@@ -1,0 +1,340 @@
+{
+    "name": "Thelia\\Model\\Lang",
+    "line": 17,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Lang.php",
+    "hash": "e23687d8be38892f1c2d9e29d63262fc904847f0",
+    "parent": "Thelia\\Model\\Base\\Lang",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "Propel": "Propel\\Runtime\\Propel",
+        "Filesystem": "Symfony\\Component\\Filesystem\\Filesystem",
+        "LangEvent": "Thelia\\Core\\Event\\Lang\\LangEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "TemplateHelper": "Thelia\\Core\\Template\\TemplateHelper",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "BaseLang": "Thelia\\Model\\Base\\Lang",
+        "LangQuery": "Thelia\\Model\\LangQuery",
+        "LangTableMap": "Thelia\\Model\\Map\\LangTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getDefaultLanguage": {
+            "name": "getDefaultLanguage",
+            "line": 25,
+            "short_desc": "Return the default language object, using a local variable to cache it.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "toggleDefault": {
+            "name": "toggleDefault",
+            "line": 35,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "preInsert": {
+            "name": "preInsert",
+            "line": 86,
+            "short_desc": "Code to be run before inserting to database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 86,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postInsert": {
+            "name": "postInsert",
+            "line": 93,
+            "short_desc": "Code to be run after inserting to database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 93,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "preUpdate": {
+            "name": "preUpdate",
+            "line": 100,
+            "short_desc": "Code to be run before updating the object in database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 100,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postUpdate": {
+            "name": "postUpdate",
+            "line": 107,
+            "short_desc": "Code to be run after updating the object in database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 107,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "preDelete": {
+            "name": "preDelete",
+            "line": 114,
+            "short_desc": "Code to be run before deleting the object in database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 114,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postDelete": {
+            "name": "postDelete",
+            "line": 121,
+            "short_desc": "Code to be run after deleting the object in database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 121,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

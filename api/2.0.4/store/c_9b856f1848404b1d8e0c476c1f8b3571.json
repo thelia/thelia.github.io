@@ -1,0 +1,132 @@
+{
+    "name": "Thelia\\ImportExport\\Import\\Type\\ProductPricesImport",
+    "line": 29,
+    "short_desc": "Class ProductPricesImport",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\ImportExport\\Import\\Type"
+            ]
+        ],
+        "author": [
+            [
+                "Benjamin",
+                "Perche",
+                "<bperche@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\ImportExport\\Import\\Type",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/ImportExport\/Import\/Type\/ProductPricesImport.php",
+    "hash": "6432a6cbd3d51c837b9ce94755e4fdde0e329d08",
+    "parent": "Thelia\\ImportExport\\Import\\ImportHandler",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "FormatterData": "Thelia\\Core\\FileFormat\\Formatting\\FormatterData",
+        "FormatType": "Thelia\\Core\\FileFormat\\FormatType",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "ImportHandler": "Thelia\\ImportExport\\Import\\ImportHandler",
+        "Currency": "Thelia\\Model\\Currency",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery",
+        "ProductPrice": "Thelia\\Model\\ProductPrice",
+        "ProductPriceQuery": "Thelia\\Model\\ProductPriceQuery",
+        "ProductSaleElementsQuery": "Thelia\\Model\\ProductSaleElementsQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getHandledTypes": {
+            "name": "getHandledTypes",
+            "line": 46,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Define all the type of formatters that this can handle return a string if it handle a single type ( specific exports ), or an array if multiple. Thelia types are defined in \\Thelia\\Core\\FileFormat\\FormatType example: return array( FormatType::TABLE, FormatType::UNBOUNDED, );",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "retrieveFromFormatterData": {
+            "name": "retrieveFromFormatterData",
+            "line": 60,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "error messages The method does the import routine from a FormatterData",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 60,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Formatting\\FormatterData",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FormatterData",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

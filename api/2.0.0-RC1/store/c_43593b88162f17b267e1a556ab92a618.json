@@ -1,0 +1,320 @@
+{
+    "name": "Thelia\\Model\\Module",
+    "line": 9,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Module.php",
+    "hash": "765165339b2938f82e87a0e7ae7fde81268308ca",
+    "parent": "Thelia\\Model\\Base\\Module",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "BaseModule": "Thelia\\Model\\Base\\Module",
+        "ModelEventDispatcherTrait": "Thelia\\Model\\Tools\\ModelEventDispatcherTrait"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "postSave": {
+            "name": "postSave",
+            "line": 15,
+            "short_desc": "Code to be run after persisting the object",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 15,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getBaseDir": {
+            "name": "getBaseDir",
+            "line": 23,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\the",
+                    false
+                ]
+            ],
+            "hint_desc": "module's base directory path, relative to THELIA_MODULE_DIR",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAbsoluteBaseDir": {
+            "name": "getAbsoluteBaseDir",
+            "line": 31,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\the",
+                    false
+                ]
+            ],
+            "hint_desc": "module's base directory path, relative to THELIA_MODULE_DIR",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getConfigPath": {
+            "name": "getConfigPath",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\the",
+                    false
+                ]
+            ],
+            "hint_desc": "module's config directory path, relative to THELIA_MODULE_DIR",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAbsoluteConfigPath": {
+            "name": "getAbsoluteConfigPath",
+            "line": 47,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\the",
+                    false
+                ]
+            ],
+            "hint_desc": "module's config absolute directory path",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getI18nPath": {
+            "name": "getI18nPath",
+            "line": 55,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\the",
+                    false
+                ]
+            ],
+            "hint_desc": "module's i18N directory path, relative to THELIA_MODULE_DIR",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAbsoluteI18nPath": {
+            "name": "getAbsoluteI18nPath",
+            "line": 63,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\the",
+                    false
+                ]
+            ],
+            "hint_desc": "module's i18N absolute directory path",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAbsoluteTemplateDirectoryPath": {
+            "name": "getAbsoluteTemplateDirectoryPath",
+            "line": 73,
+            "short_desc": "Return the absolute path to one of the module's template directories",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateSubdirName": {
+                    "name": "templateSubdirName",
+                    "line": 73,
+                    "short_desc": "the name of the, probably one of TemplateDefinition::xxx_SUBDIR constants",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "preInsert": {
+            "name": "preInsert",
+            "line": 89,
+            "short_desc": "Code to be run before inserting to database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 89,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

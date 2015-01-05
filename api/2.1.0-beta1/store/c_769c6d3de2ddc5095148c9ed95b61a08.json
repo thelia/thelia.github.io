@@ -1,0 +1,825 @@
+{
+    "name": "Thelia\\Core\\HttpFoundation\\Session\\Session",
+    "line": 38,
+    "short_desc": "extends mfony\\Component\\HttpFoundation\\Session\\Session for adding some helpers",
+    "long_desc": "Class Session",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\HttpFoundation\\Session",
+                "Symfony\\Component\\HttpFoundation\\Request"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\HttpFoundation\\Session",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/HttpFoundation\/Session\/Session.php",
+    "hash": "12f741bec5697bbca8927be097e9cc8c923eb896",
+    "parent": "Symfony\\Component\\HttpFoundation\\Session\\Session",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventDispatcherInterface": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+        "BaseSession": "Symfony\\Component\\HttpFoundation\\Session\\Session",
+        "CartCreateEvent": "Thelia\\Core\\Event\\Cart\\CartCreateEvent",
+        "CartRestoreEvent": "Thelia\\Core\\Event\\Cart\\CartRestoreEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "UserInterface": "Thelia\\Core\\Security\\User\\UserInterface",
+        "Cart": "Thelia\\Model\\Cart",
+        "CartQuery": "Thelia\\Model\\CartQuery",
+        "Currency": "Thelia\\Model\\Currency",
+        "Lang": "Thelia\\Model\\Lang",
+        "Order": "Thelia\\Model\\Order",
+        "URL": "Thelia\\Tools\\URL"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getLang": {
+            "name": "getLang",
+            "line": 45,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Lang",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "forceDefault": {
+                    "name": "forceDefault",
+                    "line": 45,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setLang": {
+            "name": "setLang",
+            "line": 55,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 55,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Lang",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Lang",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setCurrency": {
+            "name": "setCurrency",
+            "line": 62,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "currency": {
+                    "name": "currency",
+                    "line": 62,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Currency",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Currency",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCurrency": {
+            "name": "getCurrency",
+            "line": 74,
+            "short_desc": "Return current currency",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Currency",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "forceDefault": {
+                    "name": "forceDefault",
+                    "line": 74,
+                    "short_desc": "If default currency forced",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAdminEditionCurrency": {
+            "name": "getAdminEditionCurrency",
+            "line": 87,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setAdminEditionCurrency": {
+            "name": "setAdminEditionCurrency",
+            "line": 98,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "currencyId": {
+                    "name": "currencyId",
+                    "line": 98,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAdminEditionLang": {
+            "name": "getAdminEditionLang",
+            "line": 105,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setAdminEditionLang": {
+            "name": "setAdminEditionLang",
+            "line": 116,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "lang": {
+                    "name": "lang",
+                    "line": 116,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setCustomerUser": {
+            "name": "setCustomerUser",
+            "line": 125,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 125,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Security\\User\\UserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UserInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCustomerUser": {
+            "name": "getCustomerUser",
+            "line": 135,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Security\\User\\UserInterface",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "the current front office user, or null if none is legged in",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "clearCustomerUser": {
+            "name": "clearCustomerUser",
+            "line": 140,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setAdminUser": {
+            "name": "setAdminUser",
+            "line": 147,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 147,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Security\\User\\UserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UserInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAdminUser": {
+            "name": "getAdminUser",
+            "line": 154,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "clearAdminUser": {
+            "name": "clearAdminUser",
+            "line": 159,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setReturnToUrl": {
+            "name": "setReturnToUrl",
+            "line": 166,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 166,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getReturnToUrl": {
+            "name": "getReturnToUrl",
+            "line": 177,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the return-to URL, or the index page if none is defined.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getSessionCart": {
+            "name": "getSessionCart",
+            "line": 191,
+            "short_desc": "Return the cart stored in the current session",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Cart",
+                    false
+                ]
+            ],
+            "hint_desc": "The cart in the current session .",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dispatcher": {
+                    "name": "dispatcher",
+                    "line": 191,
+                    "short_desc": "the event dispatcher, required if no cart is currently stored in the session",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "EventDispatcherInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "clearSessionCart": {
+            "name": "clearSessionCart",
+            "line": 236,
+            "short_desc": "Clear the current session cart, and store a new, empty one in the session.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dispatcher": {
+                    "name": "dispatcher",
+                    "line": 236,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "EventDispatcherInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCart": {
+            "name": "getCart",
+            "line": 258,
+            "short_desc": "Return cart if it exists and is valid (checking customer)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Cart",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "deprecated": [
+                    [
+                        "use",
+                        "getSessionCart()",
+                        "instead"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setOrder": {
+            "name": "setOrder",
+            "line": 287,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 287,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Order",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Order",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getOrder": {
+            "name": "getOrder",
+            "line": 297,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Order",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setConsumedCoupons": {
+            "name": "setConsumedCoupons",
+            "line": 316,
+            "short_desc": "Set consumed coupons by the Customer",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Session\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponsCode": {
+                    "name": "couponsCode",
+                    "line": 316,
+                    "short_desc": "An array of Coupon code",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getConsumedCoupons": {
+            "name": "getConsumedCoupons",
+            "line": 328,
+            "short_desc": "Get Customer consumed coupons",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "$couponsCode An array of Coupon code",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "name": "Thelia\\Core\\HttpFoundation\\Request",
+    "line": 25,
+    "short_desc": "extends Symfony\\Component\\HttpFoundation\\Request for adding some helpers",
+    "long_desc": "Class Request",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\HttpFoundation"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<manu@thelia.net>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\HttpFoundation",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/HttpFoundation\/Request.php",
+    "hash": "ce2cbeec2ac4c3fd0c2f527283ea62e9f0e014a3",
+    "parent": "Symfony\\Component\\HttpFoundation\\Request",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "BaseRequest": "Symfony\\Component\\HttpFoundation\\Request",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getPathInfo": {
+            "name": "getPathInfo",
+            "line": 33,
+            "short_desc": "Filter PathInfo to allow slash ending uri",
+            "long_desc": "example:\n\/admin will be the same as \/admin\/",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getProductId": {
+            "name": "getProductId",
+            "line": 45,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getUriAddingParameters": {
+            "name": "getUriAddingParameters",
+            "line": 50,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parameters": {
+                    "name": "parameters",
+                    "line": 50,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSession": {
+            "name": "getSession",
+            "line": 73,
+            "short_desc": "Gets the Session.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Session\\Session",
+                    false
+                ]
+            ],
+            "hint_desc": "The session",
+            "tags": {
+                "api": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "toString": {
+            "name": "toString",
+            "line": 78,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "withContent": {
+                    "name": "withContent",
+                    "line": 78,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

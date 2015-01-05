@@ -1,0 +1,433 @@
+{
+    "name": "Thelia\\Model\\CartItem",
+    "line": 13,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Model\/CartItem.php",
+    "hash": "26391d9678ada8ad95a347fdb7b5357a4cb001f1",
+    "parent": "Thelia\\Model\\Base\\CartItem",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "EventDispatcherInterface": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "BaseCartItem": "Thelia\\Model\\Base\\CartItem",
+        "CartEvent": "Thelia\\Core\\Event\\Cart\\CartEvent",
+        "Calculator": "Thelia\\TaxEngine\\Calculator"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "setDisptacher": {
+            "name": "setDisptacher",
+            "line": 17,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dispatcher": {
+                    "name": "dispatcher",
+                    "line": 17,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "EventDispatcherInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postInsert": {
+            "name": "postInsert",
+            "line": 22,
+            "short_desc": "Code to be run after inserting to database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 22,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postUpdate": {
+            "name": "postUpdate",
+            "line": 31,
+            "short_desc": "Code to be run after updating the object in database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 31,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateQuantity": {
+            "name": "updateQuantity",
+            "line": 44,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "value": {
+                    "name": "value",
+                    "line": 44,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\$value",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addQuantity": {
+            "name": "addQuantity",
+            "line": 68,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "value": {
+                    "name": "value",
+                    "line": 68,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getRealPrice": {
+            "name": "getRealPrice",
+            "line": 89,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getProduct": {
+            "name": "getProduct",
+            "line": 94,
+            "short_desc": "Get the associated ChildProduct object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Product",
+                    false
+                ]
+            ],
+            "hint_desc": "The associated ChildProduct object.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 94,
+                    "short_desc": "Optional Connection object.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "locale": {
+                    "name": "locale",
+                    "line": 94,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getRealTaxedPrice": {
+            "name": "getRealTaxedPrice",
+            "line": 111,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "country": {
+                    "name": "country",
+                    "line": 111,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTaxedPrice": {
+            "name": "getTaxedPrice",
+            "line": 116,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "country": {
+                    "name": "country",
+                    "line": 116,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTaxedPromoPrice": {
+            "name": "getTaxedPromoPrice",
+            "line": 123,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "country": {
+                    "name": "country",
+                    "line": 123,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

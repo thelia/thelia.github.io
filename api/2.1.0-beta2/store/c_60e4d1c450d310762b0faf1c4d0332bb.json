@@ -1,0 +1,313 @@
+{
+    "name": "Thelia\\Model\\ModuleConfigQuery",
+    "line": 17,
+    "short_desc": "Skeleton subclass for performing query and update operations on the 'module_config' table.",
+    "long_desc": "You should add additional methods to this class to meet the\napplication requirements.  This class will only be generated as\nlong as it does not already exist in the output directory.",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Model\/ModuleConfigQuery.php",
+    "hash": "24bbececdb8318234b4b6027c81d43529a089884",
+    "parent": "Thelia\\Model\\Base\\ModuleConfigQuery",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "BaseModuleConfigQuery": "Thelia\\Model\\Base\\ModuleConfigQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getConfigValue": {
+            "name": "getConfigValue",
+            "line": 28,
+            "short_desc": "Get a module's configuration variable",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the variable value",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "moduleId": {
+                    "name": "moduleId",
+                    "line": 28,
+                    "short_desc": "the module id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "variableName": {
+                    "name": "variableName",
+                    "line": 28,
+                    "short_desc": "the variable name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "defaultValue": {
+                    "name": "defaultValue",
+                    "line": 28,
+                    "short_desc": "the default value, if variable is not defined",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "valueLocale": {
+                    "name": "valueLocale",
+                    "line": 28,
+                    "short_desc": "the required locale, or null to get default one",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setConfigValue": {
+            "name": "setConfigValue",
+            "line": 60,
+            "short_desc": "Set module configuration variable, creating it if required",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\$this;",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\LogicException",
+                    "if variable does not exists and $createIfNotExists is false"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "moduleId": {
+                    "name": "moduleId",
+                    "line": 60,
+                    "short_desc": "the module id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "variableName": {
+                    "name": "variableName",
+                    "line": 60,
+                    "short_desc": "the variable name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "variableValue": {
+                    "name": "variableValue",
+                    "line": 60,
+                    "short_desc": "the variable value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "valueLocale": {
+                    "name": "valueLocale",
+                    "line": 60,
+                    "short_desc": "the locale, or null if not required",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "createIfNotExists": {
+                    "name": "createIfNotExists",
+                    "line": 60,
+                    "short_desc": "if true, the variable will be created if not already defined",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteConfigValue": {
+            "name": "deleteConfigValue",
+            "line": 100,
+            "short_desc": "Delete a module's configuration variable",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\$this;",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "moduleId": {
+                    "name": "moduleId",
+                    "line": 100,
+                    "short_desc": "the module id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "variableName": {
+                    "name": "variableName",
+                    "line": 100,
+                    "short_desc": "the variable name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

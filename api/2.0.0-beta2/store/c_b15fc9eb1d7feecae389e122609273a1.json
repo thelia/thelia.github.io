@@ -1,0 +1,208 @@
+{
+    "name": "Thelia\\Controller\\BaseController",
+    "line": 59,
+    "short_desc": "The defaut administration controller.",
+    "long_desc": "Basically, display the login form if\nuser is not yet logged in, or back-office home page if the user is logged in.",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ],
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Controller\/BaseController.php",
+    "hash": "4945fd67f6fb6a9ed2a260817afff49dabdc2e75",
+    "parent": "Symfony\\Component\\DependencyInjection\\ContainerAware",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "PdfEvent": "Thelia\\Core\\Event\\PdfEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "ContainerAware": "Symfony\\Component\\DependencyInjection\\ContainerAware",
+        "AccessDeniedHttpException": "Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException",
+        "InvalidParameterException": "Symfony\\Component\\Routing\\Exception\\InvalidParameterException",
+        "MissingMandatoryParametersException": "Symfony\\Component\\Routing\\Exception\\MissingMandatoryParametersException",
+        "RouteNotFoundException": "Symfony\\Component\\Routing\\Exception\\RouteNotFoundException",
+        "Router": "Symfony\\Component\\Routing\\Router",
+        "SecurityContext": "Thelia\\Core\\Security\\SecurityContext",
+        "TemplateHelper": "Thelia\\Core\\Template\\TemplateHelper",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "OrderQuery": "Thelia\\Model\\OrderQuery",
+        "URL": "Thelia\\Tools\\URL",
+        "Redirect": "Thelia\\Tools\\Redirect",
+        "ParserContext": "Thelia\\Core\\Template\\ParserContext",
+        "ActionEvent": "Thelia\\Core\\Event\\ActionEvent",
+        "EventDispatcher": "Symfony\\Component\\EventDispatcher\\EventDispatcher",
+        "BaseForm": "Thelia\\Form\\BaseForm",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "Event": "Symfony\\Component\\EventDispatcher\\Event",
+        "DefaultActionEvent": "Thelia\\Core\\Event\\DefaultActionEvent",
+        "NotFoundHttpException": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getDispatcher": {
+            "name": "getDispatcher",
+            "line": 113,
+            "short_desc": "Return the event dispatcher,",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\EventDispatcher\\EventDispatcher",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getTranslator": {
+            "name": "getTranslator",
+            "line": 124,
+            "short_desc": "return the Translator",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Translation\\Translator",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "redirect": {
+            "name": "redirect",
+            "line": 264,
+            "short_desc": "redirect request to the specified url",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+                "\"1\" @param tags are defined by \"3\" are expected"
+            ],
+            "parameters": {
+                "url": {
+                    "name": "url",
+                    "line": 264,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "status": {
+                    "name": "status",
+                    "line": 264,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "302",
+                    "is_by_ref": false
+                },
+                "cookies": {
+                    "name": "cookies",
+                    "line": 264,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getMailer": {
+            "name": "getMailer",
+            "line": 354,
+            "short_desc": "return an instance of \\Swift_Mailer with good Transporter configured.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Swift_Mailer",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

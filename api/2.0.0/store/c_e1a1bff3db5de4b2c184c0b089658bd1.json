@@ -1,0 +1,581 @@
+{
+    "name": "Thelia\\Core\\Template\\Smarty\\Plugins\\Form",
+    "line": 51,
+    "short_desc": "Plugin for smarty defining blocks and functions for using Form display.",
+    "long_desc": "blocks :\n - {form name=\"myForm\"} ... {\/form} => find form named myForm,\ncreate an instance and assign this instanciation into smarty variable. Form must be declare into\nconfig using <forms> tag\n\n - {form_field form=$form.fieldName} {\/form_field} This block find info into the Form field containing by\nthe form paramter. This field must be an instance of FormView. fieldName is the name of your field. This block\ncan output these info :\n     * $name => name of yout input\n     * $value => value for your input\n     * $label => label for your input\n     * $error => boolean for know if there is error for this field\n     * $attr => all your attribute for your input (define when you construct programmatically you form)\n\n - {form_error form=$form.fieldName} ... {\/form_error} Display this block if there are errors on this field.\nfieldName is the name of your field\n\nClass Form",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\Template\\Smarty\\Plugins"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Template\\Smarty\\Plugins",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/Template\/Smarty\/Plugins\/Form.php",
+    "hash": "8d29a3bf86fad6fff70b6e1f2260604b017f58e3",
+    "parent": "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "FormView": "Symfony\\Component\\Form\\FormView",
+        "TheliaType": "Thelia\\Core\\Form\\Type\\TheliaType",
+        "ElementNotFoundException": "Thelia\\Core\\Template\\Element\\Exception\\ElementNotFoundException",
+        "Request": "Symfony\\Component\\HttpFoundation\\Request",
+        "SmartyPluginDescriptor": "Thelia\\Core\\Template\\Smarty\\SmartyPluginDescriptor",
+        "AbstractSmartyPlugin": "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+        "ParserContext": "Thelia\\Core\\Template\\ParserContext",
+        "ChoiceType": "Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType",
+        "CollectionType": "Symfony\\Component\\Form\\Extension\\Core\\Type\\CollectionType",
+        "ChoiceView": "Symfony\\Component\\Form\\Extension\\Core\\View\\ChoiceView"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 61,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 61,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parserContext": {
+                    "name": "parserContext",
+                    "line": 61,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\ParserContext",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ParserContext",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setFormDefinition": {
+            "name": "setFormDefinition",
+            "line": 67,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "formDefinition": {
+                    "name": "formDefinition",
+                    "line": 67,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "generateForm": {
+            "name": "generateForm",
+            "line": 79,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "content": {
+                    "name": "content",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Smarty_Internal_Template",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "repeat": {
+                    "name": "repeat",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "renderFormField": {
+            "name": "renderFormField",
+            "line": 205,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 205,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "content": {
+                    "name": "content",
+                    "line": 205,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 205,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Smarty_Internal_Template",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "repeat": {
+                    "name": "repeat",
+                    "line": 205,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "renderTaggedFormFields": {
+            "name": "renderTaggedFormFields",
+            "line": 257,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 257,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "content": {
+                    "name": "content",
+                    "line": 257,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 257,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Smarty_Internal_Template",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "repeat": {
+                    "name": "repeat",
+                    "line": 257,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "renderHiddenFormField": {
+            "name": "renderHiddenFormField",
+            "line": 295,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 295,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 295,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Smarty_Internal_Template",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "formEnctype": {
+            "name": "formEnctype",
+            "line": 321,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 321,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 321,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Smarty_Internal_Template",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "formError": {
+            "name": "formError",
+            "line": 332,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 332,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "content": {
+                    "name": "content",
+                    "line": 332,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 332,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\Smarty_Internal_Template",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Smarty_Internal_Template",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "repeat": {
+                    "name": "repeat",
+                    "line": 332,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "getPluginDescriptors": {
+            "name": "getPluginDescriptors",
+            "line": 438,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\Smarty\\Plugins\\an",
+                    false
+                ]
+            ],
+            "hint_desc": "array of SmartyPluginDescriptor",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

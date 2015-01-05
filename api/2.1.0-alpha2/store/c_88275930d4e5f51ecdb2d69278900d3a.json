@@ -1,0 +1,253 @@
+{
+    "name": "Thelia\\Controller\\Admin\\ExportController",
+    "line": 42,
+    "short_desc": "Class ExportController",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Controller\\Admin"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<manu@thelia.net>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Controller\/Admin\/ExportController.php",
+    "hash": "b404ddb8c18797641f87e2336df1d040c0122cf0",
+    "parent": "Thelia\\Controller\\Admin\\BaseAdminController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent",
+        "ArchiveBuilderManagerTrait": "Thelia\\Core\\FileFormat\\Archive\\ArchiveBuilderManagerTrait",
+        "FormatterManagerTrait": "Thelia\\Core\\FileFormat\\Formatting\\FormatterManagerTrait",
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "LoopResult": "Thelia\\Core\\Template\\Element\\LoopResult",
+        "ExportLoop": "Thelia\\Core\\Template\\Loop\\Export",
+        "ImportExportEvent": "Thelia\\Core\\Event\\ImportExport",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "AbstractArchiveBuilder": "Thelia\\Core\\FileFormat\\Archive\\AbstractArchiveBuilder",
+        "AbstractFormatter": "Thelia\\Core\\FileFormat\\Formatting\\AbstractFormatter",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "ExportForm": "Thelia\\Form\\ExportForm",
+        "DocumentsExportInterface": "Thelia\\ImportExport\\Export\\DocumentsExportInterface",
+        "ExportHandler": "Thelia\\ImportExport\\Export\\ExportHandler",
+        "ImagesExportInterface": "Thelia\\ImportExport\\Export\\ImagesExportInterface",
+        "ExportCategoryQuery": "Thelia\\Model\\ExportCategoryQuery",
+        "ExportQuery": "Thelia\\Model\\ExportQuery",
+        "Lang": "Thelia\\Model\\Lang",
+        "LangQuery": "Thelia\\Model\\LangQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "indexAction": {
+            "name": "indexAction",
+            "line": 47,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "export": {
+            "name": "export",
+            "line": 65,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "This method is called when the route \/admin\/export\/{id} is called with a POST request.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 65,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "integer",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "exportView": {
+            "name": "exportView",
+            "line": 274,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "This method is called when the route \/admin\/export\/{id} is called with a GET request. It returns a modal view if the request is an AJAX one, otherwise it generates a \"normal\" back-office page",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 274,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "integer",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "changePosition": {
+            "name": "changePosition",
+            "line": 325,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "changeCategoryPosition": {
+            "name": "changeCategoryPosition",
+            "line": 347,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getMode": {
+            "name": "getMode",
+            "line": 369,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "action": {
+                    "name": "action",
+                    "line": 369,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

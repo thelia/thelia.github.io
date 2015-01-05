@@ -1,0 +1,479 @@
+{
+    "name": "Thelia\\Core\\Security\\SecurityContext",
+    "line": 24,
+    "short_desc": "A simple security manager, in charge of checking user",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Security",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/Security\/SecurityContext.php",
+    "hash": "57f4a569273131d0a3aa8a3384df8e69280f7c1b",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "UserInterface": "Thelia\\Core\\Security\\User\\UserInterface",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 28,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 28,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAdminUser": {
+            "name": "getAdminUser",
+            "line": 49,
+            "short_desc": "Gets the currently authenticated user in  the admin, or null if none is defined",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Security\\User\\UserInterface",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "A UserInterface instance or null if no user is available",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "hasAdminUser": {
+            "name": "hasAdminUser",
+            "line": 59,
+            "short_desc": "Check if an admin user is logged in.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Security\\true",
+                    false
+                ]
+            ],
+            "hint_desc": "if an admin user is logged in, false otherwise.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCustomerUser": {
+            "name": "getCustomerUser",
+            "line": 69,
+            "short_desc": "Gets the currently authenticated customer, or null if none is defined",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Security\\User\\UserInterface",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "A UserInterface instance or null if no user is available",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "hasCustomerUser": {
+            "name": "hasCustomerUser",
+            "line": 79,
+            "short_desc": "Check if a customer user is logged in.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Security\\true",
+                    false
+                ]
+            ],
+            "hint_desc": "if a customer is logged in, false otherwise.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "hasRequiredRole": {
+            "name": "hasRequiredRole",
+            "line": 91,
+            "short_desc": "Check if a user has at least one of the required roles",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "true if the user has the required role, false otherwise",
+            "tags": [
+
+            ],
+            "modifiers": "33",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 91,
+                    "short_desc": "the user",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Security\\User\\UserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UserInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "roles": {
+                    "name": "roles",
+                    "line": 91,
+                    "short_desc": "the roles",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isGranted": {
+            "name": "isGranted",
+            "line": 112,
+            "short_desc": "Checks if the current user is allowed",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "33",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "roles": {
+                    "name": "roles",
+                    "line": 112,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "resources": {
+                    "name": "resources",
+                    "line": 112,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "modules": {
+                    "name": "modules",
+                    "line": 112,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "accesses": {
+                    "name": "accesses",
+                    "line": 112,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAdminUser": {
+            "name": "setAdminUser",
+            "line": 191,
+            "short_desc": "Sets the authenticated admin user.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 191,
+                    "short_desc": "A UserInterface, or null if no further user should be stored",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Security\\User\\UserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UserInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setCustomerUser": {
+            "name": "setCustomerUser",
+            "line": 203,
+            "short_desc": "Sets the authenticated customer user.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 203,
+                    "short_desc": "A UserInterface, or null if no further user should be stored",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Security\\User\\UserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UserInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "clearCustomerUser": {
+            "name": "clearCustomerUser",
+            "line": 213,
+            "short_desc": "Clear the customer from the security context",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "clearAdminUser": {
+            "name": "clearAdminUser",
+            "line": 221,
+            "short_desc": "Clear the admin from the security context",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

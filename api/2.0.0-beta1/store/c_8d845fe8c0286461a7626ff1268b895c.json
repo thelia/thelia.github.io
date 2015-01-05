@@ -1,0 +1,149 @@
+{
+    "name": "Thelia\\Core\\EventListener\\ControllerListener",
+    "line": 41,
+    "short_desc": "Action are dispatched here.",
+    "long_desc": "A factory is used for creating appropriate action object\n\nClass ControllerListener",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\EventListener"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\EventListener",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/EventListener\/ControllerListener.php",
+    "hash": "25f5bc682b9896232df52a11c21d365502b2902d",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "KernelEvents": "Symfony\\Component\\HttpKernel\\KernelEvents",
+        "FilterControllerEvent": "Symfony\\Component\\HttpKernel\\Event\\FilterControllerEvent",
+        "ActionEventFactory": "Thelia\\Core\\Factory\\ActionEventFactory",
+        "ParserContext": "Thelia\\Core\\Template\\ParserContext"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 48,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parserContext": {
+                    "name": "parserContext",
+                    "line": 48,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\ParserContext",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ParserContext",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "onKernelController": {
+            "name": "onKernelController",
+            "line": 53,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 53,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpKernel\\Event\\FilterControllerEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FilterControllerEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 66,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

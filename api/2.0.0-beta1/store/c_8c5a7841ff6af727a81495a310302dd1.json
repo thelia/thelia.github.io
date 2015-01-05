@@ -1,0 +1,212 @@
+{
+    "name": "Thelia\\Controller\\Admin\\BaseAdminController",
+    "line": 47,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Controller\/Admin\/BaseAdminController.php",
+    "hash": "1e3d901731df46c312ea94bce3b8e0fac1c4957e",
+    "parent": "Thelia\\Controller\\BaseController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "InvalidParameterException": "Symfony\\Component\\Routing\\Exception\\InvalidParameterException",
+        "MissingMandatoryParametersException": "Symfony\\Component\\Routing\\Exception\\MissingMandatoryParametersException",
+        "RouteNotFoundException": "Symfony\\Component\\Routing\\Exception\\RouteNotFoundException",
+        "BaseController": "Thelia\\Controller\\BaseController",
+        "Response": "Symfony\\Component\\HttpFoundation\\Response",
+        "AuthorizationException": "Thelia\\Core\\Security\\Exception\\AuthorizationException",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "HttpKernelInterface": "Symfony\\Component\\HttpKernel\\HttpKernelInterface",
+        "AuthenticationException": "Thelia\\Core\\Security\\Exception\\AuthenticationException",
+        "URL": "Thelia\\Tools\\URL",
+        "Redirect": "Thelia\\Tools\\Redirect",
+        "AdminLog": "Thelia\\Model\\AdminLog",
+        "Lang": "Thelia\\Model\\Lang",
+        "LangQuery": "Thelia\\Model\\LangQuery",
+        "BaseForm": "Thelia\\Form\\BaseForm",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "Router": "Symfony\\Component\\Routing\\Router",
+        "Admin": "Thelia\\Model\\Admin",
+        "CookieTokenProvider": "Thelia\\Core\\Security\\Token\\CookieTokenProvider",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "adminLogAppend": {
+            "name": "adminLogAppend",
+            "line": 56,
+            "short_desc": "Helper to append a message to the admin log.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "message": {
+                    "name": "message",
+                    "line": 56,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "processTemplateAction": {
+            "name": "processTemplateAction",
+            "line": 67,
+            "short_desc": "This method process the rendering of view called from an admin page",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the reponse which contains the rendered view",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "template": {
+                    "name": "template",
+                    "line": 67,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Controller\\Admin\\unknown",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "redirectToRoute": {
+            "name": "redirectToRoute",
+            "line": 254,
+            "short_desc": "Redirect to \u00e0 route ID related URL",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+                "\"2\" @param tags are defined by \"3\" are expected"
+            ],
+            "parameters": {
+                "routeId": {
+                    "name": "routeId",
+                    "line": 254,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "urlParameters": {
+                    "name": "urlParameters",
+                    "line": 254,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                },
+                "routeParameters": {
+                    "name": "routeParameters",
+                    "line": 254,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "TEMPLATE_404": {
+            "name": "TEMPLATE_404",
+            "line": 49,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

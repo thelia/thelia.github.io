@@ -1,0 +1,260 @@
+{
+    "name": "Thelia\\Module\\AbstractPaymentModule",
+    "line": 22,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Module",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Module\/AbstractPaymentModule.php",
+    "hash": "225e562e8bd47804fb2cd21a0664ad58addb9144",
+    "parent": "Thelia\\Module\\BaseModule",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Router": "Symfony\\Component\\Routing\\Router",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "ParserInterface": "Thelia\\Core\\Template\\ParserInterface",
+        "TemplateHelper": "Thelia\\Core\\Template\\TemplateHelper",
+        "Order": "Thelia\\Model\\Order",
+        "URL": "Thelia\\Tools\\URL"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Module\\PaymentModuleInterface": "Thelia\\Module\\PaymentModuleInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "generateGatewayFormResponse": {
+            "name": "generateGatewayFormResponse",
+            "line": 33,
+            "short_desc": "Render the payment gateway template.",
+            "long_desc": "The module should provide the gateway URL and the form fields names and values.",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "the HTTP response.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 33,
+                    "short_desc": "the order",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Order",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "gateway_url": {
+                    "name": "gateway_url",
+                    "line": 33,
+                    "short_desc": "the payment gateway URL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "form_data": {
+                    "name": "form_data",
+                    "line": 33,
+                    "short_desc": "an associative array of form data, that will be rendered as hiddent fields",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getPaymentSuccessPageUrl": {
+            "name": "getPaymentSuccessPageUrl",
+            "line": 59,
+            "short_desc": "Return the order payment success page URL",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the order payment success page URL",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order_id": {
+                    "name": "order_id",
+                    "line": 59,
+                    "short_desc": "the order ID",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getPaymentFailurePageUrl": {
+            "name": "getPaymentFailurePageUrl",
+            "line": 80,
+            "short_desc": "Redirect the customer to the failure payment page.",
+            "long_desc": "if $message is null, a generic message is displayed.",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the order payment failure page URL",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order_id": {
+                    "name": "order_id",
+                    "line": 80,
+                    "short_desc": "the order ID",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "message": {
+                    "name": "message",
+                    "line": 80,
+                    "short_desc": "an error message.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "manageStockOnCreation": {
+            "name": "manageStockOnCreation",
+            "line": 99,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "inherited": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

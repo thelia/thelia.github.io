@@ -1,0 +1,296 @@
+{
+    "name": "Thelia\\Core\\FileFormat\\Formatting\\Formatter\\CSVFormatter",
+    "line": 24,
+    "short_desc": "Class CSVFormatter",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\FileFormat\\Formatting\\Formatter"
+            ]
+        ],
+        "author": [
+            [
+                "Benjamin",
+                "Perche",
+                "<bperche@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\FileFormat\\Formatting\\Formatter",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/FileFormat\/Formatting\/Formatter\/CSVFormatter.php",
+    "hash": "5f21328d290eaf85ba14f0f42ba74ad7a0f1d49d",
+    "parent": "Thelia\\Core\\FileFormat\\Formatting\\AbstractFormatter",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "AbstractFormatter": "Thelia\\Core\\FileFormat\\Formatting\\AbstractFormatter",
+        "FormatterData": "Thelia\\Core\\FileFormat\\Formatting\\FormatterData",
+        "FormatType": "Thelia\\Core\\FileFormat\\FormatType"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": {
+        "delimiter": {
+            "name": "delimiter",
+            "line": 26,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": 1,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        },
+        "lineReturn": {
+            "name": "lineReturn",
+            "line": 27,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": 1,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        },
+        "stringDelimiter": {
+            "name": "stringDelimiter",
+            "line": 28,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": 1,
+            "default": {
+
+            },
+            "errors": [
+
+            ]
+        }
+    },
+    "methods": {
+        "getName": {
+            "name": "getName",
+            "line": 38,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "This method must return a string, the name of the format. example: return \"XML\";",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getExtension": {
+            "name": "getExtension",
+            "line": 52,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "This method must return a string, the extension of the file format, without the \".\". The string should be lowercase. example: return \"xml\";",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getMimeType": {
+            "name": "getMimeType",
+            "line": 65,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "This method must return a string, the mime type of the file format. example: return \"application\/json\";",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "encode": {
+            "name": "encode",
+            "line": 77,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "This method must use a FormatterData object and output a formatted value.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 77,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Formatting\\FormatterData",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FormatterData",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "decode": {
+            "name": "decode",
+            "line": 154,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\FileFormat\\Formatting\\FormatterData",
+                    false
+                ]
+            ],
+            "hint_desc": "This must takes raw data as argument and outputs a FormatterData object.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "rawData": {
+                    "name": "rawData",
+                    "line": 154,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\FileFormat\\Formatting\\Formatter\\$rawData",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getHandledType": {
+            "name": "getHandledType",
+            "line": 203,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "return a string that defines the handled format type. Thelia types are defined in \\Thelia\\Core\\FileFormat\\FormatType examples: return FormatType::TABLE; return FormatType::UNBOUNDED;",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

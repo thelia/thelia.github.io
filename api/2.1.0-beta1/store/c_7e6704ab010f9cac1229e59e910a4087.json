@@ -1,0 +1,341 @@
+{
+    "name": "Thelia\\Action\\Currency",
+    "line": 29,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Action\/Currency.php",
+    "hash": "bebf0bb1dcedeb836c7a38a48e66d3b6568e9e9e",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Event": "Symfony\\Component\\EventDispatcher\\Event",
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "CurrencyCreateEvent": "Thelia\\Core\\Event\\Currency\\CurrencyCreateEvent",
+        "CurrencyDeleteEvent": "Thelia\\Core\\Event\\Currency\\CurrencyDeleteEvent",
+        "CurrencyUpdateEvent": "Thelia\\Core\\Event\\Currency\\CurrencyUpdateEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "CurrencyConverter": "Thelia\\CurrencyConverter\\CurrencyConverter",
+        "Number": "Thelia\\Math\\Number",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "CurrencyModel": "Thelia\\Model\\Currency",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 39,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "currencyConverter": {
+                    "name": "currencyConverter",
+                    "line": 39,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\CurrencyConverter\\CurrencyConverter",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CurrencyConverter",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 48,
+            "short_desc": "Create a new currencyuration entry",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 48,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Currency\\CurrencyCreateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CurrencyCreateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 70,
+            "short_desc": "Change a currency",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 70,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Currency\\CurrencyUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CurrencyUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setDefault": {
+            "name": "setDefault",
+            "line": 93,
+            "short_desc": "Set the default currency",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 93,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Currency\\CurrencyUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CurrencyUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 119,
+            "short_desc": "Delete a currencyuration entry",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 119,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Currency\\CurrencyDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "CurrencyDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateRates": {
+            "name": "updateRates",
+            "line": 137,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 137,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\EventDispatcher\\Event",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Event",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updatePosition": {
+            "name": "updatePosition",
+            "line": 164,
+            "short_desc": "Changes position, selecting absolute ou relative change.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 164,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdatePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdatePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 172,
+            "short_desc": "{@inheritDoc}",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

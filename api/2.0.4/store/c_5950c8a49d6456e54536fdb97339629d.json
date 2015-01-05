@@ -1,0 +1,676 @@
+{
+    "name": "Thelia\\Files\\FileModelInterface",
+    "line": 20,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Files",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Files\/FileModelInterface.php",
+    "hash": "d8038091edc05c860cead1f95a2d5c728f515706",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "ActiveRecordInterface": "Propel\\Runtime\\ActiveRecord\\ActiveRecordInterface",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "BaseForm": "Thelia\\Form\\BaseForm"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "setParentId": {
+            "name": "setParentId",
+            "line": 29,
+            "short_desc": "Set file parent id",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parentId": {
+                    "name": "parentId",
+                    "line": 29,
+                    "short_desc": "parent id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getParentId": {
+            "name": "getParentId",
+            "line": 36,
+            "short_desc": "Get file parent id",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "parent id",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getFile": {
+            "name": "getFile",
+            "line": 41,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the file name",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setFile": {
+            "name": "setFile",
+            "line": 46,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "file": {
+                    "name": "file",
+                    "line": 46,
+                    "short_desc": "the file name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getParentFileModel": {
+            "name": "getParentFileModel",
+            "line": 51,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\FileModelParentInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "the parent file model",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getUpdateFormId": {
+            "name": "getUpdateFormId",
+            "line": 58,
+            "short_desc": "Get the ID of the form used to change this object information",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Form\\BaseForm",
+                    false
+                ]
+            ],
+            "hint_desc": "the form",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getUpdateFormInstance": {
+            "name": "getUpdateFormInstance",
+            "line": 67,
+            "short_desc": "Get the form instance used to change this object information",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Form\\BaseForm",
+                    false
+                ]
+            ],
+            "hint_desc": "the form",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 67,
+                    "short_desc": "the current request",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getUploadDir": {
+            "name": "getUploadDir",
+            "line": 71,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the path to the upload directory where files are stored, without final slash",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getRedirectionUrl": {
+            "name": "getRedirectionUrl",
+            "line": 78,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the URL to redirect to after update from the back-office",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+                "\"1\" @param tags are defined by \"0\" are expected"
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getQueryInstance": {
+            "name": "getQueryInstance",
+            "line": 85,
+            "short_desc": "Get the Query instance for this object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "save": {
+            "name": "save",
+            "line": 92,
+            "short_desc": "Save the model object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "delete": {
+            "name": "delete",
+            "line": 100,
+            "short_desc": "Delete the model object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getId": {
+            "name": "getId",
+            "line": 108,
+            "short_desc": "Get the model object ID",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setTitle": {
+            "name": "setTitle",
+            "line": 116,
+            "short_desc": "Set the current title",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "title": {
+                    "name": "title",
+                    "line": 116,
+                    "short_desc": "the title in the current locale",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTitle": {
+            "name": "getTitle",
+            "line": 124,
+            "short_desc": "Get the current title",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\FileModelInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+                "\"1\" @param tags are defined by \"0\" are expected"
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setChapo": {
+            "name": "setChapo",
+            "line": 132,
+            "short_desc": "Set the chapo",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\FileModelInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "chapo": {
+                    "name": "chapo",
+                    "line": 132,
+                    "short_desc": "the chapo in the current locale",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setDescription": {
+            "name": "setDescription",
+            "line": 140,
+            "short_desc": "Set the description",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\FileModelInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "description": {
+                    "name": "description",
+                    "line": 140,
+                    "short_desc": "the description in the current locale",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setPostscriptum": {
+            "name": "setPostscriptum",
+            "line": 148,
+            "short_desc": "Set the postscriptum",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\FileModelInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "postscriptum": {
+                    "name": "postscriptum",
+                    "line": 148,
+                    "short_desc": "the postscriptum in the current locale",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setLocale": {
+            "name": "setLocale",
+            "line": 156,
+            "short_desc": "Set the current locale",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Files\\FileModelInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 156,
+                    "short_desc": "the locale string",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

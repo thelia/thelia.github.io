@@ -1,0 +1,400 @@
+{
+    "name": "Thelia\\Model\\Tools\\ModelCriteriaTools",
+    "line": 27,
+    "short_desc": "Class ModelCriteriaTools",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Model\\Tools"
+            ]
+        ],
+        "author": [
+            [
+                "Etienne",
+                "Roudeix",
+                "<eroudeix@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model\\Tools",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Model\/Tools\/ModelCriteriaTools.php",
+    "hash": "9395e76e864b21bd9ef2da68d31c9c968ff10b63",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "Join": "Propel\\Runtime\\ActiveQuery\\Join",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "LangQuery": "Thelia\\Model\\LangQuery",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "Lang": "Thelia\\Model\\Lang"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getFrontEndI18n": {
+            "name": "getFrontEndI18n",
+            "line": 37,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "search": {
+                    "name": "search",
+                    "line": 37,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ModelCriteria",
+                    "default": null,
+                    "is_by_ref": true
+                },
+                "requestedLocale": {
+                    "name": "requestedLocale",
+                    "line": 37,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Tools\\$requestedLocale",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "columns": {
+                    "name": "columns",
+                    "line": 37,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "foreignTable": {
+                    "name": "foreignTable",
+                    "line": 37,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "foreignKey": {
+                    "name": "foreignKey",
+                    "line": 37,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "forceReturn": {
+                    "name": "forceReturn",
+                    "line": 37,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getBackEndI18n": {
+            "name": "getBackEndI18n",
+            "line": 94,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "search": {
+                    "name": "search",
+                    "line": 94,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ModelCriteria",
+                    "default": null,
+                    "is_by_ref": true
+                },
+                "requestedLocale": {
+                    "name": "requestedLocale",
+                    "line": 94,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "columns": {
+                    "name": "columns",
+                    "line": 94,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array('TITLE', 'CHAPO', 'DESCRIPTION', 'POSTSCRIPTUM')",
+                    "is_by_ref": false
+                },
+                "foreignTable": {
+                    "name": "foreignTable",
+                    "line": 94,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "foreignKey": {
+                    "name": "foreignKey",
+                    "line": 94,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'ID'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getI18n": {
+            "name": "getI18n",
+            "line": 119,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "backendContext": {
+                    "name": "backendContext",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "requestedLangId": {
+                    "name": "requestedLangId",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "search": {
+                    "name": "search",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ModelCriteria",
+                    "default": null,
+                    "is_by_ref": true
+                },
+                "currentLocale": {
+                    "name": "currentLocale",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "columns": {
+                    "name": "columns",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "foreignTable": {
+                    "name": "foreignTable",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "foreignKey": {
+                    "name": "foreignKey",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "forceReturn": {
+                    "name": "forceReturn",
+                    "line": 119,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

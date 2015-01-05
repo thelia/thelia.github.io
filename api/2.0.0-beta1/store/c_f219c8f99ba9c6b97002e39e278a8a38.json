@@ -1,0 +1,306 @@
+{
+    "name": "Thelia\\Action\\Document",
+    "line": 74,
+    "short_desc": "Document management actions.",
+    "long_desc": "This class handles document processing an caching.\n\nBasically, documents are stored outside the web space (by default in local\/media\/documents),\nand cached in the web space (by default in web\/local\/documents).\n\nIn the documents caches directory, a subdirectory for documents categories (eg. product, category, folder, etc.) is\nautomatically created, and the cached document is created here. Plugin may use their own subdirectory as required.\n\nThe cached document name contains a hash of the processing options, and the original (normalized) name of the document.\n\nA copy (or symbolic link, by default) of the original document is always created in the cache, so that the full\nresolution document is always available.\n\nVarious document processing options are available :\n\n- resizing, with border, crop, or by keeping document aspect ratio\n- rotation, in degrees, positive or negative\n- background color, applyed to empty background when creating borders or rotating\n- effects. The effects are applied in the specified order. The following effects are available:\n   - gamma:value : change the document Gamma to the specified value. Example: gamma:0.7\n   - grayscale or greyscale: switch document to grayscale\n   - colorize:color : apply a color mask to the document. Exemple: colorize:#ff2244\n   - negative : transform the document in its negative equivalent\n   - vflip or vertical_flip : vertical flip\n   - hflip or horizontal_flip : horizontal flip\n\nIf a problem occurs, an DocumentException may be thrown.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Action"
+            ]
+        ],
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Action\/Document.php",
+    "hash": "04049b5df50c1b98c202eae4cf2667fcb3eec1d6",
+    "parent": "Thelia\\Action\\BaseCachedFile",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "DocumentCreateOrUpdateEvent": "Thelia\\Core\\Event\\Document\\DocumentCreateOrUpdateEvent",
+        "DocumentDeleteEvent": "Thelia\\Core\\Event\\Document\\DocumentDeleteEvent",
+        "DocumentEvent": "Thelia\\Core\\Event\\Document\\DocumentEvent",
+        "ImageException": "Thelia\\Exception\\ImageException",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "FileManager": "Thelia\\Tools\\FileManager",
+        "URL": "Thelia\\Tools\\URL",
+        "Color": "Imagine\\Document\\Color",
+        "DocumentException": "Thelia\\Exception\\DocumentException",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "processDocument": {
+            "name": "processDocument",
+            "line": 97,
+            "short_desc": "Process document and write the result in the document cache.",
+            "long_desc": "When the original document is required, create either a symbolic link with the\noriginal document in the cache dir, or copy it in the cache dir if it's not already done.\n\nThis method updates the cache_file_path and file_url attributes of the event",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\DocumentException",
+                    ""
+                ],
+                [
+                    "\\InvalidArgumentException",
+                    ", DocumentException"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 97,
+                    "short_desc": "Event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Document\\DocumentEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DocumentEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "saveDocument": {
+            "name": "saveDocument",
+            "line": 144,
+            "short_desc": "Take care of saving document in the database and file storage",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "documents",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\ImageException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 144,
+                    "short_desc": "Document event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Document\\DocumentCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DocumentCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateDocument": {
+            "name": "updateDocument",
+            "line": 188,
+            "short_desc": "Take care of updating document in the database and file storage",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "documents",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\ImageException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 188,
+                    "short_desc": "Document event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Document\\DocumentCreateOrUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DocumentCreateOrUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteDocument": {
+            "name": "deleteDocument",
+            "line": 230,
+            "short_desc": "Take care of deleting document in the database and file storage",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "todo": [
+                    [
+                        "refactor",
+                        "make",
+                        "all",
+                        "documents",
+                        "using",
+                        "propel",
+                        "inheritance",
+                        "and",
+                        "factorise",
+                        "image",
+                        "behaviour",
+                        "into",
+                        "one",
+                        "single",
+                        "clean",
+                        "action"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Exception",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 230,
+                    "short_desc": "Image event",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Document\\DocumentDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DocumentDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 263,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

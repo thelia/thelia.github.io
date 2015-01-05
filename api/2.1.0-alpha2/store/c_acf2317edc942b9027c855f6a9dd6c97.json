@@ -1,0 +1,4461 @@
+{
+    "name": "Thelia\\Model\\Base\\SaleQuery",
+    "line": 81,
+    "short_desc": "Base class that represents a query for the 'sale' table.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "method": [
+            [
+                "ChildSaleQuery",
+                "orderById($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "orderByActive($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "active",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "orderByDisplayInitialPrice($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "display_initial_price",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "orderByStartDate($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "start_date",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "orderByEndDate($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "end_date",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "orderByPriceOffsetType($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "price_offset_type",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "orderByCreatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "orderByUpdatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupById()",
+                "Group",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupByActive()",
+                "Group",
+                "by",
+                "the",
+                "active",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupByDisplayInitialPrice()",
+                "Group",
+                "by",
+                "the",
+                "display_initial_price",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupByStartDate()",
+                "Group",
+                "by",
+                "the",
+                "start_date",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupByEndDate()",
+                "Group",
+                "by",
+                "the",
+                "end_date",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupByPriceOffsetType()",
+                "Group",
+                "by",
+                "the",
+                "price_offset_type",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupByCreatedAt()",
+                "Group",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "groupByUpdatedAt()",
+                "Group",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildSaleQuery",
+                "leftJoin($relation)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildSaleQuery",
+                "rightJoin($relation)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildSaleQuery",
+                "innerJoin($relation)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildSaleQuery",
+                "leftJoinSaleOffsetCurrency($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleOffsetCurrency",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "rightJoinSaleOffsetCurrency($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleOffsetCurrency",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "innerJoinSaleOffsetCurrency($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleOffsetCurrency",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "leftJoinSaleProduct($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleProduct",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "rightJoinSaleProduct($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleProduct",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "innerJoinSaleProduct($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleProduct",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "leftJoinSaleI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleI18n",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "rightJoinSaleI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleI18n",
+                "relation"
+            ],
+            [
+                "ChildSaleQuery",
+                "innerJoinSaleI18n($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "SaleI18n",
+                "relation"
+            ],
+            [
+                "ChildSale",
+                "findOne(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "matching",
+                "the",
+                "query"
+            ],
+            [
+                "ChildSale",
+                "findOneOrCreate(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "matching",
+                "the",
+                "query,",
+                "or",
+                "a",
+                "new",
+                "ChildSale",
+                "object",
+                "populated",
+                "from",
+                "the",
+                "query",
+                "conditions",
+                "when",
+                "no",
+                "match",
+                "is",
+                "found"
+            ],
+            [
+                "ChildSale",
+                "findOneById(int",
+                "$id)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildSale",
+                "findOneByActive(boolean",
+                "$active)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "active",
+                "column"
+            ],
+            [
+                "ChildSale",
+                "findOneByDisplayInitialPrice(boolean",
+                "$display_initial_price)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "display_initial_price",
+                "column"
+            ],
+            [
+                "ChildSale",
+                "findOneByStartDate(string",
+                "$start_date)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "start_date",
+                "column"
+            ],
+            [
+                "ChildSale",
+                "findOneByEndDate(string",
+                "$end_date)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "end_date",
+                "column"
+            ],
+            [
+                "ChildSale",
+                "findOneByPriceOffsetType(int",
+                "$price_offset_type)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "price_offset_type",
+                "column"
+            ],
+            [
+                "ChildSale",
+                "findOneByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildSale",
+                "findOneByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildSale",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "array",
+                "findById(int",
+                "$id)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "array",
+                "findByActive(boolean",
+                "$active)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "active",
+                "column"
+            ],
+            [
+                "array",
+                "findByDisplayInitialPrice(boolean",
+                "$display_initial_price)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "display_initial_price",
+                "column"
+            ],
+            [
+                "array",
+                "findByStartDate(string",
+                "$start_date)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "start_date",
+                "column"
+            ],
+            [
+                "array",
+                "findByEndDate(string",
+                "$end_date)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "end_date",
+                "column"
+            ],
+            [
+                "array",
+                "findByPriceOffsetType(int",
+                "$price_offset_type)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "price_offset_type",
+                "column"
+            ],
+            [
+                "array",
+                "findByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "ChildSale",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model\\Base",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Model\/Base\/SaleQuery.php",
+    "hash": "f4534c802ea3bf0e81bbb6ee71512fe9f7c46d18",
+    "parent": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Exception": "Exception",
+        "PDO": "PDO",
+        "Propel": "Propel\\Runtime\\Propel",
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "ModelJoin": "Propel\\Runtime\\ActiveQuery\\ModelJoin",
+        "Collection": "Propel\\Runtime\\Collection\\Collection",
+        "ObjectCollection": "Propel\\Runtime\\Collection\\ObjectCollection",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "ChildSale": "Thelia\\Model\\Sale",
+        "ChildSaleI18nQuery": "Thelia\\Model\\SaleI18nQuery",
+        "ChildSaleQuery": "Thelia\\Model\\SaleQuery",
+        "SaleTableMap": "Thelia\\Model\\Map\\SaleTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 91,
+            "short_desc": "Initializes internal state of \\Thelia\\Model\\Base\\SaleQuery object.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dbName": {
+                    "name": "dbName",
+                    "line": 91,
+                    "short_desc": "The database name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'thelia'",
+                    "is_by_ref": false
+                },
+                "modelName": {
+                    "name": "modelName",
+                    "line": 91,
+                    "short_desc": "The phpName of a model, e.g. 'Book'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'\\\\Thelia\\\\Model\\\\Sale'",
+                    "is_by_ref": false
+                },
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 91,
+                    "short_desc": "The alias for the model in this query, e.g. 'b'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 104,
+            "short_desc": "Returns a new ChildSaleQuery object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 104,
+                    "short_desc": "The alias of a model in the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "criteria": {
+                    "name": "criteria",
+                    "line": 104,
+                    "short_desc": "Optional Criteria to build the query from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\Criteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPk": {
+            "name": "findPk",
+            "line": 134,
+            "short_desc": "Find object by primary key.",
+            "long_desc": "Propel uses the instance pool to skip the database if the object exists.\nGo fast if the query is untouched.\n\n<code>\n$obj  = $c->findPk(12, $con);\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\Sale",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the result, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 134,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 134,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPks": {
+            "name": "findPks",
+            "line": 216,
+            "short_desc": "Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); <\/code>",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\Collection\\ObjectCollection",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the list of results, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 216,
+                    "short_desc": "Primary keys to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 216,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKey": {
+            "name": "filterByPrimaryKey",
+            "line": 237,
+            "short_desc": "Filter the query by primary key",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 237,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKeys": {
+            "name": "filterByPrimaryKeys",
+            "line": 250,
+            "short_desc": "Filter the query by a list of primary keys",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 250,
+                    "short_desc": "The list of primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterById": {
+            "name": "filterById",
+            "line": 274,
+            "short_desc": "Filter the query on the id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterById(1234); \/\/ WHERE id = 1234\n$query->filterById(array(12, 34)); \/\/ WHERE id IN (12, 34)\n$query->filterById(array('min' => 12)); \/\/ WHERE id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 274,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 274,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByActive": {
+            "name": "filterByActive",
+            "line": 315,
+            "short_desc": "Filter the query on the active column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByActive(true); \/\/ WHERE active = true\n$query->filterByActive('yes'); \/\/ WHERE active = true\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "active": {
+                    "name": "active",
+                    "line": 315,
+                    "short_desc": "The value to use as filter. Non-boolean arguments are converted using the following rules: * 1, '1', 'true',  'on',  and 'yes' are converted to boolean true * 0, '0', 'false', 'off', and 'no'  are converted to boolean false Check on string values is case insensitive (so 'FaLsE' is seen as 'false').",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ],
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 315,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByDisplayInitialPrice": {
+            "name": "filterByDisplayInitialPrice",
+            "line": 342,
+            "short_desc": "Filter the query on the display_initial_price column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByDisplayInitialPrice(true); \/\/ WHERE display_initial_price = true\n$query->filterByDisplayInitialPrice('yes'); \/\/ WHERE display_initial_price = true\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "displayInitialPrice": {
+                    "name": "displayInitialPrice",
+                    "line": 342,
+                    "short_desc": "The value to use as filter. Non-boolean arguments are converted using the following rules: * 1, '1', 'true',  'on',  and 'yes' are converted to boolean true * 0, '0', 'false', 'off', and 'no'  are converted to boolean false Check on string values is case insensitive (so 'FaLsE' is seen as 'false').",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ],
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 342,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByStartDate": {
+            "name": "filterByStartDate",
+            "line": 371,
+            "short_desc": "Filter the query on the start_date column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByStartDate('2011-03-14'); \/\/ WHERE start_date = '2011-03-14'\n$query->filterByStartDate('now'); \/\/ WHERE start_date = '2011-03-14'\n$query->filterByStartDate(array('max' => 'yesterday')); \/\/ WHERE start_date > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "startDate": {
+                    "name": "startDate",
+                    "line": 371,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 371,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByEndDate": {
+            "name": "filterByEndDate",
+            "line": 414,
+            "short_desc": "Filter the query on the end_date column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByEndDate('2011-03-14'); \/\/ WHERE end_date = '2011-03-14'\n$query->filterByEndDate('now'); \/\/ WHERE end_date = '2011-03-14'\n$query->filterByEndDate(array('max' => 'yesterday')); \/\/ WHERE end_date > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "endDate": {
+                    "name": "endDate",
+                    "line": 414,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 414,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPriceOffsetType": {
+            "name": "filterByPriceOffsetType",
+            "line": 455,
+            "short_desc": "Filter the query on the price_offset_type column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByPriceOffsetType(1234); \/\/ WHERE price_offset_type = 1234\n$query->filterByPriceOffsetType(array(12, 34)); \/\/ WHERE price_offset_type IN (12, 34)\n$query->filterByPriceOffsetType(array('min' => 12)); \/\/ WHERE price_offset_type > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "priceOffsetType": {
+                    "name": "priceOffsetType",
+                    "line": 455,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 455,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByCreatedAt": {
+            "name": "filterByCreatedAt",
+            "line": 498,
+            "short_desc": "Filter the query on the created_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByCreatedAt('2011-03-14'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt('now'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt(array('max' => 'yesterday')); \/\/ WHERE created_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "createdAt": {
+                    "name": "createdAt",
+                    "line": 498,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 498,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByUpdatedAt": {
+            "name": "filterByUpdatedAt",
+            "line": 541,
+            "short_desc": "Filter the query on the updated_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByUpdatedAt('2011-03-14'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt('now'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt(array('max' => 'yesterday')); \/\/ WHERE updated_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "line": 541,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 541,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterBySaleOffsetCurrency": {
+            "name": "filterBySaleOffsetCurrency",
+            "line": 572,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\SaleOffsetCurrency object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "saleOffsetCurrency": {
+                    "name": "saleOffsetCurrency",
+                    "line": 572,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\SaleOffsetCurrency",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 572,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinSaleOffsetCurrency": {
+            "name": "joinSaleOffsetCurrency",
+            "line": 595,
+            "short_desc": "Adds a JOIN clause to the query using the SaleOffsetCurrency relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 595,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 595,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useSaleOffsetCurrencyQuery": {
+            "name": "useSaleOffsetCurrencyQuery",
+            "line": 630,
+            "short_desc": "Use the SaleOffsetCurrency relation SaleOffsetCurrency object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\SaleOffsetCurrencyQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 630,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 630,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterBySaleProduct": {
+            "name": "filterBySaleProduct",
+            "line": 645,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\SaleProduct object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "saleProduct": {
+                    "name": "saleProduct",
+                    "line": 645,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\SaleProduct",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 645,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinSaleProduct": {
+            "name": "joinSaleProduct",
+            "line": 668,
+            "short_desc": "Adds a JOIN clause to the query using the SaleProduct relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 668,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 668,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useSaleProductQuery": {
+            "name": "useSaleProductQuery",
+            "line": 703,
+            "short_desc": "Use the SaleProduct relation SaleProduct object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\SaleProductQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 703,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 703,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterBySaleI18n": {
+            "name": "filterBySaleI18n",
+            "line": 718,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\SaleI18n object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "saleI18n": {
+                    "name": "saleI18n",
+                    "line": 718,
+                    "short_desc": "the related object to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\SaleI18n",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 718,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinSaleI18n": {
+            "name": "joinSaleI18n",
+            "line": 741,
+            "short_desc": "Adds a JOIN clause to the query using the SaleI18n relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 741,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 741,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'LEFT JOIN'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useSaleI18nQuery": {
+            "name": "useSaleI18nQuery",
+            "line": 776,
+            "short_desc": "Use the SaleI18n relation SaleI18n object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\SaleI18nQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 776,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 776,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'LEFT JOIN'",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "prune": {
+            "name": "prune",
+            "line": 790,
+            "short_desc": "Exclude object from result",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "sale": {
+                    "name": "sale",
+                    "line": 790,
+                    "short_desc": "Object to remove from the list of results",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Sale",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "doDeleteAll": {
+            "name": "doDeleteAll",
+            "line": 805,
+            "short_desc": "Deletes all rows from the sale table.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 805,
+                    "short_desc": "the connection to use",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 842,
+            "short_desc": "Performs a DELETE on the database, given a ChildSale or Criteria object OR a primary key value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "Any exceptions caught during processing will be rethrown wrapped into a PropelException."
+                ]
+            ],
+            "errors": [
+                "\"2\" @param tags are defined by \"1\" are expected"
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 842,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinI18n": {
+            "name": "joinI18n",
+            "line": 885,
+            "short_desc": "Adds a JOIN clause to the query using the i18n relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 885,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 885,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 885,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinWithI18n": {
+            "name": "joinWithI18n",
+            "line": 903,
+            "short_desc": "Adds a JOIN clause to the query and hydrates the related I18n object.",
+            "long_desc": "Shortcut for $c->joinI18n($locale)->with()",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 903,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 903,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useI18nQuery": {
+            "name": "useI18nQuery",
+            "line": 924,
+            "short_desc": "Use the I18n relation query object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleI18nQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "locale": {
+                    "name": "locale",
+                    "line": 924,
+                    "short_desc": "Locale to use for the join condition, e.g. 'fr_FR'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'en_US'",
+                    "is_by_ref": false
+                },
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 924,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 924,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'. Defaults to left join.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::LEFT_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyUpdated": {
+            "name": "recentlyUpdated",
+            "line": 940,
+            "short_desc": "Filter by the latest updated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 940,
+                    "short_desc": "Maximum age of the latest update in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyCreated": {
+            "name": "recentlyCreated",
+            "line": 952,
+            "short_desc": "Filter by the latest created",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 952,
+                    "short_desc": "Maximum age of in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "lastUpdatedFirst": {
+            "name": "lastUpdatedFirst",
+            "line": 962,
+            "short_desc": "Order by update date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstUpdatedFirst": {
+            "name": "firstUpdatedFirst",
+            "line": 972,
+            "short_desc": "Order by update date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "lastCreatedFirst": {
+            "name": "lastCreatedFirst",
+            "line": 982,
+            "short_desc": "Order by create date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstCreatedFirst": {
+            "name": "firstCreatedFirst",
+            "line": 992,
+            "short_desc": "Order by create date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\SaleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "orderById": {
+            "name": "orderById",
+            "line": 81,
+            "short_desc": "Order by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByActive": {
+            "name": "orderByActive",
+            "line": 81,
+            "short_desc": "Order by the active column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByDisplayInitialPrice": {
+            "name": "orderByDisplayInitialPrice",
+            "line": 81,
+            "short_desc": "Order by the display_initial_price column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByStartDate": {
+            "name": "orderByStartDate",
+            "line": 81,
+            "short_desc": "Order by the start_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByEndDate": {
+            "name": "orderByEndDate",
+            "line": 81,
+            "short_desc": "Order by the end_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByPriceOffsetType": {
+            "name": "orderByPriceOffsetType",
+            "line": 81,
+            "short_desc": "Order by the price_offset_type column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByCreatedAt": {
+            "name": "orderByCreatedAt",
+            "line": 81,
+            "short_desc": "Order by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByUpdatedAt": {
+            "name": "orderByUpdatedAt",
+            "line": 81,
+            "short_desc": "Order by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "groupById": {
+            "name": "groupById",
+            "line": 81,
+            "short_desc": "Group by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByActive": {
+            "name": "groupByActive",
+            "line": 81,
+            "short_desc": "Group by the active column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByDisplayInitialPrice": {
+            "name": "groupByDisplayInitialPrice",
+            "line": 81,
+            "short_desc": "Group by the display_initial_price column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByStartDate": {
+            "name": "groupByStartDate",
+            "line": 81,
+            "short_desc": "Group by the start_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByEndDate": {
+            "name": "groupByEndDate",
+            "line": 81,
+            "short_desc": "Group by the end_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByPriceOffsetType": {
+            "name": "groupByPriceOffsetType",
+            "line": 81,
+            "short_desc": "Group by the price_offset_type column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByCreatedAt": {
+            "name": "groupByCreatedAt",
+            "line": 81,
+            "short_desc": "Group by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByUpdatedAt": {
+            "name": "groupByUpdatedAt",
+            "line": 81,
+            "short_desc": "Group by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "leftJoin": {
+            "name": "leftJoin",
+            "line": 81,
+            "short_desc": "Adds a LEFT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoin": {
+            "name": "rightJoin",
+            "line": 81,
+            "short_desc": "Adds a RIGHT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoin": {
+            "name": "innerJoin",
+            "line": 81,
+            "short_desc": "Adds a INNER JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinSaleOffsetCurrency": {
+            "name": "leftJoinSaleOffsetCurrency",
+            "line": 81,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the SaleOffsetCurrency relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinSaleOffsetCurrency": {
+            "name": "rightJoinSaleOffsetCurrency",
+            "line": 81,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the SaleOffsetCurrency relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinSaleOffsetCurrency": {
+            "name": "innerJoinSaleOffsetCurrency",
+            "line": 81,
+            "short_desc": "Adds a INNER JOIN clause to the query using the SaleOffsetCurrency relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinSaleProduct": {
+            "name": "leftJoinSaleProduct",
+            "line": 81,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the SaleProduct relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinSaleProduct": {
+            "name": "rightJoinSaleProduct",
+            "line": 81,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the SaleProduct relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinSaleProduct": {
+            "name": "innerJoinSaleProduct",
+            "line": 81,
+            "short_desc": "Adds a INNER JOIN clause to the query using the SaleProduct relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinSaleI18n": {
+            "name": "leftJoinSaleI18n",
+            "line": 81,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the SaleI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinSaleI18n": {
+            "name": "rightJoinSaleI18n",
+            "line": 81,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the SaleI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinSaleI18n": {
+            "name": "innerJoinSaleI18n",
+            "line": 81,
+            "short_desc": "Adds a INNER JOIN clause to the query using the SaleI18n relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSaleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOne": {
+            "name": "findOne",
+            "line": 81,
+            "short_desc": "Return the first ChildSale matching the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneOrCreate": {
+            "name": "findOneOrCreate",
+            "line": 81,
+            "short_desc": "Return the first ChildSale matching the query, or a new ChildSale object populated from the query conditions when no match is found",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneById": {
+            "name": "findOneById",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByActive": {
+            "name": "findOneByActive",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the active column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "active": {
+                    "name": "active",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByDisplayInitialPrice": {
+            "name": "findOneByDisplayInitialPrice",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the display_initial_price column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "display_initial_price": {
+                    "name": "display_initial_price",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByStartDate": {
+            "name": "findOneByStartDate",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the start_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "start_date": {
+                    "name": "start_date",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByEndDate": {
+            "name": "findOneByEndDate",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the end_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "end_date": {
+                    "name": "end_date",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByPriceOffsetType": {
+            "name": "findOneByPriceOffsetType",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the price_offset_type column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "price_offset_type": {
+                    "name": "price_offset_type",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByCreatedAt": {
+            "name": "findOneByCreatedAt",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByUpdatedAt": {
+            "name": "findOneByUpdatedAt",
+            "line": 81,
+            "short_desc": "Return the first ChildSale filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildSale",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findById": {
+            "name": "findById",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByActive": {
+            "name": "findByActive",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the active column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "active": {
+                    "name": "active",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByDisplayInitialPrice": {
+            "name": "findByDisplayInitialPrice",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the display_initial_price column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "display_initial_price": {
+                    "name": "display_initial_price",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByStartDate": {
+            "name": "findByStartDate",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the start_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "start_date": {
+                    "name": "start_date",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByEndDate": {
+            "name": "findByEndDate",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the end_date column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "end_date": {
+                    "name": "end_date",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByPriceOffsetType": {
+            "name": "findByPriceOffsetType",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the price_offset_type column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "price_offset_type": {
+                    "name": "price_offset_type",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByCreatedAt": {
+            "name": "findByCreatedAt",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByUpdatedAt": {
+            "name": "findByUpdatedAt",
+            "line": 81,
+            "short_desc": "Return ChildSale objects filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 81,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

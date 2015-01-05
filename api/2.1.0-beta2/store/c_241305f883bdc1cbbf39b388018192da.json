@@ -1,0 +1,136 @@
+{
+    "name": "Thelia\\Module\\PaymentModuleInterface",
+    "line": 17,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Module",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Module\/PaymentModuleInterface.php",
+    "hash": "13877a7aff2826b2b540c9235f9befe7405063e2",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "Order": "Thelia\\Model\\Order"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Module\\BaseModuleInterface": "Thelia\\Module\\BaseModuleInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "pay": {
+            "name": "pay",
+            "line": 32,
+            "short_desc": "Method used by payment gateway.",
+            "long_desc": "If this method return a \\Thelia\\Core\\HttpFoundation\\Response instance, this response is send to the\n browser.\n\n In many cases, it's necessary to send a form to the payment gateway. On your response you can return this form already\n completed, ready to be sent",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 32,
+                    "short_desc": "processed order",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Order",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Order",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isValidPayment": {
+            "name": "isValidPayment",
+            "line": 43,
+            "short_desc": "This method is call on Payment loop.",
+            "long_desc": "If you return true, the payment method will de display\nIf you return false, the payment method will not be display",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "manageStockOnCreation": {
+            "name": "manageStockOnCreation",
+            "line": 52,
+            "short_desc": "if you want, you can manage stock in your module instead of order process.",
+            "long_desc": "Return false to decrease the stock when order status switch to pay",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

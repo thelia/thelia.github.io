@@ -1,0 +1,1127 @@
+{
+    "name": "Thelia\\Controller\\Admin\\ProductController",
+    "line": 93,
+    "short_desc": "Manages products",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Controller\\Admin",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Controller\/Admin\/ProductController.php",
+    "hash": "5c1907018b1acb0050b649c0ef57f94f9793412b",
+    "parent": "Thelia\\Controller\\Admin\\AbstractSeoCrudController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "FeatureProductDeleteEvent": "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductDeleteEvent",
+        "FeatureProductUpdateEvent": "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductUpdateEvent",
+        "ProductEvent": "Thelia\\Core\\Event\\Product\\ProductEvent",
+        "MetaDataCreateOrUpdateEvent": "Thelia\\Core\\Event\\MetaData\\MetaDataCreateOrUpdateEvent",
+        "MetaDataDeleteEvent": "Thelia\\Core\\Event\\MetaData\\MetaDataDeleteEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "ProductUpdateEvent": "Thelia\\Core\\Event\\Product\\ProductUpdateEvent",
+        "ProductCreateEvent": "Thelia\\Core\\Event\\Product\\ProductCreateEvent",
+        "ProductAddCategoryEvent": "Thelia\\Core\\Event\\Product\\ProductAddCategoryEvent",
+        "ProductDeleteCategoryEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteCategoryEvent",
+        "ProductDeleteEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteEvent",
+        "ProductToggleVisibilityEvent": "Thelia\\Core\\Event\\Product\\ProductToggleVisibilityEvent",
+        "ProductDeleteContentEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteContentEvent",
+        "ProductAddContentEvent": "Thelia\\Core\\Event\\Product\\ProductAddContentEvent",
+        "ProductAddAccessoryEvent": "Thelia\\Core\\Event\\Product\\ProductAddAccessoryEvent",
+        "ProductDeleteAccessoryEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteAccessoryEvent",
+        "ProductCombinationGenerationEvent": "Thelia\\Core\\Event\\Product\\ProductCombinationGenerationEvent",
+        "ProductSetTemplateEvent": "Thelia\\Core\\Event\\Product\\ProductSetTemplateEvent",
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent",
+        "ProductSaleElementDeleteEvent": "Thelia\\Core\\Event\\ProductSaleElement\\ProductSaleElementDeleteEvent",
+        "ProductSaleElementUpdateEvent": "Thelia\\Core\\Event\\ProductSaleElement\\ProductSaleElementUpdateEvent",
+        "ProductSaleElementCreateEvent": "Thelia\\Core\\Event\\ProductSaleElement\\ProductSaleElementCreateEvent",
+        "JsonResponse": "Thelia\\Core\\HttpFoundation\\JsonResponse",
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "AdminResources": "Thelia\\Core\\Security\\Resource\\AdminResources",
+        "AccessManager": "Thelia\\Core\\Security\\AccessManager",
+        "Document": "Thelia\\Core\\Template\\Loop\\Document",
+        "Image": "Thelia\\Core\\Template\\Loop\\Image",
+        "FormValidationException": "Thelia\\Form\\Exception\\FormValidationException",
+        "AccessoryQuery": "Thelia\\Model\\AccessoryQuery",
+        "AttributeAv": "Thelia\\Model\\AttributeAv",
+        "CategoryQuery": "Thelia\\Model\\CategoryQuery",
+        "Content": "Thelia\\Model\\Content",
+        "Feature": "Thelia\\Model\\Feature",
+        "FeatureQuery": "Thelia\\Model\\FeatureQuery",
+        "FeatureTemplateQuery": "Thelia\\Model\\FeatureTemplateQuery",
+        "FolderQuery": "Thelia\\Model\\FolderQuery",
+        "ContentQuery": "Thelia\\Model\\ContentQuery",
+        "AttributeQuery": "Thelia\\Model\\AttributeQuery",
+        "AttributeAvQuery": "Thelia\\Model\\AttributeAvQuery",
+        "MetaDataQuery": "Thelia\\Model\\MetaDataQuery",
+        "MetaData": "Thelia\\Model\\MetaData",
+        "ProductDocumentQuery": "Thelia\\Model\\ProductDocumentQuery",
+        "ProductImageQuery": "Thelia\\Model\\ProductImageQuery",
+        "ProductQuery": "Thelia\\Model\\ProductQuery",
+        "ProductAssociatedContentQuery": "Thelia\\Model\\ProductAssociatedContentQuery",
+        "ProductSaleElementsModel": "Thelia\\Model\\ProductSaleElements",
+        "ProductSaleElements": "Thelia\\Model\\ProductSaleElements",
+        "ProductSaleElementsQuery": "Thelia\\Model\\ProductSaleElementsQuery",
+        "ProductSaleElementsProductDocument": "Thelia\\Model\\ProductSaleElementsProductDocument",
+        "ProductSaleElementsProductDocumentQuery": "Thelia\\Model\\ProductSaleElementsProductDocumentQuery",
+        "ProductSaleElementsProductImage": "Thelia\\Model\\ProductSaleElementsProductImage",
+        "ProductSaleElementsProductImageQuery": "Thelia\\Model\\ProductSaleElementsProductImageQuery",
+        "ProductPriceQuery": "Thelia\\Model\\ProductPriceQuery",
+        "ProductPrice": "Thelia\\Model\\ProductPrice",
+        "Currency": "Thelia\\Model\\Currency",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery",
+        "Country": "Thelia\\Model\\Country",
+        "Product": "Thelia\\Model\\Product",
+        "ProductCreationForm": "Thelia\\Form\\ProductCreationForm",
+        "ProductModificationForm": "Thelia\\Form\\ProductModificationForm",
+        "ProductSaleElementUpdateForm": "Thelia\\Form\\ProductSaleElementUpdateForm",
+        "ProductDefaultSaleElementUpdateForm": "Thelia\\Form\\ProductDefaultSaleElementUpdateForm",
+        "ProductCombinationGenerationForm": "Thelia\\Form\\ProductCombinationGenerationForm",
+        "TaxRuleQuery": "Thelia\\Model\\TaxRuleQuery",
+        "Calculator": "Thelia\\TaxEngine\\Calculator",
+        "NumberFormat": "Thelia\\Tools\\NumberFormat"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 95,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "loadAttributesAjaxTabAction": {
+            "name": "loadAttributesAjaxTabAction",
+            "line": 114,
+            "short_desc": "Attributes ajax tab loading",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "loadRelatedAjaxTabAction": {
+            "name": "loadRelatedAjaxTabAction",
+            "line": 127,
+            "short_desc": "Related information ajax tab loading",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setToggleVisibilityAction": {
+            "name": "setToggleVisibilityAction",
+            "line": 475,
+            "short_desc": "Online status toggle product",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getVirtualDocumentListAjaxAction": {
+            "name": "getVirtualDocumentListAjaxAction",
+            "line": 544,
+            "short_desc": "return a list of document which will be displayed in AJAX",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productId": {
+                    "name": "productId",
+                    "line": 544,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Controller\\Admin\\$productId",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "pseId": {
+                    "name": "pseId",
+                    "line": 544,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Controller\\Admin\\$pseId",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAvailableRelatedContentAction": {
+            "name": "getAvailableRelatedContentAction",
+            "line": 575,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productId": {
+                    "name": "productId",
+                    "line": 575,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "folderId": {
+                    "name": "folderId",
+                    "line": 575,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addRelatedContentAction": {
+            "name": "addRelatedContentAction",
+            "line": 600,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "deleteRelatedContentAction": {
+            "name": "deleteRelatedContentAction",
+            "line": 626,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAvailableAccessoriesAction": {
+            "name": "getAvailableAccessoriesAction",
+            "line": 654,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productId": {
+                    "name": "productId",
+                    "line": 654,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "categoryId": {
+                    "name": "categoryId",
+                    "line": 654,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addAccessoryAction": {
+            "name": "addAccessoryAction",
+            "line": 679,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "deleteAccessoryAction": {
+            "name": "deleteAccessoryAction",
+            "line": 705,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "updateAccessoryPositionAction": {
+            "name": "updateAccessoryPositionAction",
+            "line": 734,
+            "short_desc": "Update accessory position",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "updateContentPositionAction": {
+            "name": "updateContentPositionAction",
+            "line": 747,
+            "short_desc": "Update related content position",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setProductTemplateAction": {
+            "name": "setProductTemplateAction",
+            "line": 763,
+            "short_desc": "Change product template for a given product.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ],
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productId": {
+                    "name": "productId",
+                    "line": 763,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateAttributesAndFeaturesAction": {
+            "name": "updateAttributesAndFeaturesAction",
+            "line": 787,
+            "short_desc": "Update product attributes and features",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productId": {
+                    "name": "productId",
+                    "line": 787,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addAdditionalCategoryAction": {
+            "name": "addAdditionalCategoryAction",
+            "line": 859,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "deleteAdditionalCategoryAction": {
+            "name": "deleteAdditionalCategoryAction",
+            "line": 885,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAttributeValuesAction": {
+            "name": "getAttributeValuesAction",
+            "line": 913,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productId": {
+                    "name": "productId",
+                    "line": 913,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "attributeId": {
+                    "name": "attributeId",
+                    "line": 913,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addAttributeValueToCombinationAction": {
+            "name": "addAttributeValueToCombinationAction",
+            "line": 938,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "productId": {
+                    "name": "productId",
+                    "line": 938,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "attributeAvId": {
+                    "name": "attributeAvId",
+                    "line": 938,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "combination": {
+                    "name": "combination",
+                    "line": 938,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addProductSaleElementAction": {
+            "name": "addProductSaleElementAction",
+            "line": 981,
+            "short_desc": "A a new combination to a product",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "deleteProductSaleElementAction": {
+            "name": "deleteProductSaleElementAction",
+            "line": 1007,
+            "short_desc": "A a new combination to a product",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "updateProductSaleElementsAction": {
+            "name": "updateProductSaleElementsAction",
+            "line": 1139,
+            "short_desc": "Process the change of product's PSE list.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "updateProductDefaultSaleElementAction": {
+            "name": "updateProductDefaultSaleElementAction",
+            "line": 1149,
+            "short_desc": "Update default product sale element (not attached to any combination)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "buildCombinationsAction": {
+            "name": "buildCombinationsAction",
+            "line": 1179,
+            "short_desc": "Build combinations from the combination output builder",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "priceCaclulator": {
+            "name": "priceCaclulator",
+            "line": 1263,
+            "short_desc": "Invoked through Ajax; this method calculates the taxed price from the unaxed price, and vice versa.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "calculatePrice": {
+            "name": "calculatePrice",
+            "line": 1297,
+            "short_desc": "Calculate tax or untax price for a non existing product.",
+            "long_desc": "For an existing product, use self::priceCaclulator",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\JsonResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "loadConvertedPrices": {
+            "name": "loadConvertedPrices",
+            "line": 1332,
+            "short_desc": "Calculate all prices",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\JsonResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "productSaleElementsProductImageDocumentAssociation": {
+            "name": "productSaleElementsProductImageDocumentAssociation",
+            "line": 1413,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ],
+                [
+                    "\\Thelia\\Core\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pseId": {
+                    "name": "pseId",
+                    "line": 1413,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 1413,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "typeId": {
+                    "name": "typeId",
+                    "line": 1413,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAssociationResponseData": {
+            "name": "getAssociationResponseData",
+            "line": 1439,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pseId": {
+                    "name": "pseId",
+                    "line": 1439,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 1439,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "typeId": {
+                    "name": "typeId",
+                    "line": 1439,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkFileType": {
+            "name": "checkFileType",
+            "line": 1562,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "type": {
+                    "name": "type",
+                    "line": 1562,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAjaxProductSaleElementsImagesDocuments": {
+            "name": "getAjaxProductSaleElementsImagesDocuments",
+            "line": 1578,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 1578,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 1578,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

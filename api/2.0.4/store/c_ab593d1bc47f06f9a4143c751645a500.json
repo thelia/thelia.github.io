@@ -1,0 +1,312 @@
+{
+    "name": "Thelia\\Core\\Template\\Smarty\\Plugins\\Format",
+    "line": 31,
+    "short_desc": "format_date and format_date smarty function.",
+    "long_desc": "Class Format",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Core\\Template\\Smarty\\Plugins"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Template\\Smarty\\Plugins",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/Template\/Smarty\/Plugins\/Format.php",
+    "hash": "5361496b5fd1940ec933485e766ba7a0be76d129",
+    "parent": "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "AbstractSmartyPlugin": "Thelia\\Core\\Template\\Smarty\\AbstractSmartyPlugin",
+        "SmartyPluginException": "Thelia\\Core\\Template\\Smarty\\Exception\\SmartyPluginException",
+        "SmartyPluginDescriptor": "Thelia\\Core\\Template\\Smarty\\SmartyPluginDescriptor",
+        "DateTimeFormat": "Thelia\\Tools\\DateTimeFormat",
+        "MoneyFormat": "Thelia\\Tools\\MoneyFormat",
+        "NumberFormat": "Thelia\\Tools\\NumberFormat"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 35,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 35,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Request",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "formatDate": {
+            "name": "formatDate",
+            "line": 62,
+            "short_desc": "return date in expected format",
+            "long_desc": "available parameters :\n date => DateTime object (mandatory)\n format => expected format\n output => list of default system format. Values available :\n     date => date format\n     time => time format\n     datetime => datetime format (default)\n\nex :\n {format_date date=$dateTimeObject format=\"Y-m-d H:i:s\"} will output the format with specific format\n {format_date date=$dateTimeObject format=\"%e %B %Y\" locale=\"fr_FR\"} will output the format with specific format (see strftime() function)\n {format_date date=$dateTimeObject output=\"date\"} will output the date using the default date system format\n {format_date date=$dateTimeObject} will output with the default datetime system format",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Core\\Template\\Smarty\\Exception\\SmartyPluginException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 62,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 62,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "formatNumber": {
+            "name": "formatNumber",
+            "line": 135,
+            "short_desc": "display numbers in expected format",
+            "long_desc": "available parameters :\n number => int or float number\n decimals => how many decimals format expected\n dec_point => separator for the decimal point\n thousands_sep => thousands separator\n\n ex : {format_number number=\"1246.12\" decimals=\"1\" dec_point=\",\" thousands_sep=\" \"} will output \"1 246,1\"",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the expected number formatted",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Core\\Template\\Smarty\\Exception\\SmartyPluginException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 135,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\$params",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 135,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "formatMoney": {
+            "name": "formatMoney",
+            "line": 172,
+            "short_desc": "display a amount in expected format",
+            "long_desc": "available parameters :\n number => int or float number\n decimals => how many decimals format expected\n dec_point => separator for the decimal point\n thousands_sep => thousands separator\n symbol => Currency symbol\n\n ex : {format_money number=\"1246.12\" decimals=\"1\" dec_point=\",\" thousands_sep=\" \" symbol=\"\u20ac\"} will output \"1 246,1 \u20ac\"",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "the expected number formatted",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Core\\Template\\Smarty\\Exception\\SmartyPluginException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "params": {
+                    "name": "params",
+                    "line": 172,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\Smarty\\Plugins\\$params",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "template": {
+                    "name": "template",
+                    "line": 172,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getPluginDescriptors": {
+            "name": "getPluginDescriptors",
+            "line": 192,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\Smarty\\Plugins\\an",
+                    false
+                ]
+            ],
+            "hint_desc": "array of SmartyPluginDescriptor",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

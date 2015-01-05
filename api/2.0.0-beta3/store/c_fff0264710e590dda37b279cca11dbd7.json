@@ -1,0 +1,284 @@
+{
+    "name": "Thelia\\Core\\Security\\User\\UserInterface",
+    "line": 11,
+    "short_desc": "This interface should be implemented by user classes",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Security\\User",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/Security\/User\/UserInterface.php",
+    "hash": "ad18e04ec07a240a2229000f0fc8d8962b4f07ce",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [
+
+    ],
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getUsername": {
+            "name": "getUsername",
+            "line": 16,
+            "short_desc": "Return the user unique name",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getPassword": {
+            "name": "getPassword",
+            "line": 21,
+            "short_desc": "Return the user encoded password",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "checkPassword": {
+            "name": "checkPassword",
+            "line": 26,
+            "short_desc": "Check a string against a the user password",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "password": {
+                    "name": "password",
+                    "line": 26,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getRoles": {
+            "name": "getRoles",
+            "line": 40,
+            "short_desc": "Returns the roles granted to the user.",
+            "long_desc": "<code>\npublic function getRoles()\n{\n    return array('USER');\n}\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Core\\Security\\User\\Role",
+                    true
+                ]
+            ],
+            "hint_desc": "The user roles",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "eraseCredentials": {
+            "name": "eraseCredentials",
+            "line": 50,
+            "short_desc": "Removes sensitive data from the user.",
+            "long_desc": "This is important if, at any given point, sensitive information like\nthe plain-text password is stored on this object.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getToken": {
+            "name": "getToken",
+            "line": 55,
+            "short_desc": "return the user token (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setToken": {
+            "name": "setToken",
+            "line": 60,
+            "short_desc": "Set a token in the user data (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "token": {
+                    "name": "token",
+                    "line": 60,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSerial": {
+            "name": "getSerial",
+            "line": 65,
+            "short_desc": "return the user serial  (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setSerial": {
+            "name": "setSerial",
+            "line": 70,
+            "short_desc": "Set a serial number int the user data  (used by remember me authnetication system)",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "serial": {
+                    "name": "serial",
+                    "line": 70,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

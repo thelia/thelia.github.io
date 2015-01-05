@@ -1,0 +1,707 @@
+{
+    "name": "Thelia\\Action\\Product",
+    "line": 58,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Action\/Product.php",
+    "hash": "a9130fb98c03c5ef2437a23a09fbc76069c8d8b2",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "ProductQuery": "Thelia\\Model\\ProductQuery",
+        "ProductModel": "Thelia\\Model\\Product",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "ProductUpdateEvent": "Thelia\\Core\\Event\\Product\\ProductUpdateEvent",
+        "ProductCreateEvent": "Thelia\\Core\\Event\\Product\\ProductCreateEvent",
+        "ProductDeleteEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteEvent",
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent",
+        "ProductToggleVisibilityEvent": "Thelia\\Core\\Event\\Product\\ProductToggleVisibilityEvent",
+        "ProductAddContentEvent": "Thelia\\Core\\Event\\Product\\ProductAddContentEvent",
+        "ProductDeleteContentEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteContentEvent",
+        "ProductAssociatedContent": "Thelia\\Model\\ProductAssociatedContent",
+        "ProductAssociatedContentQuery": "Thelia\\Model\\ProductAssociatedContentQuery",
+        "ProductCategory": "Thelia\\Model\\ProductCategory",
+        "TaxRuleQuery": "Thelia\\Model\\TaxRuleQuery",
+        "AccessoryQuery": "Thelia\\Model\\AccessoryQuery",
+        "Accessory": "Thelia\\Model\\Accessory",
+        "FeatureProductUpdateEvent": "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductUpdateEvent",
+        "FeatureProduct": "Thelia\\Model\\FeatureProduct",
+        "FeatureProductDeleteEvent": "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductDeleteEvent",
+        "FeatureProductQuery": "Thelia\\Model\\FeatureProductQuery",
+        "ProductCategoryQuery": "Thelia\\Model\\ProductCategoryQuery",
+        "ProductSetTemplateEvent": "Thelia\\Core\\Event\\Product\\ProductSetTemplateEvent",
+        "ProductSaleElementsQuery": "Thelia\\Model\\ProductSaleElementsQuery",
+        "ProductDeleteCategoryEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteCategoryEvent",
+        "ProductAddCategoryEvent": "Thelia\\Core\\Event\\Product\\ProductAddCategoryEvent",
+        "ProductAddAccessoryEvent": "Thelia\\Core\\Event\\Product\\ProductAddAccessoryEvent",
+        "ProductDeleteAccessoryEvent": "Thelia\\Core\\Event\\Product\\ProductDeleteAccessoryEvent"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "create": {
+            "name": "create",
+            "line": 65,
+            "short_desc": "Create a new product entry",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 65,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductCreateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductCreateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 97,
+            "short_desc": "Change a product",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 97,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 129,
+            "short_desc": "Delete a product entry",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 129,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleVisibility": {
+            "name": "toggleVisibility",
+            "line": 147,
+            "short_desc": "Toggle product visibility.",
+            "long_desc": "No form used here",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 147,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductToggleVisibilityEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductToggleVisibilityEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updatePosition": {
+            "name": "updatePosition",
+            "line": 163,
+            "short_desc": "Changes position, selecting absolute ou relative change.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 163,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdatePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdatePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addContent": {
+            "name": "addContent",
+            "line": 168,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 168,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductAddContentEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductAddContentEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "removeContent": {
+            "name": "removeContent",
+            "line": 185,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 185,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductDeleteContentEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductDeleteContentEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addCategory": {
+            "name": "addCategory",
+            "line": 199,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 199,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductAddCategoryEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductAddCategoryEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "removeCategory": {
+            "name": "removeCategory",
+            "line": 217,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 217,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductDeleteCategoryEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductDeleteCategoryEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "addAccessory": {
+            "name": "addAccessory",
+            "line": 227,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 227,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductAddAccessoryEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductAddAccessoryEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "removeAccessory": {
+            "name": "removeAccessory",
+            "line": 244,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 244,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductDeleteAccessoryEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductDeleteAccessoryEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setProductTemplate": {
+            "name": "setProductTemplate",
+            "line": 258,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 258,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Product\\ProductSetTemplateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ProductSetTemplateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateAccessoryPosition": {
+            "name": "updateAccessoryPosition",
+            "line": 282,
+            "short_desc": "Changes accessry position, selecting absolute ou relative change.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 282,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdatePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdatePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateContentPosition": {
+            "name": "updateContentPosition",
+            "line": 292,
+            "short_desc": "Changes position, selecting absolute ou relative change.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 292,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdatePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdatePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updateFeatureProductValue": {
+            "name": "updateFeatureProductValue",
+            "line": 302,
+            "short_desc": "Update the value of a product feature.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 302,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductUpdateEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FeatureProductUpdateEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "deleteFeatureProductValue": {
+            "name": "deleteFeatureProductValue",
+            "line": 349,
+            "short_desc": "Delete a product feature value",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 349,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\FeatureProduct\\FeatureProductDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FeatureProductDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 361,
+            "short_desc": "{@inheritDoc}",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

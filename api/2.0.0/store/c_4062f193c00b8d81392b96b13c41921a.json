@@ -1,0 +1,329 @@
+{
+    "name": "Thelia\\Action\\Module",
+    "line": 38,
+    "short_desc": "Class Module",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Action"
+            ]
+        ],
+        "author": [
+            [
+                "Manuel",
+                "Raynaud",
+                "<mraynaud@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Action\/Module.php",
+    "hash": "7447c7a845affd292a347fc67345b79bbfcba6cb",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Propel": "Propel\\Runtime\\Propel",
+        "ContainerInterface": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+        "EventDispatcherInterface": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "Filesystem": "Symfony\\Component\\Filesystem\\Filesystem",
+        "CacheEvent": "Thelia\\Core\\Event\\Cache\\CacheEvent",
+        "ModuleDeleteEvent": "Thelia\\Core\\Event\\Module\\ModuleDeleteEvent",
+        "ModuleEvent": "Thelia\\Core\\Event\\Module\\ModuleEvent",
+        "ModuleToggleActivationEvent": "Thelia\\Core\\Event\\Module\\ModuleToggleActivationEvent",
+        "OrderPaymentEvent": "Thelia\\Core\\Event\\Order\\OrderPaymentEvent",
+        "TheliaEvents": "Thelia\\Core\\Event\\TheliaEvents",
+        "UpdatePositionEvent": "Thelia\\Core\\Event\\UpdatePositionEvent",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "ModuleTableMap": "Thelia\\Model\\Map\\ModuleTableMap",
+        "ModuleQuery": "Thelia\\Model\\ModuleQuery",
+        "BaseModule": "Thelia\\Module\\BaseModule"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 45,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "container": {
+                    "name": "container",
+                    "line": 45,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ContainerInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toggleActivation": {
+            "name": "toggleActivation",
+            "line": 50,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 50,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Module\\ModuleToggleActivationEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ModuleToggleActivationEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 72,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 72,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Module\\ModuleDeleteEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ModuleDeleteEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 125,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 125,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Module\\ModuleEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ModuleEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "pay": {
+            "name": "pay",
+            "line": 150,
+            "short_desc": "Call the payment method of the payment module of the given order",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\RuntimeException",
+                    "if no payment module can be found."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 150,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Order\\OrderPaymentEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "OrderPaymentEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "updatePosition": {
+            "name": "updatePosition",
+            "line": 180,
+            "short_desc": "Changes position, selecting absolute ou relative change.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 180,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\UpdatePositionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "UpdatePositionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 214,
+            "short_desc": "Returns an array of event names this subscriber wants to listen to.",
+            "long_desc": "The array keys are event names and the value can be:\n\n * The method name to call (priority defaults to 0)\n * An array composed of the method name to call and the priority\n * An array of arrays composed of the method names to call and respective\n   priorities, or 0 if unset\n\nFor instance:\n\n * array('eventName' => 'methodName')\n * array('eventName' => array('methodName', $priority))\n * array('eventName' => array(array('methodName1', $priority), array('methodName2'))",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "The event names to listen to",
+            "tags": {
+                "api": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

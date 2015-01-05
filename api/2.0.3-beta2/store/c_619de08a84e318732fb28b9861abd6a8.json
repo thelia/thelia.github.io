@@ -1,0 +1,158 @@
+{
+    "name": "Thelia\\TaxEngine\\TaxType\\PricePercentTaxType",
+    "line": 25,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "Etienne",
+                "Roudeix",
+                "<eroudeix@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\TaxEngine\\TaxType",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/TaxEngine\/TaxType\/PricePercentTaxType.php",
+    "hash": "a4e537bbb6960e586fdba72e09abbf852cfad4ca",
+    "parent": "Thelia\\TaxEngine\\BaseTaxType",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "FloatType": "Thelia\\Type\\FloatType",
+        "Translator": "Thelia\\Core\\Translation\\Translator",
+        "TaxTypeRequirementDefinition": "Thelia\\TaxEngine\\TaxTypeRequirementDefinition",
+        "BaseTaxType": "Thelia\\TaxEngine\\BaseTaxType"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "setPercentage": {
+            "name": "setPercentage",
+            "line": 27,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "percent": {
+                    "name": "percent",
+                    "line": 27,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "pricePercentRetriever": {
+            "name": "pricePercentRetriever",
+            "line": 34,
+            "short_desc": "For a price percent tax type, return the percentage (e.g.",
+            "long_desc": "20 for 20%) of the product price\nto use in tax calculation.\n\nFor other tax types, this method shoud return 0.",
+            "hint": [
+                [
+                    "Thelia\\TaxEngine\\number",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getRequirementsDefinition": {
+            "name": "getRequirementsDefinition",
+            "line": 39,
+            "short_desc": "Returns the requirements definition of this tax type.",
+            "long_desc": "This is an array of\nTaxTypeRequirementDefinition, which defines the name and the type of\nthe requirements. Example :\n\narray(\n   'percent' => new FloatType()\n);",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "of TaxTypeRequirementDefinition",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getTitle": {
+            "name": "getTitle",
+            "line": 46,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\TaxEngine\\the",
+                    false
+                ]
+            ],
+            "hint_desc": "name of this tax type.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

@@ -1,0 +1,348 @@
+{
+    "name": "Thelia\\Condition\\Implementation\\StartDate",
+    "line": 27,
+    "short_desc": "Check a Checkout against its Product number",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Condition"
+            ]
+        ],
+        "author": [
+            [
+                "Franck",
+                "Allimant",
+                "<franck@cqfdev.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Condition\\Implementation",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Condition\/Implementation\/StartDate.php",
+    "hash": "29d1e3007fd21d427bc416698604f39146cba19a",
+    "parent": "Thelia\\Condition\\Implementation\\ConditionAbstract",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Operators": "Thelia\\Condition\\Operators",
+        "FacadeInterface": "Thelia\\Coupon\\FacadeInterface",
+        "InvalidConditionValueException": "Thelia\\Exception\\InvalidConditionValueException",
+        "DateTimeFormat": "Thelia\\Tools\\DateTimeFormat"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 34,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "facade": {
+                    "name": "facade",
+                    "line": 34,
+                    "short_desc": "Service Facade",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\FacadeInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FacadeInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getServiceId": {
+            "name": "getServiceId",
+            "line": 48,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setValidatorsFromForm": {
+            "name": "setValidatorsFromForm",
+            "line": 56,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\Implementation\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "operators": {
+                    "name": "operators",
+                    "line": 56,
+                    "short_desc": "an array of operators (greater than, less than, etc.) entered in the condition parameter input form, one for each condition defined by the Condition",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "values": {
+                    "name": "values",
+                    "line": 56,
+                    "short_desc": "an array of values entered in in the condition parameter input form, one for each condition defined by the Condition",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isMatching": {
+            "name": "isMatching",
+            "line": 90,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getName": {
+            "name": "getName",
+            "line": 102,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getToolTip": {
+            "name": "getToolTip",
+            "line": 113,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getSummary": {
+            "name": "getSummary",
+            "line": 126,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "drawBackOfficeInputs": {
+            "name": "drawBackOfficeInputs",
+            "line": 165,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML string",
+            "tags": {
+                "inheritdoc": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": {
+        "START_DATE": {
+            "name": "START_DATE",
+            "line": 29,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

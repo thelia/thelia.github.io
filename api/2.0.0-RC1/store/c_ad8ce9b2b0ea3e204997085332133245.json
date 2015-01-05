@@ -1,0 +1,3080 @@
+{
+    "name": "Thelia\\Model\\Base\\AreaDeliveryModuleQuery",
+    "line": 64,
+    "short_desc": "Base class that represents a query for the 'area_delivery_module' table.",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "method": [
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "orderById($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "orderByAreaId($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "area_id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "orderByDeliveryModuleId($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "delivery_module_id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "orderByCreatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "orderByUpdatedAt($order",
+                "=",
+                "Criteria::ASC)",
+                "Order",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "groupById()",
+                "Group",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "groupByAreaId()",
+                "Group",
+                "by",
+                "the",
+                "area_id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "groupByDeliveryModuleId()",
+                "Group",
+                "by",
+                "the",
+                "delivery_module_id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "groupByCreatedAt()",
+                "Group",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "groupByUpdatedAt()",
+                "Group",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "leftJoin($relation)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "rightJoin($relation)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "innerJoin($relation)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "leftJoinArea($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Area",
+                "relation"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "rightJoinArea($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Area",
+                "relation"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "innerJoinArea($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Area",
+                "relation"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "leftJoinModule($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "LEFT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Module",
+                "relation"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "rightJoinModule($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "RIGHT",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Module",
+                "relation"
+            ],
+            [
+                "ChildAreaDeliveryModuleQuery",
+                "innerJoinModule($relationAlias",
+                "=",
+                "null)",
+                "Adds",
+                "a",
+                "INNER",
+                "JOIN",
+                "clause",
+                "to",
+                "the",
+                "query",
+                "using",
+                "the",
+                "Module",
+                "relation"
+            ],
+            [
+                "ChildAreaDeliveryModule",
+                "findOne(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildAreaDeliveryModule",
+                "matching",
+                "the",
+                "query"
+            ],
+            [
+                "ChildAreaDeliveryModule",
+                "findOneOrCreate(ConnectionInterface",
+                "$con",
+                "=",
+                "null)",
+                "Return",
+                "the",
+                "first",
+                "ChildAreaDeliveryModule",
+                "matching",
+                "the",
+                "query,",
+                "or",
+                "a",
+                "new",
+                "ChildAreaDeliveryModule",
+                "object",
+                "populated",
+                "from",
+                "the",
+                "query",
+                "conditions",
+                "when",
+                "no",
+                "match",
+                "is",
+                "found"
+            ],
+            [
+                "ChildAreaDeliveryModule",
+                "findOneById(int",
+                "$id)",
+                "Return",
+                "the",
+                "first",
+                "ChildAreaDeliveryModule",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModule",
+                "findOneByAreaId(int",
+                "$area_id)",
+                "Return",
+                "the",
+                "first",
+                "ChildAreaDeliveryModule",
+                "filtered",
+                "by",
+                "the",
+                "area_id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModule",
+                "findOneByDeliveryModuleId(int",
+                "$delivery_module_id)",
+                "Return",
+                "the",
+                "first",
+                "ChildAreaDeliveryModule",
+                "filtered",
+                "by",
+                "the",
+                "delivery_module_id",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModule",
+                "findOneByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildAreaDeliveryModule",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "ChildAreaDeliveryModule",
+                "findOneByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "the",
+                "first",
+                "ChildAreaDeliveryModule",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ],
+            [
+                "array",
+                "findById(int",
+                "$id)",
+                "Return",
+                "ChildAreaDeliveryModule",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "id",
+                "column"
+            ],
+            [
+                "array",
+                "findByAreaId(int",
+                "$area_id)",
+                "Return",
+                "ChildAreaDeliveryModule",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "area_id",
+                "column"
+            ],
+            [
+                "array",
+                "findByDeliveryModuleId(int",
+                "$delivery_module_id)",
+                "Return",
+                "ChildAreaDeliveryModule",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "delivery_module_id",
+                "column"
+            ],
+            [
+                "array",
+                "findByCreatedAt(string",
+                "$created_at)",
+                "Return",
+                "ChildAreaDeliveryModule",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "created_at",
+                "column"
+            ],
+            [
+                "array",
+                "findByUpdatedAt(string",
+                "$updated_at)",
+                "Return",
+                "ChildAreaDeliveryModule",
+                "objects",
+                "filtered",
+                "by",
+                "the",
+                "updated_at",
+                "column"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Model\\Base",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Base\/AreaDeliveryModuleQuery.php",
+    "hash": "c4086190a6c1a1caf4019098313e24736d5e2219",
+    "parent": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Exception": "Exception",
+        "PDO": "PDO",
+        "Propel": "Propel\\Runtime\\Propel",
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "ModelJoin": "Propel\\Runtime\\ActiveQuery\\ModelJoin",
+        "Collection": "Propel\\Runtime\\Collection\\Collection",
+        "ObjectCollection": "Propel\\Runtime\\Collection\\ObjectCollection",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "ChildAreaDeliveryModule": "Thelia\\Model\\AreaDeliveryModule",
+        "ChildAreaDeliveryModuleQuery": "Thelia\\Model\\AreaDeliveryModuleQuery",
+        "AreaDeliveryModuleTableMap": "Thelia\\Model\\Map\\AreaDeliveryModuleTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 74,
+            "short_desc": "Initializes internal state of \\Thelia\\Model\\Base\\AreaDeliveryModuleQuery object.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "dbName": {
+                    "name": "dbName",
+                    "line": 74,
+                    "short_desc": "The database name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'thelia'",
+                    "is_by_ref": false
+                },
+                "modelName": {
+                    "name": "modelName",
+                    "line": 74,
+                    "short_desc": "The phpName of a model, e.g. 'Book'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'\\\\Thelia\\\\Model\\\\AreaDeliveryModule'",
+                    "is_by_ref": false
+                },
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 74,
+                    "short_desc": "The alias for the model in this query, e.g. 'b'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "create": {
+            "name": "create",
+            "line": 87,
+            "short_desc": "Returns a new ChildAreaDeliveryModuleQuery object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "modelAlias": {
+                    "name": "modelAlias",
+                    "line": 87,
+                    "short_desc": "The alias of a model in the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "criteria": {
+                    "name": "criteria",
+                    "line": 87,
+                    "short_desc": "Optional Criteria to build the query from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\ActiveQuery\\Criteria",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPk": {
+            "name": "findPk",
+            "line": 117,
+            "short_desc": "Find object by primary key.",
+            "long_desc": "Propel uses the instance pool to skip the database if the object exists.\nGo fast if the query is untouched.\n\n<code>\n$obj  = $c->findPk(12, $con);\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModule",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the result, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 117,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 117,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findPks": {
+            "name": "findPks",
+            "line": 199,
+            "short_desc": "Find objects by primary key <code> $objs = $c->findPks(array(12, 56, 832), $con); <\/code>",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\Collection\\ObjectCollection",
+                    false
+                ],
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the list of results, formatted by the current formatter",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 199,
+                    "short_desc": "Primary keys to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 199,
+                    "short_desc": "an optional connection object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKey": {
+            "name": "filterByPrimaryKey",
+            "line": 220,
+            "short_desc": "Filter the query by primary key",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 220,
+                    "short_desc": "Primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByPrimaryKeys": {
+            "name": "filterByPrimaryKeys",
+            "line": 232,
+            "short_desc": "Filter the query by a list of primary keys",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keys": {
+                    "name": "keys",
+                    "line": 232,
+                    "short_desc": "The list of primary key to use for the query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterById": {
+            "name": "filterById",
+            "line": 255,
+            "short_desc": "Filter the query on the id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterById(1234); \/\/ WHERE id = 1234\n$query->filterById(array(12, 34)); \/\/ WHERE id IN (12, 34)\n$query->filterById(array('min' => 12)); \/\/ WHERE id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 255,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 255,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByAreaId": {
+            "name": "filterByAreaId",
+            "line": 298,
+            "short_desc": "Filter the query on the area_id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByAreaId(1234); \/\/ WHERE area_id = 1234\n$query->filterByAreaId(array(12, 34)); \/\/ WHERE area_id IN (12, 34)\n$query->filterByAreaId(array('min' => 12)); \/\/ WHERE area_id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": {
+                "see": [
+                    [
+                        "filterByArea()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "areaId": {
+                    "name": "areaId",
+                    "line": 298,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 298,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByDeliveryModuleId": {
+            "name": "filterByDeliveryModuleId",
+            "line": 341,
+            "short_desc": "Filter the query on the delivery_module_id column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByDeliveryModuleId(1234); \/\/ WHERE delivery_module_id = 1234\n$query->filterByDeliveryModuleId(array(12, 34)); \/\/ WHERE delivery_module_id IN (12, 34)\n$query->filterByDeliveryModuleId(array('min' => 12)); \/\/ WHERE delivery_module_id > 12\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": {
+                "see": [
+                    [
+                        "filterByModule()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "deliveryModuleId": {
+                    "name": "deliveryModuleId",
+                    "line": 341,
+                    "short_desc": "The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 341,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByCreatedAt": {
+            "name": "filterByCreatedAt",
+            "line": 384,
+            "short_desc": "Filter the query on the created_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByCreatedAt('2011-03-14'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt('now'); \/\/ WHERE created_at = '2011-03-14'\n$query->filterByCreatedAt(array('max' => 'yesterday')); \/\/ WHERE created_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "createdAt": {
+                    "name": "createdAt",
+                    "line": 384,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 384,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByUpdatedAt": {
+            "name": "filterByUpdatedAt",
+            "line": 427,
+            "short_desc": "Filter the query on the updated_at column",
+            "long_desc": "Example usage:\n<code>\n$query->filterByUpdatedAt('2011-03-14'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt('now'); \/\/ WHERE updated_at = '2011-03-14'\n$query->filterByUpdatedAt(array('max' => 'yesterday')); \/\/ WHERE updated_at > '2011-03-13'\n<\/code>",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "line": 427,
+                    "short_desc": "The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 427,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByArea": {
+            "name": "filterByArea",
+            "line": 458,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\Area object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "area": {
+                    "name": "area",
+                    "line": 458,
+                    "short_desc": "The related object(s) to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\Area",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 458,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinArea": {
+            "name": "joinArea",
+            "line": 483,
+            "short_desc": "Adds a JOIN clause to the query using the Area relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 483,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 483,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useAreaQuery": {
+            "name": "useAreaQuery",
+            "line": 518,
+            "short_desc": "Use the Area relation Area object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AreaQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 518,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 518,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "filterByModule": {
+            "name": "filterByModule",
+            "line": 533,
+            "short_desc": "Filter the query by a related \\Thelia\\Model\\Module object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "module": {
+                    "name": "module",
+                    "line": 533,
+                    "short_desc": "The related object(s) to use as filter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Thelia\\Model\\Module",
+                            false
+                        ],
+                        [
+                            "Propel\\Runtime\\Collection\\ObjectCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "comparison": {
+                    "name": "comparison",
+                    "line": 533,
+                    "short_desc": "Operator to use for the column comparison, defaults to Criteria::EQUAL",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "joinModule": {
+            "name": "joinModule",
+            "line": 558,
+            "short_desc": "Adds a JOIN clause to the query using the Module relation",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 558,
+                    "short_desc": "optional alias for the relation",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 558,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "useModuleQuery": {
+            "name": "useModuleQuery",
+            "line": 593,
+            "short_desc": "Use the Module relation Module object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\ModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "A secondary query class using the current class as primary query",
+            "tags": {
+                "see": [
+                    [
+                        "useQuery()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 593,
+                    "short_desc": "optional alias for the relation, to be used as main alias in the secondary query",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "joinType": {
+                    "name": "joinType",
+                    "line": 593,
+                    "short_desc": "Accepted values are null, 'left join', 'right join', 'inner join'",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "Criteria::INNER_JOIN",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "prune": {
+            "name": "prune",
+            "line": 607,
+            "short_desc": "Exclude object from result",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "areaDeliveryModule": {
+                    "name": "areaDeliveryModule",
+                    "line": 607,
+                    "short_desc": "Object to remove from the list of results",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\AreaDeliveryModule",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "doDeleteAll": {
+            "name": "doDeleteAll",
+            "line": 622,
+            "short_desc": "Deletes all rows from the area_delivery_module table.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 622,
+                    "short_desc": "the connection to use",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 659,
+            "short_desc": "Performs a DELETE on the database, given a ChildAreaDeliveryModule or Criteria object OR a primary key value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "Any exceptions caught during processing will be rethrown wrapped into a PropelException."
+                ]
+            ],
+            "errors": [
+                "\"2\" @param tags are defined by \"1\" are expected"
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 659,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyUpdated": {
+            "name": "recentlyUpdated",
+            "line": 699,
+            "short_desc": "Filter by the latest updated",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 699,
+                    "short_desc": "Maximum age of the latest update in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "recentlyCreated": {
+            "name": "recentlyCreated",
+            "line": 711,
+            "short_desc": "Filter by the latest created",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "nbDays": {
+                    "name": "nbDays",
+                    "line": 711,
+                    "short_desc": "Maximum age of in days",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "7",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "lastUpdatedFirst": {
+            "name": "lastUpdatedFirst",
+            "line": 721,
+            "short_desc": "Order by update date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstUpdatedFirst": {
+            "name": "firstUpdatedFirst",
+            "line": 731,
+            "short_desc": "Order by update date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "lastCreatedFirst": {
+            "name": "lastCreatedFirst",
+            "line": 741,
+            "short_desc": "Order by create date desc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "firstCreatedFirst": {
+            "name": "firstCreatedFirst",
+            "line": 751,
+            "short_desc": "Order by create date asc",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AreaDeliveryModuleQuery",
+                    false
+                ]
+            ],
+            "hint_desc": "The current query, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "orderById": {
+            "name": "orderById",
+            "line": 64,
+            "short_desc": "Order by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByAreaId": {
+            "name": "orderByAreaId",
+            "line": 64,
+            "short_desc": "Order by the area_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByDeliveryModuleId": {
+            "name": "orderByDeliveryModuleId",
+            "line": 64,
+            "short_desc": "Order by the delivery_module_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByCreatedAt": {
+            "name": "orderByCreatedAt",
+            "line": 64,
+            "short_desc": "Order by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "orderByUpdatedAt": {
+            "name": "orderByUpdatedAt",
+            "line": 64,
+            "short_desc": "Order by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "order": {
+                    "name": "order",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "Criteria::ASC",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "groupById": {
+            "name": "groupById",
+            "line": 64,
+            "short_desc": "Group by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByAreaId": {
+            "name": "groupByAreaId",
+            "line": 64,
+            "short_desc": "Group by the area_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByDeliveryModuleId": {
+            "name": "groupByDeliveryModuleId",
+            "line": 64,
+            "short_desc": "Group by the delivery_module_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByCreatedAt": {
+            "name": "groupByCreatedAt",
+            "line": 64,
+            "short_desc": "Group by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "groupByUpdatedAt": {
+            "name": "groupByUpdatedAt",
+            "line": 64,
+            "short_desc": "Group by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "leftJoin": {
+            "name": "leftJoin",
+            "line": 64,
+            "short_desc": "Adds a LEFT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoin": {
+            "name": "rightJoin",
+            "line": 64,
+            "short_desc": "Adds a RIGHT JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoin": {
+            "name": "innerJoin",
+            "line": 64,
+            "short_desc": "Adds a INNER JOIN clause to the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relation": {
+                    "name": "relation",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinArea": {
+            "name": "leftJoinArea",
+            "line": 64,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the Area relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinArea": {
+            "name": "rightJoinArea",
+            "line": 64,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the Area relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinArea": {
+            "name": "innerJoinArea",
+            "line": 64,
+            "short_desc": "Adds a INNER JOIN clause to the query using the Area relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "leftJoinModule": {
+            "name": "leftJoinModule",
+            "line": 64,
+            "short_desc": "Adds a LEFT JOIN clause to the query using the Module relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "rightJoinModule": {
+            "name": "rightJoinModule",
+            "line": 64,
+            "short_desc": "Adds a RIGHT JOIN clause to the query using the Module relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "innerJoinModule": {
+            "name": "innerJoinModule",
+            "line": 64,
+            "short_desc": "Adds a INNER JOIN clause to the query using the Module relation",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModuleQuery",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "relationAlias": {
+                    "name": "relationAlias",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOne": {
+            "name": "findOne",
+            "line": 64,
+            "short_desc": "Return the first ChildAreaDeliveryModule matching the query",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModule",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneOrCreate": {
+            "name": "findOneOrCreate",
+            "line": 64,
+            "short_desc": "Return the first ChildAreaDeliveryModule matching the query, or a new ChildAreaDeliveryModule object populated from the query conditions when no match is found",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModule",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "ConnectionInterface ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": "null",
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneById": {
+            "name": "findOneById",
+            "line": 64,
+            "short_desc": "Return the first ChildAreaDeliveryModule filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModule",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByAreaId": {
+            "name": "findOneByAreaId",
+            "line": 64,
+            "short_desc": "Return the first ChildAreaDeliveryModule filtered by the area_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModule",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "area_id": {
+                    "name": "area_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByDeliveryModuleId": {
+            "name": "findOneByDeliveryModuleId",
+            "line": 64,
+            "short_desc": "Return the first ChildAreaDeliveryModule filtered by the delivery_module_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModule",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "delivery_module_id": {
+                    "name": "delivery_module_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByCreatedAt": {
+            "name": "findOneByCreatedAt",
+            "line": 64,
+            "short_desc": "Return the first ChildAreaDeliveryModule filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModule",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findOneByUpdatedAt": {
+            "name": "findOneByUpdatedAt",
+            "line": 64,
+            "short_desc": "Return the first ChildAreaDeliveryModule filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "ChildAreaDeliveryModule",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findById": {
+            "name": "findById",
+            "line": 64,
+            "short_desc": "Return ChildAreaDeliveryModule objects filtered by the id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByAreaId": {
+            "name": "findByAreaId",
+            "line": 64,
+            "short_desc": "Return ChildAreaDeliveryModule objects filtered by the area_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "area_id": {
+                    "name": "area_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByDeliveryModuleId": {
+            "name": "findByDeliveryModuleId",
+            "line": 64,
+            "short_desc": "Return ChildAreaDeliveryModule objects filtered by the delivery_module_id column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "delivery_module_id": {
+                    "name": "delivery_module_id",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByCreatedAt": {
+            "name": "findByCreatedAt",
+            "line": 64,
+            "short_desc": "Return ChildAreaDeliveryModule objects filtered by the created_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "created_at": {
+                    "name": "created_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        },
+        "findByUpdatedAt": {
+            "name": "findByUpdatedAt",
+            "line": 64,
+            "short_desc": "Return ChildAreaDeliveryModule objects filtered by the updated_at column",
+            "long_desc": null,
+            "hint": [
+                [
+                    "array",
+                    null
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": null,
+            "is_by_ref": null,
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "updated_at": {
+                    "name": "updated_at",
+                    "line": 64,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string ",
+                            null
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": null
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

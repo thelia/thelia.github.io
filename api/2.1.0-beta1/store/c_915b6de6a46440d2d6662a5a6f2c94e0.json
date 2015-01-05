@@ -1,0 +1,186 @@
+{
+    "name": "Thelia\\Tools\\Rest\\ResponseRest",
+    "line": 26,
+    "short_desc": "Class ResponseRest Create a serialized Response",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Tools\\Rest"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Tools\\Rest",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Tools\/Rest\/ResponseRest.php",
+    "hash": "2b89e9ce32856af9cad318f65924826909a241db",
+    "parent": "Thelia\\Core\\HttpFoundation\\Response",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Response": "Thelia\\Core\\HttpFoundation\\Response",
+        "Serializer": "Symfony\\Component\\Serializer\\Serializer",
+        "XmlEncoder": "Symfony\\Component\\Serializer\\Encoder\\XmlEncoder",
+        "JsonEncoder": "Symfony\\Component\\Serializer\\Encoder\\JsonEncoder",
+        "GetSetMethodNormalizer": "Symfony\\Component\\Serializer\\Normalizer\\GetSetMethodNormalizer"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 46,
+            "short_desc": "Constructor.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "api": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\InvalidArgumentException",
+                    "When the HTTP status code is not valid"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 46,
+                    "short_desc": "Array to be serialized",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "format": {
+                    "name": "format",
+                    "line": 46,
+                    "short_desc": "serialization format, text, xml or json available",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "'json'",
+                    "is_by_ref": false
+                },
+                "status": {
+                    "name": "status",
+                    "line": 46,
+                    "short_desc": "The response status code",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "integer",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "200",
+                    "is_by_ref": false
+                },
+                "headers": {
+                    "name": "headers",
+                    "line": 46,
+                    "short_desc": "An array of response headers",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setRestContent": {
+            "name": "setRestContent",
+            "line": 75,
+            "short_desc": "Set Content to be serialized in the response, array or object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Tools\\Rest\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 75,
+                    "short_desc": "array or object to be serialized",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

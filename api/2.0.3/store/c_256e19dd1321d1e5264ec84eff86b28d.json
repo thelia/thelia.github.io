@@ -1,0 +1,158 @@
+{
+    "name": "Thelia\\Model\\CategoryQuery",
+    "line": 17,
+    "short_desc": "Skeleton subclass for performing query and update operations on the 'category' table.",
+    "long_desc": "You should add additional methods to this class to meet the\napplication requirements.  This class will only be generated as\nlong as it does not already exist in the output directory.",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/CategoryQuery.php",
+    "hash": "c3e1d9825dd4cf5b053d858f8b8bc1b55431dbbb",
+    "parent": "Thelia\\Model\\Base\\CategoryQuery",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "BaseCategoryQuery": "Thelia\\Model\\Base\\CategoryQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "countChild": {
+            "name": "countChild",
+            "line": 26,
+            "short_desc": "count how many direct children have a category",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parent": {
+                    "name": "parent",
+                    "line": 26,
+                    "short_desc": "category parent id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "findAllChild": {
+            "name": "findAllChild",
+            "line": 40,
+            "short_desc": "find all category children for a given category.",
+            "long_desc": "an array of \\Thelia\\Model\\Category is return",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Category",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "categoryId": {
+                    "name": "categoryId",
+                    "line": 40,
+                    "short_desc": "the category id or an array of id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\$categoryId",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "depth": {
+                    "name": "depth",
+                    "line": 40,
+                    "short_desc": "max depth you want to search",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                },
+                "currentPos": {
+                    "name": "currentPos",
+                    "line": 40,
+                    "short_desc": "don't change this param, it is used for recursion",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

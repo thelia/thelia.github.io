@@ -1,0 +1,597 @@
+{
+    "name": "Thelia\\Coupon\\BaseFacade",
+    "line": 34,
+    "short_desc": "Allow to assist in getting relevant data on the current application state",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Coupon",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Coupon\/BaseFacade.php",
+    "hash": "3f00284edb2ac4d4c65c7fa408f91dd4fdbd74f2",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Container": "Symfony\\Component\\DependencyInjection\\Container",
+        "ContainerInterface": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+        "Translator": "Symfony\\Component\\Translation\\Translator",
+        "TranslatorInterface": "Symfony\\Component\\Translation\\TranslatorInterface",
+        "ConditionEvaluator": "Thelia\\Condition\\ConditionEvaluator",
+        "Request": "Thelia\\Core\\HttpFoundation\\Request",
+        "Coupon": "Thelia\\Model\\Coupon",
+        "CouponQuery": "Thelia\\Model\\CouponQuery",
+        "CartTrait": "Thelia\\Cart\\CartTrait",
+        "Currency": "Thelia\\Model\\Currency",
+        "CurrencyQuery": "Thelia\\Model\\CurrencyQuery"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Thelia\\Coupon\\FacadeInterface": "Thelia\\Coupon\\FacadeInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 51,
+            "short_desc": "Constructor",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "container": {
+                    "name": "container",
+                    "line": 51,
+                    "short_desc": "Service container",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ContainerInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCart": {
+            "name": "getCart",
+            "line": 61,
+            "short_desc": "Return a Cart a CouponManager can process",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Cart",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getDeliveryAddress": {
+            "name": "getDeliveryAddress",
+            "line": 71,
+            "short_desc": "Return an Address a CouponManager can process",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Address",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCustomer": {
+            "name": "getCustomer",
+            "line": 81,
+            "short_desc": "Return an Customer a CouponManager can process",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Customer",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCheckoutTotalPrice": {
+            "name": "getCheckoutTotalPrice",
+            "line": 91,
+            "short_desc": "Return Checkout total price",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCheckoutPostagePrice": {
+            "name": "getCheckoutPostagePrice",
+            "line": 101,
+            "short_desc": "Return Checkout total postage (only) price",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCartTotalPrice": {
+            "name": "getCartTotalPrice",
+            "line": 111,
+            "short_desc": "Return Products total price",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCartTotalTaxPrice": {
+            "name": "getCartTotalTaxPrice",
+            "line": 117,
+            "short_desc": "Return Product total tax price",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCheckoutCurrency": {
+            "name": "getCheckoutCurrency",
+            "line": 129,
+            "short_desc": "Return the Checkout currency EUR|USD",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Currency",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getNbArticlesInCart": {
+            "name": "getNbArticlesInCart",
+            "line": 139,
+            "short_desc": "Return the number of Products in the Cart",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCurrentCoupons": {
+            "name": "getCurrentCoupons",
+            "line": 149,
+            "short_desc": "Return all Coupon given during the Checkout",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Array of CouponInterface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "findOneCouponByCode": {
+            "name": "findOneCouponByCode",
+            "line": 173,
+            "short_desc": "Find one Coupon in the database from its code",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Coupon",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "code": {
+                    "name": "code",
+                    "line": 173,
+                    "short_desc": "Coupon code",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getContainer": {
+            "name": "getContainer",
+            "line": 185,
+            "short_desc": "Return platform Container",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Symfony\\Component\\DependencyInjection\\Container",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getTranslator": {
+            "name": "getTranslator",
+            "line": 195,
+            "short_desc": "Return platform TranslatorInterface",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Symfony\\Component\\Translation\\TranslatorInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getMainCurrency": {
+            "name": "getMainCurrency",
+            "line": 206,
+            "short_desc": "Return the main currency THe one used to set prices in BackOffice",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getRequest": {
+            "name": "getRequest",
+            "line": 216,
+            "short_desc": "Return request",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\HttpFoundation\\Request",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getConditionEvaluator": {
+            "name": "getConditionEvaluator",
+            "line": 226,
+            "short_desc": "Return Constraint Validator",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\ConditionEvaluator",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAvailableCurrencies": {
+            "name": "getAvailableCurrencies",
+            "line": 236,
+            "short_desc": "Return all available currencies",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "of Currency",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getDispatcher": {
+            "name": "getDispatcher",
+            "line": 248,
+            "short_desc": "Return the event dispatcher,",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\EventDispatcher\\EventDispatcher",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

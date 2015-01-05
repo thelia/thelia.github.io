@@ -1,0 +1,2864 @@
+{
+    "name": "Thelia\\Model\\Base\\AdminLog",
+    "line": 23,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Model\\Base",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Model\/Base\/AdminLog.php",
+    "hash": "81556b9899c5277893c08487bee94af33875d3bb",
+    "parent": null,
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "DateTime": "DateTime",
+        "Exception": "Exception",
+        "PDO": "PDO",
+        "Propel": "Propel\\Runtime\\Propel",
+        "Criteria": "Propel\\Runtime\\ActiveQuery\\Criteria",
+        "ModelCriteria": "Propel\\Runtime\\ActiveQuery\\ModelCriteria",
+        "ActiveRecordInterface": "Propel\\Runtime\\ActiveRecord\\ActiveRecordInterface",
+        "Collection": "Propel\\Runtime\\Collection\\Collection",
+        "ConnectionInterface": "Propel\\Runtime\\Connection\\ConnectionInterface",
+        "BadMethodCallException": "Propel\\Runtime\\Exception\\BadMethodCallException",
+        "PropelException": "Propel\\Runtime\\Exception\\PropelException",
+        "TableMap": "Propel\\Runtime\\Map\\TableMap",
+        "AbstractParser": "Propel\\Runtime\\Parser\\AbstractParser",
+        "PropelDateTime": "Propel\\Runtime\\Util\\PropelDateTime",
+        "ChildAdminLog": "Thelia\\Model\\AdminLog",
+        "ChildAdminLogQuery": "Thelia\\Model\\AdminLogQuery",
+        "AdminLogTableMap": "Thelia\\Model\\Map\\AdminLogTableMap"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Propel\\Runtime\\ActiveRecord\\ActiveRecordInterface": "Propel\\Runtime\\ActiveRecord\\ActiveRecordInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 116,
+            "short_desc": "Initializes internal state of Thelia\\Model\\Base\\AdminLog object.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isModified": {
+            "name": "isModified",
+            "line": 125,
+            "short_desc": "Returns whether the object has been modified.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "True if the object has been modified.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isColumnModified": {
+            "name": "isColumnModified",
+            "line": 136,
+            "short_desc": "Has specified column been modified?",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "True if $col has been modified.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "col": {
+                    "name": "col",
+                    "line": 136,
+                    "short_desc": "column fully qualified name (TableMap::TYPE_COLNAME), e.g. Book::AUTHOR_ID",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getModifiedColumns": {
+            "name": "getModifiedColumns",
+            "line": 145,
+            "short_desc": "Get the columns that have been modified in this object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "A unique list of the modified column names for this object.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isNew": {
+            "name": "isNew",
+            "line": 157,
+            "short_desc": "Returns whether the object has ever been saved.",
+            "long_desc": "This will\nbe false, if the object was retrieved from storage or was created\nand then saved.",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "true, if the object has never been persisted.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setNew": {
+            "name": "setNew",
+            "line": 168,
+            "short_desc": "Setter for the isNew attribute.",
+            "long_desc": "This method will be called\nby Propel-generated children and objects.",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "b": {
+                    "name": "b",
+                    "line": 168,
+                    "short_desc": "the state of the object.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isDeleted": {
+            "name": "isDeleted",
+            "line": 177,
+            "short_desc": "Whether this object has been deleted.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "The deleted state of this object.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setDeleted": {
+            "name": "setDeleted",
+            "line": 187,
+            "short_desc": "Specify whether this object has been deleted.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "b": {
+                    "name": "b",
+                    "line": 187,
+                    "short_desc": "The deleted state of this object.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "resetModified": {
+            "name": "resetModified",
+            "line": 197,
+            "short_desc": "Sets the modified state for the object to be false.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "col": {
+                    "name": "col",
+                    "line": 197,
+                    "short_desc": "If supplied, only the specified column is reset.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "equals": {
+            "name": "equals",
+            "line": 216,
+            "short_desc": "Compares this with another <code>AdminLog<\/code> instance.",
+            "long_desc": "If\n<code>obj<\/code> is an instance of <code>AdminLog<\/code>, delegates to\n<code>equals(AdminLog)<\/code>.  Otherwise, returns <code>false<\/code>.",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "Whether equal to the object specified.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "obj": {
+                    "name": "obj",
+                    "line": 216,
+                    "short_desc": "The object to compare to.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "hashCode": {
+            "name": "hashCode",
+            "line": 241,
+            "short_desc": "If the primary key is not null, return the hashcode of the primary key.",
+            "long_desc": "Otherwise, return the hash code of the object.",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "Hashcode",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getVirtualColumns": {
+            "name": "getVirtualColumns",
+            "line": 255,
+            "short_desc": "Get the associative array of the virtual columns in this object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "hasVirtualColumn": {
+            "name": "hasVirtualColumn",
+            "line": 266,
+            "short_desc": "Checks the existence of a virtual column in this object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 266,
+                    "short_desc": "The virtual column name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getVirtualColumn": {
+            "name": "getVirtualColumn",
+            "line": 279,
+            "short_desc": "Get the value of a virtual column in this object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 279,
+                    "short_desc": "The virtual column name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setVirtualColumn": {
+            "name": "setVirtualColumn",
+            "line": 296,
+            "short_desc": "Set the value of a virtual column in this object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Base\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 296,
+                    "short_desc": "The virtual column name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 296,
+                    "short_desc": "The value to give to the virtual column",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "importFrom": {
+            "name": "importFrom",
+            "line": 328,
+            "short_desc": "Populate the current object from a string, using a given parser format <code> $book = new Book(); $book->importFrom('JSON', '{\"Id\":9012,\"Title\":\"Don Juan\",\"ISBN\":\"0140422161\",\"Price\":12.99,\"PublisherId\":1234,\"AuthorId\":5678}'); <\/code>",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\Base\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object, for fluid interface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parser": {
+                    "name": "parser",
+                    "line": 328,
+                    "short_desc": "A AbstractParser instance, or a format name ('XML', 'YAML', 'JSON', 'CSV')",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "data": {
+                    "name": "data",
+                    "line": 328,
+                    "short_desc": "The source data to import from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "exportTo": {
+            "name": "exportTo",
+            "line": 351,
+            "short_desc": "Export the current object properties to a string, using a given parser format <code> $book = BookQuery::create()->findPk(9012); echo $book->exportTo('JSON');  => {\"Id\":9012,\"Title\":\"Don Juan\",\"ISBN\":\"0140422161\",\"Price\":12.99,\"PublisherId\":1234,\"AuthorId\":5678}'); <\/code>",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "The exported data",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "parser": {
+                    "name": "parser",
+                    "line": 351,
+                    "short_desc": "A AbstractParser instance, or a format name ('XML', 'YAML', 'JSON', 'CSV')",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "includeLazyLoadColumns": {
+                    "name": "includeLazyLoadColumns",
+                    "line": 351,
+                    "short_desc": "(optional) Whether to include lazy load(ed) columns. Defaults to TRUE.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "__sleep": {
+            "name": "__sleep",
+            "line": 364,
+            "short_desc": "Clean up internal collections prior to serializing Avoids recursive loops that turn into segmentation faults when serializing",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getId": {
+            "name": "getId",
+            "line": 376,
+            "short_desc": "Get the [id] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAdminLogin": {
+            "name": "getAdminLogin",
+            "line": 387,
+            "short_desc": "Get the [admin_login] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAdminFirstname": {
+            "name": "getAdminFirstname",
+            "line": 398,
+            "short_desc": "Get the [admin_firstname] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAdminLastname": {
+            "name": "getAdminLastname",
+            "line": 409,
+            "short_desc": "Get the [admin_lastname] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAction": {
+            "name": "getAction",
+            "line": 420,
+            "short_desc": "Get the [action] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getRequest": {
+            "name": "getRequest",
+            "line": 431,
+            "short_desc": "Get the [request] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getCreatedAt": {
+            "name": "getCreatedAt",
+            "line": 448,
+            "short_desc": "Get the [optionally formatted] temporal [created_at] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Formatted date\/time value as string or \\DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "- if unable to parse\/validate the date\/time value."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "format": {
+                    "name": "format",
+                    "line": 448,
+                    "short_desc": "The date\/time format string (either date()-style or strftime()-style). If format is NULL, then the raw \\DateTime object will be returned.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "NULL",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getUpdatedAt": {
+            "name": "getUpdatedAt",
+            "line": 468,
+            "short_desc": "Get the [optionally formatted] temporal [updated_at] column value.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Formatted date\/time value as string or \\DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "- if unable to parse\/validate the date\/time value."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "format": {
+                    "name": "format",
+                    "line": 468,
+                    "short_desc": "The date\/time format string (either date()-style or strftime()-style). If format is NULL, then the raw \\DateTime object will be returned.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "NULL",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setId": {
+            "name": "setId",
+            "line": 483,
+            "short_desc": "Set the value of [id] column.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 483,
+                    "short_desc": "new value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAdminLogin": {
+            "name": "setAdminLogin",
+            "line": 504,
+            "short_desc": "Set the value of [admin_login] column.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 504,
+                    "short_desc": "new value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAdminFirstname": {
+            "name": "setAdminFirstname",
+            "line": 525,
+            "short_desc": "Set the value of [admin_firstname] column.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 525,
+                    "short_desc": "new value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAdminLastname": {
+            "name": "setAdminLastname",
+            "line": 546,
+            "short_desc": "Set the value of [admin_lastname] column.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 546,
+                    "short_desc": "new value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAction": {
+            "name": "setAction",
+            "line": 567,
+            "short_desc": "Set the value of [action] column.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 567,
+                    "short_desc": "new value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setRequest": {
+            "name": "setRequest",
+            "line": 588,
+            "short_desc": "Set the value of [request] column.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 588,
+                    "short_desc": "new value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setCreatedAt": {
+            "name": "setCreatedAt",
+            "line": 610,
+            "short_desc": "Sets the value of [created_at] column to a normalized version of the date\/time value specified.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 610,
+                    "short_desc": "string, integer (timestamp), or \\DateTime value. Empty strings are treated as NULL.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setUpdatedAt": {
+            "name": "setUpdatedAt",
+            "line": 631,
+            "short_desc": "Sets the value of [updated_at] column to a normalized version of the date\/time value specified.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "v": {
+                    "name": "v",
+                    "line": 631,
+                    "short_desc": "string, integer (timestamp), or \\DateTime value. Empty strings are treated as NULL.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "hasOnlyDefaultValues": {
+            "name": "hasOnlyDefaultValues",
+            "line": 653,
+            "short_desc": "Indicates whether the columns in this object are only set to default values.",
+            "long_desc": "This method can be used in conjunction with isModified() to indicate whether an object is both\nmodified _and_ has some values set which are non-default.",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "Whether the columns in this object are only been set with default values.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "hydrate": {
+            "name": "hydrate",
+            "line": 677,
+            "short_desc": "Hydrates (populates) the object variables with values from the database resultset.",
+            "long_desc": "An offset (0-based \"start column\") is specified so that objects can be hydrated\nwith a subset of the columns in the resultset rows.  This is needed, for example,\nfor results of JOIN queries where the resultset row includes columns from two or\nmore tables.",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "next starting column",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "- Any caught Exception will be rewrapped as a PropelException."
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "row": {
+                    "name": "row",
+                    "line": 677,
+                    "short_desc": "The row returned by DataFetcher->fetch().",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "startcol": {
+                    "name": "startcol",
+                    "line": 677,
+                    "short_desc": "0-based offset column which indicates which restultset column to start with.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "0",
+                    "is_by_ref": false
+                },
+                "rehydrate": {
+                    "name": "rehydrate",
+                    "line": 677,
+                    "short_desc": "Whether this object is being re-hydrated from the database.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                },
+                "indexType": {
+                    "name": "indexType",
+                    "line": 677,
+                    "short_desc": "The index type of $row. Mostly DataFetcher->getIndexType(). One of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_STUDLYPHPNAME TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "TableMap::TYPE_NUM",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "ensureConsistency": {
+            "name": "ensureConsistency",
+            "line": 739,
+            "short_desc": "Checks and repairs the internal consistency of the object.",
+            "long_desc": "This method is executed after an already-instantiated object is re-hydrated\nfrom the database.  It exists to check any foreign keys to make sure that\nthe objects related to the current object are correct based on foreign key.\n\nYou can override this method in the stub class, but you should always invoke\nthe base method from the overridden method (i.e. parent::ensureConsistency()),\nin case your model changes.",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "reload": {
+            "name": "reload",
+            "line": 753,
+            "short_desc": "Reloads this object from datastore based on primary key and (optionally) resets all associated objects.",
+            "long_desc": "This will only work if the object has been saved and has a valid primary key set.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    "- if this object is deleted, unsaved or doesn't have pk match in db"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "deep": {
+                    "name": "deep",
+                    "line": 753,
+                    "short_desc": "(optional) Whether to also de-associated any related objects.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                },
+                "con": {
+                    "name": "con",
+                    "line": 753,
+                    "short_desc": "(optional) The ConnectionInterface connection to use.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "delete": {
+            "name": "delete",
+            "line": 792,
+            "short_desc": "Removes this object from datastore and sets delete attribute.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "see": [
+                    [
+                        "AdminLog::setDeleted()"
+                    ],
+                    [
+                        "AdminLog::isDeleted()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 792,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "save": {
+            "name": "save",
+            "line": 834,
+            "short_desc": "Persists this object to the database.",
+            "long_desc": "If the object is new, it inserts it; otherwise an update is performed.\nAll modified related objects will also be persisted in the doSave()\nmethod.  This method wraps all precipitate database operations in a\nsingle transaction.",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The number of rows affected by this insert\/update and any referring fk objects' save() operations.",
+            "tags": {
+                "see": [
+                    [
+                        "doSave()"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 834,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getByName": {
+            "name": "getByName",
+            "line": 1042,
+            "short_desc": "Retrieves a field from the object by name passed in as a string.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Value of field.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 1042,
+                    "short_desc": "name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 1042,
+                    "short_desc": "The type of fieldname the $name is of: one of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_STUDLYPHPNAME TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM. Defaults to TableMap::TYPE_PHPNAME.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "TableMap::TYPE_PHPNAME",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getByPosition": {
+            "name": "getByPosition",
+            "line": 1057,
+            "short_desc": "Retrieves a field from the object by Position as specified in the xml schema.",
+            "long_desc": "Zero-based.",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Value of field at $pos",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pos": {
+                    "name": "pos",
+                    "line": 1057,
+                    "short_desc": "position in xml schema",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "toArray": {
+            "name": "toArray",
+            "line": 1104,
+            "short_desc": "Exports the object as an array.",
+            "long_desc": "You can specify the key type of the array by passing one of the class\ntype constants.",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "an associative array containing the field names (as keys) and field values",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "keyType": {
+                    "name": "keyType",
+                    "line": 1104,
+                    "short_desc": "(optional) One of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_STUDLYPHPNAME, TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM. Defaults to TableMap::TYPE_PHPNAME.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "TableMap::TYPE_PHPNAME",
+                    "is_by_ref": false
+                },
+                "includeLazyLoadColumns": {
+                    "name": "includeLazyLoadColumns",
+                    "line": 1104,
+                    "short_desc": "(optional) Whether to include lazy loaded columns. Defaults to TRUE.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                },
+                "alreadyDumpedObjects": {
+                    "name": "alreadyDumpedObjects",
+                    "line": 1104,
+                    "short_desc": "List of objects to skip to avoid recursion",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setByName": {
+            "name": "setByName",
+            "line": 1141,
+            "short_desc": "Sets a field from the object by name passed in as a string.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 1141,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 1141,
+                    "short_desc": "field value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 1141,
+                    "short_desc": "The type of fieldname the $name is of: one of the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_STUDLYPHPNAME TableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM. Defaults to TableMap::TYPE_PHPNAME.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "TableMap::TYPE_PHPNAME",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setByPosition": {
+            "name": "setByPosition",
+            "line": 1156,
+            "short_desc": "Sets a field from the object by Position as specified in the xml schema.",
+            "long_desc": "Zero-based.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "pos": {
+                    "name": "pos",
+                    "line": 1156,
+                    "short_desc": "position in xml schema",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 1156,
+                    "short_desc": "field value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "fromArray": {
+            "name": "fromArray",
+            "line": 1203,
+            "short_desc": "Populates the object using an array.",
+            "long_desc": "This is particularly useful when populating an object from one of the\nrequest arrays (e.g. $_POST).  This method goes through the column\nnames, checking to see whether a matching key exists in populated\narray. If so the setByName() method is called for that column.\n\nYou can specify the key type of the array by additionally passing one\nof the class type constants TableMap::TYPE_PHPNAME, TableMap::TYPE_STUDLYPHPNAME,\nTableMap::TYPE_COLNAME, TableMap::TYPE_FIELDNAME, TableMap::TYPE_NUM.\nThe default key type is the column's TableMap::TYPE_PHPNAME.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "arr": {
+                    "name": "arr",
+                    "line": 1203,
+                    "short_desc": "An array to populate the object from.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "keyType": {
+                    "name": "keyType",
+                    "line": 1203,
+                    "short_desc": "The type of keys the array uses.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "TableMap::TYPE_PHPNAME",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "buildCriteria": {
+            "name": "buildCriteria",
+            "line": 1222,
+            "short_desc": "Build a Criteria object containing the values of all modified columns in this object.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Propel\\Runtime\\ActiveQuery\\Criteria",
+                    false
+                ]
+            ],
+            "hint_desc": "The Criteria object containing all modified values.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "buildPkeyCriteria": {
+            "name": "buildPkeyCriteria",
+            "line": 1246,
+            "short_desc": "Builds a Criteria object containing the primary key for this object.",
+            "long_desc": "Unlike buildCriteria() this method includes the primary key values regardless\nof whether or not they have been modified.",
+            "hint": [
+                [
+                    "Propel\\Runtime\\ActiveQuery\\Criteria",
+                    false
+                ]
+            ],
+            "hint_desc": "The Criteria object containing value(s) for primary key(s).",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getPrimaryKey": {
+            "name": "getPrimaryKey",
+            "line": 1258,
+            "short_desc": "Returns the primary key for this object (row).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setPrimaryKey": {
+            "name": "setPrimaryKey",
+            "line": 1269,
+            "short_desc": "Generic method to set the primary key (id column).",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "key": {
+                    "name": "key",
+                    "line": 1269,
+                    "short_desc": "Primary key.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isPrimaryKeyNull": {
+            "name": "isPrimaryKeyNull",
+            "line": 1278,
+            "short_desc": "Returns true if the primary key for this object is null.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "copyInto": {
+            "name": "copyInto",
+            "line": 1295,
+            "short_desc": "Sets contents of passed object to values from current object.",
+            "long_desc": "If desired, this method can also make copies of all associated (fkey referrers)\nobjects.",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "copyObj": {
+                    "name": "copyObj",
+                    "line": 1295,
+                    "short_desc": "An object of \\Thelia\\Model\\AdminLog (or compatible) type.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "object",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "deepCopy": {
+                    "name": "deepCopy",
+                    "line": 1295,
+                    "short_desc": "Whether to also copy all rows that refer (by fkey) to the current row.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                },
+                "makeNew": {
+                    "name": "makeNew",
+                    "line": 1295,
+                    "short_desc": "Whether to reset autoincrement PKs and make the object new.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "true",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "copy": {
+            "name": "copy",
+            "line": 1322,
+            "short_desc": "Makes a copy of this object that will be inserted as a new row in table when saved.",
+            "long_desc": "It creates a new object filling in the simple attributes, but skipping any primary\nkeys that are defined for the table.\n\nIf desired, this method can also make copies of all associated (fkey referrers)\nobjects.",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "Clone of current object.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "PropelException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "deepCopy": {
+                    "name": "deepCopy",
+                    "line": 1322,
+                    "short_desc": "Whether to also copy all rows that refer (by fkey) to the current row.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "clear": {
+            "name": "clear",
+            "line": 1335,
+            "short_desc": "Clears the current object and sets all attributes to their default values",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "clearAllReferences": {
+            "name": "clearAllReferences",
+            "line": 1361,
+            "short_desc": "Resets all references to other model objects or collections of model objects.",
+            "long_desc": "This method is a user-space workaround for PHP's inability to garbage collect\nobjects with circular references (even in PHP 5.3). This is currently necessary\nwhen using Propel in certain daemon or large-volume\/high-memory operations.",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "deep": {
+                    "name": "deep",
+                    "line": 1361,
+                    "short_desc": "Whether to also clear the references on all referrer objects.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "__toString": {
+            "name": "__toString",
+            "line": 1373,
+            "short_desc": "Return the string representation of this object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "keepUpdateDateUnchanged": {
+            "name": "keepUpdateDateUnchanged",
+            "line": 1385,
+            "short_desc": "Mark the current object so that the update date doesn't get updated during next save",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Model\\AdminLog",
+                    false
+                ]
+            ],
+            "hint_desc": "The current object (for fluent API support)",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "preSave": {
+            "name": "preSave",
+            "line": 1397,
+            "short_desc": "Code to be run before persisting the object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1397,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postSave": {
+            "name": "postSave",
+            "line": 1406,
+            "short_desc": "Code to be run after persisting the object",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1406,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "preInsert": {
+            "name": "preInsert",
+            "line": 1416,
+            "short_desc": "Code to be run before inserting to database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1416,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postInsert": {
+            "name": "postInsert",
+            "line": 1425,
+            "short_desc": "Code to be run after inserting to database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1425,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "preUpdate": {
+            "name": "preUpdate",
+            "line": 1435,
+            "short_desc": "Code to be run before updating the object in database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1435,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postUpdate": {
+            "name": "postUpdate",
+            "line": 1444,
+            "short_desc": "Code to be run after updating the object in database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1444,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "preDelete": {
+            "name": "preDelete",
+            "line": 1454,
+            "short_desc": "Code to be run before deleting the object in database",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1454,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "postDelete": {
+            "name": "postDelete",
+            "line": 1463,
+            "short_desc": "Code to be run after deleting the object in database",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "con": {
+                    "name": "con",
+                    "line": 1463,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Propel\\Runtime\\Connection\\ConnectionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConnectionInterface",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "__call": {
+            "name": "__call",
+            "line": 1480,
+            "short_desc": "Derived method to catches calls to undefined methods.",
+            "long_desc": "Provides magic import\/export method support (fromXML()\/toXML(), fromYAML()\/toYAML(), etc.).\nAllows to define default __call() behavior if you overwrite __call()",
+            "hint": [
+                [
+                    "array",
+                    false
+                ],
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 1480,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "params": {
+                    "name": "params",
+                    "line": 1480,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "TABLE_MAP": {
+            "name": "TABLE_MAP",
+            "line": 28,
+            "short_desc": "TableMap class name",
+            "long_desc": ""
+        }
+    }
+}

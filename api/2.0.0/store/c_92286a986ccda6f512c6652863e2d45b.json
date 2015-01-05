@@ -1,0 +1,472 @@
+{
+    "name": "Thelia\\Core\\Template\\TemplateHelper",
+    "line": 20,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Core\\Template",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/Template\/TemplateHelper.php",
+    "hash": "3ae50bd4a81808ccbc387d72e10c62e4b38a849d",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Filesystem": "Symfony\\Component\\Filesystem\\Filesystem",
+        "ConfigQuery": "Thelia\\Model\\ConfigQuery",
+        "Tlog": "Thelia\\Log\\Tlog",
+        "Translator": "Thelia\\Core\\Translation\\Translator"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "getInstance": {
+            "name": "getInstance",
+            "line": 33,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getActiveMailTemplate": {
+            "name": "getActiveMailTemplate",
+            "line": 42,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\TemplateDefinition",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getActivePdfTemplate": {
+            "name": "getActivePdfTemplate",
+            "line": 53,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\TemplateDefinition",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getActiveAdminTemplate": {
+            "name": "getActiveAdminTemplate",
+            "line": 64,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\TemplateDefinition",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getActiveFrontTemplate": {
+            "name": "getActiveFrontTemplate",
+            "line": 75,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\TemplateDefinition",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getStandardTemplateDefinitions": {
+            "name": "getStandardTemplateDefinitions",
+            "line": 86,
+            "short_desc": "Returns an array which contains all standard template definitions",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getList": {
+            "name": "getList",
+            "line": 103,
+            "short_desc": "Return a list of existing templates for a given template type",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\TemplateDefinition",
+                    true
+                ]
+            ],
+            "hint_desc": "of \\Thelia\\Core\\Template\\TemplateDefinition",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "templateType": {
+                    "name": "templateType",
+                    "line": 103,
+                    "short_desc": "the template type",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "base": {
+                    "name": "base",
+                    "line": 103,
+                    "short_desc": "the template base (module or core, default to core).",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "THELIA_TEMPLATE_DIR",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "walkDir": {
+            "name": "walkDir",
+            "line": 167,
+            "short_desc": "Recursively examine files in a directory tree, and extract translatable strings.",
+            "long_desc": "Returns an array of translatable strings, each item having with the following structure:\n'files' an array of file names in which the string appears,\n'text' the translatable text\n'translation' => the text translation, or an empty string if none available.\n'dollar'  => true if the translatable text contains a $",
+            "hint": [
+                [
+                    "Thelia\\Core\\Template\\number",
+                    false
+                ]
+            ],
+            "hint_desc": "the total number of translatable texts",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\InvalidArgumentException",
+                    "if $walkMode contains an invalid value"
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "directory": {
+                    "name": "directory",
+                    "line": 167,
+                    "short_desc": "the path to the directory to examine",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "walkMode": {
+                    "name": "walkMode",
+                    "line": 167,
+                    "short_desc": "type of file scanning: WALK_MODE_PHP or WALK_MODE_TEMPLATE",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "translator": {
+                    "name": "translator",
+                    "line": 167,
+                    "short_desc": "the current translator",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Translation\\Translator",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Translator",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "currentLocale": {
+                    "name": "currentLocale",
+                    "line": 167,
+                    "short_desc": "the current locale",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "domain": {
+                    "name": "domain",
+                    "line": 167,
+                    "short_desc": "the translation domain (fontoffice, backoffice, module, etc...)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "strings": {
+                    "name": "strings",
+                    "line": 167,
+                    "short_desc": "the list of strings",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": true
+                }
+            }
+        },
+        "writeTranslation": {
+            "name": "writeTranslation",
+            "line": 250,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "file": {
+                    "name": "file",
+                    "line": 250,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "texts": {
+                    "name": "texts",
+                    "line": 250,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "translations": {
+                    "name": "translations",
+                    "line": 250,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "createIfNotExists": {
+                    "name": "createIfNotExists",
+                    "line": 250,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "WALK_MODE_PHP": {
+            "name": "WALK_MODE_PHP",
+            "line": 22,
+            "short_desc": "",
+            "long_desc": ""
+        },
+        "WALK_MODE_TEMPLATE": {
+            "name": "WALK_MODE_TEMPLATE",
+            "line": 23,
+            "short_desc": "",
+            "long_desc": ""
+        }
+    }
+}

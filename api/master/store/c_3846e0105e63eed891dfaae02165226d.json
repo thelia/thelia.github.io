@@ -1,0 +1,372 @@
+{
+    "name": "Thelia\\Condition\\Implementation\\ConditionInterface",
+    "line": 27,
+    "short_desc": "Manage how the application checks its state in order to check if it matches the implemented condition",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Condition"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Condition\\Implementation",
+    "file": "\/home\/manu\/dev\/thelia2\/core\/lib\/Thelia\/Condition\/Implementation\/ConditionInterface.php",
+    "hash": "baa2fbf11adf42b50e4d6369308891b8d52fd365",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "SerializableCondition": "Thelia\\Condition\\SerializableCondition",
+        "FacadeInterface": "Thelia\\Coupon\\FacadeInterface",
+        "InvalidConditionOperatorException": "Thelia\\Exception\\InvalidConditionOperatorException",
+        "InvalidConditionValueException": "Thelia\\Exception\\InvalidConditionValueException"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 34,
+            "short_desc": "Constructor",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "adapter": {
+                    "name": "adapter",
+                    "line": 34,
+                    "short_desc": "Service adapter",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Coupon\\FacadeInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "FacadeInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getServiceId": {
+            "name": "getServiceId",
+            "line": 41,
+            "short_desc": "Get Condition Service id",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setValidatorsFromForm": {
+            "name": "setValidatorsFromForm",
+            "line": 54,
+            "short_desc": "Check validators relevancy and store them",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\Implementation\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "InvalidConditionOperatorException",
+                    ""
+                ],
+                [
+                    "InvalidConditionValueException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "operators": {
+                    "name": "operators",
+                    "line": 54,
+                    "short_desc": "an array of operators (greater than, less than, etc.) entered in the condition parameter input form, one for each condition defined by the Condition",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "values": {
+                    "name": "values",
+                    "line": 54,
+                    "short_desc": "an array of values entered in in the condition parameter input form, one for each condition defined by the Condition",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "isMatching": {
+            "name": "isMatching",
+            "line": 61,
+            "short_desc": "Test if the current application state matches conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getName": {
+            "name": "getName",
+            "line": 68,
+            "short_desc": "Get I18n name",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getToolTip": {
+            "name": "getToolTip",
+            "line": 76,
+            "short_desc": "Get I18n tooltip Explain in detail what the Condition checks",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getSummary": {
+            "name": "getSummary",
+            "line": 84,
+            "short_desc": "Get I18n summary Explain briefly the condition with given values",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getValidators": {
+            "name": "getValidators",
+            "line": 91,
+            "short_desc": "Return all validators",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getSerializableCondition": {
+            "name": "getSerializableCondition",
+            "line": 98,
+            "short_desc": "Return a serializable Condition",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\SerializableCondition",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "drawBackOfficeInputs": {
+            "name": "drawBackOfficeInputs",
+            "line": 106,
+            "short_desc": "Draw the input displayed in the BackOffice allowing Admin to set its Coupon Conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "HTML string",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

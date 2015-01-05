@@ -1,0 +1,799 @@
+{
+    "name": "Thelia\\Core\\Event\\Coupon\\CouponCreateOrUpdateEvent",
+    "line": 40,
+    "short_desc": "Created by JetBrains PhpStorm.",
+    "long_desc": "Date: 8\/29\/13\nTime: 3:45 PM\n\nOccurring when a Coupon is created or updated",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Coupon"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Core\\Event\\Coupon",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Core\/Event\/Coupon\/CouponCreateOrUpdateEvent.php",
+    "hash": "8cee778203d0930fec0be4a78fa3f0219adc34ac",
+    "parent": "Thelia\\Core\\Event\\ActionEvent",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ActionEvent": "Thelia\\Core\\Event\\ActionEvent",
+        "ConditionCollection": "Thelia\\Condition\\ConditionCollection",
+        "Coupon": "Thelia\\Model\\Coupon"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 104,
+            "short_desc": "Constructor",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "code": {
+                    "name": "code",
+                    "line": 105,
+                    "short_desc": "Coupon Code",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "title": {
+                    "name": "title",
+                    "line": 105,
+                    "short_desc": "Coupon title",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "amount": {
+                    "name": "amount",
+                    "line": 105,
+                    "short_desc": "Amount removed from the Total Checkout",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "float",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "serviceId": {
+                    "name": "serviceId",
+                    "line": 105,
+                    "short_desc": "Coupon Service id",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "shortDescription": {
+                    "name": "shortDescription",
+                    "line": 105,
+                    "short_desc": "Coupon short description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "description": {
+                    "name": "description",
+                    "line": 105,
+                    "short_desc": "Coupon description",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isEnabled": {
+                    "name": "isEnabled",
+                    "line": 105,
+                    "short_desc": "Enable\/Disable",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "expirationDate": {
+                    "name": "expirationDate",
+                    "line": 105,
+                    "short_desc": "Coupon expiration date",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Event\\Coupon\\DateTime",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "DateTime",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isAvailableOnSpecialOffers": {
+                    "name": "isAvailableOnSpecialOffers",
+                    "line": 105,
+                    "short_desc": "Is available on special offers",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isCumulative": {
+                    "name": "isCumulative",
+                    "line": 105,
+                    "short_desc": "Is cumulative",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "isRemovingPostage": {
+                    "name": "isRemovingPostage",
+                    "line": 105,
+                    "short_desc": "Is removing Postage",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "boolean",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "maxUsage": {
+                    "name": "maxUsage",
+                    "line": 105,
+                    "short_desc": "Coupon quantity",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "locale": {
+                    "name": "locale",
+                    "line": 105,
+                    "short_desc": "Coupon Language code ISO (ex: fr_FR)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCode": {
+            "name": "getCode",
+            "line": 128,
+            "short_desc": "Return Coupon code (ex: XMAS)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getTitle": {
+            "name": "getTitle",
+            "line": 138,
+            "short_desc": "Return Coupon title (ex: Coupon for XMAS)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getShortDescription": {
+            "name": "getShortDescription",
+            "line": 148,
+            "short_desc": "Return Coupon short description",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getDescription": {
+            "name": "getDescription",
+            "line": 158,
+            "short_desc": "Return Coupon description",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isCumulative": {
+            "name": "isCumulative",
+            "line": 170,
+            "short_desc": "If Coupon is cumulative or prevent any accumulation If is cumulative you can sum Coupon effects If not cancel all other Coupon and take the last given",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isRemovingPostage": {
+            "name": "isRemovingPostage",
+            "line": 180,
+            "short_desc": "If Coupon is removing Checkout Postage",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getAmount": {
+            "name": "getAmount",
+            "line": 190,
+            "short_desc": "Return effects generated by the coupon",
+            "long_desc": "",
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": "Amount removed from the Total Checkout",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getExpirationDate": {
+            "name": "getExpirationDate",
+            "line": 200,
+            "short_desc": "Return Coupon expiration date",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\DateTime",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isAvailableOnSpecialOffers": {
+            "name": "isAvailableOnSpecialOffers",
+            "line": 210,
+            "short_desc": "If Coupon is available on special offers",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "isEnabled": {
+            "name": "isEnabled",
+            "line": 220,
+            "short_desc": "Get if Coupon is enabled or not",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getMaxUsage": {
+            "name": "getMaxUsage",
+            "line": 231,
+            "short_desc": "Return how many time the Coupon can be used again Ex : -1 unlimited",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getServiceId": {
+            "name": "getServiceId",
+            "line": 241,
+            "short_desc": "Get Coupon Service id (Type)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getLocale": {
+            "name": "getLocale",
+            "line": 251,
+            "short_desc": "Coupon Language code ISO (ex: fr_FR)",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setCouponModel": {
+            "name": "setCouponModel",
+            "line": 263,
+            "short_desc": "Set Coupon Model",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Event\\Coupon\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "couponModel": {
+                    "name": "couponModel",
+                    "line": 263,
+                    "short_desc": "Coupon Model",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Coupon",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Coupon",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getCouponModel": {
+            "name": "getCouponModel",
+            "line": 275,
+            "short_desc": "Return Coupon Model",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Thelia\\Model\\Coupon",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "getConditions": {
+            "name": "getConditions",
+            "line": 285,
+            "short_desc": "Get Conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "null",
+                    false
+                ],
+                [
+                    "Thelia\\Condition\\ConditionCollection",
+                    false
+                ]
+            ],
+            "hint_desc": "Array of ConditionInterface",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "setConditions": {
+            "name": "setConditions",
+            "line": 297,
+            "short_desc": "Set Conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Core\\Event\\Coupon\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "conditions": {
+                    "name": "conditions",
+                    "line": 297,
+                    "short_desc": "Array of ConditionInterface",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\ConditionCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConditionCollection",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

@@ -1,0 +1,403 @@
+{
+    "name": "Thelia\\TaxEngine\\Calculator",
+    "line": 38,
+    "short_desc": "Class Calculator",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\TaxEngine"
+            ]
+        ],
+        "author": [
+            [
+                "Etienne",
+                "Roudeix",
+                "<eroudeix@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\TaxEngine",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/TaxEngine\/Calculator.php",
+    "hash": "3df9d69f96e220a2e6052775572b685f8786668f",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "TaxEngineException": "Thelia\\Exception\\TaxEngineException",
+        "Country": "Thelia\\Model\\Country",
+        "OrderProductTax": "Thelia\\Model\\OrderProductTax",
+        "Product": "Thelia\\Model\\Product",
+        "TaxRule": "Thelia\\Model\\TaxRule",
+        "TaxRuleQuery": "Thelia\\Model\\TaxRuleQuery",
+        "I18n": "Thelia\\Tools\\I18n"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 53,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "load": {
+            "name": "load",
+            "line": 58,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "product": {
+                    "name": "product",
+                    "line": 58,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Product",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Product",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "country": {
+                    "name": "country",
+                    "line": 58,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "loadTaxRule": {
+            "name": "loadTaxRule",
+            "line": 79,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "taxRule": {
+                    "name": "taxRule",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\TaxRule",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "TaxRule",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "country": {
+                    "name": "country",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Country",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Country",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "product": {
+                    "name": "product",
+                    "line": 79,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Model\\Product",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "Product",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTaxAmountFromUntaxedPrice": {
+            "name": "getTaxAmountFromUntaxedPrice",
+            "line": 103,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "untaxedPrice": {
+                    "name": "untaxedPrice",
+                    "line": 103,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "taxCollection": {
+                    "name": "taxCollection",
+                    "line": 103,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": true
+                }
+            }
+        },
+        "getTaxAmountFromTaxedPrice": {
+            "name": "getTaxAmountFromTaxedPrice",
+            "line": 108,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "taxedPrice": {
+                    "name": "taxedPrice",
+                    "line": 108,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getTaxedPrice": {
+            "name": "getTaxedPrice",
+            "line": 121,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\Thelia\\Exception\\TaxEngineException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "untaxedPrice": {
+                    "name": "untaxedPrice",
+                    "line": 121,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\TaxEngine\\$untaxedPrice",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "taxCollection": {
+                    "name": "taxCollection",
+                    "line": 121,
+                    "short_desc": "returns OrderProductTaxCollection",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": true
+                },
+                "askedLocale": {
+                    "name": "askedLocale",
+                    "line": 121,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getUntaxedPrice": {
+            "name": "getUntaxedPrice",
+            "line": 172,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "taxedPrice": {
+                    "name": "taxedPrice",
+                    "line": 172,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}

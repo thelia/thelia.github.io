@@ -1,0 +1,158 @@
+{
+    "name": "Thelia\\Action\\RedirectException",
+    "line": 26,
+    "short_desc": "Class RedirectException",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Thelia\\Action"
+            ]
+        ],
+        "author": [
+            [
+                "manuel",
+                "raynaud",
+                "<manu@thelia.net>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Action",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Action\/RedirectException.php",
+    "hash": "fbf90ab56af3ae8ae97bf471280c2bcbd2dc4ecc",
+    "parent": "Thelia\\Action\\BaseAction",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface",
+        "RedirectResponse": "Symfony\\Component\\HttpFoundation\\RedirectResponse",
+        "GetResponseForExceptionEvent": "Symfony\\Component\\HttpKernel\\Event\\GetResponseForExceptionEvent",
+        "KernelEvents": "Symfony\\Component\\HttpKernel\\KernelEvents",
+        "URL": "Thelia\\Tools\\URL"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface": "Symfony\\Component\\EventDispatcher\\EventSubscriberInterface"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 33,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "urlManager": {
+                    "name": "urlManager",
+                    "line": 33,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Tools\\URL",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "URL",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "checkRedirectException": {
+            "name": "checkRedirectException",
+            "line": 38,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "event": {
+                    "name": "event",
+                    "line": 38,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\HttpKernel\\Event\\GetResponseForExceptionEvent",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "GetResponseForExceptionEvent",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getSubscribedEvents": {
+            "name": "getSubscribedEvents",
+            "line": 71,
+            "short_desc": "Returns an array of event names this subscriber wants to listen to.",
+            "long_desc": "The array keys are event names and the value can be:\n\n * The method name to call (priority defaults to 0)\n * An array composed of the method name to call and the priority\n * An array of arrays composed of the method names to call and respective\n   priorities, or 0 if unset\n\nFor instance:\n\n * array('eventName' => 'methodName')\n * array('eventName' => array('methodName', $priority))\n * array('eventName' => array(array('methodName1', $priority), array('methodName2'))",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "The event names to listen to",
+            "tags": {
+                "api": [
+                    [
+                        ""
+                    ]
+                ]
+            },
+            "modifiers": "9",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

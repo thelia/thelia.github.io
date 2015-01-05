@@ -1,0 +1,313 @@
+{
+    "name": "Thelia\\Core\\Template\\Assets\\AssetResolverInterface",
+    "line": 17,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [
+
+    ],
+    "namespace": "Thelia\\Core\\Template\\Assets",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Core\/Template\/Assets\/AssetResolverInterface.php",
+    "hash": "e41e2b2524b41ade5e706baf02ff8fc5b9ad8e99",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "ParserInterface": "Thelia\\Core\\Template\\ParserInterface"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "resolveAssetURL": {
+            "name": "resolveAssetURL",
+            "line": 38,
+            "short_desc": "Generate an asset URL",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "source": {
+                    "name": "source",
+                    "line": 38,
+                    "short_desc": "a module code, or ParserInterface::TEMPLATE_ASSETS_KEY",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "file": {
+                    "name": "file",
+                    "line": 38,
+                    "short_desc": "the file path, relative to a template base directory (e.g. assets\/css\/style.css)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "type": {
+                    "name": "type",
+                    "line": 38,
+                    "short_desc": "the asset type, either 'css' or '",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parserInterface": {
+                    "name": "parserInterface",
+                    "line": 38,
+                    "short_desc": "the current template parser",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\ParserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ParserInterface",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "filters": {
+                    "name": "filters",
+                    "line": 38,
+                    "short_desc": "the filters to pass to the asset manager",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "array()",
+                    "is_by_ref": false
+                },
+                "debug": {
+                    "name": "debug",
+                    "line": 38,
+                    "short_desc": "the debug mode",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                },
+                "declaredAssetsDirectory": {
+                    "name": "declaredAssetsDirectory",
+                    "line": 38,
+                    "short_desc": "if not null, this is the assets directory declared in the {declare_assets} function of a template.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "sourceTemplateName": {
+                    "name": "sourceTemplateName",
+                    "line": 38,
+                    "short_desc": "A template name, of false. If provided, the assets will be searched in this template directory instead of the current one.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": "false",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "resolveAssetSourcePath": {
+            "name": "resolveAssetSourcePath",
+            "line": 55,
+            "short_desc": "Return an asset source file path.",
+            "long_desc": "A system of fallback enables file overriding. It will look for the template :\n     - in the current template in directory \/modules\/{module code}\/\n     - in the module in the current template if it exists\n     - in the module in the default template",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "the path to directory containing the file, or null if the file doesn't exists.",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "source": {
+                    "name": "source",
+                    "line": 55,
+                    "short_desc": "a module code, or ParserInterface::TEMPLATE_ASSETS_KEY",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "templateName": {
+                    "name": "templateName",
+                    "line": 55,
+                    "short_desc": "a template name, or false to use the current template",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "fileName": {
+                    "name": "fileName",
+                    "line": 55,
+                    "short_desc": "the filename",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "parserInterface": {
+                    "name": "parserInterface",
+                    "line": 55,
+                    "short_desc": "the current template parser",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Core\\Template\\ParserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ParserInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "MODULE_OVERRIDE_DIRECTORY_NAME": {
+            "name": "MODULE_OVERRIDE_DIRECTORY_NAME",
+            "line": 20,
+            "short_desc": "The name of the subdirectory in a template asset directory in which modules assets can be overridden",
+            "long_desc": ""
+        },
+        "DEFAULT_TEMPLATE_NAME": {
+            "name": "DEFAULT_TEMPLATE_NAME",
+            "line": 23,
+            "short_desc": "The name of the default template",
+            "long_desc": ""
+        }
+    }
+}

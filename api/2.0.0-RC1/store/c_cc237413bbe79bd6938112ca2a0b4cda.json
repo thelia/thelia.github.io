@@ -1,0 +1,473 @@
+{
+    "name": "Thelia\\Condition\\ConditionCollection",
+    "line": 38,
+    "short_desc": "Manage a set of ConditionInterface",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Condition"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Condition",
+    "file": "\/home\/manu\/dev\/www\/thelia\/core\/lib\/Thelia\/Condition\/ConditionCollection.php",
+    "hash": "d76e5757f7e3f341ec8d69189d6f4e2c9f6f387f",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ArrayAccess": "ArrayAccess",
+        "Countable": "Countable",
+        "Iterator": "Iterator",
+        "ConditionInterface": "Thelia\\Condition\\Implementation\\ConditionInterface"
+    },
+    "errors": [
+
+    ],
+    "interfaces": {
+        "Iterator": "Iterator",
+        "Countable": "Countable",
+        "ArrayAccess": "ArrayAccess"
+    },
+    "properties": [
+
+    ],
+    "methods": {
+        "current": {
+            "name": "current",
+            "line": 50,
+            "short_desc": "(PHP 5 &gt;= 5.0.0) Return the current element",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Can return any type.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/iterator.current.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "next": {
+            "name": "next",
+            "line": 64,
+            "short_desc": "(PHP 5 &gt;= 5.0.0) Move forward to next element",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "Any returned value is ignored.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/iterator.next.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "key": {
+            "name": "key",
+            "line": 76,
+            "short_desc": "(PHP 5 &gt;= 5.0.0) Return the key of the current element",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "scalar on success, or null on failure.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/iterator.key.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "valid": {
+            "name": "valid",
+            "line": 91,
+            "short_desc": "(PHP 5 &gt;= 5.0.0) Checks if current position is valid",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "The return value will be casted to boolean and then evaluated. Returns true on success or false on failure.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/iterator.valid.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "rewind": {
+            "name": "rewind",
+            "line": 106,
+            "short_desc": "(PHP 5 &gt;= 5.0.0) Rewind the Iterator to the first element",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "Any returned value is ignored.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/iterator.rewind.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "count": {
+            "name": "count",
+            "line": 119,
+            "short_desc": "(PHP 5 &gt;= 5.1.0) Count elements of an object",
+            "long_desc": "",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "The custom count as an integer. The return value is cast to an integer.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/countable.count.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        },
+        "offsetExists": {
+            "name": "offsetExists",
+            "line": 134,
+            "short_desc": "(PHP 5 >= 5.0.0) Whether a offset exists",
+            "long_desc": "",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "true on success or false on failure. The return value will be casted to boolean if non-boolean was returned.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/arrayaccess.offsetexists.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 134,
+                    "short_desc": "An offset to check for.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "offsetGet": {
+            "name": "offsetGet",
+            "line": 148,
+            "short_desc": "(PHP 5 >= 5.0.0) Offset to retrieve",
+            "long_desc": "",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "Can return all value types.",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/arrayaccess.offsetget.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 148,
+                    "short_desc": "The offset to retrieve.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "offsetSet": {
+            "name": "offsetSet",
+            "line": 164,
+            "short_desc": "(PHP 5 >= 5.0.0) Offset to set",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/arrayaccess.offsetset.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 164,
+                    "short_desc": "The offset to assign the value to.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 164,
+                    "short_desc": "The value to set.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "offsetUnset": {
+            "name": "offsetUnset",
+            "line": 182,
+            "short_desc": "(PHP 5 >= 5.0.0) Offset to unset",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "link": [
+                    [
+                        "http:\/\/php.net\/manual\/en\/arrayaccess.offsetunset.php"
+                    ]
+                ]
+            },
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 182,
+                    "short_desc": "The offset to unset.",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "__toString": {
+            "name": "__toString",
+            "line": 192,
+            "short_desc": "Allow to compare 2 set of conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "Jsoned data",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": [
+
+            ]
+        }
+    },
+    "constants": [
+
+    ]
+}

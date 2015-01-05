@@ -1,0 +1,345 @@
+{
+    "name": "Thelia\\Condition\\ConditionFactory",
+    "line": 26,
+    "short_desc": "Manage how Condition could interact with the current application state (Thelia)",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Constraint"
+            ]
+        ],
+        "author": [
+            [
+                "Guillaume",
+                "MOREL",
+                "<gmorel@openstudio.fr>"
+            ]
+        ]
+    },
+    "namespace": "Thelia\\Condition",
+    "file": "\/home\/manu\/dev\/www\/thelia_main\/core\/lib\/Thelia\/Condition\/ConditionFactory.php",
+    "hash": "7b312453f6090313b4dad60982a94a217fad08ed",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ContainerInterface": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+        "ConditionInterface": "Thelia\\Condition\\Implementation\\ConditionInterface",
+        "FacadeInterface": "Thelia\\Coupon\\FacadeInterface"
+    },
+    "errors": [
+
+    ],
+    "interfaces": [
+
+    ],
+    "properties": [
+
+    ],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 42,
+            "short_desc": "Constructor",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "container": {
+                    "name": "container",
+                    "line": 42,
+                    "short_desc": "Service container",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ContainerInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "serializeConditionCollection": {
+            "name": "serializeConditionCollection",
+            "line": 55,
+            "short_desc": "Serialize a collection of conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "A ready to be stored Condition collection",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "collection": {
+                    "name": "collection",
+                    "line": 55,
+                    "short_desc": "A collection of conditions",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\ConditionCollection",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConditionCollection",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "unserializeConditionCollection": {
+            "name": "unserializeConditionCollection",
+            "line": 80,
+            "short_desc": "Unserialize a collection of conditions",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\ConditionCollection",
+                    false
+                ]
+            ],
+            "hint_desc": "Conditions ready to be processed",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "serializedConditions": {
+                    "name": "serializedConditions",
+                    "line": 80,
+                    "short_desc": "Serialized Conditions",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "build": {
+            "name": "build",
+            "line": 114,
+            "short_desc": "Build a Condition from form",
+            "long_desc": "",
+            "hint": [
+                [
+                    "Thelia\\Condition\\Implementation\\ConditionInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "Ready to use Condition or false",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+                [
+                    "\\InvalidArgumentException",
+                    ""
+                ]
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "conditionServiceId": {
+                    "name": "conditionServiceId",
+                    "line": 114,
+                    "short_desc": "Condition class name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "operators": {
+                    "name": "operators",
+                    "line": 114,
+                    "short_desc": "Condition Operator (<, >, = )",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "values": {
+                    "name": "values",
+                    "line": 114,
+                    "short_desc": "Values setting this Condition",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getInputsFromServiceId": {
+            "name": "getInputsFromServiceId",
+            "line": 134,
+            "short_desc": "Get Condition inputs from serviceId",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Ready to be drawn condition inputs",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "conditionServiceId": {
+                    "name": "conditionServiceId",
+                    "line": 134,
+                    "short_desc": "ConditionManager class name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getInputsFromConditionInterface": {
+            "name": "getInputsFromConditionInterface",
+            "line": 153,
+            "short_desc": "Get Condition inputs from serviceId",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "Ready to be drawn condition inputs",
+            "tags": [
+
+            ],
+            "modifiers": "1",
+            "is_by_ref": "",
+            "exceptions": [
+
+            ],
+            "errors": [
+
+            ],
+            "parameters": {
+                "condition": {
+                    "name": "condition",
+                    "line": 153,
+                    "short_desc": "ConditionManager",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "Thelia\\Condition\\Implementation\\ConditionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [
+
+                    ],
+                    "modifiers": "ConditionInterface",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": [
+
+    ]
+}
