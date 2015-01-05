@@ -140,7 +140,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_orderBeforePayement">orderBeforePayement</a>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)
+                    <a href="#method_orderBeforePayment">orderBeforePayment</a>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)
                     <p>
 </p>
                 </td>
@@ -194,7 +194,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_updateQuantity">updateQuantity</a>(<a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order, <abbr title="Thelia\Action\$status">$status</abbr> $status, <abbr title="Thelia\Action\$canceledStatus">$canceledStatus</abbr> $canceledStatus)
+                    <a href="#method_updateQuantity">updateQuantity</a>(<a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order, $newStatus)
                     <p>
 </p>
                 </td>
@@ -281,7 +281,7 @@
     </div>
 
                 <h3 id="method___construct">
-        <div class="location">at line 74</div>
+        <div class="location">at line 70</div>
         <code>            public            
     <strong>__construct</strong>(<a href="../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a> $request, <a href="../../Thelia/Mailer/MailerFactory.html"><abbr title="Thelia\Mailer\MailerFactory">MailerFactory</abbr></a> $mailer, <a href="../../Thelia/Core/Security/SecurityContext.html"><abbr title="Thelia\Core\Security\SecurityContext">SecurityContext</abbr></a> $securityContext)</code>
     </h3>
@@ -321,7 +321,7 @@
     </div>
 
                 <h3 id="method_setDeliveryAddress">
-        <div class="location">at line 84</div>
+        <div class="location">at line 80</div>
         <code>            public            
     <strong>setDeliveryAddress</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -349,7 +349,7 @@
     </div>
 
                 <h3 id="method_setDeliveryModule">
-        <div class="location">at line 96</div>
+        <div class="location">at line 92</div>
         <code>            public            
     <strong>setDeliveryModule</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -377,7 +377,7 @@
     </div>
 
                 <h3 id="method_setPostage">
-        <div class="location">at line 115</div>
+        <div class="location">at line 113</div>
         <code>            public            
     <strong>setPostage</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -461,7 +461,7 @@
     </div>
 
                 <h3 id="method_createManual">
-        <div class="location">at line 340</div>
+        <div class="location">at line 361</div>
         <code>            public            
     <strong>createManual</strong>(<a href="../../Thelia/Core/Event/Order/OrderManualEvent.html"><abbr title="Thelia\Core\Event\Order\OrderManualEvent">OrderManualEvent</abbr></a> $event)</code>
     </h3>
@@ -487,7 +487,7 @@
     </div>
 
                 <h3 id="method_create">
-        <div class="location">at line 361</div>
+        <div class="location">at line 383</div>
         <code>            public            
     <strong>create</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -524,10 +524,10 @@
                     </div>
     </div>
 
-                <h3 id="method_orderBeforePayement">
-        <div class="location">at line 396</div>
+                <h3 id="method_orderBeforePayment">
+        <div class="location">at line 423</div>
         <code>            public            
-    <strong>orderBeforePayement</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
+    <strong>orderBeforePayment</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
     <div class="details">
         <p>
@@ -553,7 +553,7 @@
     </div>
 
                 <h3 id="method_orderCartClear">
-        <div class="location">at line 409</div>
+        <div class="location">at line 436</div>
         <code>            public            
     <strong>orderCartClear</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -580,7 +580,7 @@
     </div>
 
                 <h3 id="method_sendConfirmationEmail">
-        <div class="location">at line 424</div>
+        <div class="location">at line 451</div>
         <code>            public            
     <strong>sendConfirmationEmail</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -617,7 +617,7 @@
     </div>
 
                 <h3 id="method_sendNotificationEmail">
-        <div class="location">at line 441</div>
+        <div class="location">at line 468</div>
         <code>            public            
     <strong>sendNotificationEmail</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -654,7 +654,7 @@
     </div>
 
                 <h3 id="method_updateStatus">
-        <div class="location">at line 455</div>
+        <div class="location">at line 482</div>
         <code>            public            
     <strong>updateStatus</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -682,9 +682,9 @@
     </div>
 
                 <h3 id="method_updateQuantity">
-        <div class="location">at line 478</div>
+        <div class="location">at line 501</div>
         <code>            public            
-    <strong>updateQuantity</strong>(<a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order, <abbr title="Thelia\Action\$status">$status</abbr> $status, <abbr title="Thelia\Action\$canceledStatus">$canceledStatus</abbr> $canceledStatus)</code>
+    <strong>updateQuantity</strong>(<a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a> $order, $newStatus)</code>
     </h3>
     <div class="details">
         <p>
@@ -702,14 +702,8 @@
 </td>
             </tr>
                     <tr>
-                <td><abbr title="Thelia\Action\$status">$status</abbr></td>
-                <td>$status</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td><abbr title="Thelia\Action\$canceledStatus">$canceledStatus</abbr></td>
-                <td>$canceledStatus</td>
+                <td></td>
+                <td>$newStatus</td>
                 <td>
 </td>
             </tr>
@@ -732,7 +726,7 @@
     </div>
 
                 <h3 id="method_updateDeliveryRef">
-        <div class="location">at line 507</div>
+        <div class="location">at line 584</div>
         <code>            public            
     <strong>updateDeliveryRef</strong>(<a href="../../Thelia/Core/Event/Order/OrderEvent.html"><abbr title="Thelia\Core\Event\Order\OrderEvent">OrderEvent</abbr></a> $event)</code>
     </h3>
@@ -760,7 +754,7 @@
     </div>
 
                 <h3 id="method_updateAddress">
-        <div class="location">at line 520</div>
+        <div class="location">at line 597</div>
         <code>            public            
     <strong>updateAddress</strong>(<a href="../../Thelia/Core/Event/Order/OrderAddressEvent.html"><abbr title="Thelia\Core\Event\Order\OrderAddressEvent">OrderAddressEvent</abbr></a> $event)</code>
     </h3>
@@ -788,7 +782,7 @@
     </div>
 
                 <h3 id="method_getSubscribedEvents">
-        <div class="location">at line 562</div>
+        <div class="location">at line 639</div>
         <code>        static    public            array
     <strong>getSubscribedEvents</strong>()</code>
     </h3>

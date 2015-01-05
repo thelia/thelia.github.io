@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Action\ModuleHook | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Action.html">Thelia\Action</a>\ModuleHook</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>ModuleHook</strong>        extends <a href="../../Thelia/Action/BaseAction.html"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a>        implements
+        <abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr></p>
+
+            <div class="description">
+            <p>Class ModuleHook</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_genericToggleVisibility">genericToggleVisibility</a>(<abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, <a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a> $event)
+                    <p>Toggle visibility for an object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($cacheDir)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toggleModuleActivation">toggleModuleActivation</a>(<a href="../../Thelia/Core/Event/Module/ModuleToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Module\ModuleToggleActivationEvent">ModuleToggleActivationEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteModule">deleteModule</a>(<a href="../../Thelia/Core/Event/Module/ModuleDeleteEvent.html"><abbr title="Thelia\Core\Event\Module\ModuleDeleteEvent">ModuleDeleteEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_createModuleHook">createModuleHook</a>(<a href="../../Thelia/Core/Event/Hook/ModuleHookCreateEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookCreateEvent">ModuleHookCreateEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateModuleHook">updateModuleHook</a>(<a href="../../Thelia/Core/Event/Hook/ModuleHookUpdateEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookUpdateEvent">ModuleHookUpdateEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteModuleHook">deleteModuleHook</a>(<a href="../../Thelia/Core/Event/Hook/ModuleHookDeleteEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookDeleteEvent">ModuleHookDeleteEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toggleModuleHookActivation">toggleModuleHookActivation</a>(<a href="../../Thelia/Core/Event/Hook/ModuleHookToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookToggleActivationEvent">ModuleHookToggleActivationEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateModuleHookPosition">updateModuleHookPosition</a>(<a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a> $event)
+                    <p>Changes position, selecting absolute ou relative change.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateHook">updateHook</a>(<a href="../../Thelia/Core/Event/Hook/HookUpdateEvent.html"><abbr title="Thelia\Core\Event\Hook\HookUpdateEvent">HookUpdateEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toggleHookActivation">toggleHookActivation</a>(<a href="../../Thelia/Core/Event/Hook/HookToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Hook\HookToggleActivationEvent">HookToggleActivationEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getSubscribedEvents">getSubscribedEvents</a>()
+                    <p>Returns an array of event names this subscriber wants to listen to.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_genericToggleVisibility">
+        <div class="location">in <a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a> at line 94</div>
+        <code>            public            mixed
+    <strong>genericToggleVisibility</strong>(<abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, <a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Toggle visibility for an object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></td>
+                <td>$query</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 48</div>
+        <code>            public            
+    <strong>__construct</strong>($cacheDir)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$cacheDir</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleModuleActivation">
+        <div class="location">at line 53</div>
+        <code>            public            
+    <strong>toggleModuleActivation</strong>(<a href="../../Thelia/Core/Event/Module/ModuleToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Module\ModuleToggleActivationEvent">ModuleToggleActivationEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Module/ModuleToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Module\ModuleToggleActivationEvent">ModuleToggleActivationEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteModule">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>deleteModule</strong>(<a href="../../Thelia/Core/Event/Module/ModuleDeleteEvent.html"><abbr title="Thelia\Core\Event\Module\ModuleDeleteEvent">ModuleDeleteEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Module/ModuleDeleteEvent.html"><abbr title="Thelia\Core\Event\Module\ModuleDeleteEvent">ModuleDeleteEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createModuleHook">
+        <div class="location">at line 105</div>
+        <code>            public            
+    <strong>createModuleHook</strong>(<a href="../../Thelia/Core/Event/Hook/ModuleHookCreateEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookCreateEvent">ModuleHookCreateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Hook/ModuleHookCreateEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookCreateEvent">ModuleHookCreateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateModuleHook">
+        <div class="location">at line 121</div>
+        <code>            public            
+    <strong>updateModuleHook</strong>(<a href="../../Thelia/Core/Event/Hook/ModuleHookUpdateEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookUpdateEvent">ModuleHookUpdateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Hook/ModuleHookUpdateEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookUpdateEvent">ModuleHookUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteModuleHook">
+        <div class="location">at line 139</div>
+        <code>            public            
+    <strong>deleteModuleHook</strong>(<a href="../../Thelia/Core/Event/Hook/ModuleHookDeleteEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookDeleteEvent">ModuleHookDeleteEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Hook/ModuleHookDeleteEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookDeleteEvent">ModuleHookDeleteEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleModuleHookActivation">
+        <div class="location">at line 148</div>
+        <code>            public            
+    <strong>toggleModuleHookActivation</strong>(<a href="../../Thelia/Core/Event/Hook/ModuleHookToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookToggleActivationEvent">ModuleHookToggleActivationEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Hook/ModuleHookToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Hook\ModuleHookToggleActivationEvent">ModuleHookToggleActivationEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateModuleHookPosition">
+        <div class="location">at line 170</div>
+        <code>            public            <a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a>
+    <strong>updateModuleHookPosition</strong>(<a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Changes position, selecting absolute ou relative change.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a></td>
+            <td>$event</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateHook">
+        <div class="location">at line 178</div>
+        <code>            public            
+    <strong>updateHook</strong>(<a href="../../Thelia/Core/Event/Hook/HookUpdateEvent.html"><abbr title="Thelia\Core\Event\Hook\HookUpdateEvent">HookUpdateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Hook/HookUpdateEvent.html"><abbr title="Thelia\Core\Event\Hook\HookUpdateEvent">HookUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleHookActivation">
+        <div class="location">at line 189</div>
+        <code>            public            
+    <strong>toggleHookActivation</strong>(<a href="../../Thelia/Core/Event/Hook/HookToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Hook\HookToggleActivationEvent">HookToggleActivationEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Hook/HookToggleActivationEvent.html"><abbr title="Thelia\Core\Event\Hook\HookToggleActivationEvent">HookToggleActivationEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSubscribedEvents">
+        <div class="location">at line 227</div>
+        <code>        static    public            array
+    <strong>getSubscribedEvents</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of event names this subscriber wants to listen to.</p>
+        <p>The array keys are event names and the value can be:</p>
+
+<ul>
+<li>The method name to call (priority defaults to 0)</li>
+<li>An array composed of the method name to call and the priority</li>
+<li>An array of arrays composed of the method names to call and respective
+priorities, or 0 if unset</li>
+</ul>
+
+<p>For instance:</p>
+
+<ul>
+<li>array('eventName' => 'methodName')</li>
+<li>array('eventName' => array('methodName', $priority))</li>
+<li>array('eventName' => array(array('methodName1', $priority), array('methodName2'))</li>
+</ul>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>The event names to listen to</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

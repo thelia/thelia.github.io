@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Action\Category | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Action.html">Thelia\Action</a>\Category</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Category</strong>        extends <a href="../../Thelia/Action/BaseAction.html"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a>        implements
+        <abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_genericToggleVisibility">genericToggleVisibility</a>(<abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, <a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a> $event)
+                    <p>Toggle visibility for an object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(<a href="../../Thelia/Core/Event/Category/CategoryCreateEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryCreateEvent">CategoryCreateEvent</abbr></a> $event)
+                    <p>Create a new category entry</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(<a href="../../Thelia/Core/Event/Category/CategoryUpdateEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryUpdateEvent">CategoryUpdateEvent</abbr></a> $event)
+                    <p>Change a category</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_updateSeo">updateSeo</a>(<a href="../../Thelia/Core/Event/UpdateSeoEvent.html"><abbr title="Thelia\Core\Event\UpdateSeoEvent">UpdateSeoEvent</abbr></a> $event)
+                    <p>Change a Category SEO</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(<a href="../../Thelia/Core/Event/Category/CategoryDeleteEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryDeleteEvent">CategoryDeleteEvent</abbr></a> $event)
+                    <p>Delete a category entry</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toggleVisibility">toggleVisibility</a>(<a href="../../Thelia/Core/Event/Category/CategoryToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryToggleVisibilityEvent">CategoryToggleVisibilityEvent</abbr></a> $event)
+                    <p>Toggle category visibility.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updatePosition">updatePosition</a>(<a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a> $event)
+                    <p>Changes position, selecting absolute ou relative change.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addContent">addContent</a>(<a href="../../Thelia/Core/Event/Category/CategoryAddContentEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryAddContentEvent">CategoryAddContentEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeContent">removeContent</a>(<a href="../../Thelia/Core/Event/Category/CategoryDeleteContentEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryDeleteContentEvent">CategoryDeleteContentEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getSubscribedEvents">getSubscribedEvents</a>()
+                    <p>{@inheritDoc}</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_genericToggleVisibility">
+        <div class="location">in <a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a> at line 94</div>
+        <code>            public            mixed
+    <strong>genericToggleVisibility</strong>(<abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, <a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Toggle visibility for an object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></td>
+                <td>$query</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/ToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 40</div>
+        <code>            public            
+    <strong>create</strong>(<a href="../../Thelia/Core/Event/Category/CategoryCreateEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryCreateEvent">CategoryCreateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new category entry</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Category/CategoryCreateEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryCreateEvent">CategoryCreateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 63</div>
+        <code>            public            
+    <strong>update</strong>(<a href="../../Thelia/Core/Event/Category/CategoryUpdateEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryUpdateEvent">CategoryUpdateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Change a category</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Category/CategoryUpdateEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryUpdateEvent">CategoryUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateSeo">
+        <div class="location">at line 91</div>
+        <code>            public            mixed
+    <strong>updateSeo</strong>(<a href="../../Thelia/Core/Event/UpdateSeoEvent.html"><abbr title="Thelia\Core\Event\UpdateSeoEvent">UpdateSeoEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Change a Category SEO</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/UpdateSeoEvent.html"><abbr title="Thelia\Core\Event\UpdateSeoEvent">UpdateSeoEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 101</div>
+        <code>            public            
+    <strong>delete</strong>(<a href="../../Thelia/Core/Event/Category/CategoryDeleteEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryDeleteEvent">CategoryDeleteEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Delete a category entry</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Category/CategoryDeleteEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryDeleteEvent">CategoryDeleteEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleVisibility">
+        <div class="location">at line 118</div>
+        <code>            public            
+    <strong>toggleVisibility</strong>(<a href="../../Thelia/Core/Event/Category/CategoryToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryToggleVisibilityEvent">CategoryToggleVisibilityEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Toggle category visibility.</p>
+        <p>No form used here</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Category/CategoryToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryToggleVisibilityEvent">CategoryToggleVisibilityEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updatePosition">
+        <div class="location">at line 136</div>
+        <code>            public            
+    <strong>updatePosition</strong>(<a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Changes position, selecting absolute ou relative change.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/UpdatePositionEvent.html"><abbr title="Thelia\Core\Event\UpdatePositionEvent">UpdatePositionEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addContent">
+        <div class="location">at line 141</div>
+        <code>            public            
+    <strong>addContent</strong>(<a href="../../Thelia/Core/Event/Category/CategoryAddContentEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryAddContentEvent">CategoryAddContentEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Category/CategoryAddContentEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryAddContentEvent">CategoryAddContentEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeContent">
+        <div class="location">at line 157</div>
+        <code>            public            
+    <strong>removeContent</strong>(<a href="../../Thelia/Core/Event/Category/CategoryDeleteContentEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryDeleteContentEvent">CategoryDeleteContentEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Category/CategoryDeleteContentEvent.html"><abbr title="Thelia\Core\Event\Category\CategoryDeleteContentEvent">CategoryDeleteContentEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSubscribedEvents">
+        <div class="location">at line 174</div>
+        <code>        static    public            
+    <strong>getSubscribedEvents</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>{@inheritDoc}</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

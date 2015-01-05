@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Action\Image | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Action.html">Thelia\Action</a>\Image</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Image</strong>        extends <a href="../../Thelia/Action/BaseCachedFile.html"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a>        implements
+        <abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr></p>
+
+            <div class="description">
+            <p>Image management actions.</p>
+            <p>This class handles image processing and caching.</p>
+
+<p>Basically, images are stored outside of the web space (by default in local/media/images),
+and cached inside the web space (by default in web/local/images).</p>
+
+<p>In the images caches directory, a subdirectory for images categories (eg. product, category, folder, etc.) is
+automatically created, and the cached image is created here. Plugin may use their own subdirectory as required.</p>
+
+<p>The cached image name contains a hash of the processing options, and the original (normalized) name of the image.</p>
+
+<p>A copy (or symbolic link, by default) of the original image is always created in the cache, so that the full
+resolution image is always available.</p>
+
+<p>Various image processing options are available :</p>
+
+<ul>
+<li>resizing, with border, crop, or by keeping image aspect ratio</li>
+<li>rotation, in degrees, positive or negative</li>
+<li>background color, applyed to empty background when creating borders or rotating</li>
+<li>effects. The effects are applied in the specified order. The following effects are available:
+
+<ul>
+<li>gamma:value : change the image Gamma to the specified value. Example: gamma:0.7</li>
+<li>grayscale or greyscale: switch image to grayscale</li>
+<li>colorize:color : apply a color mask to the image. Exemple: colorize:#ff2244</li>
+<li>negative : transform the image in its negative equivalent</li>
+<li>vflip or vertical_flip : vertical flip</li>
+<li>hflip or horizontal_flip : horizontal flip</li>
+</ul></li>
+</ul>
+
+<p>If a problem occurs, an ImageException may be thrown.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>EXACT_RATIO_WITH_BORDERS</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXACT_RATIO_WITH_CROP</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEEP_IMAGE_RATIO</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../Thelia/Files/FileManager.html"><abbr title="Thelia\Files\FileManager">FileManager</abbr></a> $fileManager)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseCachedFile.html#method___construct"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearCache">clearCache</a>(<a href="../../Thelia/Core/Event/CachedFileEvent.html"><abbr title="Thelia\Core\Event\CachedFileEvent">CachedFileEvent</abbr></a> $event)
+                    <p>Clear the file cache.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseCachedFile.html#method_clearCache"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_saveFile">saveFile</a>(<a href="../../Thelia/Core/Event/File/FileCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\File\FileCreateOrUpdateEvent">FileCreateOrUpdateEvent</abbr></a> $event)
+                    <p>Take care of saving a file in the database and file storage</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseCachedFile.html#method_saveFile"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateFile">updateFile</a>(<a href="../../Thelia/Core/Event/File/FileCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\File\FileCreateOrUpdateEvent">FileCreateOrUpdateEvent</abbr></a> $event)
+                    <p>Take care of updating file in the database and file storage</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseCachedFile.html#method_updateFile"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFile">deleteFile</a>(<a href="../../Thelia/Core/Event/File/FileDeleteEvent.html"><abbr title="Thelia\Core\Event\File\FileDeleteEvent">FileDeleteEvent</abbr></a> $event)
+                    <p>Deleting file in the database and in storage</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseCachedFile.html#method_deleteFile"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updatePosition">updatePosition</a>(<a href="../../Thelia/Core/Event/UpdateFilePositionEvent.html"><abbr title="Thelia\Core\Event\UpdateFilePositionEvent">UpdateFilePositionEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseCachedFile.html#method_updatePosition"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_toggleVisibility">toggleVisibility</a>(<a href="../../Thelia/Core/Event/File/FileToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\File\FileToggleVisibilityEvent">FileToggleVisibilityEvent</abbr></a> $event)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Action/BaseCachedFile.html#method_toggleVisibility"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_processImage">processImage</a>(<a href="../../Thelia/Core/Event/Image/ImageEvent.html"><abbr title="Thelia\Core\Event\Image\ImageEvent">ImageEvent</abbr></a> $event)
+                    <p>Process image and write the result in the image cache.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getSubscribedEvents">getSubscribedEvents</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Thelia/Action/BaseCachedFile.html#method___construct"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a> at line 48</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../Thelia/Files/FileManager.html"><abbr title="Thelia\Files\FileManager">FileManager</abbr></a> $fileManager)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Files/FileManager.html"><abbr title="Thelia\Files\FileManager">FileManager</abbr></a></td>
+                <td>$fileManager</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearCache">
+        <div class="location">in <a href="../../Thelia/Action/BaseCachedFile.html#method_clearCache"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a> at line 65</div>
+        <code>            public            
+    <strong>clearCache</strong>(<a href="../../Thelia/Core/Event/CachedFileEvent.html"><abbr title="Thelia\Core\Event\CachedFileEvent">CachedFileEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Clear the file cache.</p>
+        <p>Is a subdirectory is specified, only this directory is cleared.
+If no directory is specified, the whole cache is cleared.
+Only files are deleted, directories will remain.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/CachedFileEvent.html"><abbr title="Thelia\Core\Event\CachedFileEvent">CachedFileEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveFile">
+        <div class="location">in <a href="../../Thelia/Action/BaseCachedFile.html#method_saveFile"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a> at line 198</div>
+        <code>            public            
+    <strong>saveFile</strong>(<a href="../../Thelia/Core/Event/File/FileCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\File\FileCreateOrUpdateEvent">FileCreateOrUpdateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Take care of saving a file in the database and file storage</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/File/FileCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\File\FileCreateOrUpdateEvent">FileCreateOrUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>Image event</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Exception/FileException.html"><abbr title="Thelia\Exception\FileException">FileException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateFile">
+        <div class="location">in <a href="../../Thelia/Action/BaseCachedFile.html#method_updateFile"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a> at line 238</div>
+        <code>            public            
+    <strong>updateFile</strong>(<a href="../../Thelia/Core/Event/File/FileCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\File\FileCreateOrUpdateEvent">FileCreateOrUpdateEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Take care of updating file in the database and file storage</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/File/FileCreateOrUpdateEvent.html"><abbr title="Thelia\Core\Event\File\FileCreateOrUpdateEvent">FileCreateOrUpdateEvent</abbr></a></td>
+                <td>$event</td>
+                <td>Image event</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Exception/FileException.html"><abbr title="Thelia\Exception\FileException">FileException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFile">
+        <div class="location">in <a href="../../Thelia/Action/BaseCachedFile.html#method_deleteFile"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a> at line 261</div>
+        <code>            public            
+    <strong>deleteFile</strong>(<a href="../../Thelia/Core/Event/File/FileDeleteEvent.html"><abbr title="Thelia\Core\Event\File\FileDeleteEvent">FileDeleteEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Deleting file in the database and in storage</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/File/FileDeleteEvent.html"><abbr title="Thelia\Core\Event\File\FileDeleteEvent">FileDeleteEvent</abbr></a></td>
+                <td>$event</td>
+                <td>Image event</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updatePosition">
+        <div class="location">in <a href="../../Thelia/Action/BaseCachedFile.html#method_updatePosition"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a> at line 266</div>
+        <code>            public            
+    <strong>updatePosition</strong>(<a href="../../Thelia/Core/Event/UpdateFilePositionEvent.html"><abbr title="Thelia\Core\Event\UpdateFilePositionEvent">UpdateFilePositionEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/UpdateFilePositionEvent.html"><abbr title="Thelia\Core\Event\UpdateFilePositionEvent">UpdateFilePositionEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toggleVisibility">
+        <div class="location">in <a href="../../Thelia/Action/BaseCachedFile.html#method_toggleVisibility"><abbr title="Thelia\Action\BaseCachedFile">BaseCachedFile</abbr></a> at line 271</div>
+        <code>            public            
+    <strong>toggleVisibility</strong>(<a href="../../Thelia/Core/Event/File/FileToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\File\FileToggleVisibilityEvent">FileToggleVisibilityEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/File/FileToggleVisibilityEvent.html"><abbr title="Thelia\Core\Event\File\FileToggleVisibilityEvent">FileToggleVisibilityEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_processImage">
+        <div class="location">at line 90</div>
+        <code>            public            
+    <strong>processImage</strong>(<a href="../../Thelia/Core/Event/Image/ImageEvent.html"><abbr title="Thelia\Core\Event\Image\ImageEvent">ImageEvent</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Process image and write the result in the image cache.</p>
+        <p>If the image already exists in cache, the cache file is immediately returned, without any processing
+If the original (full resolution) image is required, create either a symbolic link with the
+original image in the cache dir, or copy it in the cache dir.</p>
+
+<p>This method updates the cache<em>file</em>path and file_url attributes of the event</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Core/Event/Image/ImageEvent.html"><abbr title="Thelia\Core\Event\Image\ImageEvent">ImageEvent</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Thelia/Exception/ImageException.html"><abbr title="Thelia\Exception\ImageException">ImageException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSubscribedEvents">
+        <div class="location">at line 355</div>
+        <code>        static    public            
+    <strong>getSubscribedEvents</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

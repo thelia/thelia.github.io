@@ -36,6 +36,15 @@
 
             <table>
                     <tr>
+                <td>EMPTY_FORM_NAME</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
                 <td>TEMPLATE_404</td>
                 <td class="last">
                     <p><em>
@@ -56,7 +65,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>($objectName, $defaultListOrder = null, $orderRequestParameterName = null, $resourceCode, $createEventIdentifier, $updateEventIdentifier, $deleteEventIdentifier, $visibilityToggleEventIdentifier = null, $changePositionEventIdentifier = null, $updateSeoEventIdentifier = null, $moduleCode = null)
+                    <a href="#method___construct">__construct</a>(string $objectName, string $defaultListOrder, string $orderRequestParameterName, string $resourceCode, string $createEventIdentifier, string $updateEventIdentifier, string $deleteEventIdentifier, string $visibilityToggleEventIdentifier = null, string $changePositionEventIdentifier = null, string $updateSeoEventIdentifier = null, string $moduleCode = null)
                     <p>
 </p>
                 </td>
@@ -148,9 +157,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 47</div>
+        <div class="location">at line 48</div>
         <code>            public            
-    <strong>__construct</strong>($objectName, $defaultListOrder = null, $orderRequestParameterName = null, $resourceCode, $createEventIdentifier, $updateEventIdentifier, $deleteEventIdentifier, $visibilityToggleEventIdentifier = null, $changePositionEventIdentifier = null, $updateSeoEventIdentifier = null, $moduleCode = null)</code>
+    <strong>__construct</strong>(string $objectName, string $defaultListOrder, string $orderRequestParameterName, string $resourceCode, string $createEventIdentifier, string $updateEventIdentifier, string $deleteEventIdentifier, string $visibilityToggleEventIdentifier = null, string $changePositionEventIdentifier = null, string $updateSeoEventIdentifier = null, string $moduleCode = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -162,70 +171,59 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$objectName</td>
-                <td>
-</td>
+                <td>the lower case object name. Example. "message"</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$defaultListOrder</td>
-                <td>
-</td>
+                <td>the default object list order, or null if list is not sortable. Example: manual</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$orderRequestParameterName</td>
-                <td>
-</td>
+                <td>Name of the request parameter that set the list order (null if list is not sortable)</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$resourceCode</td>
-                <td>
-</td>
+                <td>the 'resource' code. Example: "admin.configuration.message"</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$createEventIdentifier</td>
-                <td>
-</td>
+                <td>the dispatched create TheliaEvent identifier. Example: TheliaEvents::MESSAGE_CREATE</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$updateEventIdentifier</td>
-                <td>
-</td>
+                <td>the dispatched update TheliaEvent identifier. Example: TheliaEvents::MESSAGE_UPDATE</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$deleteEventIdentifier</td>
-                <td>
-</td>
+                <td>the dispatched delete TheliaEvent identifier. Example: TheliaEvents::MESSAGE_DELETE</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$visibilityToggleEventIdentifier</td>
-                <td>
-</td>
+                <td>the dispatched visibility toggle TheliaEvent identifier, or null if the object has no visible options. Example: TheliaEvents::MESSAGE<em>TOGGLE</em>VISIBILITY</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$changePositionEventIdentifier</td>
-                <td>
-</td>
+                <td>the dispatched position change TheliaEvent identifier, or null if the object has no position. Example: TheliaEvents::MESSAGE<em>UPDATE</em>POSITION</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$updateSeoEventIdentifier</td>
-                <td>
-</td>
+                <td>the dispatched update SEO change TheliaEvent identifier, or null if the object has no SEO. Example: TheliaEvents::MESSAGE<em>UPDATE</em>SEO</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$moduleCode</td>
-                <td>
-</td>
+                <td>The module code for ACL</td>
             </tr>
             </table>
 
@@ -236,7 +234,7 @@
     </div>
 
                 <h3 id="method_defaultAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_defaultAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 269</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_defaultAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 272</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>defaultAction</strong>()</code>
     </h3>
@@ -261,7 +259,7 @@
     </div>
 
                 <h3 id="method_createAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_createAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 284</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_createAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 287</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>createAction</strong>()</code>
     </h3>
@@ -286,7 +284,7 @@
     </div>
 
                 <h3 id="method_updateAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_updateAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 360</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_updateAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 364</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>updateAction</strong>()</code>
     </h3>
@@ -311,7 +309,7 @@
     </div>
 
                 <h3 id="method_processUpdateAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_processUpdateAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 385</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_processUpdateAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 389</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>processUpdateAction</strong>()</code>
     </h3>
@@ -336,7 +334,7 @@
     </div>
 
                 <h3 id="method_updatePositionAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_updatePositionAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 463</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_updatePositionAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 468</div>
         <code>            public            
     <strong>updatePositionAction</strong>()</code>
     </h3>
@@ -352,7 +350,7 @@
     </div>
 
                 <h3 id="method_setToggleVisibilityAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_setToggleVisibilityAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 538</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_setToggleVisibilityAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 543</div>
         <code>            public            
     <strong>setToggleVisibilityAction</strong>()</code>
     </h3>
@@ -368,7 +366,7 @@
     </div>
 
                 <h3 id="method_deleteAction">
-        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_deleteAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 562</div>
+        <div class="location">in <a href="../../../Thelia/Controller/Admin/AbstractCrudController.html#method_deleteAction"><abbr title="Thelia\Controller\Admin\AbstractCrudController">AbstractCrudController</abbr></a> at line 567</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>deleteAction</strong>()</code>
     </h3>
@@ -393,7 +391,7 @@
     </div>
 
                 <h3 id="method_processUpdateSeoAction">
-        <div class="location">at line 147</div>
+        <div class="location">at line 148</div>
         <code>            public            <a href="../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
     <strong>processUpdateSeoAction</strong>()</code>
     </h3>
