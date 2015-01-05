@@ -1,0 +1,2880 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Model\Base\ContentVersionQuery | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Thelia/Model/Base.html">Thelia\Model\Base</a>\ContentVersionQuery</h1>
+    </div>
+        <div class="content">
+                <p>abstract     class
+    <strong>ContentVersionQuery</strong>        extends <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></p>
+
+            <div class="description">
+            <p>Base class that represents a query for the 'content_version' table.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\ContentVersion&#039;, string $modelAlias = null)
+                    <p>Initializes internal state of \Thelia\Model\Base\ContentVersionQuery object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)
+                    <p>Returns a new ChildContentVersionQuery object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersion.html"><abbr title="Thelia\Model\ContentVersion">ContentVersion</abbr></a>|array|mixed
+                </td>
+                <td class="last">
+                    <a href="#method_findPk">findPk</a>($key, $con = null)
+                    <p>Find object by primary key.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
+                </td>
+                <td class="last">
+                    <a href="#method_findPks">findPks</a>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Find objects by primary key <code> $objs = $c->findPks(array(array(12, 56), array(832, 123), array(123, 456)), $con); </code></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPrimaryKey">filterByPrimaryKey</a>(mixed $key)
+                    <p>Filter the query by primary key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPrimaryKeys">filterByPrimaryKeys</a>(array $keys)
+                    <p>Filter the query by a list of primary keys</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterById">filterById</a>(mixed $id = null, string $comparison = null)
+                    <p>Filter the query on the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByVisible">filterByVisible</a>(mixed $visible = null, string $comparison = null)
+                    <p>Filter the query on the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByPosition">filterByPosition</a>(mixed $position = null, string $comparison = null)
+                    <p>Filter the query on the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByCreatedAt">filterByCreatedAt</a>(mixed $createdAt = null, string $comparison = null)
+                    <p>Filter the query on the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByUpdatedAt">filterByUpdatedAt</a>(mixed $updatedAt = null, string $comparison = null)
+                    <p>Filter the query on the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByVersion">filterByVersion</a>(mixed $version = null, string $comparison = null)
+                    <p>Filter the query on the version column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByVersionCreatedAt">filterByVersionCreatedAt</a>(mixed $versionCreatedAt = null, string $comparison = null)
+                    <p>Filter the query on the version<em>created</em>at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByVersionCreatedBy">filterByVersionCreatedBy</a>(string $versionCreatedBy = null, string $comparison = null)
+                    <p>Filter the query on the version<em>created</em>by column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterByContent">filterByContent</a>(<a href="../../../Thelia/Model/Content.html"><abbr title="Thelia\Model\Content">Content</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $content, string $comparison = null)
+                    <p>Filter the query by a related \Thelia\Model\Content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinContent">joinContent</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Adds a JOIN clause to the query using the Content relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentQuery.html"><abbr title="Thelia\Model\ContentQuery">ContentQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_useContentQuery">useContentQuery</a>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)
+                    <p>Use the Content relation Content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_prune">prune</a>(<a href="../../../Thelia/Model/ContentVersion.html"><abbr title="Thelia\Model\ContentVersion">ContentVersion</abbr></a> $contentVersion = null)
+                    <p>Exclude object from result</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_doDeleteAll">doDeleteAll</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Deletes all rows from the content_version table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                    <p>Performs a DELETE on the database, given a ChildContentVersion or Criteria object OR a primary key value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderById">orderById</a>($order = Criteria::ASC)
+                    <p>Order by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByVisible">orderByVisible</a>($order = Criteria::ASC)
+                    <p>Order by the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByPosition">orderByPosition</a>($order = Criteria::ASC)
+                    <p>Order by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByCreatedAt">orderByCreatedAt</a>($order = Criteria::ASC)
+                    <p>Order by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByUpdatedAt">orderByUpdatedAt</a>($order = Criteria::ASC)
+                    <p>Order by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByVersion">orderByVersion</a>($order = Criteria::ASC)
+                    <p>Order by the version column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByVersionCreatedAt">orderByVersionCreatedAt</a>($order = Criteria::ASC)
+                    <p>Order by the version<em>created</em>at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_orderByVersionCreatedBy">orderByVersionCreatedBy</a>($order = Criteria::ASC)
+                    <p>Order by the version<em>created</em>by column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupById">groupById</a>()
+                    <p>Group by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByVisible">groupByVisible</a>()
+                    <p>Group by the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByPosition">groupByPosition</a>()
+                    <p>Group by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByCreatedAt">groupByCreatedAt</a>()
+                    <p>Group by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByUpdatedAt">groupByUpdatedAt</a>()
+                    <p>Group by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByVersion">groupByVersion</a>()
+                    <p>Group by the version column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByVersionCreatedAt">groupByVersionCreatedAt</a>()
+                    <p>Group by the version<em>created</em>at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_groupByVersionCreatedBy">groupByVersionCreatedBy</a>()
+                    <p>Group by the version<em>created</em>by column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_leftJoin">leftJoin</a>($relation)
+                    <p>Adds a LEFT JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoin">rightJoin</a>($relation)
+                    <p>Adds a RIGHT JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoin">innerJoin</a>($relation)
+                    <p>Adds a INNER JOIN clause to the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_leftJoinContent">leftJoinContent</a>($relationAlias = null)
+                    <p>Adds a LEFT JOIN clause to the query using the Content relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_rightJoinContent">rightJoinContent</a>($relationAlias = null)
+                    <p>Adds a RIGHT JOIN clause to the query using the Content relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_innerJoinContent">innerJoinContent</a>($relationAlias = null)
+                    <p>Adds a INNER JOIN clause to the query using the Content relation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOne">findOne</a>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)
+                    <p>Return the first ChildContentVersion matching the query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneOrCreate">findOneOrCreate</a>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)
+                    <p>Return the first ChildContentVersion matching the query, or a new ChildContentVersion object populated from the query conditions when no match is found</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneById">findOneById</a>(<abbr title="int ">int </abbr> $id)
+                    <p>Return the first ChildContentVersion filtered by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByVisible">findOneByVisible</a>(<abbr title="int ">int </abbr> $visible)
+                    <p>Return the first ChildContentVersion filtered by the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByPosition">findOneByPosition</a>(<abbr title="int ">int </abbr> $position)
+                    <p>Return the first ChildContentVersion filtered by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByCreatedAt">findOneByCreatedAt</a>(<abbr title="string ">string </abbr> $created_at)
+                    <p>Return the first ChildContentVersion filtered by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByUpdatedAt">findOneByUpdatedAt</a>(<abbr title="string ">string </abbr> $updated_at)
+                    <p>Return the first ChildContentVersion filtered by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByVersion">findOneByVersion</a>(<abbr title="int ">int </abbr> $version)
+                    <p>Return the first ChildContentVersion filtered by the version column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByVersionCreatedAt">findOneByVersionCreatedAt</a>(<abbr title="string ">string </abbr> $version_created_at)
+                    <p>Return the first ChildContentVersion filtered by the version<em>created</em>at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_findOneByVersionCreatedBy">findOneByVersionCreatedBy</a>(<abbr title="string ">string </abbr> $version_created_by)
+                    <p>Return the first ChildContentVersion filtered by the version<em>created</em>by column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findById">findById</a>(<abbr title="int ">int </abbr> $id)
+                    <p>Return ChildContentVersion objects filtered by the id column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByVisible">findByVisible</a>(<abbr title="int ">int </abbr> $visible)
+                    <p>Return ChildContentVersion objects filtered by the visible column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByPosition">findByPosition</a>(<abbr title="int ">int </abbr> $position)
+                    <p>Return ChildContentVersion objects filtered by the position column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByCreatedAt">findByCreatedAt</a>(<abbr title="string ">string </abbr> $created_at)
+                    <p>Return ChildContentVersion objects filtered by the created_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByUpdatedAt">findByUpdatedAt</a>(<abbr title="string ">string </abbr> $updated_at)
+                    <p>Return ChildContentVersion objects filtered by the updated_at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByVersion">findByVersion</a>(<abbr title="int ">int </abbr> $version)
+                    <p>Return ChildContentVersion objects filtered by the version column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByVersionCreatedAt">findByVersionCreatedAt</a>(<abbr title="string ">string </abbr> $version_created_at)
+                    <p>Return ChildContentVersion objects filtered by the version<em>created</em>at column</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_findByVersionCreatedBy">findByVersionCreatedBy</a>(<abbr title="string ">string </abbr> $version_created_by)
+                    <p>Return ChildContentVersion objects filtered by the version<em>created</em>by column</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 82</div>
+        <code>            public            
+    <strong>__construct</strong>(string $dbName = &#039;thelia&#039;, string $modelName = &#039;\\Thelia\\Model\\ContentVersion&#039;, string $modelAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Initializes internal state of \Thelia\Model\Base\ContentVersionQuery object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dbName</td>
+                <td>The database name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modelName</td>
+                <td>The phpName of a model, e.g. 'Book'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$modelAlias</td>
+                <td>The alias for the model in this query, e.g. 'b'</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 95</div>
+        <code>        static    public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>create</strong>(string $modelAlias = null, <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a new ChildContentVersionQuery object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$modelAlias</td>
+                <td>The alias of a model in the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+                <td>$criteria</td>
+                <td>Optional Criteria to build the query from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findPk">
+        <div class="location">at line 125</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersion.html"><abbr title="Thelia\Model\ContentVersion">ContentVersion</abbr></a>|array|mixed
+    <strong>findPk</strong>($key, $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Find object by primary key.</p>
+        <p>Propel uses the instance pool to skip the database if the object exists.
+Go fast if the query is untouched.</p>
+
+<p><code>
+$obj = $c->findPk(array(12, 34), $con);
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersion.html"><abbr title="Thelia\Model\ContentVersion">ContentVersion</abbr></a>|array|mixed</td>
+            <td>the result, formatted by the current formatter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findPks">
+        <div class="location">at line 208</div>
+        <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed
+    <strong>findPks</strong>(array $keys, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Find objects by primary key <code> $objs = $c->findPks(array(array(12, 56), array(832, 123), array(123, 456)), $con); </code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>Primary keys to use for the query</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>an optional connection object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>|array|mixed</td>
+            <td>the list of results, formatted by the current formatter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPrimaryKey">
+        <div class="location">at line 229</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByPrimaryKey</strong>(mixed $key)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by primary key</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td>Primary key to use for the query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPrimaryKeys">
+        <div class="location">at line 244</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByPrimaryKeys</strong>(array $keys)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a list of primary keys</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>The list of primary key to use for the query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterById">
+        <div class="location">at line 279</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterById</strong>(mixed $id = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the id column</p>
+        <p>Example usage:
+<code>
+$query->filterById(1234); // WHERE id = 1234
+$query->filterById(array(12, 34)); // WHERE id IN (12, 34)
+$query->filterById(array('min' => 12)); // WHERE id > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>filterByContent()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_filterByVisible">
+        <div class="location">at line 320</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByVisible</strong>(mixed $visible = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the visible column</p>
+        <p>Example usage:
+<code>
+$query->filterByVisible(1234); // WHERE visible = 1234
+$query->filterByVisible(array(12, 34)); // WHERE visible IN (12, 34)
+$query->filterByVisible(array('min' => 12)); // WHERE visible > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$visible</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByPosition">
+        <div class="location">at line 361</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByPosition</strong>(mixed $position = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the position column</p>
+        <p>Example usage:
+<code>
+$query->filterByPosition(1234); // WHERE position = 1234
+$query->filterByPosition(array(12, 34)); // WHERE position IN (12, 34)
+$query->filterByPosition(array('min' => 12)); // WHERE position > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$position</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByCreatedAt">
+        <div class="location">at line 404</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByCreatedAt</strong>(mixed $createdAt = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the created_at column</p>
+        <p>Example usage:
+<code>
+$query->filterByCreatedAt('2011-03-14'); // WHERE created<em>at = '2011-03-14'
+$query->filterByCreatedAt('now'); // WHERE created</em>at = '2011-03-14'
+$query->filterByCreatedAt(array('max' => 'yesterday')); // WHERE created_at > '2011-03-13'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$createdAt</td>
+                <td>The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByUpdatedAt">
+        <div class="location">at line 447</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByUpdatedAt</strong>(mixed $updatedAt = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the updated_at column</p>
+        <p>Example usage:
+<code>
+$query->filterByUpdatedAt('2011-03-14'); // WHERE updated<em>at = '2011-03-14'
+$query->filterByUpdatedAt('now'); // WHERE updated</em>at = '2011-03-14'
+$query->filterByUpdatedAt(array('max' => 'yesterday')); // WHERE updated_at > '2011-03-13'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$updatedAt</td>
+                <td>The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByVersion">
+        <div class="location">at line 488</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByVersion</strong>(mixed $version = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the version column</p>
+        <p>Example usage:
+<code>
+$query->filterByVersion(1234); // WHERE version = 1234
+$query->filterByVersion(array(12, 34)); // WHERE version IN (12, 34)
+$query->filterByVersion(array('min' => 12)); // WHERE version > 12
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$version</td>
+                <td>The value to use as filter. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByVersionCreatedAt">
+        <div class="location">at line 531</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByVersionCreatedAt</strong>(mixed $versionCreatedAt = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the version<em>created</em>at column</p>
+        <p>Example usage:
+<code>
+$query->filterByVersionCreatedAt('2011-03-14'); // WHERE version<em>created</em>at = '2011-03-14'
+$query->filterByVersionCreatedAt('now'); // WHERE version<em>created</em>at = '2011-03-14'
+$query->filterByVersionCreatedAt(array('max' => 'yesterday')); // WHERE version<em>created</em>at > '2011-03-13'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$versionCreatedAt</td>
+                <td>The value to use as filter. Values can be integers (unix timestamps), DateTime objects, or strings. Empty strings are treated as NULL. Use scalar values for equality. Use array values for in_array() equivalent. Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByVersionCreatedBy">
+        <div class="location">at line 569</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByVersionCreatedBy</strong>(string $versionCreatedBy = null, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query on the version<em>created</em>by column</p>
+        <p>Example usage:
+<code>
+$query->filterByVersionCreatedBy('fooValue');   // WHERE version<em>created</em>by = 'fooValue'
+$query->filterByVersionCreatedBy('%fooValue%'); // WHERE version<em>created</em>by LIKE '%fooValue%'
+</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$versionCreatedBy</td>
+                <td>The value to use as filter. Accepts wildcards (* and % trigger a LIKE)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterByContent">
+        <div class="location">at line 591</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>filterByContent</strong>(<a href="../../../Thelia/Model/Content.html"><abbr title="Thelia\Model\Content">Content</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $content, string $comparison = null)</code>
+    </h3>
+    <div class="details">
+        <p>Filter the query by a related \Thelia\Model\Content object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/Content.html"><abbr title="Thelia\Model\Content">Content</abbr></a>|<abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$content</td>
+                <td>The related object(s) to use as filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>Operator to use for the column comparison, defaults to Criteria::EQUAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinContent">
+        <div class="location">at line 616</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>joinContent</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a JOIN clause to the query using the Content relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_useContentQuery">
+        <div class="location">at line 651</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentQuery.html"><abbr title="Thelia\Model\ContentQuery">ContentQuery</abbr></a>
+    <strong>useContentQuery</strong>(string $relationAlias = null, string $joinType = Criteria::INNER_JOIN)</code>
+    </h3>
+    <div class="details">
+        <p>Use the Content relation Content object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationAlias</td>
+                <td>optional alias for the relation, to be used as main alias in the secondary query</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinType</td>
+                <td>Accepted values are null, 'left join', 'right join', 'inner join'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentQuery.html"><abbr title="Thelia\Model\ContentQuery">ContentQuery</abbr></a></td>
+            <td>A secondary query class using the current class as primary query</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>useQuery()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_prune">
+        <div class="location">at line 665</div>
+        <code>            public            <a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a>
+    <strong>prune</strong>(<a href="../../../Thelia/Model/ContentVersion.html"><abbr title="Thelia\Model\ContentVersion">ContentVersion</abbr></a> $contentVersion = null)</code>
+    </h3>
+    <div class="details">
+        <p>Exclude object from result</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Thelia/Model/ContentVersion.html"><abbr title="Thelia\Model\ContentVersion">ContentVersion</abbr></a></td>
+                <td>$contentVersion</td>
+                <td>Object to remove from the list of results</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Thelia/Model/ContentVersionQuery.html"><abbr title="Thelia\Model\ContentVersionQuery">ContentVersionQuery</abbr></a></td>
+            <td>The current query, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doDeleteAll">
+        <div class="location">at line 682</div>
+        <code>            public            int
+    <strong>doDeleteAll</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all rows from the content_version table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>the connection to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of affected rows (if supported by underlying database driver).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 719</div>
+        <code>            public            int
+    <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Performs a DELETE on the database, given a ChildContentVersion or Criteria object OR a primary key value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows if supported by native driver or if emulated using Propel.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="PropelException">PropelException</abbr></td>
+                <td>Any exceptions caught during processing will be rethrown wrapped into a PropelException.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderById">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderById</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByVisible">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderByVisible</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByPosition">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderByPosition</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderByCreatedAt</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByUpdatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderByUpdatedAt</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByVersion">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderByVersion</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the version column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByVersionCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderByVersionCreatedAt</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the version<em>created</em>at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderByVersionCreatedBy">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>orderByVersionCreatedBy</strong>($order = Criteria::ASC)</code>
+    </h3>
+    <div class="details">
+        <p>Order by the version<em>created</em>by column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$order</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupById">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupById</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByVisible">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupByVisible</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByPosition">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupByPosition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupByCreatedAt</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByUpdatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupByUpdatedAt</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByVersion">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupByVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the version column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByVersionCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupByVersionCreatedAt</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the version<em>created</em>at column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupByVersionCreatedBy">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>groupByVersionCreatedBy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Group by the version<em>created</em>by column</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leftJoin">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>leftJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoin">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>rightJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoin">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>innerJoin</strong>($relation)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relation</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leftJoinContent">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>leftJoinContent</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a LEFT JOIN clause to the query using the Content relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightJoinContent">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>rightJoinContent</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a RIGHT JOIN clause to the query using the Content relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerJoinContent">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr>
+    <strong>innerJoinContent</strong>($relationAlias = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a INNER JOIN clause to the query using the Content relation</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$relationAlias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersionQuery">ChildContentVersionQuery</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOne">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOne</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion matching the query</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ConnectionInterface ">ConnectionInterface </abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneOrCreate">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneOrCreate</strong>(<abbr title="ConnectionInterface ">ConnectionInterface </abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion matching the query, or a new ChildContentVersion object populated from the query conditions when no match is found</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ConnectionInterface ">ConnectionInterface </abbr></td>
+                <td>$con</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneById">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneById</strong>(<abbr title="int ">int </abbr> $id)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByVisible">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneByVisible</strong>(<abbr title="int ">int </abbr> $visible)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$visible</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByPosition">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$position</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$created_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByUpdatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$updated_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByVersion">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneByVersion</strong>(<abbr title="int ">int </abbr> $version)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the version column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$version</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByVersionCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneByVersionCreatedAt</strong>(<abbr title="string ">string </abbr> $version_created_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the version<em>created</em>at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$version_created_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findOneByVersionCreatedBy">
+        <div class="location">at line 72</div>
+        <code>                        <abbr title="ChildContentVersion">ChildContentVersion</abbr>
+    <strong>findOneByVersionCreatedBy</strong>(<abbr title="string ">string </abbr> $version_created_by)</code>
+    </h3>
+    <div class="details">
+        <p>Return the first ChildContentVersion filtered by the version<em>created</em>by column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$version_created_by</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="ChildContentVersion">ChildContentVersion</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findById">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findById</strong>(<abbr title="int ">int </abbr> $id)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the id column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByVisible">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findByVisible</strong>(<abbr title="int ">int </abbr> $visible)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the visible column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$visible</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByPosition">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findByPosition</strong>(<abbr title="int ">int </abbr> $position)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the position column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$position</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findByCreatedAt</strong>(<abbr title="string ">string </abbr> $created_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the created_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$created_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByUpdatedAt">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findByUpdatedAt</strong>(<abbr title="string ">string </abbr> $updated_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the updated_at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$updated_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByVersion">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findByVersion</strong>(<abbr title="int ">int </abbr> $version)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the version column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="int ">int </abbr></td>
+                <td>$version</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByVersionCreatedAt">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findByVersionCreatedAt</strong>(<abbr title="string ">string </abbr> $version_created_at)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the version<em>created</em>at column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$version_created_at</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findByVersionCreatedBy">
+        <div class="location">at line 72</div>
+        <code>                        array
+    <strong>findByVersionCreatedBy</strong>(<abbr title="string ">string </abbr> $version_created_by)</code>
+    </h3>
+    <div class="details">
+        <p>Return ChildContentVersion objects filtered by the version<em>created</em>by column</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="string ">string </abbr></td>
+                <td>$version_created_by</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

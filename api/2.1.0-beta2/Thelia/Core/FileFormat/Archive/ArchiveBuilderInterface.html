@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Core\FileFormat\Archive\ArchiveBuilderInterface | </title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../traits.html">Traits</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../Thelia/Core/FileFormat/Archive.html">Thelia\Core\FileFormat\Archive</a>\ArchiveBuilderInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>ArchiveBuilderInterface</strong></p>
+
+            <div class="description">
+            <p>Interface ArchiveBuilderInterface</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_addFile">addFile</a>(string $filePath, string $directoryInArchive = &#039;/&#039;, null|string $name = null, bool $isOnline = false)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_addFileFromString">addFileFromString</a>(<abbr title="Thelia\Core\FileFormat\Archive\$content">$content</abbr> $content, <abbr title="Thelia\Core\FileFormat\Archive\$name">$name</abbr> $name, string $directoryInArchive = &#039;/&#039;)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|string
+                </td>
+                <td class="last">
+                    <a href="#method_getFileContent">getFileContent</a>(string $pathToFile)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFile">deleteFile</a>(<abbr title="Thelia\Core\FileFormat\Archive\$pathInArchive">$pathInArchive</abbr> $pathInArchive)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_addDirectory">addDirectory</a>(<abbr title="Thelia\Core\FileFormat\Archive\$directoryPath">$directoryPath</abbr> $directoryPath)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_buildArchiveResponse">buildArchiveResponse</a>($filename)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_loadArchive">loadArchive</a>(string $pathToArchive, bool $isOnline = false)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasFile">hasFile</a>(<abbr title="Thelia\Core\FileFormat\Archive\$pathToFile">$pathToFile</abbr> $pathToFile)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasDirectory">hasDirectory</a>(string $directory)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isAvailable">isAvailable</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_addFile">
+        <div class="location">at line 38</div>
+        <code>            public            <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>addFile</strong>(string $filePath, string $directoryInArchive = &#039;/&#039;, null|string $name = null, bool $isOnline = false)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$filePath</td>
+                <td>It is the path to access the file.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$directoryInArchive</td>
+                <td>This is the directory where it will be stored in the archive</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$name</td>
+                <td>The name of the file in the archive. if it null or empty, it keeps the same name</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isOnline</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Thelia/Exception/FileNotReadableException.html"><abbr title="Thelia\Exception\FileNotReadableException">FileNotReadableException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This methods adds a file in the archive. If the file is local, $isOnline must be false, If the file online, $filePath must be an URL.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addFileFromString">
+        <div class="location">at line 49</div>
+        <code>            public            mixed
+    <strong>addFileFromString</strong>(<abbr title="Thelia\Core\FileFormat\Archive\$content">$content</abbr> $content, <abbr title="Thelia\Core\FileFormat\Archive\$name">$name</abbr> $name, string $directoryInArchive = &#039;/&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\FileFormat\Archive\$content">$content</abbr></td>
+                <td>$content</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Thelia\Core\FileFormat\Archive\$name">$name</abbr></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$directoryInArchive</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method creates a file in the archive with its content</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFileContent">
+        <div class="location">at line 60</div>
+        <code>            public            null|string
+    <strong>getFileContent</strong>(string $pathToFile)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$pathToFile</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Thelia/Exception/FileNotReadableException.html"><abbr title="Thelia\Exception\FileNotReadableException">FileNotReadableException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method returns a file content</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFile">
+        <div class="location">at line 69</div>
+        <code>            public            <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>deleteFile</strong>(<abbr title="Thelia\Core\FileFormat\Archive\$pathInArchive">$pathInArchive</abbr> $pathInArchive)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\FileFormat\Archive\$pathInArchive">$pathInArchive</abbr></td>
+                <td>$pathInArchive</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method deletes a file in the archive</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addDirectory">
+        <div class="location">at line 78</div>
+        <code>            public            <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>addDirectory</strong>(<abbr title="Thelia\Core\FileFormat\Archive\$directoryPath">$directoryPath</abbr> $directoryPath)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\FileFormat\Archive\$directoryPath">$directoryPath</abbr></td>
+                <td>$directoryPath</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method creates an empty directory</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildArchiveResponse">
+        <div class="location">at line 86</div>
+        <code>            public            <a href="../../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+    <strong>buildArchiveResponse</strong>($filename)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$filename</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td>This method return an instance of a Response with the archive as content.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadArchive">
+        <div class="location">at line 97</div>
+        <code>            public            <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>loadArchive</strong>(string $pathToArchive, bool $isOnline = false)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$pathToArchive</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isOnline</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Thelia/Exception/HttpUrlException.html"><abbr title="Thelia\Exception\HttpUrlException">HttpUrlException</abbr></a></td>
+                <td>Loads an archive</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasFile">
+        <div class="location">at line 105</div>
+        <code>            public            bool
+    <strong>hasFile</strong>(<abbr title="Thelia\Core\FileFormat\Archive\$pathToFile">$pathToFile</abbr> $pathToFile)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Core\FileFormat\Archive\$pathToFile">$pathToFile</abbr></td>
+                <td>$pathToFile</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>Checks if the archive has a file</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasDirectory">
+        <div class="location">at line 113</div>
+        <code>            public            bool
+    <strong>hasDirectory</strong>(string $directory)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>Check if the archive has a directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAvailable">
+        <div class="location">at line 120</div>
+        <code>            public            bool
+    <strong>isAvailable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>Returns conditions for archive builder to be available ( loaded libraries )</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

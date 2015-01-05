@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Thelia\Mailer\MailerFactory | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Thelia/Mailer.html">Thelia\Mailer</a>\MailerFactory</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>MailerFactory</strong></p>
+
+            <div class="description">
+            <p>Class MailerFactory</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $dispatcher, <a href="../../Thelia/Core/Template/ParserInterface.html"><abbr title="Thelia\Core\Template\ParserInterface">ParserInterface</abbr></a> $parser)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_send">send</a>(<abbr title="Thelia\Mailer\Swift_Mime_Message">Swift_Mime_Message</abbr> $message, $failedRecipients = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getSwiftMailer">getSwiftMailer</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendEmailToCustomer">sendEmailToCustomer</a>(string $messageCode, <a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer, array $messageParameters = array())
+                    <p>Send a message to the customer.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendEmailToShopManagers">sendEmailToShopManagers</a>(string $messageCode, array $messageParameters = array())
+                    <p>Send a message to the shop managers.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendEmailMessage">sendEmailMessage</a>($messageCode, $from, $to, $messageParameters = array(), $locale = null)
+                    <p>Send a message to the customer.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Swift_Message">Swift_Message</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_createEmailMessage">createEmailMessage</a>($messageCode, $from, $to, $messageParameters = array(), $locale = null)
+                    <p>Create a SwiftMessage instance from a given message code.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $dispatcher, <a href="../../Thelia/Core/Template/ParserInterface.html"><abbr title="Thelia\Core\Template\ParserInterface">ParserInterface</abbr></a> $parser)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr></td>
+                <td>$dispatcher</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Thelia/Core/Template/ParserInterface.html"><abbr title="Thelia\Core\Template\ParserInterface">ParserInterface</abbr></a></td>
+                <td>$parser</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_send">
+        <div class="location">at line 88</div>
+        <code>            public            
+    <strong>send</strong>(<abbr title="Thelia\Mailer\Swift_Mime_Message">Swift_Mime_Message</abbr> $message, $failedRecipients = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Thelia\Mailer\Swift_Mime_Message">Swift_Mime_Message</abbr></td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$failedRecipients</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSwiftMailer">
+        <div class="location">at line 93</div>
+        <code>            public            
+    <strong>getSwiftMailer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendEmailToCustomer">
+        <div class="location">at line 105</div>
+        <code>            public            
+    <strong>sendEmailToCustomer</strong>(string $messageCode, <a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $customer, array $messageParameters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a message to the customer.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$messageCode</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a></td>
+                <td>$customer</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$messageParameters</td>
+                <td>an array of (name => value) parameters that will be available in the message.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendEmailToShopManagers">
+        <div class="location">at line 125</div>
+        <code>            public            
+    <strong>sendEmailToShopManagers</strong>(string $messageCode, array $messageParameters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a message to the shop managers.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$messageCode</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$messageParameters</td>
+                <td>an array of (name => value) parameters that will be available in the message.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendEmailMessage">
+        <div class="location">at line 155</div>
+        <code>            public            
+    <strong>sendEmailMessage</strong>($messageCode, $from, $to, $messageParameters = array(), $locale = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send a message to the customer.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$messageCode</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$from</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$to</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$messageParameters</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createEmailMessage">
+        <div class="location">at line 198</div>
+        <code>            public            <abbr title="Swift_Message">Swift_Message</abbr>
+    <strong>createEmailMessage</strong>($messageCode, $from, $to, $messageParameters = array(), $locale = null)</code>
+    </h3>
+    <div class="details">
+        <p>Create a SwiftMessage instance from a given message code.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$messageCode</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$from</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$to</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$messageParameters</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Swift_Message">Swift_Message</abbr></td>
+            <td>the generated and built message.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

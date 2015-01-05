@@ -367,6 +367,26 @@
             </tr>
                     <tr>
                 <td class="type">
+                    double
+                </td>
+                <td class="last">
+                    <a href="#method_getPostageTax">getPostageTax</a>()
+                    <p>Get the [postage_tax] column value.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Order.html#method_getPostageTax"><abbr title="Thelia\Model\Base\Order">Order</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPostageTaxRuleTitle">getPostageTaxRuleTitle</a>()
+                    <p>Get the [postage<em>tax</em>rule_title] column value.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Order.html#method_getPostageTaxRuleTitle"><abbr title="Thelia\Model\Base\Order">Order</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     int
                 </td>
                 <td class="last">
@@ -594,6 +614,26 @@
                     <p>Set the value of [postage] column.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Order.html#method_setPostage"><abbr title="Thelia\Model\Base\Order">Order</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setPostageTax">setPostageTax</a>(double $v)
+                    <p>Set the value of [postage_tax] column.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Order.html#method_setPostageTax"><abbr title="Thelia\Model\Base\Order">Order</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setPostageTaxRuleTitle">setPostageTaxRuleTitle</a>(string $v)
+                    <p>Set the value of [postage<em>tax</em>rule_title] column.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Thelia/Model/Base/Order.html#method_setPostageTaxRuleTitle"><abbr title="Thelia\Model\Base\Order">Order</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -1570,10 +1610,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <abbr title="Thelia\Model\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setChoosenDeliveryAddress">setChoosenDeliveryAddress</a>(null $choosenDeliveryAddress)
+                    <a href="#method_setChoosenDeliveryAddress">setChoosenDeliveryAddress</a>(<a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a> $choosenDeliveryAddress)
                     <p>
 </p>
                 </td>
@@ -1581,10 +1621,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <abbr title="Thelia\Model\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setDisableVersioning">setDisableVersioning</a>($disableVersioning)
+                    <a href="#method_setDisableVersioning">setDisableVersioning</a>(boolean $disableVersioning)
                     <p>
 </p>
                 </td>
@@ -1603,7 +1643,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    null
+                    <a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getChoosenDeliveryAddress">getChoosenDeliveryAddress</a>()
@@ -1614,10 +1654,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <abbr title="Thelia\Model\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setChoosenInvoiceAddress">setChoosenInvoiceAddress</a>(null $choosenInvoiceAddress)
+                    <a href="#method_setChoosenInvoiceAddress">setChoosenInvoiceAddress</a>(<a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a> $choosenInvoiceAddress)
                     <p>
 </p>
                 </td>
@@ -1625,7 +1665,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    null
+                    <a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_getChoosenInvoiceAddress">getChoosenInvoiceAddress</a>()
@@ -1710,7 +1750,7 @@
                     bool
                 </td>
                 <td class="last">
-                    <a href="#method_isPaid">isPaid</a>()
+                    <a href="#method_isPaid">isPaid</a>(bool $exact = false)
                     <p>Check if the current status of this order is PAID</p>
                 </td>
                 <td></td>
@@ -1790,8 +1830,8 @@
                     bool
                 </td>
                 <td class="last">
-                    <a href="#method_hasStatusHelper">hasStatusHelper</a>(string $statusCode)
-                    <p>Check if the current status of this order is $statusCode</p>
+                    <a href="#method_hasStatusHelper">hasStatusHelper</a>(string|array $statusCode)
+                    <p>Check if the current status of this order is $statusCode or, if $statusCode is an array, if the current status is in the $statusCode array.</p>
                 </td>
                 <td></td>
             </tr>
@@ -1801,7 +1841,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_applyDefaultValues">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_applyDefaultValues"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 322</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_applyDefaultValues"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 335</div>
         <code>            public            
     <strong>applyDefaultValues</strong>()</code>
     </h3>
@@ -1826,7 +1866,7 @@ equivalent initialization method).</p>
     </div>
 
                 <h3 id="method___construct">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___construct"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 331</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___construct"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 345</div>
         <code>            public            
     <strong>__construct</strong>()</code>
     </h3>
@@ -1851,7 +1891,7 @@ equivalent initialization method).</p>
     </div>
 
                 <h3 id="method_isModified">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isModified"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 341</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isModified"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 355</div>
         <code>            public            boolean
     <strong>isModified</strong>()</code>
     </h3>
@@ -1876,7 +1916,7 @@ equivalent initialization method).</p>
     </div>
 
                 <h3 id="method_isColumnModified">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isColumnModified"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 352</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isColumnModified"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 366</div>
         <code>            public            boolean
     <strong>isColumnModified</strong>(string $col)</code>
     </h3>
@@ -1911,7 +1951,7 @@ equivalent initialization method).</p>
     </div>
 
                 <h3 id="method_getModifiedColumns">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getModifiedColumns"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 361</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getModifiedColumns"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 375</div>
         <code>            public            array
     <strong>getModifiedColumns</strong>()</code>
     </h3>
@@ -1936,7 +1976,7 @@ equivalent initialization method).</p>
     </div>
 
                 <h3 id="method_isNew">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isNew"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 373</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isNew"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 387</div>
         <code>            public            boolean
     <strong>isNew</strong>()</code>
     </h3>
@@ -1962,7 +2002,7 @@ and then saved.</p>
     </div>
 
                 <h3 id="method_setNew">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setNew"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 384</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setNew"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 398</div>
         <code>            public            
     <strong>setNew</strong>(boolean $b)</code>
     </h3>
@@ -1988,7 +2028,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_isDeleted">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isDeleted"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 393</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isDeleted"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 407</div>
         <code>            public            boolean
     <strong>isDeleted</strong>()</code>
     </h3>
@@ -2013,7 +2053,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDeleted">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeleted"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 403</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeleted"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 417</div>
         <code>            public            void
     <strong>setDeleted</strong>(boolean $b)</code>
     </h3>
@@ -2049,7 +2089,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_resetModified">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetModified"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 413</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetModified"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 427</div>
         <code>            public            void
     <strong>resetModified</strong>(string $col = null)</code>
     </h3>
@@ -2085,7 +2125,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_equals">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_equals"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 432</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_equals"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 446</div>
         <code>            public            boolean
     <strong>equals</strong>(mixed $obj)</code>
     </h3>
@@ -2121,7 +2161,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hashCode">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hashCode"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 457</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hashCode"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 471</div>
         <code>            public            int
     <strong>hashCode</strong>()</code>
     </h3>
@@ -2145,7 +2185,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumns">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVirtualColumns"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 471</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVirtualColumns"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 485</div>
         <code>            public            array
     <strong>getVirtualColumns</strong>()</code>
     </h3>
@@ -2171,7 +2211,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hasVirtualColumn">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hasVirtualColumn"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 482</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hasVirtualColumn"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 496</div>
         <code>            public            boolean
     <strong>hasVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -2207,7 +2247,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVirtualColumn">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVirtualColumn"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 495</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVirtualColumn"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 509</div>
         <code>            public            mixed
     <strong>getVirtualColumn</strong>(string $name)</code>
     </h3>
@@ -2253,7 +2293,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setVirtualColumn">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVirtualColumn"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 512</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVirtualColumn"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 526</div>
         <code>            public            <a href="../../Thelia/Model/Base/Order.html"><abbr title="Thelia\Model\Base\Order">Order</abbr></a>
     <strong>setVirtualColumn</strong>(string $name, mixed $value)</code>
     </h3>
@@ -2293,7 +2333,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_importFrom">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_importFrom"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 544</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_importFrom"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 558</div>
         <code>            public            <a href="../../Thelia/Model/Base/Order.html"><abbr title="Thelia\Model\Base\Order">Order</abbr></a>
     <strong>importFrom</strong>(mixed $parser, string $data)</code>
     </h3>
@@ -2333,7 +2373,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_exportTo">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_exportTo"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 567</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_exportTo"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 581</div>
         <code>            public            string
     <strong>exportTo</strong>(mixed $parser, boolean $includeLazyLoadColumns = true)</code>
     </h3>
@@ -2373,7 +2413,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method___sleep">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___sleep"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 580</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___sleep"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 594</div>
         <code>            public            
     <strong>__sleep</strong>()</code>
     </h3>
@@ -2389,7 +2429,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 592</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 606</div>
         <code>            public            int
     <strong>getId</strong>()</code>
     </h3>
@@ -2415,7 +2455,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 603</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 617</div>
         <code>            public            string
     <strong>getRef</strong>()</code>
     </h3>
@@ -2441,7 +2481,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCustomerId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCustomerId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 614</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCustomerId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 628</div>
         <code>            public            int
     <strong>getCustomerId</strong>()</code>
     </h3>
@@ -2467,7 +2507,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getInvoiceOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 625</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 639</div>
         <code>            public            int
     <strong>getInvoiceOrderAddressId</strong>()</code>
     </h3>
@@ -2493,7 +2533,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getDeliveryOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 636</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 650</div>
         <code>            public            int
     <strong>getDeliveryOrderAddressId</strong>()</code>
     </h3>
@@ -2519,7 +2559,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getInvoiceDate">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getInvoiceDate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 653</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getInvoiceDate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 667</div>
         <code>            public            mixed
     <strong>getInvoiceDate</strong>(string $format = NULL)</code>
     </h3>
@@ -2566,7 +2606,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCurrencyId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCurrencyId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 667</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCurrencyId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 681</div>
         <code>            public            int
     <strong>getCurrencyId</strong>()</code>
     </h3>
@@ -2592,7 +2632,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCurrencyRate">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCurrencyRate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 678</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCurrencyRate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 692</div>
         <code>            public            double
     <strong>getCurrencyRate</strong>()</code>
     </h3>
@@ -2618,7 +2658,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getTransactionRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getTransactionRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 689</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getTransactionRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 703</div>
         <code>            public            string
     <strong>getTransactionRef</strong>()</code>
     </h3>
@@ -2643,7 +2683,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getDeliveryRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDeliveryRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 700</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDeliveryRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 714</div>
         <code>            public            string
     <strong>getDeliveryRef</strong>()</code>
     </h3>
@@ -2668,7 +2708,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getInvoiceRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getInvoiceRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 711</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getInvoiceRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 725</div>
         <code>            public            string
     <strong>getInvoiceRef</strong>()</code>
     </h3>
@@ -2693,7 +2733,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getDiscount">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDiscount"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 722</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDiscount"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 736</div>
         <code>            public            double
     <strong>getDiscount</strong>()</code>
     </h3>
@@ -2719,7 +2759,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getPostage">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPostage"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 733</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPostage"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 747</div>
         <code>            public            double
     <strong>getPostage</strong>()</code>
     </h3>
@@ -2744,8 +2784,60 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
+                <h3 id="method_getPostageTax">
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPostageTax"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 758</div>
+        <code>            public            double
+    <strong>getPostageTax</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the [postage_tax] column value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>double</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPostageTaxRuleTitle">
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPostageTaxRuleTitle"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 769</div>
+        <code>            public            string
+    <strong>getPostageTaxRuleTitle</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the [postage<em>tax</em>rule_title] column value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_getPaymentModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 744</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 780</div>
         <code>            public            int
     <strong>getPaymentModuleId</strong>()</code>
     </h3>
@@ -2771,7 +2863,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getDeliveryModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 755</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 791</div>
         <code>            public            int
     <strong>getDeliveryModuleId</strong>()</code>
     </h3>
@@ -2797,7 +2889,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getStatusId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getStatusId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 766</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getStatusId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 802</div>
         <code>            public            int
     <strong>getStatusId</strong>()</code>
     </h3>
@@ -2823,7 +2915,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getLangId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLangId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 777</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLangId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 813</div>
         <code>            public            int
     <strong>getLangId</strong>()</code>
     </h3>
@@ -2849,7 +2941,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCartId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCartId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 788</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCartId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 824</div>
         <code>            public            int
     <strong>getCartId</strong>()</code>
     </h3>
@@ -2875,7 +2967,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 805</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 841</div>
         <code>            public            mixed
     <strong>getCreatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -2922,7 +3014,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getUpdatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getUpdatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 825</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getUpdatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 861</div>
         <code>            public            mixed
     <strong>getUpdatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -2969,7 +3061,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 839</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 875</div>
         <code>            public            int
     <strong>getVersion</strong>()</code>
     </h3>
@@ -2995,7 +3087,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVersionCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVersionCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 856</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVersionCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 892</div>
         <code>            public            mixed
     <strong>getVersionCreatedAt</strong>(string $format = NULL)</code>
     </h3>
@@ -3042,7 +3134,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_getVersionCreatedBy">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVersionCreatedBy"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 870</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getVersionCreatedBy"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 906</div>
         <code>            public            string
     <strong>getVersionCreatedBy</strong>()</code>
     </h3>
@@ -3068,7 +3160,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 882</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 918</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setId</strong>(int $v)</code>
     </h3>
@@ -3103,7 +3195,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 903</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 939</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setRef</strong>(string $v)</code>
     </h3>
@@ -3138,7 +3230,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCustomerId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCustomerId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 924</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCustomerId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 960</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCustomerId</strong>(int $v)</code>
     </h3>
@@ -3173,7 +3265,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setInvoiceOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 949</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 985</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setInvoiceOrderAddressId</strong>(int $v)</code>
     </h3>
@@ -3208,7 +3300,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDeliveryOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 974</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1010</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setDeliveryOrderAddressId</strong>(int $v)</code>
     </h3>
@@ -3243,7 +3335,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setInvoiceDate">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setInvoiceDate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1000</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setInvoiceDate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1036</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setInvoiceDate</strong>(mixed $v)</code>
     </h3>
@@ -3278,7 +3370,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCurrencyId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCurrencyId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1020</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCurrencyId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1056</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCurrencyId</strong>(int $v)</code>
     </h3>
@@ -3313,7 +3405,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCurrencyRate">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCurrencyRate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1045</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCurrencyRate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1081</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCurrencyRate</strong>(double $v)</code>
     </h3>
@@ -3348,7 +3440,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setTransactionRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setTransactionRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1066</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setTransactionRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1102</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setTransactionRef</strong>(string $v)</code>
     </h3>
@@ -3382,7 +3474,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDeliveryRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeliveryRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1087</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeliveryRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1123</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setDeliveryRef</strong>(string $v)</code>
     </h3>
@@ -3416,7 +3508,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setInvoiceRef">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setInvoiceRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1108</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setInvoiceRef"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1144</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setInvoiceRef</strong>(string $v)</code>
     </h3>
@@ -3450,7 +3542,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDiscount">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDiscount"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1129</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDiscount"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1165</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setDiscount</strong>(double $v)</code>
     </h3>
@@ -3485,7 +3577,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setPostage">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPostage"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1150</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPostage"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1186</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setPostage</strong>(double $v)</code>
     </h3>
@@ -3519,8 +3611,78 @@ by Propel-generated children and objects.</p>
                     </div>
     </div>
 
+                <h3 id="method_setPostageTax">
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPostageTax"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1207</div>
+        <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
+    <strong>setPostageTax</strong>(double $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of [postage_tax] column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>double</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPostageTaxRuleTitle">
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPostageTaxRuleTitle"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1228</div>
+        <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
+    <strong>setPostageTaxRuleTitle</strong>(string $v)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value of [postage<em>tax</em>rule_title] column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setPaymentModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1171</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1249</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setPaymentModuleId</strong>(int $v)</code>
     </h3>
@@ -3555,7 +3717,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setDeliveryModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1196</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1274</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setDeliveryModuleId</strong>(int $v)</code>
     </h3>
@@ -3590,7 +3752,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setStatusId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setStatusId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1221</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setStatusId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1299</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setStatusId</strong>(int $v)</code>
     </h3>
@@ -3625,7 +3787,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setLangId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setLangId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1246</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setLangId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1324</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setLangId</strong>(int $v)</code>
     </h3>
@@ -3660,7 +3822,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCartId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCartId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1271</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCartId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1349</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCartId</strong>(int $v)</code>
     </h3>
@@ -3695,7 +3857,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1297</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1375</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCreatedAt</strong>(mixed $v)</code>
     </h3>
@@ -3730,7 +3892,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setUpdatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setUpdatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1318</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setUpdatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1396</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setUpdatedAt</strong>(mixed $v)</code>
     </h3>
@@ -3765,7 +3927,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1338</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1416</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setVersion</strong>(int $v)</code>
     </h3>
@@ -3800,7 +3962,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setVersionCreatedAt">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVersionCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1360</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVersionCreatedAt"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1438</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setVersionCreatedAt</strong>(mixed $v)</code>
     </h3>
@@ -3835,7 +3997,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_setVersionCreatedBy">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVersionCreatedBy"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1380</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setVersionCreatedBy"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1458</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setVersionCreatedBy</strong>(string $v)</code>
     </h3>
@@ -3870,7 +4032,7 @@ by Propel-generated children and objects.</p>
     </div>
 
                 <h3 id="method_hasOnlyDefaultValues">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hasOnlyDefaultValues"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1403</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hasOnlyDefaultValues"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1481</div>
         <code>            public            boolean
     <strong>hasOnlyDefaultValues</strong>()</code>
     </h3>
@@ -3895,7 +4057,7 @@ modified <em>and</em> has some values set which are non-default.</p>
     </div>
 
                 <h3 id="method_hydrate">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hydrate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1431</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_hydrate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1513</div>
         <code>            public            int
     <strong>hydrate</strong>(array $row, int $startcol, boolean $rehydrate = false, string $indexType = TableMap::TYPE_NUM)</code>
     </h3>
@@ -3959,7 +4121,7 @@ more tables.</p>
     </div>
 
                 <h3 id="method_ensureConsistency">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_ensureConsistency"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1544</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_ensureConsistency"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1632</div>
         <code>            public            
     <strong>ensureConsistency</strong>()</code>
     </h3>
@@ -3990,7 +4152,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_reload">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_reload"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1585</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_reload"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1673</div>
         <code>            public            void
     <strong>reload</strong>(boolean $deep = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4042,7 +4204,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_delete"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1639</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_delete"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1727</div>
         <code>            public            void
     <strong>delete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4102,7 +4264,7 @@ in case your model changes.</p>
     </div>
 
                 <h3 id="method_save">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_save"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1681</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_save"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 1769</div>
         <code>            public            int
     <strong>save</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4159,7 +4321,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByName">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getByName"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2110</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getByName"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2210</div>
         <code>            public            mixed
     <strong>getByName</strong>(string $name, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -4199,7 +4361,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_getByPosition">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getByPosition"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2125</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getByPosition"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2225</div>
         <code>            public            mixed
     <strong>getByPosition</strong>(int $pos)</code>
     </h3>
@@ -4233,7 +4395,7 @@ single transaction.</p>
     </div>
 
                 <h3 id="method_toArray">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_toArray"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2218</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_toArray"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2324</div>
         <code>            public            array
     <strong>toArray</strong>(string $keyType = TableMap::TYPE_PHPNAME, boolean $includeLazyLoadColumns = true, array $alreadyDumpedObjects = array(), boolean $includeForeignObjects = false)</code>
     </h3>
@@ -4283,7 +4445,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByName">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setByName"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2308</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setByName"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2416</div>
         <code>            public            void
     <strong>setByName</strong>(string $name, mixed $value, string $type = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -4330,7 +4492,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_setByPosition">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setByPosition"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2323</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setByPosition"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2431</div>
         <code>            public            void
     <strong>setByPosition</strong>(int $pos, mixed $value)</code>
     </h3>
@@ -4370,7 +4532,7 @@ type constants.</p>
     </div>
 
                 <h3 id="method_fromArray">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_fromArray"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2415</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_fromArray"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2529</div>
         <code>            public            void
     <strong>fromArray</strong>(array $arr, string $keyType = TableMap::TYPE_PHPNAME)</code>
     </h3>
@@ -4418,7 +4580,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildCriteria">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_buildCriteria"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2449</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_buildCriteria"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2565</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildCriteria</strong>()</code>
     </h3>
@@ -4443,7 +4605,7 @@ The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>
     </div>
 
                 <h3 id="method_buildPkeyCriteria">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_buildPkeyCriteria"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2488</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_buildPkeyCriteria"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2606</div>
         <code>            public            <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
     <strong>buildPkeyCriteria</strong>()</code>
     </h3>
@@ -4468,7 +4630,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_getPrimaryKey">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPrimaryKey"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2500</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getPrimaryKey"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2618</div>
         <code>            public            int
     <strong>getPrimaryKey</strong>()</code>
     </h3>
@@ -4494,7 +4656,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_setPrimaryKey">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPrimaryKey"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2511</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setPrimaryKey"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2629</div>
         <code>            public            void
     <strong>setPrimaryKey</strong>(int $key)</code>
     </h3>
@@ -4530,7 +4692,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_isPrimaryKeyNull">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isPrimaryKeyNull"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2520</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isPrimaryKeyNull"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2638</div>
         <code>            public            boolean
     <strong>isPrimaryKeyNull</strong>()</code>
     </h3>
@@ -4556,7 +4718,7 @@ of whether or not they have been modified.</p>
     </div>
 
                 <h3 id="method_copyInto">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_copyInto"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2537</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_copyInto"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2655</div>
         <code>            public            
     <strong>copyInto</strong>(object $copyObj, boolean $deepCopy = false, boolean $makeNew = true)</code>
     </h3>
@@ -4602,7 +4764,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_copy">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_copy"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2605</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_copy"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2725</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>copy</strong>(boolean $deepCopy = false)</code>
     </h3>
@@ -4650,7 +4812,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setCurrency">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCurrency"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2622</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCurrency"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2742</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCurrency</strong>(<a href="../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a> $v = null)</code>
     </h3>
@@ -4696,7 +4858,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getCurrency">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCurrency"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2650</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCurrency"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2770</div>
         <code>            public            <a href="../../Thelia/Model/Currency.html"><abbr title="Thelia\Model\Currency">Currency</abbr></a>
     <strong>getCurrency</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4741,7 +4903,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setCustomer">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCustomer"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2673</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCustomer"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2793</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCustomer</strong>(<a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a> $v = null)</code>
     </h3>
@@ -4787,7 +4949,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getCustomer">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCustomer"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2701</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCustomer"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2821</div>
         <code>            public            <a href="../../Thelia/Model/Customer.html"><abbr title="Thelia\Model\Customer">Customer</abbr></a>
     <strong>getCustomer</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4832,7 +4994,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setOrderAddressRelatedByInvoiceOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderAddressRelatedByInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2724</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderAddressRelatedByInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2844</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setOrderAddressRelatedByInvoiceOrderAddressId</strong>(<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a> $v = null)</code>
     </h3>
@@ -4878,7 +5040,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getOrderAddressRelatedByInvoiceOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderAddressRelatedByInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2752</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderAddressRelatedByInvoiceOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2872</div>
         <code>            public            <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>getOrderAddressRelatedByInvoiceOrderAddressId</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -4923,7 +5085,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setOrderAddressRelatedByDeliveryOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderAddressRelatedByDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2775</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderAddressRelatedByDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2895</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setOrderAddressRelatedByDeliveryOrderAddressId</strong>(<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a> $v = null)</code>
     </h3>
@@ -4969,7 +5131,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getOrderAddressRelatedByDeliveryOrderAddressId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderAddressRelatedByDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2803</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderAddressRelatedByDeliveryOrderAddressId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2923</div>
         <code>            public            <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>
     <strong>getOrderAddressRelatedByDeliveryOrderAddressId</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5014,7 +5176,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setOrderStatus">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderStatus"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2826</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderStatus"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2946</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setOrderStatus</strong>(<a href="../../Thelia/Model/OrderStatus.html"><abbr title="Thelia\Model\OrderStatus">OrderStatus</abbr></a> $v = null)</code>
     </h3>
@@ -5060,7 +5222,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getOrderStatus">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderStatus"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2854</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderStatus"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2974</div>
         <code>            public            <a href="../../Thelia/Model/OrderStatus.html"><abbr title="Thelia\Model\OrderStatus">OrderStatus</abbr></a>
     <strong>getOrderStatus</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5105,7 +5267,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setModuleRelatedByPaymentModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setModuleRelatedByPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2877</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setModuleRelatedByPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2997</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setModuleRelatedByPaymentModuleId</strong>(<a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a> $v = null)</code>
     </h3>
@@ -5151,7 +5313,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getModuleRelatedByPaymentModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getModuleRelatedByPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2905</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getModuleRelatedByPaymentModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3025</div>
         <code>            public            <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a>
     <strong>getModuleRelatedByPaymentModuleId</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5196,7 +5358,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setModuleRelatedByDeliveryModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setModuleRelatedByDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2928</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setModuleRelatedByDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3048</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setModuleRelatedByDeliveryModuleId</strong>(<a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a> $v = null)</code>
     </h3>
@@ -5242,7 +5404,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getModuleRelatedByDeliveryModuleId">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getModuleRelatedByDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2956</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getModuleRelatedByDeliveryModuleId"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3076</div>
         <code>            public            <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a>
     <strong>getModuleRelatedByDeliveryModuleId</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5287,7 +5449,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setLang">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setLang"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 2979</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setLang"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3099</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setLang</strong>(<a href="../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a> $v = null)</code>
     </h3>
@@ -5333,7 +5495,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getLang">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLang"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3007</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLang"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3127</div>
         <code>            public            <a href="../../Thelia/Model/Lang.html"><abbr title="Thelia\Model\Lang">Lang</abbr></a>
     <strong>getLang</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5378,7 +5540,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_setCart">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCart"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3030</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setCart"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3150</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setCart</strong>(<a href="../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a> $v = null)</code>
     </h3>
@@ -5424,7 +5586,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_getCart">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCart"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3058</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getCart"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3178</div>
         <code>            public            <a href="../../Thelia/Model/Cart.html"><abbr title="Thelia\Model\Cart">Cart</abbr></a>
     <strong>getCart</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5469,7 +5631,7 @@ objects.</p>
     </div>
 
                 <h3 id="method_initRelation">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initRelation"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3083</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initRelation"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3203</div>
         <code>            public            void
     <strong>initRelation</strong>(string $relationName)</code>
     </h3>
@@ -5505,7 +5667,7 @@ that wouldn't work when StandardEnglishPluralizer is used.</p>
     </div>
 
                 <h3 id="method_clearOrderProducts">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3105</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3225</div>
         <code>            public            void
     <strong>clearOrderProducts</strong>()</code>
     </h3>
@@ -5540,7 +5702,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialOrderProducts">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetPartialOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3113</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetPartialOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3233</div>
         <code>            public            
     <strong>resetPartialOrderProducts</strong>($v = true)</code>
     </h3>
@@ -5567,7 +5729,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initOrderProducts">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3130</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3250</div>
         <code>            public            void
     <strong>initOrderProducts</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -5604,7 +5766,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getOrderProducts">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3153</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3273</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/OrderProduct.html"><abbr title="Thelia\Model\OrderProduct">OrderProduct</abbr></a>[]
     <strong>getOrderProducts</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5657,7 +5819,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setOrderProducts">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3209</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3329</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setOrderProducts</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $orderProducts, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5697,7 +5859,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countOrderProducts">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_countOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3240</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_countOrderProducts"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3360</div>
         <code>            public            int
     <strong>countOrderProducts</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5755,7 +5917,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addOrderProduct">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addOrderProduct"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3272</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addOrderProduct"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3392</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>addOrderProduct</strong>(<a href="../../Thelia/Model/OrderProduct.html"><abbr title="Thelia\Model\OrderProduct">OrderProduct</abbr></a> $l)</code>
     </h3>
@@ -5790,7 +5952,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeOrderProduct">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_removeOrderProduct"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3299</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_removeOrderProduct"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3419</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>removeOrderProduct</strong>(<a href="../../Thelia/Model/Base/OrderProduct.html"><abbr title="Thelia\Model\Base\OrderProduct">OrderProduct</abbr></a> $orderProduct)</code>
     </h3>
@@ -5826,7 +5988,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_clearOrderCoupons">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3323</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3443</div>
         <code>            public            void
     <strong>clearOrderCoupons</strong>()</code>
     </h3>
@@ -5861,7 +6023,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialOrderCoupons">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetPartialOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3331</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetPartialOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3451</div>
         <code>            public            
     <strong>resetPartialOrderCoupons</strong>($v = true)</code>
     </h3>
@@ -5888,7 +6050,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initOrderCoupons">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3348</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3468</div>
         <code>            public            void
     <strong>initOrderCoupons</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -5925,7 +6087,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getOrderCoupons">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3371</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3491</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/OrderCoupon.html"><abbr title="Thelia\Model\OrderCoupon">OrderCoupon</abbr></a>[]
     <strong>getOrderCoupons</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -5978,7 +6140,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setOrderCoupons">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3427</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3547</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setOrderCoupons</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $orderCoupons, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6018,7 +6180,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countOrderCoupons">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_countOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3458</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_countOrderCoupons"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3578</div>
         <code>            public            int
     <strong>countOrderCoupons</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6076,7 +6238,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addOrderCoupon">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addOrderCoupon"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3490</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addOrderCoupon"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3610</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>addOrderCoupon</strong>(<a href="../../Thelia/Model/OrderCoupon.html"><abbr title="Thelia\Model\OrderCoupon">OrderCoupon</abbr></a> $l)</code>
     </h3>
@@ -6111,7 +6273,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeOrderCoupon">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_removeOrderCoupon"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3517</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_removeOrderCoupon"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3637</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>removeOrderCoupon</strong>(<a href="../../Thelia/Model/Base/OrderCoupon.html"><abbr title="Thelia\Model\Base\OrderCoupon">OrderCoupon</abbr></a> $orderCoupon)</code>
     </h3>
@@ -6147,7 +6309,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_clearOrderVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3541</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3661</div>
         <code>            public            void
     <strong>clearOrderVersions</strong>()</code>
     </h3>
@@ -6182,7 +6344,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_resetPartialOrderVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetPartialOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3549</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_resetPartialOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3669</div>
         <code>            public            
     <strong>resetPartialOrderVersions</strong>($v = true)</code>
     </h3>
@@ -6209,7 +6371,7 @@ them to be refetched by subsequent calls to accessor method.</p>
     </div>
 
                 <h3 id="method_initOrderVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3566</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_initOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3686</div>
         <code>            public            void
     <strong>initOrderVersions</strong>(boolean $overrideExisting = true)</code>
     </h3>
@@ -6246,7 +6408,7 @@ to your application -- for example, setting the initial array to the values stor
     </div>
 
                 <h3 id="method_getOrderVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3589</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3709</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\Collection">Collection</abbr>|<a href="../../Thelia/Model/OrderVersion.html"><abbr title="Thelia\Model\OrderVersion">OrderVersion</abbr></a>[]
     <strong>getOrderVersions</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6299,7 +6461,7 @@ an empty collection or the current collection; the criteria is ignored on a new 
     </div>
 
                 <h3 id="method_setOrderVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3645</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_setOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3765</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>setOrderVersions</strong>(<abbr title="Propel\Runtime\Collection\Collection">Collection</abbr> $orderVersions, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6339,7 +6501,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_countOrderVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_countOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3679</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_countOrderVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3799</div>
         <code>            public            int
     <strong>countOrderVersions</strong>(<abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr> $criteria = null, boolean $distinct = false, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6397,7 +6559,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_addOrderVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addOrderVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3711</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addOrderVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3831</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>addOrderVersion</strong>(<a href="../../Thelia/Model/OrderVersion.html"><abbr title="Thelia\Model\OrderVersion">OrderVersion</abbr></a> $l)</code>
     </h3>
@@ -6432,7 +6594,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_removeOrderVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_removeOrderVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3738</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_removeOrderVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3858</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>removeOrderVersion</strong>(<a href="../../Thelia/Model/Base/OrderVersion.html"><abbr title="Thelia\Model\Base\OrderVersion">OrderVersion</abbr></a> $orderVersion)</code>
     </h3>
@@ -6468,7 +6630,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_clear">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clear"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3756</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clear"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3876</div>
         <code>            public            
     <strong>clear</strong>()</code>
     </h3>
@@ -6484,7 +6646,7 @@ and new objects from the given Propel collection.</p>
     </div>
 
                 <h3 id="method_clearAllReferences">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearAllReferences"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3798</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_clearAllReferences"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3920</div>
         <code>            public            
     <strong>clearAllReferences</strong>(boolean $deep = false)</code>
     </h3>
@@ -6511,7 +6673,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___toString"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3837</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___toString"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3959</div>
         <code>            public            string
     <strong>__toString</strong>()</code>
     </h3>
@@ -6537,7 +6699,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_keepUpdateDateUnchanged">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_keepUpdateDateUnchanged"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3849</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_keepUpdateDateUnchanged"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3971</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>keepUpdateDateUnchanged</strong>()</code>
     </h3>
@@ -6562,7 +6724,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_enforceVersioning">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_enforceVersioning"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3863</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_enforceVersioning"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3985</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>enforceVersioning</strong>()</code>
     </h3>
@@ -6588,7 +6750,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_isVersioningNecessary">
-        <div class="location">at line 47</div>
+        <div class="location">at line 50</div>
         <code>            public            boolean
     <strong>isVersioningNecessary</strong>($con = null)</code>
     </h3>
@@ -6625,7 +6787,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_addVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3903</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_addVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4025</div>
         <code>            public            <a href="../../Thelia/Model/OrderVersion.html"><abbr title="Thelia\Model\OrderVersion">OrderVersion</abbr></a>
     <strong>addVersion</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6660,7 +6822,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_toVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_toVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3948</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_toVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4072</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>toVersion</strong>(integer $versionNumber, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6700,7 +6862,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_populateFromVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_populateFromVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 3968</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_populateFromVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4092</div>
         <code>            public            <a href="../../Thelia/Model/Order.html"><abbr title="Thelia\Model\Order">Order</abbr></a>
     <strong>populateFromVersion</strong>(<a href="../../Thelia/Model/OrderVersion.html"><abbr title="Thelia\Model\OrderVersion">OrderVersion</abbr></a> $version, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $loadedObjects = array())</code>
     </h3>
@@ -6745,7 +6907,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getLastVersionNumber">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLastVersionNumber"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4019</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLastVersionNumber"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4145</div>
         <code>            public            integer
     <strong>getLastVersionNumber</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6781,7 +6943,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_isLastVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isLastVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4039</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_isLastVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4165</div>
         <code>            public            Boolean
     <strong>isLastVersion</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6817,7 +6979,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getOneVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOneVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4052</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getOneVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4178</div>
         <code>            public            <a href="../../Thelia/Model/OrderVersion.html"><abbr title="Thelia\Model\OrderVersion">OrderVersion</abbr></a>
     <strong>getOneVersion</strong>(integer $versionNumber, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6857,7 +7019,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_getAllVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getAllVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4067</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getAllVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4193</div>
         <code>            public            <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
     <strong>getAllVersions</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -6892,7 +7054,7 @@ when using Propel in certain daemon or large-volume/high-memory operations.</p>
     </div>
 
                 <h3 id="method_compareVersion">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_compareVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4092</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_compareVersion"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4218</div>
         <code>            public            array
     <strong>compareVersion</strong>(integer $versionNumber, string $keys = &#039;columns&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $ignoredColumns = array())</code>
     </h3>
@@ -6948,7 +7110,7 @@ print_r($book->compareVersion(1));
     </div>
 
                 <h3 id="method_compareVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_compareVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4118</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_compareVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4244</div>
         <code>            public            array
     <strong>compareVersions</strong>(integer $fromVersionNumber, integer $toVersionNumber, string $keys = &#039;columns&#039;, <abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, array $ignoredColumns = array())</code>
     </h3>
@@ -7010,7 +7172,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_getLastVersions">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLastVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4181</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_getLastVersions"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4307</div>
         <code>            public            <abbr title="Thelia\Model\Base\PropelCollection">PropelCollection</abbr>|array
     <strong>getLastVersions</strong>($number = 10, $criteria = null, $con = null)</code>
     </h3>
@@ -7058,7 +7220,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_preSave">
-        <div class="location">at line 82</div>
+        <div class="location">at line 86</div>
         <code>            public            boolean
     <strong>preSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7095,7 +7257,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_postSave">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_postSave"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4203</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_postSave"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4329</div>
         <code>            public            
     <strong>postSave</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7122,7 +7284,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_preInsert">
-        <div class="location">at line 95</div>
+        <div class="location">at line 99</div>
         <code>            public            boolean
     <strong>preInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7159,7 +7321,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_postInsert">
-        <div class="location">at line 105</div>
+        <div class="location">at line 109</div>
         <code>            public            
     <strong>postInsert</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7186,7 +7348,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_preUpdate">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_preUpdate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4232</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_preUpdate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4358</div>
         <code>            public            boolean
     <strong>preUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7223,7 +7385,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_postUpdate">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_postUpdate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4241</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_postUpdate"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4367</div>
         <code>            public            
     <strong>postUpdate</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7250,7 +7412,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_preDelete">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_preDelete"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4251</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_preDelete"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4377</div>
         <code>            public            boolean
     <strong>preDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7287,7 +7449,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method_postDelete">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_postDelete"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4260</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method_postDelete"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4386</div>
         <code>            public            
     <strong>postDelete</strong>(<abbr title="Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
     </h3>
@@ -7314,7 +7476,7 @@ print_r($book->compareVersions(1, 2));
     </div>
 
                 <h3 id="method___call">
-        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___call"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4277</div>
+        <div class="location">in <a href="../../Thelia/Model/Base/Order.html#method___call"><abbr title="Thelia\Model\Base\Order">Order</abbr></a> at line 4403</div>
         <code>            public            array|string
     <strong>__call</strong>(string $name, mixed $params)</code>
     </h3>
@@ -7357,9 +7519,9 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_setChoosenDeliveryAddress">
-        <div class="location">at line 25</div>
-        <code>            public            
-    <strong>setChoosenDeliveryAddress</strong>(null $choosenDeliveryAddress)</code>
+        <div class="location">at line 27</div>
+        <code>            public            <abbr title="Thelia\Model\$this">$this</abbr>
+    <strong>setChoosenDeliveryAddress</strong>(<a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a> $choosenDeliveryAddress)</code>
     </h3>
     <div class="details">
         <p>
@@ -7371,7 +7533,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
 
                     <table>
                     <tr>
-                <td>null</td>
+                <td><a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a></td>
                 <td>$choosenDeliveryAddress</td>
                 <td>
 </td>
@@ -7379,15 +7541,25 @@ Allows to define default __call() behavior if you overwrite __call()</p>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_setDisableVersioning">
-        <div class="location">at line 35</div>
-        <code>            public            
-    <strong>setDisableVersioning</strong>($disableVersioning)</code>
+        <div class="location">at line 38</div>
+        <code>            public            <abbr title="Thelia\Model\$this">$this</abbr>
+    <strong>setDisableVersioning</strong>(boolean $disableVersioning)</code>
     </h3>
     <div class="details">
         <p>
@@ -7399,7 +7571,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
 
                     <table>
                     <tr>
-                <td></td>
+                <td>boolean</td>
                 <td>$disableVersioning</td>
                 <td>
 </td>
@@ -7407,13 +7579,23 @@ Allows to define default __call() behavior if you overwrite __call()</p>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_isVersioningDisable">
-        <div class="location">at line 42</div>
+        <div class="location">at line 45</div>
         <code>            public            
     <strong>isVersioningDisable</strong>()</code>
     </h3>
@@ -7430,8 +7612,8 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_getChoosenDeliveryAddress">
-        <div class="location">at line 59</div>
-        <code>            public            null
+        <div class="location">at line 62</div>
+        <code>            public            <a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>
     <strong>getChoosenDeliveryAddress</strong>()</code>
     </h3>
     <div class="details">
@@ -7445,7 +7627,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
 
                     <table>
         <tr>
-            <td>null</td>
+            <td><a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -7457,9 +7639,9 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_setChoosenInvoiceAddress">
-        <div class="location">at line 67</div>
-        <code>            public            
-    <strong>setChoosenInvoiceAddress</strong>(null $choosenInvoiceAddress)</code>
+        <div class="location">at line 71</div>
+        <code>            public            <abbr title="Thelia\Model\$this">$this</abbr>
+    <strong>setChoosenInvoiceAddress</strong>(<a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a> $choosenInvoiceAddress)</code>
     </h3>
     <div class="details">
         <p>
@@ -7471,7 +7653,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
 
                     <table>
                     <tr>
-                <td>null</td>
+                <td><a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a></td>
                 <td>$choosenInvoiceAddress</td>
                 <td>
 </td>
@@ -7479,14 +7661,24 @@ Allows to define default __call() behavior if you overwrite __call()</p>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Thelia\Model\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_getChoosenInvoiceAddress">
-        <div class="location">at line 77</div>
-        <code>            public            null
+        <div class="location">at line 81</div>
+        <code>            public            <a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a>
     <strong>getChoosenInvoiceAddress</strong>()</code>
     </h3>
     <div class="details">
@@ -7500,7 +7692,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
 
                     <table>
         <tr>
-            <td>null</td>
+            <td><a href="../../Thelia/Model/Address.html"><abbr title="Thelia\Model\Address">Address</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -7512,7 +7704,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_generateRef">
-        <div class="location">at line 113</div>
+        <div class="location">at line 117</div>
         <code>            public            
     <strong>generateRef</strong>()</code>
     </h3>
@@ -7529,7 +7721,7 @@ Allows to define default __call() behavior if you overwrite __call()</p>
     </div>
 
                 <h3 id="method_getTotalAmount">
-        <div class="location">at line 129</div>
+        <div class="location">at line 133</div>
         <code>            public            float
     <strong>getTotalAmount</strong>(float|int $tax, bool $includePostage = true, bool $includeDiscount = true)</code>
     </h3>
@@ -7575,7 +7767,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_getUntaxedPostage">
-        <div class="location">at line 174</div>
+        <div class="location">at line 180</div>
         <code>            public            float|int
     <strong>getUntaxedPostage</strong>()</code>
     </h3>
@@ -7601,7 +7793,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_hasVirtualProduct">
-        <div class="location">at line 194</div>
+        <div class="location">at line 206</div>
         <code>            public            bool
     <strong>hasVirtualProduct</strong>()</code>
     </h3>
@@ -7626,7 +7818,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_setNotPaid">
-        <div class="location">at line 208</div>
+        <div class="location">at line 220</div>
         <code>            public            
     <strong>setNotPaid</strong>()</code>
     </h3>
@@ -7642,7 +7834,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_isNotPaid">
-        <div class="location">at line 218</div>
+        <div class="location">at line 230</div>
         <code>            public            bool
     <strong>isNotPaid</strong>()</code>
     </h3>
@@ -7667,7 +7859,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_setPaid">
-        <div class="location">at line 226</div>
+        <div class="location">at line 238</div>
         <code>            public            
     <strong>setPaid</strong>()</code>
     </h3>
@@ -7683,15 +7875,25 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_isPaid">
-        <div class="location">at line 236</div>
+        <div class="location">at line 250</div>
         <code>            public            bool
-    <strong>isPaid</strong>()</code>
+    <strong>isPaid</strong>(bool $exact = false)</code>
     </h3>
     <div class="details">
         <p>Check if the current status of this order is PAID</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$exact</td>
+                <td>if true, the method will chek if the current status is exactly OrderStatus::CODE_PAID. if false, it will check if the order has been paid, whatever the current status is. The default is false.</td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
@@ -7708,7 +7910,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_setProcessing">
-        <div class="location">at line 244</div>
+        <div class="location">at line 262</div>
         <code>            public            
     <strong>setProcessing</strong>()</code>
     </h3>
@@ -7724,7 +7926,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_isProcessing">
-        <div class="location">at line 254</div>
+        <div class="location">at line 272</div>
         <code>            public            bool
     <strong>isProcessing</strong>()</code>
     </h3>
@@ -7749,7 +7951,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_setSent">
-        <div class="location">at line 262</div>
+        <div class="location">at line 280</div>
         <code>            public            
     <strong>setSent</strong>()</code>
     </h3>
@@ -7765,7 +7967,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_isSent">
-        <div class="location">at line 272</div>
+        <div class="location">at line 290</div>
         <code>            public            bool
     <strong>isSent</strong>()</code>
     </h3>
@@ -7790,7 +7992,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_setCancelled">
-        <div class="location">at line 280</div>
+        <div class="location">at line 298</div>
         <code>            public            
     <strong>setCancelled</strong>()</code>
     </h3>
@@ -7806,7 +8008,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_isCancelled">
-        <div class="location">at line 290</div>
+        <div class="location">at line 308</div>
         <code>            public            bool
     <strong>isCancelled</strong>()</code>
     </h3>
@@ -7831,7 +8033,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_setStatusHelper">
-        <div class="location">at line 300</div>
+        <div class="location">at line 318</div>
         <code>            public            
     <strong>setStatusHelper</strong>(string $statusCode)</code>
     </h3>
@@ -7857,12 +8059,12 @@ Duting invoice process, use all cart methods instead of order methods (the order
     </div>
 
                 <h3 id="method_hasStatusHelper">
-        <div class="location">at line 313</div>
+        <div class="location">at line 332</div>
         <code>            public            bool
-    <strong>hasStatusHelper</strong>(string $statusCode)</code>
+    <strong>hasStatusHelper</strong>(string|array $statusCode)</code>
     </h3>
     <div class="details">
-        <p>Check if the current status of this order is $statusCode</p>
+        <p>Check if the current status of this order is $statusCode or, if $statusCode is an array, if the current status is in the $statusCode array.</p>
         <p>
 </p>
         <div class="tags">
@@ -7870,7 +8072,7 @@ Duting invoice process, use all cart methods instead of order methods (the order
 
                     <table>
                     <tr>
-                <td>string</td>
+                <td>string|array</td>
                 <td>$statusCode</td>
                 <td>the status code, one of OrderStatus::CODE_xxx constants.</td>
             </tr>
