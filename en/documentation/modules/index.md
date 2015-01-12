@@ -105,7 +105,7 @@ This is how to use it in your composer.json (Example from [thelia/hooktest-modul
     "name": "thelia/hooktest-module",
     "type": "thelia-module",
     "require": {
-        "thelia/installer": "~1.0"
+        "thelia/installer": "~1.1"
     },
     "extra": {
         "installer-name": "HookTest"
