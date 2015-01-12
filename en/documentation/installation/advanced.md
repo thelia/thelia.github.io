@@ -17,8 +17,8 @@ lang: en
 The requirements are still the same but with this installation you can manage easily your Thelia with composer, require new
 dependencies, etc.
 
-Since version 2.1 we have created sub project allowing us to explode Thelia into little component. The repo [thelia-project](https://github.com/thelia/thelia-project)
-is the glue if you want to create a new project with this new component and manage your installation with composer.
+Since version 2.1 we have created sub project allowing us to explode Thelia into little components. The repo [thelia-project](https://github.com/thelia/thelia-project)
+is the glue if you want to create a new project with this new components and manage your installation with composer.
 
 ## Start a new project
 
@@ -30,4 +30,14 @@ $ php composer.phar create-project thelia/thelia-project your-project-name 2.1.1
 Your Thelia is now downloaded and ready to be [installed](/en/documentation/installation/index.html#install-it)
 
 Now you are ready to require new dependency in your project like module who already use the [thelia-installer](https://packagist.org/packages/thelia/installer)
-or even templates who use the thelia-installer to.
+or even templates who use the thelia-installer too.
+
+## Update your project
+
+If you have installed Thelia following the instructions before, you can update your files using a script present in your project : 
+
+```
+$ sh change-version.sh 2.1.2
+```
+
+Here `2.1.2` is the version you want to retrieve. For updating your database, follow this [instructions](/en/documentation/installation/index.html#use-the-update-script-%28since-version-2-1%29)
