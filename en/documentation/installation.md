@@ -24,20 +24,7 @@ lang: en
 * apache 2
 * mysql 5
 
-If you use **Mac OSX**, it still doesn't use php 5.4 as default php version... There are many solutions for you :
-
-* use [phpbrew](https://github.com/c9s/phpbrew)
-* use last MAMP version and put the php bin directory in your path  :
-
-```bash
-export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
-```
-
-* configure a complete development environment : [http://php-osx.liip.ch](http://php-osx.liip.ch)
-* use a virtual machine with vagrant and puppet : [https://puphpet.com](https://puphpet.com)
-
-
-If you use **Windows** with [WAMP](http://www.wampserver.com/) and encouter an issue with ```intl``` there is a special manipulation to do : you have to copy all files with name ```icu***.dll```  from php directory (eg: "C:\wamp\bin\php\php5.x.xx") to the ```apache``` directory ("C:\wamp\bin\apache\apache2.x.xx\bin").
+If you use **Windows** with [WAMP](http://www.wampserver.com/) and encounter an issue with ```intl``` there is a special manipulation to do : you have to copy all files with name ```icu***.dll```  from php directory (eg: "C:\wamp\bin\php\php5.x.xx") to the ```apache``` directory ("C:\wamp\bin\apache\apache2.x.xx\bin").
 
 
 <div class="page-header">
@@ -60,7 +47,7 @@ Then unzip the file.
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project thelia/thelia path/ 2.0.2
+$ php composer.phar create-project thelia/thelia path/ 2.1.1 (or 2.0.5)
 ```
 
 
