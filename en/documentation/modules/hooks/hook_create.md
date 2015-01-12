@@ -11,8 +11,9 @@ subnav: plugin_hooks_create
 </div>
 
 <div class="alert alert-warning">
-<p>This is a functionality in development and not available in the current version of Thelia. This is planned for version 2.1</p>
+<p>This functionality is only available since version 2.1</p>
 </div>
+
 
 If you want to attach your module to some hooks, you can do this pretty easily by following these steps :
 
