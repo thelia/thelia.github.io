@@ -2,6 +2,7 @@
 layout: home
 title: Installation
 sidebar: installation
+subnav: installation_index
 lang: en
 ---
 
@@ -171,18 +172,3 @@ Note:
 - if your database is big, it's recommended to backup your database by your hands and not to use the backup proposed by the wizard.
 
 
-<div class="page-header">
-    <h1>Usage</h1>
-</div>
-
-Consult the page : http://localhost/thelia/web/index_dev.php
-
-You can create a virtual host and choose web folder for root directory.
-
-To run tests (phpunit required) :
-
-```bash
-$ phpunit
-```
-
-We still have lot of work to achieve but enjoy this part.

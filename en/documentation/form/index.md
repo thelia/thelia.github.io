@@ -143,6 +143,10 @@ Some (but not all) of Symphony form definition attributes are supported :
 
 ## Form types / extensions
 
+<div class="alert alert-warning">
+<p>This functionality is only available since version 2.1</p>
+</div>
+
 You can register form types or extensions, or event type extensions by using three tags.
 
 ### Form types

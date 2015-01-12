@@ -91,4 +91,31 @@ $ php Thelia module:generate:sql ModuleName
 Just like the precedent command, schema.xml is parsed and sql file is created in Config folder.
 
 
+#Manage your module with composer
+
+If you want to use composer in your module, you have to require a special package in your composer.json file. Doing this,
+you can share your module on [packagist](https://packagist.org/) and of course require other dependencies for your module.
+
+We have develop an installer, it will copy your module in the good directory (local/module).
+
+This is how to use it in your composer.json (Example from [thelia/hooktest-module](https://github.com/thelia/HookTest-module)) : 
+
+```
+{
+    "name": "thelia/hooktest-module",
+    "type": "thelia-module",
+    "require": {
+        "thelia/installer": "~1.1"
+    },
+    "extra": {
+        "installer-name": "HookTest"
+    }
+}
+```
+
+There are three important points here : 
+
+* **type** : must be `thelia-module`.
+* **require** : require the `thelia/installer` custom installer for composer.
+* **installer-name** : the directory name for your module. Here I name my package "thelia/hooktest-module" but at the end I want the name of the directory to be « HookTest » so I use the « installer-name » extra parameter.
 

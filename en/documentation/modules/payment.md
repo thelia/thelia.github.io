@@ -158,6 +158,39 @@ protected function pay(Order $order)
  }
 ```
 
+## `manageStockOnCreation()` method
+
+<div class="alert alert-warning">
+<p>This functionality is only available since version 2.1</p>
+</div>
+
+You can decide with this function if your payment module decrease stock when the order is created or when the order status change to paid.
+
+Return true for decrementing stock on order creation.
+Return false for decrementing stock when order status change to paid.
+
+If you use `AbstractPaymentModule` class, this method is already defined and return true. Override it if you change to change this behaviour.
+
+```
+/**
+* Decrement stock on order creation
+**/
+public function manageStockOnCreation()
+{
+    return true;
+}
+```
+
+```
+/**
+* Decrement stock when status change to paid
+**/
+public function manageStockOnCreation()
+{
+    return false;
+}
+```
+
 ## Processing of payment system callback (aka "return URL")
 
 Most of payment platforms offers a callback system, to notify your module of the payment result. The callback often consists in calling an URL on your server, the Return URL. 

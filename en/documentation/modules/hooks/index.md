@@ -11,7 +11,7 @@ subnav: plugin_hooks_about
 </div>
 
 <div class="alert alert-warning">
-<p>This is a functionality in development and not available in the current version of Thelia. This is planned for version 2.1</p>
+<p>This functionality is only available since version 2.1</p>
 </div>
 
 When you create a module for Thelia, you might want it to interact with the site in 2 ways :

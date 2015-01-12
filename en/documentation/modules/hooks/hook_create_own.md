@@ -11,7 +11,7 @@ subnav: plugin_hooks_create_own
 </div>
 
 <div class="alert alert-warning">
-<p>This is a functionality in development and not available in the current version of Thelia. This is planned for version 2.1</p>
+<p>This functionality is only available since version 2.1</p>
 </div>
 
 ## The template entry point

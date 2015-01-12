@@ -22,7 +22,12 @@ languages:
       name: "English", code: "en", url: "/", sidebar:
       [
         { name: "Welcome", sidebar_name: "welcome", url: "/index.html" },
-        { name: "Installation", sidebar_name: "installation", url: "/en/documentation/installation.html" },
+        { name: "Installation", sidebar_name: "installation", subsections:
+          [
+            { name: "Get started", sidebar_name: "installation_index", url: "/en/documentation/installation/index.html"},
+            { name: "Advanced with composer", sidebar_name: "installation_composer", url: "/en/documentation/installation/advanced.html"}
+          ]
+        },
         { name: "Configuration", sidebar_name: "configuration", url: "/en/documentation/configuration.html" },
         { name: "Contribute", sidebar_name: "contribute", url: "/en/documentation/contribute.html" },
         { name: "Development", sidebar_name: "development", subsections:
