@@ -152,7 +152,7 @@ run ```php setup/update.php```
 
 This script is standalone. Moreover, it will automatically backup your database and restore it if a problem is detected.
 
-If your database is big, it's recommended to backup your database by your hands and not to use the backup proposed by the script.
+If your database is big, it's recommended to backup your database manually and not to use the backup proposed by the script.
 
 ### use the update wizard (since version 2.1)
 
@@ -169,6 +169,6 @@ http://yourdomain.tld/[/subdomain_if_needed]/install
 Note: 
 
 - the wizard is available only if your Thelia is not already in the latest version.
-- if your database is big, it's recommended to backup your database by your hands and not to use the backup proposed by the wizard.
+- if your database is big, it's recommended to backup your database by your hands and not rely on the wizard database backup.
 
 
