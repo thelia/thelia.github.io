@@ -137,7 +137,7 @@ Once the backup is done, you first have to :
 
 Then you have 3 differents ways to proceed :
 
-### use Thelia command
+### use Thelia command (ONLY for Thelia 2.0.x)
 
 - run ```php Thelia thelia:update```
 - again clear all caches in all environment :
@@ -146,7 +146,7 @@ Then you have 3 differents ways to proceed :
 
 This command **can fail** on some updates and you will have to use the next methods.
 
-### use the update script (since version 2.1)
+### use the update script (since Thelia 2.1)
 
 run ```php setup/update.php```
 
@@ -154,7 +154,7 @@ This script is standalone. Moreover, it will automatically backup your database 
 
 If your database is big, it's recommended to backup your database manually and not to use the backup proposed by the script.
 
-### use the update wizard (since version 2.1)
+### use the update wizard (since Thelia 2.1)
 
 An update wizard is available in the ```web/install``` directory. It's the same directory used by the install wizard.
 
