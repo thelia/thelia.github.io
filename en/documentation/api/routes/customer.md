@@ -14,6 +14,7 @@ methods:
     - { name: POST, route: /api/customers, return_code: 201, return: "Results of the 'customer' loop for the created customer"}
     - { name: PUT, route: /api/customers, return_code: 201, return: "Results of the 'customer' loop for the updated customer" }
     - { name: DELETE, route: "/api/customers/{entityId}", parameters: "entityId: The customer id", return_code: 204, return: Nothing }
+    - { name: POST, route: "/api/customers/checkLogin", return_code: 200, return: "Results of the 'customer' loop if the customer exists" }
 ---
 ---
 
@@ -75,5 +76,19 @@ Moreover, you have to add the "id" field.
     "country": 64,
     "email": "foo@thelia.net",
     "lang": 1
+}
+```
+
+## Check login
+
+You can check if an email and password correspond to a customer with the '/api/customers/checkLogin' route.
+
+The corresponding customer will be returned if one exists, or a 404 response if one does not.
+
+### Exemple
+```json
+{
+    "email": "foo@thelia.net",
+    "password": "azerty"
 }
 ```
