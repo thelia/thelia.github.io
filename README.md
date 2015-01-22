@@ -8,6 +8,9 @@ In order to contribute please install the following :
 Run Jekyll server (on port 4000)
 Inside your directory (ex: ~/dev/thelia.github.io/)
 
+    $ npm install
+    $ bower install
+    $ grunt
     $ jekyll serve --watch
 
 To see the result : http://localhost:4000
