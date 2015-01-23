@@ -10,16 +10,16 @@ subnav: howto_migrate_20_21
     <h1>How To : <small>migrate Thelia 2.0 to Thelia 2.1</small></h1>
 </div>
 
-Between Thelia 2.0 and Thelia 2.1 we made a lot of effort for not breaking backward compatibility. Here is a list of change you have to do with your new version of Thelia.
+We have done our best in Thelia 2.1 to provide backward compatibility with Thelia 2.0. However, you'll have to make minor changes to your templates to make use of new features.
 
 ## Templates
 
 ### `{token_url}`
 
-the smarty function `token_url` was introduced in Thelia 2.0 but since Thelia 2.1 it is mandatory to use it when you want to delete a resource.
+the smarty function `token_url` was introduced in Thelia 2.0 but since Thelia 2.1 it is mandatory to use it when you want to submit data with a GET method, either with an URL or with a form that uses the GET method.
 This function add a single token at the end of your url preventing CSRF attack.
 
-Here is the list of template you have to modify : 
+Here is the list of templates you have to modify : 
 
 - cart.html :
     - form action for quantity update `<form action="{token_url path="/cart/update"}"`
