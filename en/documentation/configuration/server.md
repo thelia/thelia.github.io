@@ -2,14 +2,13 @@
 layout: home
 title: Configuration
 sidebar: configuration
+subnav: config_server
 lang: en
 ---
 
 <div class="page-header">
     <h1>Configuration</h1>
 </div>
-
-Currently you can only configure your database connection with config files. All other configuration have to be developed and certainly use database storage.
 
 ## Server Configuration
 
