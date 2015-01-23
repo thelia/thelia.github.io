@@ -9,10 +9,14 @@ welcome :
     lead: Thelia is an open source tool for creating e-business websites and managing online content. This software is published under LGPL.
     text:
           <p>
-              Here is the current developping next major version. You can download this version for testing or see the code.<br/>
-              Here is the most recent developed code for the next major version (v2). You can download this version for testing or having a look on the code (or anything you wish, respecting GPL).
+              Here is the documentation for the current major version of Thelia.<br/>
           </p>
-          <p>Most part of the code can possibly change, a large part will be refactor soon, graphical setup does not exist yet.</p>
+          <p>
+            The last major version of Thelia today is the version 2.1, you can download it <a href="http://thelia.net/#download">here</a>
+          </p>
+          <p>
+            To know what's coming on the next version, read our <a href="http://thelia.net/community/roadmap">Roadmap</a>
+          </p>
     demo: Try demo
     sources: View sources
 ---
