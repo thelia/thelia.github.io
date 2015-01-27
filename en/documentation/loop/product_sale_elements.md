@@ -7,7 +7,7 @@ lang: en
 subnav: loop_product_sale_elements
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
-type: loop_product_sale_elements
+type: product_sale_elements
 arguments:
     - {name: "id", description: "A comma separated list of product sale elements id. Mandatory if the 'product' parameter is not present", example: "id=\"1,3,8\""}
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
