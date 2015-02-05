@@ -26,6 +26,7 @@ arguments :
 outputs :
     - {name: "$ID", description: "the feature availability id"}
     - {name: "$IS_TRANSLATED", description: "check if the feature_availability is translated"}
+    - {name: "$FEATURE_ID", description: "The ID ot the related feature"}
     - {name: "$LOCALE", description: "The locale used for this research"}
     - {name: "$TITLE", description: "the feature availability title"}
     - {name: "$CHAPO", description: "the feature availability chapo"}
