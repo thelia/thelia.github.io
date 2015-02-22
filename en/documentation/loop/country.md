@@ -12,7 +12,8 @@ arguments :
     - {name: "id", description: "A single or a list of country ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "area", description: "A single or a list of area ids.", example: "area=\"10,9\", area: \"500\""}
     - {name: "with_area", description: "A boolean value to return either countries whose area is defined either all the others.", example: "with_area=\"true\""}
-    - {name: "exclude", description: "A single or a list of country ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
+    - {name: "exclude", description: "A single or a list of country ids to exclude from the results.", example: "exclude=\"2\", exclude=\"1,4,7\""}
+    - {name: "exclude_area", description: "A single or list of area IDs. Countries which belongs to these areas are excluded from the results", example: "exclude_area=\"7\", exclude_area=\"3,102,14\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
 outputs :
     - {name: "$ID", description: "the country id"}
