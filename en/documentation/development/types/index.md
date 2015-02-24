@@ -19,7 +19,7 @@ Here are the Thelia 2 default available types :
  * [Thelia\Type\AlphaNumStringListType](/api/master/Thelia/Type/AlphaNumStringListType.html) - A comma separated list of alpha-numeric strings.
  * [Thelia\Type\AlphaNumStringType](/api/master/Thelia/Type/AlphaNumStringType.html) - A single alpha-numeric strings.
  * [Thelia\Type\AnyType](/api/master/Thelia/Type/AnyType.html) - Anything.
- * [Thelia\Type\BooleanOrBothType](/api/master/Thelia/Type/.html/api/master/Thelia/Type/BooleanOrBothType.html) - A boolean or "both" string.
+ * [Thelia\Type\BooleanOrBothType](/api/master/Thelia/Type/BooleanOrBothType.html) - A boolean or "both" string.
  * [Thelia\Type\BooleanType](/api/master/Thelia/Type/BooleanType.html) - A boolean.
  * [Thelia\Type\EnumListType](/api/master/Thelia/Type/EnumListType.html) (array $enumChoice) - A list of value from $enumChoice array.
  * [Thelia\Type\EnumType](/api/master/Thelia/Type/EnumType.html) (array $enumChoice) - A single value from $enumChoice array.
