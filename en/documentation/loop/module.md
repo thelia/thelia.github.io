@@ -12,6 +12,7 @@ arguments :
     - {name: "id", description: "A single or a list of module ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "exclude", description: "A single or a list of module ids to exclude.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "profile", description: "A single or a list of profile ids.", example: "profile=\"2\", profile=\"1,4,7\""}
+    - {name: "area", description: "A single or a list of area ids. Only modules assigned to this area will be returned.", example: "area=\"5\", profile=\"3,2,17\""}
     - {name: "code", description: "Module code", example: "code=\"Foo\""}
     - {name: "module_type", description: "Module type (classic, payment or delivery)", example: "module_type=\"1\"", expected_values: [
         {name: "1", description: "classic module"},
