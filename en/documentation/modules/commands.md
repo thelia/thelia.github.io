@@ -19,11 +19,11 @@ In your config file :
 
 ```xml
     <commands>
-        <command class="MyModule\Commands\HelloWorld.php"/>
+        <command class="MyModule\Commands\HelloWorld"/>
     </commands>
 ```
 
-Your class has to extend *Thelia\Command\ContainerAwareCommand* and to implement at least the *configure* and
+Create now a HelloWorld.php file in directory MyModule/Commands, and create a HelloWorld, which has to extend *Thelia\Command\ContainerAwareCommand* and implement at least the *configure* and
 *execute* methods.
 
 For example :
@@ -55,11 +55,10 @@ class HelloWorld extends ContainerAwareCommand
 
 ```
 
-Now you can test the results using Thelia CLI tools. Go to your Thelia root directory and use this command :
+You can now test the results using Thelia CLI tools. Go to your Thelia root directory and use this command :
 
 ```
 $ php Thelia hello:world
 ```
-<br />
-Thelia uses all the fonctionnalities available in the command Symfony component so you can easily refer to it's documentation
- <a href="http://symfony.com/doc/2.2/components/console/index.html" target="_blank">here</a>
+
+Thelia uses all the features of the Symfony "command" component so you can refer to <a href="http://symfony.com/doc/2.2/components/console/index.html" target="_blank">this component documentation</a> to create your Thelia commands.
