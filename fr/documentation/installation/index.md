@@ -2,6 +2,7 @@
 layout: home
 title: Installation
 sidebar: installation
+subnav: installation_index
 lang: fr
 ---
 
@@ -16,6 +17,7 @@ lang: fr
         * intl
         * gd
         * curl
+        * calendar
     * safe_mode off
     * memory_limit au moins 128M, mais préférez 256.
     * post\_max\_size 20M
@@ -44,7 +46,7 @@ export PATH=/Applications/MAMP/bin/php/php5.4.x/bin/:$PATH
 
 ``` bash
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project thelia/thelia path/ dev-master
+$ php composer.phar create-project thelia/thelia chemin/ 2.1.2 (ou 2.0.6)
 ```
 
 Effectuez l'installation en utilisant la ligne de commande :
@@ -93,12 +95,49 @@ Cette tâche recharge la base de données, insert de fausses données en utilisa
 
 Si vous avez déjà installé Thelia mais qu'une nouvelle version est disponible, vous pouvez effectuer une mise à jour simplement :
 
+<div class="alert alert-warning">
+<p>Avant de procéder à la mise à jour, il est fortement recommandé de sauvegarder votre site Web (fichiers et base de données).</p>
+<p><em>Vous pouvez sauvegarder votre base de données avec des outils comme phpmyadmin ou mysqldump.</em></p>
+</div>
+
+Une fois la sauvegarde terminée, vous devez d'abord :
+
 - effacez tous les caches en lançant la commande ```php Thelia cache:clear```
 - copiez tous les fichiers de la nouvelle version de Thelia (les fichiers de local/modules/* y compris)
+
+Ensuite, vous avez trois différents façons de procéder :
+
+### utiliser la commande Thelia (UNIQUEMENT pour Thelia 2.0.x)
+
 - lancez la commande ```php Thelia thelia:update```
 - effacez de nouveau tous les caches sur tous les environnements :
     - ```php Thelia cache:clear```
     - ```php Thelia cache:clear --env=prod```
+
+### utiliser le script de mise à jour (depuis Thelia 2.1)
+
+lancer ```php setup/update.php```
+
+Ce script est autonome. En outre, il sauvegarde automatiquement votre base de données et l'a restaure si un problème est détecté.
+
+Si votre base de données est volumineuse, il est recommandé de sauvegarder votre base de données manuellement et de ne pas utiliser la sauvegarde proposé par le script.
+
+### Utiliser l'assistant de mise à jour (depuis Thelia 2.1)
+
+Un assistant de mise à jour est disponible dans le ```web/install```. Le répertoire est le que pour l'assistant d'installation.
+
+**Vous devez protéger le dossier Web si votre site est public (htaccess, liste des admis IP, ...).**
+
+L'assistant de mise à jour accessible depuis votre navigateur favori :
+
+```bash
+http://yourdomain.tld/[/subdomain_if_needed]/install
+```
+
+Remarque :
+
+- L'assistant est disponible que si votre Thelia n'est pas déjà dans la dernière version.
+- Si votre base de données est volumineuse, il est recommandé de sauvegarder votre base de données manuellement.
 
 <div class="page-header">
     <h1>Utilisation</h1>
