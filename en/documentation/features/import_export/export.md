@@ -92,6 +92,6 @@ If you want to create a new category, you have to put in your ```Config/config.x
         </export_category>
         <export_category id="your.other.category.id">
             <!-- here's another export category -->
-        </export_category
+        </export_category>
 </export_categories>
 ```
