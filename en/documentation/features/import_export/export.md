@@ -59,14 +59,14 @@ Your have to add in "exports" a tag with that skeleton:
 ```xml
 <exports>
     <export id="your.export.id" class="Your\ExportHandler" category_id="the.category_id">
-        <descriptive locale="en_US">
+        <export_descriptive locale="en_US">
             <title>Your export title </title>
              <!-- you may add an optionnal description -->
              <description> ... </description>
-        </descriptive>
-        <descriptive locale="fr_FR">
+        </export_descriptive>
+        <export_descriptive locale="fr_FR">
             <!-- Here's for another locale -->
-        </descriptive>
+        </export_descriptive>
     </export>
     <export>
         <!-- here's another export -->
@@ -86,12 +86,12 @@ If you want to create a new category, you have to put in your ```Config/config.x
 
 ```xml
 <export_categories>
-        <export_category id="your.category.id">
-            <title locale="en_US">A title</title>
-            <title locale="fr_FR">Un titre</title>
-        </export_category>
-        <export_category id="your.other.category.id">
-            <!-- here's another export category -->
-        </export_category>
+    <export_category id="your.category.id">
+        <title locale="en_US">A title</title>
+        <title locale="fr_FR">Un titre</title>
+    </export_category>
+    <export_category id="your.other.category.id">
+        <!-- here's another export category -->
+    </export_category>
 </export_categories>
 ```
