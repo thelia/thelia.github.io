@@ -130,7 +130,7 @@ You may want to use an asset located in another template of the same type (for e
 The example above will use the style.css file, located in the `assets/css` directory of the `default` front office template (the file path is `templates/frontOffice/default/assets/css/style.css`).
 
 
-### {images} ###
+### {images} and {image} ###
 
 This directive process your statics images used in your template.
 
@@ -139,6 +139,10 @@ This directive process your statics images used in your template.
     {/images}
 
 This block return only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
+
+You may also use the short form `{image}`, which directly returns the URL of the image :
+
+    <img src="{image file='assets/img/kittens-and-babies.jpg'}" alt="Some text">
 
 The valid parameters are :
 - file
