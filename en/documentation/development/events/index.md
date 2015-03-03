@@ -683,7 +683,7 @@ eventsProduct:
     - {
         name: "action.productSetTemplate",
         const: PRODUCT\_SET_TEMPLATE,
-        desc: "Generate combinations. All existing combinations for the product are deleted.",
+        desc: "Change template for the product. All existing combinations for the product are deleted.",
         eventClass: "Thelia\\Core\\Event\\Product\\ProductSetTemplateEvent",
         eventClassApi: "/api/master/Thelia/Core/Event/Product/ProductSetTemplateEvent.html"
       }
