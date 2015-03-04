@@ -26,7 +26,7 @@ The name parameter will match with the "event" one of the [service tag](hook_cre
 
 <div class="alert alert-info">
 <h4>Naming convention</h4>
-<p>The name of the hook should be composed with 2 parts separated by a dot : the first one is the name of the page, the second is the position in the page. Words can be separated by dash :</p>
+<p>The name of the hook should be composed of 2 parts separated by a dot : the first one is the name of the page, the second is the position in the page. Words can be separated by dash :</p>
 <ul>
     <li>**product.top** : at the top of the product page</li>
     <li>**product.javascript-initialization** : to initialize javascript (after javascript include) in the product page</li>
