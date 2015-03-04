@@ -41,7 +41,7 @@ To do this, override the method "getHooks" of your module class.
 
 You have to return a collection of associative array composed of those keys:
 - _code *_ : The hook name
-- _type *_ : The hoof type, this value correspond to ```Thelia\Core\Template\TemplateDefinition``` constants: ```FRONT_OFFICE```, ```BACK_OFFICE```, ```PDF``` and ```EMAIL```
+- _type *_ : The hook type, this value correspond to ```Thelia\Core\Template\TemplateDefinition``` constants: ```FRONT_OFFICE```, ```BACK_OFFICE```, ```PDF``` and ```EMAIL```
 - title : This one can be a string, or an associative array with the locale as key.
 - description : Same as title
 - chapo : Same as title
