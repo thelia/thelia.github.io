@@ -70,7 +70,7 @@ Your class must extend ```Thelia\Core\Hook\BaseHook```. This class provides some
 
 When a hook is called from the template, an event for this hook is created and dispatched by Thelia. If your module listens to this hook the method that you indicate in your ```config.xml``` is called with as argument the event generated.
 
-This event could be a ```Thelia\Core\Event\Hook\HookRenderEvent``` (*for hook function*) or ```Thelia\Core\Event\Hook\HookRenderlockEvent``` (*for hook block*). 
+This event could be a ```Thelia\Core\Event\Hook\HookRenderEvent``` (*for hook function*) or ```Thelia\Core\Event\Hook\HookRenderBlockEvent``` (*for hook block*). 
 
 
 ### Example of a hook function
