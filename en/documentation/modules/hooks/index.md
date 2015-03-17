@@ -60,40 +60,40 @@ In this example, the hook code is ```product.details.top``` and the code generat
 
 ### The hook block
 
-the smarty block ```{hookblock name="hookname" ... }...{/hookblock}``` works with ```{hookfor rel="hookname" ... }{/hookfor}``` smarty block and allows you to loop on each fragments generated in modules. 
+the smarty block ```{hookblock name="hookname" ... }...{/hookblock}``` works with ```{forhook rel="hookname" ... }{/forhook}``` smarty block and allows you to loop on each fragments generated in modules. 
 
-These fragments are just arrays (hash tables). The hookFor iterate thrue these fragments and map them to smarty variables that you can use in your template.  
+These fragments are just arrays (hash tables). The ```forhook``` iterate thrue these fragments and map them to smarty variables that you can use in your template.  
 
-This type of hook are useful when you want to respect the layout of the template and just add the relevant informations from your module. For example, if you have a list of block in the sidebar that have the same appearence (title bar, a content, a link) and want to add your block. You will have to    attach your module to this hook and add a fragment with title, content and link data.
+This type of hook are useful when you want to respect the layout of the template and just add the relevant informations from your module. For example, if you have a list of block in the sidebar that have the same appearence (title bar, a content, a link) and want to add your block. You will have to attach your module to this hook and add a fragment with title, content and link data.
 
 These hooks use a ```Thelia\Core\Event\Hook\HookRenderBlockEvent``` event.
 
 #### Example of a hook block :
 
-The smarty block is a little bit more complex but more flexible. This hook provides a list of row, each row has a list of variables. It is used in conjunction with the ```hookfor``` block that allow you to iterate on each row and assign variables to smarty. The variables may be different depending on the hook. You have to refer to the documentation of that hook.
+The smarty block is a little bit more complex but more flexible. This hook provides a list of row, each row has a list of variables. It is used in conjunction with the ```forhook``` block that allow you to iterate on each row and assign variables to smarty. The variables may be different depending on the hook. You have to refer to the documentation of that hook.
 
 
 ```html
 ...
 <section id="product-tabs">
-    {hookBlock name="product.additional" product="{product attr="id"}"}
+    {hookblock name="product.additional" product="{product attr="id"}"}
     <ul class="nav nav-tabs" role="tablist">
         <li class="active" role="presentation"><a id="tab1" href="#description" data-toggle="tab" role="tab">{intl l="Description"}</a></li>
-        {forHook rel="product.additional"}
+        {forhook rel="product.additional"}
             <li role="presentation"><a id="tab{$id}" href="#{$id}" data-toggle="tab" role="tab">{$title}</a></li>
-        {/forHook}
+        {/forhook}
     </ul>
     <div class="tab-content">
         <div class="tab-pane active in" id="description" itemprop="description" role="tabpanel" aria-labelledby="tab1">
             <p>{$DESCRIPTION|default:'N/A' nofilter}</p>
         </div>
-        {forHook rel="product.additional"}
+        {forhook rel="product.additional"}
         <div class="tab-pane" id="{$id}" role="tabpanel" aria-labelledby="tab{$id}">
             {$content nofilter}
         </div>
-        {/forHook}
+        {/forhook}
     </div>
-    {/hookBlock}
+    {/hookblock}
 </section>
 ...
 ```

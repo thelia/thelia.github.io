@@ -70,6 +70,7 @@ Your have to add in "imports" a tag with that skeleton:
 ```
 
 Thelia import categories ids are:
+
 - thelia.import.products : imports conserning Products
 - thelia.import.modules : module specific imports 
 
