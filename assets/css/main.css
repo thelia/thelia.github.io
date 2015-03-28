@@ -4573,6 +4573,22 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .breadcrumb > .active {
   color: #999999;
 }
+.breadcrumb-header{
+  float: right;
+  margin: 0;
+  padding: 14px 20px;
+}
+.breadcrumb-header > li {
+  display: inline-block;
+}
+.breadcrumb-header > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #cccccc;
+}
+.breadcrumb-header > .active {
+  color: #999999;
+}
 .pagination {
   display: inline-block;
   padding-left: 0;
