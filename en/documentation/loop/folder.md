@@ -24,7 +24,11 @@ arguments :
             {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
             {name: "manual",            description: "`folder` argument must be set"},
             {name: "manual_reverse",    description: "`folder` argument must be set"},
-            {name: "random",            description: ""}
+            {name: "random",            description: ""},
+            {name: "created",           description: "ascending order on date of content creation"},
+            {name: "created_reverse",   description: "descending order on date of content creation"},
+            {name: "updated",           description: "ascending order on date of content update"},
+            {name: "updated_reverse",   description: "descending order on date of content update"}
         ]
       }
 outputs :
