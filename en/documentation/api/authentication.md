@@ -12,6 +12,15 @@ subnav: api_authentication
     For security reasons, you should always use the API over an SSL layer (https)
 </div>
 
+## Account creation
+
+You need to create an API account before using it. For this go to the administration panel, configuration -> API Configuration. Once on this page,
+create an account, fill the label field and choose an administration profile. By default, only the superadministrator profile is available.
+
+After the creation, download the secure key, store it in a safe place and copy your API Key too.
+
+## Authentication
+
 In order to use Thelia API in another application, you have to authenticate.
 
 The authentication is done using a token. This token is generated when the API access is created in the admin.
@@ -41,7 +50,7 @@ The ```.htaccess``` file included in Thelia is already modified.
 
 To prevent from [Man in the middle attacks](http://en.wikipedia.org/wiki/Man-in-the-middle_attack), you have to sign your request.
 
-After generating your token, a key has been generated in ```path-to-thelia/local/config/key/you-token.key```
+After generating your token, a key has been generated in ```path-to-thelia/local/config/key/your-token.key```
 You have to embed this key into your application, as it has to be used as a key for a SHA-1 hash.
 
 Here's an example on how you can do to sign your request:
@@ -54,7 +63,7 @@ Here's an example on how you can do to sign your request:
 function getSignature($requestContent = '')
 {
     $secureKey = pack('H*', file_get_contents("api_key_file.key"));
-    
+
     return hash_hmac('sha1', $requestContent, $secureKey);
 }
 
