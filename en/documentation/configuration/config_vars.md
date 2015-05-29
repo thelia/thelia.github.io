@@ -17,6 +17,7 @@ lang: en
                 <th>Name</th>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Default value</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@ lang: en
                     <td>{{ var.name }}</td>
                     <td>{{ var.title }}</td>
                     <td>{{ var.description }}</td>
+                    <td>{{ var.default_value }}</td>
                 </tr>
             {% endfor %}
         </tbody>
