@@ -8,7 +8,7 @@
       "module": false,
       "title": "Delivery - in the header",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -18,7 +18,7 @@
       "module": false,
       "title": "Delivery - at the top of the footer",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -28,7 +28,7 @@
       "module": false,
       "title": "Delivery - imprint",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -38,7 +38,7 @@
       "module": false,
       "title": "Delivery - at the bottom of the footer",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": true,
@@ -49,7 +49,7 @@
       "title": "Delivery - at the bottom of information area",
       "file": "delivery.html",
       "attributes": {
-        "order": "{$order_id}",
+        "order": "$order_id",
         "fields": "title,value"
       }
     },
@@ -61,7 +61,7 @@
       "module": false,
       "title": "Delivery - after the information area",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -71,7 +71,7 @@
       "module": true,
       "title": "Delivery - delivery address",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -81,7 +81,20 @@
       "module": false,
       "title": "Delivery - after addresse area",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
+    },
+    {
+      "block": false,
+      "code": "delivery.after-delivery-module",
+      "context": "delivery",
+      "type": "after-delivery-module",
+      "module": false,
+      "title": "Delivery - after-delivery-module",
+      "file": "delivery.html",
+      "attributes": {
+        "order": "$order_id",
+        "module_id": "$DELIVERY_MODULE"
+      }
     },
     {
       "block": false,
@@ -91,7 +104,7 @@
       "module": false,
       "title": "Delivery - after the order summary",
       "file": "delivery.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -113,7 +126,7 @@
       "module": false,
       "title": "Invoice - in the header",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -123,7 +136,7 @@
       "module": false,
       "title": "Invoice - at the top of the footer",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -133,7 +146,7 @@
       "module": false,
       "title": "Invoice - imprint",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -143,7 +156,7 @@
       "module": false,
       "title": "Invoice - at the bottom of the footer",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": true,
@@ -154,7 +167,7 @@
       "title": "Invoice - at the bottom of information area",
       "file": "invoice.html",
       "attributes": {
-        "order": "{$order_id}",
+        "order": "$order_id",
         "fields": "title,value"
       }
     },
@@ -166,7 +179,7 @@
       "module": false,
       "title": "Invoice - after the information area",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -176,7 +189,7 @@
       "module": true,
       "title": "Invoice - delivery address",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -186,7 +199,7 @@
       "module": false,
       "title": "Invoice - after addresse area",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
@@ -196,7 +209,33 @@
       "module": false,
       "title": "Invoice - after product listing",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
+    },
+    {
+      "block": false,
+      "code": "invoice.after-payment-module",
+      "context": "invoice",
+      "type": "after-payment-module",
+      "module": false,
+      "title": "Invoice - after-payment-module",
+      "file": "invoice.html",
+      "attributes": {
+        "order": "$order_id",
+        "module_id": "$PAYMENT_MODULE"
+      }
+    },
+    {
+      "block": false,
+      "code": "invoice.after-delivery-module",
+      "context": "invoice",
+      "type": "after-delivery-module",
+      "module": false,
+      "title": "Invoice - after-delivery-module",
+      "file": "invoice.html",
+      "attributes": {
+        "order": "$order_id",
+        "module_id": "$DELIVERY_MODULE"
+      }
     },
     {
       "block": false,
@@ -206,7 +245,7 @@
       "module": false,
       "title": "Invoice - after the order summary",
       "file": "invoice.html",
-      "attributes": {"order": "{$order_id}"}
+      "attributes": {"order": "$order_id"}
     },
     {
       "block": false,
