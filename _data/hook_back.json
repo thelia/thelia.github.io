@@ -52,103 +52,23 @@
     },
     {
       "block": false,
-      "code": "main.before-top-menu",
+      "code": "main.topbar-top",
       "context": "main",
-      "type": "before-top-menu",
+      "type": "topbar-top",
       "module": false,
-      "title": "Layout - before top menu",
+      "title": "Layout - at the top of the top bar",
       "file": "admin-layout.tpl",
-      "attributes": {"location": "before_top_menu"}
-    },
-    {
-      "block": true,
-      "code": "main.top-menu-customer",
-      "context": "main",
-      "type": "top-menu-customer",
-      "module": false,
-      "title": "Layout - in the menu customers",
-      "file": "admin-layout.tpl",
-      "attributes": {"fields": "id,class,url,title"}
-    },
-    {
-      "block": true,
-      "code": "main.top-menu-order",
-      "context": "main",
-      "type": "top-menu-order",
-      "module": false,
-      "title": "Layout - in the menu orders",
-      "file": "admin-layout.tpl",
-      "attributes": {"fields": "id,class,url,title"}
-    },
-    {
-      "block": true,
-      "code": "main.top-menu-catalog",
-      "context": "main",
-      "type": "top-menu-catalog",
-      "module": false,
-      "title": "Layout - in the menu catalog",
-      "file": "admin-layout.tpl",
-      "attributes": {"fields": "id,class,url,title"}
-    },
-    {
-      "block": true,
-      "code": "main.top-menu-content",
-      "context": "main",
-      "type": "top-menu-content",
-      "module": false,
-      "title": "Layout - in the menu folders",
-      "file": "admin-layout.tpl",
-      "attributes": {"fields": "id,class,url,title"}
-    },
-    {
-      "block": true,
-      "code": "main.top-menu-tools",
-      "context": "main",
-      "type": "top-menu-tools",
-      "module": false,
-      "title": "Layout - in the menu tools",
-      "file": "admin-layout.tpl",
-      "attributes": {"fields": "id,class,url,title"}
-    },
-    {
-      "block": true,
-      "code": "main.top-menu-modules",
-      "context": "main",
-      "type": "top-menu-modules",
-      "module": false,
-      "title": "Layout - in the menu modules",
-      "file": "admin-layout.tpl",
-      "attributes": {"fields": "id,class,url,title"}
-    },
-    {
-      "block": true,
-      "code": "main.top-menu-configuration",
-      "context": "main",
-      "type": "top-menu-configuration",
-      "module": false,
-      "title": "Layout - in the menu configuration",
-      "file": "admin-layout.tpl",
-      "attributes": {"fields": "id,class,url,title"}
+      "attributes": []
     },
     {
       "block": false,
-      "code": "main.in-top-menu-items",
+      "code": "main.topbar-bottom",
       "context": "main",
-      "type": "in-top-menu-items",
+      "type": "topbar-bottom",
       "module": false,
-      "title": "Layout - in top menu items",
+      "title": "Layout - at the bottom of the top bar",
       "file": "admin-layout.tpl",
-      "attributes": {"location": "in_top_menu_items"}
-    },
-    {
-      "block": false,
-      "code": "main.after-top-menu",
-      "context": "main",
-      "type": "after-top-menu",
-      "module": false,
-      "title": "Layout - after top menu",
-      "file": "admin-layout.tpl",
-      "attributes": {"location": "after_top_menu"}
+      "attributes": []
     },
     {
       "block": false,
@@ -385,6 +305,19 @@
   "attribute-edit.html": [
     {
       "block": false,
+      "code": "attributes-value.table-header",
+      "context": "attributes-value",
+      "type": "table-header",
+      "module": false,
+      "title": "Attributes value - table header",
+      "file": "attribute-edit.html",
+      "attributes": {
+        "location": "attributes_value_table_header",
+        "attribute_id": "$attribute_id"
+      }
+    },
+    {
+      "block": false,
       "code": "attributes-value.table-row",
       "context": "attributes-value",
       "type": "table-row",
@@ -395,6 +328,16 @@
         "location": "attributes_value_table_row",
         "attribute_id": "$attribute_id"
       }
+    },
+    {
+      "block": false,
+      "code": "attribute-edit.bottom",
+      "context": "attribute-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "attribute-edit - bottom",
+      "file": "attribute-edit.html",
+      "attributes": {"attribute_id": "$attribute_id"}
     },
     {
       "block": false,
@@ -434,16 +377,23 @@
     },
     {
       "block": false,
-      "code": "attributes-value.table-header",
-      "context": "attributes-value",
-      "type": "table-header",
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
       "module": false,
-      "title": "Attributes value - table header",
+      "title": "wysiwyg - JavaScript",
       "file": "attribute-edit.html",
-      "attributes": {
-        "location": "attributes_value_table_header",
-        "attribute_id": "$attribute_id"
-      }
+      "attributes": {"location": "wysiwyg-attribute-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "attribute-edit.top",
+      "context": "attribute-edit",
+      "type": "top",
+      "module": false,
+      "title": "attribute-edit - at the top",
+      "file": "attribute-edit.html",
+      "attributes": {"attribute_id": "$attribute_id"}
     }
   ],
   "attributes.html": [
@@ -543,6 +493,19 @@
   ],
   "brand-edit.html": [
     {
+      "block": true,
+      "code": "brand.tab",
+      "context": "brand",
+      "type": "tab",
+      "module": false,
+      "title": "Brand - tab",
+      "file": "brand-edit.html",
+      "attributes": {
+        "brand_id": "{$brand_id}",
+        "fields": "id,title,href,content"
+      }
+    },
+    {
       "block": false,
       "code": "brand.update-form",
       "context": "brand",
@@ -561,6 +524,16 @@
       "title": "Brand - content",
       "file": "brand-edit.html",
       "attributes": []
+    },
+    {
+      "block": false,
+      "code": "brand-edit.bottom",
+      "context": "brand-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "brand-edit - bottom",
+      "file": "brand-edit.html",
+      "attributes": {"brand_id": "$brand_id"}
     },
     {
       "block": false,
@@ -586,17 +559,14 @@
       "attributes": {"location": "wysiwyg-brand-edit-js"}
     },
     {
-      "block": true,
-      "code": "brand.tab",
-      "context": "brand",
-      "type": "tab",
+      "block": false,
+      "code": "brand-edit.top",
+      "context": "brand-edit",
+      "type": "top",
       "module": false,
-      "title": "Brand - tab",
+      "title": "brand-edit - at the top",
       "file": "brand-edit.html",
-      "attributes": {
-        "brand_id": "{$brand_id}",
-        "fields": "id,title,href,content"
-      }
+      "attributes": {"brand_id": "$brand_id"}
     }
   ],
   "brands.html": [
@@ -824,6 +794,19 @@
   ],
   "category-edit.html": [
     {
+      "block": true,
+      "code": "category.tab",
+      "context": "category",
+      "type": "tab",
+      "module": false,
+      "title": "Category - tab",
+      "file": "category-edit.html",
+      "attributes": {
+        "id": "{$category_id}",
+        "fields": "id,title,href,content"
+      }
+    },
+    {
       "block": false,
       "code": "category.contents-table-header",
       "context": "category",
@@ -858,6 +841,16 @@
     },
     {
       "block": false,
+      "code": "category-edit.bottom",
+      "context": "category-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "category-edit - bottom",
+      "file": "category-edit.html",
+      "attributes": {"category_id": "$category_id"}
+    },
+    {
+      "block": false,
       "code": "category.edit-js",
       "context": "category",
       "type": "edit-js",
@@ -880,17 +873,14 @@
       "attributes": {"location": "wysiwyg-category-edit-js"}
     },
     {
-      "block": true,
-      "code": "category.tab",
-      "context": "category",
-      "type": "tab",
+      "block": false,
+      "code": "category-edit.top",
+      "context": "category-edit",
+      "type": "top",
       "module": false,
-      "title": "Category - tab",
+      "title": "category-edit - at the top",
       "file": "category-edit.html",
-      "attributes": {
-        "id": "{$category_id}",
-        "fields": "id,title,href,content"
-      }
+      "attributes": {"category_id": "$category_id"}
     }
   ],
   "config-store.html": [
@@ -999,6 +989,19 @@
   ],
   "content-edit.html": [
     {
+      "block": true,
+      "code": "content.tab",
+      "context": "content",
+      "type": "tab",
+      "module": false,
+      "title": "Content - tab",
+      "file": "content-edit.html",
+      "attributes": {
+        "id": "{$content_id}",
+        "fields": "id,title,href,content"
+      }
+    },
+    {
       "block": false,
       "code": "content.tab-content",
       "context": "content",
@@ -1010,6 +1013,16 @@
         "id": "{$content_id}",
         "view": "content"
       }
+    },
+    {
+      "block": false,
+      "code": "content-edit.bottom",
+      "context": "content-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "content-edit - bottom",
+      "file": "content-edit.html",
+      "attributes": {"content_id": "$content_id"}
     },
     {
       "block": false,
@@ -1035,17 +1048,14 @@
       "attributes": {"location": "wysiwyg-content-edit-js"}
     },
     {
-      "block": true,
-      "code": "content.tab",
-      "context": "content",
-      "type": "tab",
+      "block": false,
+      "code": "content-edit.top",
+      "context": "content-edit",
+      "type": "top",
       "module": false,
-      "title": "Content - tab",
+      "title": "content-edit - at the top",
       "file": "content-edit.html",
-      "attributes": {
-        "id": "{$content_id}",
-        "fields": "id,title,href,content"
-      }
+      "attributes": {"content_id": "$content_id"}
     }
   ],
   "content-folder-management.html": [
@@ -1148,6 +1158,16 @@
   "country-edit.html": [
     {
       "block": false,
+      "code": "country-edit.bottom",
+      "context": "country-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "country-edit - bottom",
+      "file": "country-edit.html",
+      "attributes": {"country_id": "$country_id"}
+    },
+    {
+      "block": false,
       "code": "country.edit-js",
       "context": "country",
       "type": "edit-js",
@@ -1158,6 +1178,26 @@
         "location": "country-edit-js",
         "country_id": "$country_id"
       }
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "country-edit.html",
+      "attributes": {"location": "wysiwyg-country-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "country-edit.top",
+      "context": "country-edit",
+      "type": "top",
+      "module": false,
+      "title": "country-edit - at the top",
+      "file": "country-edit.html",
+      "attributes": {"country_id": "$country_id"}
     }
   ],
   "coupon-create.html": [
@@ -1360,6 +1400,16 @@
   "currency-edit.html": [
     {
       "block": false,
+      "code": "currency-edit.bottom",
+      "context": "currency-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "currency-edit - bottom",
+      "file": "currency-edit.html",
+      "attributes": {"currency_id": "$currency_id"}
+    },
+    {
+      "block": false,
       "code": "currency.edit-js",
       "context": "currency",
       "type": "edit-js",
@@ -1370,9 +1420,32 @@
         "location": "currency-edit-js",
         "currency_id": "{$currency_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "currency-edit.top",
+      "context": "currency-edit",
+      "type": "top",
+      "module": false,
+      "title": "currency-edit - at the top",
+      "file": "currency-edit.html",
+      "attributes": {"currency_id": "$currency_id"}
     }
   ],
   "customer-edit.html": [
+    {
+      "block": false,
+      "code": "customer.orders-table-header",
+      "context": "customer",
+      "type": "orders-table-header",
+      "module": false,
+      "title": "Customer - orders-table-header",
+      "file": "customer-edit.html",
+      "attributes": {
+        "location": "orders_table_header",
+        "customer_id": "$customer_id"
+      }
+    },
     {
       "block": false,
       "code": "customer.edit",
@@ -1385,6 +1458,16 @@
         "location": "customer-edit",
         "customer_id": "$customer_id"
       }
+    },
+    {
+      "block": false,
+      "code": "customer-edit.bottom",
+      "context": "customer-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "customer-edit - bottom",
+      "file": "customer-edit.html",
+      "attributes": {"customer_id": "$customer_id"}
     },
     {
       "block": false,
@@ -1440,16 +1523,13 @@
     },
     {
       "block": false,
-      "code": "customer.orders-table-header",
-      "context": "customer",
-      "type": "orders-table-header",
+      "code": "customer-edit.top",
+      "context": "customer-edit",
+      "type": "top",
       "module": false,
-      "title": "Customer - orders-table-header",
+      "title": "customer-edit - at the top",
       "file": "customer-edit.html",
-      "attributes": {
-        "location": "orders_table_header",
-        "customer_id": "$customer_id"
-      }
+      "attributes": {"customer_id": "$customer_id"}
     }
   ],
   "customers.html": [
@@ -1540,13 +1620,13 @@
   "document-edit.html": [
     {
       "block": false,
-      "code": "wysiwyg.js",
-      "context": "wysiwyg",
-      "type": "js",
+      "code": "document-edit.bottom",
+      "context": "document-edit",
+      "type": "bottom",
       "module": false,
-      "title": "wysiwyg - JavaScript",
+      "title": "document-edit - bottom",
       "file": "document-edit.html",
-      "attributes": {"location": "wysiwyg-document-edit-js"}
+      "attributes": {"document_id": "$documentId"}
     },
     {
       "block": false,
@@ -1560,9 +1640,98 @@
         "location": "document-edit-js",
         "document_id": "{$documentId}"
       }
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "document-edit.html",
+      "attributes": {"location": "wysiwyg-document-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "document-edit.top",
+      "context": "document-edit",
+      "type": "top",
+      "module": false,
+      "title": "document-edit - at the top",
+      "file": "document-edit.html",
+      "attributes": {"document_id": "$documentId"}
+    }
+  ],
+  "document-upload-form.html": [
+    {
+      "block": false,
+      "code": "tab-image.bottom",
+      "context": "tab-image",
+      "type": "bottom",
+      "module": false,
+      "title": "tab-image - bottom",
+      "file": "document-upload-form.html",
+      "attributes": {
+        "id": "$parentId",
+        "type": "$documentType"
+      }
+    },
+    {
+      "block": false,
+      "code": "tab-image.top",
+      "context": "tab-image",
+      "type": "top",
+      "module": false,
+      "title": "tab-image - at the top",
+      "file": "document-upload-form.html",
+      "attributes": {
+        "id": "$parentId",
+        "type": "$documentType"
+      }
+    }
+  ],
+  "export-modal.html": [
+    {
+      "block": false,
+      "code": "export.bottom",
+      "context": "export",
+      "type": "bottom",
+      "module": false,
+      "title": "Export - bottom",
+      "file": "export-modal.html",
+      "attributes": {
+        "type": "modal",
+        "id": "$ID"
+      }
+    },
+    {
+      "block": false,
+      "code": "export.top",
+      "context": "export",
+      "type": "top",
+      "module": false,
+      "title": "Export - at the top",
+      "file": "export-modal.html",
+      "attributes": {
+        "type": "modal",
+        "id": "$ID"
+      }
     }
   ],
   "export-page.html": [
+    {
+      "block": false,
+      "code": "export.bottom",
+      "context": "export",
+      "type": "bottom",
+      "module": false,
+      "title": "Export - bottom",
+      "file": "export-page.html",
+      "attributes": {
+        "type": "page",
+        "id": "$ID"
+      }
+    },
     {
       "block": false,
       "code": "export.js",
@@ -1572,9 +1741,42 @@
       "title": "Export - JavaScript",
       "file": "export-page.html",
       "attributes": {"location": "export-js"}
+    },
+    {
+      "block": false,
+      "code": "export.top",
+      "context": "export",
+      "type": "top",
+      "module": false,
+      "title": "Export - at the top",
+      "file": "export-page.html",
+      "attributes": {
+        "type": "page",
+        "id": "$ID"
+      }
     }
   ],
   "export.html": [
+    {
+      "block": false,
+      "code": "export.table-header",
+      "context": "export",
+      "type": "table-header",
+      "module": false,
+      "title": "Export - table header",
+      "file": "export.html",
+      "attributes": []
+    },
+    {
+      "block": false,
+      "code": "export.table-row",
+      "context": "export",
+      "type": "table-row",
+      "module": false,
+      "title": "Export - table row",
+      "file": "export.html",
+      "attributes": {"export_id": "$ID"}
+    },
     {
       "block": false,
       "code": "exports.row",
@@ -1619,6 +1821,16 @@
   "feature-edit.html": [
     {
       "block": false,
+      "code": "features-value.table-header",
+      "context": "features-value",
+      "type": "table-header",
+      "module": false,
+      "title": "Features value - table header",
+      "file": "feature-edit.html",
+      "attributes": {"location": "features_value_table_header"}
+    },
+    {
+      "block": false,
       "code": "features-value.table-row",
       "context": "features-value",
       "type": "table-row",
@@ -1629,6 +1841,16 @@
         "location": "features_value_table_row",
         "feature_id": "{$feature_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "feature-edit.bottom",
+      "context": "feature-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "feature-edit - bottom",
+      "file": "feature-edit.html",
+      "attributes": {"feature_id": "$feature_id"}
     },
     {
       "block": false,
@@ -1658,13 +1880,23 @@
     },
     {
       "block": false,
-      "code": "features-value.table-header",
-      "context": "features-value",
-      "type": "table-header",
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
       "module": false,
-      "title": "Features value - table header",
+      "title": "wysiwyg - JavaScript",
       "file": "feature-edit.html",
-      "attributes": {"location": "features_value_table_header"}
+      "attributes": {"location": "wysiwyg-feature-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "feature-edit.top",
+      "context": "feature-edit",
+      "type": "top",
+      "module": false,
+      "title": "feature-edit - at the top",
+      "file": "feature-edit.html",
+      "attributes": {"feature_id": "$feature_id"}
     }
   ],
   "features.html": [
@@ -1764,6 +1996,19 @@
   ],
   "folder-edit.html": [
     {
+      "block": true,
+      "code": "folder.tab",
+      "context": "folder",
+      "type": "tab",
+      "module": false,
+      "title": "Folder - tab",
+      "file": "folder-edit.html",
+      "attributes": {
+        "id": "{$folder_id}",
+        "fields": "id,title,href,content"
+      }
+    },
+    {
       "block": false,
       "code": "folder.tab-content",
       "context": "folder",
@@ -1775,6 +2020,16 @@
         "id": "{$folder_id}",
         "view": "folder"
       }
+    },
+    {
+      "block": false,
+      "code": "folder-edit.bottom",
+      "context": "folder-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "folder-edit - bottom",
+      "file": "folder-edit.html",
+      "attributes": {"folder_id": "$folder_id"}
     },
     {
       "block": false,
@@ -1800,17 +2055,14 @@
       "attributes": {"location": "wysiwyg-folder-edit-js"}
     },
     {
-      "block": true,
-      "code": "folder.tab",
-      "context": "folder",
-      "type": "tab",
+      "block": false,
+      "code": "folder-edit.top",
+      "context": "folder-edit",
+      "type": "top",
       "module": false,
-      "title": "Folder - tab",
+      "title": "folder-edit - at the top",
       "file": "folder-edit.html",
-      "attributes": {
-        "id": "{$folder_id}",
-        "fields": "id,title,href,content"
-      }
+      "attributes": {"folder_id": "$folder_id"}
     }
   ],
   "folders.html": [
@@ -1993,6 +2245,16 @@
   "hook-edit.html": [
     {
       "block": false,
+      "code": "hook-edit.bottom",
+      "context": "hook-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "hook-edit - bottom",
+      "file": "hook-edit.html",
+      "attributes": {"hook_id": "$hook_id"}
+    },
+    {
+      "block": false,
       "code": "hook.edit-js",
       "context": "hook",
       "type": "edit-js",
@@ -2003,6 +2265,26 @@
         "location": "hook-edit-js",
         "hook_id": "{$hook_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "hook-edit.html",
+      "attributes": {"location": "wysiwyg-hook-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "hook-edit.top",
+      "context": "hook-edit",
+      "type": "top",
+      "module": false,
+      "title": "hook-edit - at the top",
+      "file": "hook-edit.html",
+      "attributes": {"hook_id": "$hook_id"}
     }
   ],
   "hooks.html": [
@@ -2083,13 +2365,13 @@
   "image-edit.html": [
     {
       "block": false,
-      "code": "wysiwyg.js",
-      "context": "wysiwyg",
-      "type": "js",
+      "code": "image-edit.bottom",
+      "context": "image-edit",
+      "type": "bottom",
       "module": false,
-      "title": "wysiwyg - JavaScript",
+      "title": "image-edit - bottom",
       "file": "image-edit.html",
-      "attributes": {"location": "wysiwyg-image-edit-js"}
+      "attributes": {"image_id": "$imageId"}
     },
     {
       "block": false,
@@ -2103,6 +2385,54 @@
         "location": "image-edit-js",
         "source": "{$imageType}",
         "image_id": "{$imageId}"
+      }
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "image-edit.html",
+      "attributes": {"location": "wysiwyg-image-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "image-edit.top",
+      "context": "image-edit",
+      "type": "top",
+      "module": false,
+      "title": "image-edit - at the top",
+      "file": "image-edit.html",
+      "attributes": {"image_id": "$imageId"}
+    }
+  ],
+  "image-upload-form.html": [
+    {
+      "block": false,
+      "code": "tab-image.bottom",
+      "context": "tab-image",
+      "type": "bottom",
+      "module": false,
+      "title": "tab-image - bottom",
+      "file": "image-upload-form.html",
+      "attributes": {
+        "id": "$parentId",
+        "type": "$imageType"
+      }
+    },
+    {
+      "block": false,
+      "code": "tab-image.top",
+      "context": "tab-image",
+      "type": "top",
+      "module": false,
+      "title": "tab-image - at the top",
+      "file": "image-upload-form.html",
+      "attributes": {
+        "id": "$parentId",
+        "type": "$imageType"
       }
     }
   ],
@@ -2119,6 +2449,26 @@
     }
   ],
   "import.html": [
+    {
+      "block": false,
+      "code": "import.table-header",
+      "context": "import",
+      "type": "table-header",
+      "module": false,
+      "title": "import - table header",
+      "file": "import.html",
+      "attributes": []
+    },
+    {
+      "block": false,
+      "code": "import.table-row",
+      "context": "import",
+      "type": "table-row",
+      "module": false,
+      "title": "import - table row",
+      "file": "import.html",
+      "attributes": {"import_id": "$ID"}
+    },
     {
       "block": false,
       "code": "imports.row",
@@ -2276,7 +2626,119 @@
       "attributes": {"location": "mailing_system_top"}
     }
   ],
+  "main-menu.html": [
+    {
+      "block": true,
+      "code": "main.top-menu-customer",
+      "context": "main",
+      "type": "top-menu-customer",
+      "module": false,
+      "title": "Layout - in the menu customers",
+      "file": "main-menu.html",
+      "attributes": {"fields": "id,class,url,title"}
+    },
+    {
+      "block": true,
+      "code": "main.top-menu-order",
+      "context": "main",
+      "type": "top-menu-order",
+      "module": false,
+      "title": "Layout - in the menu orders",
+      "file": "main-menu.html",
+      "attributes": {"fields": "id,class,url,title"}
+    },
+    {
+      "block": true,
+      "code": "main.top-menu-catalog",
+      "context": "main",
+      "type": "top-menu-catalog",
+      "module": false,
+      "title": "Layout - in the menu catalog",
+      "file": "main-menu.html",
+      "attributes": {"fields": "id,class,url,title"}
+    },
+    {
+      "block": true,
+      "code": "main.top-menu-content",
+      "context": "main",
+      "type": "top-menu-content",
+      "module": false,
+      "title": "Layout - in the menu folders",
+      "file": "main-menu.html",
+      "attributes": {"fields": "id,class,url,title"}
+    },
+    {
+      "block": true,
+      "code": "main.top-menu-tools",
+      "context": "main",
+      "type": "top-menu-tools",
+      "module": false,
+      "title": "Layout - in the menu tools",
+      "file": "main-menu.html",
+      "attributes": {"fields": "id,class,url,title"}
+    },
+    {
+      "block": true,
+      "code": "main.top-menu-modules",
+      "context": "main",
+      "type": "top-menu-modules",
+      "module": false,
+      "title": "Layout - in the menu modules",
+      "file": "main-menu.html",
+      "attributes": {"fields": "id,class,url,title"}
+    },
+    {
+      "block": true,
+      "code": "main.top-menu-configuration",
+      "context": "main",
+      "type": "top-menu-configuration",
+      "module": false,
+      "title": "Layout - in the menu configuration",
+      "file": "main-menu.html",
+      "attributes": {"fields": "id,class,url,title"}
+    },
+    {
+      "block": false,
+      "code": "main.in-top-menu-items",
+      "context": "main",
+      "type": "in-top-menu-items",
+      "module": false,
+      "title": "Layout - in top menu items",
+      "file": "main-menu.html",
+      "attributes": {"location": "in_top_menu_items"}
+    },
+    {
+      "block": false,
+      "code": "main.after-top-menu",
+      "context": "main",
+      "type": "after-top-menu",
+      "module": false,
+      "title": "Layout - after top menu",
+      "file": "main-menu.html",
+      "attributes": {"location": "after_top_menu"}
+    },
+    {
+      "block": false,
+      "code": "main.before-top-menu",
+      "context": "main",
+      "type": "before-top-menu",
+      "module": false,
+      "title": "Layout - before top menu",
+      "file": "main-menu.html",
+      "attributes": {"location": "before_top_menu"}
+    }
+  ],
   "message-edit.html": [
+    {
+      "block": false,
+      "code": "message-edit.bottom",
+      "context": "message-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "message-edit - bottom",
+      "file": "message-edit.html",
+      "attributes": {"message_id": "$message_id"}
+    },
     {
       "block": false,
       "code": "message.edit-js",
@@ -2289,6 +2751,16 @@
         "location": "message-edit-js",
         "message_id": "{$message_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "message-edit.top",
+      "context": "message-edit",
+      "type": "top",
+      "module": false,
+      "title": "message-edit - at the top",
+      "file": "message-edit.html",
+      "attributes": {"message_id": "$message_id"}
     }
   ],
   "messages.html": [
@@ -2429,6 +2901,16 @@
   "module-edit.html": [
     {
       "block": false,
+      "code": "module-edit.bottom",
+      "context": "module-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "module-edit - bottom",
+      "file": "module-edit.html",
+      "attributes": {"module_id": "$module_id"}
+    },
+    {
+      "block": false,
       "code": "module.edit-js",
       "context": "module",
       "type": "edit-js",
@@ -2439,9 +2921,39 @@
         "location": "module-edit-js",
         "module_id": "{$module_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "module-edit.html",
+      "attributes": {"location": "wysiwyg-module-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "module-edit.top",
+      "context": "module-edit",
+      "type": "top",
+      "module": false,
+      "title": "module-edit - at the top",
+      "file": "module-edit.html",
+      "attributes": {"module_id": "$module_id"}
     }
   ],
   "module-hook-edit.html": [
+    {
+      "block": false,
+      "code": "module-hook-edit.bottom",
+      "context": "module-hook-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "module-hook-edit - bottom",
+      "file": "module-hook-edit.html",
+      "attributes": {"module_hook_id": "$module_hook_id"}
+    },
     {
       "block": false,
       "code": "module-hook.edit-js",
@@ -2454,6 +2966,16 @@
         "location": "module-hook-edit-js",
         "module_hook_id": "{$module_hook_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "module-hook-edit.top",
+      "context": "module-hook-edit",
+      "type": "top",
+      "module": false,
+      "title": "module-hook-edit - at the top",
+      "file": "module-hook-edit.html",
+      "attributes": {"module_hook_id": "$module_hook_id"}
     }
   ],
   "module-hooks.html": [
@@ -2521,6 +3043,32 @@
     }
   ],
   "order-edit.html": [
+    {
+      "block": true,
+      "code": "order.tab",
+      "context": "order",
+      "type": "tab",
+      "module": false,
+      "title": "Order - tab",
+      "file": "order-edit.html",
+      "attributes": {
+        "id": "{$order_id}",
+        "fields": "id,title,href,content"
+      }
+    },
+    {
+      "block": false,
+      "code": "order-edit.cart-top",
+      "context": "order-edit",
+      "type": "cart-top",
+      "module": false,
+      "title": "order-edit - cart-top",
+      "file": "order-edit.html",
+      "attributes": {
+        "location": "order-edit-cart-top",
+        "order_id": "$order_id"
+      }
+    },
     {
       "block": false,
       "code": "order-edit.before-order-product-list",
@@ -2591,6 +3139,32 @@
     },
     {
       "block": false,
+      "code": "order-edit.customer-information-bottom",
+      "context": "order-edit",
+      "type": "customer-information-bottom",
+      "module": false,
+      "title": "order-edit - customer-information-bottom",
+      "file": "order-edit.html",
+      "attributes": {
+        "order_id": "$order_id",
+        "customer_id": "$CUSTOMER"
+      }
+    },
+    {
+      "block": false,
+      "code": "order-edit.payment-module-bottom",
+      "context": "order-edit",
+      "type": "payment-module-bottom",
+      "module": false,
+      "title": "order-edit - payment-module-bottom",
+      "file": "order-edit.html",
+      "attributes": {
+        "order_id": "$order_id",
+        "module_id": "$PAYMENT_MODULE"
+      }
+    },
+    {
+      "block": false,
       "code": "order-edit.cart-bottom",
       "context": "order-edit",
       "type": "cart-bottom",
@@ -2613,6 +3187,19 @@
       "attributes": {
         "location": "order-edit-bill-top",
         "order_id": "$order_id"
+      }
+    },
+    {
+      "block": false,
+      "code": "order-edit.delivery-module-bottom",
+      "context": "order-edit",
+      "type": "delivery-module-bottom",
+      "module": false,
+      "title": "order-edit - delivery-module-bottom",
+      "file": "order-edit.html",
+      "attributes": {
+        "order_id": "$order_id",
+        "module_id": "$DELIVERY_MODULE"
       }
     },
     {
@@ -2650,6 +3237,16 @@
     },
     {
       "block": false,
+      "code": "order-edit.bottom",
+      "context": "order-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "order-edit - bottom",
+      "file": "order-edit.html",
+      "attributes": {"order_id": "$order_id"}
+    },
+    {
+      "block": false,
       "code": "order.edit-js",
       "context": "order",
       "type": "edit-js",
@@ -2663,16 +3260,13 @@
     },
     {
       "block": false,
-      "code": "order-edit.cart-top",
+      "code": "order-edit.top",
       "context": "order-edit",
-      "type": "cart-top",
+      "type": "top",
       "module": false,
-      "title": "order-edit - cart-top",
+      "title": "order-edit - at the top",
       "file": "order-edit.html",
-      "attributes": {
-        "location": "order-edit-cart-top",
-        "order_id": "$order_id"
-      }
+      "attributes": {"order_id": "$order_id"}
     }
   ],
   "orders.html": [
@@ -2774,6 +3368,19 @@
   ],
   "product-edit.html": [
     {
+      "block": true,
+      "code": "product.tab",
+      "context": "product",
+      "type": "tab",
+      "module": false,
+      "title": "Product - tab",
+      "file": "product-edit.html",
+      "attributes": {
+        "id": "{$product_id}",
+        "fields": "id,title,href,content"
+      }
+    },
+    {
       "block": false,
       "code": "product.tab-content",
       "context": "product",
@@ -2785,6 +3392,16 @@
         "id": "{$product_id}",
         "view": "product"
       }
+    },
+    {
+      "block": false,
+      "code": "product-edit.bottom",
+      "context": "product-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "product-edit - bottom",
+      "file": "product-edit.html",
+      "attributes": {"product_id": "$product_id"}
     },
     {
       "block": false,
@@ -2810,17 +3427,14 @@
       "attributes": {"location": "wysiwyg-product-edit-js"}
     },
     {
-      "block": true,
-      "code": "product.tab",
-      "context": "product",
-      "type": "tab",
+      "block": false,
+      "code": "product-edit.top",
+      "context": "product-edit",
+      "type": "top",
       "module": false,
-      "title": "Product - tab",
+      "title": "product-edit - at the top",
       "file": "product-edit.html",
-      "attributes": {
-        "id": "{$product_id}",
-        "fields": "id,title,href,content"
-      }
+      "attributes": {"product_id": "$product_id"}
     }
   ],
   "product-prices-tab.html": [
@@ -2980,6 +3594,16 @@
   "profile-edit.html": [
     {
       "block": false,
+      "code": "profile-edit.bottom",
+      "context": "profile-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "profile-edit - bottom",
+      "file": "profile-edit.html",
+      "attributes": {"profile_id": "$profile_id"}
+    },
+    {
+      "block": false,
       "code": "profile.edit-js",
       "context": "profile",
       "type": "edit-js",
@@ -2990,9 +3614,49 @@
         "location": "profile-edit-js",
         "profile_id": "{$profile_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "profile-edit.html",
+      "attributes": {"location": "wysiwyg-profile-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "profile-edit.top",
+      "context": "profile-edit",
+      "type": "top",
+      "module": false,
+      "title": "profile-edit - at the top",
+      "file": "profile-edit.html",
+      "attributes": {"profile_id": "$profile_id"}
     }
   ],
   "profiles.html": [
+    {
+      "block": false,
+      "code": "profile.table-header",
+      "context": "profile",
+      "type": "table-header",
+      "module": false,
+      "title": "Profile - table header",
+      "file": "profiles.html",
+      "attributes": []
+    },
+    {
+      "block": false,
+      "code": "profile.table-row",
+      "context": "profile",
+      "type": "table-row",
+      "module": false,
+      "title": "Profile - table row",
+      "file": "profiles.html",
+      "attributes": {"profile_id": "$ID"}
+    },
     {
       "block": false,
       "code": "profiles.bottom",
@@ -3035,6 +3699,16 @@
     },
     {
       "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "profiles.html",
+      "attributes": {"location": "wysiwyg-profiles-js"}
+    },
+    {
+      "block": false,
       "code": "profiles.top",
       "context": "profiles",
       "type": "top",
@@ -3047,13 +3721,13 @@
   "sale-edit.html": [
     {
       "block": false,
-      "code": "wysiwyg.js",
-      "context": "wysiwyg",
-      "type": "js",
+      "code": "sale-edit.bottom",
+      "context": "sale-edit",
+      "type": "bottom",
       "module": false,
-      "title": "wysiwyg - JavaScript",
+      "title": "sale-edit - bottom",
       "file": "sale-edit.html",
-      "attributes": {"location": "wysiwyg-sale-edit-js"}
+      "attributes": {"sale_id": "$sale_id"}
     },
     {
       "block": false,
@@ -3067,6 +3741,26 @@
         "location": "sale-edit-js",
         "sale_id": "{$sale_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "sale-edit.html",
+      "attributes": {"location": "wysiwyg-sale-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "sale-edit.top",
+      "context": "sale-edit",
+      "type": "top",
+      "module": false,
+      "title": "sale-edit - at the top",
+      "file": "sale-edit.html",
+      "attributes": {"sale_id": "$sale_id"}
     }
   ],
   "sales.html": [
@@ -3177,6 +3871,16 @@
     },
     {
       "block": false,
+      "code": "customer.delete-form",
+      "context": "customer",
+      "type": "delete-form",
+      "module": false,
+      "title": "Customer - delete form",
+      "file": "search.html",
+      "attributes": {"location": "customer_delete_form"}
+    },
+    {
+      "block": false,
       "code": "search.js",
       "context": "search",
       "type": "js",
@@ -3196,7 +3900,58 @@
       "attributes": {"location": "search_top"}
     }
   ],
+  "seo-tab.html": [
+    {
+      "block": false,
+      "code": "tab-seo.bottom",
+      "context": "tab-seo",
+      "type": "bottom",
+      "module": false,
+      "title": "tab-seo - bottom",
+      "file": "seo-tab.html",
+      "attributes": {
+        "id": "$parentId",
+        "type": "$seoType"
+      }
+    },
+    {
+      "block": false,
+      "code": "tab-seo.top",
+      "context": "tab-seo",
+      "type": "top",
+      "module": false,
+      "title": "tab-seo - at the top",
+      "file": "seo-tab.html",
+      "attributes": {
+        "id": "$parentId",
+        "type": "$seoType"
+      }
+    }
+  ],
   "shipping-configuration-edit.html": [
+    {
+      "block": false,
+      "code": "shipping-configuration.edit",
+      "context": "shipping-configuration",
+      "type": "edit",
+      "module": false,
+      "title": "Shipping configuration - Edit",
+      "file": "shipping-configuration-edit.html",
+      "attributes": {
+        "location": "shipping-configuration-edit",
+        "area_id": "{$area_id}"
+      }
+    },
+    {
+      "block": false,
+      "code": "shipping-configuration-edit.bottom",
+      "context": "shipping-configuration-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "shipping-configuration-edit - bottom",
+      "file": "shipping-configuration-edit.html",
+      "attributes": {"area_id": "$area_id"}
+    },
     {
       "block": false,
       "code": "shipping-configuration.country-delete-form",
@@ -3222,16 +3977,13 @@
     },
     {
       "block": false,
-      "code": "shipping-configuration.edit",
-      "context": "shipping-configuration",
-      "type": "edit",
+      "code": "shipping-configuration-edit.top",
+      "context": "shipping-configuration-edit",
+      "type": "top",
       "module": false,
-      "title": "Shipping configuration - Edit",
+      "title": "shipping-configuration-edit - at the top",
       "file": "shipping-configuration-edit.html",
-      "attributes": {
-        "location": "shipping-configuration-edit",
-        "area_id": "{$area_id}"
-      }
+      "attributes": {"area_id": "$area_id"}
     }
   ],
   "shipping-configuration.html": [
@@ -3312,16 +4064,13 @@
   "shipping-zones-edit.html": [
     {
       "block": false,
-      "code": "shipping-zones.edit-js",
-      "context": "shipping-zones",
-      "type": "edit-js",
+      "code": "shipping-zones-edit.bottom",
+      "context": "shipping-zones-edit",
+      "type": "bottom",
       "module": false,
-      "title": "Delivery zone - Edit JavaScript",
+      "title": "shipping-zones-edit - bottom",
       "file": "shipping-zones-edit.html",
-      "attributes": {
-        "location": "shipping-zones-edit-js",
-        "module_id": "{$delivery_module_id}"
-      }
+      "attributes": {"delivery_module_id": "$delivery_module_id"}
     },
     {
       "block": false,
@@ -3335,6 +4084,29 @@
         "location": "zone_delete_form",
         "module_id": "{$delivery_module_id}"
       }
+    },
+    {
+      "block": false,
+      "code": "shipping-zones.edit-js",
+      "context": "shipping-zones",
+      "type": "edit-js",
+      "module": false,
+      "title": "Delivery zone - Edit JavaScript",
+      "file": "shipping-zones-edit.html",
+      "attributes": {
+        "location": "shipping-zones-edit-js",
+        "module_id": "{$delivery_module_id}"
+      }
+    },
+    {
+      "block": false,
+      "code": "shipping-zones-edit.top",
+      "context": "shipping-zones-edit",
+      "type": "top",
+      "module": false,
+      "title": "shipping-zones-edit - at the top",
+      "file": "shipping-zones-edit.html",
+      "attributes": {"delivery_module_id": "$delivery_module_id"}
     }
   ],
   "shipping-zones.html": [
@@ -3407,6 +4179,16 @@
   "tax-edit.html": [
     {
       "block": false,
+      "code": "tax-edit.bottom",
+      "context": "tax-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "tax-edit - bottom",
+      "file": "tax-edit.html",
+      "attributes": {"tax_id": "$tax_id"}
+    },
+    {
+      "block": false,
       "code": "tax.edit-js",
       "context": "tax",
       "type": "edit-js",
@@ -3414,9 +4196,52 @@
       "title": "Tax - Edit JavaScript",
       "file": "tax-edit.html",
       "attributes": {"location": "tax-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "tax-edit.html",
+      "attributes": {"location": "wysiwyg-tax-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "tax-edit.top",
+      "context": "tax-edit",
+      "type": "top",
+      "module": false,
+      "title": "tax-edit - at the top",
+      "file": "tax-edit.html",
+      "attributes": {"tax_id": "$tax_id"}
     }
   ],
   "tax-rule-edit.html": [
+    {
+      "block": false,
+      "code": "tax-rule-edit.bottom",
+      "context": "tax-rule-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "tax-rule-edit - bottom",
+      "file": "tax-rule-edit.html",
+      "attributes": {"tax_rule_id": "$tax_rule_id"}
+    },
+    {
+      "block": false,
+      "code": "taxes.update-form",
+      "context": "taxes",
+      "type": "update-form",
+      "module": false,
+      "title": "Taxes - update form",
+      "file": "tax-rule-edit.html",
+      "attributes": {
+        "location": "tax_list_update_form",
+        "tax_rule_id": "{$tax_rule_id}"
+      }
+    },
     {
       "block": false,
       "code": "tax-rule.edit-js",
@@ -3432,16 +4257,23 @@
     },
     {
       "block": false,
-      "code": "taxes.update-form",
-      "context": "taxes",
-      "type": "update-form",
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
       "module": false,
-      "title": "Taxes - update form",
+      "title": "wysiwyg - JavaScript",
       "file": "tax-rule-edit.html",
-      "attributes": {
-        "location": "tax_list_update_form",
-        "tax_rule_id": "{$tax_rule_id}"
-      }
+      "attributes": {"location": "wysiwyg-tax-rule-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "tax-rule-edit.top",
+      "context": "tax-rule-edit",
+      "type": "top",
+      "module": false,
+      "title": "tax-rule-edit - at the top",
+      "file": "tax-rule-edit.html",
+      "attributes": {"tax_rule_id": "$tax_rule_id"}
     }
   ],
   "taxes-rules.html": [
@@ -3507,6 +4339,16 @@
     },
     {
       "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "taxes-rules.html",
+      "attributes": {"location": "wysiwyg-tax-rules-js"}
+    },
+    {
+      "block": false,
       "code": "taxes-rules.top",
       "context": "taxes-rules",
       "type": "top",
@@ -3541,6 +4383,16 @@
   "template-edit.html": [
     {
       "block": false,
+      "code": "template-edit.bottom",
+      "context": "template-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "template-edit - bottom",
+      "file": "template-edit.html",
+      "attributes": {"template_id": "$template_id"}
+    },
+    {
+      "block": false,
       "code": "template.edit-js",
       "context": "template",
       "type": "edit-js",
@@ -3548,6 +4400,16 @@
       "title": "Template - Edit JavaScript",
       "file": "template-edit.html",
       "attributes": {"location": "template-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "template-edit.top",
+      "context": "template-edit",
+      "type": "top",
+      "module": false,
+      "title": "template-edit - at the top",
+      "file": "template-edit.html",
+      "attributes": {"template_id": "$template_id"}
     }
   ],
   "template-feature-list.html": [
@@ -3591,7 +4453,10 @@
       "module": false,
       "title": "Templates - table row",
       "file": "templates.html",
-      "attributes": {"location": "templates_table_row"}
+      "attributes": {
+        "location": "templates_table_row",
+        "template_id": "$ID"
+      }
     },
     {
       "block": false,
@@ -3711,6 +4576,16 @@
   "variable-edit.html": [
     {
       "block": false,
+      "code": "variables-edit.bottom",
+      "context": "variables-edit",
+      "type": "bottom",
+      "module": false,
+      "title": "variables-edit - bottom",
+      "file": "variable-edit.html",
+      "attributes": {"variable_id": "$variable_id"}
+    },
+    {
+      "block": false,
       "code": "variable.edit-js",
       "context": "variable",
       "type": "edit-js",
@@ -3718,6 +4593,26 @@
       "title": "Variable - Edit JavaScript",
       "file": "variable-edit.html",
       "attributes": {"location": "variable-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "wysiwyg.js",
+      "context": "wysiwyg",
+      "type": "js",
+      "module": false,
+      "title": "wysiwyg - JavaScript",
+      "file": "variable-edit.html",
+      "attributes": {"location": "wysiwyg-variable-edit-js"}
+    },
+    {
+      "block": false,
+      "code": "variables-edit.top",
+      "context": "variables-edit",
+      "type": "top",
+      "module": false,
+      "title": "variables-edit - at the top",
+      "file": "variable-edit.html",
+      "attributes": {"variable_id": "$variable_id"}
     }
   ],
   "variables.html": [
