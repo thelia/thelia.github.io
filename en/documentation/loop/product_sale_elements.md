@@ -24,6 +24,8 @@ arguments:
                 {name: "new",               description: "new products first"},
                 {name: "quantity",          description: "ascending quantity"},
                 {name: "quantity_reverse",  description: "descending quantity"},
+                {name: "weight",            description: "ascending weight",        from_version: "2.2"},
+                {name: "weight_reverse",    description: "descending weight",       from_version: "2.2"},
                 {name: "random",            description: ""}
             ]
           }
