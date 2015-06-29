@@ -32,6 +32,10 @@
                     <tr>
                         <td>
                             {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+                            {% if argument.from_version != nil AND argument.from_version != '' %}
+                            <br/>
+                            <span class="label label-default">Thelia >= {{ argument.from_version }}</span>
+                            {% endif %}
                         </td>
                         <td>
                             <p>{{ argument.description }}</p>
@@ -41,7 +45,12 @@
                                 Expected values :
                                 <ul>
                                     {% for expected_value in argument.expected_values %}
-                                    <li>{{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}</li>
+                                    <li>
+                                        {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
+                                        {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
+                                        <span class="label label-default">Thelia >= {{ expected_value.from_version }}</span>
+                                        {% endif %}
+                                    </li>
                                     {% endfor %}
                                 </ul>
                             </div>
