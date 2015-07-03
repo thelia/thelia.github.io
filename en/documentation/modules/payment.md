@@ -29,8 +29,8 @@ Once the customer has put some products in his cart, logged-in (or created his a
 
 In the standard front-office template, three template files provides a common and standard way to interact with the customer :
 
-- `order-failed.html`, to tell the customer his payment is successful. 
-- `order-placed.html`, to tell the customer his payment failed, and offer a way to try again.
+- `order-placed.html`, to tell the customer his payment is successful.
+- `order-failed.html`, to tell the customer his payment failed, and offer a way to try again.
 - `order-payment-gateway.html`, to provide a standard template to submit data to the payment gateway. This template file is not used by modules that do not send form-data to payment gateway.
 
 These templates allow an immediate module integration in a shop template, but it's always possible for a module to provide its own templates.
