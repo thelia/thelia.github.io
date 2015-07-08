@@ -9,16 +9,21 @@ uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
 type: lang
 arguments :
-    - {name: "id", description: "A single lang id.", example: "id=\"2\""}
+    - {name: "id", description: "A single or list of lang ids.", example: "id=\"2\""}
     - {name: "exclude", description: "A single or list of lang ids.", example: "exclude=\"2\", exclude=\"1,3\""}
-    - {name: "default_only", description: "search only default lang", default: "false", example: "default_only=\"true\""}
+    - {name: "code", description: "A single or list of lang code.", example: "code=\"fr\", code=\"fr,en\""}
+    - {name: "locale", description: "A single or list of lang locale.", example: "code=\"fr_FR\", code=\"fr_FR,fr_CA\""}
+    - {name: "default_only", description: "returns only the default language", default: "false", example: "default_only=\"true\""}
+    - - {name: "exclude_default", description: "exclude the default language from results", default: "false", example: "exclude_default=\"true\""}
     - {
-      name: "order", description: "A list of values", example: "order=\"reference-reverse\"", default: "create-date-reverse",
+      name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "position",
       expected_values: [
-          {name: "id",           description: "id order"},
-          {name: "id_reverse",           description: "reverse id order"},
-          {name: "alpha",           description: "alpha order"},
-          {name: "alpha_reverse",           description: "alpha order reverse"}
+          {name: "id",           description: "sort results by ascending id order"},
+          {name: "id_reverse",   description: "sort result by descending id order"},
+          {name: "alpha",        description: "sort results by lang title ascending alphabetic order"},
+          {name: "alpha_reverse", description: "sort results by lang title descending alphabetic order"},
+          {name: "position",         description: "sort result by ascending position order"},
+          {name: "position_reverse", description: "sort result by descending position order"}
       ]
     }
 
@@ -27,8 +32,13 @@ outputs :
     - {name: "$TITLE", description: "lang title"}
     - {name: "$CODE", description: "lang code, example : fr"}
     - {name: "$LOCALE", description: "lang locale, example : fr_FR"}
-    - {name: "$URL", description: "lang url id one domain for each lang is used"}
-    - {name: "$IS_DEFAULT", description: "check if the current is the default one"}
+    - {name: "$URL", description: "the lang URL, only if a specific URL is defined for each lang"}
+    - {name: "$IS_DEFAULT", description: "check if the current result is the default one"}
+    - {name: "$DATE_FORMAT", description: "the lang date format"}
+    - {name: "$TIME_FORMAT", description: "the lang time format"}
+    - {name: "$DECIMAL_SEPARATOR", description: "the lang decimal separator, such as , or ."}
+    - {name: "$THOUSANDS_SEPARATOR", description: "the lang thousangs separator"}
+    - {name: "$DECIMAL_COUNT", description: "the number of digits after the decimal separator"}
     - {name: "$POSITION", description: "lang position"}
 
 
