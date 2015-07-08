@@ -1,4 +1,11 @@
 ---
+redirect_from:
+    - /fr/
+    - /fr/documentation/configuration.html
+    - /fr/documentation/installation/index.html
+    - /fr/documentation/contribuer.html
+    - /fr/documentation/modules/index.html
+    - /fr/documentation/installation/avancee.html
 layout: welcome
 title: Welcome
 meta:
