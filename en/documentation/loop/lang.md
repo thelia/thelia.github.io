@@ -11,10 +11,10 @@ type: lang
 arguments :
     - {name: "id", description: "A single or list of lang ids.", example: "id=\"2\""}
     - {name: "exclude", description: "A single or list of lang ids.", example: "exclude=\"2\", exclude=\"1,3\""}
-    - {name: "code", description: "A single or list of lang code.", example: "code=\"fr\", code=\"fr,en\""}
-    - {name: "locale", description: "A single or list of lang locale.", example: "code=\"fr_FR\", code=\"fr_FR,fr_CA\""}
-    - {name: "default_only", description: "returns only the default language", default: "false", example: "default_only=\"true\""}
-    - - {name: "exclude_default", description: "exclude the default language from results", default: "false", example: "exclude_default=\"true\""}
+    - {name: "code", description: "A single or list of lang code.", example: "code=\"fr\", code=\"fr,en\"", from_version: \"2.2\"}
+    - {name: "locale", description: "A single or list of lang locale.", example: "code=\"fr_FR\", code=\"fr_FR,fr_CA\"", from_version: \"2.2\"}
+    - {name: "default_only", description: "returns only the default language", default: "false", example: "default_only=\"true\"", from_version: \"2.2\"}
+    - {name: "exclude_default", description: "exclude the default language from results", default: "false", example: "exclude_default=\"true\""}
     - {
       name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "position",
       expected_values: [
@@ -36,9 +36,9 @@ outputs :
     - {name: "$IS_DEFAULT", description: "check if the current result is the default one"}
     - {name: "$DATE_FORMAT", description: "the lang date format"}
     - {name: "$TIME_FORMAT", description: "the lang time format"}
-    - {name: "$DECIMAL_SEPARATOR", description: "the lang decimal separator, such as , or ."}
-    - {name: "$THOUSANDS_SEPARATOR", description: "the lang thousangs separator"}
-    - {name: "$DECIMAL_COUNT", description: "the number of digits after the decimal separator"}
+    - {name: "$DECIMAL_SEPARATOR", description: "the lang decimal separator, such as , or .", from_version: \"2.2\"}
+    - {name: "$THOUSANDS_SEPARATOR", description: "the lang thousangs separator", from_version: \"2.2\"}
+    - {name: "$DECIMAL_COUNT", description: "the number of digits after the decimal separator", from_version: \"2.2\"}
     - {name: "$POSITION", description: "lang position"}
 
 
