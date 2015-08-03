@@ -34,8 +34,8 @@ in the ```config.xml``` file in your module, you have to declare a ```hooks``` t
         <hooks>
             <hook id="module.hook.front" class="Module\Hook\Front" scope="request">
                 <tag name="hook.event_listener" event="product.stylesheet" />
-                <tag name="hook.event_listener" event="product.after.javascript.initialization" type="front" />
-                <tag name="hook.event_listener" event="product.additional" type="front" method="onProductAdditionalContents" />
+                <tag name="hook.event_listener" event="product.after.javascript.initialization" type="frontoffice" />
+                <tag name="hook.event_listener" event="product.additional" type="frontoffice" method="onProductAdditionalContents" />
             </hook>   
         </hooks>
 
@@ -52,14 +52,14 @@ All attributes are mandatory. ```id``` must be unique, ```class``` is the namesp
 The ```tag``` tag indicates a method that will handle a defined hook :
 
 ```xml
-<tag name="hook.event_listener" event="product.additional" type="front" method="onProductAdditionalContents" active="0" />
+<tag name="hook.event_listener" event="product.additional" type="frontoffice" method="onProductAdditionalContents" active="0" />
 ```
 
 Some attributes here are optionals. Attributes :
 
 - ```name="hook.event_listener"``` must be defined as well. 
 - ```event``` : represents the hook *code* for which it wants to respond. 
-- ```type``` : indicate the context of the hook : frontOffice (default), backOffice, pdf or email. 
+- ```type``` : indicate the context of the hook : frontoffice (default), backoffice, pdf or email. 
 - ```method``` : indicate the method to be called. By default, it will be based on the name of the hook. eg : for ```product.additional``` hook, the method ```onProductAdditional``` will be called (*CamelCase prefixed by on*).
 - ```active``` : allow you to activate the hook (**set to 1** - *default*) or not (**set to 0**) when the module is installed.    
 
@@ -85,7 +85,7 @@ In ```config.xml``` :
         <tag name="hook.event_listener" event="product.top" />
         <!--
         same as :
-        <tag name="hook.event_listener" event="product.top" type="front" method="onProductTop" active="1" />
+        <tag name="hook.event_listener" event="product.top" type="frontoffice" method="onProductTop" active="1" />
         -->
     </hook>   
 </hooks> 
