@@ -1,0 +1,225 @@
+-
+    title: 'Check available product stock (1) or ignore it (0) when displaying and changing ordered quantity'
+    description: null
+    name: check-available-stock
+    default_value: '1'
+-
+    title: 'Name of the active front-office template'
+    description: null
+    name: active-front-template
+    default_value: default
+-
+    title: 'Name of the active back-office template'
+    description: null
+    name: active-admin-template
+    default_value: default
+-
+    title: 'Name of the active PDF template'
+    description: null
+    name: active-pdf-template
+    default_value: default
+-
+    title: 'Name of the active mailing template'
+    description: null
+    name: active-mail-template
+    default_value: default
+-
+    title: 'Enable (1) or disable (0) URL rewriting'
+    description: null
+    name: rewriting_enable
+    default_value: '0'
+-
+    title: 'Name of the graphic driver used by the Imagine library (see https://imagine.readthedocs.org)'
+    description: null
+    name: imagine_graphic_driver
+    default_value: gd
+-
+    title: 'The default quality (in %) of the generated images'
+    description: null
+    name: default_images_quality_percent
+    default_value: '75'
+-
+    title: 'How original (full resolution) images are delivered in the web space (symlink or copy)'
+    description: null
+    name: original_image_delivery_mode
+    default_value: symlink
+-
+    title: 'How document files are delivered in the web space (symlink or copy)'
+    description: null
+    name: original_document_delivery_mode
+    default_value: symlink
+-
+    title: 'Path to the directory where images are stored'
+    description: null
+    name: images_library_path
+    default_value: local/media/images
+-
+    title: 'Path to the directory where documents are stored'
+    description: null
+    name: documents_library_path
+    default_value: local/media/documents
+-
+    title: 'The path to the image cache directory in the web space'
+    description: null
+    name: image_cache_dir_from_web_root
+    default_value: cache/images
+-
+    title: 'The path to the document cache directory in the web space'
+    description: null
+    name: document_cache_dir_from_web_root
+    default_value: cache/documents
+-
+    title: 'File name of the 404 (not found) view in the current template (with extension, e.g. 404.html)'
+    description: null
+    name: page_not_found_view
+    default_value: 404.html
+-
+    title: 'Name of the template view returned when an obsolete (or inactive) product URL is invoked'
+    description: null
+    name: obsolete_rewriten_url_view
+    default_value: obsolete-rewritten-url
+-
+    title: 'Display and process prices with (0) or without (1) taxes.'
+    description: null
+    name: use_tax_free_amounts
+    default_value: '0'
+-
+    title: 'Compile templates assets automatically upon asset source change (1 = yes, 0 = no)'
+    description: null
+    name: process_assets
+    default_value: '0'
+-
+    title: '"Remember me" cookie name for administration users'
+    description: null
+    name: thelia_admin_remember_me_cookie_name
+    default_value: tarmcn
+-
+    title: '"Remember me" cookie expiration time, in seconds, for administration users'
+    description: null
+    name: thelia_admin_remember_me_cookie_expiration
+    default_value: '2592000'
+-
+    title: '"Remember me" cookie name for customer users'
+    description: null
+    name: thelia_customer_remember_me_cookie_name
+    default_value: tcrmcn
+-
+    title: '"Remember me" cookie expiration time, in seconds, for customer users'
+    description: null
+    name: thelia_customer_remember_me_cookie_expiration
+    default_value: '31536000'
+-
+    title: 'Base URL of the shop (e.g. http://www.yourshopdomain.com)'
+    description: null
+    name: url_site
+    default_value: ''
+-
+    title: 'Name of the invoice view in the current PDF template (without extension)'
+    description: null
+    name: pdf_invoice_file
+    default_value: invoice
+-
+    title: 'Name of the delivery view in the current PDF template (without extension)'
+    description: null
+    name: pdf_delivery_file
+    default_value: delivery
+-
+    title: 'The path (relative to the default back-office template) to the image used when no flag image can be found for a country'
+    description: null
+    name: unknown-flag-path
+    default_value: assets/img/flags/unknown.png
+-
+    title: 'Whitespace trim level of the generated HTML code (0 = none, 1 = medium, 2 = maximum)'
+    description: null
+    name: html_output_trim_level
+    default_value: '1'
+-
+    title: 'Default available stock when check-available-stock is set to 0.'
+    description: null
+    name: default_available_stock
+    default_value: '100'
+-
+    title: 'The ID of the folder containing your information pages : terms, imprint, ...'
+    description: null
+    name: information_folder_id
+    default_value: ''
+-
+    title: 'The ID of the ''Terms & Conditions'' content.'
+    description: null
+    name: terms_conditions_content_id
+    default_value: ''
+-
+    title: 'Allow negative product stock (1) or not (0)'
+    description: null
+    name: allow_negative_stock
+    default_value: '0'
+-
+    title: 'Use a persistent cookie to keep track of customer cart'
+    description: null
+    name: cart.use_persistent_cookie
+    default_value: '1'
+-
+    title: 'Name of the cart cookie'
+    description: null
+    name: cart.cookie_name
+    default_value: thelia_cart
+-
+    title: 'Life time of the cart cookie in the customer browser, in seconds'
+    description: null
+    name: cart.cookie_lifetime
+    default_value: '31536060'
+-
+    title: 'Life time of the session cookie in the customer browser, in seconds'
+    description: null
+    name: session_config.lifetime
+    default_value: '0'
+-
+    title: 'Allow customers to change their email. 1 for yes, 0 for no'
+    description: null
+    name: session_config.default
+    default_value: '1'
+-
+    title: 'Ask the customers to confirm their email, 1 for yes, 0 for no'
+    description: null
+    name: default_lang_without_translation
+    default_value: '1'
+-
+    title: '[Firewall/Bruteforce] Time to wait between X attempts'
+    description: null
+    name: form_firewall_bruteforce_attempts
+    default_value: '10'
+-
+    title: '[Firewall] Time to wait between X attempts'
+    description: null
+    name: form_firewall_attempts
+    default_value: '6'
+-
+    title: '[Firewall/Bruteforce] Number of allowed attemps'
+    description: null
+    name: form_firewall_active
+    default_value: '1'
+-
+    title: '[Firewall] Number of allowed attemps'
+    description: null
+    name: allow_slash_ended_uri
+    default_value: '1'
+-
+    title: '[Firewall] Activate the firewall'
+    description: null
+    name: error_message.show
+    default_value: '1'
+-
+    title: 'Allow slash ended uri'
+    description: null
+    name: error_message.page_name
+    default_value: error.html
+-
+    title: 'Show error message instead of a white page on a server error'
+    description: null
+    name: customer_change_email
+    default_value: '0'
+-
+    title: 'Filename of the error page'
+    description: null
+    name: customer_confirm_email
+    default_value: '1'
