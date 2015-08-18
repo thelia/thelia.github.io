@@ -23,6 +23,10 @@ And reload Jekyll server
 
 In addition, this documentation layout use [Bootstrap](http://getbootstrap.com) and this LESS files for CSS.
 
+## Docker
+
+You can run github-pages in a container, just run ```docker.sh``` script. With that you don't have to install ```github-pages``` on your machine.
+
 ## Translations
 A single directory represents one language. By convention, the name of the directory must correspond to [ISO 639-1 code](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
