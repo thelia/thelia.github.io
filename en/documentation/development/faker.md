@@ -20,7 +20,7 @@ The faker **erases all data in your database** and generates fake :
 - folders, contents, images and documents
 - orders
 
-To run the faker (composer must be install [`globally`](http://getcomposer.org/doc/00-intro.md#globally)) :
+To run the faker (composer must be installed [`globally`](http://getcomposer.org/doc/00-intro.md#globally)) :
 
 ```bash
 $ php setup/faker.php

@@ -106,7 +106,7 @@ For dev data
 $ php setup/faker.php
 ```
 
-(composer must be install [`globally`](http://getcomposer.org/doc/00-intro.md#globally))
+(composer must be installed [`globally`](http://getcomposer.org/doc/00-intro.md#globally))
 ## How to reset my database
 
 
@@ -165,7 +165,7 @@ The update wizard in accessible with your favorite browser :
 http://yourdomain.tld/[/subdomain_if_needed]/install
 ```
 
-Note: 
+Note:
 
 - the wizard is available only if your Thelia is not already in the latest version.
 - if your database is big, it's recommended to backup your database by your hands and not to use the backup proposed by the wizard.

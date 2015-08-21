@@ -73,7 +73,7 @@ INSERT INTO  `module_i18n` (`id`, `locale`, `title`, `description`, `chapo`, `po
 - `{intl l='Navigation block' locale=$locale}` is used to display the translation corresponding to the `l` attribute. This `intl` function
 differs from the classic one used in Thelia. If the translation does not exist, no fallbacks will be used by default.
 The text will be escaped for SQL and quotes will be placed around the input string. If the string is empty then it will be replaced by a `NULL` value.
-The attribute `in_string="1"` is used to disabled the placement of quotes around the string. The attribute `use_default="1"` allow you to use the `l`
+The attribute `in_string="1"` is used to disable the placement of quotes around the string. The attribute `use_default="1"` allow you to use the `l`
 attribute as a fallback if the translation does not exist.
 - don't forget to use the `{if ! $locale@last},{/if}` before the `{/foreach}` otherwise your SQL will not be valid.
 
@@ -91,15 +91,15 @@ You can also limit to a specific list of locales if you use `locales` parameter 
 Translations are contributed by Thelia users worldwide. The translation work is coordinated at [Crowdin](http://crowdin.com).  
 The Thelia project is located at <http://translate.thelia.net/>.
 
-Translations for **not english** languages should only be done on <http://translate.thelia.net/>, not in a Thelia development website and submitted to us with a pull request on GitHub.  
-During the development stage, only english translations should be realized inside Thelia and submitted with a pull request.  
+Translations for **non english** languages should only be done on <http://translate.thelia.net/>, not in a Thelia development website and submitted to us with a pull request on GitHub.  
+During the development stage, only english strings should be used inside Thelia and submitted with a pull request.  
 Prior to any release, Thelia maintainers will make an announcement and we'll have a couple of weeks
-of string freeze in order to give people time to be 100% translated.
+of string freeze in order to give people time to complete the translations.
 Once translations are done, Thelia maintainers will integrate all translations in Thelia.
 
 If you want to contribute to translation or want to discuss specific translations, go to the [Thelia project page](http://translate.thelia.net/).
 
-If you would like to help out with translating or add a language that isn’t yet translated, here’s what to do:
+If you would like to help out with translating or adding a language that isn’t yet translated, here’s what to do:
 
 - Visit the [Thelia project page](http://translate.thelia.net/).
 - Sign up at  [Crowdin](http://crowdin.com) or log in if you already have an account.
