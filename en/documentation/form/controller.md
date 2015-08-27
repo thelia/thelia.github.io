@@ -39,7 +39,7 @@ public function createAction()
             $this->setupFormErrorContext(
                 $this->getTranslator()->trans("Customer creation"),
                 $error_msg,
-                $creationForm,
+                $form,
                 $ex
             );
 
