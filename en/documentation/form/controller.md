@@ -26,9 +26,8 @@ public function createAction()
 	try {
 		$this->validateForm($form);
 
-		// All is good, render with
+		// generateSuccessRedirect since Thelia 2.1
 		// return $this->generateSuccessRedirect($form);
-		// or with (same result)
 		return new RedirectResponse($form->getForm()->get("success_url")->getData());
 	} catch (FormValidationException $ex) {
             // Form cannot be validated
