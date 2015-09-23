@@ -12,6 +12,7 @@ arguments :
     - {name: "feature", description: "A single feature id.", example: "feature=\"2\"", mandatory: "true"}
     - {name: "product", description: "A single product id. (no longer mandatory since 2.2)", example: "product=\"9\""}
     - {name: "feature_availability", description: "A single or a list of feature availability ids.", example: "feature_availability=\"2,5\""}
+    - {name: "free_text", description: "A single or a list of strings. (2.2)", example: "free_text=\"some text,some other text\""}
     - {name: "exclude_feature_availability", description: "A boolean value to return only features with feature availability (no personal value).", example: "feature_availability=\"true\""}
     - {name: "exclude_free_text", description: "A boolean value to return only features with free text value (no feature availability).", example: "exclude_free_text=\"1\" or exclude_free_text=\"true\""}
     - {
