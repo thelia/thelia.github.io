@@ -11,7 +11,10 @@ type: order
 arguments :
     - {name: "id", description: "A single or a list of order ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "customer", description: "A single customer id or `current` keyword to get logged in user or `*` keyword to match all users.", example: "customer=\"2\", customer=\"current\"", default: "current"}
-    - {name: "status", description: "A single or a list of order status or `*` keyword to match all", example: "status=\"*\", status=\"1,4,7\""}
+    - {name: "status", description: "A single or a list of order status ID or `*` keyword to match all", example: "status=\"*\", status=\"1,4,7\""}
+   - {name: "exclude_status (2.2+)", description: "A single or a list of order status ID which are to be excluded from the results", example: "status=\"*\", exclude_status=\"1,4,7\""}
+    - {name: "status_code (2.2+)", description: "A single or a list of order status codes or `*` keyword to match all. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "status=\"*\", status=\"not_paid,canceled\""}
+   - {name: "exclude_status_code (2.2+)", description: "A single or a list of order status codes which are to be excluded from the results. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "exclude_status_code=\"paid,processing\""} 
     - {
       name: "order", description: "A list of values", example: "order=\"reference-reverse\"", default: "create-date-reverse",
       expected_values: [
@@ -43,16 +46,21 @@ outputs :
     - {name: "$INVOICE_REF", description: "the order invoice reference"}
     - {name: "$VIRTUAL", description: "the order has at least one product which is a virtual product"}
     - {name: "$POSTAGE", description: "the order postage"}
+    - {name: "$POSTAGE_TAX", description: "the order postage tax (2.2+)"}
+    - {name: "$POSTAGE_UNTAXED", description: "the order postage amount without tax (2.2+)"}
+    - {name: "$POSTAGE_TAX_RULE_TITLE", description: "the tax rule used to get the postage tax amount (2.2+)"}
     - {name: "$PAYMENT_MODULE", description: "the order payment module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}
     - {name: "$DELIVERY_MODULE", description: "the order delivery module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}
     - {name: "$STATUS", description: "the order status ; you can use it in a <a href=\"/en/documentation/loop/order_status.html\">order status loop</a>"}
+    - {name: "$STATUS_CODE", description: "the order status code (2.2)"}    - 
     - {name: "$LANG", description: "the order language id"}
     - {name: "$DISCOUNT", description: "the order discount"}
     - {name: "$TOTAL_TAX", description: "the order taxes amount"}
     - {name: "$TOTAL_AMOUNT", description: "the order amount without taxes"}
     - {name: "$TOTAL_TAXED_AMOUNT", description: "the order amount including taxes"}
-    - {name: "$IS_PAID", description: "True is the order has been paid (whatever current status is), false otherwise"}
+    - {name: "$WEIGHT", description: "The total weight of the order (2.2+)"}
     - {name: "$HAS_PAID_STATUS", description: "True is the order has the 'paid' status, false otherwise"}
+    - {name: "$IS_PAID", description: "True is the order has been paid (whatever current status is), false otherwise"}
     - {name: "$IS_CANCELED", description: "True is the order has the 'canceled' status, false otherwise"}
     - {name: "$IS_NOT_PAID", description: "True is the order has the 'not paid' status, false otherwise"}
     - {name: "$IS_SENT", description: "True is the order has the 'sent' status, false otherwise"}
