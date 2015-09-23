@@ -9,7 +9,7 @@ lang: en
     <h1>Requirements</h1>
 </div>
 
-* php 5.4
+* Php 5.4
     * Required extensions :
         * PDO_Mysql
         * mcrypt
@@ -21,8 +21,9 @@ lang: en
     * memory_limit at least 128M, preferably 256.
     * post\_max\_size 20M
     * upload\_max\_filesize 2M
-* apache 2
-* mysql 5
+    * date.timezone must be defined
+* Web Server : Apache 2.X or Nginx
+* MySQL 5
 
 If you use **Windows** with [WAMP](http://www.wampserver.com/) and encounter an issue with ```intl``` there is a special manipulation to do : you have to copy all files with name ```icu***.dll```  from php directory (eg: "C:\wamp\bin\php\php5.x.xx") to the ```apache``` directory ("C:\wamp\bin\apache\apache2.x.xx\bin").
 
@@ -47,7 +48,7 @@ Then unzip the file.
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project thelia/thelia path/ 2.1.1 (or 2.0.5)
+$ php composer.phar create-project thelia/thelia path/ 2.1.3 (or 2.0.6)
 ```
 
 
