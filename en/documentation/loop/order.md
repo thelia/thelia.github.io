@@ -52,7 +52,7 @@ outputs :
     - {name: "$PAYMENT_MODULE", description: "the order payment module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}
     - {name: "$DELIVERY_MODULE", description: "the order delivery module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}
     - {name: "$STATUS", description: "the order status ; you can use it in a <a href=\"/en/documentation/loop/order_status.html\">order status loop</a>"}
-    - {name: "$STATUS_CODE", description: "the order status code (2.2)"}    - 
+    - {name: "$STATUS_CODE", description: "the order status code (2.2)"}
     - {name: "$LANG", description: "the order language id"}
     - {name: "$DISCOUNT", description: "the order discount"}
     - {name: "$TOTAL_TAX", description: "the order taxes amount"}
