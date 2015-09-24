@@ -24,7 +24,7 @@ is the glue if you want to create a new project with this new components and man
 
 ```
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project thelia/thelia-project your-project-name 2.1.5
+$ php composer.phar create-project thelia/thelia-project your-project-name 2.2.0
 ```
 
 Your Thelia is now downloaded and ready to be [installed](/en/documentation/installation/index.html#install-it)
@@ -37,7 +37,7 @@ or even templates who use the thelia-installer too.
 If you have installed Thelia following the instructions before, you can update your files using a script present in your project : 
 
 ```
-$ sh change-version.sh 2.1.5
+$ sh change-version.sh 2.2.0
 ```
 
-Here `2.1.5` is the version you want to retrieve. For updating your database, follow this [instructions](/en/documentation/installation/index.html#use-the-update-script-%28since-version-2-1%29)
+Here `2.2.0` is the version you want to retrieve. For updating your database, follow this [instructions](/en/documentation/installation/index.html#use-the-update-script-%28since-version-2-1%29)

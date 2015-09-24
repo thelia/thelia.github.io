@@ -1,4 +1,6 @@
 ---
+redirect_from:
+    - /en/documentation/configuration.html
 layout: home
 title: Configuration
 sidebar: configuration
