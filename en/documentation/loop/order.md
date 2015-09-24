@@ -12,9 +12,9 @@ arguments :
     - {name: "id", description: "A single or a list of order ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "customer", description: "A single customer id or `current` keyword to get logged in user or `*` keyword to match all users.", example: "customer=\"2\", customer=\"current\"", default: "current"}
     - {name: "status", description: "A single or a list of order status ID or `*` keyword to match all", example: "status=\"*\", status=\"1,4,7\""}
-   - {name: "exclude_status (2.2+)", description: "A single or a list of order status ID which are to be excluded from the results", example: "status=\"*\", exclude_status=\"1,4,7\""}
+    - {name: "exclude_status (2.2+)", description: "A single or a list of order status ID which are to be excluded from the results", example: "status=\"*\", exclude_status=\"1,4,7\""}
     - {name: "status_code (2.2+)", description: "A single or a list of order status codes or `*` keyword to match all. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "status=\"*\", status=\"not_paid,canceled\""}
-   - {name: "exclude_status_code (2.2+)", description: "A single or a list of order status codes which are to be excluded from the results. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "exclude_status_code=\"paid,processing\""} 
+    - {name: "exclude_status_code (2.2+)", description: "A single or a list of order status codes which are to be excluded from the results. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "exclude_status_code=\"paid,processing\""} 
     - {
       name: "order", description: "A list of values", example: "order=\"reference-reverse\"", default: "create-date-reverse",
       expected_values: [
@@ -52,7 +52,7 @@ outputs :
     - {name: "$PAYMENT_MODULE", description: "the order payment module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}
     - {name: "$DELIVERY_MODULE", description: "the order delivery module id ; you can use it in a <a href=\"/en/documentation/loop/module.html\">module loop</a>"}
     - {name: "$STATUS", description: "the order status ; you can use it in a <a href=\"/en/documentation/loop/order_status.html\">order status loop</a>"}
-    - {name: "$STATUS_CODE", description: "the order status code (2.2)"}    - 
+    - {name: "$STATUS_CODE", description: "the order status code (2.2)"}
     - {name: "$LANG", description: "the order language id"}
     - {name: "$DISCOUNT", description: "the order discount"}
     - {name: "$TOTAL_TAX", description: "the order taxes amount"}
