@@ -58,4 +58,5 @@ outputs :
     - {name: "$HAS_NEXT", description: "Return 1 if the current category has a next category. 0 otherwise. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
     - {name: "$PREVIOUS", description: "Category's id of the previous category. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
     - {name: "$NEXT", description: "Category's id of the next category. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$TEMPLATE", description: "the template id associated to this category", from_version: "2.2"}
 ---
