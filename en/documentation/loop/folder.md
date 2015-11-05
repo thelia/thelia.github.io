@@ -17,6 +17,7 @@ arguments :
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of folder ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false" from_version: "2.3"}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
@@ -52,4 +53,8 @@ outputs :
     - {name: "$VERSION", description: "the folder version"}
     - {name: "$VERSION_DATE", description: "the folder version date"}
     - {name: "$VERSION_AUTHOR", description: "the folder version author"}
+    - {name: "$HAS_PREVIOUS", description: "true if a folder exists before this one in the current parent folder, following folders positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
+    - {name: "$HAS_NEXT", description: "true if a folder exists after this one in the current parent folder, following folders positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
+    - {name: "$PREVIOUS", description: "The ID of folder before this one in the current parent folder, following folders positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
+    - {name: "$NEXT", description: "The ID of folder after this one in the current parent folder, following folders positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}   
 ---
