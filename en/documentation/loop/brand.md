@@ -14,7 +14,7 @@ arguments :
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "product", description: "A single product id.", example: "product=\"2\""}
     - {name: "title", description: "A title string", example: "title=\"foo\""}
-    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false" from_version: "2.3"}
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.3"}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
@@ -46,9 +46,9 @@ outputs :
     - {name: "$URL", description: "the brand URL"}
     - {name: "$LOGO_IMAGE_ID", description: "ID of the brand logo image, among the brand images"}
     - {name: "$POSITION", description: "the brand position"}
-    - {name: "$HAS_PREVIOUS", description: "true if a brand exists before this one following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true" from_version: "2.3"}
-    - {name: "$HAS_NEXT", description: "true if a brand exists after this one, following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true" from_version: "2.3"}
-    - {name: "$PREVIOUS", description: "The ID of brand before this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true" from_version: "2.3"}
-    - {name: "$NEXT", description: "The ID of brand after this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true" from_version: "2.3"}   
+    - {name: "$HAS_PREVIOUS", description: "true if a brand exists before this one following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
+    - {name: "$HAS_NEXT", description: "true if a brand exists after this one, following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
+    - {name: "$PREVIOUS", description: "The ID of brand before this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
+    - {name: "$NEXT", description: "The ID of brand after this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}   
 
 ---
