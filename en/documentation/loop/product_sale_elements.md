@@ -18,6 +18,8 @@ arguments:
     - {
             name: "order", description: "A list of values", example: "order=\"promo,min_price\"", default: "random",
             expected_values: [
+                {name: "id",                description: "ascending id",        from_version: "2.3"},
+                {name: "id_reverse",        description: "descending id",       from_version: "2.3"},
                 {name: "min_price",         description: "ascending price"},
                 {name: "max_price",         description: "descending price"},
                 {name: "promo",             description: "promo products first"},
