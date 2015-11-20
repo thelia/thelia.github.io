@@ -12,10 +12,12 @@ arguments :
     - {name: "product_sale_elements", description: "A single product sale elements id.", example: "product=\"2\"", mandatory: "true"}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {
-            name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
+            name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "alpha",
             expected_values: [
                 {name: "alpha",             description: "alphabetical order on attribute title"},
-                {name: "alpha_reverse",     description: "reverse alphabetical order on attribute title"}
+                {name: "alpha_reverse",     description: "reverse alphabetical order on attribute title"},
+                {name: "manual",            description: "order by ascending position",     from_version: "2.3"},
+                {name: "manual_reverse",    description: "order by descending position",    from_version: "2.3"}
             ]
           }
 
