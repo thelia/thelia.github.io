@@ -57,6 +57,7 @@ arguments :
             {name: "max_price"}
         ]
       }
+    - {name: "attribute_availability", description: "A list of mandatory attributes and the attribute_availability expected for these.", example: "attribute_availability=\"1: (1 | 2) , 2:*, 3: 10 | (11&12)\" : attribute 1 must have attribute_availability 1 or 2 AND attribute 2 must be set to any attribute_availability AND attribute 3 must have attribute_availability 10 or both attribute_availability 11 and 12", from_version: "2.3"}
     - {
         name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "alpha",
         expected_values: [
