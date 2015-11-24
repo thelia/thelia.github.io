@@ -47,6 +47,16 @@ If the web server is not installed on your local machine, you have to add your w
       'your.ip.goes.here',
     );
 
+> From Thelia 2.2, the structure of the assets of the default front-office template has changed, and are managed with Grunt and Bower (read more about [Grunt and Bower on Thelia School](http://thelia-school.com/utiliser-grunt-et-bower-pour-vos-templates-thelia.html)). The `src` directory contains the assets sources, and the `dist` directory contains the generated assets.
+> 
+> However, you can still enjoy automatic assets generation from sources. To do do, just change in the layout.tpl file of the default front-office template :
+> 
+> `{stylesheets file='assets/dist/css/thelia.min.css'}`
+> by :
+> `{stylesheets file='assets/src/less/thelia.less' filters='less'}`
+>
+> The assets will then be automatically generated when a change is detected in the source.
+
 
 When assets are generated, a new `assets` directory is created in the `web` directory. This directory structure follows almost the same structure of the `template` directory, thus relative references in your assets files will be preserved.
 
