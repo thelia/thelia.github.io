@@ -21,7 +21,7 @@
 /*                                                                                   */
 /*************************************************************************************/
 
-require 'vendor/autoload.php';
+#require 'vendor/autoload.php';
 
 
 
@@ -29,22 +29,27 @@ use Sami\Sami;
 use Symfony\Component\Finder\Finder;
 use Sami\Version\GitVersionCollection;
 
+$theliaPath = getenv("THELIA_PATH") . '/core/lib';
+
 $iterator = Finder::create()
     ->files()
     ->name('*.php')
     ->exclude('Resources')
     ->exclude('I18n')
     ->exclude('Tests')
-    ->in($dir = getenv("THELIA_PATH") . '/core/lib')
+    ->in($theliaPath)
 ;
 
-$versions = GitVersionCollection::create($dir)
-    ->addFromTags('2.*')
+$versions = GitVersionCollection::create($theliaPath)
+    //->addFromTags('2.*')
+    ->add('2.2.0', '2.2.0 tag')
+    ->add('2.2.1', '2.2.1 tag')
+    //->add('2.2.1', '2.2.1 tag')
     ->add('master', 'master branch')
 ;
 
 return new Sami($iterator, array(
-    'theme'                => 'enhanced',
+    'theme'                => 'default',
     'versions'             => $versions,
     'title'                => 'Thelia 2 API',
     'build_dir'            => __DIR__.'/api/%version%',
