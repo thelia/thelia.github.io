@@ -1,0 +1,2960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\Event\TheliaEvents | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_Event_TheliaEvents" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../2.2.0/index.html" selected>2.2.0 tag</option>
+                                            <option value="../../../../2.2.1/index.html">2.2.1 tag</option>
+                                            <option value="../../../../master/index.html">master branch</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../Thelia/Core/Event.html">Event</a></li>
+    
+                <li>TheliaEvents</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>TheliaEvents</h1>
+    </div>
+
+    <p>    class
+    <strong>TheliaEvents</strong>
+</p>
+
+            <div class="description">
+            <p>This class contains all Thelia events identifiers used by Thelia Core</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>BOOT</td>
+                <td class="last">
+                    <p><em>sent at the beginning</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEADDRESS</td>
+                <td class="last">
+                    <p><em>sent once the address creation form has been successfully validated, and before address insertion in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADDRESS_CREATE</td>
+                <td class="last">
+                    <p><em>sent for address creation</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEADDRESS</td>
+                <td class="last">
+                    <p><em>Sent just after a successful insert of a new address in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEADDRESS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADDRESS_UPDATE</td>
+                <td class="last">
+                    <p><em>sent for address modification</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEADDRESS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEADDRESS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADDRESS_DELETE</td>
+                <td class="last">
+                    <p><em>sent on address removal</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEADDRESS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADDRESS_DEFAULT</td>
+                <td class="last">
+                    <p><em>sent when an address is tag as default</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADMIN_LOGOUT</td>
+                <td class="last">
+                    <p><em>Sent before the logout of the administrator.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADMIN_LOGIN</td>
+                <td class="last">
+                    <p><em>Sent once the administrator is successfully logged in.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEAREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AREA_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEAREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AREA_POSTAGE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEAREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AREA_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEAREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AREA_ADD_COUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AREA_REMOVE_COUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEAREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AREA_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEAREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATECATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATECATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATECATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATECATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETECATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETECATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_TOGGLE_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_ADD_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_REMOVE_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CATEGORY_UPDATE_SEO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATECONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATECONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATECONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATECONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETECONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETECONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_TOGGLE_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_UPDATE_SEO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_ADD_FOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_REMOVE_FOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATECOUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUNTRY_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATECOUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATECOUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUNTRY_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATECOUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETECOUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUNTRY_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETECOUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUNTRY_TOGGLE_DEFAULT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_LOGOUT</td>
+                <td class="last">
+                    <p><em>Sent before the logout of the customer.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_LOGIN</td>
+                <td class="last">
+                    <p><em>Sent once the customer is successfully logged in.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATECUSTOMER</td>
+                <td class="last">
+                    <p><em>Sent once the customer creation form has been successfully validated, and before customer insertion in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_CREATEACCOUNT</td>
+                <td class="last">
+                    <p><em>sent on customer account creation</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATECUSTOMER</td>
+                <td class="last">
+                    <p><em>Sent just after a successful insert of a new customer in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_UPDATEACCOUNT</td>
+                <td class="last">
+                    <p><em>sent on customer account update</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATECUSTOMER</td>
+                <td class="last">
+                    <p><em>Sent once the customer change form has been successfully validated, and before customer update in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_UPDATEPROFILE</td>
+                <td class="last">
+                    <p><em>sent on customer account update profile</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATECUSTOMER</td>
+                <td class="last">
+                    <p><em>Sent just after a successful update of a customer in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETECUSTOMER</td>
+                <td class="last">
+                    <p><em>sent just before customer removal</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_DELETEACCOUNT</td>
+                <td class="last">
+                    <p><em>sent on customer removal</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_ADDRESS_DELETE</td>
+                <td class="last">
+                    <p><em>sent on customer address removal</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETECUSTOMER</td>
+                <td class="last">
+                    <p><em>sent just after customer removal</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOST_PASSWORD</td>
+                <td class="last">
+                    <p><em>sent when a customer need a new password</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEFOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOLDER_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEFOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEFOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOLDER_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEFOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEFOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOLDER_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEFOLDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOLDER_TOGGLE_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOLDER_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOLDER_UPDATE_SEO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEPRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEPRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEPRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEPRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEPRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEPRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_TOGGLE_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_UPDATE_SEO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_ADD_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_REMOVE_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_UPDATE_CONTENT_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_ADD_PRODUCT_SALE_ELEMENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_DELETE_PRODUCT_SALE_ELEMENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_UPDATE_PRODUCT_SALE_ELEMENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_COMBINATION_GENERATION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_SET_TEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_ADD_ACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_REMOVE_ACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_UPDATE_ACCESSORY_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_FEATURE_UPDATE_VALUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_FEATURE_DELETE_VALUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_ADD_CATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_REMOVE_CATEGORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VIRTUAL_PRODUCT_ORDER_HANDLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VIRTUAL_PRODUCT_ORDER_DOWNLOAD_RESPONSE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRODUCT_CLONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FILE_CLONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PSE_CLONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SHIPPING_ZONE_ADD_AREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SHIPPING_ZONE_REMOVE_AREA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATECATEGORY_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATECATEGORY_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETECATEGORY_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETECATEGORY_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATECATEGORY_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATECATEGORY_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEACCESSORY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEPRODUCT_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEPRODUCT_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEPRODUCT_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEPRODUCT_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEPRODUCT_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEPRODUCT_ASSOCIATED_CONTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEFEATURE_PRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEFEATURE_PRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEFEATURE_PRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEFEATURE_PRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEFEATURE_PRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEFEATURE_PRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_RESTORE_CURRENT</td>
+                <td class="last">
+                    <p><em>Restore a current cart in the session, either by reloading it from the database, or creating a new one</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_CREATE_NEW</td>
+                <td class="last">
+                    <p><em>Create a new, empty cart in the session, and attach it to the current customer, if any.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_DUPLICATE</td>
+                <td class="last">
+                    <p><em>sent when a new existing cat id duplicated. This append when current customer is different from current cart</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_ITEM_DUPLICATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CARTADDITEM</td>
+                <td class="last">
+                    <p><em>sent when a new item is added to current cart</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_FINDITEM</td>
+                <td class="last">
+                    <p><em>sent for searching an item in the cart</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CARTUPDATEITEM</td>
+                <td class="last">
+                    <p><em>sent when a cart item is modify</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_ADDITEM</td>
+                <td class="last">
+                    <p><em>sent for addArticle action</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_UPDATEITEM</td>
+                <td class="last">
+                    <p><em>sent on modify article action</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_DELETEITEM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CART_CLEAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_SET_DELIVERY_ADDRESS</td>
+                <td class="last">
+                    <p><em>Order linked event</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_SET_DELIVERY_MODULE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_SET_POSTAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_SET_INVOICE_ADDRESS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_SET_PAYMENT_MODULE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_PAY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_BEFORE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_AFTER_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_BEFORE_PAYMENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_CART_CLEAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_CREATE_MANUAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_UPDATE_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_SEND_CONFIRMATION_EMAIL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_SEND_NOTIFICATION_EMAIL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_UPDATE_DELIVERY_REF</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_UPDATE_ADDRESS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_PRODUCT_BEFORE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER_PRODUCT_AFTER_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_PROCESS</td>
+                <td class="last">
+                    <p><em>Sent on image processing</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_PREPROCESSING</td>
+                <td class="last">
+                    <p><em>Sent just after creating the image object from the image file</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_POSTPROCESSING</td>
+                <td class="last">
+                    <p><em>Sent just before saving the processed image object on disk</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_CLEAR_CACHE</td>
+                <td class="last">
+                    <p><em>Sent on image cache clear request</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_SAVE</td>
+                <td class="last">
+                    <p><em>Save given images</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_UPDATE</td>
+                <td class="last">
+                    <p><em>Save given images</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_TOGGLE_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_DELETE</td>
+                <td class="last">
+                    <p><em>Delete given image</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DOCUMENT_PROCESS</td>
+                <td class="last">
+                    <p><em>Sent on document processing</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DOCUMENT_CLEAR_CACHE</td>
+                <td class="last">
+                    <p><em>Sent on image cache clear request</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DOCUMENT_SAVE</td>
+                <td class="last">
+                    <p><em>Save given documents</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DOCUMENT_UPDATE</td>
+                <td class="last">
+                    <p><em>Save given documents</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DOCUMENT_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DOCUMENT_TOGGLE_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DOCUMENT_DELETE</td>
+                <td class="last">
+                    <p><em>Delete given document</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUPON_CREATE</td>
+                <td class="last">
+                    <p><em>Sent when creating a Coupon</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATE_COUPON</td>
+                <td class="last">
+                    <p><em>Sent just before a successful insert of a new Coupon in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATE_COUPON</td>
+                <td class="last">
+                    <p><em>Sent just after a successful insert of a new Coupon in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUPON_UPDATE</td>
+                <td class="last">
+                    <p><em>Sent when editing a Coupon</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATE_COUPON</td>
+                <td class="last">
+                    <p><em>Sent just before a successful update of a new Coupon in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATE_COUPON</td>
+                <td class="last">
+                    <p><em>Sent just after a successful update of a new Coupon in the database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUPON_DELETE</td>
+                <td class="last">
+                    <p><em>Sent when deleting a Coupon</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUPON_CONSUME</td>
+                <td class="last">
+                    <p><em>Sent when attempting to use a Coupon</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUPON_CLEAR_ALL</td>
+                <td class="last">
+                    <p><em>Sent when all coupons in the current session should be cleared</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CONSUME_COUPON</td>
+                <td class="last">
+                    <p><em>Sent just before an attempt to use a Coupon</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CONSUME_COUPON</td>
+                <td class="last">
+                    <p><em>Sent just after an attempt to use a Coupon</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUPON_CONDITION_UPDATE</td>
+                <td class="last">
+                    <p><em>Sent when attempting to update Coupon Condition</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_COUPON_CONDITION_UPDATE</td>
+                <td class="last">
+                    <p><em>Sent just before an attempt to update a Coupon Condition</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_COUPON_CONDITION_UPDATE</td>
+                <td class="last">
+                    <p><em>Sent just after an attempt to update a Coupon Condition</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_SETVALUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATECONFIG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATECONFIG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATECONFIG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATECONFIG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETECONFIG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETECONFIG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MESSAGE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MESSAGE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MESSAGE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEMESSAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEMESSAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEMESSAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEMESSAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEMESSAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEMESSAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENCY_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENCY_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENCY_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENCY_SET_DEFAULT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENCY_UPDATE_RATES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENCY_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATECURRENCY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATECURRENCY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATECURRENCY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATECURRENCY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETECURRENCY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETECURRENCY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHANGE_DEFAULT_CURRENCY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROFILE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROFILE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROFILE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROFILE_RESOURCE_ACCESS_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROFILE_MODULE_ACCESS_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADMINISTRATOR_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADMINISTRATOR_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADMINISTRATOR_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADMINISTRATOR_UPDATEPASSWORD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>API_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>API_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>API_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MAILING_SYSTEM_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_RULE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_RULE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_RULE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_RULE_SET_DEFAULT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TAX_RULE_TAXES_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_ADD_ATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_DELETE_ATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_ADD_FEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_DELETE_FEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_CHANGE_FEATURE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPLATE_CHANGE_ATTRIBUTE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATETEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATETEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATETEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATETEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETETEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETETEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_REMOVE_FROM_ALL_TEMPLATES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_ADD_TO_ALL_TEMPLATES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEATTRIBUTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_REMOVE_FROM_ALL_TEMPLATES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_ADD_TO_ALL_TEMPLATES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEFEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEFEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEFEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEFEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEFEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEFEATURE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_AV_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_AV_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_AV_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTE_AV_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEATTRIBUTE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEATTRIBUTE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEATTRIBUTE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEATTRIBUTE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEATTRIBUTE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEATTRIBUTE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_AV_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_AV_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_AV_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FEATURE_AV_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEFEATURE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEFEATURE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEFEATURE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEFEATURE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEFEATURE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEFEATURE_AV</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MAILTRANSPORTER_CONFIG</td>
+                <td class="last">
+                    <p><em>sent when system find a mailer transporter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GENERATE_REWRITTENURL</td>
+                <td class="last">
+                    <p><em>sent when Thelia try to generate a rewritten url</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GENERATE_PDF</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_TOGGLE_ACTIVATION</td>
+                <td class="last">
+                    <p><em>sent when a module is activated or deactivated</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em>sent when module position is changed</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_CREATE</td>
+                <td class="last">
+                    <p><em>module</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_INSTALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_PAY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_HOOK_RENDER</td>
+                <td class="last">
+                    <p><em>Hook</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_PROCESS_RENDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_HOOK_RENDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_TOGGLE_NATIVE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_TOGGLE_ACTIVATION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_CREATE_ALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HOOK_DEACTIVATION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_HOOK_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_HOOK_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_HOOK_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_HOOK_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODULE_HOOK_TOGGLE_ACTIVATION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CACHE_CLEAR</td>
+                <td class="last">
+                    <p><em>sent for clearing cache</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NEWSLETTER_SUBSCRIBE</td>
+                <td class="last">
+                    <p><em>sent for subscribing to the newsletter</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NEWSLETTER_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NEWSLETTER_UNSUBSCRIBE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LANG_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LANG_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LANG_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LANG_DEFAULTBEHAVIOR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LANG_URL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LANG_FIX_MISSING_FLAG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LANG_TOGGLEDEFAULT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATELANG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATELANG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATELANG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATELANG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETELANG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETELANG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BRAND_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BRAND_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BRAND_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BRAND_UPDATE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BRAND_TOGGLE_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BRAND_UPDATE_SEO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATEBRAND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATEBRAND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETEBRAND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETEBRAND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATEBRAND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATEBRAND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXPORT_BEFORE_ENCODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXPORT_AFTER_ENCODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXPORT_CATEGORY_CHANGE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXPORT_CHANGE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMPORT_BEFORE_DECODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMPORT_AFTER_DECODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMPORT_CATEGORY_CHANGE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMPORT_CHANGE_POSITION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SALE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SALE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SALE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SALE_TOGGLE_ACTIVITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SALE_CLEAR_SALE_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UPDATE_PRODUCT_SALE_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHECK_SALE_ACTIVATION_EVENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_CREATESALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_CREATESALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_DELETESALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_DELETESALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEFORE_UPDATESALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AFTER_UPDATESALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>META_DATA_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>META_DATA_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>META_DATA_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORM_BEFORE_BUILD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORM_AFTER_BUILD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_TITLE_BEFORE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_TITLE_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_TITLE_AFTER_CREATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_TITLE_BEFORE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_TITLE_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_TITLE_AFTER_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CUSTOMER_TITLE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANSLATION_GET_STRINGS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANSLATION_WRITE_FILE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

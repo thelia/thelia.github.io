@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Tools\URL | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Tools_URL" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../2.2.0/index.html" selected>2.2.0 tag</option>
+                                            <option value="../../../2.2.1/index.html">2.2.1 tag</option>
+                                            <option value="../../../master/index.html">master branch</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../Thelia/Tools.html">Tools</a></li>
+    
+                <li>URL</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>URL</h1>
+    </div>
+
+    <p>    class
+    <strong>URL</strong>
+</p>
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>PATH_TO_FILE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WITH_INDEX_PAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Tools\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container = null)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequestContext">setRequestContext</a>(
+    <abbr title="Thelia\Tools\Symfony\Component\Routing\RequestContext">RequestContext</abbr> $requestContext)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    <a href="../../Thelia/Tools/URL.html"><abbr title="Thelia\Tools\URL">URL</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInstance">getInstance</a>()
+                                            <p>Return this class instance, only once instanciated.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseUrl">getBaseUrl</a>(
+    bool $scheme_only = false)
+                                            <p>Return the base URL, either the base<em>url defined in Config, or the URL
+of the current language, if 'one</em>domain<em>foreach</em>lang' is enabled.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIndexPage">getIndexPage</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_absoluteUrl">absoluteUrl</a>(
+    string $path, 
+    array $parameters = null, 
+    boolean $path_only = self::WITH_INDEX_PAGE)
+                                            <p>Returns the Absolute URL for a given path relative to web root. By default,
+the script name (index<em>dev.php) is added to the URL in dev</em>environment, use
+$path_only = true to get a path without the index script.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_adminViewUrl">adminViewUrl</a>(
+    string $viewName, 
+    array $parameters = array())
+                                            <p>Returns the Absolute URL to a administration view</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_viewUrl">viewUrl</a>(
+    string $viewName, 
+    array $parameters = array())
+                                            <p>Returns the Absolute URL to a view</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../Thelia/Rewriting/RewritingRetriever.html"><abbr title="Thelia\Rewriting\RewritingRetriever">RewritingRetriever</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_retrieve">retrieve</a>($view, $viewId, $viewLocale)
+                                            <p>Retrieve a rewritten URL from a view, a view id and a locale</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../Thelia/Rewriting/RewritingRetriever.html"><abbr title="Thelia\Rewriting\RewritingRetriever">RewritingRetriever</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_retrieveCurrent">retrieveCurrent</a>(
+    <abbr title="Thelia\Tools\Thelia\Core\HttpFoundation\Request">Request</abbr> $request)
+                                            <p>Retrieve a rewritten URL from the current GET parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../Thelia/Rewriting/RewritingResolver.html"><abbr title="Thelia\Rewriting\RewritingResolver">RewritingResolver</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolve">resolve</a>($url)
+                                            <p>Retrieve a rewritten URL from the current GET parameters or use toString method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkUrl">checkUrl</a>($url, 
+    array $protocols = array(&#039;http&#039;, &#039;https&#039;))
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 42</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Tools\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container = null)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Tools\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequestContext">
+        <div class="location">at line 61</div>
+        <code>                    
+    
+    <strong>setRequestContext</strong>(
+    <abbr title="Thelia\Tools\Symfony\Component\Routing\RequestContext">RequestContext</abbr> $requestContext)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Tools\Symfony\Component\Routing\RequestContext">RequestContext</abbr></td>
+                <td>$requestContext</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstance">
+        <div class="location">at line 72</div>
+        <code>        static            
+    <a href="../../Thelia/Tools/URL.html"><abbr title="Thelia\Tools\URL">URL</abbr></a>
+    <strong>getInstance</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return this class instance, only once instanciated.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../Thelia/Tools/URL.html"><abbr title="Thelia\Tools\URL">URL</abbr></a></td>
+            <td>the instance.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if the class has not been instanciated.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseUrl">
+        <div class="location">at line 88</div>
+        <code>                    
+    string
+    <strong>getBaseUrl</strong>(
+    bool $scheme_only = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return the base URL, either the base<em>url defined in Config, or the URL
+of the current language, if 'one</em>domain<em>foreach</em>lang' is enabled.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    bool</td>
+                <td>$scheme_only</td>
+                <td>if true, only the scheme will be returned. If false, the complete base URL, including path, is returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the base URL, with a trailing '/'</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIndexPage">
+        <div class="location">at line 115</div>
+        <code>                    
+    string
+    <strong>getIndexPage</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the index page, which is in fact the base URL.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_absoluteUrl">
+        <div class="location">at line 132</div>
+        <code>                    
+    string
+    <strong>absoluteUrl</strong>(
+    string $path, 
+    array $parameters = null, 
+    boolean $path_only = self::WITH_INDEX_PAGE)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns the Absolute URL for a given path relative to web root. By default,
+the script name (index<em>dev.php) is added to the URL in dev</em>environment, use
+$path_only = true to get a path without the index script.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$path</td>
+                <td>the relative path</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$parameters</td>
+                <td>An array of parameters</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$path_only</td>
+                <td>if true (PATH<em>TO</em>FILE), getIndexPage() will  not be added</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The generated URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_adminViewUrl">
+        <div class="location">at line 208</div>
+        <code>                    
+    string
+    <strong>adminViewUrl</strong>(
+    string $viewName, 
+    array $parameters = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns the Absolute URL to a administration view</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$viewName</td>
+                <td>the view name (e.g. login for login.html)</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$parameters</td>
+                <td>An array of parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The generated URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viewUrl">
+        <div class="location">at line 223</div>
+        <code>                    
+    string
+    <strong>viewUrl</strong>(
+    string $viewName, 
+    array $parameters = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns the Absolute URL to a view</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$viewName</td>
+                <td>the view name (e.g. login for login.html)</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$parameters</td>
+                <td>An array of parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The generated URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieve">
+        <div class="location">at line 239</div>
+        <code>                    
+    <a href="../../Thelia/Rewriting/RewritingRetriever.html"><abbr title="Thelia\Rewriting\RewritingRetriever">RewritingRetriever</abbr></a>
+    <strong>retrieve</strong>($view, $viewId, $viewLocale)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Retrieve a rewritten URL from a view, a view id and a locale</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$viewId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$viewLocale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../Thelia/Rewriting/RewritingRetriever.html"><abbr title="Thelia\Rewriting\RewritingRetriever">RewritingRetriever</abbr></a></td>
+            <td>You can access $url and $rewrittenUrl properties</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieveCurrent">
+        <div class="location">at line 263</div>
+        <code>                    
+    <a href="../../Thelia/Rewriting/RewritingRetriever.html"><abbr title="Thelia\Rewriting\RewritingRetriever">RewritingRetriever</abbr></a>
+    <strong>retrieveCurrent</strong>(
+    <abbr title="Thelia\Tools\Thelia\Core\HttpFoundation\Request">Request</abbr> $request)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Retrieve a rewritten URL from the current GET parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Tools\Thelia\Core\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../Thelia/Rewriting/RewritingRetriever.html"><abbr title="Thelia\Rewriting\RewritingRetriever">RewritingRetriever</abbr></a></td>
+            <td>You can access $url and $rewrittenUrl properties or use toString method</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolve">
+        <div class="location">at line 302</div>
+        <code>                    
+    <a href="../../Thelia/Rewriting/RewritingResolver.html"><abbr title="Thelia\Rewriting\RewritingResolver">RewritingResolver</abbr></a>
+    <strong>resolve</strong>($url)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Retrieve a rewritten URL from the current GET parameters or use toString method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../Thelia/Rewriting/RewritingResolver.html"><abbr title="Thelia\Rewriting\RewritingResolver">RewritingResolver</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkUrl">
+        <div class="location">at line 328</div>
+        <code>        static            
+    
+    <strong>checkUrl</strong>($url, 
+    array $protocols = array(&#039;http&#039;, &#039;https&#039;))</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$protocols</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
