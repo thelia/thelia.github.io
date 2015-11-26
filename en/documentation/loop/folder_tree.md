@@ -7,7 +7,7 @@ lang: en
 subnav: loop_folder_tree
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : false, versionable : false }
-type: folder
+type: folder-tree
 arguments :
     - {name: "folder", description: "A single folder id.", example: "folder=\"2\"", mandatory: "true"}
     - {name: "depth", description: "The max depth", example: "depth=\"5\""}
