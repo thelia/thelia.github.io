@@ -25,12 +25,16 @@ outputs :
     - {name: "$VIRTUAL", description: "whatever the order product is a virtual product or not"}
     - {name: "$VIRTUAL_DOCUMENT", description: "the name of the file if the product is virtual."}
     - {name: "$QUANTITY", description: "the order product ordered quantity"}
-    - {name: "$PRICE", description: "the order product price"}
-    - {name: "$PRICE_TAX", description: ""}
-    - {name: "$TAXED_PRICE", description: ""}
-    - {name: "$PROMO_PRICE", description: ""}
-    - {name: "$PROMO_PRICE_TAX", description: ""}
-    - {name: "$TAXED_PROMO_PRICE", description: ""}
+    - {name: "$PRICE", description: "the order product price (unit price)"}
+    - {name: "$PRICE_TAX", description: "the order product taxes (unit price)"}
+    - {name: "$TAXED_PRICE", description: "the order product price including taxes (unit price)"}
+    - {name: "$PROMO_PRICE", description: "the order product in promo price (unit price)"}
+    - {name: "$PROMO_PRICE_TAX", description: "the order product in promo price taxes (unit price)"}
+    - {name: "$TAXED_PROMO_PRICE", description: "the order product in promo price including taxes (unit price)"}
+    - {name: "$TOTAL_PRICE", description: "the order product price (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_TAXED_PRICE", description: "the order product price including taxes (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_PROMO_PRICE", description: "the order product in promo price (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_TAXED_PROMO_PRICE", description: "the order product in promo price including taxes (total price)", from_version: "2.3"}
     - {name: "$TAX_RULE_TITLE", description: ""}
     - {name: "$TAX_RULE_DESCRIPTION", description: ""}
     - {name: "$PARENT", description: ""}
