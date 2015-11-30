@@ -25,9 +25,13 @@ outputs :
     - {name: "$PRODUCT_URL", description: "the product url"}
     - {name: "$PRODUCT_SALE_ELEMENTS_ID", description: "the product sale elements id"}
     - {name: "$STOCK", description: "the product sale elements available stock"}
-    - {name: "$PRICE", description: "the product sale elements price"}
-    - {name: "$PROMO_PRICE", description: "the product sale elements in promo price"}
-    - {name: "$TAXED_PRICE", description: "the product sale elements price including taxes"}
-    - {name: "$PROMO_TAXED_PRICE", description: "the product sale elements in promo price including taxes"}
+    - {name: "$PRICE", description: "the product sale elements price (unit price)"}
+    - {name: "$PROMO_PRICE", description: "the product sale elements in promo price (unit price)"}
+    - {name: "$TAXED_PRICE", description: "the product sale elements price including taxes (unit price)"}
+    - {name: "$PROMO_TAXED_PRICE", description: "the product sale elements in promo price including taxes (unit price)"}
+    - {name: "$TOTAL_PRICE", description: "the product sale elements price (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_PROMO_PRICE", description: "the product sale elements in promo price (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_TAXED_PRICE", description: "the product sale elements price including taxes (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_PROMO_TAXED_PRICE", description: "the product sale elements in promo price including taxes (total price)", from_version: "2.3"}
     - {name: "$IS_PROMO", description: "if the product sale elements is in promo or not"}
 ---
