@@ -6,6 +6,13 @@ global_arguments :
 - {name: "offset", description: "The first product to display offset. Will not be used if `page` argument is set.", example: "offset=\"1\"", default: "0"}
 - {name: "backend_context", description: "Determine if loop is use in backend context.", example: "backend_context=\"on\"", default: "false"}
 - {name: "force_return", description: "force return result for i18n tables even if there is no record", example: "force_return=\"on\"", default: "false"}
+
+text_search_arguments : [
+{name: "search_term", description: "The term to search", example: "search_term=\"my product\""},
+{name: "search_in", description: "A comma separeted list of field in which performs search", example: "search_in=\"title\""},
+{name: "search_mode", description: "the search mode : `any_word` (search any word separeted by a space), `sentence` (the sentence, anywhere in the field) or `strict_sentence` (the exact sentence)", default: "strict_sentence"}
+]
+
 global_outputs : {
 countable : [
 { name: "$LOOP_COUNT", description: "the current results index starting from 1" },

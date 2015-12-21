@@ -79,6 +79,86 @@
     </div>
 {% endif %}
 
+{% if page.text_search_fields != nil AND page.text_search_fields != '' %}
+    <h5>Text search arguments</h5>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Argument</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for argument in page.text_search_arguments %}
+
+                {% assign overwritten = false %}
+                {% for pageargument in page.arguments %}
+                    {% if pageargument.name == argument.name %}
+                        {% assign overwritten = true %}
+                    {% endif %}
+                {% endfor %}
+
+                {% if overwritten == false %}
+
+                    <tr>
+                        <td>
+                            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+                            {% if argument.from_version != nil AND argument.from_version != '' %}
+                            <br/>
+                            <span class="label label-default">Thelia >= {{ argument.from_version }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <p>{{ argument.description }}</p>
+
+                            {% if argument.name == 'search_in' %}
+                            <div class="expected_values">
+                                Possible values : <strong>{{ page.text_search_fields }}</strong>
+                            </div>
+                            {% else %}
+                                {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                                <div class="expected_values">
+                                    Expected values :
+                                    <ul>
+                                        {% for expected_value in argument.expected_values %}
+                                        <li>
+                                            {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
+                                            {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
+                                            <span class="label label-default">Thelia >= {{ expected_value.from_version }}</span>
+                                            {% endif %}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
+                            {% endif %}
+
+                            {% if argument.default != nil AND argument.default != '' %}
+                            <p>
+                                <strong>default</strong> : {{ argument.default }}
+                            </p>
+                            {% endif %}
+
+                            {% if argument.example != nil AND argument.example != '' %}
+                            <p>
+                                example : <em>{{ argument.example }}</em>
+                            </p>
+                            {% endif %}
+
+                        </td>
+                    </tr>
+
+                {% endif %}
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endif %}
+
 <h4>Loop arguments</h4>
 
 <div class="table-responsive">
