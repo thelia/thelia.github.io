@@ -7,6 +7,7 @@ lang: en
 subnav: loop_order
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
+text_search_fields: ref, invoice_ref, customer_ref, customer_firstname, customer_lastname, customer_email
 type: order
 arguments :
     - {name: "id", description: "A single or a list of order ids.", example: "id=\"2\", id=\"1,4,7\""}
@@ -14,7 +15,7 @@ arguments :
     - {name: "status", description: "A single or a list of order status ID or `*` keyword to match all", example: "status=\"*\", status=\"1,4,7\""}
     - {name: "exclude_status (2.2+)", description: "A single or a list of order status ID which are to be excluded from the results", example: "status=\"*\", exclude_status=\"1,4,7\""}
     - {name: "status_code (2.2+)", description: "A single or a list of order status codes or `*` keyword to match all. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "status=\"*\", status=\"not_paid,canceled\""}
-    - {name: "exclude_status_code (2.2+)", description: "A single or a list of order status codes which are to be excluded from the results. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "exclude_status_code=\"paid,processing\""} 
+    - {name: "exclude_status_code (2.2+)", description: "A single or a list of order status codes which are to be excluded from the results. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "exclude_status_code=\"paid,processing\""}
     - {
       name: "order", description: "A list of values", example: "order=\"reference-reverse\"", default: "create-date-reverse",
       expected_values: [
@@ -65,5 +66,5 @@ outputs :
     - {name: "$IS_NOT_PAID", description: "True is the order has the 'not paid' status, false otherwise"}
     - {name: "$IS_SENT", description: "True is the order has the 'sent' status, false otherwise"}
     - {name: "$IS_PROCESSING", description: "True is the order has the 'processing' status, false otherwise"}
- 
+
 ---

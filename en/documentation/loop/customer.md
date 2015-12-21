@@ -7,6 +7,7 @@ lang: en
 subnav: loop_customer
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
+text_search_fields: ref, firstname, lastname, email
 type: customer
 arguments :
     - {name: "current", description: "A boolean value which must be set to false if you need to display not authenticated customers information, typically if `sponsor` parameter is set.", example: "current=\"false\"", default: "yes"}

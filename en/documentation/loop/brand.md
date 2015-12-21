@@ -7,6 +7,7 @@ lang: en
 subnav: loop_brand
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : false, versionable : false }
+text_search_fields: title
 type: brand
 arguments :
     - {name: "id", description: "A single or a list of brand ids.", example: "id=\"2\", id=\"1,4,7\""}

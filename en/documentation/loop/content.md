@@ -7,6 +7,7 @@ lang: en
 subnav: loop_content
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : true }
+text_search_fields: title
 type: content
 arguments :
     - {name: "id", description: "A single or a list of content ids.", example: "id=\"2\", id=\"1,4,7\""}
