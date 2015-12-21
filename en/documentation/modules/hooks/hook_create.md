@@ -57,9 +57,9 @@ The ```tag``` tag indicates a method that will handle a defined hook :
 
 Some attributes here are optionals. Attributes :
 
-- ```name="hook.event_listener"``` must be defined as well. 
-- ```event``` : represents the hook *code* for which it wants to respond. 
-- ```type``` : indicate the context of the hook : frontoffice (default), front, fo, backoffice, back, bo, pdf or email. 
+- ```name="hook.event_listener"``` must be defined as well.
+- ```event``` : represents the hook *code* for which it wants to respond.
+- ```type``` : indicate the context of the hook : frontoffice (default), front, fo, backoffice, back, bo, pdf or email.
 - ```method``` : indicate the method to be called. By default, it will be based on the name of the hook. eg : for ```product.additional``` hook, the method ```onProductAdditional``` will be called (*CamelCase prefixed by on*).
 - ```active``` : allow you to activate the hook (**set to 1** - *default*) or not (**set to 0**) when the module is installed.    
 
@@ -70,7 +70,7 @@ Your class must extend ```Thelia\Core\Hook\BaseHook```. This class provides some
 
 When a hook is called from the template, an event for this hook is created and dispatched by Thelia. If your module listens to this hook the method that you indicate in your ```config.xml``` is called with as argument the event generated.
 
-This event could be a ```Thelia\Core\Event\Hook\HookRenderEvent``` (*for hook function*) or ```Thelia\Core\Event\Hook\HookRenderBlockEvent``` (*for hook block*). 
+This event could be a ```Thelia\Core\Event\Hook\HookRenderEvent``` (*for hook function*) or ```Thelia\Core\Event\Hook\HookRenderBlockEvent``` (*for hook block*).
 
 
 ### Example of a hook function
@@ -88,7 +88,7 @@ In ```config.xml``` :
         <tag name="hook.event_listener" event="product.top" type="front" method="onProductTop" active="1" />
         -->
     </hook>   
-</hooks> 
+</hooks>
 ```
 
 In our class :
@@ -132,7 +132,7 @@ class Front extends BaseHook {
 
 and that's it. This is not very useful for now but you can imagine whatever you want.
 
-Other methods like ```getCart``` are available thanks to BaseHook class : 
+Other methods like ```getCart``` are available thanks to BaseHook class :
 
 - ```getOrder``` : the order.
 - ```getCustomer``` : the customer logged in.
@@ -155,7 +155,7 @@ In ```config.xml``` :
     <hook id="module.hook.front" class="Module\Hook\Front" scope="request">
         <tag name="hook.event_listener" event="product.additional" method="onProductAdditionalContents" />
     </hook>   
-</hooks> 
+</hooks>
 ```
 
 In our class :
@@ -210,9 +210,9 @@ The associated template in product page :
 
 ```html
     <section id="product-tabs">
-        
+
         {hookblock name="product.additional" product="{product attr="id"}"}
-        
+
         <ul class="nav nav-tabs" role="tablist">
             <li class="active" role="presentation"><a id="tab1" href="#description" data-toggle="tab" role="tab">{intl l="Description"}</a></li>
 
@@ -225,7 +225,7 @@ The associated template in product page :
             <div class="tab-pane active in" id="description" itemprop="description" role="tabpanel" aria-labelledby="tab1">
                 <p>{$DESCRIPTION|default:'N/A' nofilter}</p>
             </div>
-            
+
             {forhook rel="product.additional"}
             <div class="tab-pane" id="{$id}" role="tabpanel" aria-labelledby="tab{$id}">
                 {$content nofilter}
@@ -301,7 +301,7 @@ As you can see, you can use **assets** and **translations** in your smarty templ
 
 For translate function (eg: intl) you should use the ```d``` attribute with a special code. You can learn more about the intl function on this page : [internationalization](/en/documentation/templates/i18n.html#{intl})
 
-For assets functions (eg: image, images, stylesheets, javascripts) you should use the ```source``` attribute with your module code. 
+For assets functions (eg: image, images, stylesheets, javascripts) you should use the ```source``` attribute with your module code.
 
 We've added a system of overriding for assets allowing you to redefine the asset in the template you use. For example, if you use the default template, and use the image ```img/more.png``` in your smarty template, you could override this image in your template if you put your own image in ```template/frontOffice/default/modules/MyModule/img/more.png```
 
@@ -310,7 +310,7 @@ We've added a system of overriding for assets allowing you to redefine the asset
 
 For some module, you will have to load some specific dependendies like CSS stylesheet or JavaScript.
 
-For **CSS stylesheets**, you have to add the ```<link>``` tag in the ```<head>``` of our page. In order to do this, you have to subscribe to specific ```hook``` located in this area. The best hook is the ```main.stylesheet``` hook if you it's a stylesheet you want in each pages of your site. If it's a stylesheet just needed in few pages, you can use hook specific to page : **product**.stylesheet, **category**.stylesheet, ... 
+For **CSS stylesheets**, you have to add the ```<link>``` tag in the ```<head>``` of our page. In order to do this, you have to subscribe to specific ```hook``` located in this area. The best hook is the ```main.stylesheet``` hook if you it's a stylesheet you want in each pages of your site. If it's a stylesheet just needed in few pages, you can use hook specific to page : **product**.stylesheet, **category**.stylesheet, ...
 
 For JavaScript files, you should add them at the bottom of the page and after the inclusion of the default JavaScript files of your template. The hook for global JavaScript is : ```main.after-javascript-include``` and for specific page : **product**.after-javascript-include, **category**.after-javascript-include, ...
 
@@ -328,7 +328,7 @@ For example, this method attached to the ```main.stylesheet``` hook
 public function onMainStylesheet(HookRenderEvent $event)
 {
     $content = $this->addCSS('assets/css/styles.css');
-    $content = $this->addCSS('assets/css/print.css', 
+    $content = $this->addCSS('assets/css/print.css',
                              array("media" => "print"));
     $event->add($content);
 }
@@ -370,6 +370,52 @@ public function onMainStylesheet(HookRenderEvent $event)
 
 ## The new module configuration
 
-Before the hooks, modules had the oppotunity to interact with backOffice template with the module_include function, especially to create a link in modules page to add a configuration page.
+Before the hooks, modules had the opportunity to interact with backOffice template with the module_include function, especially to create a link in modules page to add a configuration page.
 
 Now, adding shortcuts to your module is simpler as you can add entries in the main navigation bar or elsewhere if needed. You can still add a link in the modules page to the configuration page of your module in attaching your module to the `module.configuration` hook. The `module_include` module_configuration is now deprecated but still works as expected.
+
+
+## Improvements since Thelia 2.3
+
+<div class="alert alert-warning">
+<p>This functionality is only available since version 2.3</p>
+</div>
+
+The use of hooks has been simplified.
+
+Now, it's no longer required to implement your own class to handle hooks. If you only want to render a template or add a css or js file you can do it easily. Here is an example :
+
+```xml
+<hooks>
+    <hook id="hooknavigation.hook.test">
+      <tag name="hook.event_listener" event="main.navbar-primary" templates="render:myTemplate.html" />
+      <tag name="hook.event_listener" event="main.stylesheet" type="front" active="1" templates="css:myCss.css;render:theme.css.html" />
+    </hook>
+</hooks>
+```
+
+You can notice that the `class` argument has been omitted as well as the `scope` argument.
+
+The tag syntax is similar and it operates the same way, except for the new argument `templates`. This argument is used to define what contents are going to be *injected* in the hook.
+
+The syntax :
+
+```
+templates="<action>:<file>[;<action>:<file>]*"
+```
+
+- action (what to do with the file) :
+    - **render** : this is the default one (if action is omitted). It will render the file. all parameters affected to the hook will be available in the template.
+    - **dump** : will just dump the content of the file.
+    - **css** : will create a `link` html tag and add the CSS file.
+    - **js** : will create a `script` html tag and add the JavaScript file.
+- file : this is the full path of the file related to the root directory of your template directory. For example, if the hook is a front office hook and want to render the file `myTemplate.html`. This template should be located in your module inside the `templates\frontOffice\default\` directory. The overriding system is the same as used with classic hook.
+
+A command has been added to cleanup hooks of a module or of all modules. They will be recreated (with default configuration) when the cache of the application will be cleared :
+
+```bash
+# remove module hooks of the HookNavigation module (without confirmation)
+php Thelia hook:clean HookNavigation --assume-yes
+# remove hooks of all modules (with confirmation)
+php Thelia hook:clean
+```
