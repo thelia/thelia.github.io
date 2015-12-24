@@ -21,14 +21,13 @@ methods:
 
 If you want to create a product, you have to send the following fields with the POST method.
 
-##### General information 
+##### General information
 
 - ref : The product reference
 - default\_category  : The product default [category](category.html) id
 - price  : The product default price
 - currency  : The product price [currency](currency.html) id
 - tax\_rule  : The product tax\_rule [tax rule](tax_rule.html)</a> id
-- lang : The product [lang](lang.html) id
 - weight  : The product weight (optional)
 - visible  : If true, the product will be visible (optional)
 
@@ -41,6 +40,7 @@ If you want to create a product, you have to send the following fields with the 
 - postscriptum: The product conclusion (optional)
 
 ### Example
+
 ```json
 {
     "ref": "foo",
@@ -62,6 +62,7 @@ If you want to create a product, you have to send the following fields with the 
 To update a product, you have to send the same data (only updated ones) as for a create, but with the PUT method.
 
 ### Example
+
 ```json
 {
     "ref": "bar",
