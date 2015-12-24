@@ -60,7 +60,7 @@ You can install Thelia by two different way
 
 Installing thelia with the web install wizard allow to create an administrator, add some informations about your shop, etc
 
-First of all, you have to configure a vhost as describe in [configuration](/en/documentation/configuration.html) section.
+First of all, you have to configure a vhost as describe in [configuration](/en/documentation/configuration/server.html) section.
 
 The install wizard in accessible with your favorite browser :
 
