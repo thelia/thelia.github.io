@@ -12,6 +12,11 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="/{%if page.lang != site.language %}{{page.lang}}{% endif %}"><img src="/assets/img/logo.png" alt="Thelia documentation logo"/></a>
+            <ul class="breadcrumb-header text-right">
+                {% for lang in site.languages %}
+                <li><a href="{{lang.url}}" title="{{lang.name}}">{{lang.code}}</a></li>
+                {% endfor %}
+            </ul>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
