@@ -19,7 +19,7 @@ welcome :
               Here is the documentation for the current major version of Thelia.<br/>
           </p>
           <p>
-            The last major version of Thelia today is the version 2.1, you can download it <a href="http://thelia.net/#download">here</a>
+            The last major version of Thelia today is the version 2.2, you can download it <a href="http://thelia.net/#download">here</a>
           </p>
           <p>
             To know what's coming on the next version, read our <a href="http://thelia.net/community/roadmap">Roadmap</a>
