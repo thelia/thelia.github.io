@@ -34,10 +34,22 @@ or even templates who use the thelia-installer too.
 
 ## Update your project
 
-If you have installed Thelia following the instructions before, you can update your files using a script present in your project : 
+If you have installed Thelia following the instructions before, you can update your files using a script present in your project :
 
 ```
 $ sh change-version.sh 2.2.1
 ```
 
 Here `2.2.1` is the version you want to retrieve. For updating your database, follow this [instructions](/en/documentation/installation/index.html#use-the-update-script-%28since-version-2-1%29)
+
+## Known issues
+
+### GitHub and composer
+
+With composer you could encounter an API rate limit exception during the install.
+
+In this case, you must create a new [Personal access token](https://github.com/settings/tokens) on your GitHub account and then add it to your composer configuration with this command :
+
+```bash
+composer config --global github-oauth.github.com <YOUR_TOKEN>
+```
