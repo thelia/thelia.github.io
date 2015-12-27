@@ -58,6 +58,23 @@ which gives :
 
 Setting `noamp=1` will escape all `&` as `&amp;` that may be present in the generated URL.
 
+### `router` and `route_id`
+
+<div class="alert alert-warning">
+<p>This functionality is only available since version 2.3</p>
+</div>
+
+Since the version 2.3, it's possible to generate an URL from the route id.
+The argument `router` has a default value the current environment (`front` or `admin`).
+
+    {url route_id="contact.success"}
+    {url route_id="admin.catalog"}
+    {url route_id="admin.folders.update" folder_id=42}
+
+Example for a module :
+
+    {url router="paypal" route_id="paypal.configure"}
+
 ### Adding custom parameters to the generated URL
 
 You may add as many parameters as you want to the generated URL, by adding them as `{url}` parameters :
