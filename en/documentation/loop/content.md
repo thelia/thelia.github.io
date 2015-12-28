@@ -52,8 +52,8 @@ outputs :
     - {name: "$URL", description: "the content URL"}
     - {name: "$DEFAULT_FOLDER", description: "the default folder id for the current content"}
     - {name: "$POSITION", description: "the content position"}
-    - {name: "$HAS_PREVIOUS", description: "true if a content exists before this one in the current folder, following contents positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$HAS_NEXT", description: "true if a content exists after this one in the current folder, following contents positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$PREVIOUS", description: "The ID of content before this one in the current folder, following contents positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$NEXT", description: "The ID of content after this one in the current folder, following contents positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}   
+    - {name: "$HAS_PREVIOUS", description: "true if a content exists before this one in the current folder, following contents positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$HAS_NEXT", description: "true if a content exists after this one in the current folder, following contents positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$PREVIOUS", description: "The ID of content before this one in the current folder, following contents positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$NEXT", description: "The ID of content after this one in the current folder, following contents positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
 ---

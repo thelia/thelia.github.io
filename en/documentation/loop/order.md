@@ -16,6 +16,7 @@ arguments :
     - {name: "exclude_status (2.2+)", description: "A single or a list of order status ID which are to be excluded from the results", example: "status=\"*\", exclude_status=\"1,4,7\""}
     - {name: "status_code (2.2+)", description: "A single or a list of order status codes or `*` keyword to match all. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "status=\"*\", status=\"not_paid,canceled\""}
     - {name: "exclude_status_code (2.2+)", description: "A single or a list of order status codes which are to be excluded from the results. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "exclude_status_code=\"paid,processing\""}
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.3"}
     - {
       name: "order", description: "A list of values", example: "order=\"reference-reverse\"", default: "create-date-reverse",
       expected_values: [
@@ -66,5 +67,9 @@ outputs :
     - {name: "$IS_NOT_PAID", description: "True is the order has the 'not paid' status, false otherwise"}
     - {name: "$IS_SENT", description: "True is the order has the 'sent' status, false otherwise"}
     - {name: "$IS_PROCESSING", description: "True is the order has the 'processing' status, false otherwise"}
+    - {name: "$HAS_PREVIOUS", description: "true if a order exists before this one following orders id. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
+    - {name: "$HAS_NEXT", description: "true if a order exists after this one, following orders id. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
+    - {name: "$PREVIOUS", description: "The ID of order before this one, following orders id, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
+    - {name: "$NEXT", description: "The ID of order after this one, following orders id, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
 
 ---

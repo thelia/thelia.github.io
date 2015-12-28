@@ -57,9 +57,9 @@ outputs :
     - {name: "$VISIBLE", description: "Return if the category is visible or not"}
     - {name: "$PRODUCT_COUNT", description: "Number of product contained by the current category. Only available if <strong>need_product_count</strong> parameter is set to true"}
     - {name: "$CHILD_COUNT", description: "Number of subcategories contained by the current category. Only available if <strong>need_count_child</strong> parameter is set to true"}
-    - {name: "$HAS_PREVIOUS", description: "true if a category exists before this one in the current parent category, following categories positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$HAS_NEXT", description: "true if a category exists after this one in the current parent category, following categories positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$PREVIOUS", description: "The ID of category before this one in the current parent category, following categories positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$NEXT", description: "The ID of category after this one in the current parent category, following categories positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}   
+    - {name: "$HAS_PREVIOUS", description: "true if a category exists before this one in the current parent category, following categories positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$HAS_NEXT", description: "true if a category exists after this one in the current parent category, following categories positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$PREVIOUS", description: "The ID of category before this one in the current parent category, following categories positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$NEXT", description: "The ID of category after this one in the current parent category, following categories positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
     - {name: "$TEMPLATE", description: "the template id associated to this category", from_version: "2.2"}
 ---

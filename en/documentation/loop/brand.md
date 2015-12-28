@@ -48,9 +48,9 @@ outputs :
     - {name: "$URL", description: "the brand URL"}
     - {name: "$LOGO_IMAGE_ID", description: "ID of the brand logo image, among the brand images"}
     - {name: "$POSITION", description: "the brand position"}
-    - {name: "$HAS_PREVIOUS", description: "true if a brand exists before this one following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
-    - {name: "$HAS_NEXT", description: "true if a brand exists after this one, following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
-    - {name: "$PREVIOUS", description: "The ID of brand before this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}
-    - {name: "$NEXT", description: "The ID of brand after this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true", from_version: "2.3"}   
+    - {name: "$HAS_PREVIOUS", description: "true if a brand exists before this one following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
+    - {name: "$HAS_NEXT", description: "true if a brand exists after this one, following brands positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
+    - {name: "$PREVIOUS", description: "The ID of brand before this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
+    - {name: "$NEXT", description: "The ID of brand after this one, following brands positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.3"}
 
 ---
