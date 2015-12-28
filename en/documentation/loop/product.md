@@ -112,10 +112,10 @@ outputs :
     - {name: "$TAX_RULE_ID", description: "the product's tax rule ID"}
     - {name: "$TEMPLATE", description: "the template id associated to this product"}
     - {name: "$BRAND_ID", description: "the brand id of this product. Empty if no brand is assigned for this product"}
-    - {name: "$HAS_PREVIOUS", description: "true if a product exists before this one in the current category, following products positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$HAS_NEXT", description: "true if a product exists after this one in the current category, following products positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$PREVIOUS", description: "The ID of product before this one in the current category, following products positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}
-    - {name: "$NEXT", description: "The ID of product after this one in the current category, following products positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true, or if <strong>backend_context</strong> is true"}   
+    - {name: "$HAS_PREVIOUS", description: "true if a product exists before this one in the current category, following products positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$HAS_NEXT", description: "true if a product exists after this one in the current category, following products positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$PREVIOUS", description: "The ID of product before this one in the current category, following products positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
+    - {name: "$NEXT", description: "The ID of product after this one in the current category, following products positions, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
 
     - {name: "$DEFAULT_CATEGORY", description: "the default category id associated to this product"}
 
