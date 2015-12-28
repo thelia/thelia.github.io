@@ -21,6 +21,7 @@ arguments :
     - {name: "exclude_folder", description: "A single or a list of folder ids. If a content is in multiple folders which are not all excluded it will not be excluded.", example: "exclude_folder=\"2\", exclude_folder=\"1,4,7\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {name: "title", description: "A title string", example: "title=\"foo\""}
+    - {name: "return_url", description: "A boolean value which allows the urls generation.", example: "return_url=\"no\"", default: "yes", from_version: "2.3"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",

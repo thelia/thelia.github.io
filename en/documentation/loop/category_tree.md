@@ -13,6 +13,7 @@ arguments :
     - {name: "depth", description: "The max depth", example: "depth=\"5\""}
     - {name: "visible", description: "Whatever we consider hidden category or not.", example: "visible=\"false\"", default: "true"}
     - {name: "exclude", description: "A single or a list of category ids to exclude for result.", example: "exclude=\"5,72\""}
+    - {name: "return_url", description: "A boolean value which allows the urls generation.", example: "return_url=\"no\"", default: "yes", from_version: "2.3"}
 outputs :
     - {name: "$ID", description: "the category id"}
     - {name: "$TITLE", description: "the category title"}
