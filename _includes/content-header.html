@@ -1,0 +1,13 @@
+<h1>{{ page.title }}</h1>
+
+{% if page.from_version != nil AND page.from_version != '' %}
+<div class="alert alert-info">This functionality is only available since version <strong>{{ page.from_version }}</strong></div>
+{% endif %}
+
+{% if page.until_version != nil AND page.until_version != '' %}
+<div class="alert alert-default">This functionality is only available until version <strong>{{ page.until_version }}</strong></div>
+{% endif %}
+
+{% for description_p in page.description %}
+<p>{{ description_p }}</p>
+{% endfor %}

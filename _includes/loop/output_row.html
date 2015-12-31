@@ -71,7 +71,10 @@
                 <td>
                     {{ output.name }}
                     {% if output.from_version != nil AND output.from_version != '' %}
-                     <span class="label label-default">Thelia >= {{ output.from_version }}</span>
+                     <span class="label label-info" title="From version {{ output.from_version }}">&gt;= {{ output.from_version }}</span>
+                    {% endif %}
+                    {% if output.until_version != nil AND output.until_version != '' %}
+                     <span class="label label-default" title="Until version {{ output.until_version }}">&lt; {{ output.until_version }}</span>
                     {% endif %}
                 </td>
                 <td>

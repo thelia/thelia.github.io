@@ -18,13 +18,7 @@
         </div>
         <main role="main" class="col-lg-9 col-md-9 col-sm-9">
 
-            <h1>{{ page.title }}</h1>
-
-            {% for description_p in page.description %}
-
-            <p>{{ description_p }}</p>
-
-            {% endfor %}
+            {% include content-header.html %}
 
 {% highlight smarty %}
 {{ page.prefix | prepend: '{' }} {% if page.attribute != nil and page.attribute != '' %}{{ page.attribute }}{% else %}attr{% endif %}="one_of_the_following"}
@@ -35,7 +29,7 @@
             {% include substitution/attribute_row.html %}
 
             {% include substitution/argument_row.html %}
-            
+
         </main>
 
     </section>
