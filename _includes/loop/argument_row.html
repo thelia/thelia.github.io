@@ -34,7 +34,11 @@
                             {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
                             {% if argument.from_version != nil AND argument.from_version != '' %}
                             <br/>
-                            <span class="label label-default">Thelia >= {{ argument.from_version }}</span>
+                            <span class="label label-info">Thelia &gt;= {{ argument.from_version }}</span>
+                            {% endif %}
+                            {% if argument.until_version != nil AND argument.until_version != '' %}
+                            <br/>
+                            <span class="label label-default">Thelia &lt; {{ argument.until_version }}</span>
                             {% endif %}
                         </td>
                         <td>
@@ -48,7 +52,11 @@
                                     <li>
                                         {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
                                         {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
-                                        <span class="label label-default">Thelia >= {{ expected_value.from_version }}</span>
+                                        <span class="label label-info">Thelia &gt;= {{ expected_value.from_version }}</span>
+                                        {% endif %}
+                                        {% if expected_value.until_version != nil AND expected_value.until_version != '' %}
+                                        <br/>
+                                        <span class="label label-default">Thelia &lt; {{ expected_value.until_version }}</span>
                                         {% endif %}
                                     </li>
                                     {% endfor %}
@@ -107,7 +115,11 @@
                             {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
                             {% if argument.from_version != nil AND argument.from_version != '' %}
                             <br/>
-                            <span class="label label-default">Thelia >= {{ argument.from_version }}</span>
+                            <span class="label label-info">Thelia &gt;= {{ argument.from_version }}</span>
+                            {% endif %}
+                            {% if argument.until_version != nil AND argument.until_version != '' %}
+                            <br/>
+                            <span class="label label-default">Thelia &lt; {{ argument.until_version }}</span>
                             {% endif %}
                         </td>
                         <td>
@@ -126,7 +138,11 @@
                                         <li>
                                             {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
                                             {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
-                                            <span class="label label-default">Thelia >= {{ expected_value.from_version }}</span>
+                                            <span class="label label-info">Thelia &gt;= {{ expected_value.from_version }}</span>
+                                            {% endif %}
+                                            {% if expected_value.until_version != nil AND expected_value.until_version != '' %}
+                                            <br/>
+                                            <span class="label label-default">Thelia &lt; {{ expected_value.until_version }}</span>
                                             {% endif %}
                                         </li>
                                         {% endfor %}
@@ -176,7 +192,11 @@
                 {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
                 {% if argument.from_version != nil AND argument.from_version != '' %}
                 <br/>
-                <span class="label label-default">Thelia >= {{ argument.from_version }}</span>
+                <span class="label label-info">Thelia &gt;= {{ argument.from_version }}</span>
+                {% endif %}
+                {% if argument.until_version != nil AND argument.until_version != '' %}
+                <br/>
+                <span class="label label-default">Thelia &lt; {{ argument.until_version }}</span>
                 {% endif %}
             </td>
             <td>
@@ -190,7 +210,11 @@
                         <li>
                             {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
                             {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
-                            <span class="label label-default">Thelia >= {{ expected_value.from_version }}</span>
+                            <span class="label label-info">Thelia &gt;= {{ expected_value.from_version }}</span>
+                            {% endif %}
+                            {% if expected_value.until_version != nil AND expected_value.until_version != '' %}
+                            <br/>
+                            <span class="label label-default">Thelia &lt; {{ expected_value.until_version }}</span>
                             {% endif %}
                         </li>
                         {% endfor %}

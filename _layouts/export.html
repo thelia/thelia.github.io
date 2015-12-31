@@ -18,15 +18,10 @@
         </div>
         <main role="main" class="col-lg-9 col-md-9 col-sm-9">
 
-            <h1>{{ page.title }}</h1>
+            {% include content-header.html %}
 
-            {% for description_p in page.description %}
-
-            <p>{{ description_p }}</p>
-
-            {% endfor %}
             <hr />
-            
+
             {% if page.has_images || page.has_documents %}
             <div class="row">
                 {% if page.has_images %}
@@ -45,9 +40,9 @@
                 {% endif %}
             </div>
             {% endif %}
-            
+
             <h2>Outputs</h2>
-            
+
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
                     <thead>
@@ -56,10 +51,10 @@
                             <th>Output description</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody>
                         {% for output in page.outputs %}
-                        
+
                         <tr>
                             <td class="col-md-4">
                                 {{ output.name }}
@@ -68,16 +63,16 @@
                                 {{ output.description }}
                             </td>
                         </tr>
-                        
+
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
-            
+
             {% if page.opt_outputs %}
-            
+
                     <h2> Optional outputs </h2>
-                    
+
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered">
                             <thead>
@@ -86,10 +81,10 @@
                                     <th>Output description</th>
                                 </tr>
                             </thead>
-                            
+
                             <tbody>
                                 {% for output in page.opt_outputs %}
-                                
+
                                 <tr>
                                     <td class="col-md-4">
                                         {{ output.name }}
@@ -98,12 +93,12 @@
                                         {{ output.description }}
                                     </td>
                                 </tr>
-                                
+
                                 {% endfor %}
                             </tbody>
                         </table>
                     </div>
-            
+
             {% endif %}
         </main>
 
