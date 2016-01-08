@@ -48,7 +48,7 @@ Then unzip the file.
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project thelia/thelia path/ 2.2.1
+$ php composer.phar create-project thelia/thelia path/ 2.2.2 (or 2.1.8)
 ```
 
 
