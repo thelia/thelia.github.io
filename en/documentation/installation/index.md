@@ -10,7 +10,7 @@ lang: en
     <h1>Requirements</h1>
 </div>
 
-* php 5.4
+* PHP 5.4
     * Required extensions :
         * PDO_Mysql
         * mcrypt
@@ -22,8 +22,9 @@ lang: en
     * memory_limit at least 128M, preferably 256.
     * post\_max\_size 20M
     * upload\_max\_filesize 2M
-* apache 2
-* mysql 5
+    * date.timezone must be defined
+* Web Server Apache 2 or Nginx
+* MySQL 5
 
 If you use **Windows** with [WAMP](http://www.wampserver.com/) and encounter an issue with ```intl``` there is a special manipulation to do : you have to copy all files with name ```icu***.dll```  from php directory (eg: "C:\wamp\bin\php\php5.x.xx") to the ```apache``` directory ("C:\wamp\bin\apache\apache2.x.xx\bin").
 
@@ -101,7 +102,7 @@ For a demo with fake but realistic products
 $ php setup/import.php
 ```
 
-For dev data (composer must be install [`globally`](http://getcomposer.org/doc/00-intro.md#globally))
+For dev data (composer must be installed [`globally`](http://getcomposer.org/doc/00-intro.md#globally))
 
 ```bash
 $ php setup/faker.php
@@ -131,31 +132,38 @@ If you have already installed Thelia but a new version is available, you can upd
 <p><em>You can backup your database with tools such as phpmyadmin or mysqldump.</em></p>
 </div>
 
-Once the backup is done, you first have to :
+Once the backup is done, The update process only takes a few minutes, in 2 main step:
 
-- clear all caches running ```php Thelia cache:clear```
+- Update your files
+- Update your database
+
+### Step 1 : update your files
+
+- if you uses git, you can ```git checkout``` to the current version to switch to your target version. (see also: [advanced](/en/documentation/installation/advanced.html)
+- otherwise, download the archive at [http://thelia.net/#download](http://thelia.net/#download) and replace all your files. 
 - copy all files from the thelia new version (local/modules/* files too)
 
-Then you have 3 differents ways to proceed :
+Note: if you moved your admin/install directories, your index_dev.php or any other
+file/directory, don't forget to update them too.
 
-### use Thelia command (ONLY for Thelia 2.0.x)
+In both case, clear all caches running ```php Thelia cache:clear```
 
-- run ```php Thelia thelia:update```
-- again clear all caches in all environment :
-    - ```php Thelia cache:clear```
-    - ```php Thelia cache:clear --env=prod```
+### Step 2 : update your database
 
-This command **can fail** on some updates and you will have to use the next methods.
+If you are updating to a version > 2.1.x, simply run ```php setup/update.php```.
+This script automatically backup your database and restore it if a problem is detected.
+However, if your database is really big, it's recommended to backup your database manually and not to use the backup proposed by the script.
 
-### use the update script (since Thelia 2.1)
+It's strongly advised to clear the cache in all environment :
+- ```php Thelia cache:clear```
+- ```php Thelia cache:clear --env=prod```
 
-run ```php setup/update.php```
 
-This script is standalone. Moreover, it will automatically backup your database and restore it if a problem is detected.
+#### Alternative way to update your database
 
-If your database is big, it's recommended to backup your database manually and not to use the backup proposed by the script.
 
-### use the update wizard (since Thelia 2.1)
+
+##### use the update wizard (since Thelia 2.1)
 
 An update wizard is available in the ```web/install``` directory. It's the same directory used by the install wizard.
 
@@ -171,3 +179,15 @@ Note:
 
 - the wizard is available only if your Thelia is not already in the latest version.
 - if your database is big, it's recommended to backup your database by your hands and not rely on the wizard database backup.
+
+
+##### [Thelia 2.0.x ONLY), use Thelia command
+
+- run ```php Thelia thelia:update```
+- again clear all caches in all environment :
+    - ```php Thelia cache:clear```
+    - ```php Thelia cache:clear --env=prod```
+
+This command **can fail** on some updates and you will have to use the next methods.
+
+
