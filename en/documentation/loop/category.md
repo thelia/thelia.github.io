@@ -12,9 +12,10 @@ type: category
 arguments :
     - {name: "id", description: "A single or a list of category ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "parent", description: "A single or a list of category ids.", example: "category=\"3\", category=\"2,5,8\""}
-    - {name: "product", description: "A single product id.", example: "product=\"3\""}
+    - {name: "product", description: "A single or list (since 2.3) of product IDs.", example: "product=\"3\""}
     - {name: "exclude_parent", description: "A single or list of categories id to exclude.", example: "exclude_categories=\"12,22\"", from_version: "2.3"}
-    - {name: "exclude_product", description: "A single product id to exclude.", example: "exclude_product=\"3\""}
+    - {name: "exclude_product", description: "A single or list (since 2.3) product id to exclude.", example: "exclude_product=\"3\""}
+    - {name: "content", description: "One or more content ID. When this parameter is set, the loop returns the categories related to the specified content IDs.", example: "content=\"3\"", from_version: "2.3"}
     - {name: "current", description: "A boolean value which allows either to exclude current category from results either to match only this category", example: "current=\"yes\""}
     - {name: "not_empty", description: "(**not implemented yet**) A boolean value.", example: "not_empty=\"yes\"", default: "no"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}

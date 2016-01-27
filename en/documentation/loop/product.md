@@ -21,6 +21,7 @@ arguments :
     - {name: "category", description: "A single or a list of category ids.", example: "category=\"2\", category=\"1,4,7\""}
     - {name: "category_default", description: "A single or a list of default category ids allowing to retrieve all products having this parameter as default category.", example: "category_default=\"2\", category_default=\"1,4,7\""}
     - {name: "current_category", description: "A boolean value which allows either to exclude current category products from results either to match only current category products. If a product is in multiple categories whose one is current it will not be excluded if current_category=\"false\" but will be included if current_category=\"yes\"", example: "current_category=\"yes\""}
+    - {name: "content", description: "One or more content ID. When this parameter is set, the loop returns the products related to the specified content IDs.", example: "content=\"3\"", from_version: "2.3"}
     - {name: "depth", description: "A positive integer value which precise how many subcategory levels will be browse. Will not be consider if category parameter is not set.", example: "depth=\"2\"", default: "1"}
     - {name: "new", description: "A boolean value.", example: "new=\"yes\""}
     - {name: "promo", description: "A boolean value.", example: "promo=\"yes\""}
