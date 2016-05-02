@@ -78,7 +78,7 @@ For example, the default front-office template stores its template in the `asset
     {declare_assets directory="assets"}
 
 
-### {stylesheets} ###
+### {stylesheets} and {stylesheet} ###
 
 This directive processes your CSS style sheets.
 
@@ -99,6 +99,10 @@ The valid parameters are :
 - filters
 - source
 - template
+
+You may also use the short form `{stylesheet}`, which directly returns the URL of the CSS file :
+
+    <link href="{stylesheet file='assets/css/style.less' filters='less'}" rel="stylesheet" type="text/css" />
 
 #### file ####
 
@@ -139,7 +143,6 @@ You may want to use an asset located in another template of the same type (for e
 
 The example above will use the style.css file, located in the `assets/css` directory of the `default` front office template (the file path is `templates/frontOffice/default/assets/css/style.css`).
 
-
 ### {images} and {image} ###
 
 This directive process your statics images used in your template.
@@ -173,7 +176,7 @@ see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/asset
 
 see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
 
-### {javascripts} ###
+### {javascripts} and {javascript} ###
 
 This directive process your javascript files
 
@@ -186,11 +189,37 @@ The valid parameters are :
 - source
 - template
 
+You may also use the short form `{javascript}`, which directly returns the URL of the JS file :
+
+    <script type="text/javascript" src="{javascript file='assets/js/script.js'}"></script>
+
 #### file ####
 
 This is the path to the file (or files, as jokers like '\*' are allowed), relative to the template base path.
 
 The value of this parameter is a file path, for example `assets/js/script.js`, or a set of files, like `assets/js/*.js`
+
+#### source ####
+
+see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#source)
+
+#### template ####
+
+see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
+
+### {asset} ###
+
+This directive process any asset file, and is only available in its short form. Example for a sound :
+
+    <audio src="{asset file='assets/sound/my_sound.ogg'}" autoplay>
+      Audio not supported.
+    </audio>
+
+#### file ####
+
+This is the path to the file, relative to the template base path.
+
+The value of this parameter is a file path, for example `assets/sound/my_sound.ogg`.
 
 #### source ####
 
