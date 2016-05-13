@@ -7,7 +7,7 @@ lang: en
 subnav: loop_product
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : true }
-text_search_fields: ref, title
+text_search_fields: ref, title, chapo, description, postscriptum
 type: product
 arguments :
     - name: "complex"
