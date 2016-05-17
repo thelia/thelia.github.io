@@ -7,7 +7,7 @@ lang: en
 subnav: loop_product_sale_elements
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
-text_search_fields: ref
+text_search_fields: ref, ean_code
 type: product_sale_elements
 arguments:
     - {name: "id", description: "A comma separated list of product sale elements id. Mandatory if the 'product' parameter is not present", example: "id=\"1,3,8\""}
