@@ -58,7 +58,7 @@ In your config.xml you have already declared your own loops, filters and other s
 </config>
 ```
 
-You Customer class must have to implement [Symfony\Component\EventDispatcher\EventSubscriberInterface](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html) and to implement the [getSubscribedEvents](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html#method_getSubscribedEvents) method.
+You Customer class must have to implement [Symfony\Component\EventDispatcher\EventSubscriberInterface](http://api.symfony.com/2.8/Symfony/Component/EventDispatcher/EventSubscriberInterface.html) and to implement the [getSubscribedEvents](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html#method_getSubscribedEvents) method.
 
 The action name for creating a new customer is **createCustomer** so the event name is **action.createCustomer** and you have to declare in the [getSubscribedEvents](http://api.symfony.com/2.2/Symfony/Component/EventDispatcher/EventSubscriberInterface.html#method_getSubscribedEvents) that you want to listen this action.
 Because this action is also a default thelia action, you can decide if your action has to be executed before the

@@ -65,7 +65,7 @@ public static function getSubscribedEvents()
 
 The *buildForm* method defines all the fields of the form, and the fields options, such as for each label and field validation constraints.
 
-`$this->formBuilder` is the Symfony [FormFactoryInterface](http://api.symfony.com/2.3/Symfony/Component/Form/FormFactoryInterface.html) object, and is used to create your form fields :
+`$this->formBuilder` is the Symfony [FormFactoryInterface](http://api.symfony.com/2.8/Symfony/Component/Form/FormFactoryInterface.html) object, and is used to create your form fields :
 
 ```php
 <?php

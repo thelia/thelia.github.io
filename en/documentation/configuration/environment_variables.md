@@ -15,7 +15,7 @@ lang: en
 It is possible to use environment variables instead of hard coding database credentials.
 
 The HttpKernel component already has this feature so we reuse it in Thelia so you stil have to use the prefix SYMFONY__ , 
-the documentation is here : [http://symfony.com/fr/doc/2.3/cookbook/configuration/external_parameters.html](http://symfony.com/fr/doc/2.3/cookbook/configuration/external_parameters.html)
+the documentation is here : [http://symfony.com/fr/doc/2.8/cookbook/configuration/external_parameters.html](http://symfony.com/fr/doc/2.8/cookbook/configuration/external_parameters.html)
 
 database.yml file exemple : 
 

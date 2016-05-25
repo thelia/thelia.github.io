@@ -55,7 +55,7 @@ Then unzip the file.
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project thelia/thelia path/ 2.2.2 (or 2.1.8)
+$ php composer.phar create-project thelia/thelia path/ 2.3.1 (or 2.2.3)
 ```
 
 Be sure to have git installed on your machine as it is required to install some dependencies, like Propel.
