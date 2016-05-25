@@ -7,7 +7,7 @@ lang: en
 subnav: loop_order
 uses_global_argument: true
 returns_global_outputs: { countable : true, timestampable : true, versionable : false }
-text_search_fields: ref, invoice_ref, customer_ref, customer_firstname, customer_lastname, customer_email
+text_search_fields: ref, invoice_ref, customer_ref, customer_firstname, customer_lastname, customer_email, delivery_ref (since 2.3), transaction_ref (since 2.3)
 type: order
 arguments :
     - {name: "id", description: "A single or a list of order ids.", example: "id=\"2\", id=\"1,4,7\""}
