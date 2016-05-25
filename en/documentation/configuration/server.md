@@ -96,7 +96,7 @@ server {
 
     location @rewriteapp {
     # rewrite all to index.php
-        rewrite ^(.*)$ /index.php?$1 last;
+        rewrite ^(.*)$ /index.php/$1 last;
     }
 
     # Php configuration
