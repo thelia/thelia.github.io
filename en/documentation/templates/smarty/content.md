@@ -3,7 +3,7 @@ layout: home
 title: Thelia Template Contents
 sidebar: templates
 lang: en
-subnav: templates_contents
+subnav: templates_smarty_contents
 ---
 # Content of a template #
 

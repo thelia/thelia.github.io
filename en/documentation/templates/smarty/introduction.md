@@ -1,13 +1,13 @@
 ---
 layout: home
-title: Thelia Templates
+title: Thelia Smarty Templates
 sidebar: templates
 lang: en
-subnav: templates_introduction
+subnav: templates_twig_introduction
 ---
-# About Thelia Templates #
+# About Thelia Smarty Templates #
 
-Thelia templates uses the [Smarty](http://www.smarty.net/) template engine, enriched by many Thelia additions, such as loops, data access functions, internationalization function, etc. 
+Thelia Smarty templates uses the [Smarty](http://www.smarty.net/) template engine, enriched by many Thelia additions, such as loops, data access functions, internationalization function, etc. 
 
 Be sure to have a basic Smarty knowledge before starting to write a new template. The [Smarty documentation](http://www.smarty.net/docs/en/) will help you.
 
@@ -15,7 +15,7 @@ The `default` templates provides guidelines and good practices to build a Thelia
 
 ## Structure of a template ##
 
-Thelia templates are located in the `templates` sub-directory. This directory contains two sub-directories :
+Thelia Smarty templates are located in the `templates` sub-directory. This directory contains two sub-directories :
 
 - `backOffice` : this is where back-office templates are located.
 - `frontOffice` : this is where front-office templates are located.

@@ -3,7 +3,7 @@ layout: home
 title: Thelia Template Assets
 sidebar: templates
 lang: en
-subnav: templates_assets
+subnav: templates_smarty_assets
 ---
 
 # Managing Template Assets

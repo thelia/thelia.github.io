@@ -3,7 +3,7 @@ layout: home
 title: Template URLs and paths
 sidebar: templates
 lang: en
-subnav: templates_urls_and_paths
+subnav: templates_smarty_urls_and_paths
 ---
 
 # URLs and paths

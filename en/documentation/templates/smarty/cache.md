@@ -3,7 +3,7 @@ layout: home
 title: Cache
 sidebar: templates
 lang: en
-subnav: templates_cache
+subnav: templates_smarty_cache
 ---
 
 # Block Cache
@@ -13,6 +13,8 @@ subnav: templates_cache
 </div>
 
 The cache block uses the `thelia.cache` service.
+
+You can add this block on static parts (menu, footer, ...) of your site to improve the generation time of your web pages
 
 ### Arguments
 

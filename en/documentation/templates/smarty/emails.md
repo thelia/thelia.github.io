@@ -3,7 +3,7 @@ layout: home
 title: Email Templates
 sidebar: templates
 lang: en
-subnav: templates_emails
+subnav: templates_smarty_emails
 ---
 
 # Thelia mails

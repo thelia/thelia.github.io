@@ -3,7 +3,7 @@ layout: home
 title: Render
 sidebar: templates
 lang: en
-subnav: templates_render
+subnav: templates_smarty_render
 ---
 
 # Render

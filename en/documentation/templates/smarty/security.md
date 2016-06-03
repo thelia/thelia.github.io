@@ -3,8 +3,9 @@ layout: home
 title: Thelia Template Internationalisation
 sidebar: templates
 lang: en
-subnav: templates_security
+subnav: templates_smarty_security
 ---
+
 # Security
 If you need to do some security checks in your pages, Thelia provides you some Smarty functions to help you.
 
