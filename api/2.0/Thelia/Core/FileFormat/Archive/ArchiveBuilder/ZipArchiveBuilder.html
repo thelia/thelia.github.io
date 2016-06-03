@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\FileFormat\Archive\ArchiveBuilder\ZipArchiveBuilder | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_FileFormat_Archive_ArchiveBuilder_ZipArchiveBuilder" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../../../Thelia/Core/FileFormat.html">FileFormat</a></li>
+                                        <li><a href="../../../../../Thelia/Core/FileFormat/Archive.html">Archive</a></li>
+                                        <li><a href="../../../../../Thelia/Core/FileFormat/Archive/ArchiveBuilder.html">ArchiveBuilder</a></li>
+    
+                <li>ZipArchiveBuilder</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>ZipArchiveBuilder</h1>
+    </div>
+
+    <p>    class
+    <strong>ZipArchiveBuilder</strong>        extends <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a>
+</p>
+
+            <div class="description">
+            <p>Class ZipArchiveBuilder</p>                    </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderAwareTrait.html"><abbr title="Thelia\Tools\FileDownload\FileDownloaderAwareTrait">Thelia\Tools\FileDownload\FileDownloaderAwareTrait</abbr></a>
+                                    </div>
+                <div class="col-md-6">
+                    Trait FileDownloaderAwareTrait
+                </div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>TEMP_DIRECTORY_NAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderInterface.html"><abbr title="Thelia\Tools\FileDownload\FileDownloaderInterface">FileDownloaderInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileDownloader">getFileDownloader</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderAwareTrait.html#method_getFileDownloader"><abbr title="Thelia\Tools\FileDownload\FileDownloaderAwareTrait">FileDownloaderAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Tools\FileDownload\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFileDownloader">setFileDownloader</a>(
+    <abbr title="Thelia\Tools\FileDownload\Thelia\Tools\FileDownload\FileDownloaderInterface">FileDownloaderInterface</abbr> $fileDownloader)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderAwareTrait.html#method_setFileDownloader"><abbr title="Thelia\Tools\FileDownload\FileDownloaderAwareTrait">FileDownloaderAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method___construct"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArchiveBuilderCacheDirectory">getArchiveBuilderCacheDirectory</a>($environment)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getArchiveBuilderCacheDirectory"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyFile">copyFile</a>($pathToFile, $destination, $isOnline)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_copyFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateCacheFile">generateCacheFile</a>($environment)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_generateCacheFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_throwFileNotFound">throwFileNotFound</a>($file)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_throwFileNotFound"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheFile">setCacheFile</a>($path)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_setCacheFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheDir">getCacheDir</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getCacheDir"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLogger">getLogger</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getLogger"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTranslator">getTranslator</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getTranslator"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheFile">getCacheFile</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getCacheFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEnvironment">setEnvironment</a>(
+    string $environment)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+                                            <p>On the destruction of the class,
+remove the temporary file.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFile">addFile</a>(
+    string $filePath, 
+    string $directoryInArchive = null, 
+    null|string $name = null, 
+    bool $isOnline = false)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFileFromString">addFileFromString</a>($content, $name, 
+    string $directoryInArchive = &#039;/&#039;)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDirectory">addDirectory</a>($directoryPath)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileContent">getFileContent</a>(
+    string $pathToFile)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilePath">getFilePath</a>(
+    string $initialString)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDirectoryPath">getDirectoryPath</a>(
+    string $initialString)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteFile">deleteFile</a>($pathInArchive)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildArchiveResponse">buildArchiveResponse</a>($filename)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadArchive">loadArchive</a>(
+    string $pathToArchive, 
+    bool $isOnline = false)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasFile">hasFile</a>($pathToFile)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasDirectory">hasDirectory</a>(
+    string $directory)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getZipErrorMessage">getZipErrorMessage</a>($errorCode)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_commit">commit</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatFilePath">formatFilePath</a>(
+    string $initialString)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatDirectoryPath">formatDirectoryPath</a>(
+    string $initialString)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtension">getExtension</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMimeType">getMimeType</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a target="_blank" href="http://php.net/ZipArchive"><abbr title="ZipArchive">ZipArchive</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRawZipArchive">getRawZipArchive</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAvailable">isAvailable</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getFileDownloader">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderAwareTrait.html#method_getFileDownloader"><abbr title="Thelia\Tools\FileDownload\FileDownloaderAwareTrait">FileDownloaderAwareTrait</abbr></a> at line 28</div>
+        <code>                    
+    <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderInterface.html"><abbr title="Thelia\Tools\FileDownload\FileDownloaderInterface">FileDownloaderInterface</abbr></a>
+    <strong>getFileDownloader</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderInterface.html"><abbr title="Thelia\Tools\FileDownload\FileDownloaderInterface">FileDownloaderInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFileDownloader">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Tools/FileDownload/FileDownloaderAwareTrait.html#method_setFileDownloader"><abbr title="Thelia\Tools\FileDownload\FileDownloaderAwareTrait">FileDownloaderAwareTrait</abbr></a> at line 41</div>
+        <code>                    
+    <abbr title="Thelia\Tools\FileDownload\$this">$this</abbr>
+    <strong>setFileDownloader</strong>(
+    <abbr title="Thelia\Tools\FileDownload\Thelia\Tools\FileDownload\FileDownloaderInterface">FileDownloaderInterface</abbr> $fileDownloader)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Tools\FileDownload\Thelia\Tools\FileDownload\FileDownloaderInterface">FileDownloaderInterface</abbr></td>
+                <td>$fileDownloader</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Tools\FileDownload\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method___construct"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 47</div>
+        <code>                    
+    
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArchiveBuilderCacheDirectory">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getArchiveBuilderCacheDirectory"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 54</div>
+        <code>                    
+    
+    <strong>getArchiveBuilderCacheDirectory</strong>($environment)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$environment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyFile">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_copyFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 92</div>
+        <code>                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>copyFile</strong>($pathToFile, $destination, $isOnline)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$pathToFile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$destination</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$isOnline</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateCacheFile">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_generateCacheFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 142</div>
+        <code>                    
+    string
+    <strong>generateCacheFile</strong>($environment)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$environment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwFileNotFound">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_throwFileNotFound"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 152</div>
+        <code>                    
+    
+    <strong>throwFileNotFound</strong>($file)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheFile">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_setCacheFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 170</div>
+        <code>                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>setCacheFile</strong>($path)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheDir">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getCacheDir"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 177</div>
+        <code>                    
+    
+    <strong>getCacheDir</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLogger">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getLogger"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 185</div>
+        <code>                    
+    <a href="../../../../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a>
+    <strong>getLogger</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../../Thelia/Log/Tlog.html"><abbr title="Thelia\Log\Tlog">Tlog</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getTranslator"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 193</div>
+        <code>                    
+    <a href="../../../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a>
+    <strong>getTranslator</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../../Thelia/Core/Translation/Translator.html"><abbr title="Thelia\Core\Translation\Translator">Translator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheFile">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/FileFormat/Archive/AbstractArchiveBuilder.html#method_getCacheFile"><abbr title="Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder">AbstractArchiveBuilder</abbr></a> at line 198</div>
+        <code>                    
+    
+    <strong>getCacheFile</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEnvironment">
+        <div class="location">at line 409</div>
+        <code>                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>setEnvironment</strong>(
+    string $environment)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$environment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td>Sets the execution environment of the Kernel,
+used to know which cache is used.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">at line 43</div>
+        <code>                    
+    
+    <strong>__destruct</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>On the destruction of the class,
+remove the temporary file.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFile">
+        <div class="location">at line 68</div>
+        <code>                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>addFile</strong>(
+    string $filePath, 
+    string $directoryInArchive = null, 
+    null|string $name = null, 
+    bool $isOnline = false)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$filePath</td>
+                <td>It is the path to access the file.</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$directoryInArchive</td>
+                <td>This is the directory where it will be stored in the archive</td>
+            </tr>
+                    <tr>
+                <td>
+    null|string</td>
+                <td>$name</td>
+                <td>The name of the file in the archive. if it null or empty, it keeps the same name</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$isOnline</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Thelia/Exception/FileNotReadableException.html"><abbr title="Thelia\Exception\FileNotReadableException">FileNotReadableException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This methods adds a file in the archive.
+If the file is local, $isOnline must be false,
+If the file online, $filePath must be an URL.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFileFromString">
+        <div class="location">at line 135</div>
+        <code>                    
+    mixed
+    <strong>addFileFromString</strong>($content, $name, 
+    string $directoryInArchive = &#039;/&#039;)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$directoryInArchive</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method creates a file in the archive with its content</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDirectory">
+        <div class="location">at line 175</div>
+        <code>                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>addDirectory</strong>($directoryPath)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$directoryPath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method creates an empty directory</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFileContent">
+        <div class="location">at line 207</div>
+        <code>                    
+    null|string
+    <strong>getFileContent</strong>(
+    string $pathToFile)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$pathToFile</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Thelia/Exception/FileNotReadableException.html"><abbr title="Thelia\Exception\FileNotReadableException">FileNotReadableException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method returns a file content</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilePath">
+        <div class="location">at line 234</div>
+        <code>                    
+    string
+    <strong>getFilePath</strong>(
+    string $initialString)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$initialString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>Gives a valid file path for \ZipArchive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDirectoryPath">
+        <div class="location">at line 259</div>
+        <code>                    
+    string
+    <strong>getDirectoryPath</strong>(
+    string $initialString)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$initialString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>Gives a valid directory path for \ZipArchive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteFile">
+        <div class="location">at line 278</div>
+        <code>                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>deleteFile</strong>($pathInArchive)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$pathInArchive</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>This method deletes a file in the archive</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildArchiveResponse">
+        <div class="location">at line 307</div>
+        <code>                    
+    <a href="../../../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+    <strong>buildArchiveResponse</strong>($filename)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td>This method return an instance of a Response with the archive as content.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadArchive">
+        <div class="location">at line 352</div>
+        <code>                    
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr>
+    <strong>loadArchive</strong>(
+    string $pathToArchive, 
+    bool $isOnline = false)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$pathToArchive</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$isOnline</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\FileFormat\Archive\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Thelia/Exception/FileNotFoundException.html"><abbr title="Thelia\Exception\FileNotFoundException">FileNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Thelia/Exception/HttpUrlException.html"><abbr title="Thelia\Exception\HttpUrlException">HttpUrlException</abbr></a></td>
+                <td>Loads an archive</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasFile">
+        <div class="location">at line 382</div>
+        <code>                    
+    bool
+    <strong>hasFile</strong>($pathToFile)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$pathToFile</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td>Checks if the archive has a file</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasDirectory">
+        <div class="location">at line 395</div>
+        <code>                    
+    bool
+    <strong>hasDirectory</strong>(
+    string $directory)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td>Check if the archive has a directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getZipErrorMessage">
+        <div class="location">at line 445</div>
+        <code>                    
+    string
+    <strong>getZipErrorMessage</strong>($errorCode)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$errorCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>Give the error message of a \ZipArchive error code</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">at line 503</div>
+        <code>                    
+    
+    <strong>commit</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatFilePath">
+        <div class="location">at line 525</div>
+        <code>                    
+    string
+    <strong>formatFilePath</strong>(
+    string $initialString)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$initialString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>Gives a valid file path for \ZipArchive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatDirectoryPath">
+        <div class="location">at line 550</div>
+        <code>                    
+    string
+    <strong>formatDirectoryPath</strong>(
+    string $initialString)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$initialString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>Gives a valid directory path for \ZipArchive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">at line 569</div>
+        <code>                    
+    string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>This method must return a string, the name of the format.</p>
+
+<p>example:
+return "XML";</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtension">
+        <div class="location">at line 583</div>
+        <code>                    
+    string
+    <strong>getExtension</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>This method must return a string, the extension of the file format, without the ".".
+The string should be lowercase.</p>
+
+<p>example:
+return "xml";</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMimeType">
+        <div class="location">at line 596</div>
+        <code>                    
+    string
+    <strong>getMimeType</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>This method must return a string, the mime type of the file format.</p>
+
+<p>example:
+return "application/json";</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRawZipArchive">
+        <div class="location">at line 604</div>
+        <code>                    
+    <a target="_blank" href="http://php.net/ZipArchive"><abbr title="ZipArchive">ZipArchive</abbr></a>
+    <strong>getRawZipArchive</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a target="_blank" href="http://php.net/ZipArchive"><abbr title="ZipArchive">ZipArchive</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAvailable">
+        <div class="location">at line 614</div>
+        <code>                    
+    bool
+    <strong>isAvailable</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td>Returns conditions for archive builder to be available ( loaded libraries )</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Module\PaymentModuleInterface | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Module_PaymentModuleInterface" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">interface</span></li>
+                                                            <li><a href="../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../Thelia/Module.html">Module</a></li>
+    
+                <li>PaymentModuleInterface</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>PaymentModuleInterface</h1>
+    </div>
+
+    <p>    interface
+    <strong>PaymentModuleInterface</strong>        implements
+        <a href="../../Thelia/Module/BaseModuleInterface.html"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a>
+</p>
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_install">install</a>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>This method is called when the plugin is installed for the first time</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_install"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_update">update</a>(
+    string $currentVersion, 
+    string $newVersion, 
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>This method is called when a newer version of the plugin is installed</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_update"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroy">destroy</a>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, 
+    bool $deleteModuleData = false)
+                                            <p>This method is called just before the deletion of the module, giving the module an opportunity
+to delete its data.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_destroy"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_activate">activate</a>(
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a> $moduleModel = null)
+                                            <p>This method is called when the module is activated</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_activate"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deActivate">deActivate</a>(
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a> $moduleModel = null)
+                                            <p>This method is called when the module is deactivated</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_deActivate"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preActivation">preActivation</a>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>This method is called before the module activation, and may prevent it by returning false.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_preActivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postActivation">postActivation</a>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>This method is called just after the module was successfully activated.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_postActivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preDeactivation">preDeactivation</a>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>This method is called before the module de-activation, and may prevent it by returning false.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_preDeactivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postDeactivation">postDeactivation</a>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>This method is called just after the module was successfully deactivated.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_postDeactivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTitle">setTitle</a>(
+    <abbr title="Thelia\Module\Thelia\Model\Module">Module</abbr> $module, 
+    array $titles)
+                                            <p>Sets a module titles for various languages</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_setTitle"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfigValue">getConfigValue</a>(
+    string $variableName, 
+    string $defaultValue = null, 
+    null $valueLocale = null)
+                                            <p>Get a module's configuration variable</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getConfigValue"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    <abbr title="Thelia\Module\$this;">$this;</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfigValue">setConfigValue</a>(
+    string $variableName, 
+    string $variableValue, 
+    null $valueLocale = null, 
+    bool $createIfNotExists = true)
+                                            <p>Set module configuration variable, creating it if required</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_setConfigValue"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deployImageFolder">deployImageFolder</a>(
+    <abbr title="Thelia\Module\Thelia\Model\Module">Module</abbr> $module, 
+    string $folderPath, 
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Ensure the proper deployment of the module's images.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_deployImageFolder"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModuleModel">getModuleModel</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getModuleModel"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModuleId">getModuleId</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getModuleId"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModuleCode">getModuleCode</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getModuleCode"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCode">getCode</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getCode"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCompilers">getCompilers</a>()
+                                            <p>This method adds new compilers to Thelia container</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getCompilers"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHooks">getHooks</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getHooks"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerHooks">registerHooks</a>()
+                                            <p>Create or update module hooks returned by the <code>getHooks</code> function</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_registerHooks"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|<a href="../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pay">pay</a>(
+    <abbr title="Thelia\Module\Thelia\Model\Order">Order</abbr> $order)
+                                            <p>Method used by payment gateway.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidPayment">isValidPayment</a>()
+                                            <p>This method is call on Payment loop.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_manageStockOnCreation">manageStockOnCreation</a>()
+                                            <p>if you want, you can manage stock in your module instead of order process.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_install">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_install"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 25</div>
+        <code>                    
+    
+    <strong>install</strong>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called when the plugin is installed for the first time</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_update">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_update"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 34</div>
+        <code>                    
+    
+    <strong>update</strong>(
+    string $currentVersion, 
+    string $newVersion, 
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called when a newer version of the plugin is installed</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$currentVersion</td>
+                <td>the current (installed) module version, as defined in the module.xml file</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$newVersion</td>
+                <td>the new module version, as defined in the module.xml file</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroy">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_destroy"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 44</div>
+        <code>                    
+    
+    <strong>destroy</strong>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null, 
+    bool $deleteModuleData = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called just before the deletion of the module, giving the module an opportunity
+to delete its data.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$deleteModuleData</td>
+                <td>if true, the module should remove all its data from the system.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_activate">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_activate"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 51</div>
+        <code>                    
+    
+    <strong>activate</strong>(
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a> $moduleModel = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called when the module is activated</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a></td>
+                <td>$moduleModel</td>
+                <td>the module</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deActivate">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_deActivate"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 58</div>
+        <code>                    
+    
+    <strong>deActivate</strong>(
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a> $moduleModel = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called when the module is deactivated</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a></td>
+                <td>$moduleModel</td>
+                <td>the module</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preActivation">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_preActivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 68</div>
+        <code>                    
+    bool
+    <strong>preActivation</strong>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called before the module activation, and may prevent it by returning false.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td>true to continue module activation, false to prevent it.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postActivation">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_postActivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 75</div>
+        <code>                    
+    
+    <strong>postActivation</strong>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called just after the module was successfully activated.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preDeactivation">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_preDeactivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 83</div>
+        <code>                    
+    bool
+    <strong>preDeactivation</strong>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called before the module de-activation, and may prevent it by returning false.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td>true to continue module de-activation, false to prevent it.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postDeactivation">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_postDeactivation"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 90</div>
+        <code>                    
+    
+    <strong>postDeactivation</strong>(
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is called just after the module was successfully deactivated.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTitle">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_setTitle"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 99</div>
+        <code>                    
+    
+    <strong>setTitle</strong>(
+    <abbr title="Thelia\Module\Thelia\Model\Module">Module</abbr> $module, 
+    array $titles)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets a module titles for various languages</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Thelia\Model\Module">Module</abbr></td>
+                <td>$module</td>
+                <td>the module.</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$titles</td>
+                <td>an associative array of locale => title_string</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigValue">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getConfigValue"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 109</div>
+        <code>        static            
+    string
+    <strong>getConfigValue</strong>(
+    string $variableName, 
+    string $defaultValue = null, 
+    null $valueLocale = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a module's configuration variable</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$variableName</td>
+                <td>the variable name</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$defaultValue</td>
+                <td>the default value, if variable is not defined</td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$valueLocale</td>
+                <td>the required locale, or null to get default one</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the variable value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfigValue">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_setConfigValue"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 121</div>
+        <code>        static            
+    <abbr title="Thelia\Module\$this;">$this;</abbr>
+    <strong>setConfigValue</strong>(
+    string $variableName, 
+    string $variableValue, 
+    null $valueLocale = null, 
+    bool $createIfNotExists = true)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set module configuration variable, creating it if required</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$variableName</td>
+                <td>the variable name</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$variableValue</td>
+                <td>the variable value</td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$valueLocale</td>
+                <td>the locale, or null if not required</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$createIfNotExists</td>
+                <td>if true, the variable will be created if not already defined</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Module\$this;">$this;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>if variable does not exists and $createIfNotExists is false</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deployImageFolder">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_deployImageFolder"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 141</div>
+        <code>                    
+    
+    <strong>deployImageFolder</strong>(
+    <abbr title="Thelia\Module\Thelia\Model\Module">Module</abbr> $module, 
+    string $folderPath, 
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Ensure the proper deployment of the module's images.</p>                    <p>TODO : this method does not take care of internationalization. This is a bug.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Thelia\Model\Module">Module</abbr></td>
+                <td>$module</td>
+                <td>the module</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$folderPath</td>
+                <td>the image folder path</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Thelia/Exception/ModuleException.html"><abbr title="Thelia\Exception\ModuleException">ModuleException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/UnexpectedValueException"><abbr title="UnexpectedValueException">UnexpectedValueException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModuleModel">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getModuleModel"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 147</div>
+        <code>                    
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a>
+    <strong>getModuleModel</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../Thelia/Model/Module.html"><abbr title="Thelia\Model\Module">Module</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Thelia/Exception/ModuleException.html"><abbr title="Thelia\Exception\ModuleException">ModuleException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModuleId">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getModuleId"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 152</div>
+        <code>        static            
+    string
+    <strong>getModuleId</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The module id</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModuleCode">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getModuleCode"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 157</div>
+        <code>        static            
+    string
+    <strong>getModuleCode</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The module code, in a static way</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCode">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getCode"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 162</div>
+        <code>                    
+    string
+    <strong>getCode</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The module code</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCompilers">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getCompilers"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 200</div>
+        <code>        static            
+    
+    <strong>getCompilers</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method adds new compilers to Thelia container</p>                    <p>You must return an array. This array can contain :
+ - arrays
+ - one or many instance(s) of \Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface</p>
+
+<p>in the first case, your array must contains 2 indexes.
+The first is the compiler instance and the second the compilerPass type.
+Example :
+return array(
+ array(
+   new \MyModule\DependencyInjection\Compiler\MySuperCompilerPass(),
+   \Symfony\Component\DependencyInjection\Compiler\PassConfig::TYPE<em>BEFORE</em>OPTIMIZATION
+ )
+);</p>
+
+<p>In the seconde case, just an instance of CompilerPassInterface.
+Example :
+return array (
+ new \MyModule\DependencyInjection\Compiler\MySuperCompilerPass()
+);</p>
+
+<p>But you can combine both behaviors
+Example :</p>
+
+<p>return array(
+ new \MyModule\DependencyInjection\Compiler\MySuperCompilerPass(),
+ array(
+     new \MyModule\DependencyInjection\Compiler\MyOtherSuperCompilerPass(),
+     Symfony\Component\DependencyInjection\Compiler\PassConfig::TYPE<em>BEFORE</em>OPTIMIZATION
+ )
+);</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHooks">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_getHooks"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 244</div>
+        <code>                    
+    array
+    <strong>getHooks</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>This method must be used when your module defines hooks.
+Override this and return an array of your hooks names to register them</p>
+
+<p>This returned value must be like the example, only type and code are mandatory</p>
+
+<p>Example:</p>
+
+<p>return array(</p>
+
+<pre><code> // Only register the title in the default language
+ array(
+     "type" =&gt; TemplateDefinition::BACK_OFFICE,
+     "code" =&gt; "my_super_hook_name",
+     "title" =&gt; "My hook",
+     "description" =&gt; "My hook is really, really great",
+ ),
+
+ // Manage i18n
+ array(
+     "type" =&gt; TemplateDefinition::FRONT_OFFICE,
+     "code" =&gt; "my_hook_name",
+     "title" =&gt; array(
+         "fr_FR" =&gt; "Mon Hook",
+         "en_US" =&gt; "My hook",
+     ),
+     "description" =&gt; array(
+         "fr_FR" =&gt; "Mon hook est vraiment super",
+         "en_US" =&gt; "My hook is really, really great",
+     ),
+     "chapo" =&gt; array(
+         "fr_FR" =&gt; "Mon hook est vraiment super",
+         "en_US" =&gt; "My hook is really, really great",
+     ),
+     "block" =&gt; true,
+     "active" =&gt; true
+ )
+</code></pre>
+
+<p>);</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerHooks">
+        <div class="location">in 
+    <a href="../../Thelia/Module/BaseModuleInterface.html#method_registerHooks"><abbr title="Thelia\Module\BaseModuleInterface">BaseModuleInterface</abbr></a> at line 249</div>
+        <code>                    
+    
+    <strong>registerHooks</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Create or update module hooks returned by the <code>getHooks</code> function</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pay">
+        <div class="location">at line 32</div>
+        <code>                    
+    null|<a href="../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+    <strong>pay</strong>(
+    <abbr title="Thelia\Module\Thelia\Model\Order">Order</abbr> $order)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Method used by payment gateway.</p>                    <p>If this method return a \Thelia\Core\HttpFoundation\Response instance, this response is send to the
+ browser.</p>
+
+<p>In many cases, it's necessary to send a form to the payment gateway. On your response you can return this form already
+ completed, ready to be sent</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Module\Thelia\Model\Order">Order</abbr></td>
+                <td>$order</td>
+                <td>processed order</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|<a href="../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidPayment">
+        <div class="location">at line 43</div>
+        <code>                    
+    boolean
+    <strong>isValidPayment</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This method is call on Payment loop.</p>                    <p>If you return true, the payment method will de display
+If you return false, the payment method will not be display</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_manageStockOnCreation">
+        <div class="location">at line 52</div>
+        <code>                    
+    bool
+    <strong>manageStockOnCreation</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>if you want, you can manage stock in your module instead of order process.</p>                    <p>Return false to decrease the stock when order status switch to pay</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

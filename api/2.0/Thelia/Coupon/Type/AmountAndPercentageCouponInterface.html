@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Coupon\Type\AmountAndPercentageCouponInterface | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Coupon_Type_AmountAndPercentageCouponInterface" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">interface</span></li>
+                                                            <li><a href="../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../Thelia/Coupon.html">Coupon</a></li>
+                                        <li><a href="../../../Thelia/Coupon/Type.html">Type</a></li>
+    
+                <li>AmountAndPercentageCouponInterface</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>AmountAndPercentageCouponInterface</h1>
+    </div>
+
+    <p>    interface
+    <strong>AmountAndPercentageCouponInterface</strong>
+</p>
+
+            <div class="description">
+            <p>Represents a Coupon ready to be processed in a Checkout process</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFieldsValue">setFieldsValue</a>(
+    Array $effects)
+                                            <p>Set the value of specific coupon fields.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCartItemDiscount">getCartItemDiscount</a>(
+    <abbr title="Thelia\Coupon\Type\CartItem">CartItem</abbr> $cartItem)
+                                            <p>Get the discount for a specific cart item.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawBaseBackOfficeInputs">drawBaseBackOfficeInputs</a>(
+    string $templateName, 
+    array $otherFields)
+                                            <p>Renders the template which implements coupon specific user-input,
+using the provided template file, and a list of specific input fields.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseFieldList">getBaseFieldList</a>($otherFields)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkBaseCouponFieldValue">checkBaseCouponFieldValue</a>($fieldName, $fieldValue)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setFieldsValue">
+        <div class="location">at line 29</div>
+        <code>                    
+    
+    <strong>setFieldsValue</strong>(
+    Array $effects)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of specific coupon fields.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    Array</td>
+                <td>$effects</td>
+                <td>the Coupon effects params</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCartItemDiscount">
+        <div class="location">at line 37</div>
+        <code>                    
+    float
+    <strong>getCartItemDiscount</strong>(
+    <abbr title="Thelia\Coupon\Type\CartItem">CartItem</abbr> $cartItem)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the discount for a specific cart item.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Coupon\Type\CartItem">CartItem</abbr></td>
+                <td>$cartItem</td>
+                <td>the cart item</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    float</td>
+            <td>the discount value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawBaseBackOfficeInputs">
+        <div class="location">at line 48</div>
+        <code>                    
+    string
+    <strong>drawBaseBackOfficeInputs</strong>(
+    string $templateName, 
+    array $otherFields)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Renders the template which implements coupon specific user-input,
+using the provided template file, and a list of specific input fields.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$templateName</td>
+                <td>the path to the template</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$otherFields</td>
+                <td>the list of additional fields fields</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the rendered template.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseFieldList">
+        <div class="location">at line 53</div>
+        <code>                    
+    
+    <strong>getBaseFieldList</strong>($otherFields)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$otherFields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkBaseCouponFieldValue">
+        <div class="location">at line 58</div>
+        <code>                    
+    
+    <strong>checkBaseCouponFieldValue</strong>($fieldName, $fieldValue)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

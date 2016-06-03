@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\ImportExport\Export\Type\ContentExport | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_ImportExport_Export_Type_ContentExport" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../../Thelia/ImportExport.html">ImportExport</a></li>
+                                        <li><a href="../../../../Thelia/ImportExport/Export.html">Export</a></li>
+                                        <li><a href="../../../../Thelia/ImportExport/Export/Type.html">Type</a></li>
+    
+                <li>ContentExport</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>ContentExport</h1>
+    </div>
+
+    <p>    class
+    <strong>ContentExport</strong>        extends <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a>        implements
+        <a href="../../../../Thelia/ImportExport/Export/ImagesExportInterface.html"><abbr title="Thelia\ImportExport\Export\ImagesExportInterface">ImagesExportInterface</abbr></a>, <a href="../../../../Thelia/ImportExport/Export/DocumentsExportInterface.html"><abbr title="Thelia\ImportExport\Export\DocumentsExportInterface">DocumentsExportInterface</abbr></a>
+</p>
+
+            <div class="description">
+            <p>Class ContentExport</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DEFAULT_FILENAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DIRECTORY_NAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\ImportExport\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/AbstractHandler.html#method___construct"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainer">getContainer</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/AbstractHandler.html#method_getContainer"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/AbstractHandler.html#method_getRequest"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHandledTypes">getHandledTypes</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrder">getOrder</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_getOrder"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOrder">setOrder</a>(
+    array $order)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setOrder"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRangeDate">getRangeDate</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_getRangeDate"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\ImportExport\Export\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRangeDate">setRangeDate</a>(
+    array $rangeDate)
+                                            <p>Use this method to set the range date</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setRangeDate"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildData">buildData</a>(
+    <abbr title="Thelia\ImportExport\Export\Thelia\Model\Lang">Lang</abbr> $lang)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_buildData"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderLoop">renderLoop</a>($type, 
+    array $args = array())
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_renderLoop"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDocumentExport">setDocumentExport</a>($bool)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setDocumentExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setImageExport">setImageExport</a>($bool)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setImageExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDocumentExport">isDocumentExport</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_isDocumentExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isImageExport">isImageExport</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_isImageExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilename">getFilename</a>()
+                                            <p>Get filename</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_getFilename"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr>|array|<a href="../../../../Thelia/Core/Template/Element/BaseLoop.html"><abbr title="Thelia\Core\Template\Element\BaseLoop">BaseLoop</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildDataSet">buildDataSet</a>(
+    <abbr title="Thelia\ImportExport\Export\Thelia\Model\Lang">Lang</abbr> $lang)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../Thelia/Model/ContentQuery.html"><abbr title="Thelia\Model\ContentQuery">ContentQuery</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>(
+    <abbr title="Thelia\ImportExport\Export\Type\Thelia\Model\Lang">Lang</abbr> $lang)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDocumentsPaths">getDocumentsPaths</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImagesPaths">getImagesPaths</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/AbstractHandler.html#method___construct"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a> at line 34</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\ImportExport\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\ImportExport\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td>Dependency injection: load the container to be able to get parameters and services</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainer">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/AbstractHandler.html#method_getContainer"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a> at line 41</div>
+        <code>                    
+    
+    <strong>getContainer</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/AbstractHandler.html#method_getRequest"><abbr title="Thelia\ImportExport\AbstractHandler">AbstractHandler</abbr></a> at line 49</div>
+        <code>                    
+    <a href="../../../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a>
+    <strong>getRequest</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../Thelia/Core/HttpFoundation/Request.html"><abbr title="Thelia\Core\HttpFoundation\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandledTypes">
+        <div class="location">at line 65</div>
+        <code>                    
+    string|array
+    <strong>getHandledTypes</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string|array</td>
+            <td>Define all the type of formatters that this can handle
+return a string if it handle a single type ( specific exports ),
+or an array if multiple.</p>
+
+<p>Thelia types are defined in \Thelia\Core\FileFormat\FormatType</p>
+
+<p>example:
+return array(
+    FormatType::TABLE,
+    FormatType::UNBOUNDED,
+);</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrder">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_getOrder"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 75</div>
+        <code>                    
+    array
+    <strong>getOrder</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>Use this method to access the order.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOrder">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setOrder"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 86</div>
+        <code>                    
+    
+    <strong>setOrder</strong>(
+    array $order)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$order</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRangeDate">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_getRangeDate"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 99</div>
+        <code>                    
+    array
+    <strong>getRangeDate</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>Use this method to access the range date.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRangeDate">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setRangeDate"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 110</div>
+        <code>                    
+    <abbr title="Thelia\ImportExport\Export\$this">$this</abbr>
+    <strong>setRangeDate</strong>(
+    array $rangeDate)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Use this method to set the range date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$rangeDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\ImportExport\Export\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildData">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_buildData"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 124</div>
+        <code>                    
+    <a href="../../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a>
+    <strong>buildData</strong>(
+    <abbr title="Thelia\ImportExport\Export\Thelia\Model\Lang">Lang</abbr> $lang)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\ImportExport\Export\Thelia\Model\Lang">Lang</abbr></td>
+                <td>$lang</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../Thelia/Core/FileFormat/Formatting/FormatterData.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterData">FormatterData</abbr></a></td>
+            <td>The method builds the FormatterData for the formatter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderLoop">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_renderLoop"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 157</div>
+        <code>                    
+    
+    <strong>renderLoop</strong>($type, 
+    array $args = array())</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDocumentExport">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setDocumentExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 206</div>
+        <code>                    
+    
+    <strong>setDocumentExport</strong>($bool)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$bool</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setImageExport">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_setImageExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 213</div>
+        <code>                    
+    
+    <strong>setImageExport</strong>($bool)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$bool</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDocumentExport">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_isDocumentExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 220</div>
+        <code>                    
+    
+    <strong>isDocumentExport</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isImageExport">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_isImageExport"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 225</div>
+        <code>                    
+    
+    <strong>isImageExport</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilename">
+        <div class="location">in 
+    <a href="../../../../Thelia/ImportExport/Export/ExportHandler.html#method_getFilename"><abbr title="Thelia\ImportExport\Export\ExportHandler">ExportHandler</abbr></a> at line 235</div>
+        <code>                    
+    string
+    <strong>getFilename</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get filename</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildDataSet">
+        <div class="location">at line 172</div>
+        <code>                    
+    <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr>|array|<a href="../../../../Thelia/Core/Template/Element/BaseLoop.html"><abbr title="Thelia\Core\Template\Element\BaseLoop">BaseLoop</abbr></a>
+    <strong>buildDataSet</strong>(
+    <abbr title="Thelia\ImportExport\Export\Thelia\Model\Lang">Lang</abbr> $lang)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\ImportExport\Export\Thelia\Model\Lang">Lang</abbr></td>
+                <td>$lang</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr>|array|<a href="../../../../Thelia/Core/Template/Element/BaseLoop.html"><abbr title="Thelia\Core\Template\Element\BaseLoop">BaseLoop</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">at line 76</div>
+        <code>                    
+    <a href="../../../../Thelia/Model/ContentQuery.html"><abbr title="Thelia\Model\ContentQuery">ContentQuery</abbr></a>
+    <strong>getQuery</strong>(
+    <abbr title="Thelia\ImportExport\Export\Type\Thelia\Model\Lang">Lang</abbr> $lang)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\ImportExport\Export\Type\Thelia\Model\Lang">Lang</abbr></td>
+                <td>$lang</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../Thelia/Model/ContentQuery.html"><abbr title="Thelia\Model\ContentQuery">ContentQuery</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDocumentsPaths">
+        <div class="location">at line 257</div>
+        <code>                    
+    array
+    <strong>getDocumentsPaths</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>return an array with the paths to the documents to include in the archive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImagesPaths">
+        <div class="location">at line 284</div>
+        <code>                    
+    array
+    <strong>getImagesPaths</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>return an array with the paths to the images to include in the archive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

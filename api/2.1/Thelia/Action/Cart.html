@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Action\Cart | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Action_Cart" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../Thelia/Action.html">Action</a></li>
+    
+                <li>Cart</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Cart</h1>
+    </div>
+
+    <p>    class
+    <strong>Cart</strong>        extends <a href="../../Thelia/Action/BaseAction.html"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a>        implements
+        <abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr>
+</p>
+
+            <div class="description">
+            <p>Class Cart where all actions are manage like adding, modifying or delete items.</p>            <p>Class Cart</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_genericToggleVisibility">genericToggleVisibility</a>(
+    <abbr title="Thelia\Action\Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, 
+    <abbr title="Thelia\Action\Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr> $event)
+                                            <p>Toggle visibility for an object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Action\Thelia\Core\HttpFoundation\Request">Request</abbr> $request, 
+    <abbr title="Thelia\Action\Thelia\Tools\TokenProvider">TokenProvider</abbr> $tokenProvider)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addItem">addItem</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)
+                                            <p>add an article in the current cart</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteItem">deleteItem</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)
+                                            <p>Delete specify article present into cart</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clear">clear</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)
+                                            <p>Clear the cart</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_changeItem">changeItem</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)
+                                            <p>Modify article's quantity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateCart">updateCart</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Currency\CurrencyChangeEvent">CurrencyChangeEvent</abbr> $event)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateCartPrices">updateCartPrices</a>(
+    <abbr title="Thelia\Action\Thelia\Model\Cart">Cart</abbr> $cart, 
+    <abbr title="Thelia\Action\Thelia\Model\Currency">Currency</abbr> $currency)
+                                            <p>Refresh article's price</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_restoreCurrentCart">restoreCurrentCart</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartRestoreEvent">CartRestoreEvent</abbr> $cartRestoreEvent)
+                                            <p>Search if cart already exists in session. If not try to restore it from the cart cookie,
+or duplicate an old one.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createEmptyCart">createEmptyCart</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartCreateEvent">CartCreateEvent</abbr> $cartCreateEvent)
+                                            <p>Create a new, empty cart object, and assign it to the current customer, if any.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubscribedEvents">getSubscribedEvents</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_genericToggleVisibility">
+        <div class="location">in 
+    <a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a> at line 92</div>
+        <code>                    
+    mixed
+    <strong>genericToggleVisibility</strong>(
+    <abbr title="Thelia\Action\Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, 
+    <abbr title="Thelia\Action\Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Toggle visibility for an object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 56</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\HttpFoundation\Request">Request</abbr> $request, 
+    <abbr title="Thelia\Action\Thelia\Tools\TokenProvider">TokenProvider</abbr> $tokenProvider)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Tools\TokenProvider">TokenProvider</abbr></td>
+                <td>$tokenProvider</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addItem">
+        <div class="location">at line 70</div>
+        <code>                    
+    
+    <strong>addItem</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>add an article in the current cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteItem">
+        <div class="location">at line 110</div>
+        <code>                    
+    
+    <strong>deleteItem</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Delete specify article present into cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">at line 125</div>
+        <code>                    
+    
+    <strong>clear</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Clear the cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changeItem">
+        <div class="location">at line 140</div>
+        <code>                    
+    
+    <strong>changeItem</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Modify article's quantity</p>                    <p>don't use Form here just test the Request.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartEvent">CartEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateCart">
+        <div class="location">at line 158</div>
+        <code>                    
+    
+    <strong>updateCart</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Currency\CurrencyChangeEvent">CurrencyChangeEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Currency\CurrencyChangeEvent">CurrencyChangeEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateCartPrices">
+        <div class="location">at line 174</div>
+        <code>                    
+    
+    <strong>updateCartPrices</strong>(
+    <abbr title="Thelia\Action\Thelia\Model\Cart">Cart</abbr> $cart, 
+    <abbr title="Thelia\Action\Thelia\Model\Currency">Currency</abbr> $currency)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Refresh article's price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Model\Cart">Cart</abbr></td>
+                <td>$cart</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Model\Currency">Currency</abbr></td>
+                <td>$currency</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreCurrentCart">
+        <div class="location">at line 275</div>
+        <code>                    
+    
+    <strong>restoreCurrentCart</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartRestoreEvent">CartRestoreEvent</abbr> $cartRestoreEvent)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Search if cart already exists in session. If not try to restore it from the cart cookie,
+or duplicate an old one.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartRestoreEvent">CartRestoreEvent</abbr></td>
+                <td>$cartRestoreEvent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createEmptyCart">
+        <div class="location">at line 395</div>
+        <code>                    
+    
+    <strong>createEmptyCart</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartCreateEvent">CartCreateEvent</abbr> $cartCreateEvent)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Create a new, empty cart object, and assign it to the current customer, if any.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Cart\CartCreateEvent">CartCreateEvent</abbr></td>
+                <td>$cartCreateEvent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubscribedEvents">
+        <div class="location">at line 459</div>
+        <code>        static            
+    
+    <strong>getSubscribedEvents</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

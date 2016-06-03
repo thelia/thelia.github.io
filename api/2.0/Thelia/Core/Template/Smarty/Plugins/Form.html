@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\Template\Smarty\Plugins\Form | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_Template_Smarty_Plugins_Form" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../../../Thelia/Core/Template.html">Template</a></li>
+                                        <li><a href="../../../../../Thelia/Core/Template/Smarty.html">Smarty</a></li>
+                                        <li><a href="../../../../../Thelia/Core/Template/Smarty/Plugins.html">Plugins</a></li>
+    
+                <li>Form</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Form</h1>
+    </div>
+
+    <p>    class
+    <strong>Form</strong>        extends <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a>
+</p>
+
+            <div class="description">
+            <p>Plugin for smarty defining blocks and functions for using Form display.</p>            <p>blocks :
+ - {form name="myForm"} ... {/form} => find form named myForm,
+create an instance and assign this instanciation into smarty variable. Form must be declare into
+config using <forms> tag</p>
+
+<ul>
+<li><p>{form<em>field form=$form.fieldName} {/form</em>field} This block find info into the Form field containing by
+the form paramter. This field must be an instance of FormView. fieldName is the name of your field. This block
+can output these info :</p>
+
+<ul>
+<li>$name => name of yout input</li>
+<li>$value => value for your input</li>
+<li>$label => label for your input</li>
+<li>$error => boolean for know if there is error for this field</li>
+<li>$attr => all your attribute for your input (define when you construct programmatically you form)</li>
+</ul></li>
+<li><p>{form<em>error form=$form.fieldName} ... {/form</em>error} Display this block if there are errors on this field.
+fieldName is the name of your field</p></li>
+</ul>
+
+<p>Class Form</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNormalizedParam">getNormalizedParam</a>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)
+                                            <p>Get a function or block parameter value, and normalize it, trimming balnks and
+making it lowercase</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getNormalizedParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParam">getParam</a>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)
+                                            <p>Get a function or block parameter value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\Template\Smarty\an">an</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPluginDescriptors">getPluginDescriptors</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\HttpFoundation\Request">Request</abbr> $request, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\Template\ParserContext">ParserContext</abbr> $parserContext, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\Template\ParserInterface">ParserInterface</abbr> $parser)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFormDefinition">setFormDefinition</a>($formDefinition)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateForm">generateForm</a>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderFormField">renderFormField</a>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_customFormFieldRendering">customFormFieldRendering</a>($params, $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_standardFormFieldRendering">standardFormFieldRendering</a>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_standardFormFieldAttributes">standardFormFieldAttributes</a>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderTaggedFormFields">renderTaggedFormFields</a>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderHiddenFormField">renderHiddenFormField</a>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formEnctype">formEnctype</a>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formError">formError</a>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getNormalizedParam">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getNormalizedParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a> at line 56</div>
+        <code>                    
+    mixed
+    <strong>getNormalizedParam</strong>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a function or block parameter value, and normalize it, trimming balnks and
+making it lowercase</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>the parameters array</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$name</td>
+                <td>as single parameter name, or an array of names. In this case, the first defined parameter is returned. Use this for aliases (context, ctx, c)</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$default</td>
+                <td>the defaut value if parameter is missing (default to null)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>the parameter value, or the default value if it is not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParam">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a> at line 72</div>
+        <code>                    
+    mixed
+    <strong>getParam</strong>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a function or block parameter value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>the parameters array</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$name</td>
+                <td>as single parameter name, or an array of names. In this case, the first defined parameter is returned. Use this for aliases (context, ctx, c)</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$default</td>
+                <td>the defaut value if parameter is missing (default to null)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>the parameter value, or the default value if it is not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluginDescriptors">
+        <div class="location">at line 556</div>
+        <code>                    
+    <abbr title="Thelia\Core\Template\Smarty\an">an</abbr>
+    <strong>getPluginDescriptors</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\Template\Smarty\an">an</abbr></td>
+            <td>array of SmartyPluginDescriptor</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 69</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\HttpFoundation\Request">Request</abbr> $request, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\Template\ParserContext">ParserContext</abbr> $parserContext, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\Template\ParserInterface">ParserInterface</abbr> $parser)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\Template\ParserContext">ParserContext</abbr></td>
+                <td>$parserContext</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Thelia\Core\Template\ParserInterface">ParserInterface</abbr></td>
+                <td>$parser</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFormDefinition">
+        <div class="location">at line 76</div>
+        <code>                    
+    
+    <strong>setFormDefinition</strong>($formDefinition)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$formDefinition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateForm">
+        <div class="location">at line 88</div>
+        <code>                    
+    
+    <strong>generateForm</strong>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repeat</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderFormField">
+        <div class="location">at line 277</div>
+        <code>                    
+    
+    <strong>renderFormField</strong>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repeat</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_customFormFieldRendering">
+        <div class="location">at line 338</div>
+        <code>                    
+    mixed
+    <strong>customFormFieldRendering</strong>($params, $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repeat</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_standardFormFieldRendering">
+        <div class="location">at line 345</div>
+        <code>                    
+    
+    <strong>standardFormFieldRendering</strong>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_standardFormFieldAttributes">
+        <div class="location">at line 350</div>
+        <code>                    
+    
+    <strong>standardFormFieldAttributes</strong>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderTaggedFormFields">
+        <div class="location">at line 355</div>
+        <code>                    
+    
+    <strong>renderTaggedFormFields</strong>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repeat</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderHiddenFormField">
+        <div class="location">at line 393</div>
+        <code>                    
+    
+    <strong>renderHiddenFormField</strong>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formEnctype">
+        <div class="location">at line 424</div>
+        <code>                    
+    
+    <strong>formEnctype</strong>($params, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formError">
+        <div class="location">at line 435</div>
+        <code>                    
+    
+    <strong>formError</strong>($params, $content, 
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, $repeat)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repeat</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
