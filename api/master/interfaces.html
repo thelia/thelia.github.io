@@ -1,228 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>Interfaces | </title>
-                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-                            </head>
-        <body id="overview">
-            <div class="header">
-        <ul>
-            <li><a href="classes.html">Classes</a></li>
-                            <li><a href="namespaces.html">Namespaces</a></li>
-                        <li><a href="interfaces.html">Interfaces</a></li>
-            <li><a href="traits.html">Traits</a></li>
-            <li><a href="doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Interfaces | Thelia 2 API</title>
 
-        <div id="title"></div>
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
 
-            <h1>Interfaces</h1>
+    <body id="interfaces" data-name="" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../2.2.0/index.html">2.2.0 tag</option>
+                                            <option value="../2.2.1/index.html">2.2.1 tag</option>
+                                            <option value="../master/index.html" selected>master branch</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <table>
-                    <tr>
-                <td><a href="Thelia/Condition/ConditionOrganizerInterface.html" target="main"><abbr title="Thelia\Condition\ConditionOrganizerInterface">Thelia\Condition\ConditionOrganizerInterface</abbr></a></td>
-                <td class="last">
-                    Manage how Condition could interact with each other
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Condition/Implementation/ConditionInterface.html" target="main"><abbr title="Thelia\Condition\Implementation\ConditionInterface">Thelia\Condition\Implementation\ConditionInterface</abbr></a></td>
-                <td class="last">
-                    Manage how the application checks its state in order to check if it matches the implemented condition
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/FileFormat/Archive/ArchiveBuilderInterface.html" target="main"><abbr title="Thelia\Core\FileFormat\Archive\ArchiveBuilderInterface">Thelia\Core\FileFormat\Archive\ArchiveBuilderInterface</abbr></a></td>
-                <td class="last">
-                    Interface ArchiveBuilderInterface
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/FileFormat/FormatInterface.html" target="main"><abbr title="Thelia\Core\FileFormat\FormatInterface">Thelia\Core\FileFormat\FormatInterface</abbr></a></td>
-                <td class="last">
-                    Interface FormatInterface
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/FileFormat/Formatting/FormatterInterface.html" target="main"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterInterface">Thelia\Core\FileFormat\Formatting\FormatterInterface</abbr></a></td>
-                <td class="last">
-                    Interface FormatterInterface
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Security/Authentication/AuthenticatorInterface.html" target="main"><abbr title="Thelia\Core\Security\Authentication\AuthenticatorInterface">Thelia\Core\Security\Authentication\AuthenticatorInterface</abbr></a></td>
-                <td class="last">
-                    
 
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Security/Role/RoleInterface.html" target="main"><abbr title="Thelia\Core\Security\Role\RoleInterface">Thelia\Core\Security\Role\RoleInterface</abbr></a></td>
-                <td class="last">
-                    RoleInterface represents a role granted to a user.
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Security/UserProvider/UserProviderInterface.html" target="main"><abbr title="Thelia\Core\Security\UserProvider\UserProviderInterface">Thelia\Core\Security\UserProvider\UserProviderInterface</abbr></a></td>
-                <td class="last">
-                    
+                <div id="api-tree"></div>
 
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Security/User/UserInterface.html" target="main"><abbr title="Thelia\Core\Security\User\UserInterface">Thelia\Core\Security\User\UserInterface</abbr></a></td>
-                <td class="last">
-                    This interface should be implemented by user classes
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Template/Assets/AssetManagerInterface.html" target="main"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">Thelia\Core\Template\Assets\AssetManagerInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Template/Assets/AssetResolverInterface.html" target="main"><abbr title="Thelia\Core\Template\Assets\AssetResolverInterface">Thelia\Core\Template\Assets\AssetResolverInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Template/Element/ArraySearchLoopInterface.html" target="main"><abbr title="Thelia\Core\Template\Element\ArraySearchLoopInterface">Thelia\Core\Template\Element\ArraySearchLoopInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Template/Element/PropelSearchLoopInterface.html" target="main"><abbr title="Thelia\Core\Template\Element\PropelSearchLoopInterface">Thelia\Core\Template\Element\PropelSearchLoopInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Template/Element/SearchLoopInterface.html" target="main"><abbr title="Thelia\Core\Template\Element\SearchLoopInterface">Thelia\Core\Template\Element\SearchLoopInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Template/ParserHelperInterface.html" target="main"><abbr title="Thelia\Core\Template\ParserHelperInterface">Thelia\Core\Template\ParserHelperInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Core/Template/ParserInterface.html" target="main"><abbr title="Thelia\Core\Template\ParserInterface">Thelia\Core\Template\ParserInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Coupon/FacadeInterface.html" target="main"><abbr title="Thelia\Coupon\FacadeInterface">Thelia\Coupon\FacadeInterface</abbr></a></td>
-                <td class="last">
-                    Allow to assist in getting relevant data on the current application state
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Coupon/Type/AmountAndPercentageCouponInterface.html" target="main"><abbr title="Thelia\Coupon\Type\AmountAndPercentageCouponInterface">Thelia\Coupon\Type\AmountAndPercentageCouponInterface</abbr></a></td>
-                <td class="last">
-                    Represents a Coupon ready to be processed in a Checkout process
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Coupon/Type/CouponInterface.html" target="main"><abbr title="Thelia\Coupon\Type\CouponInterface">Thelia\Coupon\Type\CouponInterface</abbr></a></td>
-                <td class="last">
-                    Represents a Coupon ready to be processed in a Checkout process
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Files/FileModelInterface.html" target="main"><abbr title="Thelia\Files\FileModelInterface">Thelia\Files\FileModelInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Files/FileModelParentInterface.html" target="main"><abbr title="Thelia\Files\FileModelParentInterface">Thelia\Files\FileModelParentInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/ImportExport/Export/DocumentsExportInterface.html" target="main"><abbr title="Thelia\ImportExport\Export\DocumentsExportInterface">Thelia\ImportExport\Export\DocumentsExportInterface</abbr></a></td>
-                <td class="last">
-                    Interface DocumentsExportInterface
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/ImportExport/Export/ImagesExportInterface.html" target="main"><abbr title="Thelia\ImportExport\Export\ImagesExportInterface">Thelia\ImportExport\Export\ImagesExportInterface</abbr></a></td>
-                <td class="last">
-                    interface ImagesExportInterface
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Model/Breadcrumb/BreadcrumbInterface.html" target="main"><abbr title="Thelia\Model\Breadcrumb\BreadcrumbInterface">Thelia\Model\Breadcrumb\BreadcrumbInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Module/BaseModuleInterface.html" target="main"><abbr title="Thelia\Module\BaseModuleInterface">Thelia\Module\BaseModuleInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Module/DeliveryModuleInterface.html" target="main"><abbr title="Thelia\Module\DeliveryModuleInterface">Thelia\Module\DeliveryModuleInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Module/PaymentModuleInterface.html" target="main"><abbr title="Thelia\Module\PaymentModuleInterface">Thelia\Module\PaymentModuleInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Tools/FileDownload/FileDownloaderInterface.html" target="main"><abbr title="Thelia\Tools\FileDownload\FileDownloaderInterface">Thelia\Tools\FileDownload\FileDownloaderInterface</abbr></a></td>
-                <td class="last">
-                    Class FileDownloader
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Tools/Version/Constraints/ConstraintInterface.html" target="main"><abbr title="Thelia\Tools\Version\Constraints\ConstraintInterface">Thelia\Tools\Version\Constraints\ConstraintInterface</abbr></a></td>
-                <td class="last">
-                    Class ContraintInterface
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Thelia/Type/TypeInterface.html" target="main"><abbr title="Thelia\Type\TypeInterface">Thelia\Type\TypeInterface</abbr></a></td>
-                <td class="last">
-                    
-
-                </td>
-            </tr>
-            </table>
         </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div id="page-content">
+                    <div class="page-header">
+        <h1>Interfaces</h1>
+    </div>
+
+    
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">Thelia\Condition\ConditionOrganizerInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Manage how Condition could interact with each other
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Condition/Implementation/ConditionInterface.html"><abbr title="Thelia\Condition\Implementation\ConditionInterface">Thelia\Condition\Implementation\ConditionInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Manage how the application checks its state in order to check if it matches the implemented condition
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/FileFormat/Archive/ArchiveBuilderInterface.html"><abbr title="Thelia\Core\FileFormat\Archive\ArchiveBuilderInterface">Thelia\Core\FileFormat\Archive\ArchiveBuilderInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Interface ArchiveBuilderInterface
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/FileFormat/FormatInterface.html"><abbr title="Thelia\Core\FileFormat\FormatInterface">Thelia\Core\FileFormat\FormatInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Interface FormatInterface
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/FileFormat/Formatting/FormatterInterface.html"><abbr title="Thelia\Core\FileFormat\Formatting\FormatterInterface">Thelia\Core\FileFormat\Formatting\FormatterInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Interface FormatterInterface
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Form/TheliaFormFactoryInterface.html"><abbr title="Thelia\Core\Form\TheliaFormFactoryInterface">Thelia\Core\Form\TheliaFormFactoryInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Class TheliaFormFactory
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Form/TheliaFormValidatorInterface.html"><abbr title="Thelia\Core\Form\TheliaFormValidatorInterface">Thelia\Core\Form\TheliaFormValidatorInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Class TheliaFormValidator
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Security/Authentication/AuthenticatorInterface.html"><abbr title="Thelia\Core\Security\Authentication\AuthenticatorInterface">Thelia\Core\Security\Authentication\AuthenticatorInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Security/Role/RoleInterface.html"><abbr title="Thelia\Core\Security\Role\RoleInterface">Thelia\Core\Security\Role\RoleInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    RoleInterface represents a role granted to a user.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Security/UserProvider/UserProviderInterface.html"><abbr title="Thelia\Core\Security\UserProvider\UserProviderInterface">Thelia\Core\Security\UserProvider\UserProviderInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Security/User/UserInterface.html"><abbr title="Thelia\Core\Security\User\UserInterface">Thelia\Core\Security\User\UserInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    This interface should be implemented by user classes
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">Thelia\Core\Template\Assets\AssetManagerInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/Assets/AssetResolverInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetResolverInterface">Thelia\Core\Template\Assets\AssetResolverInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/Element/ArraySearchLoopInterface.html"><abbr title="Thelia\Core\Template\Element\ArraySearchLoopInterface">Thelia\Core\Template\Element\ArraySearchLoopInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/Element/PropelSearchLoopInterface.html"><abbr title="Thelia\Core\Template\Element\PropelSearchLoopInterface">Thelia\Core\Template\Element\PropelSearchLoopInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/Element/SearchLoopInterface.html"><abbr title="Thelia\Core\Template\Element\SearchLoopInterface">Thelia\Core\Template\Element\SearchLoopInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/ParserHelperInterface.html"><abbr title="Thelia\Core\Template\ParserHelperInterface">Thelia\Core\Template\ParserHelperInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/ParserInterface.html"><abbr title="Thelia\Core\Template\ParserInterface">Thelia\Core\Template\ParserInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Core/Template/TemplateHelperInterface.html"><abbr title="Thelia\Core\Template\TemplateHelperInterface">Thelia\Core\Template\TemplateHelperInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Coupon/FacadeInterface.html"><abbr title="Thelia\Coupon\FacadeInterface">Thelia\Coupon\FacadeInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Allow to assist in getting relevant data on the current application state
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Coupon/Type/AmountAndPercentageCouponInterface.html"><abbr title="Thelia\Coupon\Type\AmountAndPercentageCouponInterface">Thelia\Coupon\Type\AmountAndPercentageCouponInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Represents a Coupon ready to be processed in a Checkout process
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Coupon/Type/CouponInterface.html"><abbr title="Thelia\Coupon\Type\CouponInterface">Thelia\Coupon\Type\CouponInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Represents a Coupon ready to be processed in a Checkout process
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Files/FileModelInterface.html"><abbr title="Thelia\Files\FileModelInterface">Thelia\Files\FileModelInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Files/FileModelParentInterface.html"><abbr title="Thelia\Files\FileModelParentInterface">Thelia\Files\FileModelParentInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/ImportExport/Export/DocumentsExportInterface.html"><abbr title="Thelia\ImportExport\Export\DocumentsExportInterface">Thelia\ImportExport\Export\DocumentsExportInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Interface DocumentsExportInterface
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/ImportExport/Export/ImagesExportInterface.html"><abbr title="Thelia\ImportExport\Export\ImagesExportInterface">Thelia\ImportExport\Export\ImagesExportInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    interface ImagesExportInterface
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Model/Breadcrumb/BreadcrumbInterface.html"><abbr title="Thelia\Model\Breadcrumb\BreadcrumbInterface">Thelia\Model\Breadcrumb\BreadcrumbInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Module/BaseModuleInterface.html"><abbr title="Thelia\Module\BaseModuleInterface">Thelia\Module\BaseModuleInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Module/DeliveryModuleInterface.html"><abbr title="Thelia\Module\DeliveryModuleInterface">Thelia\Module\DeliveryModuleInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Module/PaymentModuleInterface.html"><abbr title="Thelia\Module\PaymentModuleInterface">Thelia\Module\PaymentModuleInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Tools/FileDownload/FileDownloaderInterface.html"><abbr title="Thelia\Tools\FileDownload\FileDownloaderInterface">Thelia\Tools\FileDownload\FileDownloaderInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Class FileDownloader
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Tools/Version/Constraints/ConstraintInterface.html"><abbr title="Thelia\Tools\Version\Constraints\ConstraintInterface">Thelia\Tools\Version\Constraints\ConstraintInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    Class ContraintInterface
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Thelia/Type/TypeInterface.html"><abbr title="Thelia\Type\TypeInterface">Thelia\Type\TypeInterface</abbr></a></em>
+                                    </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
     </div>
     </body>
+
 </html>

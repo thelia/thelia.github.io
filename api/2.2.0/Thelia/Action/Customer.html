@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Action\Customer | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Action_Customer" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../2.2.0/index.html" selected>2.2.0 tag</option>
+                                            <option value="../../../2.2.1/index.html">2.2.1 tag</option>
+                                            <option value="../../../master/index.html">master branch</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../Thelia/Action.html">Action</a></li>
+    
+                <li>Customer</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Customer</h1>
+    </div>
+
+    <p>    class
+    <strong>Customer</strong>        extends <a href="../../Thelia/Action/BaseAction.html"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a>        implements
+        <abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr>
+</p>
+
+            <div class="description">
+            <p>customer class where all actions are managed</p>            <p>Class Customer</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_genericToggleVisibility">genericToggleVisibility</a>(
+    <abbr title="Thelia\Action\Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, 
+    <abbr title="Thelia\Action\Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr> $event)
+                                            <p>Toggle visibility for an object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Security\SecurityContext">SecurityContext</abbr> $securityContext, 
+    <abbr title="Thelia\Action\Thelia\Mailer\MailerFactory">MailerFactory</abbr> $mailer)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr> $event)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modify">modify</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr> $event)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateProfile">updateProfile</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr> $event)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr> $event)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_login">login</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerLoginEvent">CustomerLoginEvent</abbr> $event)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logout">logout</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\ActionEvent">ActionEvent</abbr> $event)
+                                            <p>Perform user logout. The user is redirected to the provided view, if any.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lostPassword">lostPassword</a>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\LostPasswordEvent">LostPasswordEvent</abbr> $event)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubscribedEvents">getSubscribedEvents</a>()
+                                            <p>Returns an array of event names this subscriber wants to listen to.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_genericToggleVisibility">
+        <div class="location">in 
+    <a href="../../Thelia/Action/BaseAction.html#method_genericToggleVisibility"><abbr title="Thelia\Action\BaseAction">BaseAction</abbr></a> at line 92</div>
+        <code>                    
+    mixed
+    <strong>genericToggleVisibility</strong>(
+    <abbr title="Thelia\Action\Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr> $query, 
+    <abbr title="Thelia\Action\Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Toggle visibility for an object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Propel\Runtime\ActiveQuery\ModelCriteria">ModelCriteria</abbr></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\ToggleVisibilityEvent">ToggleVisibilityEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 44</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Security\SecurityContext">SecurityContext</abbr> $securityContext, 
+    <abbr title="Thelia\Action\Thelia\Mailer\MailerFactory">MailerFactory</abbr> $mailer)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Security\SecurityContext">SecurityContext</abbr></td>
+                <td>$securityContext</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Mailer\MailerFactory">MailerFactory</abbr></td>
+                <td>$mailer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">at line 50</div>
+        <code>                    
+    
+    <strong>create</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modify">
+        <div class="location">at line 63</div>
+        <code>                    
+    
+    <strong>modify</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateProfile">
+        <div class="location">at line 78</div>
+        <code>                    
+    
+    <strong>updateProfile</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerCreateOrUpdateEvent">CustomerCreateOrUpdateEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at line 121</div>
+        <code>                    
+    
+    <strong>delete</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerEvent">CustomerEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location">at line 162</div>
+        <code>                    
+    
+    <strong>login</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerLoginEvent">CustomerLoginEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\Customer\CustomerLoginEvent">CustomerLoginEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logout">
+        <div class="location">at line 177</div>
+        <code>                    
+    
+    <strong>logout</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\ActionEvent">ActionEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Perform user logout. The user is redirected to the provided view, if any.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\ActionEvent">ActionEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lostPassword">
+        <div class="location">at line 182</div>
+        <code>                    
+    
+    <strong>lostPassword</strong>(
+    <abbr title="Thelia\Action\Thelia\Core\Event\LostPasswordEvent">LostPasswordEvent</abbr> $event)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Action\Thelia\Core\Event\LostPasswordEvent">LostPasswordEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubscribedEvents">
+        <div class="location">at line 216</div>
+        <code>        static            
+    array
+    <strong>getSubscribedEvents</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns an array of event names this subscriber wants to listen to.</p>                    <p>The array keys are event names and the value can be:</p>
+
+<ul>
+<li>The method name to call (priority defaults to 0)</li>
+<li>An array composed of the method name to call and the priority</li>
+<li>An array of arrays composed of the method names to call and respective
+priorities, or 0 if unset</li>
+</ul>
+
+<p>For instance:</p>
+
+<ul>
+<li>array('eventName' => 'methodName')</li>
+<li>array('eventName' => array('methodName', $priority))</li>
+<li>array('eventName' => array(array('methodName1', $priority), array('methodName2'))</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>The event names to listen to</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
