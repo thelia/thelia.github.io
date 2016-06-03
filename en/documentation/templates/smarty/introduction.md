@@ -56,3 +56,18 @@ To select the current template, set the name of the template directory in the fo
 	active-front-template : the front-office template
 	active-mail-template : the mail template
 	active-pdf-template : the PDF template
+
+## Global Variables
+
+<div class="alert alert-warning">
+<p>This functionality is only available since version 2.4</p>
+</div>
+
+The app variable is available everywhere and gives access to many commonly needed objects and values.
+
+```smarty
+    {$app->environment} {* string	The current environment string (e.g 'dev') *}
+    {$app->request} {* Request|null	The HTTP request object *}
+    {$app->session} {* Session|null	The session *}
+    {$app->debug} {* bool	The current debug mode *}
+```
