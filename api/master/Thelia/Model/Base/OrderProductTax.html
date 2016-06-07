@@ -1,0 +1,3591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Model\Base\OrderProductTax | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Model_Base_OrderProductTax" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../Thelia/Model.html">Model</a></li>
+                                        <li><a href="../../../Thelia/Model/Base.html">Base</a></li>
+    
+                <li>OrderProductTax</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>OrderProductTax</h1>
+    </div>
+
+    <p>    class
+    <strong>OrderProductTax</strong>        implements
+        <abbr title="Propel\Runtime\ActiveRecord\ActiveRecordInterface">ActiveRecordInterface</abbr>
+</p>
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>TABLE_MAP</td>
+                <td class="last">
+                    <p><em>TableMap class name</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applyDefaultValues">applyDefaultValues</a>()
+                                            <p>Applies default values to this object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+                                            <p>Initializes internal state of Thelia\Model\Base\OrderProductTax object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isModified">isModified</a>()
+                                            <p>Returns whether the object has been modified.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isColumnModified">isColumnModified</a>(
+    string $col)
+                                            <p>Has specified column been modified?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModifiedColumns">getModifiedColumns</a>()
+                                            <p>Get the columns that have been modified in this object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isNew">isNew</a>()
+                                            <p>Returns whether the object has ever been saved.  This will
+be false, if the object was retrieved from storage or was created
+and then saved.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNew">setNew</a>(
+    boolean $b)
+                                            <p>Setter for the isNew attribute.  This method will be called
+by Propel-generated children and objects.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDeleted">isDeleted</a>()
+                                            <p>Whether this object has been deleted.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDeleted">setDeleted</a>(
+    boolean $b)
+                                            <p>Specify whether this object has been deleted.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetModified">resetModified</a>(
+    string $col = null)
+                                            <p>Sets the modified state for the object to be false.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_equals">equals</a>(
+    mixed $obj)
+                                            <p>Compares this with another <code>OrderProductTax</code> instance.  If
+<code>obj</code> is an instance of <code>OrderProductTax</code>, delegates to
+<code>equals(OrderProductTax)</code>.  Otherwise, returns <code>false</code>.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hashCode">hashCode</a>()
+                                            <p>If the primary key is not null, return the hashcode of the
+primary key. Otherwise, return the hash code of the object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVirtualColumns">getVirtualColumns</a>()
+                                            <p>Get the associative array of the virtual columns in this object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasVirtualColumn">hasVirtualColumn</a>(
+    string $name)
+                                            <p>Checks the existence of a virtual column in this object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVirtualColumn">getVirtualColumn</a>(
+    string $name)
+                                            <p>Get the value of a virtual column in this object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/Base/OrderProductTax.html"><abbr title="Thelia\Model\Base\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setVirtualColumn">setVirtualColumn</a>(
+    string $name, 
+    mixed $value)
+                                            <p>Set the value of a virtual column in this object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/Base/OrderProductTax.html"><abbr title="Thelia\Model\Base\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_importFrom">importFrom</a>(
+    mixed $parser, 
+    string $data)
+                                            <p>Populate the current object from a string, using a given parser format
+<code>
+$book = new Book();
+$book->importFrom('JSON', '{"Id":9012,"Title":"Don Juan","ISBN":"0140422161","Price":12.99,"PublisherId":1234,"AuthorId":5678}');
+</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exportTo">exportTo</a>(
+    mixed $parser, 
+    boolean $includeLazyLoadColumns = true)
+                                            <p>Export the current object properties to a string, using a given parser format
+<code>
+$book = BookQuery::create()->findPk(9012);
+echo $book->exportTo('JSON');
+ => {"Id":9012,"Title":"Don Juan","ISBN":"0140422161","Price":12.99,"PublisherId":1234,"AuthorId":5678}');
+</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___sleep">__sleep</a>()
+                                            <p>Clean up internal collections prior to serializing
+Avoids recursive loops that turn into segmentation faults when serializing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getId">getId</a>()
+                                            <p>Get the [id] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrderProductId">getOrderProductId</a>()
+                                            <p>Get the [order<em>product</em>id] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTitle">getTitle</a>()
+                                            <p>Get the [title] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDescription">getDescription</a>()
+                                            <p>Get the [description] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAmount">getAmount</a>()
+                                            <p>Get the [amount] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPromoAmount">getPromoAmount</a>()
+                                            <p>Get the [promo_amount] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCreatedAt">getCreatedAt</a>(
+    string $format = NULL)
+                                            <p>Get the [optionally formatted] temporal [created_at] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUpdatedAt">getUpdatedAt</a>(
+    string $format = NULL)
+                                            <p>Get the [optionally formatted] temporal [updated_at] column value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setId">setId</a>(
+    int $v)
+                                            <p>Set the value of [id] column.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOrderProductId">setOrderProductId</a>(
+    int $v)
+                                            <p>Set the value of [order<em>product</em>id] column.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTitle">setTitle</a>(
+    string $v)
+                                            <p>Set the value of [title] column.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDescription">setDescription</a>(
+    string $v)
+                                            <p>Set the value of [description] column.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAmount">setAmount</a>(
+    string $v)
+                                            <p>Set the value of [amount] column.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPromoAmount">setPromoAmount</a>(
+    string $v)
+                                            <p>Set the value of [promo_amount] column.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCreatedAt">setCreatedAt</a>(
+    mixed $v)
+                                            <p>Sets the value of [created_at] column to a normalized version of the date/time value specified.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUpdatedAt">setUpdatedAt</a>(
+    mixed $v)
+                                            <p>Sets the value of [updated_at] column to a normalized version of the date/time value specified.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasOnlyDefaultValues">hasOnlyDefaultValues</a>()
+                                            <p>Indicates whether the columns in this object are only set to default values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hydrate">hydrate</a>(
+    array $row, 
+    int $startcol, 
+    boolean $rehydrate = false, 
+    string $indexType = TableMap::TYPE_NUM)
+                                            <p>Hydrates (populates) the object variables with values from the database resultset.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureConsistency">ensureConsistency</a>()
+                                            <p>Checks and repairs the internal consistency of the object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reload">reload</a>(
+    boolean $deep = false, 
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Reloads this object from datastore based on primary key and (optionally) resets all associated objects.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Removes this object from datastore and sets delete attribute.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_save">save</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Persists this object to the database.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getByName">getByName</a>(
+    string $name, 
+    string $type = TableMap::TYPE_PHPNAME)
+                                            <p>Retrieves a field from the object by name passed in as a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getByPosition">getByPosition</a>(
+    int $pos)
+                                            <p>Retrieves a field from the object by Position as specified in the xml schema.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>(
+    string $keyType = TableMap::TYPE_PHPNAME, 
+    boolean $includeLazyLoadColumns = true, 
+    array $alreadyDumpedObjects = array(), 
+    boolean $includeForeignObjects = false)
+                                            <p>Exports the object as an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setByName">setByName</a>(
+    string $name, 
+    mixed $value, 
+    string $type = TableMap::TYPE_PHPNAME)
+                                            <p>Sets a field from the object by name passed in as a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setByPosition">setByPosition</a>(
+    int $pos, 
+    mixed $value)
+                                            <p>Sets a field from the object by Position as specified in the xml schema.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromArray">fromArray</a>(
+    array $arr, 
+    string $keyType = TableMap::TYPE_PHPNAME)
+                                            <p>Populates the object using an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildCriteria">buildCriteria</a>()
+                                            <p>Build a Criteria object containing the values of all modified columns in this object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildPkeyCriteria">buildPkeyCriteria</a>()
+                                            <p>Builds a Criteria object containing the primary key for this object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrimaryKey">getPrimaryKey</a>()
+                                            <p>Returns the primary key for this object (row).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPrimaryKey">setPrimaryKey</a>(
+    int $key)
+                                            <p>Generic method to set the primary key (id column).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPrimaryKeyNull">isPrimaryKeyNull</a>()
+                                            <p>Returns true if the primary key for this object is null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyInto">copyInto</a>(
+    object $copyObj, 
+    boolean $deepCopy = false, 
+    boolean $makeNew = true)
+                                            <p>Sets contents of passed object to values from current object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copy">copy</a>(
+    boolean $deepCopy = false)
+                                            <p>Makes a copy of this object that will be inserted as a new row in table when saved.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOrderProduct">setOrderProduct</a>(
+    <abbr title="Thelia\Model\Base\Thelia\Model\OrderProduct">OrderProduct</abbr> $v = null)
+                                            <p>Declares an association between this object and a ChildOrderProduct object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProduct.html"><abbr title="Thelia\Model\OrderProduct">OrderProduct</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrderProduct">getOrderProduct</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Get the associated ChildOrderProduct object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clear">clear</a>()
+                                            <p>Clears the current object and sets all attributes to their default values</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearAllReferences">clearAllReferences</a>(
+    boolean $deep = false)
+                                            <p>Resets all references to other model objects or collections of model objects.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+                                            <p>Return the string representation of this object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_keepUpdateDateUnchanged">keepUpdateDateUnchanged</a>()
+                                            <p>Mark the current object so that the update date doesn't get updated during next save</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preSave">preSave</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run before persisting the object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postSave">postSave</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run after persisting the object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preInsert">preInsert</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run before inserting to database</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postInsert">postInsert</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run after inserting to database</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preUpdate">preUpdate</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run before updating the object in database</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postUpdate">postUpdate</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run after updating the object in database</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preDelete">preDelete</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run before deleting the object in database</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postDelete">postDelete</a>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)
+                                            <p>Code to be run after deleting the object in database</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(
+    string $name, 
+    mixed $params)
+                                            <p>Derived method to catches calls to undefined methods.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_applyDefaultValues">
+        <div class="location">at line 128</div>
+        <code>                    
+    
+    <strong>applyDefaultValues</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Applies default values to this object.</p>                    <p>This method should be called from the object's constructor (or
+equivalent initialization method).</p>            </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>__construct()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 138</div>
+        <code>                    
+    
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Initializes internal state of Thelia\Model\Base\OrderProductTax object.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>applyDefaults()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModified">
+        <div class="location">at line 148</div>
+        <code>                    
+    boolean
+    <strong>isModified</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns whether the object has been modified.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td>True if the object has been modified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isColumnModified">
+        <div class="location">at line 159</div>
+        <code>                    
+    boolean
+    <strong>isColumnModified</strong>(
+    string $col)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Has specified column been modified?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$col</td>
+                <td>column fully qualified name (TableMap::TYPE<em>COLNAME), e.g. Book::AUTHOR</em>ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td>True if $col has been modified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModifiedColumns">
+        <div class="location">at line 168</div>
+        <code>                    
+    array
+    <strong>getModifiedColumns</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the columns that have been modified in this object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>A unique list of the modified column names for this object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isNew">
+        <div class="location">at line 180</div>
+        <code>                    
+    boolean
+    <strong>isNew</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns whether the object has ever been saved.  This will
+be false, if the object was retrieved from storage or was created
+and then saved.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td>true, if the object has never been persisted.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNew">
+        <div class="location">at line 191</div>
+        <code>                    
+    
+    <strong>setNew</strong>(
+    boolean $b)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Setter for the isNew attribute.  This method will be called
+by Propel-generated children and objects.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$b</td>
+                <td>the state of the object.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDeleted">
+        <div class="location">at line 200</div>
+        <code>                    
+    boolean
+    <strong>isDeleted</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Whether this object has been deleted.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td>The deleted state of this object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDeleted">
+        <div class="location">at line 210</div>
+        <code>                    
+    void
+    <strong>setDeleted</strong>(
+    boolean $b)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Specify whether this object has been deleted.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$b</td>
+                <td>The deleted state of this object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetModified">
+        <div class="location">at line 220</div>
+        <code>                    
+    void
+    <strong>resetModified</strong>(
+    string $col = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets the modified state for the object to be false.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$col</td>
+                <td>If supplied, only the specified column is reset.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_equals">
+        <div class="location">at line 239</div>
+        <code>                    
+    boolean
+    <strong>equals</strong>(
+    mixed $obj)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Compares this with another <code>OrderProductTax</code> instance.  If
+<code>obj</code> is an instance of <code>OrderProductTax</code>, delegates to
+<code>equals(OrderProductTax)</code>.  Otherwise, returns <code>false</code>.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$obj</td>
+                <td>The object to compare to.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td>Whether equal to the object specified.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hashCode">
+        <div class="location">at line 264</div>
+        <code>                    
+    int
+    <strong>hashCode</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>If the primary key is not null, return the hashcode of the
+primary key. Otherwise, return the hash code of the object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td>Hashcode</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVirtualColumns">
+        <div class="location">at line 278</div>
+        <code>                    
+    array
+    <strong>getVirtualColumns</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the associative array of the virtual columns in this object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasVirtualColumn">
+        <div class="location">at line 289</div>
+        <code>                    
+    boolean
+    <strong>hasVirtualColumn</strong>(
+    string $name)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Checks the existence of a virtual column in this object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$name</td>
+                <td>The virtual column name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVirtualColumn">
+        <div class="location">at line 302</div>
+        <code>                    
+    mixed
+    <strong>getVirtualColumn</strong>(
+    string $name)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the value of a virtual column in this object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$name</td>
+                <td>The virtual column name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setVirtualColumn">
+        <div class="location">at line 319</div>
+        <code>                    
+    <a href="../../../Thelia/Model/Base/OrderProductTax.html"><abbr title="Thelia\Model\Base\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setVirtualColumn</strong>(
+    string $name, 
+    mixed $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of a virtual column in this object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$name</td>
+                <td>The virtual column name</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$value</td>
+                <td>The value to give to the virtual column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/Base/OrderProductTax.html"><abbr title="Thelia\Model\Base\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importFrom">
+        <div class="location">at line 351</div>
+        <code>                    
+    <a href="../../../Thelia/Model/Base/OrderProductTax.html"><abbr title="Thelia\Model\Base\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>importFrom</strong>(
+    mixed $parser, 
+    string $data)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Populate the current object from a string, using a given parser format
+<code>
+$book = new Book();
+$book->importFrom('JSON', '{"Id":9012,"Title":"Don Juan","ISBN":"0140422161","Price":12.99,"PublisherId":1234,"AuthorId":5678}');
+</code></p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$parser</td>
+                <td>A AbstractParser instance,
+                      or a format name ('XML', 'YAML', 'JSON', 'CSV')</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$data</td>
+                <td>The source data to import from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/Base/OrderProductTax.html"><abbr title="Thelia\Model\Base\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object, for fluid interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exportTo">
+        <div class="location">at line 374</div>
+        <code>                    
+    string
+    <strong>exportTo</strong>(
+    mixed $parser, 
+    boolean $includeLazyLoadColumns = true)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Export the current object properties to a string, using a given parser format
+<code>
+$book = BookQuery::create()->findPk(9012);
+echo $book->exportTo('JSON');
+ => {"Id":9012,"Title":"Don Juan","ISBN":"0140422161","Price":12.99,"PublisherId":1234,"AuthorId":5678}');
+</code></p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$parser</td>
+                <td>A AbstractParser instance, or a format name ('XML', 'YAML', 'JSON', 'CSV')</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$includeLazyLoadColumns</td>
+                <td>(optional) Whether to include lazy load(ed) columns. Defaults to TRUE.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The exported data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___sleep">
+        <div class="location">at line 387</div>
+        <code>                    
+    
+    <strong>__sleep</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Clean up internal collections prior to serializing
+Avoids recursive loops that turn into segmentation faults when serializing</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">at line 399</div>
+        <code>                    
+    int
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [id] column value.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrderProductId">
+        <div class="location">at line 410</div>
+        <code>                    
+    int
+    <strong>getOrderProductId</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [order<em>product</em>id] column value.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitle">
+        <div class="location">at line 421</div>
+        <code>                    
+    string
+    <strong>getTitle</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [title] column value.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescription">
+        <div class="location">at line 432</div>
+        <code>                    
+    string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [description] column value.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAmount">
+        <div class="location">at line 443</div>
+        <code>                    
+    string
+    <strong>getAmount</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [amount] column value.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPromoAmount">
+        <div class="location">at line 454</div>
+        <code>                    
+    string
+    <strong>getPromoAmount</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [promo_amount] column value.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreatedAt">
+        <div class="location">at line 471</div>
+        <code>                    
+    mixed
+    <strong>getCreatedAt</strong>(
+    string $format = NULL)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [optionally formatted] temporal [created_at] column value.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$format</td>
+                <td>The date/time format string (either date()-style or strftime()-style).
+                           If format is NULL, then the raw \DateTime object will be returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>Formatted date/time value as string or \DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td><ul>
+<li>if unable to parse/validate the date/time value.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpdatedAt">
+        <div class="location">at line 491</div>
+        <code>                    
+    mixed
+    <strong>getUpdatedAt</strong>(
+    string $format = NULL)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the [optionally formatted] temporal [updated_at] column value.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$format</td>
+                <td>The date/time format string (either date()-style or strftime()-style).
+                           If format is NULL, then the raw \DateTime object will be returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>Formatted date/time value as string or \DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td><ul>
+<li>if unable to parse/validate the date/time value.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setId">
+        <div class="location">at line 506</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setId</strong>(
+    int $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of [id] column.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    int</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOrderProductId">
+        <div class="location">at line 527</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setOrderProductId</strong>(
+    int $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of [order<em>product</em>id] column.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    int</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTitle">
+        <div class="location">at line 552</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setTitle</strong>(
+    string $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of [title] column.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDescription">
+        <div class="location">at line 573</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setDescription</strong>(
+    string $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of [description] column.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAmount">
+        <div class="location">at line 594</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setAmount</strong>(
+    string $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of [amount] column.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPromoAmount">
+        <div class="location">at line 615</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setPromoAmount</strong>(
+    string $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the value of [promo_amount] column.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$v</td>
+                <td>new value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCreatedAt">
+        <div class="location">at line 637</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setCreatedAt</strong>(
+    mixed $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets the value of [created_at] column to a normalized version of the date/time value specified.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$v</td>
+                <td>string, integer (timestamp), or \DateTime value.
+              Empty strings are treated as NULL.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpdatedAt">
+        <div class="location">at line 658</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setUpdatedAt</strong>(
+    mixed $v)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets the value of [updated_at] column to a normalized version of the date/time value specified.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$v</td>
+                <td>string, integer (timestamp), or \DateTime value.
+              Empty strings are treated as NULL.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasOnlyDefaultValues">
+        <div class="location">at line 680</div>
+        <code>                    
+    boolean
+    <strong>hasOnlyDefaultValues</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Indicates whether the columns in this object are only set to default values.</p>                    <p>This method can be used in conjunction with isModified() to indicate whether an object is both
+modified <em>and</em> has some values set which are non-default.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td>Whether the columns in this object are only been set with default values.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hydrate">
+        <div class="location">at line 712</div>
+        <code>                    
+    int
+    <strong>hydrate</strong>(
+    array $row, 
+    int $startcol, 
+    boolean $rehydrate = false, 
+    string $indexType = TableMap::TYPE_NUM)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Hydrates (populates) the object variables with values from the database resultset.</p>                    <p>An offset (0-based "start column") is specified so that objects can be hydrated
+with a subset of the columns in the resultset rows.  This is needed, for example,
+for results of JOIN queries where the resultset row includes columns from two or
+more tables.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$row</td>
+                <td>The row returned by DataFetcher->fetch().</td>
+            </tr>
+                    <tr>
+                <td>
+    int</td>
+                <td>$startcol</td>
+                <td>0-based offset column which indicates which restultset column to start with.</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$rehydrate</td>
+                <td>Whether this object is being re-hydrated from the database.</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$indexType</td>
+                <td>The index type of $row. Mostly DataFetcher->getIndexType().
+One of the class type constants TableMap::TYPE<em>PHPNAME, TableMap::TYPE</em>STUDLYPHPNAME
+                           TableMap::TYPE<em>COLNAME, TableMap::TYPE</em>FIELDNAME, TableMap::TYPE_NUM.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td>next starting column</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td><ul>
+<li>Any caught Exception will be rewrapped as a PropelException.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureConsistency">
+        <div class="location">at line 774</div>
+        <code>                    
+    
+    <strong>ensureConsistency</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Checks and repairs the internal consistency of the object.</p>                    <p>This method is executed after an already-instantiated object is re-hydrated
+from the database.  It exists to check any foreign keys to make sure that
+the objects related to the current object are correct based on foreign key.</p>
+
+<p>You can override this method in the stub class, but you should always invoke
+the base method from the overridden method (i.e. parent::ensureConsistency()),
+in case your model changes.</p>            </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reload">
+        <div class="location">at line 791</div>
+        <code>                    
+    void
+    <strong>reload</strong>(
+    boolean $deep = false, 
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Reloads this object from datastore based on primary key and (optionally) resets all associated objects.</p>                    <p>This will only work if the object has been saved and has a valid primary key set.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$deep</td>
+                <td>(optional) Whether to also de-associated any related objects.</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>(optional) The ConnectionInterface connection to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td><ul>
+<li>if this object is deleted, unsaved or doesn't have pk match in db</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at line 831</div>
+        <code>                    
+    void
+    <strong>delete</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Removes this object from datastore and sets delete attribute.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>OrderProductTax::setDeleted()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>OrderProductTax::isDeleted()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">at line 873</div>
+        <code>                    
+    int
+    <strong>save</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Persists this object to the database.</p>                    <p>If the object is new, it inserts it; otherwise an update is performed.
+All modified related objects will also be persisted in the doSave()
+method.  This method wraps all precipitate database operations in a
+single transaction.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td>The number of rows affected by this insert/update and any referring fk objects' save() operations.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>doSave()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByName">
+        <div class="location">at line 1093</div>
+        <code>                    
+    mixed
+    <strong>getByName</strong>(
+    string $name, 
+    string $type = TableMap::TYPE_PHPNAME)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Retrieves a field from the object by name passed in as a string.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$name</td>
+                <td>name</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$type</td>
+                <td>The type of fieldname the $name is of:
+                    one of the class type constants TableMap::TYPE<em>PHPNAME, TableMap::TYPE</em>STUDLYPHPNAME
+                    TableMap::TYPE<em>COLNAME, TableMap::TYPE</em>FIELDNAME, TableMap::TYPE<em>NUM.
+                    Defaults to TableMap::TYPE</em>PHPNAME.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>Value of field.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByPosition">
+        <div class="location">at line 1108</div>
+        <code>                    
+    mixed
+    <strong>getByPosition</strong>(
+    int $pos)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Retrieves a field from the object by Position as specified in the xml schema.</p>                    <p>Zero-based.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    int</td>
+                <td>$pos</td>
+                <td>position in xml schema</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>Value of field at $pos</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">at line 1156</div>
+        <code>                    
+    array
+    <strong>toArray</strong>(
+    string $keyType = TableMap::TYPE_PHPNAME, 
+    boolean $includeLazyLoadColumns = true, 
+    array $alreadyDumpedObjects = array(), 
+    boolean $includeForeignObjects = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Exports the object as an array.</p>                    <p>You can specify the key type of the array by passing one of the class
+type constants.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$keyType</td>
+                <td>(optional) One of the class type constants TableMap::TYPE<em>PHPNAME, TableMap::TYPE</em>STUDLYPHPNAME,
+                   TableMap::TYPE<em>COLNAME, TableMap::TYPE</em>FIELDNAME, TableMap::TYPE<em>NUM.
+                   Defaults to TableMap::TYPE</em>PHPNAME.</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$includeLazyLoadColumns</td>
+                <td>(optional) Whether to include lazy loaded columns. Defaults to TRUE.</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$alreadyDumpedObjects</td>
+                <td>List of objects to skip to avoid recursion</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$includeForeignObjects</td>
+                <td>(optional) Whether to include hydrated related objects. Default to FALSE.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>an associative array containing the field names (as keys) and field values</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setByName">
+        <div class="location">at line 1198</div>
+        <code>                    
+    void
+    <strong>setByName</strong>(
+    string $name, 
+    mixed $value, 
+    string $type = TableMap::TYPE_PHPNAME)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets a field from the object by name passed in as a string.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$value</td>
+                <td>field value</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$type</td>
+                <td>The type of fieldname the $name is of:
+                    one of the class type constants TableMap::TYPE<em>PHPNAME, TableMap::TYPE</em>STUDLYPHPNAME
+                    TableMap::TYPE<em>COLNAME, TableMap::TYPE</em>FIELDNAME, TableMap::TYPE<em>NUM.
+                    Defaults to TableMap::TYPE</em>PHPNAME.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setByPosition">
+        <div class="location">at line 1213</div>
+        <code>                    
+    void
+    <strong>setByPosition</strong>(
+    int $pos, 
+    mixed $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets a field from the object by Position as specified in the xml schema.</p>                    <p>Zero-based.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    int</td>
+                <td>$pos</td>
+                <td>position in xml schema</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$value</td>
+                <td>field value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromArray">
+        <div class="location">at line 1260</div>
+        <code>                    
+    void
+    <strong>fromArray</strong>(
+    array $arr, 
+    string $keyType = TableMap::TYPE_PHPNAME)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Populates the object using an array.</p>                    <p>This is particularly useful when populating an object from one of the
+request arrays (e.g. $_POST).  This method goes through the column
+names, checking to see whether a matching key exists in populated
+array. If so the setByName() method is called for that column.</p>
+
+<p>You can specify the key type of the array by additionally passing one
+of the class type constants TableMap::TYPE<em>PHPNAME, TableMap::TYPE</em>STUDLYPHPNAME,
+TableMap::TYPE<em>COLNAME, TableMap::TYPE</em>FIELDNAME, TableMap::TYPE<em>NUM.
+The default key type is the column's TableMap::TYPE</em>PHPNAME.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$arr</td>
+                <td>An array to populate the object from.</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$keyType</td>
+                <td>The type of keys the array uses.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildCriteria">
+        <div class="location">at line 1279</div>
+        <code>                    
+    <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
+    <strong>buildCriteria</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Build a Criteria object containing the values of all modified columns in this object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+            <td>The Criteria object containing all modified values.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildPkeyCriteria">
+        <div class="location">at line 1303</div>
+        <code>                    
+    <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr>
+    <strong>buildPkeyCriteria</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Builds a Criteria object containing the primary key for this object.</p>                    <p>Unlike buildCriteria() this method includes the primary key values regardless
+of whether or not they have been modified.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Propel\Runtime\ActiveQuery\Criteria">Criteria</abbr></td>
+            <td>The Criteria object containing value(s) for primary key(s).</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrimaryKey">
+        <div class="location">at line 1315</div>
+        <code>                    
+    int
+    <strong>getPrimaryKey</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns the primary key for this object (row).</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPrimaryKey">
+        <div class="location">at line 1326</div>
+        <code>                    
+    void
+    <strong>setPrimaryKey</strong>(
+    int $key)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Generic method to set the primary key (id column).</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    int</td>
+                <td>$key</td>
+                <td>Primary key.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPrimaryKeyNull">
+        <div class="location">at line 1335</div>
+        <code>                    
+    boolean
+    <strong>isPrimaryKeyNull</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns true if the primary key for this object is null.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyInto">
+        <div class="location">at line 1352</div>
+        <code>                    
+    
+    <strong>copyInto</strong>(
+    object $copyObj, 
+    boolean $deepCopy = false, 
+    boolean $makeNew = true)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets contents of passed object to values from current object.</p>                    <p>If desired, this method can also make copies of all associated (fkey referrers)
+objects.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    object</td>
+                <td>$copyObj</td>
+                <td>An object of \Thelia\Model\OrderProductTax (or compatible) type.</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$deepCopy</td>
+                <td>Whether to also copy all rows that refer (by fkey) to the current row.</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$makeNew</td>
+                <td>Whether to reset autoincrement PKs and make the object new.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copy">
+        <div class="location">at line 1379</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>copy</strong>(
+    boolean $deepCopy = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Makes a copy of this object that will be inserted as a new row in table when saved.</p>                    <p>It creates a new object filling in the simple attributes, but skipping any primary
+keys that are defined for the table.</p>
+
+<p>If desired, this method can also make copies of all associated (fkey referrers)
+objects.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$deepCopy</td>
+                <td>Whether to also copy all rows that refer (by fkey) to the current row.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>Clone of current object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOrderProduct">
+        <div class="location">at line 1396</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>setOrderProduct</strong>(
+    <abbr title="Thelia\Model\Base\Thelia\Model\OrderProduct">OrderProduct</abbr> $v = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Declares an association between this object and a ChildOrderProduct object.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Thelia\Model\OrderProduct">OrderProduct</abbr></td>
+                <td>$v</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrderProduct">
+        <div class="location">at line 1424</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProduct.html"><abbr title="Thelia\Model\OrderProduct">OrderProduct</abbr></a>
+    <strong>getOrderProduct</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the associated ChildOrderProduct object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td>Optional Connection object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProduct.html"><abbr title="Thelia\Model\OrderProduct">OrderProduct</abbr></a></td>
+            <td>The associated ChildOrderProduct object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Propel\Runtime\Exception\PropelException">PropelException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">at line 1443</div>
+        <code>                    
+    
+    <strong>clear</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Clears the current object and sets all attributes to their default values</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearAllReferences">
+        <div class="location">at line 1470</div>
+        <code>                    
+    
+    <strong>clearAllReferences</strong>(
+    boolean $deep = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Resets all references to other model objects or collections of model objects.</p>                    <p>This method is a user-space workaround for PHP's inability to garbage collect
+objects with circular references (even in PHP 5.3). This is currently necessary
+when using Propel in certain daemon or large-volume/high-memory operations.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$deep</td>
+                <td>Whether to also clear the references on all referrer objects.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line 1483</div>
+        <code>                    
+    string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return the string representation of this object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keepUpdateDateUnchanged">
+        <div class="location">at line 1495</div>
+        <code>                    
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a>
+    <strong>keepUpdateDateUnchanged</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Mark the current object so that the update date doesn't get updated during next save</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Model/OrderProductTax.html"><abbr title="Thelia\Model\OrderProductTax">OrderProductTax</abbr></a></td>
+            <td>The current object (for fluent API support)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preSave">
+        <div class="location">at line 1507</div>
+        <code>                    
+    boolean
+    <strong>preSave</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run before persisting the object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postSave">
+        <div class="location">at line 1516</div>
+        <code>                    
+    
+    <strong>postSave</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run after persisting the object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preInsert">
+        <div class="location">at line 1526</div>
+        <code>                    
+    boolean
+    <strong>preInsert</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run before inserting to database</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postInsert">
+        <div class="location">at line 1535</div>
+        <code>                    
+    
+    <strong>postInsert</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run after inserting to database</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preUpdate">
+        <div class="location">at line 1545</div>
+        <code>                    
+    boolean
+    <strong>preUpdate</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run before updating the object in database</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postUpdate">
+        <div class="location">at line 1554</div>
+        <code>                    
+    
+    <strong>postUpdate</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run after updating the object in database</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preDelete">
+        <div class="location">at line 1564</div>
+        <code>                    
+    boolean
+    <strong>preDelete</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run before deleting the object in database</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postDelete">
+        <div class="location">at line 1573</div>
+        <code>                    
+    
+    <strong>postDelete</strong>(
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr> $con = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Code to be run after deleting the object in database</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Model\Base\Propel\Runtime\Connection\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$con</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at line 1590</div>
+        <code>                    
+    array|string
+    <strong>__call</strong>(
+    string $name, 
+    mixed $params)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Derived method to catches calls to undefined methods.</p>                    <p>Provides magic import/export method support (fromXML()/toXML(), fromYAML()/toYAML(), etc.).
+Allows to define default __call() behavior if you overwrite __call()</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

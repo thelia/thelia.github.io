@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Coupon\Type\CouponAbstract | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Coupon_Type_CouponAbstract" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../Thelia/Coupon.html">Coupon</a></li>
+                                        <li><a href="../../../Thelia/Coupon/Type.html">Type</a></li>
+    
+                <li>CouponAbstract</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>CouponAbstract</h1>
+    </div>
+
+    <p>    class
+    <strong>CouponAbstract</strong>        implements
+        <a href="../../../Thelia/Coupon/Type/CouponInterface.html"><abbr title="Thelia\Coupon\Type\CouponInterface">CouponInterface</abbr></a>
+</p>
+
+            <div class="description">
+            <p>Assist in writing a CouponInterface</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>COUPON_DATASET_NAME</td>
+                <td class="last">
+                    <p><em>The dataset name for all coupon specific input fields, that do not appear in the CouPonCreationForm form.</em></p>
+                    <p>In the input form, these fields have to be created like:</p>
+
+<p>thelia<em>coupon</em>specific[my<em>field, thelia</em>coupon<em>creation</em>extended[my<em>other</em>field]</p>
+
+<p>use the makeCouponField() method to do that safely.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_FIELD_NAME</td>
+                <td class="last">
+                    <p><em>A standard 'amount' filed name, thant can be used in coupons which extends this class</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Coupon\Type\Thelia\Coupon\FacadeInterface">FacadeInterface</abbr> $facade)
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOrganizer">setOrganizer</a>(
+    <a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a> $organizer)
+                                            <p>Set Condition Organizer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(
+    <abbr title="Thelia\Coupon\Type\Thelia\Coupon\FacadeInterface">FacadeInterface</abbr> $facade, 
+    string $code, 
+    string $title, 
+    string $shortDescription, 
+    string $description, 
+    array $effects, 
+    bool $isCumulative, 
+    bool $isRemovingPostage, 
+    bool $isAvailableOnSpecialOffers, 
+    bool $isEnabled, 
+    int $maxUsage, 
+    <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate, 
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForCountries, 
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForModules, 
+    bool $perCustomerUsageCount)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPerCustomerUsageCount">setPerCustomerUsageCount</a>(
+    <abbr title="Thelia\Coupon\Type\true">true</abbr> $perCustomerUsageCount)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPerCustomerUsageCount">getPerCustomerUsageCount</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCode">getCode</a>()
+                                            <p>Return Coupon code (ex: XMAS)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTitle">getTitle</a>()
+                                            <p>Return Coupon title (ex: Coupon for XMAS)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShortDescription">getShortDescription</a>()
+                                            <p>Return Coupon short description</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDescription">getDescription</a>()
+                                            <p>Return Coupon description</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCumulative">isCumulative</a>()
+                                            <p>If Coupon is cumulative or prevent any accumulation
+If is cumulative you can sum Coupon effects
+If not cancel all other Coupon and take the last given</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isRemovingPostage">isRemovingPostage</a>()
+                                            <p>If Coupon is removing Checkout Postage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFreeShippingForCountries">getFreeShippingForCountries</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFreeShippingForModules">getFreeShippingForModules</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exec">exec</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConditions">getConditions</a>()
+                                            <p>Return condition to validate the Coupon or not</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConditions">setConditions</a>(
+    <abbr title="Thelia\Coupon\Type\Thelia\Condition\ConditionCollection">ConditionCollection</abbr> $conditions)
+                                            <p>Replace the existing Conditions by those given in parameter
+If one Condition is badly implemented, no Condition will be added</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a target="_blank" href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpirationDate">getExpirationDate</a>()
+                                            <p>Return Coupon expiration date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAvailableOnSpecialOffers">isAvailableOnSpecialOffers</a>()
+                                            <p>Check if the Coupon can be used against a
+product already with a special offer price</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEnabled">isEnabled</a>()
+                                            <p>Check if Coupon has been disabled by admin</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMaxUsage">getMaxUsage</a>()
+                                            <p>Return how many time the Coupon can be used again
+Ex : -1 unlimited</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isExpired">isExpired</a>()
+                                            <p>Check if the Coupon is already Expired</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getServiceId">getServiceId</a>()
+                                            <p>Get Coupon Manager service Id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isMatching">isMatching</a>()
+                                            <p>Check if the current state of the application is matching this Coupon conditions
+Thelia variables are given by the FacadeInterface</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInputName">getInputName</a>()
+                                            <p>This is the field label than will be displayed in the form.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drawBackOfficeInputs">drawBackOfficeInputs</a>()
+                                            <p>Draw the input displayed in the BackOffice
+allowing Admin to set its Coupon effect
+Override this method to do something useful</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEffects">getEffects</a>(
+    array $data)
+                                            <p>Create the effect array from the list of fields</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clear">clear</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isInUse">isInUse</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 120</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Coupon\Type\Thelia\Coupon\FacadeInterface">FacadeInterface</abbr> $facade)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Coupon\Type\Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></td>
+                <td>$facade</td>
+                <td>Service facade</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOrganizer">
+        <div class="location">at line 134</div>
+        <code>                    
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+    <strong>setOrganizer</strong>(
+    <a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a> $organizer)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set Condition Organizer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <a href="../../../Thelia/Condition/ConditionOrganizerInterface.html"><abbr title="Thelia\Condition\ConditionOrganizerInterface">ConditionOrganizerInterface</abbr></a></td>
+                <td>$organizer</td>
+                <td>Manage Condition groups (&amp;&amp; and ||)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at line 144</div>
+        <code>                    
+    
+    <strong>set</strong>(
+    <abbr title="Thelia\Coupon\Type\Thelia\Coupon\FacadeInterface">FacadeInterface</abbr> $facade, 
+    string $code, 
+    string $title, 
+    string $shortDescription, 
+    string $description, 
+    array $effects, 
+    bool $isCumulative, 
+    bool $isRemovingPostage, 
+    bool $isAvailableOnSpecialOffers, 
+    bool $isEnabled, 
+    int $maxUsage, 
+    <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr> $expirationDate, 
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForCountries, 
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr> $freeShippingForModules, 
+    bool $perCustomerUsageCount)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Coupon\Type\Thelia\Coupon\FacadeInterface">FacadeInterface</abbr></td>
+                <td>$facade</td>
+                <td>Provides necessary value from Thelia</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$code</td>
+                <td>Coupon code (ex: XMAS)</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$title</td>
+                <td>Coupon title (ex: Coupon for XMAS)</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$shortDescription</td>
+                <td>Coupon short description</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$description</td>
+                <td>Coupon description</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$effects</td>
+                <td>Coupon effects params</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$isCumulative</td>
+                <td>If Coupon is cumulative</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$isRemovingPostage</td>
+                <td>If Coupon is removing postage</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$isAvailableOnSpecialOffers</td>
+                <td>If available on Product already
+                                                    on special offer price</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$isEnabled</td>
+                <td>False if Coupon is disabled by admin</td>
+            </tr>
+                    <tr>
+                <td>
+    int</td>
+                <td>$maxUsage</td>
+                <td>How many usage left</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Coupon\Type\DateTime">DateTime</abbr></td>
+                <td>$expirationDate</td>
+                <td>When the Code is expiring</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$freeShippingForCountries</td>
+                <td>list of countries which shipping is free. All if empty</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+                <td>$freeShippingForModules</td>
+                <td>list of modules for which shipping is free. All if empty</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$perCustomerUsageCount</td>
+                <td>true if usage count is per customer only</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPerCustomerUsageCount">
+        <div class="location">at line 190</div>
+        <code>                    
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+    <strong>setPerCustomerUsageCount</strong>(
+    <abbr title="Thelia\Coupon\Type\true">true</abbr> $perCustomerUsageCount)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Coupon\Type\true">true</abbr></td>
+                <td>$perCustomerUsageCount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPerCustomerUsageCount">
+        <div class="location">at line 200</div>
+        <code>                    
+    boolean
+    <strong>getPerCustomerUsageCount</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCode">
+        <div class="location">at line 210</div>
+        <code>                    
+    string
+    <strong>getCode</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return Coupon code (ex: XMAS)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitle">
+        <div class="location">at line 220</div>
+        <code>                    
+    string
+    <strong>getTitle</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return Coupon title (ex: Coupon for XMAS)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShortDescription">
+        <div class="location">at line 230</div>
+        <code>                    
+    string
+    <strong>getShortDescription</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return Coupon short description</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescription">
+        <div class="location">at line 240</div>
+        <code>                    
+    string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return Coupon description</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCumulative">
+        <div class="location">at line 252</div>
+        <code>                    
+    bool
+    <strong>isCumulative</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>If Coupon is cumulative or prevent any accumulation
+If is cumulative you can sum Coupon effects
+If not cancel all other Coupon and take the last given</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRemovingPostage">
+        <div class="location">at line 262</div>
+        <code>                    
+    bool
+    <strong>isRemovingPostage</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>If Coupon is removing Checkout Postage</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFreeShippingForCountries">
+        <div class="location">at line 270</div>
+        <code>                    
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+    <strong>getFreeShippingForCountries</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+            <td>list of country IDs for which shipping is free. All if empty</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFreeShippingForModules">
+        <div class="location">at line 278</div>
+        <code>                    
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr>
+    <strong>getFreeShippingForModules</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Propel\Runtime\Collection\ObjectCollection">ObjectCollection</abbr></td>
+            <td>list of module IDs for which shipping is free. All if empty</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exec">
+        <div class="location">at line 286</div>
+        <code>                    
+    float
+    <strong>exec</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    float</td>
+            <td>Amount removed from the cart total</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConditions">
+        <div class="location">at line 296</div>
+        <code>                    
+    <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a>
+    <strong>getConditions</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return condition to validate the Coupon or not</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../Thelia/Condition/ConditionCollection.html"><abbr title="Thelia\Condition\ConditionCollection">ConditionCollection</abbr></a></td>
+            <td>A set of ConditionInterface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConditions">
+        <div class="location">at line 310</div>
+        <code>                    
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr>
+    <strong>setConditions</strong>(
+    <abbr title="Thelia\Coupon\Type\Thelia\Condition\ConditionCollection">ConditionCollection</abbr> $conditions)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Replace the existing Conditions by those given in parameter
+If one Condition is badly implemented, no Condition will be added</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Coupon\Type\Thelia\Condition\ConditionCollection">ConditionCollection</abbr></td>
+                <td>$conditions</td>
+                <td>ConditionInterface to add</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Coupon\Type\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Thelia/Exception/InvalidConditionException.html"><abbr title="Thelia\Exception\InvalidConditionException">InvalidConditionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpirationDate">
+        <div class="location">at line 322</div>
+        <code>                    
+    <a target="_blank" href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
+    <strong>getExpirationDate</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return Coupon expiration date</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a target="_blank" href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAvailableOnSpecialOffers">
+        <div class="location">at line 333</div>
+        <code>                    
+    boolean
+    <strong>isAvailableOnSpecialOffers</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Check if the Coupon can be used against a
+product already with a special offer price</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEnabled">
+        <div class="location">at line 343</div>
+        <code>                    
+    boolean
+    <strong>isEnabled</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Check if Coupon has been disabled by admin</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMaxUsage">
+        <div class="location">at line 354</div>
+        <code>                    
+    int
+    <strong>getMaxUsage</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return how many time the Coupon can be used again
+Ex : -1 unlimited</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isExpired">
+        <div class="location">at line 364</div>
+        <code>                    
+    bool
+    <strong>isExpired</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Check if the Coupon is already Expired</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServiceId">
+        <div class="location">at line 381</div>
+        <code>                    
+    string
+    <strong>getServiceId</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get Coupon Manager service Id</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMatching">
+        <div class="location">at line 392</div>
+        <code>                    
+    bool
+    <strong>isMatching</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Check if the current state of the application is matching this Coupon conditions
+Thelia variables are given by the FacadeInterface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInputName">
+        <div class="location">at line 405</div>
+        <code>                    
+    string
+    <strong>getInputName</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>This is the field label than will be displayed in the form.</p>                    <p>This method should be overridden to be useful.</p>
+
+<p>For backward compatibility only.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drawBackOfficeInputs">
+        <div class="location">at line 417</div>
+        <code>                    
+    string
+    <strong>drawBackOfficeInputs</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Draw the input displayed in the BackOffice
+allowing Admin to set its Coupon effect
+Override this method to do something useful</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>HTML string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEffects">
+        <div class="location">at line 495</div>
+        <code>                    
+    array
+    <strong>getEffects</strong>(
+    array $data)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Create the effect array from the list of fields</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$data</td>
+                <td>the input form data (e.g. $form->getData())</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>a filedName => fieldValue array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">at line 509</div>
+        <code>                    
+    
+    <strong>clear</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isInUse">
+        <div class="location">at line 514</div>
+        <code>                    
+    bool
+    <strong>isInUse</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td>true if the coupon is currently in use in the current order process, false otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

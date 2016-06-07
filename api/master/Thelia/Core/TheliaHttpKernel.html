@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\TheliaHttpKernel | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_TheliaHttpKernel" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../Thelia/Core.html">Core</a></li>
+    
+                <li>TheliaHttpKernel</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>TheliaHttpKernel</h1>
+    </div>
+
+    <p>    class
+    <strong>TheliaHttpKernel</strong>        extends <abbr title="Symfony\Component\HttpKernel\HttpKernel">HttpKernel</abbr>
+</p>
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Core\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $dispatcher, 
+    <abbr title="Thelia\Core\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container, 
+    <abbr title="Thelia\Core\Symfony\Component\HttpKernel\Controller\ControllerResolverInterface">ControllerResolverInterface</abbr> $controllerResolver, 
+    <abbr title="Thelia\Core\Symfony\Component\HttpFoundation\RequestStack">RequestStack</abbr> $requestStack)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainer">getContainer</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handle">handle</a>(
+    <abbr title="Thelia\Core\Symfony\Component\HttpFoundation\Request">Request</abbr> $request, 
+    integer $type = HttpKernelInterface::MASTER_REQUEST, 
+    Boolean $catch = true)
+                                            <p>Handles a Request to convert it to a Response.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 36</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Core\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $dispatcher, 
+    <abbr title="Thelia\Core\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container, 
+    <abbr title="Thelia\Core\Symfony\Component\HttpKernel\Controller\ControllerResolverInterface">ControllerResolverInterface</abbr> $controllerResolver, 
+    <abbr title="Thelia\Core\Symfony\Component\HttpFoundation\RequestStack">RequestStack</abbr> $requestStack)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr></td>
+                <td>$dispatcher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Symfony\Component\HttpKernel\Controller\ControllerResolverInterface">ControllerResolverInterface</abbr></td>
+                <td>$controllerResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Symfony\Component\HttpFoundation\RequestStack">RequestStack</abbr></td>
+                <td>$requestStack</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainer">
+        <div class="location">at line 47</div>
+        <code>                    
+    
+    <strong>getContainer</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handle">
+        <div class="location">at line 70</div>
+        <code>                    
+    <a href="../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a>
+    <strong>handle</strong>(
+    <abbr title="Thelia\Core\Symfony\Component\HttpFoundation\Request">Request</abbr> $request, 
+    integer $type = HttpKernelInterface::MASTER_REQUEST, 
+    Boolean $catch = true)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Handles a Request to convert it to a Response.</p>                    <p>When $catch is true, the implementation must catch all exceptions
+and do its best to convert them to a Response instance.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td>A Request instance</td>
+            </tr>
+                    <tr>
+                <td>
+    integer</td>
+                <td>$type</td>
+                <td>The type of the request
+                        (one of HttpKernelInterface::MASTER<em>REQUEST or HttpKernelInterface::SUB</em>REQUEST)</td>
+            </tr>
+                    <tr>
+                <td>
+    Boolean</td>
+                <td>$catch</td>
+                <td>Whether to catch exceptions or not</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../Thelia/Core/HttpFoundation/Response.html"><abbr title="Thelia\Core\HttpFoundation\Response">Response</abbr></a></td>
+            <td>A Response instance</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>When an Exception occurs during processing</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

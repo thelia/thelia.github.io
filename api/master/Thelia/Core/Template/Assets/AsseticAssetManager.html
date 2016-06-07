@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\Template\Assets\AsseticAssetManager | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_Template_Assets_AsseticAssetManager" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../../Thelia/Core/Template.html">Template</a></li>
+                                        <li><a href="../../../../Thelia/Core/Template/Assets.html">Assets</a></li>
+    
+                <li>AsseticAssetManager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>AsseticAssetManager</h1>
+    </div>
+
+    <p>    class
+    <strong>AsseticAssetManager</strong>        implements
+        <a href="../../../../Thelia/Core/Template/Assets/AssetManagerInterface.html"><abbr title="Thelia\Core\Template\Assets\AssetManagerInterface">AssetManagerInterface</abbr></a>
+</p>
+
+            <div class="description">
+            <p>This class is a simple helper for generating assets using Assetic.</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>($debugMode)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareAssets">prepareAssets</a>(
+    string $sourceAssetsDirectory, 
+    string $webAssetsDirectoryBase, $webAssetsTemplate, 
+    string $webAssetsKey)
+                                            <p>Prepare an asset directory by checking that no changes occured in
+the source directory. If any change is detected, the whole asset directory
+is copied in the web space.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processAsset">processAsset</a>($assetSource, $assetDirectoryBase, 
+    string $webAssetsDirectoryBase, 
+    string $webAssetsTemplate, $webAssetsKey, 
+    string $outputUrl, 
+    string $assetType, 
+    array $filters, 
+    boolean $debug)
+                                            <p>Generates assets from $asset<em>path in $output</em>path, using $filters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDebugMode">isDebugMode</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerAssetFilter">registerAssetFilter</a>(
+    string $filterIdentifier, 
+    <abbr title="Assetic\Filter\FilterInterface">FilterInterface</abbr> $filter)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 37</div>
+        <code>                    
+    
+    <strong>__construct</strong>($debugMode)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$debugMode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareAssets">
+        <div class="location">at line 151</div>
+        <code>                    
+    
+    <strong>prepareAssets</strong>(
+    string $sourceAssetsDirectory, 
+    string $webAssetsDirectoryBase, $webAssetsTemplate, 
+    string $webAssetsKey)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Prepare an asset directory by checking that no changes occured in
+the source directory. If any change is detected, the whole asset directory
+is copied in the web space.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$sourceAssetsDirectory</td>
+                <td>the full path to the source asstes directory</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$webAssetsDirectoryBase</td>
+                <td>the base directory of the web based asset directory</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$webAssetsTemplate</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$webAssetsKey</td>
+                <td>the assets key : module name or 0 for base template</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if something goes wrong.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processAsset">
+        <div class="location">at line 246</div>
+        <code>                    
+    string
+    <strong>processAsset</strong>($assetSource, $assetDirectoryBase, 
+    string $webAssetsDirectoryBase, 
+    string $webAssetsTemplate, $webAssetsKey, 
+    string $outputUrl, 
+    string $assetType, 
+    array $filters, 
+    boolean $debug)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Generates assets from $asset<em>path in $output</em>path, using $filters.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$assetSource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$assetDirectoryBase</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$webAssetsDirectoryBase</td>
+                <td>the full path to the asset file (or file collection, e.g. *.less)</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$webAssetsTemplate</td>
+                <td>the full disk path to the base assets output directory in the web space</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$webAssetsKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$outputUrl</td>
+                <td>the URL to the base assets output directory in the web space</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$assetType</td>
+                <td>the asset type: css, js, ... The generated files will have this extension. Pass an empty string to use the asset source extension.</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$filters</td>
+                <td>a list of filters, as defined below (see switch($filter_name) ...)</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$debug</td>
+                <td>true / false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The URL to the generated asset file.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDebugMode">
+        <div class="location">at line 312</div>
+        <code>                    
+    bool
+    <strong>isDebugMode</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    bool</td>
+            <td>true if the AssetManager was started in debug mode</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerAssetFilter">
+        <div class="location">at line 320</div>
+        <code>                    
+    
+    <strong>registerAssetFilter</strong>(
+    string $filterIdentifier, 
+    <abbr title="Assetic\Filter\FilterInterface">FilterInterface</abbr> $filter)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$filterIdentifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Assetic\Filter\FilterInterface">FilterInterface</abbr></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

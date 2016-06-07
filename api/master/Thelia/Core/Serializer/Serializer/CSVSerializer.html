@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\Serializer\Serializer\CSVSerializer | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_Serializer_Serializer_CSVSerializer" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../../Thelia/Core/Serializer.html">Serializer</a></li>
+                                        <li><a href="../../../../Thelia/Core/Serializer/Serializer.html">Serializer</a></li>
+    
+                <li>CSVSerializer</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>CSVSerializer</h1>
+    </div>
+
+    <p>    class
+    <strong>CSVSerializer</strong>        extends <a href="../../../../Thelia/Core/Serializer/AbstractSerializer.html"><abbr title="Thelia\Core\Serializer\AbstractSerializer">AbstractSerializer</abbr></a>
+</p>
+
+            <div class="description">
+            <p>Class CSVSerializer</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareFile">prepareFile</a>(
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr> $fileObject)
+                                            <p>Prepare file to receive serialized data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_separator">separator</a>()
+                                            <p>Get string that separate serialized data</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../Thelia/Core/Serializer/AbstractSerializer.html#method_separator"><abbr title="Thelia\Core\Serializer\AbstractSerializer">AbstractSerializer</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_finalizeFile">finalizeFile</a>(
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr> $fileObject)
+                                            <p>Finalize file with serialized data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getId">getId</a>()
+                                            <p>Get serializer identifier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+                                            <p>Get serializer name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtension">getExtension</a>()
+                                            <p>Get serializer extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMimeType">getMimeType</a>()
+                                            <p>Get serializer mime type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\Serializer\Serializer\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDelimiter">setDelimiter</a>(
+    string $delimiter)
+                                            <p>Set delimiter char</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\Serializer\Serializer\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEnclosure">setEnclosure</a>(
+    string $enclosure)
+                                            <p>Set enclosure char</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>(
+    mixed $data)
+                                            <p>Serialize data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unserialize">unserialize</a>(
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr> $fileObject)
+                                            <p>Unserialize data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_prepareFile">
+        <div class="location">at line 86</div>
+        <code>                    
+    
+    <strong>prepareFile</strong>(
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr> $fileObject)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Prepare file to receive serialized data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr></td>
+                <td>$fileObject</td>
+                <td>A file object</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_separator">
+        <div class="location">in 
+    <a href="../../../../Thelia/Core/Serializer/AbstractSerializer.html#method_separator"><abbr title="Thelia\Core\Serializer\AbstractSerializer">AbstractSerializer</abbr></a> at line 26</div>
+        <code>                    
+    null|string
+    <strong>separator</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get string that separate serialized data</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|string</td>
+            <td>Wrap separator string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_finalizeFile">
+        <div class="location">at line 112</div>
+        <code>                    
+    
+    <strong>finalizeFile</strong>(
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr> $fileObject)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Finalize file with serialized data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr></td>
+                <td>$fileObject</td>
+                <td>A file object</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">at line 38</div>
+        <code>                    
+    string
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get serializer identifier</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The serializer identifier</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">at line 43</div>
+        <code>                    
+    string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get serializer name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The serializer name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtension">
+        <div class="location">at line 48</div>
+        <code>                    
+    string
+    <strong>getExtension</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get serializer extension</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The serializer extension</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMimeType">
+        <div class="location">at line 53</div>
+        <code>                    
+    string
+    <strong>getMimeType</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get serializer mime type</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The serializer mime type</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDelimiter">
+        <div class="location">at line 65</div>
+        <code>                    
+    <abbr title="Thelia\Core\Serializer\Serializer\$this">$this</abbr>
+    <strong>setDelimiter</strong>(
+    string $delimiter)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set delimiter char</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$delimiter</td>
+                <td>Delimiter char</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\Serializer\Serializer\$this">$this</abbr></td>
+            <td>Return $this, allow chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEnclosure">
+        <div class="location">at line 79</div>
+        <code>                    
+    <abbr title="Thelia\Core\Serializer\Serializer\$this">$this</abbr>
+    <strong>setEnclosure</strong>(
+    string $enclosure)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set enclosure char</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$enclosure</td>
+                <td>Enclosure char</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\Serializer\Serializer\$this">$this</abbr></td>
+            <td>Return $this, allow chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">at line 91</div>
+        <code>                    
+    string
+    <strong>serialize</strong>(
+    mixed $data)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Serialize data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$data</td>
+                <td>Data to serialize</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>Serialized data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">at line 136</div>
+        <code>                    
+    array
+    <strong>unserialize</strong>(
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr> $fileObject)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Unserialize data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Serializer\SplFileObject">SplFileObject</abbr></td>
+                <td>$fileObject</td>
+                <td>A file object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>Unserialized data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
