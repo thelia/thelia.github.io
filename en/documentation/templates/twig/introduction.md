@@ -5,6 +5,7 @@ sidebar: templates
 lang: en
 subnav: templates_twig_introduction
 ---
+
 # About Thelia Twig Templates #
 
 <div class="alert alert-info">

@@ -3,8 +3,9 @@ layout: home
 title: Thelia Smarty Templates
 sidebar: templates
 lang: en
-subnav: templates_twig_introduction
+subnav: templates_smarty_introduction
 ---
+
 # About Thelia Smarty Templates #
 
 Thelia Smarty templates uses the [Smarty](http://www.smarty.net/) template engine, enriched by many Thelia additions, such as loops, data access functions, internationalization function, etc. 
