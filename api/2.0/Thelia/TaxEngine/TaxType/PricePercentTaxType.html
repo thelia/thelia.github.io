@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\TaxEngine\TaxType\PricePercentTaxType | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_TaxEngine_TaxType_PricePercentTaxType" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../Thelia/TaxEngine.html">TaxEngine</a></li>
+                                        <li><a href="../../../Thelia/TaxEngine/TaxType.html">TaxType</a></li>
+    
+                <li>PricePercentTaxType</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>PricePercentTaxType</h1>
+    </div>
+
+    <p>    class
+    <strong>PricePercentTaxType</strong>        extends <a href="../../../Thelia/TaxEngine/BaseTaxType.html"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a>
+</p>
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\TaxEngine\number">number</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pricePercentRetriever">pricePercentRetriever</a>()
+                                            <p>For a price percent tax type, return the percentage (e.g. 20 for 20%) of the product price
+to use in tax calculation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\TaxEngine\number">number</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fixAmountRetriever">fixAmountRetriever</a>(
+    <abbr title="Thelia\TaxEngine\Thelia\Model\Product">Product</abbr> $product)
+                                            <p>For constant amount tax type, return the absolute amount to use in tax calculation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_fixAmountRetriever"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequirementsDefinition">getRequirementsDefinition</a>()
+                                            <p>Returns the requirements definition of this tax type. This is an array of
+TaxTypeRequirementDefinition, which defines the name and the type of
+the requirements. Example :</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\TaxEngine\the">the</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTitle">getTitle</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_calculate">calculate</a>(
+    <abbr title="Thelia\TaxEngine\Thelia\Model\Product">Product</abbr> $product, $untaxedPrice)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_calculate"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequirements">getRequirements</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_getRequirements"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadRequirements">loadRequirements</a>($requirementsValues)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_loadRequirements"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequirement">setRequirement</a>($key, $value)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_setRequirement"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequirement">getRequirement</a>($key)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_getRequirement"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPercentage">setPercentage</a>($percent)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_pricePercentRetriever">
+        <div class="location">at line 34</div>
+        <code>                    
+    <abbr title="Thelia\TaxEngine\number">number</abbr>
+    <strong>pricePercentRetriever</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>For a price percent tax type, return the percentage (e.g. 20 for 20%) of the product price
+to use in tax calculation.</p>                    <p>For other tax types, this method shoud return 0.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\TaxEngine\number">number</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixAmountRetriever">
+        <div class="location">in 
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_fixAmountRetriever"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a> at line 52</div>
+        <code>                    
+    <abbr title="Thelia\TaxEngine\number">number</abbr>
+    <strong>fixAmountRetriever</strong>(
+    <abbr title="Thelia\TaxEngine\Thelia\Model\Product">Product</abbr> $product)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>For constant amount tax type, return the absolute amount to use in tax calculation.</p>                    <p>For other tax types, this method shoud return 0.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\TaxEngine\Thelia\Model\Product">Product</abbr></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\TaxEngine\number">number</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequirementsDefinition">
+        <div class="location">at line 39</div>
+        <code>                    
+    array
+    <strong>getRequirementsDefinition</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Returns the requirements definition of this tax type. This is an array of
+TaxTypeRequirementDefinition, which defines the name and the type of
+the requirements. Example :</p>                    <p>array(
+   'percent' => new FloatType()
+);</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>of TaxTypeRequirementDefinition</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitle">
+        <div class="location">at line 46</div>
+        <code>                    
+    <abbr title="Thelia\TaxEngine\the">the</abbr>
+    <strong>getTitle</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\TaxEngine\the">the</abbr></td>
+            <td>name of this tax type.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_calculate">
+        <div class="location">in 
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_calculate"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a> at line 78</div>
+        <code>                    
+    
+    <strong>calculate</strong>(
+    <abbr title="Thelia\TaxEngine\Thelia\Model\Product">Product</abbr> $product, $untaxedPrice)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\TaxEngine\Thelia\Model\Product">Product</abbr></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$untaxedPrice</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequirements">
+        <div class="location">in 
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_getRequirements"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a> at line 87</div>
+        <code>                    
+    array
+    <strong>getRequirements</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>Return the requirements array.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Thelia/Exception/TaxEngineException.html"><abbr title="Thelia\Exception\TaxEngineException">TaxEngineException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadRequirements">
+        <div class="location">in 
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_loadRequirements"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a> at line 92</div>
+        <code>                    
+    
+    <strong>loadRequirements</strong>($requirementsValues)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$requirementsValues</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequirement">
+        <div class="location">in 
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_setRequirement"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a> at line 116</div>
+        <code>                    
+    
+    <strong>setRequirement</strong>($key, $value)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequirement">
+        <div class="location">in 
+    <a href="../../../Thelia/TaxEngine/BaseTaxType.html#method_getRequirement"><abbr title="Thelia\TaxEngine\BaseTaxType">BaseTaxType</abbr></a> at line 123</div>
+        <code>                    
+    
+    <strong>getRequirement</strong>($key)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPercentage">
+        <div class="location">at line 27</div>
+        <code>                    
+    
+    <strong>setPercentage</strong>($percent)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$percent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

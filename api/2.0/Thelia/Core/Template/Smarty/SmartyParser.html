@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\Template\Smarty\SmartyParser | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_Template_Smarty_SmartyParser" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../../Thelia/Core/Template.html">Template</a></li>
+                                        <li><a href="../../../../Thelia/Core/Template/Smarty.html">Smarty</a></li>
+    
+                <li>SmartyParser</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>SmartyParser</h1>
+    </div>
+
+    <p>    class
+    <strong>SmartyParser</strong>        extends <abbr title="Smarty">Smarty</abbr>        implements
+        <a href="../../../../Thelia/Core/Template/ParserInterface.html"><abbr title="Thelia\Core\Template\ParserInterface">ParserInterface</abbr></a>
+</p>
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_plugins">
+                                                                                
+    
+                </td>
+                <td>$plugins</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Core\Template\Smarty\Symfony\Component\HttpFoundation\Request">Request</abbr> $request, 
+    <abbr title="Thelia\Core\Template\Smarty\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $dispatcher, 
+    <abbr title="Thelia\Core\Template\Smarty\Thelia\Core\Template\ParserContext">ParserContext</abbr> $parserContext, 
+    string $env = &#039;prod&#039;, 
+    bool $debug = false)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_trimWhitespaces">trimWhitespaces</a>(
+    string $source, 
+    <abbr title="Thelia\Core\Template\Smarty\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                                            <p>Trim whitespaces from the HTML output, preserving required ones in pre, textarea, javascript.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTemplateDirectory">addTemplateDirectory</a>(
+    int $templateType, 
+    string $templateName, 
+    string $templateDirectory, 
+    string $key, 
+    bool $unshift = false)
+                                            <p>Add a template directory to the current template list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\Template\array:">array:</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTemplateDirectories">getTemplateDirectories</a>(
+    int $templateType)
+                                            <p>Return the registeted template directories for a givent template type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_theliaEscape">theliaEscape</a>($content, $smarty)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTemplateDefinition">setTemplateDefinition</a>(
+    <abbr title="Thelia\Core\Template\Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr> $templateDefinition)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTemplateDefinition">getTemplateDefinition</a>(
+    bool $webAssetTemplate = false)
+                                            <p>Get template definition</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTemplate">getTemplate</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>($realTemplateName, 
+    array $parameters = array())
+                                            <p>Return a rendered template file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderString">renderString</a>(
+    string $templateText, 
+    array $parameters = array())
+                                            <p>Return a rendered template text</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatus">getStatus</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStatus">setStatus</a>($status)
+                                            <p>status HTTP of the response</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPlugins">addPlugins</a>(
+    <abbr title="Thelia\Core\Template\Smarty\Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr> $plugin)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerPlugins">registerPlugins</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 62</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Core\Template\Smarty\Symfony\Component\HttpFoundation\Request">Request</abbr> $request, 
+    <abbr title="Thelia\Core\Template\Smarty\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $dispatcher, 
+    <abbr title="Thelia\Core\Template\Smarty\Thelia\Core\Template\ParserContext">ParserContext</abbr> $parserContext, 
+    string $env = &#039;prod&#039;, 
+    bool $debug = false)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr></td>
+                <td>$dispatcher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Thelia\Core\Template\ParserContext">ParserContext</abbr></td>
+                <td>$parserContext</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$env</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$debug</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_trimWhitespaces">
+        <div class="location">at line 118</div>
+        <code>                    
+    string
+    <strong>trimWhitespaces</strong>(
+    string $source, 
+    <abbr title="Thelia\Core\Template\Smarty\Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Trim whitespaces from the HTML output, preserving required ones in pre, textarea, javascript.</p>                    <p>This methois uses 3 levels of trimming :</p>
+
+<ul>
+<li>0 : whitespaces are not trimmed, code remains as is.</li>
+<li>1 : only blank lines are trimmed, code remains indented and human-readable (the default)</li>
+<li>2 or more : all unnecessary whitespace are removed. Code is very hard to read.</li>
+</ul>
+
+<p>The trim level is defined by the configuration variable html<em>output</em>trim_level</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$source</td>
+                <td>the HTML source</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTemplateDirectory">
+        <div class="location">at line 218</div>
+        <code>                    
+    
+    <strong>addTemplateDirectory</strong>(
+    int $templateType, 
+    string $templateName, 
+    string $templateDirectory, 
+    string $key, 
+    bool $unshift = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Add a template directory to the current template list</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    int</td>
+                <td>$templateType</td>
+                <td>the template type (</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$templateName</td>
+                <td>the template name</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$templateDirectory</td>
+                <td>path to the template dirtectory</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$key</td>
+                <td>???</td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$unshift</td>
+                <td>??? Etienne ?</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateDirectories">
+        <div class="location">at line 242</div>
+        <code>                    
+    <abbr title="Thelia\Core\Template\array:">array:</abbr>
+    <strong>getTemplateDirectories</strong>(
+    int $templateType)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return the registeted template directories for a givent template type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    int</td>
+                <td>$templateType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\Template\array:">array:</abbr></td>
+            <td>an array of defined templates directories for the given template type</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Imagine\Exception\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_theliaEscape">
+        <div class="location">at line 251</div>
+        <code>        static            
+    
+    <strong>theliaEscape</strong>($content, $smarty)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$smarty</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTemplateDefinition">
+        <div class="location">at line 263</div>
+        <code>                    
+    
+    <strong>setTemplateDefinition</strong>(
+    <abbr title="Thelia\Core\Template\Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr> $templateDefinition)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></td>
+                <td>$templateDefinition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateDefinition">
+        <div class="location">at line 300</div>
+        <code>                    
+    <a href="../../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a>
+    <strong>getTemplateDefinition</strong>(
+    bool $webAssetTemplate = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get template definition</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    bool</td>
+                <td>$webAssetTemplate</td>
+                <td>Allow to load asset from another template
+                              If the name of the template if provided</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../../../Thelia/Core/Template/TemplateDefinition.html"><abbr title="Thelia\Core\Template\TemplateDefinition">TemplateDefinition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplate">
+        <div class="location">at line 314</div>
+        <code>                    
+    
+    <strong>getTemplate</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at line 347</div>
+        <code>                    
+    
+    <strong>render</strong>($realTemplateName, 
+    array $parameters = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return a rendered template file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$realTemplateName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Thelia/Core/Template/Exception/ResourceNotFoundException.html"><abbr title="Thelia\Core\Template\Exception\ResourceNotFoundException">ResourceNotFoundException</abbr></a></td>
+                <td>if the template cannot be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderString">
+        <div class="location">at line 381</div>
+        <code>                    
+    string
+    <strong>renderString</strong>(
+    string $templateText, 
+    array $parameters = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Return a rendered template text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$templateText</td>
+                <td>the template text</td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$parameters</td>
+                <td>an associative array of names / value pairs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the rendered template text</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">at line 390</div>
+        <code>                    
+    
+    <strong>getStatus</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStatus">
+        <div class="location">at line 401</div>
+        <code>                    
+    
+    <strong>setStatus</strong>($status)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>status HTTP of the response</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPlugins">
+        <div class="location">at line 406</div>
+        <code>                    
+    
+    <strong>addPlugins</strong>(
+    <abbr title="Thelia\Core\Template\Smarty\Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr> $plugin)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></td>
+                <td>$plugin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerPlugins">
+        <div class="location">at line 411</div>
+        <code>                    
+    
+    <strong>registerPlugins</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

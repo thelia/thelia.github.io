@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Tools\AddressFormat | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Tools_AddressFormat" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../Thelia/Tools.html">Tools</a></li>
+    
+                <li>AddressFormat</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>AddressFormat</h1>
+    </div>
+
+    <p>    class
+    <strong>AddressFormat</strong>
+</p>
+
+            <div class="description">
+            <p>Class AddressFormat</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    <abbr title="Thelia\Tools\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInstance">getInstance</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_format">format</a>(
+    <abbr title="Thelia\Tools\CommerceGuys\Addressing\Model\AddressInterface">AddressInterface</abbr> $address, 
+    null $locale = null, 
+    bool $html = true, 
+    string $htmlTag = &#039;p&#039;, 
+    array $htmlAttributes = array())
+                                            <p>Format an address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatTheliaAddress">formatTheliaAddress</a>(
+    <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>|<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a> $address, 
+    null $locale = null, 
+    bool $html = true, 
+    string $htmlTag = &#039;p&#039;, 
+    array $htmlAttributes = array())
+                                            <p>Format a Thelia address (Address or OrderAddress)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postalLabelFormat">postalLabelFormat</a>(
+    <abbr title="Thelia\Tools\CommerceGuys\Addressing\Model\AddressInterface">AddressInterface</abbr> $address, 
+    null $locale = null, 
+    null $originCountry = null, 
+    array $options = array())
+                                            <p>Format an address to a postal label</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postalLabelFormatTheliaAddress">postalLabelFormatTheliaAddress</a>(
+    <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>|<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a> $address, 
+    null $locale = null, 
+    null $originCountry = null, 
+    array $options = array())
+                                            <p>Format a Thelia address (Address or OrderAddress) to a postal label</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getInstance">
+        <div class="location">at line 44</div>
+        <code>        static            
+    <abbr title="Thelia\Tools\$this">$this</abbr>
+    <strong>getInstance</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Tools\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_format">
+        <div class="location">at line 64</div>
+        <code>                    
+    string
+    <strong>format</strong>(
+    <abbr title="Thelia\Tools\CommerceGuys\Addressing\Model\AddressInterface">AddressInterface</abbr> $address, 
+    null $locale = null, 
+    bool $html = true, 
+    string $htmlTag = &#039;p&#039;, 
+    array $htmlAttributes = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Format an address</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Tools\CommerceGuys\Addressing\Model\AddressInterface">AddressInterface</abbr></td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$html</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$htmlTag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$htmlAttributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatTheliaAddress">
+        <div class="location">at line 104</div>
+        <code>                    
+    string
+    <strong>formatTheliaAddress</strong>(
+    <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>|<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a> $address, 
+    null $locale = null, 
+    bool $html = true, 
+    string $htmlTag = &#039;p&#039;, 
+    array $htmlAttributes = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Format a Thelia address (Address or OrderAddress)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>|<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a></td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    bool</td>
+                <td>$html</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$htmlTag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$htmlAttributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postalLabelFormat">
+        <div class="location">at line 119</div>
+        <code>                    
+    string
+    <strong>postalLabelFormat</strong>(
+    <abbr title="Thelia\Tools\CommerceGuys\Addressing\Model\AddressInterface">AddressInterface</abbr> $address, 
+    null $locale = null, 
+    null $originCountry = null, 
+    array $options = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Format an address to a postal label</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Tools\CommerceGuys\Addressing\Model\AddressInterface">AddressInterface</abbr></td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$originCountry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postalLabelFormatTheliaAddress">
+        <div class="location">at line 159</div>
+        <code>                    
+    string
+    <strong>postalLabelFormatTheliaAddress</strong>(
+    <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>|<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a> $address, 
+    null $locale = null, 
+    null $originCountry = null, 
+    array $options = array())</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Format a Thelia address (Address or OrderAddress) to a postal label</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a>|<a href="../../Thelia/Model/OrderAddress.html"><abbr title="Thelia\Model\OrderAddress">OrderAddress</abbr></a></td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    null</td>
+                <td>$originCountry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

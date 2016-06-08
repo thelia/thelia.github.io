@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Handler\ImportHandler | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Handler_ImportHandler" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../Thelia/Handler.html">Handler</a></li>
+    
+                <li>ImportHandler</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>ImportHandler</h1>
+    </div>
+
+    <p>    class
+    <strong>ImportHandler</strong>
+</p>
+
+            <div class="description">
+            <p>Class ImportHandler</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Handler\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $eventDispatcher, 
+    <abbr title="Thelia\Handler\Thelia\Core\Serializer\SerializerManager">SerializerManager</abbr> $serializerManager, 
+    <abbr title="Thelia\Handler\Thelia\Core\Archiver\ArchiverManager">ArchiverManager</abbr> $archiverManager, 
+    <abbr title="Thelia\Handler\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)
+                                            <p>Class constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|<a href="../../Thelia/Model/Import.html"><abbr title="Thelia\Model\Import">Import</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImport">getImport</a>(
+    integer $importId, 
+    boolean $dispatchException = false)
+                                            <p>Get import model based on given identifier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|<a href="../../Thelia/Model/Import.html"><abbr title="Thelia\Model\Import">Import</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImportByRef">getImportByRef</a>(
+    string $importRef, 
+    boolean $dispatchException = false)
+                                            <p>Get import model based on given reference</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|<a href="../../Thelia/Model/ImportCategory.html"><abbr title="Thelia\Model\ImportCategory">ImportCategory</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCategory">getCategory</a>(
+    integer $importCategoryId, 
+    boolean $dispatchException = false)
+                                            <p>Get import category model based on given identifier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <a href="../../Thelia/Core/Event/ImportEvent.html"><abbr title="Thelia\Core\Event\ImportEvent">ImportEvent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_import">import</a>(
+    <abbr title="Thelia\Handler\Thelia\Model\Import">Import</abbr> $import, 
+    <abbr title="Thelia\Handler\Symfony\Component\HttpFoundation\File\File">File</abbr> $file, 
+    <abbr title="Thelia\Handler\Thelia\Model\Lang">Lang</abbr> $language = null)
+                                            <p>Import</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|<a href="../../Thelia/Core/Archiver/AbstractArchiver.html"><abbr title="Thelia\Core\Archiver\AbstractArchiver">AbstractArchiver</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchArchiverByExtension">matchArchiverByExtension</a>(
+    string $fileName)
+                                            <p>Match archiver relative to file name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    null|<a href="../../Thelia/Core/Serializer/AbstractSerializer.html"><abbr title="Thelia\Core\Serializer\AbstractSerializer">AbstractSerializer</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchSerializerByExtension">matchSerializerByExtension</a>(
+    string $fileName)
+                                            <p>Match serializer relative to file name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Symfony\Component\HttpFoundation\File\File">File</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extractArchive">extractArchive</a>(
+    <abbr title="Thelia\Handler\Symfony\Component\HttpFoundation\File\File">File</abbr> $file, 
+    <abbr title="Thelia\Handler\Thelia\Core\Archiver\ArchiverInterface">ArchiverInterface</abbr> $archiver)
+                                            <p>Extract archive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 67</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Handler\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $eventDispatcher, 
+    <abbr title="Thelia\Handler\Thelia\Core\Serializer\SerializerManager">SerializerManager</abbr> $serializerManager, 
+    <abbr title="Thelia\Handler\Thelia\Core\Archiver\ArchiverManager">ArchiverManager</abbr> $archiverManager, 
+    <abbr title="Thelia\Handler\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Class constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr></td>
+                <td>$eventDispatcher</td>
+                <td>An event dispatcher interface</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Thelia\Core\Serializer\SerializerManager">SerializerManager</abbr></td>
+                <td>$serializerManager</td>
+                <td>The serializer manager service</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Thelia\Core\Archiver\ArchiverManager">ArchiverManager</abbr></td>
+                <td>$archiverManager</td>
+                <td>The archiver manager service</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImport">
+        <div class="location">at line 89</div>
+        <code>                    
+    null|<a href="../../Thelia/Model/Import.html"><abbr title="Thelia\Model\Import">Import</abbr></a>
+    <strong>getImport</strong>(
+    integer $importId, 
+    boolean $dispatchException = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get import model based on given identifier</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    integer</td>
+                <td>$importId</td>
+                <td>An import identifier</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$dispatchException</td>
+                <td>Dispatch exception if model doesn't exist</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|<a href="../../Thelia/Model/Import.html"><abbr title="Thelia\Model\Import">Import</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImportByRef">
+        <div class="location">at line 117</div>
+        <code>                    
+    null|<a href="../../Thelia/Model/Import.html"><abbr title="Thelia\Model\Import">Import</abbr></a>
+    <strong>getImportByRef</strong>(
+    string $importRef, 
+    boolean $dispatchException = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get import model based on given reference</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$importRef</td>
+                <td>An import reference</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$dispatchException</td>
+                <td>Dispatch exception if model doesn't exist</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|<a href="../../Thelia/Model/Import.html"><abbr title="Thelia\Model\Import">Import</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCategory">
+        <div class="location">at line 145</div>
+        <code>                    
+    null|<a href="../../Thelia/Model/ImportCategory.html"><abbr title="Thelia\Model\ImportCategory">ImportCategory</abbr></a>
+    <strong>getCategory</strong>(
+    integer $importCategoryId, 
+    boolean $dispatchException = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get import category model based on given identifier</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    integer</td>
+                <td>$importCategoryId</td>
+                <td>An import category identifier</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$dispatchException</td>
+                <td>Dispatch exception if model doesn't exist</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|<a href="../../Thelia/Model/ImportCategory.html"><abbr title="Thelia\Model\ImportCategory">ImportCategory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_import">
+        <div class="location">at line 172</div>
+        <code>                    
+    <a href="../../Thelia/Core/Event/ImportEvent.html"><abbr title="Thelia\Core\Event\ImportEvent">ImportEvent</abbr></a>
+    <strong>import</strong>(
+    <abbr title="Thelia\Handler\Thelia\Model\Import">Import</abbr> $import, 
+    <abbr title="Thelia\Handler\Symfony\Component\HttpFoundation\File\File">File</abbr> $file, 
+    <abbr title="Thelia\Handler\Thelia\Model\Lang">Lang</abbr> $language = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Import</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Thelia\Model\Import">Import</abbr></td>
+                <td>$import</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Symfony\Component\HttpFoundation\File\File">File</abbr></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Thelia\Model\Lang">Lang</abbr></td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <a href="../../Thelia/Core/Event/ImportEvent.html"><abbr title="Thelia\Core\Event\ImportEvent">ImportEvent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchArchiverByExtension">
+        <div class="location">at line 226</div>
+        <code>                    
+    null|<a href="../../Thelia/Core/Archiver/AbstractArchiver.html"><abbr title="Thelia\Core\Archiver\AbstractArchiver">AbstractArchiver</abbr></a>
+    <strong>matchArchiverByExtension</strong>(
+    string $fileName)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Match archiver relative to file name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$fileName</td>
+                <td>File name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|<a href="../../Thelia/Core/Archiver/AbstractArchiver.html"><abbr title="Thelia\Core\Archiver\AbstractArchiver">AbstractArchiver</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchSerializerByExtension">
+        <div class="location">at line 245</div>
+        <code>                    
+    null|<a href="../../Thelia/Core/Serializer/AbstractSerializer.html"><abbr title="Thelia\Core\Serializer\AbstractSerializer">AbstractSerializer</abbr></a>
+    <strong>matchSerializerByExtension</strong>(
+    string $fileName)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Match serializer relative to file name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$fileName</td>
+                <td>File name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    null|<a href="../../Thelia/Core/Serializer/AbstractSerializer.html"><abbr title="Thelia\Core\Serializer\AbstractSerializer">AbstractSerializer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractArchive">
+        <div class="location">at line 265</div>
+        <code>                    
+    <abbr title="Symfony\Component\HttpFoundation\File\File">File</abbr>
+    <strong>extractArchive</strong>(
+    <abbr title="Thelia\Handler\Symfony\Component\HttpFoundation\File\File">File</abbr> $file, 
+    <abbr title="Thelia\Handler\Thelia\Core\Archiver\ArchiverInterface">ArchiverInterface</abbr> $archiver)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Extract archive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Symfony\Component\HttpFoundation\File\File">File</abbr></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Thelia\Handler\Thelia\Core\Archiver\ArchiverInterface">ArchiverInterface</abbr></td>
+                <td>$archiver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Symfony\Component\HttpFoundation\File\File">File</abbr></td>
+            <td>First file in unarchiver</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

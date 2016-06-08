@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\Template\Smarty\Plugins\TheliaLoop | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_Template_Smarty_Plugins_TheliaLoop" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../../../Thelia/Core/Template.html">Template</a></li>
+                                        <li><a href="../../../../../Thelia/Core/Template/Smarty.html">Smarty</a></li>
+                                        <li><a href="../../../../../Thelia/Core/Template/Smarty/Plugins.html">Plugins</a></li>
+    
+                <li>TheliaLoop</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>TheliaLoop</h1>
+    </div>
+
+    <p>    class
+    <strong>TheliaLoop</strong>        extends <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a>
+</p>
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNormalizedParam">getNormalizedParam</a>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)
+                                            <p>Get a function or block parameter value, and normalize it, trimming balnks and
+making it lowercase</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getNormalizedParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParam">getParam</a>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)
+                                            <p>Get a function or block parameter value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Thelia\Core\Template\Smarty\an">an</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPluginDescriptors">getPluginDescriptors</a>()
+                                            <p>Defines the various smarty plugins hendled by this class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+    <abbr title="Propel\Runtime\Util\PropelModelPager">PropelModelPager</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPagination">getPagination</a>(
+    string $loopName)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_theliaCount">theliaCount</a>(
+    array $params, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)
+                                            <p>Process the count function: executes a loop and return the number of items found</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    void|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_theliaLoop">theliaLoop</a>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)
+                                            <p>Process {loop name="loop name" type="loop type" .</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_theliaElseloop">theliaElseloop</a>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)
+                                            <p>Process {elseloop rel="loopname"} .</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_theliaIfLoop">theliaIfLoop</a>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)
+                                            <p>Process {ifloop rel="loopname"} .</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_theliaPageLoop">theliaPageLoop</a>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)
+                                            <p>Process {pageloop rel="loopname"} .</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLoopList">setLoopList</a>(
+    array $loopDefinition)
+                                            <p>Injects an associative array containing information for loop execution</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getNormalizedParam">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getNormalizedParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a> at line 56</div>
+        <code>                    
+    mixed
+    <strong>getNormalizedParam</strong>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a function or block parameter value, and normalize it, trimming balnks and
+making it lowercase</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>the parameters array</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$name</td>
+                <td>as single parameter name, or an array of names. In this case, the first defined parameter is returned. Use this for aliases (context, ctx, c)</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$default</td>
+                <td>the defaut value if parameter is missing (default to null)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>the parameter value, or the default value if it is not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParam">
+        <div class="location">in 
+    <a href="../../../../../Thelia/Core/Template/Smarty/AbstractSmartyPlugin.html#method_getParam"><abbr title="Thelia\Core\Template\Smarty\AbstractSmartyPlugin">AbstractSmartyPlugin</abbr></a> at line 72</div>
+        <code>                    
+    mixed
+    <strong>getParam</strong>(
+    array $params, 
+    mixed $name, 
+    mixed $default = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a function or block parameter value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>the parameters array</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$name</td>
+                <td>as single parameter name, or an array of names. In this case, the first defined parameter is returned. Use this for aliases (context, ctx, c)</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$default</td>
+                <td>the defaut value if parameter is missing (default to null)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    mixed</td>
+            <td>the parameter value, or the default value if it is not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluginDescriptors">
+        <div class="location">at line 436</div>
+        <code>                    
+    <abbr title="Thelia\Core\Template\Smarty\an">an</abbr>
+    <strong>getPluginDescriptors</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Defines the various smarty plugins hendled by this class</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Thelia\Core\Template\Smarty\an">an</abbr></td>
+            <td>array of SmartyPluginDescriptor</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 51</div>
+        <code>                    
+    
+    <strong>__construct</strong>(
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Template\Smarty\Plugins\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPagination">
+        <div class="location">at line 66</div>
+        <code>        static            
+    <abbr title="Propel\Runtime\Util\PropelModelPager">PropelModelPager</abbr>
+    <strong>getPagination</strong>(
+    string $loopName)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$loopName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Propel\Runtime\Util\PropelModelPager">PropelModelPager</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if no pagination was found for loop</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_theliaCount">
+        <div class="location">at line 87</div>
+        <code>                    
+    int
+    <strong>theliaCount</strong>(
+    array $params, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Process the count function: executes a loop and return the number of items found</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>parameters array</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    int</td>
+            <td>the item count</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if a parameter is missing</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_theliaLoop">
+        <div class="location">at line 114</div>
+        <code>                    
+    void|string
+    <strong>theliaLoop</strong>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Process {loop name="loop name" type="loop type" .</p>                    <p>.. } ... {/loop} block</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$repeat</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    void|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_theliaElseloop">
+        <div class="location">at line 216</div>
+        <code>                    
+    string
+    <strong>theliaElseloop</strong>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Process {elseloop rel="loopname"} .</p>                    <p>.. {/elseloop} block</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>loop parameters</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$content</td>
+                <td>loop text content</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td>the Smarty object</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$repeat</td>
+                <td>repeat indicator (see Smarty doc.)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the loop output</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_theliaIfLoop">
+        <div class="location">at line 239</div>
+        <code>                    
+    string
+    <strong>theliaIfLoop</strong>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Process {ifloop rel="loopname"} .</p>                    <p>.. {/ifloop} block</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>loop parameters</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$content</td>
+                <td>loop text content</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td>the Smarty object</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$repeat</td>
+                <td>repeat indicator (see Smarty doc.)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the loop output</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_theliaPageLoop">
+        <div class="location">at line 259</div>
+        <code>                    
+    string
+    <strong>theliaPageLoop</strong>(
+    array $params, 
+    string $content, 
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr> $template, 
+    boolean $repeat)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Process {pageloop rel="loopname"} .</p>                    <p>.. {/pageloop} block</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$params</td>
+                <td>loop parameters</td>
+            </tr>
+                    <tr>
+                <td>
+    string</td>
+                <td>$content</td>
+                <td>loop text content</td>
+            </tr>
+                    <tr>
+                <td>
+    <abbr title="Smarty_Internal_Template">Smarty_Internal_Template</abbr></td>
+                <td>$template</td>
+                <td>the Smarty object</td>
+            </tr>
+                    <tr>
+                <td>
+    boolean</td>
+                <td>$repeat</td>
+                <td>repeat indicator (see Smarty doc.)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>the loop output</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLoopList">
+        <div class="location">at line 415</div>
+        <code>                    
+    
+    <strong>setLoopList</strong>(
+    array $loopDefinition)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Injects an associative array containing information for loop execution</p>                    <p>key is loop name
+value is the class implementing/extending base loop classes</p>
+
+<p>ex :</p>
+
+<p>$loop = array(
+ "product" => "Thelia\Loop\Product",
+ "category" => "Thelia\Loop\Category",
+ "myLoop" => "My\Own\Loop"
+);</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    array</td>
+                <td>$loopDefinition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if loop name already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Thelia\Core\Routing\RewritingRouter | Thelia 2 API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Thelia_Core_Routing_RewritingRouter" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Thelia 2 API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Thelia.html">Thelia</a></li>
+                                        <li><a href="../../../Thelia/Core.html">Core</a></li>
+                                        <li><a href="../../../Thelia/Core/Routing.html">Routing</a></li>
+    
+                <li>RewritingRouter</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>RewritingRouter</h1>
+    </div>
+
+    <p>    class
+    <strong>RewritingRouter</strong>        implements
+        <abbr title="Symfony\Component\Routing\RouterInterface">RouterInterface</abbr>, <abbr title="Symfony\Component\Routing\Matcher\RequestMatcherInterface">RequestMatcherInterface</abbr>
+</p>
+
+            <div class="description">
+            <p>Class RewritingRouter</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setContext">setContext</a>(
+    <abbr title="Thelia\Core\Routing\Symfony\Component\Routing\RequestContext">RequestContext</abbr> $context)
+                                            <p>Sets the request context.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Symfony\Component\Routing\RequestContext">RequestContext</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContext">getContext</a>()
+                                            <p>Gets the request context.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOption">setOption</a>($key, $value)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="Symfony\Component\Routing\RouteCollection">RouteCollection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRouteCollection">getRouteCollection</a>()
+                                            <p>Gets the RouteCollection instance associated with this Router.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generate">generate</a>(
+    string $name, 
+    mixed $parameters = array(), 
+    Boolean|string $referenceType = self::ABSOLUTE_PATH)
+                                            <p>Generates a URL or path for a specific route based on the given parameters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_match">match</a>(
+    string $pathinfo)
+                                            <p>Tries to match a URL path with a set of routes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchRequest">matchRequest</a>(
+    <abbr title="Thelia\Core\Routing\Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+                                            <p>Tries to match a request with a set of routes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setContext">
+        <div class="location">at line 59</div>
+        <code>                    
+    
+    <strong>setContext</strong>(
+    <abbr title="Thelia\Core\Routing\Symfony\Component\Routing\RequestContext">RequestContext</abbr> $context)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Sets the request context.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Routing\Symfony\Component\Routing\RequestContext">RequestContext</abbr></td>
+                <td>$context</td>
+                <td>The context</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContext">
+        <div class="location">at line 71</div>
+        <code>                    
+    <abbr title="Symfony\Component\Routing\RequestContext">RequestContext</abbr>
+    <strong>getContext</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Gets the request context.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Symfony\Component\Routing\RequestContext">RequestContext</abbr></td>
+            <td>The context</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOption">
+        <div class="location">at line 76</div>
+        <code>                    
+    
+    <strong>setOption</strong>($key, $value)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteCollection">
+        <div class="location">at line 86</div>
+        <code>                    
+    <abbr title="Symfony\Component\Routing\RouteCollection">RouteCollection</abbr>
+    <strong>getRouteCollection</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Gets the RouteCollection instance associated with this Router.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="Symfony\Component\Routing\RouteCollection">RouteCollection</abbr></td>
+            <td>A RouteCollection instance</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generate">
+        <div class="location">at line 119</div>
+        <code>                    
+    string
+    <strong>generate</strong>(
+    string $name, 
+    mixed $parameters = array(), 
+    Boolean|string $referenceType = self::ABSOLUTE_PATH)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Generates a URL or path for a specific route based on the given parameters.</p>                    <p>Parameters that reference placeholders in the route pattern will substitute them in the
+path or host. Extra params are added as query string to the URL.</p>
+
+<p>When the passed reference type cannot be generated for the route because it requires a different
+host or scheme than the current one, the method will return a more comprehensive reference
+that includes the required params. For example, when you call this method with $referenceType = ABSOLUTE<em>PATH
+but the route requires the https scheme whereas the current scheme is http, it will instead return an
+ABSOLUTE</em>URL with the https scheme and the current host. This makes sure the generated URL matches
+the route in any case.</p>
+
+<p>If there is no route with the given name, the generator must throw the RouteNotFoundException.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$name</td>
+                <td>The name of the route</td>
+            </tr>
+                    <tr>
+                <td>
+    mixed</td>
+                <td>$parameters</td>
+                <td>An array of parameters</td>
+            </tr>
+                    <tr>
+                <td>
+    Boolean|string</td>
+                <td>$referenceType</td>
+                <td>The type of reference to be generated (one of the constants)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    string</td>
+            <td>The generated URL</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\Routing\Exception\RouteNotFoundException">RouteNotFoundException</abbr></td>
+                <td>If the named route doesn't exist</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\Routing\Exception\MissingMandatoryParametersException">MissingMandatoryParametersException</abbr></td>
+                <td>When some parameters are missing that are mandatory for the route</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\Routing\Exception\InvalidParameterException">InvalidParameterException</abbr></td>
+                <td>When a parameter value for a placeholder is not correct because
+                                            it does not match the requirement</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_match">
+        <div class="location">at line 139</div>
+        <code>                    
+    array
+    <strong>match</strong>(
+    string $pathinfo)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Tries to match a URL path with a set of routes.</p>                    <p>If the matcher can not find information, it must throw one of the exceptions documented
+below.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    string</td>
+                <td>$pathinfo</td>
+                <td>The path info to be parsed (raw format, i.e. not urldecoded)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>An array of parameters</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\Routing\Exception\ResourceNotFoundException">ResourceNotFoundException</abbr></td>
+                <td>If the resource could not be found</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\Routing\Exception\MethodNotAllowedException">MethodNotAllowedException</abbr></td>
+                <td>If the resource was found but the request method is not allowed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchRequest">
+        <div class="location">at line 157</div>
+        <code>                    
+    array
+    <strong>matchRequest</strong>(
+    <abbr title="Thelia\Core\Routing\Symfony\Component\HttpFoundation\Request">Request</abbr> $request)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Tries to match a request with a set of routes.</p>                    <p>If the matcher can not find information, it must throw one of the exceptions documented
+below.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+    <abbr title="Thelia\Core\Routing\Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td>The request to match</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    array</td>
+            <td>An array of parameters</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception|\Thelia\Exception\UrlRewritingException">UrlRewritingException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\Routing\Exception\ResourceNotFoundException">ResourceNotFoundException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

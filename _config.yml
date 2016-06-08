@@ -28,7 +28,8 @@ languages:
         },
         { name: "How To", sidebar_name: "howto", subsections:
           [
-            { name: "Migrate Thelia 2.0 to Thelia 2.1", sidebar_name: "howto_migrate_20_21", url: "/en/documentation/howto/migrate_Thelia_20_to_Thelia_21.html"}
+            { name: "Migrate Thelia 2.0 to Thelia 2.1", sidebar_name: "howto_migrate_20_21", url: "/en/documentation/howto/migrate_Thelia_20_to_Thelia_21.html"},
+            { name: "Migrate Thelia 2.2 to Thelia 2.3", sidebar_name: "howto_migrate_22_23", url: "/en/documentation/howto/migrate_Thelia_22_to_Thelia_23.html"}
           ]
         },
         { name: "Contribute", sidebar_name: "contribute", url: "/en/documentation/contribute.html" },
@@ -102,6 +103,7 @@ languages:
            { name: "Actions", sidebar_name: "plugin_action", url: "/en/documentation/modules/actions.html" },
            { name: "Commands", sidebar_name: "plugin_command", url: "/en/documentation/modules/commands.html" },
            { name: "Routing", sidebar_name: "plugin_routing", url: "/en/documentation/modules/routing.html" },
+           { name: "Caching", sidebar_name: "plugin_caching", url: "/en/documentation/modules/caching.html" },
            { name: "Templating", sidebar_name: "plugin_templating", url: "/en/documentation/modules/templating.html" },
            { name: "Admin hooks", sidebar_name: "plugin_hook", url: "/en/documentation/modules/hook.html" },
            { name: "Hooks", sidebar_name: "plugin_hooks", subsections:
@@ -225,14 +227,23 @@ languages:
           ]
         },
         { name: "Templates", sidebar_name: "templates", subsections: [
-            { name: "Introduction", sidebar_name: "templates_introduction", url: "/en/documentation/templates/introduction.html" },
-            { name: "Contents", sidebar_name: "templates_contents", url: "/en/documentation/templates/content.html" },
-            { name: "Assets management", sidebar_name: "templates_assets", url: "/en/documentation/templates/assets.html" },
-            { name: "Internationalization", sidebar_name: "templates_i18n", url: "/en/documentation/templates/i18n.html" },
-            { name: "URLs and paths", sidebar_name: "templates_urls_and_paths", url: "/en/documentation/templates/urls-and-paths.html" },
-            { name: "Security",	sidebar_name: "templates_security", url: "/en/documentation/templates/security.html" },
-            { name: "Postage", sidebar_name: "templates_postage", url: "/en/documentation/templates/postage.html" },
-            { name: "Render", sidebar_name: "templates_render", url: "/en/documentation/templates/render.html" }
+            { name: "Smarty", sidebar_name: "templates-smarty", subsections: [
+                { name: "Introduction", sidebar_name: "templates_smarty_introduction", url: "/en/documentation/templates/smarty/introduction.html" },
+                { name: "Render", sidebar_name: "templates_smarty_render", url: "/en/documentation/templates/smarty/render.html" },
+                { name: "Assets management", sidebar_name: "templates_smarty_assets", url: "/en/documentation/templates/smarty/assets.html" },
+                { name: "URLs and paths", sidebar_name: "templates_smarty_urls_and_paths", url: "/en/documentation/templates/smarty/urls-and-paths.html" },
+                { name: "Internationalization", sidebar_name: "templates_smarty_i18n", url: "/en/documentation/templates/smarty/i18n.html" },
+                { name: "Security",	sidebar_name: "templates_smarty_security", url: "/en/documentation/templates/smarty/security.html" },
+                { name: "Contents", sidebar_name: "templates_smarty_contents", url: "/en/documentation/templates/smarty/content.html" },
+                { name: "Cache", sidebar_name: "templates_smarty_cache", url: "/en/documentation/templates/smarty/cache.html" },
+                { name: "Postage", sidebar_name: "templates_smarty_postage", url: "/en/documentation/templates/smarty/postage.html" },
+                { name: "Cache", sidebar_name: "templates_smarty_emails", url: "/en/documentation/templates/smarty/emails.html" }
+              ]
+            },
+            { name: "Twig", sidebar_name: "templates-smarty", subsections: [
+                { name: "Introduction", sidebar_name: "templates_twig_introduction", url: "/en/documentation/templates/twig/introduction.html" }
+              ]
+            }
           ]
         }
       ]

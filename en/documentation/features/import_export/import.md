@@ -7,6 +7,10 @@ subnav: do_import
 ---
 ---
 
+<div class="alert alert-warning">
+<p>This functionality is no longer available since version 2.3</p>
+</div>
+
 # Thelia imports
 
 ## How to create an import ?
