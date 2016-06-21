@@ -6,13 +6,13 @@ lang: en
 subnav: loop_index
 ---
 
-#{{ page.title }}
+# {{ page.title }}
 
 Loops are the most convenient feature in Thelia for front developers. Already there in Thelia's first version, they deserved a makeover for Thelia v2.
 
 Loops allow to gather data from your shop and display them in your front view. In Thelia v2, loops are a <a href="http://www.smarty.net" target="_blank">Smarty v3</a> plugin.
 
-###Classic loop
+### Classic loop
 
 Here is a piece of html code which intends to list 4 random products from your shop.
 
@@ -97,7 +97,7 @@ You can of course use a loop into another loop and pass a loop output to another
 
 Thelia 2 provides a lot of loop types. You can see all the loops and their parameters / outputs in the <strong>Loops</strong> sidebar menu.
 
-###Conditional loop
+### Conditional loop
 
 Conditional loops allow to define a different behaviour depending on if the a classic loop displays something or not.
 
@@ -122,7 +122,7 @@ For example, you want to display all the associated content of a product in an u
  ```
  &nbsp;
 
-###Page loop
+### Page loop
 
 Page loops can be use on any classic loop which has ```page``` parameter. Page loops list all the pages the classic loop needs to display all it's returns.
 

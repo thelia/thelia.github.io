@@ -23,4 +23,5 @@ outputs :
     - {name: "$DAY_LEFT_BEFORE_EXPIRATION", description: "days left before coupon expiration"}
     - {name: "$FREE_SHIPPING_FOR_COUNTRIES_LIST", description: "comma separated list of country IDs for which the free shipping applies"}
     - {name: "$FREE_SHIPPING_FOR_MODULES_LIST", description: "comma separated list of shipping module IDs for which the free shipping applies"}
+    - {name: "$IS_USAGE_CANCELED", description: "true if the usage of this coupon was canceled (probably when the related order was canceled), false otherwise"}
 ---
