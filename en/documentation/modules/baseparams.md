@@ -10,7 +10,7 @@ subnav: plugin_baseparam
     <h1>Modules : <small>BaseParams</small></h1>
 </div>
 
-##How to declare BaseParam ?
+## How to declare BaseParam ?
 
 *baseParam explanation here*
 

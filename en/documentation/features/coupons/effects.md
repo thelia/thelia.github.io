@@ -6,9 +6,9 @@ lang: en
 subnav: features_coupons_effects_index
 ---
 
-#Coupon Effects ?
+# Coupon Effects ?
 
-##How to create a new type of Coupon ?
+## How to create a new type of Coupon ?
 
 >Our example will be based on a Coupon giving a particular product (a goodies) to any customer entering it and meeting the Coupon Condition.
 In case you have trouble following our explanation, you can find the whole code as a module on [GitHub](https://github.com/gmorel/thelia2-coupon-give-free-product).

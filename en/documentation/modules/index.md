@@ -60,11 +60,11 @@ Here is the body of your config.xml file :
 </config>
 ```
 <br />
-#Module and Command line
+# Module and Command line
 
 Command line is very usefull for generating many thinks around modules.
 
-##How to generate a new module
+## How to generate a new module
 
 ```
 $ php Thelia module:generate ModuleName
@@ -72,7 +72,7 @@ $ php Thelia module:generate ModuleName
 <br />
 This command line generate a module with all needed classes, files and folders
 
-##How to generate the model
+## How to generate the model
 
 ```
 $ php Thelia module:generate:model ModuleName
@@ -82,7 +82,7 @@ This command search the schema.xml file and parse it using Propel command line.
 <br />
 This file is explain in [Propel documentation](http://propelorm.org/reference/schema.html)
 
-##How to generate the sql
+## How to generate the sql
 
 ```
 $ php Thelia module:generate:sql ModuleName
@@ -91,7 +91,7 @@ $ php Thelia module:generate:sql ModuleName
 Just like the precedent command, schema.xml is parsed and sql file is created in Config folder.
 
 
-#Manage your module with composer
+# Manage your module with composer
 
 If you want to use composer in your module, you have to require a special package in your composer.json file. Doing this,
 you can share your module on [packagist](https://packagist.org/) and of course require other dependencies for your module.

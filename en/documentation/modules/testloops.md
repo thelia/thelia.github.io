@@ -10,7 +10,7 @@ subnav: plugin_testloop
     <h1>Modules : <small>TestLoop</small></h1>
 </div>
 
-##How to declare TestLoop ?
+## How to declare TestLoop ?
 
 *testloop explanation here*
 

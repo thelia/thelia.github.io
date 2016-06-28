@@ -760,7 +760,7 @@ eventsShippingZone:
 Thelia use the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern) for managing all the action like creating a new customer, updating a product.
 For each action an event is dispatching containing an event object. Event object contains only data.
 
-##List of events
+## List of events
 
 This list is maybe not complete. All events constant are in [{{ page.eventClass }}](/api/master/Thelia/Core/Event/TheliaEvents.html)
 

@@ -42,7 +42,8 @@ in the ```config.xml``` file in your module, you have to declare a ```hooks``` t
 </config>
 ```
 
-The ```hook``` tag represents a class responsible to handle one or more hooks.   
+The ```hook``` tag represents a class responsible to handle one or more hooks.
+
 ```xml
 <hook id="module.hook.front" class="Module\Hook\Front" scope="request">
 ```

@@ -6,7 +6,7 @@ lang: en
 subnav: features_tax_type
 ---
 
-#Tax type
+# Tax type
 
 There are three default tax types in Thelia 2 :
 
@@ -14,7 +14,7 @@ There are three default tax types in Thelia 2 :
 * Percent of the product price tax
 * Fixed amount depending on a product's feature value ; you can set tax amount on each product in the given feature.
 
-#Create your own tax type
+# Create your own tax type
 
 You can create tax types in your plugins, or why not directly in [*Thelia 2*](https://github.com/thelia/thelia) and ask for a pull request.
 

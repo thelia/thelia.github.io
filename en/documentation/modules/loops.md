@@ -10,7 +10,7 @@ subnav: plugin_loop
     <h1>Modules : <small>Loops</small></h1>
 </div>
 
-##How to declare loops ?
+## How to declare loops ?
 
 ```xml
 <loops>
@@ -26,7 +26,7 @@ class must extends the [Thelia\Core\Template\Element\BaseLoop](/api/master/Theli
 abstract class, if not an exception is thrown.
 **If you name your loop like a default loop (eg : product), your loop will replace the default loop.**
 
-##How to implement a loop ?
+## How to implement a loop ?
 
 Your loop can be anywhere (Thanks to namespace) in your module but it's better to create a Loop directory and put all your loops in this directory.
 
@@ -34,7 +34,7 @@ You have to extends the [Thelia\Core\Template\Element\BaseLoop](/api/master/Thel
 
 NB : You can also extend BaseI18nLoop which itself extends BaseLoop. This will provide tools to manage i18n in your loop.
 
-###What's the difference betwen *PropelSearchLoopInterface* and *ArraySearchLoopInterface*
+### What's the difference betwen *PropelSearchLoopInterface* and *ArraySearchLoopInterface*
 
 It's a matter of data type. If the data your loop returns come from the database you must implement *PropelSearchLoopInterface* and create *buildModelCriteria* method which return a *Propel\Runtime\ActiveQuery\ModelCriteria*. Conversely if your loop displays data from an array you must implement *ArraySearchLoopInterface* and create *buildArray* method which return an array.
 
@@ -79,7 +79,7 @@ if($versionable === true) //available if your table is versionable
 * VERSION_DATE
 * VERSION_AUTHOR
 
-###Example 1
+### Example 1
 
 Here an example for my module "MyModule" and my loops in the loop directory. This is the architecture :
 
