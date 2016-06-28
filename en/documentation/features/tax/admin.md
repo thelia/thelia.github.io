@@ -6,11 +6,11 @@ lang: en
 subnav: features_tax_admin
 ---
 
-#Manage taxes
+# Manage taxes
 
 Thelia 2 tax engine is based on ***taxes*** which can be combined into ***tax rules***.
 
-##What is a ***tax*** ?
+## What is a ***tax*** ?
 
 A ***tax*** is an effect based on a [*type*](/en/documentation/features/tax/type.html)
 
@@ -20,7 +20,7 @@ For example, French 20% VAT is a ***Price % tax*** type whose amount is ***20***
 
 ![Edit tax](/img/documentation/features/tax/edit_tax.png "Edit tax")
 
-##What is an ***tax rule*** ?
+## What is an ***tax rule*** ?
 
 An ***tax rule*** is either a combination of taxes or a single tax. ***Tax rules*** are assigned to products ; each product has a single ***tax rule***. Tax can differ depending on the country therefore a product can have different tax - or no tax - depending on the country.
 

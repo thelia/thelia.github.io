@@ -5,11 +5,10 @@ sidebar: features
 lang: en
 subnav: features_coupons_rules_index
 ---
----
 
-#Coupon Conditions ?
+# Coupon Conditions ?
 
-##How to create a new type of Condition ?
+## How to create a new type of Condition ?
 
 >Our example will be based on a Coupon available for only men or women depending on what the customer entered during its subscription.
 In case you have trouble following our explanation, you can find the whole code as a module on [GitHub](https://github.com/gmorel/thelia2-condition-match-for-gender).

@@ -13,7 +13,7 @@ subnav: plugin_command
 Commands use the helpfull console Symfony component. In your module you can define you own command that can be used
 with command CLI.
 
-##How to declare commands ?
+## How to declare commands ?
 
 In your config file :
 

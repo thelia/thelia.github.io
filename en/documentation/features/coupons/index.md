@@ -6,7 +6,7 @@ lang: en
 subnav: features_coupons_index
 ---
 
-#What about giving your customer a way to get discounts ?
+# What about giving your customer a way to get discounts ?
 
 A coupon is
 
