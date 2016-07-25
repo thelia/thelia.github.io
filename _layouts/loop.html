@@ -8,25 +8,25 @@ global_arguments :
 - {name: "force_return", description: "force return result for i18n tables even if there is no record", example: "force_return=\"on\"", default: "false"}
 
 text_search_arguments : [
-{name: "search_term", description: "The term to search", example: "search_term=\"my product\""},
-{name: "search_in", description: "A comma separeted list of field in which performs search", example: "search_in=\"title\""},
-{name: "search_mode", description: "the search mode : `any_word` (search any word separeted by a space), `sentence` (the sentence, anywhere in the field) or `strict_sentence` (the exact sentence)", default: "strict_sentence"}
+    {name: "search_term", description: "The term to search", example: "search_term=\"my product\""},
+    {name: "search_in", description: "A comma separeted list of field in which the search is performed", example: "search_in=\"title\""},
+    {name: "search_mode", description: "the search mode : `any_word` (search any word separeted by a space), `sentence` (the sentence, anywhere in the field) or `strict_sentence` (the exact sentence)", default: "strict_sentence"}
 ]
 
 global_outputs : {
-countable : [
-{ name: "$LOOP_COUNT", description: "the current results index starting from 1" },
-{ name: "$LOOP_TOTAL", description: "the total number of results" }
-],
-timestampable : [
-{ name: "$CREATE_DATE", description: "" },
-{ name: "$UPDATE_DATE", description: "" }
-],
-versionable : [
-{ name: "$VERSION", description: "" },
-{ name: "$VERSION_DATE", description: "" },
-{ name: "$VERSION_AUTHOR", description: "" }
-]
+    countable : [
+        { name: "$LOOP_COUNT", description: "the current results index, starting from 1" },
+        { name: "$LOOP_TOTAL", description: "the total number of results returned by the loop" }
+    ],
+    timestampable : [
+        { name: "$CREATE_DATE", description: "The creation date of this !OBJECT!" },
+        { name: "$UPDATE_DATE", description: "The last modification date of this !OBJECT!" }
+    ],
+    versionable : [
+        { name: "$VERSION", description: "The version number of this {{page.type}}" },
+        { name: "$VERSION_DATE", description: "The date this version of the !OBJECT! was created" },
+        { name: "$VERSION_AUTHOR", description: "Reserved for future use" }
+    ]
 }
 ---
 <!doctype html>
@@ -52,7 +52,7 @@ versionable : [
             {% include content-header.html %}
 
 {% highlight smarty %}
-{loop type="{{ page.type }}" [argument="value"], [...]}
+{loop type="{{ page.type }}" name="the-loop-name" [argument="value"], [...]}
 {% endhighlight %}
 
             <hr />

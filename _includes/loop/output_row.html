@@ -1,5 +1,6 @@
 {% if page.returns_global_outputs.countable == true or page.returns_global_outputs.timestampable == true or page.returns_global_outputs.versionable == true %}
 
+{% assign object_name = page.type | capitalize %}
     <h4>Global outputs</h4>
 
     <div class="table-responsive">
@@ -12,39 +13,39 @@
             </thead>
             <tbody>
             {% if page.returns_global_outputs.countable == true %}
-                {% for output in page.global_outputs.countable %}
+                {% for output in layout.global_outputs.countable %}
                 <tr>
                     <td>
                         {{ output.name }}
                     </td>
                     <td>
-                        {{ output.description }}
+                        {{ output.description | replace : '!OBJECT!', object_name}}
                     </td>
                 </tr>
                 {% endfor %}
             {% endif %}
 
             {% if page.returns_global_outputs.timestampable == true %}
-                {% for output in page.global_outputs.timestampable %}
+                {% for output in layout.global_outputs.timestampable %}
                 <tr>
                     <td>
                         {{ output.name }}
                     </td>
                     <td>
-                        {{ output.description }}
+                        {{ output.description | replace : '!OBJECT!', object_name}}
                     </td>
                 </tr>
                 {% endfor %}
             {% endif %}
 
             {% if page.returns_global_outputs.versionable == true %}
-                {% for output in page.global_outputs.versionable %}
+                {% for output in layout.global_outputs.versionable %}
                 <tr>
                     <td>
                         {{ output.name }}
                     </td>
                     <td>
-                        {{ output.description }}
+                        {{ output.description | replace : '!OBJECT!', object_name}}
                     </td>
                 </tr>
                 {% endfor %}

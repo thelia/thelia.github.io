@@ -10,11 +10,11 @@ returns_global_outputs: { countable : true, timestampable : true, versionable : 
 type: document
 arguments :
     - {name: "id", description: "A single or a list of document ids.", example: "id=\"2\", id=\"1,4,7\""}
-    - {name: "category", description: "a category identifier. The loop will return this category's documents", example: "category=\"2\""}
-    - {name: "product", description: "a product identifier. The loop will return this product's documents", example: "product=\"2\""}
-    - {name: "folder", description: "a folder identifier. The loop will return this folder's documents", example: "folder=\"2\""}
-    - {name: "content", description: "a content identifier. The loop will return this content's documents", example: "content=\"2\""}
-    - {name: "brand", description: "a brand identifier. The loop will return this brand's documents", example: "brand=\"2\""}
+    - {name: "category", description: "a category identifier. The loop will return this category's documents", example: "category=\"2\"", mandatory: "double"}
+    - {name: "product", description: "a product identifier. The loop will return this product's documents", example: "product=\"2\"", mandatory: "double"}
+    - {name: "folder", description: "a folder identifier. The loop will return this folder's documents", example: "folder=\"2\"", mandatory: "double"}
+    - {name: "content", description: "a content identifier. The loop will return this content's documents", example: "content=\"2\"", mandatory: "double"}
+    - {name: "brand", description: "a brand identifier. The loop will return this brand's documents", example: "brand=\"2\"", mandatory: "double"}
     - {
         name: "source", description: "", example: "source=\"category\"",
         expected_values: [
@@ -23,7 +23,7 @@ arguments :
             {name: "folder",            description: ""},
             {name: "content",    description: ""},
             {name: "brand",    description: ""}
-        ]
+        ], mandatory: "double"
     }
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
     - {name: "exclude", description: "A single or a comma-separated list of document IDs to exclude from the list.", example: "exclude=\"456,123\""}

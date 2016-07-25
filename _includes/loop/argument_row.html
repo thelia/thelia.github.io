@@ -1,8 +1,8 @@
 <div class="alert alert-warning">
     <h4>Important informations :</h4>
     <p>
-        * : argument is mandatory<br />
-        ** : one of any ** marked argument is mandatory
+        * : argument is required<br />
+        ** : at least one of ** marked argument is required
     </p>
 </div>
 
@@ -18,7 +18,8 @@
                 </tr>
             </thead>
             <tbody>
-            {% for argument in page.global_arguments %}
+
+            {% for argument in layout.global_arguments %}
 
                 {% assign overwritten = false %}
                 {% for pageargument in page.arguments %}
@@ -27,7 +28,7 @@
                     {% endif %}
                 {% endfor %}
 
-                {% if overwritten == false %}
+                {% if 1 || overwritten == false %}
 
                     <tr>
                         <td>
@@ -99,7 +100,7 @@
                 </tr>
             </thead>
             <tbody>
-            {% for argument in page.text_search_arguments %}
+            {% for argument in layout.text_search_arguments %}
 
                 {% assign overwritten = false %}
                 {% for pageargument in page.arguments %}
