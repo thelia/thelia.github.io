@@ -10,11 +10,11 @@ returns_global_outputs: { countable : true, timestampable : true, versionable : 
 type: image
 arguments :
     - {name: "id", description: "A single or a list of image ids.", example: "id=\"2\", id=\"1,4,7\""}
-    - {name: "category", description: "a category identifier. The loop will return this category's images", example: "category=\"2\""}
-    - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\""}
-    - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\""}
-    - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\""}
-    - {name: "brand", description: "a brand identifier. The loop will return this brand's images", example: "brand=\"2\""}
+    - {name: "category", description: "a category identifier. The loop will return this category's images", example: "category=\"2\"", mandatory: "double"}
+    - {name: "product", description: "a product identifier. The loop will return this product's images", example: "product=\"2\"", mandatory: "double"}
+    - {name: "folder", description: "a folder identifier. The loop will return this folder's images", example: "folder=\"2\"", mandatory: "double"}
+    - {name: "content", description: "a content identifier. The loop will return this content's images", example: "content=\"2\"", mandatory: "double"}
+    - {name: "brand", description: "a brand identifier. The loop will return this brand's images", example: "brand=\"2\"", mandatory: "double"}
     - {
         name: "source", description: "", example: "source=\"category\"",
         expected_values: [
@@ -24,7 +24,7 @@ arguments :
             {name: "content",    description: ""},
             {name: "brand",    description: ""},
             {name: "module",    description: ""}
-        ]
+        ], mandatory: "double"
     }
     - {name: "source_id", description: "The identifier of the object provided in the \"source\" parameter. Only considered if the \"source\" argument is present", example: "source_id=\"2\""}
     - {name: "exclude", description: "A single or a comma-separated list of image IDs to exclude from the list.", example: "exclude=\"456,123\""}

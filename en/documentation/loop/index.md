@@ -105,7 +105,7 @@ A conditional loop is therefore linked to a classic loop using the ```rel``` att
 
 For example, you want to display all the associated content of a product in an unorder list (ul). If the product has no associated contents you won't display empty ```<ul></ul>```. And you want a message to inform there is no available content. You can use a conditional loop to do this.
 
- ```smarty
+```smarty
 {ifloop rel="my_associated_content_loop"}
     Associated contents for this product :
     <ul>
@@ -119,8 +119,8 @@ For example, you want to display all the associated content of a product in an u
 {elseloop rel="my_associated_content_loop"}
     No associated content for this product
 {/elseloop}
- ```
- &nbsp;
+```
+&nbsp;
 
 ### Page loop
 
@@ -146,7 +146,7 @@ List of output parameters :
                     $PAGE
                 </td>
                 <td>
-                    current page displayed. This value is equal to the page loop parameter.
+                    Current page number. This value is equal to the ```page``` loop parameter.
                 </td>
             </tr>
             <tr>
@@ -154,7 +154,7 @@ List of output parameters :
                     $END
                 </td>
                 <td>
-                    Max page number displayed
+                    The last displayed page number
                 </td>
             </tr>
             <tr>
@@ -170,7 +170,7 @@ List of output parameters :
                     $LAST
                 </td>
                 <td>
-                    Max page number. If for a loop, there are 761 pages possible, the value of $LAST is 761
+                    Max page number. If a loop generates 761 pages, the value of $LAST is 761
                 </td>
             </tr>
             <tr>
@@ -178,7 +178,7 @@ List of output parameters :
                     $PREV
                 </td>
                 <td>
-                    previous page number. This value is always $PAGE-1 if $PAGE is superior to 1. The value is 1 therefore
+                    previous page number. This value is always $PAGE-1 if $PAGE is greater than 1. The value is 1 therefore
                 </td>
             </tr>
             <tr>
@@ -186,7 +186,7 @@ List of output parameters :
                     $NEXT
                 </td>
                 <td>
-                    next page number. This value is always $PAGE+1 if $PAGE is inferior to $LAST. The value is $LAST therefore
+                    next page number. This value is always $PAGE+1 if $PAGE is less than $LAST. The value is $LAST therefore
                 </td>
             </tr>
         </tbody>
