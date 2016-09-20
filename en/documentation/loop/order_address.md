@@ -24,4 +24,5 @@ outputs :
     - {name: "$CITY", description: "the order address city"}
     - {name: "$COUNTRY", description: "the order address country which might be use in <a href=\"/en/documentation/loop/country.html\">country loop</a>"}
     - {name: "$PHONE", description: "the order address phone"}
+    - {name: "$CELLPHONE", description: "the order address cellphone"}
 ---
