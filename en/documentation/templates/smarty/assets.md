@@ -99,6 +99,7 @@ The valid parameters are :
 - filters
 - source
 - template
+- failsafe
 
 You may also use the short form `{stylesheet}`, which directly returns the URL of the CSS file :
 
@@ -142,6 +143,16 @@ You may want to use an asset located in another template of the same type (for e
     {stylesheet}
 
 The example above will use the style.css file, located in the `assets/css` directory of the `default` front office template (the file path is `templates/frontOffice/default/assets/css/style.css`).
+
+#### failsafe ####
+
+When true, the failsafe parameter prevent the re-throw of exceptions when an asset is not found, even in development mode.
+Example usage of this parameter:
+
+    {stylesheets file="assets/css/mystyle.css" failsafe=true}
+        <link href="{$asset_url}" rel="stylesheet" type="text/css" />
+    {stylesheet}
+
 
 ### {images} and {image} ###
 
