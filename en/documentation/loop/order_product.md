@@ -35,8 +35,8 @@ outputs :
     - {name: "$TOTAL_TAXED_PRICE", description: "the order product price including taxes (total price)", from_version: "2.3"}
     - {name: "$TOTAL_PROMO_PRICE", description: "the order product in promo price (total price)", from_version: "2.3"}
     - {name: "$TOTAL_TAXED_PROMO_PRICE", description: "the order product in promo price including taxes (total price)", from_version: "2.3"}
-    - {name: "$TAX_RULE_TITLE", description: ""}
-    - {name: "$TAX_RULE_DESCRIPTION", description: ""}
-    - {name: "$PARENT", description: ""}
-    - {name: "$EAN_CODE", description: ""}
+    - {name: "$TAX_RULE_TITLE", description: "the tax rule title for this item"}
+    - {name: "$TAX_RULE_DESCRIPTION", description: "the tax rule description for this item"}
+    - {name: "$PARENT", description: "the parent product in the cart, if the current product has one"}
+    - {name: "$EAN_CODE", description: "the product ean code"}
 ---
