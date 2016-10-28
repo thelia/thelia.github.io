@@ -17,43 +17,49 @@
             <th>Description</th>
         </tr>
         </thead>
+
         <tbody>
-        {% for field in page.global_fields %}
-        <tr>
-            <td>{{ field.name }} {% if field.mandatory == "true" %}*{% endif %}</td>
+        {% if page.global_fields %}
+            {% assign sorted = page.global_fields | sort : 'name' %}
+            {% for field in sorted %}
+            <tr>
+                <td>{{ field.name }} {% if field.mandatory == "true" %}*{% endif %}</td>
                 <td>
-                <p>{{ field.description }}</p>
-                {% if field.example != nil AND field.example != '' %}
-                <p>
-                example : <em>{{ argument.example }}</em>
-                </p>
+                    <p>{{ field.description }}</p>
+                        {% if field.example != nil AND field.example != '' %}
+                    <p>
+                        example : <em>{{ argument.example }}</em>
+                    </p>
                 {% endif %}
                 </td>
-                </tr>
-                {% endfor %}
-        {% for field in page.fields %}
-        <tr>
-            <td>{{ field.name }} {% if field.mandatory == "true" %}*{% endif %}</td>
-            <td>
-                <p>{{ field.description }}</p>
-                {% if field.values != nil AND field.values != '' %}
-                    <div class="expected_values">
-                    values available :
-                    <ul>
-                        {% for value in field.values %}
-                        <li>{{ value.value }}{% if value.description != nil and value.description != '' %} : <em>{{ value.description }}</em>{% endif %}</li>
-                        {% endfor %}
-                    </ul>
-                    </div>
-                {% endif %}
-                {% if field.example != nil AND field.example != '' %}
-                <p>
-                example : <em>{{ argument.example }}</em>
-                </p>
-                {% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+            </tr>
+            {% endfor %}
+            {% endif %}
+
+            {% assign sorted = page.fields | sort : 'name' %}
+            {% for field in page.fields %}
+            <tr>
+                <td>{{ field.name }} {% if field.mandatory == "true" %}*{% endif %}</td>
+                <td>
+                    <p>{{ field.description }}</p>
+                    {% if field.values != nil AND field.values != '' %}
+                        <div class="expected_values">
+                        values available :
+                        <ul>
+                            {% for value in field.values %}
+                            <li>{{ value.value }}{% if value.description != nil and value.description != '' %} : <em>{{ value.description }}</em>{% endif %}</li>
+                            {% endfor %}
+                        </ul>
+                        </div>
+                    {% endif %}
+                    {% if field.example != nil AND field.example != '' %}
+                    <p>
+                    example : <em>{{ argument.example }}</em>
+                    </p>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>

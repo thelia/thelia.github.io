@@ -13,7 +13,8 @@
             </thead>
             <tbody>
             {% if page.returns_global_outputs.countable == true %}
-                {% for output in layout.global_outputs.countable %}
+                {% assign sorted = layout.global_outputs.countable | sort : 'name' %}
+                {% for output in sorted %}
                 <tr>
                     <td>
                         {{ output.name }}
@@ -39,7 +40,8 @@
             {% endif %}
 
             {% if page.returns_global_outputs.versionable == true %}
-                {% for output in layout.global_outputs.versionable %}
+                {% assign sorted = layout.global_outputs.versionable | sort : 'name' %}
+                {% for output in sorted %}
                 <tr>
                     <td>
                         {{ output.name }}
@@ -67,22 +69,25 @@
         </tr>
         </thead>
         <tbody>
-        {% for output in page.outputs %}
-            <tr>
-                <td>
-                    {{ output.name }}
-                    {% if output.from_version != nil AND output.from_version != '' %}
-                     <span class="label label-info" title="From version {{ output.from_version }}">&gt;= {{ output.from_version }}</span>
-                    {% endif %}
-                    {% if output.until_version != nil AND output.until_version != '' %}
-                     <span class="label label-default" title="Until version {{ output.until_version }}">&lt; {{ output.until_version }}</span>
-                    {% endif %}
-                </td>
-                <td>
-                    {{ output.description }}
-                </td>
-            </tr>
-        {% endfor %}
+        {% if page.outputs != nil %}
+            {% assign sorted = page.outputs | sort : 'name' %}
+            {% for output in sorted %}
+                <tr>
+                    <td>
+                        {{ output.name }}
+                        {% if output.from_version != nil AND output.from_version != '' %}
+                         <span class="label label-info" title="From version {{ output.from_version }}">&gt;= {{ output.from_version }}</span>
+                        {% endif %}
+                        {% if output.until_version != nil AND output.until_version != '' %}
+                         <span class="label label-default" title="Until version {{ output.until_version }}">&lt; {{ output.until_version }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {{ output.description }}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% endif %}    
         </tbody>
     </table>
 </div>
