@@ -33,7 +33,7 @@ welcome :
 </div>
 
 ## Installation
-Learn [how to install your Thelia 2](/en/documentation/installation.html) quickly to take advantage of all its features
+Learn [how to install your Thelia 2](/en/documentation/installation/index.html) quickly to take advantage of all its features
 
 ## Modules
 You can [develop modules](/en/documentation/modules/index.html) for extending Thelia functionalities.
