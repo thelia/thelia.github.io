@@ -32,15 +32,15 @@ arguments :
             {name: "id_reverse",        description: "order by descending ID"},
             {name: "alpha",             description: "alphabetical order on title"},
             {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
-            {name: "manual",            description: "order by ascending position, relative to parent category"},
-            {name: "manual_reverse",    description: "order by descending position, relative to parent category"},
-            {name: "random",            description: ""},
+            {name: "manual",            description: "order by ascending position"},
+            {name: "manual_reverse",    description: "order by descending position"},
+            {name: "visible",           description: "online items firts"},
+            {name: "visible_reverse",   description: "offline items first"},            
+            {name: "random",            description: "return categories in random order"},
             {name: "created",           description: "ascending order on date of content creation"},
             {name: "created_reverse",   description: "descending order on date of content creation"},
             {name: "updated",           description: "ascending order on date of content update"},
             {name: "updated_reverse",   description: "descending order on date of content update"},
-            {name: "position",          description: "order by ascending position, without considering a parent category"},
-            {name: "position_reverse",  description: "order by descending position, without considering a parent category"},            
         ]
       }
 outputs :
