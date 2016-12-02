@@ -25,17 +25,23 @@ arguments :
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
-        expected_values: [
+        expected_values: [ 
+            {name: "id",                description: "order by ascending ID"},
+            {name: "id_reverse",        description: "order by descending ID"},
             {name: "alpha",             description: "alphabetical order on title"},
             {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
             {name: "manual",            description: "`content` argument must be set"},
             {name: "manual_reverse",    description: "`content` argument must be set"},
-            {name: "random",            description: ""},
+            {name: "visible",           description: "online items firts"},
+            {name: "visible_reverse",   description: "offline items first"},                        
+            {name: "random",            description: "return contents in random order"},
             {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"},
             {name: "created",           description: "ascending order on date of content creation"},
             {name: "created_reverse",   description: "descending order on date of content creation"},
             {name: "updated",           description: "ascending order on date of content update"},
             {name: "updated_reverse",   description: "descending order on date of content update"},
+            {name: "position",          description: "order by ascending position, without considering a parent folder"},
+            {name: "position_reverse",  description: "order by descending position, without considering a parent folder"},
         ]
       }
 outputs :

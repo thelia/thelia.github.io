@@ -49,7 +49,8 @@
                             <div class="expected_values">
                                 Expected values :
                                 <ul>
-                                    {% for expected_value in argument.expected_values %}
+                                    {% assign sorted_expected_values = (argument.expected_values | sort: 'name') %}
+                                    {% for expected_value in sorted_expected_values %}
                                     <li>
                                         {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
                                         {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
@@ -135,7 +136,8 @@
                                 <div class="expected_values">
                                     Expected values :
                                     <ul>
-                                        {% for expected_value in argument.expected_values %}
+                                        {% assign sorted_expected_values = (argument.expected_values | sort: 'name') %}
+                                        {% for expected_value in sorted_expected_values %}
                                         <li>
                                             {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
                                             {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
@@ -209,7 +211,8 @@
                     <div class="expected_values">
                         Expected values :
                         <ul>
-                            {% for expected_value in argument.expected_values %}
+                            {% assign sorted_expected_values = (argument.expected_values | sort: 'name') %}
+                            {% for expected_value in sorted_expected_values %}
                             <li>
                                 {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
                                 {% if expected_value.from_version != nil AND expected_value.from_version != '' %}

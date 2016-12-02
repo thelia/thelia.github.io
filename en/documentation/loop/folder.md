@@ -23,15 +23,21 @@ arguments :
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
+            {name: "id",                description: "order by ascending ID"},
+            {name: "id_reverse",        description: "order by descending ID"},
             {name: "alpha",             description: "alphabetical order on title"},
             {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
-            {name: "manual",            description: "`folder` argument must be set"},
-            {name: "manual_reverse",    description: "`folder` argument must be set"},
+            {name: "manual",            description: "order by ascending position relative to the parent folder"},
+            {name: "manual_reverse",    description: "order by descending position relative to the parent folder"},
+            {name: "visible",           description: "online items firts"},
+            {name: "visible_reverse",   description: "offline items first"},            
             {name: "random",            description: ""},
             {name: "created",           description: "ascending order on date of content creation"},
             {name: "created_reverse",   description: "descending order on date of content creation"},
             {name: "updated",           description: "ascending order on date of content update"},
-            {name: "updated_reverse",   description: "descending order on date of content update"}
+            {name: "updated_reverse",   description: "descending order on date of content update"},
+            {name: "position",          description: "order by ascending position, without considering a parent folder"},
+            {name: "position_reverse",  description: "order by descending position, without considering a parent folder"}           
         ]
       }
 outputs :
