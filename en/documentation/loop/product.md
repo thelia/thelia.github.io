@@ -63,16 +63,27 @@ arguments :
     - {
         name: "order", description: "A list of values", example: "order=\"category,min_price\"", default: "alpha",
         expected_values: [
+            {name: "id",                description: "order by ascending ID"},
+            {name: "id_reverse",        description: "order by descending ID"},
             {name: "alpha",             description: "alphabetical order on title"},
             {name: "alpha_reverse",     description: "reverse alphabetical order on title"},
             {name: "min_price",         description: "ascending price"},
             {name: "max_price",         description: "descending price"},
-            {name: "manual",            description: "`category` argument must be set"},
-            {name: "manual_reverse",    description: "`category` argument must be set"},
+            {name: "manual",            description: "order by ascending position considering a given category. `category` argument must be set"},
+            {name: "manual_reverse",    description: "order by ascending position considering a given category. `category` argument must be set"},
+            {name: "visible",           description: "online items firts"},
+            {name: "visible_reverse",   description: "offline items first"},
+            {name: "created",           description: "ascending order on date of content creation"},
+            {name: "created_reverse",   description: "descending order on date of content creation"},
+            {name: "updated",           description: "ascending order on date of content update"},
+            {name: "updated_reverse",   description: "descending order on date of content update"},
             {name: "ref",               description: "alphabetical order on reference"},
+            {name: "ref_reverse",       description: "reverse alphabetical order on reference"},
+            {name: "position",          description: "order by ascending position, without considering a parent category"},
+            {name: "position_reverse",  description: "order by descending position, without considering a parent category"},
             {name: "promo",             description: "promo products first"},
             {name: "new",               description: "new products first"},
-            {name: "random",            description: ""},
+            {name: "random",            description: "return products in random order"},
             {name: "given_id",          description: "return the same order received in `id` argument which therefore must be set"}
         ]
       }
