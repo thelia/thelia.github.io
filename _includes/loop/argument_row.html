@@ -18,71 +18,73 @@
                 </tr>
             </thead>
             <tbody>
-            {% assign sorted = layout.global_arguments | sort : 'name' %}
-            {% for argument in  sorted %}
+            {% if page.global_arguments %}
+                {% assign sorted = page.global_arguments | sort : 'name' %}
+                {% for argument in  sorted %}
 
-                {% assign overwritten = false %}
-                {% for pageargument in page.arguments %}
-                    {% if pageargument.name == argument.name %}
-                        {% assign overwritten = true %}
+                    {% assign overwritten = false %}
+                    {% for pageargument in page.arguments %}
+                        {% if pageargument.name == argument.name %}
+                            {% assign overwritten = true %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if overwritten == false %}
+                        <tr>
+                            <td>
+                                {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+                                {% if argument.from_version != nil AND argument.from_version != '' %}
+                                <br/>
+                                <span class="label label-info">Thelia &gt;= {{ argument.from_version }}</span>
+                                {% endif %}
+                                {% if argument.until_version != nil AND argument.until_version != '' %}
+                                <br/>
+                                <span class="label label-default">Thelia &lt; {{ argument.until_version }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <p>{{ argument.description }}</p>
+
+                                {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                                <div class="expected_values">
+                                    Expected values :
+                                    <ul>
+                                        {% assign sorted_expected_values = (argument.expected_values | sort: 'name') %}
+                                        {% for expected_value in sorted_expected_values %}
+                                        <li>
+                                            {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
+                                            {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
+                                            <span class="label label-info">Thelia &gt;= {{ expected_value.from_version }}</span>
+                                            {% endif %}
+                                            {% if expected_value.until_version != nil AND expected_value.until_version != '' %}
+                                            <br/>
+                                            <span class="label label-default">Thelia &lt; {{ expected_value.until_version }}</span>
+                                            {% endif %}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
+
+                                {% if argument.default != nil AND argument.default != '' %}
+                                <p>
+                                    <strong>default</strong> : {{ argument.default }}
+                                </p>
+                                {% endif %}
+
+                                {% if argument.example != nil AND argument.example != '' %}
+                                <p>
+                                    example : <em>{{ argument.example }}</em>
+                                </p>
+                                {% endif %}
+
+                            </td>
+                        </tr>
+
                     {% endif %}
+
                 {% endfor %}
-
-                {% if overwritten == false %}
-
-                    <tr>
-                        <td>
-                            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
-                            {% if argument.from_version != nil AND argument.from_version != '' %}
-                            <br/>
-                            <span class="label label-info">Thelia &gt;= {{ argument.from_version }}</span>
-                            {% endif %}
-                            {% if argument.until_version != nil AND argument.until_version != '' %}
-                            <br/>
-                            <span class="label label-default">Thelia &lt; {{ argument.until_version }}</span>
-                            {% endif %}
-                        </td>
-                        <td>
-                            <p>{{ argument.description }}</p>
-
-                            {% if argument.expected_values != nil AND argument.expected_values != '' %}
-                            <div class="expected_values">
-                                Expected values :
-                                <ul>
-                                    {% for expected_value in argument.expected_values %}
-                                    <li>
-                                        {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
-                                        {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
-                                        <span class="label label-info">Thelia &gt;= {{ expected_value.from_version }}</span>
-                                        {% endif %}
-                                        {% if expected_value.until_version != nil AND expected_value.until_version != '' %}
-                                        <br/>
-                                        <span class="label label-default">Thelia &lt; {{ expected_value.until_version }}</span>
-                                        {% endif %}
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                            {% endif %}
-
-                            {% if argument.default != nil AND argument.default != '' %}
-                            <p>
-                                <strong>default</strong> : {{ argument.default }}
-                            </p>
-                            {% endif %}
-
-                            {% if argument.example != nil AND argument.example != '' %}
-                            <p>
-                                example : <em>{{ argument.example }}</em>
-                            </p>
-                            {% endif %}
-
-                        </td>
-                    </tr>
-
-                {% endif %}
-
-            {% endfor %}
+            {% endif %}
             </tbody>
         </table>
     </div>
@@ -100,76 +102,79 @@
                 </tr>
             </thead>
             <tbody>
-            {% assign sorted = layout.text_search_arguments | sort : 'name' %}
-            {% for argument in sorted %}
-                {% assign overwritten = false %}
-                {% for pageargument in page.arguments %}
-                    {% if pageargument.name == argument.name %}
-                        {% assign overwritten = true %}
-                    {% endif %}
-                {% endfor %}
+            {% if page.text_search_arguments %}
+                {% assign sorted = page.text_search_arguments | sort : 'name' %}
+                {% for argument in sorted %}
+                    {% assign overwritten = false %}
+                    {% for pageargument in page.arguments %}
+                        {% if pageargument.name == argument.name %}
+                            {% assign overwritten = true %}
+                        {% endif %}
+                    {% endfor %}
 
-                {% if overwritten == false %}
+                    {% if overwritten == false %}
 
-                    <tr>
-                        <td>
-                            {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
-                            {% if argument.from_version != nil AND argument.from_version != '' %}
-                            <br/>
-                            <span class="label label-info">Thelia &gt;= {{ argument.from_version }}</span>
-                            {% endif %}
-                            {% if argument.until_version != nil AND argument.until_version != '' %}
-                            <br/>
-                            <span class="label label-default">Thelia &lt; {{ argument.until_version }}</span>
-                            {% endif %}
-                        </td>
-                        <td>
-                            <p>{{ argument.description }}</p>
-
-                            {% if argument.name == 'search_in' %}
-                            <div class="expected_values">
-                                Possible values : <strong>{{ page.text_search_fields }}</strong>
-                            </div>
-                            {% else %}
-                                {% if argument.expected_values != nil AND argument.expected_values != '' %}
-                                <div class="expected_values">
-                                    Expected values :
-                                    <ul>
-                                        {% for expected_value in argument.expected_values %}
-                                        <li>
-                                            {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
-                                            {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
-                                            <span class="label label-info">Thelia &gt;= {{ expected_value.from_version }}</span>
-                                            {% endif %}
-                                            {% if expected_value.until_version != nil AND expected_value.until_version != '' %}
-                                            <br/>
-                                            <span class="label label-default">Thelia &lt; {{ expected_value.until_version }}</span>
-                                            {% endif %}
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
+                        <tr>
+                            <td>
+                                {{ argument.name }} {% if argument.mandatory == "true" %}*{% endif %}{% if argument.mandatory == "double" %}**{% endif %}
+                                {% if argument.from_version != nil AND argument.from_version != '' %}
+                                <br/>
+                                <span class="label label-info">Thelia &gt;= {{ argument.from_version }}</span>
                                 {% endif %}
-                            {% endif %}
+                                {% if argument.until_version != nil AND argument.until_version != '' %}
+                                <br/>
+                                <span class="label label-default">Thelia &lt; {{ argument.until_version }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <p>{{ argument.description }}</p>
 
-                            {% if argument.default != nil AND argument.default != '' %}
-                            <p>
-                                <strong>default</strong> : {{ argument.default }}
-                            </p>
-                            {% endif %}
+                                {% if argument.name == 'search_in' %}
+                                <div class="expected_values">
+                                    Possible values : <strong>{{ page.text_search_fields }}</strong>
+                                </div>
+                                {% else %}
+                                    {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                                    <div class="expected_values">
+                                        Expected values :
+                                        <ul>
+                                            {% assign sorted_expected_values = (argument.expected_values | sort: 'name') %}
+                                            {% for expected_value in sorted_expected_values %}
+                                            <li>
+                                                {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
+                                                {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
+                                                <span class="label label-info">Thelia &gt;= {{ expected_value.from_version }}</span>
+                                                {% endif %}
+                                                {% if expected_value.until_version != nil AND expected_value.until_version != '' %}
+                                                <br/>
+                                                <span class="label label-default">Thelia &lt; {{ expected_value.until_version }}</span>
+                                                {% endif %}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    {% endif %}
+                                {% endif %}
 
-                            {% if argument.example != nil AND argument.example != '' %}
-                            <p>
-                                example : <em>{{ argument.example }}</em>
-                            </p>
-                            {% endif %}
+                                {% if argument.default != nil AND argument.default != '' %}
+                                <p>
+                                    <strong>default</strong> : {{ argument.default }}
+                                </p>
+                                {% endif %}
 
-                        </td>
-                    </tr>
+                                {% if argument.example != nil AND argument.example != '' %}
+                                <p>
+                                    example : <em>{{ argument.example }}</em>
+                                </p>
+                                {% endif %}
 
-                {% endif %}
+                            </td>
+                        </tr>
 
-            {% endfor %}
+                    {% endif %}
+
+                {% endfor %}
+            {% endif %}
             </tbody>
         </table>
     </div>
@@ -209,7 +214,8 @@
                     <div class="expected_values">
                         Expected values :
                         <ul>
-                            {% for expected_value in argument.expected_values %}
+                            {% assign sorted_expected_values = (argument.expected_values | sort: 'name') %}
+                            {% for expected_value in sorted_expected_values %}
                             <li>
                                 {{ expected_value.name }}{% if expected_value.description != nil and expected_value.description != '' %} : <em>{{ expected_value.description }}</em>{% endif %}
                                 {% if expected_value.from_version != nil AND expected_value.from_version != '' %}
