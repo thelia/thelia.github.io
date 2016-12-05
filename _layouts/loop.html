@@ -52,7 +52,7 @@ global_outputs : {
             {% include content-header.html %}
 
 {% highlight smarty %}
-{loop type="{{ page.type }}" name="the-loop-name" [argument="value"], [...]}
+{loop type="{{page.type}}" name="the-loop-name" [argument="value"], [...]}
 {% endhighlight %}
 
 {% assign trimmed_content = content | strip | strip_newlines %}
@@ -61,7 +61,7 @@ global_outputs : {
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#argument" data-toggle="tab">Arguments</a></li>
                 <li><a href="#output" data-toggle="tab">Outputs</a></li>
-                {% if trimmed_content != '' %%}
+                {% if trimmed_content != '' %}
                     <li><a href="#exemple" data-toggle="tab">Examples</a></li>
                 {% endif %}
             </ul>
