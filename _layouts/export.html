@@ -22,7 +22,7 @@
 
             <hr />
 
-            {% if page.has_images || page.has_documents %}
+            {% if page.has_images or page.has_documents %}
             <div class="row">
                 {% if page.has_images %}
                     <div class="col-md-6">
@@ -57,10 +57,10 @@
 
                         <tr>
                             <td class="col-md-4">
-                                {{ output.name }}
+                                {{output.name}}
                             </td>
                             <td class="col-md-8">
-                                {{ output.description }}
+                                {{output.description}}
                             </td>
                         </tr>
 
@@ -87,10 +87,10 @@
 
                                 <tr>
                                     <td class="col-md-4">
-                                        {{ output.name }}
+                                        {{output.name}}
                                     </td>
                                     <td class="col-md-8">
-                                        {{ output.description }}
+                                        {{output.description}}
                                     </td>
                                 </tr>
 
