@@ -18,8 +18,8 @@
                 </tr>
             </thead>
             <tbody>
-            {% if page.global_arguments %}
-                {% assign sorted = page.global_arguments | sort : 'name' %}
+            {% if layout.global_arguments %}
+                {% assign sorted = layout.global_arguments | sort : 'name' %}
                 {% for argument in  sorted %}
 
                     {% assign overwritten = false %}
@@ -45,7 +45,7 @@
                             <td>
                                 <p>{{ argument.description }}</p>
 
-                                {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                                {% if argument.expected_values %}
                                 <div class="expected_values">
                                     Expected values :
                                     <ul>
@@ -90,7 +90,7 @@
     </div>
 {% endif %}
 
-{% if page.text_search_fields != nil AND page.text_search_fields != '' %}
+{% if page.text_search_fields %}
     <h5>Text search arguments</h5>
 
     <div class="table-responsive">
@@ -102,8 +102,8 @@
                 </tr>
             </thead>
             <tbody>
-            {% if page.text_search_arguments %}
-                {% assign sorted = page.text_search_arguments | sort : 'name' %}
+            {% if layout.text_search_arguments %}
+                {% assign sorted = layout.text_search_arguments | sort : 'name' %}
                 {% for argument in sorted %}
                     {% assign overwritten = false %}
                     {% for pageargument in page.arguments %}
@@ -134,7 +134,7 @@
                                     Possible values : <strong>{{ page.text_search_fields }}</strong>
                                 </div>
                                 {% else %}
-                                    {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                                    {% if argument.expected_values %}
                                     <div class="expected_values">
                                         Expected values :
                                         <ul>
@@ -210,7 +210,7 @@
                 <td>
                     <p>{{ argument.description }}</p>
 
-                    {% if argument.expected_values != nil AND argument.expected_values != '' %}
+                    {% if argument.expected_values %}
                     <div class="expected_values">
                         Expected values :
                         <ul>
