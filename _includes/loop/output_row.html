@@ -13,7 +13,7 @@
             </thead>
             <tbody>
             {% if page.returns_global_outputs.countable == true %}
-                {% assign sorted = layout.global_outputs.countable | sort : 'name' %}
+                {% assign sorted = page.global_outputs.countable | sort : 'name' %}
                 {% for output in sorted %}
                 <tr>
                     <td>
@@ -27,7 +27,7 @@
             {% endif %}
 
             {% if page.returns_global_outputs.timestampable == true %}
-                {% for output in layout.global_outputs.timestampable %}
+                {% for output in page.global_outputs.timestampable %}
                 <tr>
                     <td>
                         {{ output.name }}
@@ -39,8 +39,8 @@
                 {% endfor %}
             {% endif %}
 
-            {% if page.returns_global_outputs.versionable == true %}
-                {% assign sorted = layout.global_outputs.versionable | sort : 'name' %}
+            {% if page.returns_global_outputs.versionable == truee != nil) %}
+                {% assign sorted = page.global_outputs.versionable | sort : 'name' %}
                 {% for output in sorted %}
                 <tr>
                     <td>
