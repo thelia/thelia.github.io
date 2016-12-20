@@ -768,7 +768,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Core event
 
 {% for event in page.events %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -777,7 +777,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Address event
 
 {% for event in page.eventsAddress %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -786,7 +786,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Admin event
 
 {% for event in page.eventsAdmin %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -795,7 +795,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Area event
 
 {% for event in page.eventsArea %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -804,7 +804,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Category event
 
 {% for event in page.eventsCategory %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -813,7 +813,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Content event
 
 {% for event in page.eventsContent %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -822,7 +822,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Country event
 
 {% for event in page.eventsCountry %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -831,7 +831,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Customer event
 
 {% for event in page.eventsCustomer %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -840,7 +840,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Folder event
 
 {% for event in page.eventsFolder %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -849,7 +849,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Product event
 
 {% for event in page.eventsProduct %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
@@ -858,7 +858,7 @@ This list is maybe not complete. All events constant are in [{{ page.eventClass 
 ### Shipping Zone event
 
 {% for event in page.eventsShippingZone %}
-####{{ event.name }}
+#### {{ event.name }}
 * constant name : {{ page.eventClass }}{{ event.const }}
 * Description : {{ event.desc }}
 * event class : <a href="{{ event.eventClassApi }}" target="_blank">{{ event.eventClass }}</a>
