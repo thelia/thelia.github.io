@@ -329,7 +329,7 @@ For example, this method attached to the ```main.stylesheet``` hook
 public function onMainStylesheet(HookRenderEvent $event)
 {
     $content = $this->addCSS('assets/css/styles.css');
-    $content = $this->addCSS('assets/css/print.css',
+    $content .= $this->addCSS('assets/css/print.css',
                              array("media" => "print"));
     $event->add($content);
 }
