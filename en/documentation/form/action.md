@@ -36,6 +36,7 @@ public function create(ActionEvent $event)
     }
 }
 ```
+
 # Error processing
 
 In a Thelia action, use the ActionEvent method `setErrorForm()` when your form is invalid. The event propagation will then be stopped.

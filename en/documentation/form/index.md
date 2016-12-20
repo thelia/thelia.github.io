@@ -155,7 +155,8 @@ To create a form type, you must create a class that extends ```Symfony\Component
 
 Then define ```buildForm``` and/or ```setDefaultOptions``` to create your type. You may also extend another type by overriding ```getParent```.
 
-When you're done, in your config.xml, just add the service like this:
+When you're done, in your config.xml, just add the service like this :
+
 ```xml
 <service id="your_type_id" class="Your\Super\Form\Type">
 	<tag name="thelia.form.type" />

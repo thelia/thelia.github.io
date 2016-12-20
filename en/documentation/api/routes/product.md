@@ -27,7 +27,7 @@ If you want to create a product, you have to send the following fields with the 
 - default\_category  : The product default [category](category.html) id
 - price  : The product default price
 - currency  : The product price [currency](currency.html) id
-- tax\_rule  : The product tax\_rule [tax rule](tax_rule.html)</a> id
+- tax\_rule  : The product tax\_rule [tax rule](tax_rule.html) id
 - weight  : The product weight (optional)
 - visible  : If true, the product will be visible (optional)
 

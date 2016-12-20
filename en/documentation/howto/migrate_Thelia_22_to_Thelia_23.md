@@ -15,100 +15,100 @@ subnav: howto_migrate_22_23
  * The `getDispatcher()` and `getName()` methods from `Symfony\Component\EventDispatcher\Event`
    are deprecated, the event dispatcher instance and event name can be received in the listener call instead.
 
-    Before:
+Before:
 
-    ```php
-    use Symfony\Component\EventDispatcher\Event;
+```php
+use Symfony\Component\EventDispatcher\Event;
 
-    class Foo
+class Foo
+{
+    public function myFooListener(Event $event)
     {
-        public function myFooListener(Event $event)
-        {
-            $dispatcher = $event->getDispatcher();
-            $eventName = $event->getName();
-            $dispatcher->dispatch('log', $event);
+        $dispatcher = $event->getDispatcher();
+        $eventName = $event->getName();
+        $dispatcher->dispatch('log', $event);
 
-            // ... more code
-       }
-    }
-    ```
+        // ... more code
+   }
+}
+```
 
-    After:
+After:
 
-    ```php
-    use Symfony\Component\EventDispatcher\Event;
-    use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+```php
+use Symfony\Component\EventDispatcher\Event;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
-    class MyListenerClass
+class MyListenerClass
+{
+    public function myListenerMethod(Event $event, $eventName, EventDispatcherInterface $dispatcher)
     {
-        public function myListenerMethod(Event $event, $eventName, EventDispatcherInterface $dispatcher)
-        {
-            $dispatcher->dispatch('log', $event);
+        $dispatcher->dispatch('log', $event);
 
-            // ... more code
-        }
+        // ... more code
     }
-    ```
+}
+```
 
-    While this above is sufficient for most uses, **if your module must be compatible with versions less than 2.3, or if your module uses multiple EventDispatcher instances,** you might need to specifically inject a known instance of the `EventDispatcher` into your listeners. This could be done using constructor or setter injection as follows:
+While this above is sufficient for most uses, **if your module must be compatible with versions less than 2.3, or if your module uses multiple EventDispatcher instances,** you might need to specifically inject a known instance of the `EventDispatcher` into your listeners. This could be done using constructor or setter injection as follows:
 
-    ```php
-    use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+```php
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
-    class MyListenerClass
+class MyListenerClass
+{
+    protected $dispatcher = null;
+
+    public function __construct(EventDispatcherInterface $dispatcher)
     {
-        protected $dispatcher = null;
-
-        public function __construct(EventDispatcherInterface $dispatcher)
-        {
-            $this->dispatcher = $dispatcher;
-        }
+        $this->dispatcher = $dispatcher;
     }
-    ```
+}
+```
 
 ## Request and RequestStack
 
  * The `Request` service are deprecated, you must now use the `RequestStack` service.
 
-    ##### In your loops
-    The way to recover the request does not change.
+##### In your loops
+The way to recover the request does not change.
 
-    To get the current request
+To get the current request
 
-    ```php
-    class MyLoopClass extends BaseLoop implements PropelSearchLoopInterface
+```php
+class MyLoopClass extends BaseLoop implements PropelSearchLoopInterface
+{
+    public function buildModelCriteria()
     {
-        public function buildModelCriteria()
-        {
-            // Get the current request
-            $request = $this->getCurrentRequest();
-            // Or
-            $request = $this->requestStack->getCurrentRequest();
+        // Get the current request
+        $request = $this->getCurrentRequest();
+        // Or
+        $request = $this->requestStack->getCurrentRequest();
 
-            // ... more code
-        }
+        // ... more code
     }
-    ```
+}
+```
 
-    ##### In your controllers
-    It's not recommended to use `getRequest()` and `getSession()`, the Request instance can be received in the action method parameters.
-    However, the `getRequest()` method returns the current request.
-    **Warning !!** This is not compatible with Thelia 2.0, because it uses Symfony 2.2
+##### In your controllers
+It's not recommended to use `getRequest()` and `getSession()`, the Request instance can be received in the action method parameters.
+However, the `getRequest()` method returns the current request.
+**Warning !!** This is not compatible with Thelia 2.0, because it uses Symfony 2.2
 
-    To get the current request
+To get the current request
 
-    ```php
-    use Thelia\Core\HttpFoundation\Request;
+```php
+use Thelia\Core\HttpFoundation\Request;
 
-    class MyControllerClass extends ...
+class MyControllerClass extends ...
+{
+    public function MyActionMethod(Request $request, $query_parameters ...)
     {
-        public function MyActionMethod(Request $request, $query_parameters ...)
-        {
-            $session = $request->getSession();
-            // ... more code
-        }
+        $session = $request->getSession();
+        // ... more code
     }
-    ```
+}
+```
 
 ## Container Scopes
 

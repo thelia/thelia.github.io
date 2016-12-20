@@ -6,7 +6,7 @@ lang: en
 subnav: api_controller
 ---
 
-#{{ page.title }}
+# {{ page.title }}
 
 <div class="alert alert-warning">You have to create a <a href="../modules/index.html">module</a> first</div>
 
