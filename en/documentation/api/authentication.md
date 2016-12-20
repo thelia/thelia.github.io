@@ -6,7 +6,7 @@ lang: en
 subnav: api_authentication
 ---
 
-#{{ page.title }}
+# {{ page.title }}
 
 <div class="alert alert-danger">
     For security reasons, you should always use the API over an SSL layer (https)

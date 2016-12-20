@@ -127,15 +127,15 @@ For displaying a field, you have to use the *{form_field}* block, and put the na
  * `$message` : the error message, defined if $error is true, empty otherwise.
  * `$choices` : an array of available choices. $choices is available only if your field has defined choices.
 
- ```smarty
+```smarty
 {form_field form=$form field="firstname"}
     {foreach $choices as $choice}
         label : {$choice->label}<br />
         data : {$choice->data}<br />
         value : {$choice->value}
     {/foreach}
- {/form_field}
- ```
+{/form_field}
+```
 
 ### Standardized form field generation
 

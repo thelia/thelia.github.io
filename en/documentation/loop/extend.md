@@ -6,7 +6,7 @@ lang: en
 subnav: loop_extend
 ---
 
-#{{ page.title }}
+# {{ page.title }}
 
 
 

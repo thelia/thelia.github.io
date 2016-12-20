@@ -7,7 +7,7 @@ lang: en
 subnav: substitution_config
 prefix: config
 attribute: key
-arguments : 
+arguments :
     - {name: "key", description: "The key variable"}
     - {name: "default", description: "The default value if variable doesn't exist. Default: \"\""}
 ---

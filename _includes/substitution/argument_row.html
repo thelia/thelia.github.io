@@ -1,11 +1,11 @@
 {% if page.arguments != nil %}
 <h3>
-    Arguments
+    {% if page.argument != nil and page.argument != '' %}`{{ page.argument }}` available values{% else %}Arguments{% endif %}
 </h3>
 
 <div class="table-responsive">
     <table class="table table-striped table-bordered">
-        % assign sorted = page.arguments | sort : 'name' %}
+        {% assign sorted = page.arguments | sort : 'name' %}
         {% for argument in sorted %}
         <tr>
             <td>

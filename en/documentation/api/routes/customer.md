@@ -24,7 +24,7 @@ If you want to create a customer, you have to send the following fields with the
 
 ##### General information
 
-- title : The [customer title](title.html) id</li>
+- title : The [customer title](title.html) id
 - firstname  : The customer first name
 - lastname  : The customer last name
 - email  : The customer email address
