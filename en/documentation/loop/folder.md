@@ -14,12 +14,14 @@ arguments :
     - {name: "parent", description: "A single folder id.", example: "folder=\"3\""}
     - {name: "current", description: "A boolean value which allows either to exclude current folder from results either to match only this folder", example: "current=\"yes\""}
     - {name: "content", description: "A single content id.", example: "content=\"3\""}
-    - {name: "not_empty", description: "A boolean value.", example: "not_empty=\"yes\"", default: "no"}
+    - {name: "not_empty", description: "(**not implemented yet**) A boolean value. If true, only the folders which contains at leat a visible content (either directly or trough a subfolder) are returned", example: "not_empty=\"yes\"", default: "no"}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of folder ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {name: "return_url", description: "A boolean value which allows the urls generation.", example: "return_url=\"no\"", default: "yes", from_version: "2.3"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.3"}
+    - {name: "need_count_child", description: "A boolean. If set to true, count how many subfolders contains the current foder", example: "need_count_child=\"yes\"", default: "true (for backward-compatibility)", from_version: "2.4"}
+    - {name: "need_content_count", description: "A boolean. If set to true, count how many contents contains the current folder", example: "need_content_count=\"yes\"", default: "true (for backward-compatibility)", from_version: "2.4"}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [
@@ -51,7 +53,8 @@ outputs :
     - {name: "$META_KEYWORDS", description: "the folder meta keywords"}
     - {name: "$URL", description: "the folder URL"}
     - {name: "$PARENT", description: "the parent folder"}
-    - {name: "$CONTENT_COUNT", description: "the number of visible contents for this folder"}
+    - {name: "$CHILD_COUNT", description: "Number of subfolders contained by the current forlder. Only available if <strong>need_count_child</strong> parameter is set to true"}
+    - {name: "$CONTENT_COUNT", description: "the number of visible contents for this folder. Only available if <strong>need_content_count</strong> parameter is set to true"}
     - {name: "$VISIBLE", description: "the folder visibility"}
     - {name: "$POSITION", description: "the folder position"}
     - {name: "$CREATE_DATE", description: "the folder create date"}
