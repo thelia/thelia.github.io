@@ -17,9 +17,9 @@ arguments :
     - {name: "exclude_product", description: "A single or list (since 2.3) product id to exclude.", example: "exclude_product=\"3\""}
     - {name: "content", description: "One or more content ID. When this parameter is set, the loop returns the categories related to the specified content IDs.", example: "content=\"3\"", from_version: "2.3"}
     - {name: "current", description: "A boolean value which allows either to exclude current category from results either to match only this category", example: "current=\"yes\""}
-    - {name: "not_empty", description: "(**not implemented yet**) A boolean value.", example: "not_empty=\"yes\"", default: "no"}
+    - {name: "not_empty", description: "(**not implemented yet**) A boolean value. If true, only the categories which contains at leat a visible product (either directly or trough a subcategory) are returned", example: "not_empty=\"yes\"", default: "no"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
-    - {name: "need_count_child", descripion: "A boolean. If set to true, count how many subcategories contains the current category", example: "need_count_child=\"yes\"", default: "false"}
+    - {name: "need_count_child", description: "A boolean. If set to true, count how many subcategories contains the current category", example: "need_count_child=\"yes\"", default: "false"}
     - {name: "need_product_count", description: "A boolean. If set to true, count how many products contains the current category", example: "need_product_count=\"yes\"", default: "false"}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
     - {name: "exclude", description: "A single or a list of category ids.", example: "exclude=\"2\", exclude=\"1,4,7\""}
@@ -56,7 +56,6 @@ outputs :
     - {name: "$META_KEYWORD", description: "the category meta keyword"}
     - {name: "$PARENT", description: "the parent category"}
     - {name: "$URL", description: "the category URL"}
-    - {name: "$PRODUCT_COUNT", description: "the number of visible products for this category"}
     - {name: "$CREATE_DATE", description: "the category create date"}
     - {name: "$UPDATE_DATE", description: "the category update date"}
     - {name: "$VERSION", description: "the category version"}
@@ -64,7 +63,7 @@ outputs :
     - {name: "$VERSION_AUTHOR", description: "the category version author"}
     - {name: "$POSITION", description: "the category position"}
     - {name: "$VISIBLE", description: "Return if the category is visible or not"}
-    - {name: "$PRODUCT_COUNT", description: "Number of product contained by the current category. Only available if <strong>need_product_count</strong> parameter is set to true"}
+    - {name: "$PRODUCT_COUNT", description: "Number of visible products contained by the current category. Only available if <strong>need_product_count</strong> parameter is set to true"}
     - {name: "$CHILD_COUNT", description: "Number of subcategories contained by the current category. Only available if <strong>need_count_child</strong> parameter is set to true"}
     - {name: "$HAS_PREVIOUS", description: "true if a category exists before this one in the current parent category, following categories positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
     - {name: "$HAS_NEXT", description: "true if a category exists after this one in the current parent category, following categories positions. Only available if <strong>with_prev_next_info</strong> parameter is set to true"}
