@@ -92,9 +92,10 @@ Or
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
     {/stylesheets}
 
-This block return only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
+This block returns only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
 
 The valid parameters are :
+
 - file
 - filters
 - source
@@ -146,7 +147,7 @@ The example above will use the style.css file, located in the `assets/css` direc
 
 #### failsafe ####
 
-When true, the failsafe parameter prevent the re-throw of exceptions when an asset is not found, even in development mode.
+When true, the failsafe parameter prevents the re-throw of exceptions when an asset is not found, even in development mode.
 Example usage of this parameter:
 
     {stylesheets file="assets/css/mystyle.css" failsafe=true}
@@ -156,19 +157,20 @@ Example usage of this parameter:
 
 ### {images} and {image} ###
 
-This directive process your statics images used in your template.
+These directives process static images used in your template.
 
     {images file='assets/img/favicon.ico'}
         <link rel="shortcut icon" type="image/x-icon" href="{$asset_url}">
     {/images}
 
-This block return only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
+This block returns only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
 
 You may also use the short form `{image}`, which directly returns the URL of the image :
 
     <img src="{image file='assets/img/kittens-and-babies.jpg'}" alt="Some text">
 
-The valid parameters are :
+The valid parameters are:
+
 - file
 - source
 - template
@@ -189,13 +191,14 @@ see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/asset
 
 ### {javascripts} and {javascript} ###
 
-This directive process your javascript files
+These directives process your javascript files
 
     {javascripts file='assets/js/script.js'}
         <script type="text/javascript" src="{$asset_url}"></script>
     {/javascripts}
 
-The valid parameters are :
+The valid parameters are:
+
 - file
 - source
 - template
@@ -220,7 +223,7 @@ see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/asset
 
 ### {asset} ###
 
-This directive process any asset file, and is only available in its short form. Example for a sound :
+This directive processes any asset file, and is only available in its short form. Example for an audio asset:
 
     <audio src="{asset file='assets/sound/my_sound.ogg'}" autoplay>
       Audio not supported.
