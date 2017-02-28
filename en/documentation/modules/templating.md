@@ -14,7 +14,7 @@ In your controller, you can use the templating engine to generate the content of
 
 2 helper functions are present to do this job : render and renderRaw
 
-The main difference is that `renderRaw` return the code (`string`) whereas `render` returns a response (`\Thelia\Core\HttpFoundation\Response`).
+The main difference is that `renderRaw` returns the rendered code (`string`) whereas `render` returns a response (`\Thelia\Core\HttpFoundation\Response`). That is, `renderRaw('response.html')` and `render('response.html')` will both attempt to render the `response.html` template: the former will simlpy return HTML rather an object.
 
 ## Example
 
