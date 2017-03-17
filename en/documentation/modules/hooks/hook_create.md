@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Create Hooks - Modules
+title: Hooks Quick Start - Modules
 sidebar: plugin
 lang: en
 subnav: plugin_hooks_create
