@@ -17,7 +17,7 @@ arguments :
     - {name: "exclude_product", description: "A single or list (since 2.3) product id to exclude.", example: "exclude_product=\"3\""}
     - {name: "content", description: "One or more content ID. When this parameter is set, the loop returns the categories related to the specified content IDs.", example: "content=\"3\"", from_version: "2.3"}
     - {name: "current", description: "A boolean value which allows either to exclude current category from results either to match only this category", example: "current=\"yes\""}
-    - {name: "not_empty", description: "(**not implemented yet**) A boolean value. If true, only the categories which contains at leat a visible product (either directly or trough a subcategory) are returned", example: "not_empty=\"yes\"", default: "no"}
+    - {name: "not_empty", description: "(**not implemented yet**) A boolean value. If true, only the categories which contains at least a visible product (either directly or through a subcategory) are returned", example: "not_empty=\"yes\"", default: "no"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {name: "need_count_child", description: "A boolean. If set to true, count how many subcategories contains the current category", example: "need_count_child=\"yes\"", default: "false"}
     - {name: "need_product_count", description: "A boolean. If set to true, count how many products contains the current category", example: "need_product_count=\"yes\"", default: "false"}
