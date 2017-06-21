@@ -13,6 +13,13 @@
             </td>
             <td>
                 {{ argument.description }}
+                {% if argument.from_version != nil AND argument.from_version != '' %}
+                    <span class="label label-info" title="From version {{ argument.from_version }}">&gt;= {{ argument.from_version }}</span>
+                {% endif %}
+                {% if argument.until_version != nil AND argument.until_version != '' %}
+                    <span class="label label-default" title="Until version {{ argument.until_version }}">&lt; {{ argument.until_version }}</span>
+                {% endif %}
+
             </td>
         </tr>
         {% endfor %}
