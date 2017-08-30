@@ -245,7 +245,7 @@ see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/asset
 
 ### {local_media} ###
 
-> This directive is available since Thelia 2.4.
+> This directive is available since Thelia 2.3.4.
 
 Some assets can be uploaded through the back-office (in Configuration > Store) and no longer require to be manually copied in the right folder. This features currently includes the store **logo**, the website **favicon** and the email template **banner**.
 
