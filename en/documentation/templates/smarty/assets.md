@@ -242,3 +242,44 @@ see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/asset
 #### template ####
 
 see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
+
+### {local_media} ###
+
+> This directive is available since Thelia 2.4.
+
+Some assets can be uploaded through the back-office (in Configuration > Store) and no longer require to be manually copied in the right folder. This features currently includes the store **logo**, the website **favicon** and the email template **banner**.
+
+    {local_media type="favicon" width=16 height=16}
+        <link rel="icon" type="{$MEDIA_MIME_TYPE}" href="{$MEDIA_URL}" />
+    {/local_media}
+    
+This block can return two parameters :
+- `$MEDIA_URL` : the URL of the media
+- `$MEDIA_MIME_TYPE` : **for favicons only**, the mime-type of the favicon file (ex : *image/x-icon*)
+    
+> Note that this directive requires no "file" parameter because it takes the file provided in the Store Configuration in back-office. If no file was provided, it will display the default Thelia logo, banner or favicon.
+
+> By default, the uploaded files are stored in *local/media/images/store*. You can change it by editing the system variable `images_library_path` in back-office (Configuration > System variables)
+
+The valid parameters are:
+
+- type
+- width
+- height
+- resize_mode
+
+#### type ####
+
+This is the type of the media. The currently allowed values are :  "logo", "banner" and "favicon".
+
+#### width ####
+
+Width of the transformed image. If the provided file is a .ico file, this value is ignored.
+
+#### height ####
+
+Height of the transformed image. If the provided file is a .ico file, this value is ignored.
+
+#### resize_mode ####
+
+Type of resize of the transformed image. The allowed values are : "crop", "borders" and "none". If the provided file is a .ico file, this value is ignored.
