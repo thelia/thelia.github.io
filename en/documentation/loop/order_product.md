@@ -10,6 +10,7 @@ returns_global_outputs: { countable : true, timestampable : true, versionable : 
 type: order_product
 arguments :
     - {name: "order", description: "A single order id.", example: "order=\"2\"", mandatory: "true"}
+    - {name: "id", description: "A single or a list of order product ids.", example: "id=\"2\", id=\"1,4,7\""}
     - {name: "virtual", description: "A boolean value.", example: "new=\"yes\""}
 outputs :
     - {name: "$ID", description: "the order product id"}
