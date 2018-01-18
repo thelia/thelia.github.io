@@ -17,4 +17,4 @@ and it will be parsed and included in the Back-office.
 
 Your file must have the same name as the hook you want your markup to affect. For example, if the hook name is ```product-edit```, my file name must be ```product-edit.html```.
 
-You can discover all available hooks if you put ```SHOW_INCLUDE=1``` in your query string. This only work in debug mode.
+You can discover all available hooks if you put ```SHOW_HOOK=1``` in your query string. This only work in debug mode.
