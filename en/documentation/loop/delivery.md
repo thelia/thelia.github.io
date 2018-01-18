@@ -15,6 +15,7 @@ arguments :
     - {name: "address", description: "An address id.", example: "address=21"}
     - {name: "state", description: "A state id.", example: "state=12", from_version: "2.3"}
     - {name: "exclude", description: "A list of module IDs to exclude from the results", example: "exclude=\"12, 21\""}
+    - {name: "exclude_code", description: "A list of module codes to exclude from the results", example: "exclude_code=\"Cheque,Atos\"", from_version: "2.4"}
     - {
         name: "order", description: "A single value in the list below", example: "order=\"id_reverse\"", default: "manual",
         expected_values: [

@@ -12,6 +12,7 @@ arguments :
     - {name: "id", description: "A module id.", example: "module=4"}
     - {name: "code", description: "A module code.", example: "code='Atos'"}
     - {name: "exclude", description: "A list of module IDs to exclude from the results", example: "exclude=\"12,21\""}
+    - {name: "exclude_code", description: "A list of module codes to exclude from the results", example: "exclude_code=\"Cheque,Atos\"", from_version: "2.4"}
     - {
         name: "order", description: "A single value in the list below", example: "order=\"id_reverse\"", default: "manual",
         expected_values: [
