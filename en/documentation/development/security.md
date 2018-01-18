@@ -32,6 +32,22 @@ Example:
 {token_url path="/delete/something" id=42}
 ```
 
+#### `router` and `route_id`
+
+<div class="alert alert-warning">
+<p>This functionality is only available since version 2.3</p>
+</div>
+
+Since the version 2.3, it's possible to generate an URL from the route id.
+The argument `router` has a default value the current environment (`front` or `admin`).
+
+    {token_url route_id="contact.success"}
+    {token_url route_id="admin.folders.update" folder_id=42}
+
+Example for a module :
+
+    {token_url router="paypal" route_id="paypal.configure"}
+
 ### Validation
 
 You have to use the ```thelia.token_provider``` service, that is an instance of ```Thelia\Tools\TokenProvider```.
