@@ -42,11 +42,13 @@ arguments :
           {name: "colorize:color",                       description: "apply a color mask to the image. The color format is $rgb or $rrggbb. Example: colorize:$ff2244."},
           {name: "negative",                             description: "transform the image in its negative equivalent."},
           {name: "vflip or vertical_flip",               description: "flip the image vertically."},
-          {name: "hflip or horizontal_flip",             description: "flip the image horizontally."}
+          {name: "hflip or horizontal_flip",             description: "flip the image horizontally."},
+          {name: "blur",                                 description: "blur the image. Example: blur:5"},
         ]
      }
     - {name: "ignore_processing_errors", description: "If true, the loop will return a result even if the image processing fails, and set the PROCESSING_ERROR variable to true if an error occurs. If false, images for which the processing fails are not returned.", example: "ignore_processing_errors=\"false\""}
     - {name: "allow_zoom", description: "If true, the loop il allowed to resize an image to match the required width and height, causing, in most cases, a quality loss. If false, the image will never be zoomed. Default is false.", example: "allow_zoom=\"true\""}
+    - {name: "base64", description: "If true, the loop will have a new output with the image in base64", example: "base64=\"true\""}
     - {name: "lang", description: "A language identifier, to specify the language in which the image information will be returned"}
     - {
         name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
@@ -62,6 +64,7 @@ outputs :
     - {name: "$ID", description: "the image ID"}
     - {name: "$LOCALE", description: "The locale used for this research"}
     - {name: "$IMAGE_URL", description: "The absolute URL to the generated image."}
+    - {name: "$IMAGE_BASE64", description: "only available if base64 param is set to true"}
     - {name: "$ORIGINAL_IMAGE_URL", description: "The absolute URL to the original image"}
     - {name: "$IMAGE_PATH", description: "The absolute path to the generated image file"}
     - {name: "$ORIGINAL_IMAGE_PATH", description: "The absolute path to the original image file"}
@@ -74,6 +77,7 @@ outputs :
     - {name: "$OBJECT_ID", description: "The object ID"}
     - {name: "$VISIBLE", description: "true if the image is visible. False otherwise"}
     - {name: "$PROCESSING_ERROR", description: "true if the image processing fails. In this case, $IMAGE_URL, $ORIGINAL_IMAGE_URL, and $IMAGE_PATH will be empty."}
+
  
 examples :
     - {description: "Resize category images the 200x100, adding (white) borders if required.", code: ""}
