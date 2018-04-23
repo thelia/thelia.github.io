@@ -61,7 +61,7 @@ To select the current template, set the name of the template directory in the fo
 ## Global Variables
 
 <div class="alert alert-warning">
-<p>This functionality is only available since version 2.4</p>
+<p>This functionality is only available since version 2.3.4</p>
 </div>
 
 The app variable is available everywhere and gives access to many commonly needed objects and values.
