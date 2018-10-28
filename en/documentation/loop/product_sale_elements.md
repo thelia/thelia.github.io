@@ -21,6 +21,8 @@ arguments:
             expected_values: [
                 {name: "id",                description: "ascending id",        from_version: "2.3"},
                 {name: "id_reverse",        description: "descending id",       from_version: "2.3"},
+                {name: "ref",               description: "ascending reference",        from_version: "2.4"},
+                {name: "ref_reverse",       description: "descending reference",       from_version: "2.4"},
                 {name: "min_price",         description: "ascending price"},
                 {name: "max_price",         description: "descending price"},
                 {name: "promo",             description: "promo products first"},

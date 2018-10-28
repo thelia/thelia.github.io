@@ -14,7 +14,7 @@ Be sure to have a basic Smarty knowledge before starting to write a new template
 
 The `default` templates provides guidelines and good practices to build a Thelia template.
 
-[Template inheritance](content.html#template-inheritance-from-thelia-24) is available from Thelia 2.4.
+[Template inheritance](content.html#template-inheritance-from-thelia-24) is available from Thelia 2.4. You can now create a new template, and redefine only the required files instead of copying the whole template.
 
 ## Structure of a template ##
 
