@@ -10,7 +10,7 @@ lang: en
     <h1>Requirements</h1>
 </div>
 
-* PHP 5.5
+* PHP 5.5 to 7.2
     * Required extensions :
         * PDO_Mysql
         * openssl
@@ -55,7 +55,7 @@ SET @@GLOBAL.sql_mode='NO_ENGINE_SUBSTITUTION', @@SESSION.sql_mode='NO_ENGINE_SU
 For more information on sql_mode you can consult the [MySQL doc](http://dev.mysql.com/doc/refman/5.0/fr/server-sql-mode.html "sql Mode")
 
 ## Archive builders
-Thelia's archive builder's needs external libraries.
+Thelia's archive builders need external libraries.
 For zip archives, you need PECL zip. See [PHP Doc](http://php.net/manual/en/zip.installation.php)
 
 For tar archives, you need PECL phar. Moreover, you need to deactivate php.ini option "phar.readonly":
@@ -73,7 +73,7 @@ For tar.gz archives, you need tar's dependencies and the extension "zlib". See [
 
 ## Downloading Thelia 2
 
-You can download Thelia by two different way
+You can download Thelia using the following methods :
 
 ### Download the full distribution on Thelia website
 
@@ -82,7 +82,7 @@ Go to this page and download the zip file : [http://thelia.net/#download](http:/
 Then unzip the file.
 
 
-### Using composer
+### Using composer 'create-project' command
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | php
@@ -93,7 +93,7 @@ Be sure to have git installed on your machine as it is required to install some 
 
 ## Installing Thelia
 
-You can install Thelia by two different way
+You can install Thelia using the web wizard or a console
 
 ### Using install wizard
 
@@ -113,7 +113,7 @@ For example, I have thelia downloaded at http://thelia.net and my vhost is corre
 http://thelia.net/install
 ```
 
-### Using cli tools
+### Using console cli tools
 
 ```bash
 $ php Thelia thelia:install
@@ -122,7 +122,7 @@ $ php Thelia thelia:install
 You just have to follow all instructions.
 
 
-### After installing Thelia
+### After installation
 
 Remove the ```web/install``` directory
 
@@ -132,7 +132,7 @@ Remove the ```web/install``` directory
 $ php Thelia admin:create
 ```
 
-## How to insert fake data ?
+## How to insert demo data ?
 
 For a demo with fake but realistic products
 

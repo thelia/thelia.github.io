@@ -20,8 +20,9 @@ arguments :
     - {name: "lang", description: "A lang id", example: "lang=\"1\""}
     - {name: "return_url", description: "A boolean value which allows the urls generation.", example: "return_url=\"no\"", default: "yes", from_version: "2.3"}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.3"}
-    - {name: "need_count_child", description: "A boolean. If set to true, count how many subfolders contains the current foder", example: "need_count_child=\"yes\"", default: "true (for backward-compatibility)", from_version: "2.4"}
-    - {name: "need_content_count", description: "A boolean. If set to true, count how many contents contains the current folder", example: "need_content_count=\"yes\"", default: "true (for backward-compatibility)", from_version: "2.4"}
+    - {name: "need_count_child", description: "A boolean. If set to true, the loop will return the number of sub-folders of each folder", example: "need_count_child=\"yes\"", default: "true (for backward-compatibility)", from_version: "2.4"}
+    - {name: "need_content_count", description: "A boolean. If set to true, the loop will return the number of contents in each folder and its sub-folders", example: "need_content_count=\"yes\"", default: "true (for backward-compatibility)", from_version: "2.4"}
+    - {name: "content_count_visible", description: "This parameter controls how content is counted. If 'yes' (the default) only visible contents are counted, 'no': only hidden contents are counted, '*': all contents are counted.", example: "content_count_visible=\"*\"", default: "yes", from_version: "2.4"}
     - {
         name: "order", description: "A list of values", example: "order=\"random\"", default: "manual",
         expected_values: [

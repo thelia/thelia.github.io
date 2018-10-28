@@ -49,13 +49,16 @@ By default, the template file to render is located inside your module in the `te
 
 ## Overrides and fallbacks
 
-When you call the `render` function inside your module, Thelia will apply rules to define which file to use. Thus, persons could override template files without having to change the module files.
+When you call the `render` function inside your module, Thelia will apply the following set of rules to find the file that will be rendered. 
 
 Example : if we use the frontOffice template `mytemplate`, and render `myrender` file inside `mymodule` module :
 
 1. Thelia will first test if file `templates/frontOffice/mytemplate/myrender.html` exists and will use it.
-2. Then it will test the file `/local/modules/mymodule/templates/frontOffice/mytemplate/myrender.html`.
-3. By default, Thelia will stop here and generate an error if the file has not been founded. But, in your controller, if you have set variable `$useFallbackTemplate` to `true`, then Thelia will finally fall back on file `/local/modules/mymodule/templates/frontOffice/default/myrender.html`.
+2. Then it will search for `templates/frontOffice/mytemplate/modules/mymodule/myrender.html`.
+3. Then it will try `/local/modules/mymodule/templates/frontOffice/mytemplate/myrender.html`.
+4. By default, Thelia will stop here and generate an error if the file was not found. However, if you've set the `$useFallbackTemplate`variable to `true` in your controller (this is the default), Thelia will enventually use `/local/modules/mymodule/templates/frontOffice/*default*/myrender.html`.
+
+This way, you can override a module's template file either in the front office template (rule 2), or in the in the module's template directory (rule 3)
 
 ```php
 <?php
