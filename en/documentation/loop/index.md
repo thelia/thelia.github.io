@@ -10,7 +10,9 @@ subnav: loop_index
 
 Loops are the most convenient feature in Thelia for front developers. Already there in Thelia's first version, they deserved a makeover for Thelia v2.
 
-Loops allow to gather data from your shop and display them in your front view. In Thelia v2, loops are a <a href="http://www.smarty.net" target="_blank">Smarty v3</a> plugin.
+Loops allow to get data from your shop back-end and display them in your front view. In Thelia v2, loops are a <a href="http://www.smarty.net" target="_blank">Smarty v3</a> plugin.
+
+From Thelia 2.4.0, when an unknown loop type is found in a template, no exeption is thrown in production mode, and an error is added to the log. In development mode, the exception is thrown as before. This way, disabling a module will no longer break a front office where this plugin's loops are used.
 
 ### Classic loop
 
