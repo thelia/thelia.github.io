@@ -57,6 +57,9 @@ outputs :
     - {name: "$STATUS_CODE", description: "the order status code (2.2)"}
     - {name: "$LANG", description: "the order language id"}
     - {name: "$DISCOUNT", description: "the order discount"}
+    - {name: "$TOTAL_ITEMS_TAX", description: "the total tax amount for of the ordered items only, without postage tax (2.4+)"}
+    - {name: "$TOTAL_ITEMS_AMOUNT", description: "the total amount for ordered items, excluding taxes (2.4+)"}
+    - {name: "$TOTAL_TAXED_ITEMS_AMOUNT", description: "the total amount for ordered items, including taxes (2.4+)"}
     - {name: "$TOTAL_TAX", description: "the order taxes amount"}
     - {name: "$TOTAL_AMOUNT", description: "the order amount without taxes"}
     - {name: "$TOTAL_TAXED_AMOUNT", description: "the order amount including taxes"}
