@@ -29,7 +29,7 @@ If you want to create a customer, you have to send the following fields with the
 - lastname  : The customer last name
 - email  : The customer email address
 - password  : The customer password
-- lang : The customer [lang](lang.html) id
+- lang_id : The customer [lang](lang.html) id
 
 
 ##### The address
@@ -53,7 +53,7 @@ If you want to create a customer, you have to send the following fields with the
     "country": 64,
     "email": "dev@thelia.net",
     "password": "azerty",
-    "lang": 1
+    "lang_id": 1
 }
 ```
 
@@ -75,7 +75,7 @@ Moreover, you have to add the "id" field.
     "zipcode": 63100,
     "country": 64,
     "email": "foo@thelia.net",
-    "lang": 1
+    "lang_id": 1
 }
 ```
 
