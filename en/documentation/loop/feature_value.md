@@ -30,11 +30,11 @@ outputs :
     - {name: "$PRODUCT", description: "the id of the product. Deprecated, please use $PRODUCT_ID instead"}
     - {name: "$PRODUCT_ID", description: "(2.2) the id of the product"}
     - {name: "$FEATURE_AV_ID", description: "the feature av. ID. Null if the feature ha no feature av. Use FREE_TEXT_VALUE in this case."}
-    - {name: "$IS_FREE_TEXT", description: "1 if this feature is free text, 0 otrherwise."}
+    - {name: "$IS_FREE_TEXT", description: "1 if this feature is free text, 0 otherwise."}
     - {name: "$IS_FEATURE_AV", description: "1 if this feature is feature av., 0 otherwise."}
-    - {name: "$FREE_TEXT_VALUE", description: "the free text value. Null if the feature has feature availability."}
+    - {name: "$FREE_TEXT_VALUE", description: "1 if this feature is free text, 0 otherwise. Deprecated in 2.4"}
     - {name: "$LOCALE", description: "the locale of returned results"}
-    - {name: "$TITLE", description: "the feature availability title"}
+    - {name: "$TITLE", description: "the feature availability title, or the feature value text for free text features."}
     - {name: "$CHAPO", description: "the feature availability chapo"}
     - {name: "$DESCRIPTION", description: "the feature availability description"}
     - {name: "$POSTSCRIPTUM", description: "the feature availability postscriptum"}
