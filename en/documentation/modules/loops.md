@@ -40,7 +40,7 @@ It's a matter of data type. If the data your loop returns come from the database
 
 The *parseResults* method is used to render the template. It must return a [Thelia\Core\Template\Element\LoopResult](/api/master/Thelia/Core/Template/Element/LoopResult.html) instance.
 
-The getArgDefinitions method defines all args used in your loop. Args can be mandatory, optional, with default value, etc. This method must return an [Thelia\Core\Template\Loop\ArgumentCollection](). ArgumentCollection contains [Thelia\Core\Template\Loop\Argument]() which contains a [Thelia\Type\TypeCollection](). Types in the collection must implement [Thelia\Type\TypeInterface](). You can check here the [available types](/documentation/features/types).
+The getArgDefinitions method defines all args used in your loop. Args can be mandatory, optional, with default value, etc. This method must return an [Thelia\Core\Template\Loop\Argument\ArgumentCollection](/api/master/Thelia/Core/Template/Loop/Argument/ArgumentCollection.html). ArgumentCollection contains [Thelia\Core\Template\Loop\Argument](/api/master/Thelia/Core/Template/Loop/Argument.html) which contains a [Thelia\Type\TypeCollection](/api/master/Thelia/Type/TypeCollection.html). Types in the collection must implement [Thelia\Type\TypeInterface](/api/master/Thelia/Type/TypeInterface.html). You can check here the [available types](../development/types).
 
 If you don't define your arguments here, you can't use them in your new loop. All arguments are accessible in the ```parseResults``` method.
 
