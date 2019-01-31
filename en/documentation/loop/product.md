@@ -43,6 +43,8 @@ arguments :
     - {name: "currency", description: "A currency id", example: "currency=\"1\""}
     - {name: "title", description: "filter by title", example: "title=\"foo\""}
     - {name: "return_url", description: "A boolean value which allows the urls generation.", example: "return_url=\"no\"", default: "yes", from_version: "2.3"}
+    - {name: "tax_rule_id", description: "Filter products having this tax rule ID", example: "tax_rule_id=21", from_version: "2.4"}
+    - {name: "exclude_tax_rule_id", description: "Filter products not having this tax rule ID", example: "exclude_tax_rule_id=21", from_version: "2.4"}
     - {
         name: "attribute_non_strict_match",
         description: "<strong>Only available if complex='true'</strong><br />promo, new, quantity, weight or price may differ in the different product sale element depending on the different attributes. This parameter allows to provide a list of non-strict attributes.",
