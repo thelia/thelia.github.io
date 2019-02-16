@@ -32,6 +32,8 @@ arguments :
           {name: "customer-name-reverse",           description: "reverse customer name order"},
           {name: "status",           description: "status order"},
           {name: "status-reverse",           description: "reverse status order"}
+          {name: "invoice-date",           description: "invoice date order"}
+          {name: "invoice-date-reverse",           description: "reverse invoice date order"}
       ]
     }
 
