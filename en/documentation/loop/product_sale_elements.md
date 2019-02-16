@@ -15,6 +15,7 @@ arguments:
     - {name: "product", description: "A single product id. Mandatory if the 'id' parameter is not present", example: "product=\"2\""}
     - {name: "new", description: "A boolean value. If true, returns only product sale elements for which promo is on. The reverse with 'false'", example: "new=\"yes\""}
     - {name: "promo", description: "A boolean value. If true, returns only product sale elements for which new is on. The reverse with 'false'", example: "promo=\"yes\""}
+    - {name: "visible", description: "A boolean value, or * (the default) for ignoring this filter", example: "visible=\"no\"", default: "*", from_version: "2.4"}
     - {name: "default", description: "A boolean value. If true, returns only the default product sale elements. If false, the default product sale element is not returned", example: "default=\"yes\""}
     - {
             name: "order", description: "A list of values", example: "order=\"promo,min_price\"", default: "random",
