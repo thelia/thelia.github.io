@@ -23,10 +23,18 @@ arguments :
     - {
         name: "order", description: "A list of values", example: "order=\"alpha_reverse\"", default: "manual",
         expected_values: [
-            {name: "alpha",             description: "alphabetical order on title"},
-            {name: "alpha-reverse",     description: "reverse alphabetical order on title"},
-            {name: "manual",            description: "order by ascending position"},
-            {name: "manual-reverse",    description: "order by descending position"}
+            {name: 'id',              description: "ascending order on module id"},
+            {name: 'id_reverse',      description: "descending order on module id"},
+            {name: 'code',            description: "alphabetical order on module code"},
+            {name: 'code_reverse',    description: "reverse alphabetical order on module code"},
+            {name: 'title',           description: "alphabetical order on title"},
+            {name: 'title_reverse',   description: "reverse alphabetical order on title"},
+            {name: 'type',            description: "ascending order on module type"},
+            {name: 'type_reverse',    description: "descending order on module type"},
+            {name: 'manual',          description: "ascending order on module position (the default)"},
+            {name: 'manual_reverse',  description: "descending order on module position"},
+            {name: 'enabled',         description: "ascending order on module enabled status"},
+            {name: 'enabled_reverse', description: "descending order on module enabled status"}
         ]
     }
 outputs :
