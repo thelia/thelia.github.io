@@ -30,7 +30,7 @@ arguments :
     - {name: "min_stock", description: "An integer value. Equal value matches.", example: "min_stock=\"3\""}
     - {name: "min_weight", description: "A float value. Equal value matches.", example: "min_weight=\"32.1\""}
     - {name: "max_weight", description: "A float value. Equal value matches.", example: "max_weight=\"32.1\""}
-    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $HAS_PREVIOUS, $HAS_NEXT, $PREVIOUS, and $NEXT output variables are available.", example: "with_prev_next_info=\"yes\"", default: "false"}
     - {name: "brand", description: "A single or a list of brand ids.", example: "brand=\"2\", brand=\"1,4,7\""}
     - {name: "current", description: "A boolean value which allows either to exclude current product from results either to match only this product", example: "current=\"yes\""}
     - {name: "visible", description: "A boolean value.", example: "visible=\"no\"", default: "yes"}
