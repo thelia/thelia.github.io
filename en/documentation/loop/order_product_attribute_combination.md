@@ -19,6 +19,8 @@ arguments :
       }
 
 outputs :
+    - {name: "$ID", description: "the order product attribute combination ID"}
+    - {name: "$ORDER_PRODUCT_ID", description: "the related order product ID"}
     - {name: "$ATTRIBUTE_TITLE", description: "the order product attribute title"}
     - {name: "$ATTRIBUTE_CHAPO", description: "the order product attribute chapo"}
     - {name: "$ATTRIBUTE_DESCRIPTION", description: "the order product attribute description"}
