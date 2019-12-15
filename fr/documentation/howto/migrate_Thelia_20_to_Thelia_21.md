@@ -23,7 +23,7 @@ Ci-dessous la liste des templates à modifier :
 
 - cart.html :
     - Formulaire de mise à jour des quantités : `<form action="{token_url path="/cart/update"}"`
-    - Lien de suppression d'un rticle du panier : ` <a href="{token_url path="/cart/delete/$ITEM_ID"}">`
+    - Lien de suppression d'un rticle du panier : `<a href="{token_url path="/cart/delete/$ITEM_ID"}">`
 - mini-cart.html
     - Lien de suppression d'un article du panier : `<a href="{token_url path="/cart/delete/$ITEM_ID"}">`
 
@@ -48,4 +48,5 @@ Par exemple :
 Les hooks sont une fontionnalité nouvelle de Thelia 2.1. Leur utilisation est facultative et vous pouvez utiliser vos templates actuels sans les hooks.
 Cependant si ils ne sont putilisés, certains modules développées pour Thelia 2.1 ne fonctionneront pas car ils font appels aux hooks.
 
-La documentationexplique comment fonctionnent les hooks et contient la liste officielle de tous les hooks Thelia : [documentation des hooks](/fr/documentation/modules/hooks/index.html)
+La documentationexplique comment fonctionnent les hooks et contient la liste officielle de tous les hooks Thelia :
+[documentation des hooks](/fr/documentation/modules/hooks/index.html)

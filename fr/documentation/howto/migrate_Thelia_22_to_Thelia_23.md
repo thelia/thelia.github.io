@@ -48,8 +48,8 @@ class MyListenerClass
     }
 }
 ```
-
-While this above is sufficient for most uses, **if your module must be compatible with versions less than 2.3, or if your module uses multiple EventDispatcher instances,** you might need to specifically inject a known instance of the `EventDispatcher` into your listeners. This could be done using constructor or setter injection as follows:
+Bien que cet exemple soit suffisant dans la plupart des cas, **si votre module doit être compatible avec des version antérieures à la 2.3, ou si vos modules utlisent de multiples instances Eventdispatcher**, vous aurez besoin d'injecter explicitememt le dispatcher d'événement `EventDispatcher` dans les écouteurs d'événements (Listeners).
+Cela peut se faire en injectant via le constructeur ou via une setter comme suit :
 
 ```php
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -65,7 +65,7 @@ class MyListenerClass
 }
 ```
 
-## Request and RequestStack
+## Les services Request and RequestStack
 
  * Le service `Request` est déprécié,  ous devez désormais utiliser le service `RequestStack`.
 
