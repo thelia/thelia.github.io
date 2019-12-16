@@ -65,9 +65,9 @@ class MyListenerClass
 }
 ```
 
-## Les services Request and RequestStack
+## Les services Request et RequestStack
 
- * Le service `Request` est déprécié,  ous devez désormais utiliser le service `RequestStack`.
+ * Le service `Request` est déprécié,  vous devez désormais utiliser le service `RequestStack`.
 
 
 ##### Dans vos boucles
