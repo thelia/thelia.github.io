@@ -25,7 +25,6 @@ Certains modules pourraient impléménter des stratégies plus sophistiquées, v
 
 La fonction Smarty `{url}` a un nouveau paramètre `base_url` qui permet de créer des urls vers les CDN depuis un template. Ceci est très utile si vous manipulez des assets se trouvant en dehors des répertoires pris en charge par le système de gestion des assets de Thelia. Pour télécharger un script situé ailleurs que dans le répertoire standard, par exemple  web/mes-assets, vous pouvez utiliser le paramètre `base_url`pour définir le chemin vers le CDN.
 
-
 ```smarty
 {url file="my-own-assets/js/vendors/tarteaucitron/tarteaucitron.js" base_url={config key='cdn.assets-base-url'}}
 ```

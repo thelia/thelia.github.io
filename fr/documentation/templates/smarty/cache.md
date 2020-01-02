@@ -75,7 +75,6 @@ Vous pouvez désactiver la mise en cache d'un block sans pour autant le supprime
 {/cache}
 ```
 
-
 <div class="alert alert-info">
 <p>En mode développement, la mise en cache est ésactivée.</p>
 </div>

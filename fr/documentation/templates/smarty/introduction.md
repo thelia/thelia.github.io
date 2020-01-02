@@ -64,7 +64,7 @@ Pour sélectionner le template actif, indiquez le nom du dossier du template dan
 ## Variables globales
 
 <div class="alert alert-warning">
-<p>Cette fonctionnalité n'est disponible que depuis la version 2.3.4</p>
+  <p>Cette fonctionnalité n'est disponible que depuis la version 2.3.4</p>
 </div>
 
 La variable `$app` est accessible dans tous les templates et vous donnes accès aux objets et valeurs fréquemment utilisés.

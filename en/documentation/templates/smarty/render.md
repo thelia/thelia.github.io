@@ -8,7 +8,7 @@ subnav: templates_smarty_render
 
 # Render
 
-The render function takes a mandatory argument ```action```, that is the method of the action. It supports ```a:b:c``` notation. 
+The render function takes a mandatory argument ```action```, that is the method of the action. It supports ```a:b:c``` notation.
 Example:
 
 ```smarty

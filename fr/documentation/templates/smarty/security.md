@@ -1,17 +1,17 @@
 ---
 layout: home
-title: Thelia Template Internationalisation
+title: Sécurité des templates Thelia
 sidebar: templates
 lang: fr
 subnav: templates_smarty_security
 ---
 
-# Security
-If you need to do some security checks in your pages, Thelia provides you some Smarty functions to help you.
+# Securité
+Si vous avez besoin de faire des vérifications relatives à la sécurité dans vos pages, Thelia fournit quelques fonctions Smarty pour vous aider.
 
-Those functions must be placed in a Smaty block called "no-return-functions" like this:
+Ces fonction doivent être placées dans un bloc Smarty appellé `no-return-functions` comme ceci :
 
-{% highlight smarty %}
+```smarty
 
 {block name="no-return-functions"}
     {check_auth role="CUSTOMER" login_tpl="login"}
@@ -19,32 +19,33 @@ Those functions must be placed in a Smaty block called "no-return-functions" lik
     {check_valid_delivery}
 {/block}
 
-{% endhighlight %}
+```
 
-## Check the user authentication
 
-The function **check_auth** can be used to know if the user is granted to view something.
+## Vérification de l'identité d'un utilisateur
 
-Example:
-{% highlight smarty %}
+La fonction **check_auth** peut être utilisée pour vérifier si un utilisateur a accès à une ressource, voir telle ou telle page.
+
+Exemple:
+```smarty
 
 {check_auth role="CUSTOMER" login_tpl="login"}
 
 {check_auth resource="admin.address" access="VIEW" login_tpl="login"}
 
-{% endhighlight %}
+```
 
-### role
+### Rôle
 
-In Thelia 2, a user can only have one of these two roles:
+Dans Thelia 2.0 un utilisateur ne peut avoir que l'un de ces deux rôles :
 
-- ADMIN : an administrator of the site
-- CUSTOMER : a registed and logged in customer
+- ADMIN : un administrateur du site
+- CUSTOMER : un client enregistré et connecté
 
-### resource
+### Ressource
 
-The resource argument may be useful in the back office.
-There is the list of the available resources in Thelia 2:
+L'argument ressource peut être utile en back-office.
+Voici la liste des ressources disponibles dans Thelia 2.0 :
 
     admin.address
     admin.configuration.administrator
@@ -80,50 +81,53 @@ There is the list of the available resources in Thelia 2:
     admin.export.customer.newsletter
     admin.tools
 
-### module
+### Module
 
-Name of the module(s) which the user must have access.
-Example:
+Le nom du module auquel l'utilisateur a accès.
 
-{% highlight smarty %}
+Exemple:
+
+```smarty
 {block name="no-return-functions"}
     {check_auth role="ADMIN" module="Colissimo" access="UPDATE" login_tpl="login"}
 {/block}
-{% endhighlight %}
+```
 
-### access
+### Accès
 
-There is 4 types of access to a resource:
+Il existe 4 types d'accès aux ressources :
 
-- CREATE : create a new entry
-- VIEW : view the resource
-- UPDATE : update the resource
-- DELETE : delete the resource
+- CREATE : creér une nouvelle ressource
+- VIEW : voir une ressource
+- UPDATE : merttre à jour une ressource
+- DELETE : supprimer une ressource
 
-Those accesses can be configured from the back office, tab "Configuration", on "Administration Profile".
+Ces accès peuvent être configurés dans le back-office, onglet "Configuration", dans "Gestion des profils".
 
-### login_tpl
 
-This argument is the name of the view name (the login page is "login").
-If the user is not granted and this argument is defined, it redirects to this view.
+### Le paramètre `login_tpl`
 
-## Check if the cart is empty
+Cet argument est le nom de la vue de connexion.
+Si l'utilisateur n'a pas accès à une ressource et que ce paramètre est défini, il sera redirigé vers cette page.
 
-This function checks if the customer's cart is empty, and redirects to the route "cart.view" if it is.
+## Vérifier si le paneier est vide
 
-{% highlight smarty %}
+Cette fonction vérifie si le panier du client est vide et redirige ves la route `cart.view` si c'est le cas.
+
+
+```smarty
 {block name="no-return-functions"}
     {check_cart_not_empty}
 {/block}
 
-{% endhighlight %}
+```
 
-## Check if a delivery module has been selected and if the address is valid
+## Vérifier si un mode de livraison est sélectionné et si l'adresse est valide
 
 Check if the delivery module and address are valid, redirects to the route "order.delivery" if not.
 
-{% highlight smarty %}
+```smarty
 {block name="no-return-functions"}
     {check_valid_delivery}
 {/block}
-{% endhighlight %}
+```

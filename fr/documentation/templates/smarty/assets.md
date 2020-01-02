@@ -1,14 +1,14 @@
 ---
 layout: home
-title: Gestion des assets d'un template Thelia
+title: Gestion des ressources d'un template Thelia
 sidebar: templates
 lang: fr
 subnav: templates_smarty_assets
 ---
 
-# Managing Template Assets
+# Gérer les ressources d'un template
 
-Template assets are managed in a sub-directory of the template directory. For example, the default front-office template contains an 'assets' directory to store all template's assets :
+Les ressources (assets) d'un tempalate sont gérés dans un sour répertoire du template. Par exemple, le répertoire du template `default`a un répertoire `assets` qui contient toutes les ressources du template :
 
     template
     |
@@ -25,76 +25,88 @@ Template assets are managed in a sub-directory of the template directory. For ex
           + img
           + ...
 
-Thus, assets are not available to the Web server, as they're not physically located in the 'web' directory.
+Ainsi les ressources/assets ne sont pas directement acdessibles au serveur web n'étant pas situés physiquement dans le répertoire `/web`.
+Cependant Thelia fournit un moyen de rendre ces assets disponibles au serveur web via un pré traitement si nécessaire. Par exemple compiler un fichier CSS au format `.less` ou un fichier CoffeeScript. Cette fonctionnalité est implémentée via la [librairie Assetic](https://github.com/kriswallsmith/assetic).
 
-However, Thelia provides a way to make the assets available to the web server, while pre-processing it if required. For example, compile a LESS css, or a CoffeesSript JS file. This feature is implemented by the [Assetic library](https://github.com/kriswallsmith/assetic).
+## Activer la génération automatique de ressources
 
-## Activate automatic assets generation
+Même si Thelia utilise un cache et intègre un système de vérification de modification de fichiers, la génération des ressources est une ta^che chronophage et pourrait avoir avoir un impact sur les performances de votre site. C'est la raison pour laquelle la génération automatique des assets est désactivée par défaut.
 
-Even if Thelia uses a cache and a file modification checking system, assets generation is time consuming and may have an impact on your shop performances. Thus, automatic assets generation is disabled by default.
+Pour activer la génération automatique vous devez :
 
-To activate it you have to :
-
-1. Set the `process_assets` configuration variable to 1
-2. Access your shop in development mode, using `index_dev.php` instead of `index.php`, e.g. `http://www.myshop.com/index_dev.php` instead of `http://www.myshop.com`.
+1. Passez la variable de configuration `process_assets` à 1
+2. Accédez à la boutique en mode développment via `index_dev.php`
+Si le serveur web n'est pas sur votre machine (en local), vous devrez ajoutez l'adresse IP de la machine à la liste blanche des adresses autorisées à accéder au fichier `index_dev.php` :
 
 If the web server is not installed on your local machine, you have to add your workstation IP address to the allowed list of IP in the `index_dev.php` file :
 
-    // List of allowed IP
-    $trustedIp = array(
-      '::1',
-      '127.0.0.1',
-      'your.ip.goes.here',
-    );
+```php
+// List of allowed IP
+$trustedIp = array(
+  '::1',
+  '127.0.0.1',
+  'votre.adresse.ip.ici',
+);
+```
 
-> From Thelia 2.2, the structure of the assets of the default front-office template has changed, and are managed with Grunt and Bower (read more about [Grunt and Bower on Thelia School](http://thelia-school.com/utiliser-grunt-et-bower-pour-vos-templates-thelia.html)). The `src` directory contains the assets sources, and the `dist` directory contains the generated assets.
+> À partir de Thelia 2.2, la structure des assets du template par défaut a changé et sont gérés avec Grunt et Bower (en savoir plus : [Grunt and Bower on Thelia School](http://thelia-school.com/utiliser-grunt-et-bower-pour-vos-templates-thelia.html)). Le dossier `src` contien les fichiers sources des ressources et le dossier `dist` contient les fichiers générées/compliés.
+> Cependant vous pouvez toujours profités de la génération automatique depuis les fichiers sources. Pour cela il vous suffit de changer dans le fichier `layout.tpl`du template par défaut par exemple
 >
 > However, you can still enjoy automatic assets generation from sources. To do do, just change in the layout.tpl file of the default front-office template :
->
-> `{stylesheets file='assets/dist/css/thelia.min.css'}`
-> by :
-> `{stylesheets file='assets/src/less/thelia.less' filters='less'}`
->
-> The assets will then be automatically generated when a change is detected in the source.
+
+>```smarty
+> {stylesheets file='assets/dist/css/thelia.min.css'}
+>```
+> par :
+```smarty
+> {stylesheets file='assets/src/less/thelia.less' filters='less'}
+>```
+> Les ressources seront automatiquement générées de nouveau à chaque changement du fichier source.
 
 
-When assets are generated, a new `assets` directory is created in the `web` directory. This directory structure follows almost the same structure of the `template` directory, thus relative references in your assets files will be preserved.
+Lors du traitement des assets, un nouveau répertoire `assets` est créé dans le répertoire `web`. La structure de ce dossier est quasiment la même que celle du dossier `template`, donc les références relatives entre vos fichiers seront respectées.
 
-The assets file names are not the same as the original ones, and some of them may be merged in a unique file, depending of the filters applied during assets processing.
+Les noms des fichiers ressources ne sont pas les mêmes que les noms originaux et certains fichiers pourraient être fusionnés en fonction du flitre sélectionné pour le traitement automatique.
 
-## Using assets in your templates ##
+## Utiliser les ressources dans vos templates ##
 
-To use this feature, you'll have to add some specific directives to your template files.
+Pour utiliser cett fonctionnalité vous devrez ajouter quelques directives spécifiques dans les fichiers de votre template.
 
-> Note that you may create a template which uses an assets directory directly located in the web directory, but you'll miss some interesting features, like css, js and images preprocessing and caching.
-
-
-### {declare_assets} ###
-
-This directive tells the Thelia template system where your assets are located, e.g. the name of the root directory which contains all your assets.
-
-For example, the default front-office template stores its template in the `assets` directory :
-
-    {declare_assets directory="assets"}
+> N.B. : vous pourriez créer un template utilisant un dossier de ressources situés directement dans le répertoire `/web` mais cela vous priverait d'un certain nombre de fonctionnalités intéressantes telles que la compression/fudsion des fichiers CSS et javascript, le traitement des images ou en core la mise en cache.
 
 
-### {stylesheets} and {stylesheet} ###
+### La fonction {declare_assets} ###
 
-This directive processes your CSS style sheets.
+Cette directive indique au système de templating de Thelia  l'endroit où sont stockées les ressources à sa oir le nom du sossier racine contenant toutes les ressources.
 
-    {stylesheets file="assets/src/less /*.less" filters="less"}
-        <link href="{$asset_url}" rel="stylesheet" type="text/css" />
-    {/stylesheets}
+par exemple, le template front-office `default`stocke ses ressources dans le répertoire `assets` du template :
 
-Or
+```smarty
+{declare_assets directory="assets"}
+```
 
-    {stylesheets file="assets/css/style.css"}
-        <link href="{$asset_url}" rel="stylesheet" type="text/css" />
-    {/stylesheets}
 
-This block returns only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
+### Les fonction {stylesheets} et {stylesheet} ###
 
-The valid parameters are :
+Ces directives génére le pré-traitement des feuilles de styles CSS.
+
+```smarty
+{stylesheets file="assets/src/less /*.less" filters="less"}
+  <link href="{$asset_url}" rel="stylesheet" type="text/css" />
+{/stylesheets}
+```
+
+ou
+
+```smarty
+{stylesheets file="assets/css/style.css"}
+  <link href="{$asset_url}" rel="stylesheet" type="text/css" />
+{/stylesheets}
+```
+
+Ces fonction ne renvoient qu'une seule variable `$asset_url` correspondant à l'url de la ressource dans l'espace web i.e dans de dossier `/web/assets`.
+
+Les paramètres acceptés sont :
 
 - file
 - filters
@@ -102,184 +114,206 @@ The valid parameters are :
 - template
 - failsafe
 
-You may also use the short form `{stylesheet}`, which directly returns the URL of the CSS file :
+Vous pourriez utilisez la forme compacte `{stylesheet}` qui renvoie directement l'url du fichier CSS :
 
-    <link href="{stylesheet file='assets/css/style.less' filters='less'}" rel="stylesheet" type="text/css" />
+```smarty
+<link href="{stylesheet file='assets/css/style.less' filters='less'}" rel="stylesheet" type="text/css" />
+```
 
-#### file ####
+#### Le paramètre `file` ####
 
-This is the path to the file (or files, as jokers like '\*' are allowed), relative to the template base path.
+Correspond au chemin vers le fichier (ou les fihiers si le caractère joker '\*' est utilisé). Ce chemin est relatif au répertoire de base du template.
 
-The value of this parameter is a file path, form example `assets/syles/my_style.css`, or a set of files, like `assets/css/*.css`
+La valeur de ce paramètre est un chemin vers un fichier par exemple `assets/syles/mon_style.css` ou un ensemble de fichiers comme `assets/css/*.css`
 
-#### filters ####
+#### Le paramètre `filters` ####
 
-Apply a filter to the source(s) files. Available filters are :
+Indique le filtre à appliquer à la ressource. Les filtres disponibles sont :
 
-- less : compile CSS using the LESS compiler,
-- sass : compile CSS using the SASS compiler,
-- compass : compile CSS using the Compass compiler.
+- `less` : compile le fichier CSS en utilisant [LESS](http://lesscss.org/)
+- `sass` : compile le fichier CSS en utilisant [SASS](https://sass-lang.com/)
+- `compass` : compile le fichier CSS en utilisant [Compass](http://compass-style.org/)
 
-#### source ####
+#### Le paramètre `source` ####
 
-When in the templates files of a module, use this parameter to specify that the source of the asset has to be searched within the module's path instead of the main template path.
+Dans les fichiers du répertoire templates d'un module, utilisez ce paramètre pour indiquer que le fichier source doit être recherché depuis le dossier recine du module et nom dans le répertoire template principal.
 
-For example, in the `MyModule/templates/frontOffice/default` directory, you'll define some templates that will be displayed in the front office.
+Par exemple dans le dossier `MonModule/templates/frontOffice/default` vous définirez quelques vues devant être affiché depuis le front-office.
 
-You can define module specific assets in the `MyModule/templates/frontOffice/default/assets` directory. To instruct the Thelia template system to get assets from your module's directory
+Vous pouvez également définir des ressources spécifiques au module dans le répertoire `MonModule/templates/frontOffice/default/assets`. Pour indiquer au système de tzmplating de Thelia de recherche ces ressources depuis le répertoire racine du module, procédez comme ci-dessous :
 
+```smarty
+{stylesheets source="MoModule" file="assets/css/style.css" template="default"}
+  <link href="{$asset_url}" rel="stylesheet" type="text/css" />
+{stylesheet}
+```
 
-    {stylesheets source="MyModule" file="assets/css/style.css" template="default"}
-        <link href="{$asset_url}" rel="stylesheet" type="text/css" />
-    {stylesheet}
+Le lien vers le fichier styles.css dans cet exemple sera relatif à `MonModule` et sera placé physiquement dans le dossier `local/modules/MonModule/templates/frontOffice/default/assets/css`.
 
-The example above Will use the style.css file defined by MyModule, and located in `local/MyModule/templates/frontOffice/default/assets/css` directory.
+#### Le paramètre `template` ####
 
-#### template ####
+Vous pourriez souhaiter utiliser une ressource située dans un autre template du même type (par exemple un autre template front-office). Pour ce faire indiquer le nom de cet autre template dans grâce au paramètre `template`:
 
-You may want to use an asset located in another template of the same type (for example, another front office template). To do so, specify the name o this template in the `template` parameter :
+```smarty
+{stylesheets file="assets/css/style.css" template="default"}
+  <link href="{$asset_url}" rel="stylesheet" type="text/css" />
+{stylesheet}
+```
 
-    {stylesheets file="assets/css/style.css" template="default"}
-        <link href="{$asset_url}" rel="stylesheet" type="text/css" />
-    {stylesheet}
+L'exemple ci-dessus utilisera le fichier style.css situé dans le répertoire `assets/css` du template front-office `default` (le chemin vers ce fichier est `templates/frontOffice/default/assets/css/style.css`)
 
-The example above will use the style.css file, located in the `assets/css` directory of the `default` front office template (the file path is `templates/frontOffice/default/assets/css/style.css`).
+#### Le paramètre `failsafe` ####
 
-#### failsafe ####
+Quand la valeur de la variable est `true`(vraie), le paramètre `failsafe`empêche qu'une exception soit lévée quand la ressource n'est pas trouvée même en mode développement.
 
-When true, the failsafe parameter prevents the re-throw of exceptions when an asset is not found, even in development mode.
-Example usage of this parameter:
+Exemple d'utilisation du paramètre :
 
-    {stylesheets file="assets/css/mystyle.css" failsafe=true}
-        <link href="{$asset_url}" rel="stylesheet" type="text/css" />
-    {stylesheet}
+```smarty
+{stylesheets file="assets/css/mystyle.css" failsafe=true}
+  <link href="{$asset_url}" rel="stylesheet" type="text/css" />
+{stylesheet}
+```
 
+### Les paramètres {images} et {image} ###
 
-### {images} and {image} ###
+Ces directives traitent les images statiques dans votre template.
 
-These directives process static images used in your template.
+```smarty
+{images file='assets/img/favicon.ico'}
+  <link rel="shortcut icon" type="image/x-icon" href="{$asset_url}">
+{/images}
+```
 
-    {images file='assets/img/favicon.ico'}
-        <link rel="shortcut icon" type="image/x-icon" href="{$asset_url}">
-    {/images}
+Ce bloc renvoie une seule valeur, `$asset_url`, qui est les chemin de la ressource dans l'espace web (document_root), sous le dossier `/web/assets`.
 
-This block returns only one parameter, `$asset_url`, which is the asset URL in the web space, e.g. under the web/assets path.
+Vous pouvez également utiliser la forme compacte `{image}`qui renvoie directement le chemin de l'image :
 
-You may also use the short form `{image}`, which directly returns the URL of the image :
+```smarty
+<img src="{image file='assets/img/kittens-and-babies.jpg'}" alt="Some text">
+```
 
-    <img src="{image file='assets/img/kittens-and-babies.jpg'}" alt="Some text">
-
-The valid parameters are:
+Les paramètres valides sont :
 
 - file
 - source
 - template
 
-#### file ####
+#### Le paramètre `file` ####
 
-This is the path to the file, relative to the template base path.
+C'est le chemin du ficher, relatif au répertoire de base du template.
 
-In the file name joker characters, like "\*", are **NOT** allowed.
+La présence de caractère joker, tel que "\*", n'est **PAS** autorisée.
 
-#### source ####
 
-see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#source)
+#### Le paramètre `source` ####
 
-#### template ####
+Voir la documentation de [```{stylesheets}```](http://doc.thelia.net/fr/documentation/templates/assets.html#source)
 
-see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
+
+#### Le paramètre `template` ####
+
+Voir la documentation de [```{stylesheets}```](http://doc.thelia.net/fr/documentation/templates/assets.html#template)
+
 
 ### {javascripts} and {javascript} ###
 
-These directives process your javascript files
+Ces directives traitent vos fichiers javascript.
 
-    {javascripts file='assets/js/script.js'}
-        <script type="text/javascript" src="{$asset_url}"></script>
-    {/javascripts}
+```smarty
+{javascripts file='assets/js/script.js'}
+  <script type="text/javascript" src="{$asset_url}"></script>
+{/javascripts}
+```
 
-The valid parameters are:
+Les paramètres valides sont :
 
 - file
 - source
 - template
 
-You may also use the short form `{javascript}`, which directly returns the URL of the JS file :
+Vous pouvez également utiliser la forme compacte `{javascript}`qui renvoie l'url du fichier javascript :
 
-    <script type="text/javascript" src="{javascript file='assets/js/script.js'}"></script>
+```smarty
+<script type="text/javascript" src="{javascript file='assets/js/script.js'}"></script>
+```
 
-#### file ####
+#### Le paramètfre file ####
 
-This is the path to the file (or files, as jokers like '\*' are allowed), relative to the template base path.
+Correspond au chemin vers le fichier (ou les fihiers comme le caractère joker '\*' est autorisé) relatif au répertoire de base du template.
 
-The value of this parameter is a file path, for example `assets/js/script.js`, or a set of files, like `assets/js/*.js`
+La valeur de ce paramètre est un chemin vers le fichier, par exemple `assets/js/script.js`, ou un ensemble de fichiers comme `assets/js/*.js`
 
-#### source ####
+#### Le paramètfre `source` ####
 
-see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#source)
+Voi [```{stylesheets}```](http://doc.thelia.net/fr/documentation/templates/assets.html#source)
 
-#### template ####
+#### Le paramètre `template` ####
 
-see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
+Voir [```{stylesheets}```](http://doc.thelia.net/fr/documentation/templates/assets.html#template)
 
-### {asset} ###
+### La fonction `{asset}` ###
 
 This directive processes any asset file, and is only available in its short form. Example for an audio asset:
 
-    <audio src="{asset file='assets/sound/my_sound.ogg'}" autoplay>
-      Audio not supported.
-    </audio>
+```smarty
+<audio src="{asset file='assets/sound/my_sound.ogg'}" autoplay>
+  Audio not supported.
+</audio>
+```
 
-#### file ####
+#### Le paramètre `file` ####
 
-This is the path to the file, relative to the template base path.
+Correspond au chemin vers le fichier. Ce chemin est relatif au répertoire de base du template.
 
-The value of this parameter is a file path, for example `assets/sound/my_sound.ogg`.
+La valeur de ce paramètre est un chemin vers un fichier, par exemple `assets/sound/my_sound.ogg`.
 
-#### source ####
+#### Le paramètre `source` ####
 
-see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#source)
+Voir [```{stylesheets}```](http://doc.thelia.net/fr/documentation/templates/assets.html#source)
 
-#### template ####
+#### Le paramètre template ####
 
-see [```{stylesheets}```](http://doc.thelia.net/en/documentation/templates/assets.html#template)
+Voir [```{stylesheets}```](http://doc.thelia.net/fr/documentation/templates/assets.html#template)
 
-### {local_media} ###
+### La fonction `{local_media}` ###
 
-> This directive is available since Thelia 2.3.4.
+> Cette directive est disponible depuis Thelia 2.3.4.
 
-Some assets can be uploaded through the back-office (in Configuration > Store) and no longer require to be manually copied in the right folder. This features currently includes the store **logo**, the website **favicon** and the email template **banner**.
+Certaines ressources peuvent être uploader depuis le back-office (dans "Configuration " -> "Boutique") et ne nécessite plus d'être copiées manuellement dans le bon répertoire.
+Cette fonctionnalité concerne pour le moement le **logo** de la boutique ainsi que la **favicon** du site et la **banière** du template email.
 
-    {local_media type="favicon" width=16 height=16}
-        <link rel="icon" type="{$MEDIA_MIME_TYPE}" href="{$MEDIA_URL}" />
-    {/local_media}
+```smarty
+{local_media type="favicon" width=16 height=16}
+  <link rel="icon" type="{$MEDIA_MIME_TYPE}" href="{$MEDIA_URL}" />
+{/local_media}
+```
 
-This block can return two parameters :
-- `$MEDIA_URL` : the URL of the media
-- `$MEDIA_MIME_TYPE` : **for favicons only**, the mime-type of the favicon file (ex : *image/x-icon*)
+Ce bloc peur retourner 2 variables :
+- `$MEDIA_URL` : l'url pontant vers le media
+- `$MEDIA_MIME_TYPE` : **pour les favicons uniquement**, le type MIMLI de la favicon (ex. : *image/x-icon*)
 
-> Note that this directive requires no "file" parameter because it takes the file provided in the Store Configuration in back-office. If no file was provided, it will display the default Thelia logo, banner or favicon.
+> Cette directive ne prend pas de paramètre "`file`"  car elle utilise le fichier fourni dans la configuration de la boutique en back-office. Si aucun fichier n'est uploader, la focntion utilisera le logo, la banière et la favicon par défaut de Thelia.
 
-> By default, the uploaded files are stored in *local/media/images/store*. You can change it by editing the system variable `images_library_path` in back-office (Configuration > System variables)
+> Par défaut les fichiers uploadés sont stockés dans le dossier *local/media/images/store*. Vous pouvez changer de dossier de stockage en modifiant la variable système `images_library_path` dans le back-office ("Configuration" -> "System variables")
 
-The valid parameters are:
+Les paramètres valides sont :
 
 - type
 - width
 - height
 - resize_mode
 
-#### type ####
+#### Le paramètre `type` ####
+Il s'agit du type de media. Les valeurs autorisées  pour le moement sont : "logo", "banner" and "favicon".
 
-This is the type of the media. The currently allowed values are :  "logo", "banner" and "favicon".
+#### Le paramètre `width` ####
 
-#### width ####
+Largeur de l'image traitée. Si le fichier fourni est au format `.ico` cette valeur sera ignorée.
 
-Width of the transformed image. If the provided file is a .ico file, this value is ignored.
+#### Le paramètre `height` ####
 
-#### height ####
+Hauteur de l'image traitée. Si le fichier fourni est au format `.ico` cette valeur sera ignorée.
 
-Height of the transformed image. If the provided file is a .ico file, this value is ignored.
+#### Le paramètre `resize_mode` ####
 
-#### resize_mode ####
-
-Type of resize of the transformed image. The allowed values are : "crop", "borders" and "none". If the provided file is a .ico file, this value is ignored.
+Mode de redimensionnemt de l'image traitée. Les valeurs autorisées sont  "crop", "borders" and "none". Si le fichier founi est au format `.ico`, cette valeur sera ignorée.

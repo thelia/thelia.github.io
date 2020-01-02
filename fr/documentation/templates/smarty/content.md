@@ -1,29 +1,29 @@
 ---
 layout: home
-title: Thelia Template Contents
+title: Contenu d'un template Thelia
 sidebar: templates
 lang: fr
 subnav: templates_smarty_contents
 ---
-# Content of a template #
+# Contenu d'un template #
 
-A template is a collection of files, mostly HTML files. Each HTML file is a **view**.
+Un tempate est une collection de fichiers, essentiellement HTML. Chaque fichier HTML est une **vue**.
 
-Thelia back and front office template view names should have the `.html` extension.
+Les noms des templates front-office et back-office de Thelia devraient avoir l'extension `.html`.
 
-The mail template files may contain text-only version of e-mail templates, which should have the `.text` extension (see [E-mail templates documentation](http://doc.thelia.net/en/documentation/templates/emails.html) for details).
+Les fichiers de template d'emails peuvent ne contenir que du texte auquel cas l'extension du fichier devrait être `.text` (voir la [documentaztion des templates d'email](http://doc.thelia.net/fr/documentation/templates/emails.html) pour plus de détails.)
 
-Using [Smarty inheritance](http://www.smarty.net/inheritance) may save a lot of time and code duplication.
+Utiliser le [mécanisme d'héritage de Smarty](http://www.smarty.net/inheritance) pourra faire gagner beaucoup de temps et limiter la duplication du code.
 
-The default front office (and back-office) template uses a global layout, in the `layout.tpl` file, which contains template-wide common code and declarations.
+Le template `default` du front-office et du back-office Thelia utilise un gabarit global `layout.tpl` qui contient du code et des déclarations utilisés par l'ensemble des fichiers du template.
 
-# Template descriptor #
+# Descripteur de template #
 
-From Thelia 2.4.0, a template may have de descriptor, a file named `template.xml` located at the root of the template. The content of this descriptor is very similar to a module descriptor.
+A partir de Thelia 2.4, un template pourra avoir un un descripteur, a fichier nommmé `template.xml` situé à la racine du template. Le contenu de ce fichier est très proche de celui du fichier descripteur de module.
 
-Here is the descriptor of the "default" front-office template :
+Ci-dessous le descripteur du template front-office `default` :
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="http://thelia.net/schema/dic/template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -69,28 +69,30 @@ Here is the descriptor of the "default" front-office template :
 </template>
 ```
 
-# Predefined names #
+# Noms prédéfinis #
 
-Every template should contains specific template files, which are the views invoked in the Front and Back Offices controllers.
+Chaque template devrait contenir un certain nombre de fichier spécifiques qui seront appellés par les contrôleurs du front-office et du back-office.
 
-For a front-office template, these files are :
+Pour un template du front-office ces fichiers sont :
 
-- `product.html` : display a product
-- `content.html` : display a contents
-- `category.html` : displays a category contents
-- `feed.html` : the RSS product or content feed
-- `folder.html` : display a folder contents
-- `404.html` : displayed if a page cannot be found
+- `product.html` : affiche un produit
+- `content.html` : affiche un contenu
+- `category.html` : affiche une catégorie de produits
+- `feed.html` : le flux RSS des produits ou des contenu
+- `folder.html` : affiche le contenu des dossiers Thelia
+- `404.html` : affiché quand une page ne peut être trouvée.
 
-Other templates names are defined by the `Front` module configuration, and specifically in the routing configuration file, `Front/Config/front.xml`. For example, the customer login page is defined by the `login.process` route :
+D'autres exemples sont définis dans la configuration du module `Front` et particulièrement dans le fichier de configuration du routing `Front/Config/front.xml`. Par exemple la page de connexion client est définie par la route `login.process` :
 
+```xml
     <!-- Login -->
     <route id="customer.login.process" path="/login" methods="post">
         <default key="_controller">Front\Controller\CustomerController::loginAction</default>
         <default key="_view">login</default>
     </route>
+```
 
-The templates referenced in the Front module configuration are :
+Les vues référencées dans la configuration du modules Front sont :
 
 - `account.html`
 - `account-password.html`
@@ -115,42 +117,47 @@ The templates referenced in the Front module configuration are :
 - `password.html`
 - `register.html`
 
-You can add as many templates as you want. The URL of such templates is `http://www.yourshop.com/template_file_name_without_extension`. For exemple, if your template contains a buzz.html view, the URL of this view is `http://www.yourshop.com/buzz`.
+Vous pouvez ajouter autant de vues que vous le souhaitez. L'url de ces vues sera de la forme `http://www.yourshop.com/nom-de-la-vue-sans-extension`. Par exemple si votre template contient une vue buzz.html, l'url de cette vue sera `http://www.yourshop.com/buzz`.
 
-## Template configuration ##
+## Configuration d'un template ##
 
-In the `configs` directory, Thelia searches for the `variables.conf` file. This optional file could contain a set of variable definitions, that will be available in the template files. This file is a [Smarty Config file](http://www.smarty.net/docs/en/config.files.tpl).
+Dans le répertoire `configs`, thelia recherche le fichier `variables.conf`. Ce fichier optionnel contient un ensemble de définitions de variables qui seront accessibles depuis toutes le fichiers **vues**. Ce fichier est un [fichier de configuration Smarty](http://www.smarty.net/docs/en/config.files.tpl).
 
-For example, if `configs/variables.conf` contains :
-
+Par exemple si `configs/variables.conf` contient :
+```ini
     # Maximum number of lines in lists
     # --------------------------------
     max_displayed_orders = 20
     max_displayed_customers = 20
+```
 
+La variable `max_displayed_orders` sera disponible dans les différentes vues en utilisant la syntaxe suivante :
 
-The max_displayed_orders variable will be available in the templates, using the `#max_displayed_orders#` syntax :
+```smarty
 
-    {loop name="customer_list" type="customer" current="false" visible="*" order=$customer_order backend_context="1" page=$page limit=#max_displayed_customers#}
+{loop name="customer_list" type="customer" current="false" visible="*" order=$customer_order backend_context="1" page=$page limit=#max_displayed_customers#}
+....
+{/loop}
+```
 
+## Héritage de template (à partir de Thelia 2.4) ##
 
-## Template inheritance (from Thelia 2.4) ##
+Thelia 2.4 introduit l'héritage de template : vous puvez utilisez dans un template tous les fichiers d'un template `_**parent**_` et surcharger que ceux que vous souhaitez personnaliser. En d'autres termes, vous pouvez créer un nouveau template et ne personnaliser que certains fichiers au lie de copier l'intégralité des fichires du template.
 
-Thelia 2.4 introduces template inheritance: you can use in a template all files from a _parent_ template, and override only the ones you want to customize. In other words, you can create a new template, and redefine only the required files instead of copying the whole template.
+Ce mécanisme fonctionne pour n'importe quel type de template : front-office, pdf, email et back-office.
 
-This is working for any template type: front-office, pdf, email and back-office.
+Par exemple, vous pouvez créer un gabarit spécifique et un ensemble de fichier personnalisée pour la page d'accueil, les catégories et les pages produits tout en gardant les vues par défaut pour la gestion des clients etr des achats (panier, gestion client, choix du mode de livbraison etc.). POur se faire créer simplemùent votre propore version de :
 
-For example, you can create a specific layout and a set of customized home, category and product pages, while keeping the default customer and purchase management pages (cart, customer managemenbt, delivery selection, etc.). To do so, just create your own version of :
 - layout.tpl
 - product.html
 - category.html
 - index.html
 
-All other template files will be searched in the parent template.
+Tous les autres fichiers (vues) du template parent seront utilisé pour l'affichage.
 
-When you want to create a new template (let's say "mytemplate") from another one (for example "default"), you just have to declare in the the `<parent>` element of your template.xml descriptor that your template extends "default" :
+Quand vous souhaitez créer un nouveau template (disons "mon-super-template") à partir d'un template existant (par exemple "default"), il vous suffit de d&clarer dans l'éléments `<parent>` de votre descripteur template.xml que votre template étend "default" :
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="http://thelia.net/schema/dic/template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -169,17 +176,16 @@ When you want to create a new template (let's say "mytemplate") from another one
 </template>
 ```
 
-The important element here is `parent`, which identifies the parent template, which should be an existing template of the same type (front-office, back-office, pdf, mail) as the child template. In our example, the new template inherits from the default template.
+Le point important ici est `<parent>default</parent>`, qui identifie le template parent qui doit être un template existant du même type (front-office, back-office, pdf, email) que le template enfant ("mon-super-template"). Dans notre exemple le nouveau template hérite du template par defaut.
 
-All template files are inherited, including the assets, the translations and the module overrides.
+Tous les fichiers du template sont hérités y compris les ressources, les traductions et les surcharge des modules.
 
-However, you can define specific translations for your template, and use them by declaring a default translation domain in your template files, for example `{default_translation_domain domain='bo.mytemplate'}`, or using the domain (abbreviated d) parameter of the intl Smarty function : `{intl l='Edit a customer' d='bo.mytemplate'}`
+Cependant vous pouvez définir des trzductions spécifiques pour votre template et les utiliser en déclarant un nouveau domaine de traduction dans les fichiers (**vues**) de votre template, par exemple `{default_translation_domain domain='bo.mytemplate'}`, ou en utilisant  le paramètre domaine (d) de la fonction smarty `intl` : `{intl l='Edit a customer' d='bo.mytemplate'}`.
 
-You can also use your own assets, as in a regular template. Use a `{declare_assets directory='your_asset_directory'}` if your CSS or JS references relative resources, so that they could be copied in the `web/assets` directory.
+Vous pouvez egalement utiliser vos propores ressources comme dans n'importe quel template. Utilisez la fonction `declare_assets` (`{declare_assets directory='your_asset_directory'}`) si vos fichiers CSS ou javascripts références à ds ressources relatives, de façon à ce qu'ils soient copiés dans  le répertoire `web/assets`.
 
-Additionally, you can also override the assets of your parent if you're using the same asset directory structure. For example, if you want to override the `assets/css/styles.css` of your parent, create an `assets/css/styles.css` file in your template, and it will override the parent's one.
+Vous pouvez également surcharger les ressources du template parent si vous utilisez la même structure de répertoire. Par exemple si vous souhaitez surcharger les fichier `styles.css` du template parent qui se trouve dans le dossier `assets/css/styles.css`, créez un fichiers `styles.css`dans le répertoire `assets/css/styles.css` de votre template et il surchargera le fichier du template parent.
 
-> Warning ! Don't forget to clear the cache when manipulating templates, as template and/or assets information may be cached by Thelia.
-
+> Attention ! N'oubliez pas de vider le cache quand vous manipulez les fichiers templates car ces derniers et/ou leur ressources peuvent avoir été mis en cache pa Thelia.
 
 

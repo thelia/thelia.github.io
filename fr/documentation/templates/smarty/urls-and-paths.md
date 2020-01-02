@@ -1,150 +1,174 @@
 ---
 layout: home
-title: Template URLs and paths
+title: URLs et chemins dans les templates
 sidebar: templates
 lang: fr
 subnav: templates_smarty_urls_and_paths
 ---
 
-# URLs and paths
+# URLs et chemins
 
-URLs in your templates should be created using the `{url}`, `{navigate}` or `{view}` Smarty functions, to ensure compatibility with all possible Thelia configuration.
+Les urls dans vos templates devraient être créées en utilisant les fonctions Smarty `{url}`, `{navigate}` ou `{view}` pour assurer la compatibilité avec toutes les configurations possibles de Thelia.
 
-> URLs in your template should always be absolute !
 
-## `{url}`
+> Les urls dans vos templates devraient toujours être absolues
 
-This Smarty function builds an absolute URL from a route path:
+## La fonction `{url}`
 
-    {url path="/contact"}
+Cette fonction Smarty crée une url absolue à partir du chemin d'une route :
 
-will gives:
+```smarty
+{url path="/contact"}
+```
+
+crééra l'url suivante :
 
     http://www.yourshop.com/contact
 
-### `path`
+### La fonction `path`
 
+La valeur du paramètre `path`est le chemin de la route dont vous souhaitez obtenir l'url. Par exemple, pour obtenir l'url de la route `account/password` utilisez :
 The value of the path parameter is the route path you want to get as an URL. For example, to get the URL of the `/account/password` route, use :
 
     <a href="{url path="/account/password"}">{intl l='Change your password'}</a>
 
-#### Add dynamic parameters in you path
+#### Ajouter des paramètres dynamiques dans les chemins
 
 <div class="alert alert-warning">
-<p>This functionality is only available since version 2.1</p>
+    <p>This functionality is only available since version 2.1</p>
 </div>
 
-In some cases you need to inject dynamic parameter in your path. The parameter uses the same behaviour as the `{intl}` function. Every `%varname` found in the string will be replaced by the value of the `varname` parameter.
+Dans certains cas vous aurez besouin d'injectez des paramètres dynamiques dans vos chemins. Le paramètre a le même comportement que dans la fonction `{intl}`. Chaque `%variable`trouvé dans la chaîne de caractère sera remplacée par la valeur de la variable.
 
-Example :
 
-    {url path="/product/%id" id=$product_id}
+Exemple :
+```smarty
+{url path="/product/%id" id=$product_id}
+```
 
-In the previous example, if `$product_id` value is 1, the `{url}` will ouput : `http://www.yourshop.com/product/1`
+Dans cet exemple, si `$product_id` vaut 1 alors la fonction `{url}`retournera : `http://www.yourshop.com/product/1`
 
-### `file`
 
-The value of the `file` parameter is the absolute path (from /web) of a real file, that will be served by your web server, and not processed by Thelia.
+### Le paramètre `file`
 
-For example, if you put a `guide.pdf` file in the `/web` directory, the URL of this file is :
+La valeur  du paramètre `file` est le chemin absolu d'un fichier physique (à partir du dossier /web) sur votre serveur qui sera renvoyé tel quel sans être traité part THelia.
 
-    {url file="/guide.pdf"}
+Par exemple si vous placez un fichier `guide.pdf`dans le répertoire `/web`, le chemin vers ce fichier sera :
 
-which gives :
+
+```smarty
+{url file="/guide.pdf"}
+```
+
+ce qui renverra :
 
     http://www.yourshop.com/guide.pdf
 
 ### `noamp`
 
-Setting `noamp=1` will escape all `&` as `&amp;` that may be present in the generated URL.
+Positionnez le paramètre `noamp`à 1 transformera tous les caractères `&`en `&amp;`dans l'url générée.
 
-### `router` and `route_id`
+###  Les paramètres `router`et `route_id`
 
 <div class="alert alert-warning">
-<p>This functionality is only available since version 2.3</p>
+<p>Cette fonctionnlaité n'est disponible qu'à partir de la version 2.3</p>
 </div>
 
-Since the version 2.3, it's possible to generate an URL from the route id.
-The argument `router` has a default value the current environment (`front` or `admin`).
+Depuis la version 2.3, il est possible de générer une url à partir d'une route_id.
+L'argument `router` a comme valeur par défaut l'environnement d'exécution courant (`front`ou `admin`).
 
     {url route_id="contact.success"}
     {url route_id="admin.catalog"}
     {url route_id="admin.folders.update" folder_id=42}
 
-Example for a module :
+Exemple pour un module :
 
-    {url router="paypal" route_id="paypal.configure"}
+```smarty
+{url router="paypal" route_id="paypal.configure"}
+```
 
-### Adding custom parameters to the generated URL
+### Ajouter des paramètres aux urls générées
 
-You may add as many parameters as you want to the generated URL, by adding them as `{url}` parameters :
+Vous pouvez ajouter autant de paramètres que vous le souhiatez aux url générées par la fonction `{url}`en les ajoutant à la fonction en paramètres dans la fonction :
 
-    {url path="/contact" myvar="1" myothervar="2"}
+```smarty
+{url path="/contact" mavariable="1" monautrevariable="2"}
+```
 
-will gives :
+génèerra l'url suivante :
 
-    http://www.yourshop.com/contact?myvar=1&myothervar=2
+    http://www.yourshop.com/contact?mavariable=1&monautrevariable=2
 
 
-## `{viewurl}`
+## La fonction `{viewurl}`
 
-This function generates the absolute URL to a front office view (e.g. an HTML file in the current template). If we have for example a `legal.html` file in a front-office template, the way to get the URL to display this view is:
+Cette fonction génère une url absolue vers une vue du front-office (ex : un fichier HTML dans le template courant). Si il existe par exemple un fichier `mentions-legales.html` dans le template front-office courant, le moyen d'obtenir l'url pour afficher cette vue est :
 
-    <a href="{viewurl view="legal"}">{intl l="Legal"}</a>
+    <a href="{viewurl view="mentions-legales"}">{intl l="Legal"}</a>
 
-which gives :
+ce qui donnera :
 
-    <a href="http://www.yourshop.com/?view=legal">{intl l="Legal"}</a>
+    <a href="http://www.yourshop.com/?view=mentions-legales">{intl l="Legal"}</a>
 
-You may also add as many parameters as you want to the generated URL, by adding them as `{viewurl}` parameters :
+Vous pouvez également ajouter autant de paramètres que vous le voulez dans l'url générée en les ajoutant comme paramètres dans `{viewurl}`:
 
-    {viewurl view="legal" myvar="1" myothervar="2"}
+    {viewurl view="mentions-legales" mavar="1" monautrevar="2"}
 
-will gives :
+ce qui renverra :
 
-    http://www.yourshop.com/?view=legal&myvar=1&myothervar=2
+    http://www.yourshop.com/?view=mentions-legales&mavar=1&monautrevar=2
 
-## `{admin_viewurl}`
 
-`{admin_viewurl}` performs the same URL generation as `{viewurl}`, but operates on back office templates only.
+## La fonction `{admin_viewurl}`
 
-Please refer to `{viewurl}` for usage and details.
+Cette fonction réalise les mêmes opération que la fonction `{viewurl}` mais ne fonctionne que dans les templates back-office.
+Consultez la documentation de `{viewurl}` pour plus d'informations.
 
-## {navigate}
+## La fonction {navigate}
 
-The `{navigate}`function is a convenient way to generate URLs pointing to common locations. This function has only one parameter, `to`, which may take one of the following values:
+La fonction `{navigate}` est un moyen pratique de générer des url pointant vers des emplacements bien connus.
+Cette fonction  n'accepte qu'un seul paramètre, `to` qui pourra prendre les valeurs suivantes :
 
-- `current`: this is the absolute URL of the current page
-- `previous` : this is the absolute URL of the previous page
-- `index` : this is the absolute URL of the shop home page
-- `catalog_last` (since 2.4.0) : this is the absolute URL of the last viewed catalog page, product or category. The index page URL is returned if no catalog page has been viewed yet.
+- `current`: l'url absolu de la page courante
+- `previous` : l'url absolue de la page précédente
+- `index` : l'url absolue vers la page d'accueil de la boutique
+- `catalog_last` (depuis la version 2.4.0) : l'url absolue vers la dernière page visitée du catalogue, produit ou catgeorie.
 
-Example:
+Exemple:
 
-- return to the shop home page : `<a href="{navigate to='index'}">{intl l="Back to home"}</a>`
-- go back to the previous page : `<a href="{navigate to='previous'}">{intl l="Back to home"}</a>`
-- reload the current page : `<a href="{navigate to='current'}">{intl l="Reload !"}</a>`
+- retour ver ala page d'accueil de la boutique : `<a href="{navigate to='index'}">{intl l="Back to home"}</a>`
+- retour vers la page précédente : `<a href="{navigate to='previous'}">{intl l="Back to home"}</a>`
+- recharger la page courante : `<a href="{navigate to='current'}">{intl l="Reload !"}</a>`
 
-You can't add custom parameters to the URL generated by `{navigate}`. To do so, use it along with the `{url}` function :
+Vpus ne pouvez directement pas ajouter de paramètres personnalisées aux urls créées par `{navigate}`. Pour y parvenir utilisez cette fonction en paramètre de la fonction `{url}`:
 
-    {url path={navigate to="current"} limit="4"}
+```smarty
+{url path={navigate to="current"} limit="4"}
+```
 
-This way the limit=4 parameter is added to the URL : `http://www.myshop.com/current-page-url.html?limit=4`
+De cette manière le paramètre limit=4 sera ajoutée à l'url : `http://www.myshop.com/page-courante.html?limit=4`
+
 
 ## `{set_previous_url}`
 
-In most cases, Thelia automatically sets the previous URLs, so that `{navigate to='previous'}` will generate the URL to the previous page visited by your customer. But in some cases, you may want to define yourself the URL of the previous page, so that your customers will go back to this specific page instead of the page they have visited before.
+Dans la plupatr des cas Thelia définit les urls précédentes de telle sorte que `{navigate to='previous'}` génèrera l'url vers la page précédement visitée par le client. Mais dans certains cas, vous pourriez avoir besoin de définir ces urls vous même pour faire en sorte que le visteur soit redirigé vers une page spécifique au lieu de la page visitée précédemment.
 
-The `{set_previous_url}` function allows setting the URLs of the page thant will become the previous page :
+La fonction `{set_previous_url}` permet de définir l'url de la page qui deviendra la page précédente :
 
-    {set_previous_url path='path/.to/some/page'}
 
-To get possible `{set_previous_url}` parameters, please see the `{url}` function.
+```smarty
+{set_previous_url path='chemin/vers/une/page/specifique'}
+```
 
-You may also want to prevent a page to become the "previous page". To do so, use the `ignore_current` parameter, and put this call somewhere in the page :
+Pour connaîtrre les paramètres possibles pour cette fonction consultez la documentation de la fonction `{url}`.
 
-    {set_previous_url ignore_current=1}
+Vous pourriez également avoir envie de faire en sorte qu'une page ne puisse pas devenir la "page précédente". Pour ce faire utilisez le paramètre `ignore_current` and placez le quelque part dans la page.
 
-A typical example is the login and/or register page, where the user should go back where it was before entering its credentials (cart or order page), and not te register/login page itself.
 
-> If your page extends another one (typically `layout.tpl`), be sure to put the call inside a `{block}...{/block}`, otherwise it wouldn't be executed.
+```smarty
+{set_previous_url ignore_current=1}
+```
+
+Un cas typique d'utilisation de ce paramètre est la page de connexion/inscription pour laquelle l'utilisateur devrait être redirigé vers la page où il se trouvait avant d'avoir saisi ces identifiants (panier ou commande), et non la page de connexion/inscription elle-même.
+
+> Si votre page en étend une  autre (typiquement `layout.tpl`) assurez-vous d'utiliser la fonction au sein d'un bloc `{block}...{/block}` sinon elle ne sera pas exécutée.

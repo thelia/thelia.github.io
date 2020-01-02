@@ -1,12 +1,12 @@
 ---
 layout: home
-title: Rendu
+title: La fonction render
 sidebar: templates
 lang: fr
 subnav: templates_smarty_render
 ---
 
-# La fonction render
+# La fonction `{render}`
 
 La fonction render accepte un argument ```action``` obligatoire correspondant à la méthode de l'action. Elle supporte la notation ```a:b:c```.
 

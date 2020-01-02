@@ -21,54 +21,56 @@ Si vous voulez réutiliser les gabarits ou utiliser le mécanisme d'inclusion ou
 
 ## Layouts
 
-Mail layouts are used to provide a layout to all or some of the e-mails sent by
-the Thelia core or the modules.
+Les gabarits d'emails sont utilisés pour fournir un modèles certains ou la totalité des emails envoyés par Thelia ou par les modules.
 
-The layouts should have the 'tpl' extension, and should use {$message_body} as the
-placeholder of the final message content.
+Les gabarits devraient avoir l'extension `tpl`et devraient utiliser `{message_body}` comme emplacement temporaire du contenu final du message.
 
-For example, a minimal layout is :
+Par exemple, un gabarit minimal est :
 
-   {$message_body nofiler}
+```smarty
+{$message_body nofiler}
+```
 
-You should use the `nofilter` flag to prevent html-escaping of the `$message_body` variable content: Thelia templating system always escape variable contents.
+Vous devriez le drapeau `nofilter` pour éviter l'échappement HTML du contenu de la variable `$message_body`. Thelia échappe automatiquemnt le contenu des variables.
 
-There are no specific limitations in the content of the layout. For example, you
-can forecast inheritance, using a block :
+Il n'y a pas de limitations quelconques en ce qui concerne le contenu du gabarit.Par exemple il est possible de prévoir l'héritage en utilisant des blocks.
 
+```smarty
 {block name='message-body'}{$message_body nofilter}{/block}
+```
 
-(In fact, this is the content of the default HTML layout, default-html-layout.tpl)
+(Le gabarit `default` default-html-layout.tpl utilise d'aiileurs ce principe)
 
-This way, you can extends the layout in message views :
+Avec un block défini de cette manière, vous pourrez ensuite étendre les vues de messages comme ci-dessous :
 
-    {block name='message-body'}
+```smarty
 
-    Here is the template content
+{block name='message-body'}
 
-    {/block}
+...Placer ici le contenu du template...
 
-## Views
+{/block}
+```
 
-A View contains the body of a specific message. It may extends a layout, but in this case, you SHOULD NOT select this layout as the message layout in the back office.
+## Vues
 
-HTML views SHOULD have the 'html' extension to be displayed in the "Name of the HTML view file" menu in the back-office.
+Une vue contient le corps  d'un message spécifique. Elle pourrait étendre un gabarit, mais dans ce cas, vous de DEVEZ PAS choisir ce gabarit  comme gabarit du message dans le back office.
 
-TEXT views SHOULD have the 'text' extension to be displayed in the "Name of the text view file" menu in the back-office.
+Les vues au format HTML DEVRAIENT AVOIR l'extension `html` pour être visible dans le menu "Nom du fichier HTML" dans le back-office.
+Les vues au format texte DEVRAIENT AVOIR l'extension `text` pour être visible dans le menu "Nom du fichier texte" dans le back-office.
 
 ## Templates
 
-A mail template is just a collection of layouts (.tpl) and/or views (.html), grouped in a sub-directory of the templates/emails directory.
+Un template email est simplement une collection de gabarits (.tpl) et/ou de vues (.html), groupées dans un sous-dossier du répertoire templates/emails.
 
-The current mail template is defined in the Thelia configuration, by the `active-mail-template` variable.
+Le template email courant est défini dans la configuration Thelia par la variable `active-mail-template`.
 
-## What are your options ?
+## Quelles choix s'offrent à vous ?
 
-For any email message, you can :
+Pour n'importe quel message vous pouvez :
 
-- Not use views or layouts, and rely on HTML and TEXT entered in the back-office.
-- Use only layouts, to define  a common look and feel to your mails. These layouts are be populated (through {$message_body}) with HTML or TEXT entered in the back-office.
-- Use only views, without layouts, to define message content. In this case,
-HTML or TEXT entered in the back-office is ignored.
-- Use layouts and views, without inheritance. This way, layouts are populated (through {$message_body}) with HTML or TEXT found in the message views. HTML or TEXT entered in the back-office is ignored.
-- Use views which inherit from a layout. In the layout, {$message_body} (if present) is then ignored, and the classic Smarty bock-based inheritance is used. Be sure in this case to not define an extended layout as the message layout, or unexpected results may be generated (probably repeated layout content)
+- Ne pas utiliser de vues ou de gabarits et vous en remettre au texte et contenu HTML saisi en back-office.
+- Utiliser uniquement les gabarits pour définir un design commun pour tous vos emails. Ces gabarits seront enrichis (via `{$message_body}`) avec du texte ou du contenu HTML saisi dans le back-office.
+- N'utiliser que des vues , sans gabarits, pour définir le contenu du message. Dans ce cas le contenu HTML ou texte saisi dans le back-office sera ignoré.
+- Utiliser les gabarits et les vues, sans le mécanisme d'héritage. De ce manière les gabarits sont enrichis (via `{$message_body}`) avec le contenu au format HTML et au format texte contenus dans les vues. Le contenu HTML et texte saisi dans le back-office est ignoré.
+- Utiliser les vues qui hérite d'un gabarit. Dans ce dernier {$message_body} (si présent) est ignoré et le mécanisme d'héritage classique de Smarty est utilisé. Assurez-vous dans ce cas de ne pas définir un gabarit étendu comme gabarit du message sous peine de générer des erreurs (probablement une répétion de l'afficge du contenu du gabarit).
