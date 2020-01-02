@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Routing - Modules
-sidebar: caching
+sidebar: plugin
 lang: en
 subnav: plugin_caching
 ---
@@ -33,17 +33,17 @@ class MyController extends BaseFrontController
 
         /** @var \Symfony\Component\Cache\Adapter\AdapterInterface $cacheAdapter */
         $cacheAdapter = $this->container->get('thelia.cache');
-        
+
         /** @var \Symfony\Component\Cache\Adapter\AdapterInterface $cacheItem */
         $cacheItem = $cacheAdapter->getItem($myItemKey);
-        
+
         if (!$cacheItem->isHit()) {
             $cacheItem
                 ->set('My big value')
                 ->expiresAfter(6000)
                 ->save();
         }
-        
+
         $myValue = $cacheItem->get();
     }
 }
