@@ -27,7 +27,7 @@ will gives:
 The value of the path parameter is the route path you want to get as an URL. For example, to get the URL of the `/account/password` route, use :
 
     <a href="{url path="/account/password"}">{intl l='Change your password'}</a>
-    
+
 #### Add dynamic parameters in you path
 
 <div class="alert alert-warning">
@@ -36,10 +36,10 @@ The value of the path parameter is the route path you want to get as an URL. For
 
 In some cases you need to inject dynamic parameter in your path. The parameter uses the same behaviour as the `{intl}` function. Every `%varname` found in the string will be replaced by the value of the `varname` parameter.
 
-Example : 
+Example :
 
     {url path="/product/%id" id=$product_id}
-    
+
 In the previous example, if `$product_id` value is 1, the `{url}` will ouput : `http://www.yourshop.com/product/1`
 
 ### `file`
@@ -135,16 +135,16 @@ This way the limit=4 parameter is added to the URL : `http://www.myshop.com/curr
 
 In most cases, Thelia automatically sets the previous URLs, so that `{navigate to='previous'}` will generate the URL to the previous page visited by your customer. But in some cases, you may want to define yourself the URL of the previous page, so that your customers will go back to this specific page instead of the page they have visited before.
 
-The `{set_previous_url}` function allows setting the URLs of the page thant will become the previous page :
+The `{set_previous_url}` function allows setting the URLs of the page that will become the previous page :
 
     {set_previous_url path='path/.to/some/page'}
-    
+
 To get possible `{set_previous_url}` parameters, please see the `{url}` function.
 
 You may also want to prevent a page to become the "previous page". To do so, use the `ignore_current` parameter, and put this call somewhere in the page :
 
     {set_previous_url ignore_current=1}
-    
+
 A typical example is the login and/or register page, where the user should go back where it was before entering its credentials (cart or order page), and not te register/login page itself.
 
 > If your page extends another one (typically `layout.tpl`), be sure to put the call inside a `{block}...{/block}`, otherwise it wouldn't be executed.

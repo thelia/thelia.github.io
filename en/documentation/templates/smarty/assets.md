@@ -116,9 +116,9 @@ The value of this parameter is a file path, form example `assets/syles/my_style.
 
 Apply a filter to the source(s) files. Available filters are :
 
-- less : compile CSS using the LESS compiler,
-- sass : compile CSS using the SASS compiler,
-- compass : compile CSS using the Compass compiler.
+- less : compile CSS using the [LESS compiler](http://lesscss.org/)
+- sass : compile CSS using the [SASS compiler](https://sass-lang.com/)
+- compass : compile CSS using the [Compass compiler](http://compass-style.org/)
 
 #### source ####
 
@@ -137,7 +137,7 @@ The example above Will use the style.css file defined by MyModule, and located i
 
 #### template ####
 
-You may want to use an asset located in another template of the same type (for example, another front office template). To do so, specify the name o this template in the `template` parameter :
+You may want to use an asset located in another template of the same type (for example, another front office template). To do so, specify the name of this template in the `template` parameter :
 
     {stylesheets file="assets/css/style.css" template="default"}
         <link href="{$asset_url}" rel="stylesheet" type="text/css" />
@@ -252,11 +252,11 @@ Some assets can be uploaded through the back-office (in Configuration > Store) a
     {local_media type="favicon" width=16 height=16}
         <link rel="icon" type="{$MEDIA_MIME_TYPE}" href="{$MEDIA_URL}" />
     {/local_media}
-    
+
 This block can return two parameters :
 - `$MEDIA_URL` : the URL of the media
 - `$MEDIA_MIME_TYPE` : **for favicons only**, the mime-type of the favicon file (ex : *image/x-icon*)
-    
+
 > Note that this directive requires no "file" parameter because it takes the file provided in the Store Configuration in back-office. If no file was provided, it will display the default Thelia logo, banner or favicon.
 
 > By default, the uploaded files are stored in *local/media/images/store*. You can change it by editing the system variable `images_library_path` in back-office (Configuration > System variables)

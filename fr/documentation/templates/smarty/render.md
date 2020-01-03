@@ -1,44 +1,45 @@
 ---
 layout: home
-title: Render
+title: La fonction render
 sidebar: templates
-lang: en
+lang: fr
 subnav: templates_smarty_render
 ---
 
-# Render
+# La fonction `{render}`
 
-The render function takes a mandatory argument ```action```, that is the method of the action. It supports ```a:b:c``` notation.
-Example:
+La fonction render accepte un argument ```action``` obligatoire correspondant à la méthode de l'action. Elle supporte la notation ```a:b:c```.
+
+Exemple:
 
 ```smarty
 {render action="Module:Foo:bar"}
 ```
+Exécutera ```Module\Controller\FooController::barAction``` et affichera le résultat.
 
-Will executes ```Module\Controller\FooController::barAction``` and print the result.
-
-__You can specify the request method__:
+__Vous pouvez spécifier la methode HTTP__:
 
 ```smarty
 {render action="Module:Foo:bar" method="PUT"}
 ```
 
-__You can specify the query parameters__:
+__Vous pouvez spécifier les paramètres de requête__:
 
 ```smarty
 {render action="Module:Foo:bar" query="foo=bar&baz=thelia"}
 {render action="Module:Foo:bar" query=$anArray}
 ```
 
-__Same for request__ _(if the method isn't specified, it will automaticly set it to POST)_:
+__Idem pour les requêtes__ _(si non précisé sera défini automatiquement à POST)_:
 
 ```smarty
 {render action="Module:Foo:bar" request="foo=bar&baz=thelia"}
 {render action="Module:Foo:bar" request=$anArray}
 ```
 
-All the other parameters will be used as the method parameters.
-You can execute the following controller:
+Tous les autres paramètres seront utilisés comme paramètres de la méthode.
+
+Le contrôleur suivant :
 
 ```php
 <?php
@@ -57,7 +58,7 @@ class TestController extends BaseFrontController
 }
 ```
 
-with the method:
+sera exécuté avec l'appel de la fonction suivante:
 
 ```smarty
 {render action="Module:Foo:bar" paramA="foo" paramB="bar"}
