@@ -48,7 +48,7 @@ class PricePercentTaxType extends BaseTaxType
 
 `getTitle()` returns a short description of your tax type, used in the back-office in the tax management section.
 
-You shoudl override either `pricePercentRetriever()` or `fixAmountRetriever()`, depending on your tax type. If it provides a percentage that should be applied to product price, implement `pricePercentRetriever()`.
+You shuold override either `pricePercentRetriever()` or `fixAmountRetriever()`, depending on your tax type. If it provides a percentage that should be applied to product price, implement `pricePercentRetriever()`.
 If it provides a constant amount, implements `fixAmountRetriever()`. See BaseTaxType for more information.
 
 If you're implementing this new class outside the Thelia core, e.g. outside the base Tax types directory `Thelia/TaxEngine/TaxType` - in a plugin for example - you should inform the Tax Engine.

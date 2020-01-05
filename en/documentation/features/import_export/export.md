@@ -80,10 +80,10 @@ Your have to add in "exports" a tag with that skeleton:
 
 Thelia export categories ids are:
 
-- thelia.export.customer : Exports conserning Customers
-- thelia.export.products : Exports conserning Products
-- thelia.export.content : Exports conserning Contents
-- thelia.export.orders : Exports conserning Orders
+- thelia.export.customer : Exports concerning Customers
+- thelia.export.products : Exports concerning Products
+- thelia.export.content : Exports concerning Contents
+- thelia.export.orders : Exports concerning Orders
 - thelia.export.modules : Module related exports
 
 If you want to create a new category, you have to put in your ```Config/config.xml```:

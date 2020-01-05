@@ -29,7 +29,7 @@ You may display - or not - some buttons depending on the administrators permissi
 {/loop}
 ```
 
-## Define restrcited access in your PHP controller
+## Define restricted access in your PHP controller
 
 Since filtering the displayed link in html is - of course - not secure enough, you must check the permissions into each controller action. You can do it like this :
 
