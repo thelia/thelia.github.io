@@ -1,18 +1,18 @@
 ---
 layout: home
-title: Feature - Archivers
+title: Feature - Archiveurs
 sidebar: features
-lang: en
+lang: fr
 subnav: thelia_archivers
 ---
 ---
 
-# Archivers
+# Archiveurs
 
-## What is an archiver ?
+## Qu'est-ce qu'un archiveur ?
 
-An archiver is a tool that can build archives ( like zip, tar, ... ).
-Thelia comes with 4 archivers:
+Un "archiveur" est un outil  capable de construire des archives (ZIP, TAR, etc.).
+Thelia dispose de archiveurs par défaut:
 
 - Zip
 - Tar
@@ -21,7 +21,7 @@ Thelia comes with 4 archivers:
 
 ## Get an archive builder
 
-In order to get an archive builder, you can use the trait to get the manager ```Thelia\Core\FileFormat\Archive\ArchiveBuilderManagerTrait```  :
+Afin d'obtenir un constructeur d'archive, vous pouvez utiliser le trait ```Thelia\Core\FileFormat\Archive\ArchiveBuilderManagerTrait```  :
 
 ```php
 class Foo
@@ -32,7 +32,7 @@ class Foo
     }
 }
 ```
-Or you can inject it in a service (e.g: an event listener):
+ou vous pouvez l'injecter dans un service  (par exemple dans un écouteur d'événements) :
 
 ```xml
 <service id="my.super.service" class="My\Super\Class">
@@ -40,11 +40,11 @@ Or you can inject it in a service (e.g: an event listener):
 </service>
 ```
 
-## Use an archive builder
+## Utiliser un constructeur d'archive
 
-Archive builders are defined by the abstract class ```Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder```.
+Les constructeurs d'archives sont définis par la classe abstraite ```Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder```.
 
-Here are the methods that you have:
+Ci-dessous la liste des méthodes définies :
 
 ```php
 // Get the zip archive builder in the manager
@@ -97,8 +97,9 @@ $zip->getMimeType();
 $zip->getExtension();
 ```
 
-## Create an archive builder
-If you want to create an archive builder, create a class that extends ```Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder``` and implement the functions above, then create a service with the tag ```thelia.archive_builder```, like this:
+## Créer un constructeur d'archive
+
+Si vous voulez créer un constructeur d'archive, créez une classe qui étend la classe ```Thelia\Core\FileFormat\Archive\AbstractArchiveBuilder``` et implémente les fonctions définies ci-dessus comme suit :
 
 ```xml
 <service id="thelia.zip_archive_builder" class="Thelia\Core\FileFormat\Archive\ArchiveBuilder\ZipArchiveBuilder">

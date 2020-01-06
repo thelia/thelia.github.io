@@ -26,7 +26,7 @@ outputs:
     - {"name": "address1", "description":"The customer street addresses' 1"}
     - {"name": "address2", "description":"The customer street addresses' 2"}
     - {"name": "address3", "description":"The customer street addresses' 3"}
-    - {"name": "zipcode", "description":"The customer addresses' zicodes"}
+    - {"name": "zipcode", "description":"The customer addresses' zipcodes"}
     - {"name": "city", "description":"The customer addresses' cities"}
     - {"name": "country", "description":"The customer addresses' countries"}
     - {"name": "phone", "description":"The customer addresses' phones"}

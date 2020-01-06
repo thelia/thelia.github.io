@@ -3,7 +3,7 @@ layout: home
 title: Feature - Coupons
 sidebar: features
 lang: en
-subnav: features_coupons_rules_index
+subnav: features_coupons_conditions
 ---
 
 # Coupon Conditions ?

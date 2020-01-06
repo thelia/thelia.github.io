@@ -27,7 +27,7 @@ public function getHandledTypes();
 
 ```retrieveFromFormatterData(FormatterData $data)``` is the method were you must put your import logic.
 
-```Thelia\Core\FileFormat\Formatting\FormatterData``` is an array wrapper but is not Iterable. 
+```Thelia\Core\FileFormat\Formatting\FormatterData``` is an array wrapper but is not Iterable.
 A simple way to treat your data is to do:
 
 ```php
@@ -41,7 +41,7 @@ public function retrieveFromFormatterData(FormatterData $data) {
 ```
 
 ```getHandledTypes()``` must return an array with handled formatters types.
-Example : 
+Example :
 ```php
 return array(
     FormatType::TABLE, // For tabled formats (CSV, ODS, ...)
@@ -75,8 +75,8 @@ Your have to add in "imports" a tag with that skeleton:
 
 Thelia import categories ids are:
 
-- thelia.import.products : imports conserning Products
-- thelia.import.modules : module specific imports 
+- thelia.import.products : imports concerning Products
+- thelia.import.modules : module specific imports
 
 If you want to create a new category, you have to put in your Config/config.xml:
 

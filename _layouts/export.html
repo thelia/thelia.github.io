@@ -27,14 +27,24 @@
                 {% if page.has_images %}
                     <div class="col-md-6">
                         <div class="alert alert-success">
-                            This type can export images.
+                            {% if page.lang == 'en' %}
+                                This type can export images.
+                            {% endif %}
+                            {% if page.lang == 'fr' %}
+                                Ce type peut exporter des images
+                            {% endif %}
                         </div>
                     </div>
                 {% endif %}
                 {% if page.has_documents %}
                     <div class="col-md-6">
                         <div class="alert alert-success">
-                            This type can export documents.
+                            {% if page.lang == 'en' %}
+                                This type can export documents.
+                            {% endif %}
+                            {% if page.lang == 'fr' %}
+                                Ce type peut exporter des documents
+                            {% endif %}
                         </div>
                     </div>
                 {% endif %}
@@ -100,6 +110,7 @@
                     </div>
 
             {% endif %}
+            <div>{{content}}</div>
         </main>
 
     </section>
