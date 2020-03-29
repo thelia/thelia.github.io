@@ -10,7 +10,7 @@ lang: en
     <h1>Requirements</h1>
 </div>
 
-* PHP 5.5 to 7.2
+* PHP 5.6 to 7.3
     * Required extensions :
         * PDO_Mysql
         * openssl

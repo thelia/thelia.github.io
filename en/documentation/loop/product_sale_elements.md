@@ -31,7 +31,12 @@ arguments:
                 {name: "quantity_reverse",  description: "descending quantity"},
                 {name: "weight",            description: "ascending weight",        from_version: "2.2"},
                 {name: "weight_reverse",    description: "descending weight",       from_version: "2.2"},
-                {name: "random",            description: ""}
+                {name: "random",            description: ""},
+                {name: "created",           description: "creation date, ascending", from_version: "2.4"},
+                {name: "created_reverse",   description: "creation date, descending", from_version: "2.4"},
+                {name: "updated",           description: "modification date, ascending", from_version: "2.4"},
+                {name: "updated_reverse",   description: "modification date, descending", from_version: "2.4"},
+
             ]
           }
 outputs :

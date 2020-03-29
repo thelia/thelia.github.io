@@ -22,6 +22,8 @@ You can add this block on static parts (menu, footer, ...) of your site to impro
 - ttl : (mandatory) a time to live in seconds
 - lang : specific cache by lang, (default: current lang id)
 - currency : specific cache by currency, (default: current currency id)
+- country : specific cache by country, (default: current delivery country)
+- customer_discount : specific cache by customer discount value, (default: current customer discount)
 
 You can add as many arguments as you need. These arguments will be used to generate a unique key.
 

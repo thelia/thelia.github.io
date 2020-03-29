@@ -10,6 +10,7 @@ fields:
     - { name: "quantity", mandatory: "true", description: "quantity added to the cart. Must be superior to 0 if the stock is not managed in the store"}
     - { name: "append", mandatory: "false", description: "if the value is 1, increment the quantity if the combination of product and product_sale_elements_id already exists in the cart"}
     - { name: "newness", mandatory: "false", description: "if the value is 1, create a new entry if the combination of product and product_sale_elements_id already exist in the cart"}
+    - { name: "no_ajax_check", mandatory: "false", description: "If this parameter is 1, the controller will not check if the request is an Ajax request, and will redirect to the form success_url if this parameter is set (since 2.4)."}
 lang: en
 
 ---

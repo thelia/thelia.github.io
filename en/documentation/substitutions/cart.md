@@ -15,5 +15,8 @@ attributes :
     - {name: "total_taxed_price_without_discount", description: "Total price with discount without taxes"}
     - {name: "weight", description: "The cart total weight, in kg"}
     - {name: "contains_virtual_product (or is_virtual)", description: "True if the cart contains at least one virtual product, false otherwise"}
+    - {name: "total_tax_amount (or total_vat)", description: "Total cart tax amount"}
+    - {name: "total_tax_amount_withount_discount", description: "Total cart tax amount, excluding disount tax"}
+    - {name: "discount_tax_amount", description: "The cart disount tax amount"}
 ---
 

@@ -17,6 +17,11 @@ arguments :
     - {name: "status_code (2.2+)", description: "A single or a list of order status codes or `*` keyword to match all. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "status=\"*\", status=\"not_paid,canceled\""}
     - {name: "exclude_status_code (2.2+)", description: "A single or a list of order status codes which are to be excluded from the results. The valid status codes are not_paid, paid, processing, sent, canceled, or any custom status that may be defined", example: "exclude_status_code=\"paid,processing\""}
     - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.3"}
+    - {name: "ref", description: "A single or a list of order references.", example: "ref='ORD00023'", from_version: "2.4"}
+    - {name: "delivery_ref", description: "A single or a list of delivery tracking identifier.", example: "delivery_ref='64521245'", from_version: "2.4"}
+    - {name: "invoice_ref", description: "A single or a list of invoice references.", example: "invoice_ref='2010-002'", from_version: "2.4"}
+    - {name: "transaction_ref", description: "A single or a list of transaction references.", example: "transaction_ref='ABSA2234'", from_version: "2.4"}
+
     - {
       name: "order", description: "A list of values", example: "order=\"reference-reverse\"", default: "create-date-reverse",
       expected_values: [
@@ -57,6 +62,8 @@ outputs :
     - {name: "$STATUS_CODE", description: "the order status code (2.2)"}
     - {name: "$LANG", description: "the order language id"}
     - {name: "$DISCOUNT", description: "the order discount"}
+    - {name: "$DISCOUNT_TAX", description: "the order discount tax amount", from_version: "2.4"}
+    - {name: "$DISCOUNT_WITHOUT_TAX", description: "the order discount excluding tax", from_version: "2.4"}
     - {name: "$TOTAL_ITEMS_TAX", description: "the total tax amount for of the ordered items only, without postage tax (2.4+)"}
     - {name: "$TOTAL_ITEMS_AMOUNT", description: "the total amount for ordered items, excluding taxes (2.4+)"}
     - {name: "$TOTAL_TAXED_ITEMS_AMOUNT", description: "the total amount for ordered items, including taxes (2.4+)"}

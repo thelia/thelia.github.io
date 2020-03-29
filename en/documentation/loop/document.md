@@ -39,6 +39,9 @@ arguments :
             {name: "random",            description: "return documents in pseudo-random order"}
         ]
     }
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.4"}
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.4"}
+    - {name: "query_namespace", description: "The PHP namespace of the query class", example: "MyModule\\Model", default: "Thelia\\Model", from_version: "2.4"}
 outputs :
     - {name: "$ID", description: "the document ID"}
     - {name: "$LOCALE", description: "the locale"}
@@ -53,4 +56,8 @@ outputs :
     - {name: "$OBJECT_TYPE", description: "The object type (e.g., produc, category, etc. see 'source' parameter for possible values)"}
     - {name: "$OBJECT_ID", description: "The object ID"}
     - {name: "$VISIBLE", description: "true if the document is visible. False otherwise"}
+    - {name: "$HAS_PREVIOUS", description: "true if a document exists before this one following document position. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
+    - {name: "$HAS_NEXT", description: "true if a document exists after this one, following document position. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
+    - {name: "$PREVIOUS", description: "The ID of document before this one, following document position, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
+    - {name: "$NEXT", description: "The ID of document after this one, following document position, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
 ---

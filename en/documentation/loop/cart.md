@@ -25,13 +25,17 @@ outputs :
     - {name: "$PRODUCT_URL", description: "the product url"}
     - {name: "$PRODUCT_SALE_ELEMENTS_ID", description: "the product sale elements id"}
     - {name: "$STOCK", description: "the product sale elements available stock"}
-    - {name: "$PRICE", description: "the product sale elements price (unit price)"}
-    - {name: "$PROMO_PRICE", description: "the product sale elements in promo price (unit price)"}
-    - {name: "$TAXED_PRICE", description: "the product sale elements price including taxes (unit price)"}
-    - {name: "$PROMO_TAXED_PRICE", description: "the product sale elements in promo price including taxes (unit price)"}
-    - {name: "$TOTAL_PRICE", description: "the product sale elements price (total price)", from_version: "2.3"}
-    - {name: "$TOTAL_PROMO_PRICE", description: "the product sale elements in promo price (total price)", from_version: "2.3"}
-    - {name: "$TOTAL_TAXED_PRICE", description: "the product sale elements price including taxes (total price)", from_version: "2.3"}
-    - {name: "$TOTAL_PROMO_TAXED_PRICE", description: "the product sale elements in promo price including taxes (total price)", from_version: "2.3"}
+    - {name: "$PRICE", description: "the cart item price (unit price)"}
+    - {name: "$PROMO_PRICE", description: "the cart item in promo price (unit price)"}
+    - {name: "$TAXED_PRICE", description: "the cart item price including taxes (unit price)"}
+    - {name: "$PROMO_TAXED_PRICE", description: "the cart item in promo price including taxes (unit price)"}
+    - {name: "$TOTAL_PRICE", description: "the cart item price (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_PROMO_PRICE", description: "the cart item in promo price (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_TAXED_PRICE", description: "the cart item price including taxes (total price)", from_version: "2.3"}
+    - {name: "$TOTAL_PROMO_TAXED_PRICE", description: "the cart item in promo price including taxes (total price)", from_version: "2.3"}
     - {name: "$IS_PROMO", description: "if the product sale elements is in promo or not"}
+    - {name: "$REAL_PRICE", description: "the current cart item price excluding tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}
+    - {name: "$REAL_TAXED_PRICE", description: "the current cart item price including tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}
+    - {name: "$REAL_TOTAL_PRICE", description: "the current total cart line price excluding tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}
+    - {name: "$REAL_TOTAL_TAXED_PRICE", description: "the current total cart line price including tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}
 ---

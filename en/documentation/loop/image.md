@@ -60,6 +60,8 @@ arguments :
             {name: "random",            description: "return images in pseudo-random order"}
         ]
     }
+    - {name: "with_prev_next_info", description: "A boolean. If set to true, $PREVIOUS and $NEXT output arguments are available.", example: "with_prev_next_info=\"yes\"", default: "false", from_version: "2.4"}
+    - {name: "query_namespace", description: "The PHP namespace of the query class", example: "MyModule\\Model", default: "Thelia\\Model", from_version: "2.4"}
 outputs :
     - {name: "$ID", description: "the image ID"}
     - {name: "$LOCALE", description: "The locale used for this research"}
@@ -77,6 +79,10 @@ outputs :
     - {name: "$OBJECT_ID", description: "The object ID"}
     - {name: "$VISIBLE", description: "true if the image is visible. False otherwise"}
     - {name: "$PROCESSING_ERROR", description: "true if the image processing fails. In this case, $IMAGE_URL, $ORIGINAL_IMAGE_URL, and $IMAGE_PATH will be empty."}
+    - {name: "$HAS_PREVIOUS", description: "true if an image exists before this one following document position. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
+    - {name: "$HAS_NEXT", description: "true if an image  exists after this one, following document position. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
+    - {name: "$PREVIOUS", description: "The ID of the image before this one, following image position, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
+    - {name: "$NEXT", description: "The ID of the image after this one, following image position, or null if none exists. Only available if <strong>with_prev_next_info</strong> parameter is set to true", from_version: "2.4"}
 
  
 examples :
