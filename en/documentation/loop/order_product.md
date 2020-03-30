@@ -41,4 +41,8 @@ outputs :
     - {name: "$TAX_RULE_DESCRIPTION", description: "the tax rule description for this item"}
     - {name: "$PARENT", description: "the parent product in the cart, if the current product has one"}
     - {name: "$EAN_CODE", description: "the product ean code"}
+    - {name: "$REAL_PRICE", description: "the absolute item price excluding tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}
+    - {name: "$REAL_TAXED_PRICE", description: "the absolute item item price including tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}
+    - {name: "$REAL_TOTAL_PRICE", description: "the absolute total price excluding tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}
+    - {name: "$REAL_TOTAL_TAXED_PRICE", description: "the absolute total price including tax, either promo or normal, depending on IS_PROMO status", from_version: "2.4"}    
 ---
