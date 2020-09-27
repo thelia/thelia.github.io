@@ -3,255 +3,977 @@ permalink: none
 markdown: kramdown
 language: "en"
 plugins:
-    - jekyll-redirect-from
+  - jekyll-redirect-from
 
 #multilingual
 languages:
   - {
-      name: "English", code: "en", url: "/", sidebar:
-      [
-        { name: "Welcome", sidebar_name: "welcome", url: "/index.html" },
-        { name: "Installation", sidebar_name: "installation", subsections:
-          [
-            { name: "Getting started", sidebar_name: "installation_index", url: "/en/documentation/installation/index.html"},
-            { name: "Advanced installation with composer", sidebar_name: "installation_composer", url: "/en/documentation/installation/advanced.html"},
-            { name: "Dockerize your Thelia", sidebar_name: "installation_docker", url: "/en/documentation/installation/docker.html"}
-          ]
-        },
-        { name: "Configuration", sidebar_name: "configuration", subsections:
-          [
-            { name: "Server configuration", sidebar_name: "config_server", url: "/en/documentation/configuration/server.html"},
-            { name: "Environment variables", sidebar_name: "config_variable", url: "/en/documentation/configuration/environment_variables.html"},
-            { name: "Database", sidebar_name: "database", url: "/en/documentation/configuration/database.html"},
-            { name: "Thelia configuration variables", sidebar_name: "thelia_config_vars", url: "/en/documentation/configuration/config_vars.html"}
-          ]
-        },
-        { name: "How To", sidebar_name: "howto", subsections:
-          [
-            { name: "Migrate Thelia 2.0 to Thelia 2.1", sidebar_name: "howto_migrate_20_21", url: "/en/documentation/howto/migrate_Thelia_20_to_Thelia_21.html"},
-            { name: "Migrate Thelia 2.2 to Thelia 2.3", sidebar_name: "howto_migrate_22_23", url: "/en/documentation/howto/migrate_Thelia_22_to_Thelia_23.html"}
-          ]
-        },
-        { name: "Contribute", sidebar_name: "contribute", url: "/en/documentation/contribute.html" },
-        { name: "Development", sidebar_name: "development", subsections:
-          [
-            { name: "Types", sidebar_name: "development_types", url: "/en/documentation/development/types/index.html" },
-            { name: "Events", sidebar_name: "development_events", url: "/en/documentation/development/events/index.html" },
-            { name: "Http caching", sidebar_name: "development_http", url: "/en/documentation/development/http_caching.html" },
-            { name: "Stack", sidebar_name: "stackphp", url: "/en/documentation/development/stackphp.html" },
-            { name: "Security", sidebar_name: "security", url: "/en/documentation/development/security.html" },
-            { name: "Faker", sidebar_name: "development_faker", url: "/en/documentation/development/faker.html" }
-          ]
-        },
-        { name: "Features", sidebar_name: "features", subsections:
-          [
-            { name: "Coupons", sidebar_name: "features_coupons", subsections:
+      name: "English",
+      code: "en",
+      url: "/",
+      sidebar:
+        [
+          { name: "Welcome", sidebar_name: "welcome", url: "/index.html" },
+          {
+            name: "Installation",
+            sidebar_name: "installation",
+            subsections:
               [
-               { name: "About coupons", sidebar_name: "features_coupons_index", url: "/en/documentation/features/coupons/index.html" },
-               { name: "Effects", sidebar_name: "features_coupons_effects", url: "/en/documentation/features/coupons/effects.html" },
-               { name: "Conditions", sidebar_name: "features_coupons_conditions", url: "/en/documentation/features/coupons/conditions.html" }
-              ]
-            },
-            { name: "Administration permissions", sidebar_name: "features_permissions", subsections:
+                {
+                  name: "Getting started",
+                  sidebar_name: "installation_index",
+                  url: "/en/documentation/installation/index.html",
+                },
+                {
+                  name: "Advanced installation with composer",
+                  sidebar_name: "installation_composer",
+                  url: "/en/documentation/installation/advanced.html",
+                },
+                {
+                  name: "Dockerize your Thelia",
+                  sidebar_name: "installation_docker",
+                  url: "/en/documentation/installation/docker.html",
+                },
+              ],
+          },
+          {
+            name: "Configuration",
+            sidebar_name: "configuration",
+            subsections:
               [
-               { name: "Administrators and profiles", sidebar_name: "features_permissions_admin", url: "/en/documentation/features/permissions/admin.html" },
-               { name: "Permissions in modules", sidebar_name: "features_permissions_module", url: "/en/documentation/features/permissions/module.html" }
-              ]
-            },
-            { name: "Tax engine", sidebar_name: "features_tax", subsections:
+                {
+                  name: "Server configuration",
+                  sidebar_name: "config_server",
+                  url: "/en/documentation/configuration/server.html",
+                },
+                {
+                  name: "Environment variables",
+                  sidebar_name: "config_variable",
+                  url: "/en/documentation/configuration/environment_variables.html",
+                },
+                {
+                  name: "Database",
+                  sidebar_name: "database",
+                  url: "/en/documentation/configuration/database.html",
+                },
+                {
+                  name: "Thelia configuration variables",
+                  sidebar_name: "thelia_config_vars",
+                  url: "/en/documentation/configuration/config_vars.html",
+                },
+              ],
+          },
+          {
+            name: "How To",
+            sidebar_name: "howto",
+            subsections:
               [
-               { name: "Managing taxes", sidebar_name: "features_tax_admin", url: "/en/documentation/features/tax/admin.html" },
-               { name: "Tax type", sidebar_name: "features_tax_type", url: "/en/documentation/features/tax/type.html" }
-              ]
-            },
-	    { name: "Archiving", sidebar_name: "archiving", subsections:
-	      [
-	       { name: "Thelia Archivers", sidebar_name: "thelia_archivers", url: "/en/documentation/features/archiving/archivers.html" }
-	      ]
-	    },
-	    { name: "Import / Export", sidebar_name: "import_export", subsections:
-	      [
-	       { name: "Create an export", sidebar_name: "do_export", url: "/en/documentation/features/import_export/export.html" },
-	       { name: "Create an import", sidebar_name: "do_import", url: "/en/documentation/features/import_export/import.html" },
-	       { name: "Formatters", sidebar_name: "formatters", url: "/en/documentation/features/import_export/formatters.html" }
-              ]
-	    },
-	    { name: "Thelia exports", sidebar_name: "thelia_exports", subsections:
-	         [
-	           { name: "Contents and folders", sidebar_name: "thelia_contents_export", url: "/en/documentation/features/import_export/exports/contents.html"},
-	           { name: "Customers", sidebar_name: "thelia_customers_export", url: "/en/documentation/features/import_export/exports/customers.html"},
-	           { name: "Mailing", sidebar_name: "thelia_mailing_export", url: "/en/documentation/features/import_export/exports/mailing.html"},
-	           { name: "Orders", sidebar_name: "thelia_orders_export", url: "/en/documentation/features/import_export/exports/orders.html"},
-	           { name: "Product prices without tax", sidebar_name: "thelia_prices_export", url: "/en/documentation/features/import_export/exports/product_untaxed_prices.html"},
-	           { name: "Product prices with tax", sidebar_name: "thelia_taxed_prices_export", url: "/en/documentation/features/import_export/exports/product_taxed_prices.html"},
-	           { name: "Product SEO", sidebar_name: "thelia_product_seo_export", url: "/en/documentation/features/import_export/exports/product_seo.html"}
-	         ]
-	       },
-	       { name: "Thelia imports", sidebar_name: "thelia_imports", subsections:
-	         [
-	           { name: "Product prices without tax", sidebar_name: "thelia_untaxed_prices_import", url: "/en/documentation/features/import_export/imports/product_untaxed_prices.html"},
-	           { name: "Product stock", sidebar_name: "thelia_product_stock_import", url: "/en/documentation/features/import_export/imports/product_stock.html"}
-	         ]
-	       },
-          ]
-        },
-        { name: "Modules", sidebar_name: "plugin", subsections: [
-           { name: "Getting started", sidebar_name: "plugin_index", url: "/en/documentation/modules/index.html" },
-           { name: "Payment module", sidebar_name: "plugin_payment", url: "/en/documentation/modules/payment.html" },
-           { name: "Delivery module", sidebar_name: "plugin_delivery", url: "/en/documentation/modules/delivery.html" },
-           { name: "Loops", sidebar_name: "plugin_loop", url: "/en/documentation/modules/loops.html" },
-           { name: "Actions", sidebar_name: "plugin_action", url: "/en/documentation/modules/actions.html" },
-           { name: "Commands", sidebar_name: "plugin_command", url: "/en/documentation/modules/commands.html" },
-           { name: "Routing", sidebar_name: "plugin_routing", url: "/en/documentation/modules/routing.html" },
-           { name: "Caching", sidebar_name: "plugin_caching", url: "/en/documentation/modules/caching.html" },
-           { name: "Templating", sidebar_name: "plugin_templating", url: "/en/documentation/modules/templating.html" },
-           { name: "Admin hooks", sidebar_name: "plugin_hook", url: "/en/documentation/modules/hook.html" },
-           { name: "Hooks", sidebar_name: "plugin_hooks", subsections:
+                {
+                  name: "Migrate Thelia 2.0 to Thelia 2.1",
+                  sidebar_name: "howto_migrate_20_21",
+                  url: "/en/documentation/howto/migrate_Thelia_20_to_Thelia_21.html",
+                },
+                {
+                  name: "Migrate Thelia 2.2 to Thelia 2.3",
+                  sidebar_name: "howto_migrate_22_23",
+                  url: "/en/documentation/howto/migrate_Thelia_22_to_Thelia_23.html",
+                },
+              ],
+          },
+          {
+            name: "Contribute",
+            sidebar_name: "contribute",
+            url: "/en/documentation/contribute.html",
+          },
+          {
+            name: "Development",
+            sidebar_name: "development",
+            subsections:
               [
-               { name: "About hooks", sidebar_name: "plugin_hooks_about", url: "/en/documentation/modules/hooks/index.html" },
-               { name: "Quick start guide", sidebar_name: "plugin_hooks_create", url: "/en/documentation/modules/hooks/hook_create.html" },
-               { name: "Hook list", sidebar_name: "plugin_hooks_list", url: "/en/documentation/modules/hooks/hooks_list.html" },
-               { name: "Create your own hook", sidebar_name: "plugin_hooks_create_own", url: "/en/documentation/modules/hooks/hook_create_own.html" }
-              ]
-           }
-          ]
-        },
-        { name: "Form", sidebar_name: "form", subsections: [
-            { name: "Create your form", sidebar_name: "form_index", url: "/en/documentation/form/index.html" },
-            { name: "Use your form in actions", sidebar_name: "form_action", url: "/en/documentation/form/action.html" },
-            { name: "Use your form in controllers", sidebar_name: "form_controller", url: "/en/documentation/form/controller.html" },
-            { name: "Display form", sidebar_name: "form_template", url: "/en/documentation/form/template.html" },
-            { name: "Standard Thelia forms", sidebar_name: "form_list", subsections: [
-                {name: "Customer create account", sidebar_name: "form_list_customercreate", url: "/en/documentation/form/list/customer_create.html"},
-                {name: "Customer update profile", sidebar_name: "form_list_customer_updateprofile", url: "/en/documentation/form/list/customer_profile_update.html"},
-                {name: "Customer login", sidebar_name: "form_list_customerlogin", url: "/en/documentation/form/list/customer_login.html"},
-                {name: "Customer password recovery", sidebar_name: "form_list_customerpassword", url: "/en/documentation/form/list/customer_lost_password.html"},
-                {name: "Customer password update", sidebar_name: "form_list_updatepassword", url: "/en/documentation/form/list/customer_password_update.html"},
-                {name: "Customer address creation", sidebar_name: "form_list_addresscreate", url: "/en/documentation/form/list/customer_address_create.html"},
-                {name: "Customer address update", sidebar_name: "form_list_addressupdate", url: "/en/documentation/form/list/customer_address_update.html"},
-                {name: "Contact", sidebar_name: "form_list_contact", url: "/en/documentation/form/list/contact.html"},
-                {name: "Newsletter subscription", sidebar_name: "form_list_newsletter", url: "/en/documentation/form/list/newsletter.html"},
-                {name: "Add to cart", sidebar_name: "form_list_cartadd", url: "/en/documentation/form/list/cart_add.html"},
-                {name: "Order delivery", sidebar_name: "form_list_orderdelivery", url: "/en/documentation/form/list/order_delivery.html"},
-                {name: "Order payment", sidebar_name: "form_list_orderpayment", url: "/en/documentation/form/list/order_payment.html"},
-                {name: "Coupon", sidebar_name: "form_list_coupon", url: "/en/documentation/form/list/coupon.html"}
-              ]
-            }
-          ]
-        },
-        { name: "Loops", sidebar_name: "loop", subsections: [
-            { name: "About loops", sidebar_name: "loop_index", url: "/en/documentation/loop/index.html" },
-            { name: "Extending loops", sidebar_name: "loop_extend", url: "/en/documentation/loop/extend.html" },
-            { name: "Accessory loop", sidebar_name: "loop_accessory", url: "/en/documentation/loop/accessory.html" },
-            { name: "Address loop", sidebar_name: "loop_address", url: "/en/documentation/loop/address.html" },
-            { name: "Admin loop", sidebar_name: "loop_admin", url: "/en/documentation/loop/admin.html" },
-            { name: "Area loop", sidebar_name: "loop_area", url: "/en/documentation/loop/area.html" },
-            { name: "Associated content loop", sidebar_name: "loop_associated_content", url: "/en/documentation/loop/associated_content.html" },
-            { name: "Attribute loop", sidebar_name: "loop_attribute", url: "/en/documentation/loop/attribute.html" },
-            { name: "Attribute availability loop", sidebar_name: "loop_attribute_availability", url: "/en/documentation/loop/attribute_availability.html" },
-            { name: "Attribute combination", sidebar_name: "loop_attribute_combination", url: "/en/documentation/loop/attribute_combination.html" },
-            { name: "Auth loop", sidebar_name: "loop_auth", url: "/en/documentation/loop/auth.html" },
-            { name: "Brand loop", sidebar_name: "loop_brand", url: "/en/documentation/loop/brand.html" },
-            { name: "Cart loop", sidebar_name: "loop_cart", url: "/en/documentation/loop/cart.html" },
-            { name: "Category loop", sidebar_name: "loop_category", url: "/en/documentation/loop/category.html" },
-            { name: "Category path loop", sidebar_name: "loop_category_path", url: "/en/documentation/loop/category_path.html" },
-            { name: "Category tree loop", sidebar_name: "loop_category_tree", url: "/en/documentation/loop/category_tree.html" },
-            { name: "Config loop", sidebar_name: "loop_config", url: "/en/documentation/loop/config_loop.html" },
-            { name: "Content loop", sidebar_name: "loop_content", url: "/en/documentation/loop/content.html" },
-            { name: "Country loop", sidebar_name: "loop_country", url: "/en/documentation/loop/country.html" },
-            { name: "Coupon loop", sidebar_name: "loop_coupon", url: "/en/documentation/loop/coupon.html" },
-            { name: "Currency loop", sidebar_name: "loop_currency", url: "/en/documentation/loop/currency.html" },
-            { name: "Customer loop", sidebar_name: "loop_customer", url: "/en/documentation/loop/customer.html" },
-            { name: "Delivery loop", sidebar_name: "loop_delivery", url: "/en/documentation/loop/delivery.html" },
-            { name: "Document loop", sidebar_name: "loop_document", url: "/en/documentation/loop/document.html" },
-            { name: "Export loop", sidebar_name: "loop_export", url: "/en/documentation/loop/export.html" },
-            { name: "Export Category loop", sidebar_name: "loop_export_category", url: "/en/documentation/loop/export_category.html" },
-            { name: "Feature loop", sidebar_name: "loop_feature", url: "/en/documentation/loop/feature.html" },
-            { name: "Feature availability loop", sidebar_name: "loop_feature_availability", url: "/en/documentation/loop/feature_availability.html" },
-            { name: "Feature value loop", sidebar_name: "loop_feature_value", url: "/en/documentation/loop/feature_value.html" },
-            { name: "Feed loop", sidebar_name: "loop_feed", url: "/en/documentation/loop/feed.html" },
-            { name: "Folder loop", sidebar_name: "loop_folder", url: "/en/documentation/loop/folder.html" },
-            { name: "Folder path loop", sidebar_name: "loop_folder_path", url: "/en/documentation/loop/folder_path.html" },
-            { name: "Folder tree loop", sidebar_name: "loop_folder_tree", url: "/en/documentation/loop/folder_tree.html" },
-            { name: "Image loop", sidebar_name: "loop_image", url: "/en/documentation/loop/image.html" },
-            { name: "Import loop", sidebar_name: "loop_import", url: "/en/documentation/loop/import.html" },
-            { name: "Import category loop", sidebar_name: "loop_import_category", url: "/en/documentation/loop/import_category.html" },
-            { name: "Lang loop", sidebar_name: "loop_lang", url: "/en/documentation/loop/lang.html" },
-            { name: "Module loop", sidebar_name: "loop_module", url: "/en/documentation/loop/module.html" },
-            { name: "Order loop", sidebar_name: "loop_order", url: "/en/documentation/loop/order.html" },
-            { name: "Order address loop", sidebar_name: "loop_order_address", url: "/en/documentation/loop/order_address.html" },
-            { name: "Order coupon loop", sidebar_name: "loop_order_coupon", url: "/en/documentation/loop/order_coupon.html" },
-            { name: "Order product loop", sidebar_name: "loop_order_product", url: "/en/documentation/loop/order_product.html" },
-            { name: "Order product attribute combination loop", sidebar_name: "loop_order_product_attribute_combination", url: "/en/documentation/loop/order_product_attribute_combination.html" },
-            { name: "Order product tax loop", sidebar_name: "loop_order_product_tax", url: "/en/documentation/loop/order_product_tax.html" },
-            { name: "Order status loop", sidebar_name: "loop_order_status", url: "/en/documentation/loop/order_status.html" },
-            { name: "Payment loop", sidebar_name: "loop_payment", url: "/en/documentation/loop/payment.html" },
-            { name: "Product loop", sidebar_name: "loop_product", url: "/en/documentation/loop/product.html" },
-            { name: "Product sale elements loop", sidebar_name: "loop_product_sale_elements", url: "/en/documentation/loop/product_sale_elements.html" },
-            { name: "Sale loop", sidebar_name: "loop_sale", url: "/en/documentation/loop/sale.html" },
-            { name: "State loop", sidebar_name: "loop_state", url: "/en/documentation/loop/state.html" },
-            { name: "Tax loop", sidebar_name: "loop_tax", url: "/en/documentation/loop/tax.html" },
-            { name: "TaxRule loop", sidebar_name: "loop_tax_rule", url: "/en/documentation/loop/tax_rule.html" },
-            { name: "Title loop", sidebar_name: "loop_title", url: "/en/documentation/loop/title.html" }
-          ]
-        },
-        { name: "API", sidebar_name: "api", subsections: [
-            { name: "Authentication", sidebar_name: "api_authentication", url: "/en/documentation/api/authentication.html" },
-            { name: "Write your controllers", sidebar_name: "api_controller", url: "/en/documentation/api/create_your_own_controller.html" },
-            { name: "Thelia controllers", sidebar_name: "api_thelia_controllers", subsections: [
-                { name: "Brand", sidebar_name: "api_c_brands", url: "/en/documentation/api/routes/brand.html" },
-                { name: "Category", sidebar_name: "api_c_category", url: "/en/documentation/api/routes/category.html" },
-                { name: "Product", sidebar_name: "api_c_products", url: "/en/documentation/api/routes/product.html" },
-                { name: "Product image", sidebar_name: "api_c_product_images", url: "/en/documentation/api/routes/product_image.html" },
-                { name: "Product sale element", sidebar_name: "api_c_product_sale_elements", url: "/en/documentation/api/routes/product_sale_elements.html" },
-                { name: "Country", sidebar_name: "api_c_countries", url: "/en/documentation/api/routes/country.html" },
-                { name: "Currency", sidebar_name: "api_c_currencies", url: "/en/documentation/api/routes/currency.html" },
-                { name: "Tax", sidebar_name: "api_c_taxes", url: "/en/documentation/api/routes/tax.html" },
-                { name: "Tax rule", sidebar_name: "api_c_tax_rules", url: "/en/documentation/api/routes/tax_rule.html" },
-                { name: "Language", sidebar_name: "api_c_languages", url: "/en/documentation/api/routes/lang.html" },
-                { name: "Customer", sidebar_name: "api_c_customers", url: "/en/documentation/api/routes/customer.html" },
-                { name: "Customer title", sidebar_name: "api_c_titles", url: "/en/documentation/api/routes/title.html" },
-                { name: "Attribute", sidebar_name: "api_c_attributes", url: "/en/documentation/api/routes/attributeav.html" }
-              ]
-            }
-          ]
-        },
-        { name: "Substitutions", sidebar_name: "substitution", subsections: [
-            { name: "Administrator", sidebar_name: "substitution_admin", url: "/en/documentation/substitutions/admin.html" },
-            { name: "Cart", sidebar_name: "substitution_cart", url: "/en/documentation/substitutions/cart.html" },
-            { name: "Category", sidebar_name: "substitution_category", url: "/en/documentation/substitutions/category.html" },
-            { name: "Config", sidebar_name: "substitution_config", url: "/en/documentation/substitutions/config.html" },
-            { name: "Content", sidebar_name: "substitution_content", url: "/en/documentation/substitutions/content.html" },
-            { name: "Country", sidebar_name: "substitution_country", url: "/en/documentation/substitutions/country.html" },
-            { name: "Coupon", sidebar_name: "substitution_coupon", url: "/en/documentation/substitutions/coupon.html" },
-            { name: "Customer", sidebar_name: "substitution_customer", url: "/en/documentation/substitutions/customer.html" },
-            { name: "Currency", sidebar_name: "substitution_currency", url: "/en/documentation/substitutions/currency.html" },
-            { name: "Folder", sidebar_name: "substitution_folder", url: "/en/documentation/substitutions/folder.html" },
-            { name: "Lang", sidebar_name: "substitution_lang", url: "/en/documentation/substitutions/lang.html" },
-            { name: "Order", sidebar_name: "substitution_order", url: "/en/documentation/substitutions/order.html" },
-            { name: "Product", sidebar_name: "substitution_product", url: "/en/documentation/substitutions/product.html" }
-          ]
-        },
-        { name: "Templates", sidebar_name: "templates", subsections: [
-            { name: "Smarty", sidebar_name: "templates-smarty", subsections: [
-                { name: "Introduction", sidebar_name: "templates_smarty_introduction", url: "/en/documentation/templates/smarty/introduction.html" },
-                { name: "Rendering", sidebar_name: "templates_smarty_render", url: "/en/documentation/templates/smarty/render.html" },
-                { name: "Assets management", sidebar_name: "templates_smarty_assets", url: "/en/documentation/templates/smarty/assets.html" },
-                { name: "Using a CDN", sidebar_name: "templates_smarty_cdn", url: "/en/documentation/templates/smarty/cdn.html" },
-                { name: "URLs and paths", sidebar_name: "templates_smarty_urls_and_paths", url: "/en/documentation/templates/smarty/urls-and-paths.html" },
-                { name: "Internationalization", sidebar_name: "templates_smarty_i18n", url: "/en/documentation/templates/smarty/i18n.html" },
-                { name: "Security",	sidebar_name: "templates_smarty_security", url: "/en/documentation/templates/smarty/security.html" },
-                { name: "Contents", sidebar_name: "templates_smarty_contents", url: "/en/documentation/templates/smarty/content.html" },
-                { name: "Cache", sidebar_name: "templates_smarty_cache", url: "/en/documentation/templates/smarty/cache.html" },
-                { name: "Postage", sidebar_name: "templates_smarty_postage", url: "/en/documentation/templates/smarty/postage.html" },
-                { name: "Emails", sidebar_name: "templates_smarty_emails", url: "/en/documentation/templates/smarty/emails.html" }
-              ]
-            },
-            { name: "Twig", sidebar_name: "templates-smarty", subsections: [
-                { name: "Introduction", sidebar_name: "templates_twig_introduction", url: "/en/documentation/templates/twig/introduction.html" }
-              ]
-            }
-          ]
-        }
-      ]
+                {
+                  name: "Types",
+                  sidebar_name: "development_types",
+                  url: "/en/documentation/development/types/index.html",
+                },
+                {
+                  name: "Events",
+                  sidebar_name: "development_events",
+                  url: "/en/documentation/development/events/index.html",
+                },
+                {
+                  name: "Http caching",
+                  sidebar_name: "development_http",
+                  url: "/en/documentation/development/http_caching.html",
+                },
+                {
+                  name: "Stack",
+                  sidebar_name: "stackphp",
+                  url: "/en/documentation/development/stackphp.html",
+                },
+                {
+                  name: "Security",
+                  sidebar_name: "security",
+                  url: "/en/documentation/development/security.html",
+                },
+                {
+                  name: "Faker",
+                  sidebar_name: "development_faker",
+                  url: "/en/documentation/development/faker.html",
+                },
+              ],
+          },
+          {
+            name: "Features",
+            sidebar_name: "features",
+            subsections:
+              [
+                {
+                  name: "Coupons",
+                  sidebar_name: "features_coupons",
+                  subsections:
+                    [
+                      {
+                        name: "About coupons",
+                        sidebar_name: "features_coupons_index",
+                        url: "/en/documentation/features/coupons/index.html",
+                      },
+                      {
+                        name: "Effects",
+                        sidebar_name: "features_coupons_effects",
+                        url: "/en/documentation/features/coupons/effects.html",
+                      },
+                      {
+                        name: "Conditions",
+                        sidebar_name: "features_coupons_conditions",
+                        url: "/en/documentation/features/coupons/conditions.html",
+                      },
+                    ],
+                },
+                {
+                  name: "Administration permissions",
+                  sidebar_name: "features_permissions",
+                  subsections:
+                    [
+                      {
+                        name: "Administrators and profiles",
+                        sidebar_name: "features_permissions_admin",
+                        url: "/en/documentation/features/permissions/admin.html",
+                      },
+                      {
+                        name: "Permissions in modules",
+                        sidebar_name: "features_permissions_module",
+                        url: "/en/documentation/features/permissions/module.html",
+                      },
+                    ],
+                },
+                {
+                  name: "Tax engine",
+                  sidebar_name: "features_tax",
+                  subsections:
+                    [
+                      {
+                        name: "Managing taxes",
+                        sidebar_name: "features_tax_admin",
+                        url: "/en/documentation/features/tax/admin.html",
+                      },
+                      {
+                        name: "Tax type",
+                        sidebar_name: "features_tax_type",
+                        url: "/en/documentation/features/tax/type.html",
+                      },
+                    ],
+                },
+                {
+                  name: "Archiving",
+                  sidebar_name: "archiving",
+                  subsections:
+                    [
+                      {
+                        name: "Thelia Archivers",
+                        sidebar_name: "thelia_archivers",
+                        url: "/en/documentation/features/archiving/archivers.html",
+                      },
+                    ],
+                },
+                {
+                  name: "Import / Export",
+                  sidebar_name: "import_export",
+                  subsections:
+                    [
+                      {
+                        name: "Create an export",
+                        sidebar_name: "do_export",
+                        url: "/en/documentation/features/import_export/export.html",
+                      },
+                      {
+                        name: "Create an import",
+                        sidebar_name: "do_import",
+                        url: "/en/documentation/features/import_export/import.html",
+                      },
+                      {
+                        name: "Formatters",
+                        sidebar_name: "formatters",
+                        url: "/en/documentation/features/import_export/formatters.html",
+                      },
+                    ],
+                },
+                {
+                  name: "Thelia exports",
+                  sidebar_name: "thelia_exports",
+                  subsections:
+                    [
+                      {
+                        name: "Contents and folders",
+                        sidebar_name: "thelia_contents_export",
+                        url: "/en/documentation/features/import_export/exports/contents.html",
+                      },
+                      {
+                        name: "Customers",
+                        sidebar_name: "thelia_customers_export",
+                        url: "/en/documentation/features/import_export/exports/customers.html",
+                      },
+                      {
+                        name: "Mailing",
+                        sidebar_name: "thelia_mailing_export",
+                        url: "/en/documentation/features/import_export/exports/mailing.html",
+                      },
+                      {
+                        name: "Orders",
+                        sidebar_name: "thelia_orders_export",
+                        url: "/en/documentation/features/import_export/exports/orders.html",
+                      },
+                      {
+                        name: "Product prices without tax",
+                        sidebar_name: "thelia_prices_export",
+                        url: "/en/documentation/features/import_export/exports/product_untaxed_prices.html",
+                      },
+                      {
+                        name: "Product prices with tax",
+                        sidebar_name: "thelia_taxed_prices_export",
+                        url: "/en/documentation/features/import_export/exports/product_taxed_prices.html",
+                      },
+                      {
+                        name: "Product SEO",
+                        sidebar_name: "thelia_product_seo_export",
+                        url: "/en/documentation/features/import_export/exports/product_seo.html",
+                      },
+                    ],
+                },
+                {
+                  name: "Thelia imports",
+                  sidebar_name: "thelia_imports",
+                  subsections:
+                    [
+                      {
+                        name: "Product prices without tax",
+                        sidebar_name: "thelia_untaxed_prices_import",
+                        url: "/en/documentation/features/import_export/imports/product_untaxed_prices.html",
+                      },
+                      {
+                        name: "Product stock",
+                        sidebar_name: "thelia_product_stock_import",
+                        url: "/en/documentation/features/import_export/imports/product_stock.html",
+                      },
+                    ],
+                },
+              ],
+          },
+          {
+            name: "Modules",
+            sidebar_name: "plugin",
+            subsections:
+              [
+                {
+                  name: "Getting started",
+                  sidebar_name: "plugin_index",
+                  url: "/en/documentation/modules/index.html",
+                },
+                {
+                  name: "Payment module",
+                  sidebar_name: "plugin_payment",
+                  url: "/en/documentation/modules/payment.html",
+                },
+                {
+                  name: "Delivery module",
+                  sidebar_name: "plugin_delivery",
+                  url: "/en/documentation/modules/delivery.html",
+                },
+                {
+                  name: "Loops",
+                  sidebar_name: "plugin_loop",
+                  url: "/en/documentation/modules/loops.html",
+                },
+                {
+                  name: "Actions",
+                  sidebar_name: "plugin_action",
+                  url: "/en/documentation/modules/actions.html",
+                },
+                {
+                  name: "Commands",
+                  sidebar_name: "plugin_command",
+                  url: "/en/documentation/modules/commands.html",
+                },
+                {
+                  name: "Routing",
+                  sidebar_name: "plugin_routing",
+                  url: "/en/documentation/modules/routing.html",
+                },
+                {
+                  name: "Caching",
+                  sidebar_name: "plugin_caching",
+                  url: "/en/documentation/modules/caching.html",
+                },
+                {
+                  name: "Templating",
+                  sidebar_name: "plugin_templating",
+                  url: "/en/documentation/modules/templating.html",
+                },
+                {
+                  name: "Admin hooks",
+                  sidebar_name: "plugin_hook",
+                  url: "/en/documentation/modules/hook.html",
+                },
+                {
+                  name: "Hooks",
+                  sidebar_name: "plugin_hooks",
+                  subsections:
+                    [
+                      {
+                        name: "About hooks",
+                        sidebar_name: "plugin_hooks_about",
+                        url: "/en/documentation/modules/hooks/index.html",
+                      },
+                      {
+                        name: "Quick start guide",
+                        sidebar_name: "plugin_hooks_create",
+                        url: "/en/documentation/modules/hooks/hook_create.html",
+                      },
+                      {
+                        name: "Hook list",
+                        sidebar_name: "plugin_hooks_list",
+                        url: "/en/documentation/modules/hooks/hooks_list.html",
+                      },
+                      {
+                        name: "Create your own hook",
+                        sidebar_name: "plugin_hooks_create_own",
+                        url: "/en/documentation/modules/hooks/hook_create_own.html",
+                      },
+                    ],
+                },
+              ],
+          },
+          {
+            name: "Form",
+            sidebar_name: "form",
+            subsections:
+              [
+                {
+                  name: "Create your form",
+                  sidebar_name: "form_index",
+                  url: "/en/documentation/form/index.html",
+                },
+                {
+                  name: "Use your form in actions",
+                  sidebar_name: "form_action",
+                  url: "/en/documentation/form/action.html",
+                },
+                {
+                  name: "Use your form in controllers",
+                  sidebar_name: "form_controller",
+                  url: "/en/documentation/form/controller.html",
+                },
+                {
+                  name: "Display form",
+                  sidebar_name: "form_template",
+                  url: "/en/documentation/form/template.html",
+                },
+                {
+                  name: "Standard Thelia forms",
+                  sidebar_name: "form_list",
+                  subsections:
+                    [
+                      {
+                        name: "Customer create account",
+                        sidebar_name: "form_list_customercreate",
+                        url: "/en/documentation/form/list/customer_create.html",
+                      },
+                      {
+                        name: "Customer update profile",
+                        sidebar_name: "form_list_customer_updateprofile",
+                        url: "/en/documentation/form/list/customer_profile_update.html",
+                      },
+                      {
+                        name: "Customer login",
+                        sidebar_name: "form_list_customerlogin",
+                        url: "/en/documentation/form/list/customer_login.html",
+                      },
+                      {
+                        name: "Customer password recovery",
+                        sidebar_name: "form_list_customerpassword",
+                        url: "/en/documentation/form/list/customer_lost_password.html",
+                      },
+                      {
+                        name: "Customer password update",
+                        sidebar_name: "form_list_updatepassword",
+                        url: "/en/documentation/form/list/customer_password_update.html",
+                      },
+                      {
+                        name: "Customer address creation",
+                        sidebar_name: "form_list_addresscreate",
+                        url: "/en/documentation/form/list/customer_address_create.html",
+                      },
+                      {
+                        name: "Customer address update",
+                        sidebar_name: "form_list_addressupdate",
+                        url: "/en/documentation/form/list/customer_address_update.html",
+                      },
+                      {
+                        name: "Contact",
+                        sidebar_name: "form_list_contact",
+                        url: "/en/documentation/form/list/contact.html",
+                      },
+                      {
+                        name: "Newsletter subscription",
+                        sidebar_name: "form_list_newsletter",
+                        url: "/en/documentation/form/list/newsletter.html",
+                      },
+                      {
+                        name: "Add to cart",
+                        sidebar_name: "form_list_cartadd",
+                        url: "/en/documentation/form/list/cart_add.html",
+                      },
+                      {
+                        name: "Order delivery",
+                        sidebar_name: "form_list_orderdelivery",
+                        url: "/en/documentation/form/list/order_delivery.html",
+                      },
+                      {
+                        name: "Order payment",
+                        sidebar_name: "form_list_orderpayment",
+                        url: "/en/documentation/form/list/order_payment.html",
+                      },
+                      {
+                        name: "Coupon",
+                        sidebar_name: "form_list_coupon",
+                        url: "/en/documentation/form/list/coupon.html",
+                      },
+                    ],
+                },
+              ],
+          },
+          {
+            name: "Loops",
+            sidebar_name: "loop",
+            subsections:
+              [
+                {
+                  name: "About loops",
+                  sidebar_name: "loop_index",
+                  url: "/en/documentation/loop/index.html",
+                },
+                {
+                  name: "Extending loops",
+                  sidebar_name: "loop_extend",
+                  url: "/en/documentation/loop/extend.html",
+                },
+                {
+                  name: "Accessory loop",
+                  sidebar_name: "loop_accessory",
+                  url: "/en/documentation/loop/accessory.html",
+                },
+                {
+                  name: "Address loop",
+                  sidebar_name: "loop_address",
+                  url: "/en/documentation/loop/address.html",
+                },
+                {
+                  name: "Admin loop",
+                  sidebar_name: "loop_admin",
+                  url: "/en/documentation/loop/admin.html",
+                },
+                {
+                  name: "Area loop",
+                  sidebar_name: "loop_area",
+                  url: "/en/documentation/loop/area.html",
+                },
+                {
+                  name: "Associated content loop",
+                  sidebar_name: "loop_associated_content",
+                  url: "/en/documentation/loop/associated_content.html",
+                },
+                {
+                  name: "Attribute loop",
+                  sidebar_name: "loop_attribute",
+                  url: "/en/documentation/loop/attribute.html",
+                },
+                {
+                  name: "Attribute availability loop",
+                  sidebar_name: "loop_attribute_availability",
+                  url: "/en/documentation/loop/attribute_availability.html",
+                },
+                {
+                  name: "Attribute combination",
+                  sidebar_name: "loop_attribute_combination",
+                  url: "/en/documentation/loop/attribute_combination.html",
+                },
+                {
+                  name: "Auth loop",
+                  sidebar_name: "loop_auth",
+                  url: "/en/documentation/loop/auth.html",
+                },
+                {
+                  name: "Brand loop",
+                  sidebar_name: "loop_brand",
+                  url: "/en/documentation/loop/brand.html",
+                },
+                {
+                  name: "Cart loop",
+                  sidebar_name: "loop_cart",
+                  url: "/en/documentation/loop/cart.html",
+                },
+                {
+                  name: "Category loop",
+                  sidebar_name: "loop_category",
+                  url: "/en/documentation/loop/category.html",
+                },
+                {
+                  name: "Category path loop",
+                  sidebar_name: "loop_category_path",
+                  url: "/en/documentation/loop/category_path.html",
+                },
+                {
+                  name: "Category tree loop",
+                  sidebar_name: "loop_category_tree",
+                  url: "/en/documentation/loop/category_tree.html",
+                },
+                {
+                  name: "Config loop",
+                  sidebar_name: "loop_config",
+                  url: "/en/documentation/loop/config_loop.html",
+                },
+                {
+                  name: "Content loop",
+                  sidebar_name: "loop_content",
+                  url: "/en/documentation/loop/content.html",
+                },
+                {
+                  name: "Country loop",
+                  sidebar_name: "loop_country",
+                  url: "/en/documentation/loop/country.html",
+                },
+                {
+                  name: "Coupon loop",
+                  sidebar_name: "loop_coupon",
+                  url: "/en/documentation/loop/coupon.html",
+                },
+                {
+                  name: "Currency loop",
+                  sidebar_name: "loop_currency",
+                  url: "/en/documentation/loop/currency.html",
+                },
+                {
+                  name: "Customer loop",
+                  sidebar_name: "loop_customer",
+                  url: "/en/documentation/loop/customer.html",
+                },
+                {
+                  name: "Delivery loop",
+                  sidebar_name: "loop_delivery",
+                  url: "/en/documentation/loop/delivery.html",
+                },
+                {
+                  name: "Document loop",
+                  sidebar_name: "loop_document",
+                  url: "/en/documentation/loop/document.html",
+                },
+                {
+                  name: "Export loop",
+                  sidebar_name: "loop_export",
+                  url: "/en/documentation/loop/export.html",
+                },
+                {
+                  name: "Export Category loop",
+                  sidebar_name: "loop_export_category",
+                  url: "/en/documentation/loop/export_category.html",
+                },
+                {
+                  name: "Feature loop",
+                  sidebar_name: "loop_feature",
+                  url: "/en/documentation/loop/feature.html",
+                },
+                {
+                  name: "Feature availability loop",
+                  sidebar_name: "loop_feature_availability",
+                  url: "/en/documentation/loop/feature_availability.html",
+                },
+                {
+                  name: "Feature value loop",
+                  sidebar_name: "loop_feature_value",
+                  url: "/en/documentation/loop/feature_value.html",
+                },
+                {
+                  name: "Feed loop",
+                  sidebar_name: "loop_feed",
+                  url: "/en/documentation/loop/feed.html",
+                },
+                {
+                  name: "Folder loop",
+                  sidebar_name: "loop_folder",
+                  url: "/en/documentation/loop/folder.html",
+                },
+                {
+                  name: "Folder path loop",
+                  sidebar_name: "loop_folder_path",
+                  url: "/en/documentation/loop/folder_path.html",
+                },
+                {
+                  name: "Folder tree loop",
+                  sidebar_name: "loop_folder_tree",
+                  url: "/en/documentation/loop/folder_tree.html",
+                },
+                {
+                  name: "Image loop",
+                  sidebar_name: "loop_image",
+                  url: "/en/documentation/loop/image.html",
+                },
+                {
+                  name: "Import loop",
+                  sidebar_name: "loop_import",
+                  url: "/en/documentation/loop/import.html",
+                },
+                {
+                  name: "Import category loop",
+                  sidebar_name: "loop_import_category",
+                  url: "/en/documentation/loop/import_category.html",
+                },
+                {
+                  name: "Lang loop",
+                  sidebar_name: "loop_lang",
+                  url: "/en/documentation/loop/lang.html",
+                },
+                {
+                  name: "Module loop",
+                  sidebar_name: "loop_module",
+                  url: "/en/documentation/loop/module.html",
+                },
+                {
+                  name: "Order loop",
+                  sidebar_name: "loop_order",
+                  url: "/en/documentation/loop/order.html",
+                },
+                {
+                  name: "Order address loop",
+                  sidebar_name: "loop_order_address",
+                  url: "/en/documentation/loop/order_address.html",
+                },
+                {
+                  name: "Order coupon loop",
+                  sidebar_name: "loop_order_coupon",
+                  url: "/en/documentation/loop/order_coupon.html",
+                },
+                {
+                  name: "Order product loop",
+                  sidebar_name: "loop_order_product",
+                  url: "/en/documentation/loop/order_product.html",
+                },
+                {
+                  name: "Order product attribute combination loop",
+                  sidebar_name: "loop_order_product_attribute_combination",
+                  url: "/en/documentation/loop/order_product_attribute_combination.html",
+                },
+                {
+                  name: "Order product tax loop",
+                  sidebar_name: "loop_order_product_tax",
+                  url: "/en/documentation/loop/order_product_tax.html",
+                },
+                {
+                  name: "Order status loop",
+                  sidebar_name: "loop_order_status",
+                  url: "/en/documentation/loop/order_status.html",
+                },
+                {
+                  name: "Payment loop",
+                  sidebar_name: "loop_payment",
+                  url: "/en/documentation/loop/payment.html",
+                },
+                {
+                  name: "Product loop",
+                  sidebar_name: "loop_product",
+                  url: "/en/documentation/loop/product.html",
+                },
+                {
+                  name: "Product sale elements loop",
+                  sidebar_name: "loop_product_sale_elements",
+                  url: "/en/documentation/loop/product_sale_elements.html",
+                },
+                {
+                  name: "Sale loop",
+                  sidebar_name: "loop_sale",
+                  url: "/en/documentation/loop/sale.html",
+                },
+                {
+                  name: "State loop",
+                  sidebar_name: "loop_state",
+                  url: "/en/documentation/loop/state.html",
+                },
+                {
+                  name: "Tax loop",
+                  sidebar_name: "loop_tax",
+                  url: "/en/documentation/loop/tax.html",
+                },
+                {
+                  name: "TaxRule loop",
+                  sidebar_name: "loop_tax_rule",
+                  url: "/en/documentation/loop/tax_rule.html",
+                },
+                {
+                  name: "Title loop",
+                  sidebar_name: "loop_title",
+                  url: "/en/documentation/loop/title.html",
+                },
+              ],
+          },
+          {
+            name: "API",
+            sidebar_name: "api",
+            subsections:
+              [
+                {
+                  name: "Authentication",
+                  sidebar_name: "api_authentication",
+                  url: "/en/documentation/api/authentication.html",
+                },
+                {
+                  name: "Write your controllers",
+                  sidebar_name: "api_controller",
+                  url: "/en/documentation/api/create_your_own_controller.html",
+                },
+                {
+                  name: "Thelia controllers",
+                  sidebar_name: "api_thelia_controllers",
+                  subsections:
+                    [
+                      {
+                        name: "Brand",
+                        sidebar_name: "api_c_brands",
+                        url: "/en/documentation/api/routes/brand.html",
+                      },
+                      {
+                        name: "Category",
+                        sidebar_name: "api_c_category",
+                        url: "/en/documentation/api/routes/category.html",
+                      },
+                      {
+                        name: "Product",
+                        sidebar_name: "api_c_products",
+                        url: "/en/documentation/api/routes/product.html",
+                      },
+                      {
+                        name: "Product image",
+                        sidebar_name: "api_c_product_images",
+                        url: "/en/documentation/api/routes/product_image.html",
+                      },
+                      {
+                        name: "Product sale element",
+                        sidebar_name: "api_c_product_sale_elements",
+                        url: "/en/documentation/api/routes/product_sale_elements.html",
+                      },
+                      {
+                        name: "Country",
+                        sidebar_name: "api_c_countries",
+                        url: "/en/documentation/api/routes/country.html",
+                      },
+                      {
+                        name: "Currency",
+                        sidebar_name: "api_c_currencies",
+                        url: "/en/documentation/api/routes/currency.html",
+                      },
+                      {
+                        name: "Tax",
+                        sidebar_name: "api_c_taxes",
+                        url: "/en/documentation/api/routes/tax.html",
+                      },
+                      {
+                        name: "Tax rule",
+                        sidebar_name: "api_c_tax_rules",
+                        url: "/en/documentation/api/routes/tax_rule.html",
+                      },
+                      {
+                        name: "Language",
+                        sidebar_name: "api_c_languages",
+                        url: "/en/documentation/api/routes/lang.html",
+                      },
+                      {
+                        name: "Customer",
+                        sidebar_name: "api_c_customers",
+                        url: "/en/documentation/api/routes/customer.html",
+                      },
+                      {
+                        name: "Customer title",
+                        sidebar_name: "api_c_titles",
+                        url: "/en/documentation/api/routes/title.html",
+                      },
+                      {
+                        name: "Attribute",
+                        sidebar_name: "api_c_attributes",
+                        url: "/en/documentation/api/routes/attributeav.html",
+                      },
+                    ],
+                },
+              ],
+          },
+          {
+            name: "Substitutions",
+            sidebar_name: "substitution",
+            subsections:
+              [
+                {
+                  name: "Administrator",
+                  sidebar_name: "substitution_admin",
+                  url: "/en/documentation/substitutions/admin.html",
+                },
+                {
+                  name: "Cart",
+                  sidebar_name: "substitution_cart",
+                  url: "/en/documentation/substitutions/cart.html",
+                },
+                {
+                  name: "Category",
+                  sidebar_name: "substitution_category",
+                  url: "/en/documentation/substitutions/category.html",
+                },
+                {
+                  name: "Config",
+                  sidebar_name: "substitution_config",
+                  url: "/en/documentation/substitutions/config.html",
+                },
+                {
+                  name: "Content",
+                  sidebar_name: "substitution_content",
+                  url: "/en/documentation/substitutions/content.html",
+                },
+                {
+                  name: "Country",
+                  sidebar_name: "substitution_country",
+                  url: "/en/documentation/substitutions/country.html",
+                },
+                {
+                  name: "Coupon",
+                  sidebar_name: "substitution_coupon",
+                  url: "/en/documentation/substitutions/coupon.html",
+                },
+                {
+                  name: "Customer",
+                  sidebar_name: "substitution_customer",
+                  url: "/en/documentation/substitutions/customer.html",
+                },
+                {
+                  name: "Currency",
+                  sidebar_name: "substitution_currency",
+                  url: "/en/documentation/substitutions/currency.html",
+                },
+                {
+                  name: "Folder",
+                  sidebar_name: "substitution_folder",
+                  url: "/en/documentation/substitutions/folder.html",
+                },
+                {
+                  name: "Lang",
+                  sidebar_name: "substitution_lang",
+                  url: "/en/documentation/substitutions/lang.html",
+                },
+                {
+                  name: "Order",
+                  sidebar_name: "substitution_order",
+                  url: "/en/documentation/substitutions/order.html",
+                },
+                {
+                  name: "Product",
+                  sidebar_name: "substitution_product",
+                  url: "/en/documentation/substitutions/product.html",
+                },
+              ],
+          },
+          {
+            name: "Templates",
+            sidebar_name: "templates",
+            subsections:
+              [
+                {
+                  name: "Smarty",
+                  sidebar_name: "templates-smarty",
+                  subsections:
+                    [
+                      {
+                        name: "Introduction",
+                        sidebar_name: "templates_smarty_introduction",
+                        url: "/en/documentation/templates/smarty/introduction.html",
+                      },
+                      {
+                        name: "Rendering",
+                        sidebar_name: "templates_smarty_render",
+                        url: "/en/documentation/templates/smarty/render.html",
+                      },
+                      {
+                        name: "Assets management",
+                        sidebar_name: "templates_smarty_assets",
+                        url: "/en/documentation/templates/smarty/assets.html",
+                      },
+                      {
+                        name: "Using a CDN",
+                        sidebar_name: "templates_smarty_cdn",
+                        url: "/en/documentation/templates/smarty/cdn.html",
+                      },
+                      {
+                        name: "URLs and paths",
+                        sidebar_name: "templates_smarty_urls_and_paths",
+                        url: "/en/documentation/templates/smarty/urls-and-paths.html",
+                      },
+                      {
+                        name: "Internationalization",
+                        sidebar_name: "templates_smarty_i18n",
+                        url: "/en/documentation/templates/smarty/i18n.html",
+                      },
+                      {
+                        name: "Security",
+                        sidebar_name: "templates_smarty_security",
+                        url: "/en/documentation/templates/smarty/security.html",
+                      },
+                      {
+                        name: "Contents",
+                        sidebar_name: "templates_smarty_contents",
+                        url: "/en/documentation/templates/smarty/content.html",
+                      },
+                      {
+                        name: "Cache",
+                        sidebar_name: "templates_smarty_cache",
+                        url: "/en/documentation/templates/smarty/cache.html",
+                      },
+                      {
+                        name: "Postage",
+                        sidebar_name: "templates_smarty_postage",
+                        url: "/en/documentation/templates/smarty/postage.html",
+                      },
+                      {
+                        name: "Emails",
+                        sidebar_name: "templates_smarty_emails",
+                        url: "/en/documentation/templates/smarty/emails.html",
+                      },
+                    ],
+                },
+                {
+                  name: "Twig",
+                  sidebar_name: "templates-smarty",
+                  subsections:
+                    [
+                      {
+                        name: "Introduction",
+                        sidebar_name: "templates_twig_introduction",
+                        url: "/en/documentation/templates/twig/introduction.html",
+                      },
+                    ],
+                },
+              ],
+          },
+        ],
     }
