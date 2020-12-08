@@ -52,7 +52,7 @@ After updated the __\_config.yml__ file, you have to restart your Jekyll server.
 
 ## Generate API docs
 
-first install Sami and its dependencies :
+first install Doctum and its dependencies :
 
 ```bash
 composer install
@@ -65,7 +65,7 @@ git clone ~/thelia
 ```
 
 ```bash
-env THELIA_PATH='~/thelia' php vendor/sami/sami/sami.php update api.php
+env THELIA_PATH='~/thelia' php vendor/bin/doctum.php update api.php
 ```
 
 Take a coffee break...
