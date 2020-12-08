@@ -4,33 +4,96 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8352533853a567019737e61ac94efb47",
+    "content-hash": "338565f5eea0108acdeed445808113e3",
     "packages": [
         {
-            "name": "code-lts/doctum",
-            "version": "v5.0.3",
+            "name": "code-lts/cli-tools",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/code-lts/doctum.git",
-                "reference": "dc04532ca7bd5bb277c797582be53d2508a1b415"
+                "url": "https://github.com/code-lts/cli-tools.git",
+                "reference": "571dfb996c4af6a74eb88d0404794552a3a3ac55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-lts/doctum/zipball/dc04532ca7bd5bb277c797582be53d2508a1b415",
-                "reference": "dc04532ca7bd5bb277c797582be53d2508a1b415",
+                "url": "https://api.github.com/repos/code-lts/cli-tools/zipball/571dfb996c4af6a74eb88d0404794552a3a3ac55",
+                "reference": "571dfb996c4af6a74eb88d0404794552a3a3ac55",
                 "shasum": ""
             },
             "require": {
+                "ondram/ci-detector": "^3.5",
+                "php": "^7.1 || ^8.0",
+                "symfony/console": "~3.4|~4.3|~5.1|~5.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^7 || ^8 || ^9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeLts\\CliTools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "William Desportes",
+                    "email": "williamdes@wdes.fr",
+                    "homepage": "https://william.wdes.fr"
+                },
+                {
+                    "name": "Ondřej Mirtes",
+                    "email": "ondrej@mirtes.cz",
+                    "homepage": "https://ondrej.mirtes.cz"
+                }
+            ],
+            "description": "CLI tools to manage output errors formatting for junit, checkstyle, teamcity, gitlab and github error formats",
+            "homepage": "https://github.com/code-lts/cli-tools",
+            "keywords": [
+                "checkstyle",
+                "cli",
+                "formatters",
+                "github",
+                "gitlab",
+                "junit",
+                "teamcity"
+            ],
+            "support": {
+                "email": "williamdes@wdes.fr",
+                "issues": "https://github.com/code-lts/cli-tools/issues",
+                "source": "https://github.com/code-lts/cli-tools"
+            },
+            "time": "2020-11-29T19:35:21+00:00"
+        },
+        {
+            "name": "code-lts/doctum",
+            "version": "v5.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/code-lts/doctum.git",
+                "reference": "213dd0099a35cfe05d9881e9bdfeb27fbd245a78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/code-lts/doctum/zipball/213dd0099a35cfe05d9881e9bdfeb27fbd245a78",
+                "reference": "213dd0099a35cfe05d9881e9bdfeb27fbd245a78",
+                "shasum": ""
+            },
+            "require": {
+                "code-lts/cli-tools": "^1.3.1",
                 "michelf/php-markdown": "~1.3",
                 "nikic/php-parser": "~4.6",
-                "php": ">=7.1.3",
+                "php": "^7.1 || ^8.0",
                 "phpdocumentor/reflection-docblock": "~4.3|~5.2.1",
-                "pimple/pimple": "~3.0",
-                "symfony/console": "~4.3|~5.1|~5.2",
-                "symfony/filesystem": "~4.3|~5.1|~5.2",
-                "symfony/finder": "~4.3|~5.1|~5.2",
-                "symfony/process": "~4.3|~5.1|~5.2",
-                "symfony/yaml": "~4.3|~5.1|~5.2",
+                "symfony/console": "~3.4|~4.3|~5.1|~5.2",
+                "symfony/filesystem": "~3.4|~4.3|~5.1|~5.2",
+                "symfony/finder": "~3.4|~4.3|~5.1|~5.2",
+                "symfony/process": "~3.4|~4.3|~5.1|~5.2",
+                "symfony/yaml": "~3.4|~4.3|~5.1|~5.2",
                 "twig/twig": "~2.12",
                 "wdes/php-i18n-l10n": "^2.0"
             },
@@ -43,6 +106,11 @@
                 "bin/doctum.php"
             ],
             "type": "application",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "5.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Doctum\\": "src/",
@@ -71,9 +139,9 @@
             ],
             "support": {
                 "issues": "https://github.com/code-lts/doctum/issues",
-                "source": "https://github.com/code-lts/doctum/tree/v5.0.3"
+                "source": "https://github.com/code-lts/doctum/tree/v5.2.1"
             },
-            "time": "2020-08-19T19:04:48+00:00"
+            "time": "2020-11-30T21:07:21+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -183,6 +251,78 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/master"
             },
             "time": "2020-08-18T19:48:01+00:00"
+        },
+        {
+            "name": "ondram/ci-detector",
+            "version": "3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OndraM/ci-detector.git",
+                "reference": "594e61252843b68998bddd48078c5058fe9028bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OndraM/ci-detector/zipball/594e61252843b68998bddd48078c5058fe9028bd",
+                "reference": "594e61252843b68998bddd48078c5058fe9028bd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.2",
+                "lmc/coding-standard": "^1.3 || ^2.0",
+                "php-parallel-lint/php-parallel-lint": "^1.1",
+                "phpstan/extension-installer": "^1.0.3",
+                "phpstan/phpstan": "^0.12.0",
+                "phpstan/phpstan-phpunit": "^0.12.1",
+                "phpunit/phpunit": "^7.1 || ^8.0 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OndraM\\CiDetector\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ondřej Machulda",
+                    "email": "ondrej.machulda@gmail.com"
+                }
+            ],
+            "description": "Detect continuous integration environment and provide unified access to properties of current build",
+            "keywords": [
+                "CircleCI",
+                "Codeship",
+                "Wercker",
+                "adapter",
+                "appveyor",
+                "aws",
+                "aws codebuild",
+                "bamboo",
+                "bitbucket",
+                "buddy",
+                "ci-info",
+                "codebuild",
+                "continuous integration",
+                "continuousphp",
+                "drone",
+                "github",
+                "gitlab",
+                "interface",
+                "jenkins",
+                "teamcity",
+                "travis"
+            ],
+            "support": {
+                "issues": "https://github.com/OndraM/ci-detector/issues",
+                "source": "https://github.com/OndraM/ci-detector/tree/main"
+            },
+            "time": "2020-09-04T11:21:14+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -341,60 +481,6 @@
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
             },
             "time": "2020-06-27T10:12:23+00:00"
-        },
-        {
-            "name": "pimple/pimple",
-            "version": "v3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e55d12f9d6a0e7f9c85992b73df1267f46279930",
-                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2.5",
-                "psr/container": "^1.0"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "^3.4|^4.4|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Pimple": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Pimple, a simple Dependency Injection Container",
-            "homepage": "https://pimple.symfony.com",
-            "keywords": [
-                "container",
-                "dependency injection"
-            ],
-            "support": {
-                "issues": "https://github.com/silexphp/Pimple/issues",
-                "source": "https://github.com/silexphp/Pimple/tree/master"
-            },
-            "time": "2020-03-03T09:12:48+00:00"
         },
         {
             "name": "psr/container",
