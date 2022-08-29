@@ -1,3 +1,8 @@
+# ⚠  Archived repository ⚠ 
+
+This is the repository for the old version of Thelia documentation, it will not be maintened anymore please see http://thelia/docs for the new version.
+
+
 # How to contribute
 
 ## Installation & compilation
